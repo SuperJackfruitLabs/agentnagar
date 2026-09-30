@@ -1,0 +1,15 @@
+.DS_Store
+.local/
+.env
+.env.*
+!.env.example
+.godot/
+build/
+dist/
+
+# Local Python validation artifacts
+__pycache__/
+*.py[cod]
+
+# Local agent state (Claude Code worktrees, settings)
+.claude/

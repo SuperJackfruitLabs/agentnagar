@@ -1,0 +1,49 @@
+{
+  "method": "Counts from exported glTF accessors, excluding runtime UI and collision geometry",
+  "assets": [
+    {
+      "asset": "chair",
+      "bytes": 10348,
+      "triangles": 120,
+      "primitives": 5,
+      "materials": 5
+    },
+    {
+      "asset": "desk",
+      "bytes": 22868,
+      "triangles": 300,
+      "primitives": 10,
+      "materials": 10
+    },
+    {
+      "asset": "environment",
+      "bytes": 229444,
+      "triangles": 4440,
+      "primitives": 17,
+      "materials": 16
+    },
+    {
+      "asset": "kai",
+      "bytes": 158412,
+      "triangles": 804,
+      "primitives": 12,
+      "materials": 12
+    },
+    {
+      "asset": "lyra",
+      "bytes": 159484,
+      "triangles": 816,
+      "primitives": 12,
+      "materials": 12
+    },
+    {
+      "asset": "terminal",
+      "bytes": 37040,
+      "triangles": 576,
+      "primitives": 8,
+      "materials": 8
+    }
+  ],
+  "total_bytes": 617596,
+  "total_triangles": 7056
+}

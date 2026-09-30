@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "891ece0ae4117056077ceb855612b88cff52f213d7a2a7c0eaba9a58c5167607",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "cfa0940c3097134326e0cdf3943dfa87d63eb42ba35d6958716779ccf9887127"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/07-paper-craft/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/candidates/02-pass2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

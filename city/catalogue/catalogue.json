@@ -1,0 +1,459 @@
+{
+  "version": 1,
+  "kinds": [
+    {
+      "id": "desk",
+      "name": "Desk",
+      "description": "A workshop desk with a stool.",
+      "class": "seat",
+      "footprint": [{"x": -65, "z": -95, "w": 130, "d": 70}],
+      "sized": false,
+      "snap": 1,
+      "anchors": [{"type": "sit", "at": {"x": 0, "z": 0}, "facing": 0}],
+      "capabilities": [{"name": "sit", "at": "sit"}, {"name": "inspect"}],
+      "height": 75
+    },
+    {
+      "id": "workstation",
+      "name": "Workstation",
+      "description": "A desk with a computer on it.",
+      "class": "seat",
+      "footprint": [{"x": -65, "z": -95, "w": 130, "d": 70}],
+      "sized": false,
+      "snap": 1,
+      "anchors": [
+        {"type": "sit", "at": {"x": 0, "z": 0}, "facing": 0},
+        {"type": "use", "at": {"x": 0, "z": 0}, "facing": 0},
+        {"type": "display", "at": {"x": 0, "z": -95}, "facing": 180, "height": 85, "size": {"w": 55, "d": 35}},
+        {"type": "stand", "at": {"x": 0, "z": 60}, "facing": 0}
+      ],
+      "capabilities": [
+        {"name": "use", "at": "use"},
+        {"name": "sit", "at": "sit"},
+        {"name": "watch", "at": "stand"},
+        {"name": "inspect", "at": "stand"}
+      ],
+      "height": 75
+    },
+    {
+      "id": "bench",
+      "name": "Bench",
+      "description": "A wooden bench seat.",
+      "class": "seat",
+      "footprint": [
+        {"x": -80, "z": -25, "w": 55, "d": 60},
+        {"x": 25, "z": -25, "w": 55, "d": 60},
+        {"x": -25, "z": 25, "w": 50, "d": 10}
+      ],
+      "sized": false,
+      "snap": 1,
+      "anchors": [{"type": "sit", "at": {"x": 0, "z": 0}, "facing": 0}],
+      "capabilities": [{"name": "sit", "at": "sit"}, {"name": "inspect"}],
+      "height": 45
+    },
+    {
+      "id": "cafe-table",
+      "name": "Café chair",
+      "description": "A chair at a café table.",
+      "class": "seat",
+      "footprint": [
+        {"x": -25, "z": -21, "w": 2, "d": 47},
+        {"x": 23, "z": -21, "w": 2, "d": 47}
+      ],
+      "sized": false,
+      "snap": 1,
+      "anchors": [{"type": "sit", "at": {"x": 0, "z": 0}, "facing": 0}],
+      "capabilities": [{"name": "sit", "at": "sit"}, {"name": "inspect"}],
+      "height": 80
+    },
+    {
+      "id": "reading-chair",
+      "name": "Reading chair",
+      "description": "An armchair in the reading room.",
+      "class": "seat",
+      "footprint": [
+        {"x": -45, "z": -40, "w": 20, "d": 90},
+        {"x": 25, "z": -40, "w": 20, "d": 90},
+        {"x": -25, "z": 25, "w": 50, "d": 25}
+      ],
+      "sized": false,
+      "snap": 1,
+      "anchors": [{"type": "sit", "at": {"x": 0, "z": 0}, "facing": 0}],
+      "capabilities": [{"name": "sit", "at": "sit"}, {"name": "inspect"}],
+      "height": 90
+    },
+    {
+      "id": "bookshelf",
+      "name": "Bookshelf",
+      "description": "A shelving unit standing against a wall.",
+      "class": "furniture",
+      "footprint": [{"x": -100, "z": -30, "w": 200, "d": 60}],
+      "sized": false,
+      "snap": 25,
+      "anchors": [
+        {"type": "display", "at": {"x": 0, "z": -30}, "facing": 0, "height": 10, "size": {"w": 180, "d": 180}},
+        {"type": "stand", "at": {"x": 0, "z": -62}, "facing": 180}
+      ],
+      "capabilities": [{"name": "read", "at": "display"}, {"name": "inspect", "at": "stand"}],
+      "height": 200
+    },
+    {
+      "id": "workbench",
+      "name": "Workbench",
+      "description": "A long workshop bench for shared tools.",
+      "class": "furniture",
+      "footprint": [{"x": -500, "z": -60, "w": 1000, "d": 120}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 90
+    },
+    {
+      "id": "cafe-table-top",
+      "name": "Café table",
+      "description": "The table a ring of café chairs sits around.",
+      "class": "furniture",
+      "footprint": [{"x": -50, "z": -50, "w": 100, "d": 100}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 75
+    },
+    {
+      "id": "street-lamp",
+      "name": "Street lamp",
+      "description": "A lamp post that lights the ground around it.",
+      "class": "fixture",
+      "footprint": [{"x": 0, "z": 0, "r": 20}],
+      "sized": false,
+      "snap": 25,
+      "state": [{"name": "lit", "type": "bool", "default": true}],
+      "capabilities": [{"name": "inspect"}],
+      "height": 350
+    },
+    {
+      "id": "bollard",
+      "name": "Bollard",
+      "description": "A post that keeps vehicles off a walkway.",
+      "class": "fixture",
+      "footprint": [{"x": 0, "z": 0, "r": 15}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 90
+    },
+    {
+      "id": "umbrella",
+      "name": "Umbrella",
+      "description": "A café umbrella; its pole stands on the ground, its canopy above head height.",
+      "class": "fixture",
+      "footprint": [{"x": 0, "z": 0, "r": 40}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 220
+    },
+    {
+      "id": "tram-shelter",
+      "name": "Tram shelter",
+      "description": "A shelter with a bench, standing on a tram platform.",
+      "class": "fixture",
+      "footprint": [{"x": -215, "z": -75, "w": 430, "d": 20}, {"x": -65, "z": -55, "w": 240, "d": 40}, {"x": -190, "z": -55, "w": 70, "d": 5}, {"x": 200, "z": -55, "w": 15, "d": 95}],
+      "sized": false,
+      "snap": 25,
+      "anchors": [
+        {"type": "stand", "at": {"x": 0, "z": 110}, "facing": 0},
+        {"type": "sit", "at": {"x": -25, "z": 15}, "facing": 180},
+        {"type": "sit", "at": {"x": 55, "z": 15}, "facing": 180},
+        {"type": "sit", "at": {"x": 135, "z": 15}, "facing": 180}
+      ],
+      "capabilities": [{"name": "sit", "at": "sit"}, {"name": "inspect", "at": "stand"}],
+      "height": 250
+    },
+    {
+      "id": "catenary-pole",
+      "name": "Catenary pole",
+      "description": "A pole carrying the tram line's overhead wire.",
+      "class": "fixture",
+      "footprint": [{"x": 0, "z": 0, "r": 15}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 600
+    },
+    {
+      "id": "noticeboard",
+      "name": "Noticeboard",
+      "description": "A board on two posts where the city pins its notices.",
+      "class": "fixture",
+      "footprint": [{"x": -60, "z": -10, "w": 120, "d": 20}],
+      "sized": false,
+      "snap": 25,
+      "anchors": [
+        {"type": "display", "at": {"x": 0, "z": -10}, "facing": 0, "height": 90, "size": {"w": 110, "d": 80}},
+        {"type": "stand", "at": {"x": 0, "z": -62}, "facing": 180}
+      ],
+      "capabilities": [{"name": "read", "at": "display"}, {"name": "inspect", "at": "stand"}],
+      "height": 190
+    },
+    {
+      "id": "plaque",
+      "name": "Plaque",
+      "description": "A lettered plaque on a low stone plinth.",
+      "class": "fixture",
+      "footprint": [{"x": -30, "z": -15, "w": 60, "d": 30}],
+      "sized": false,
+      "snap": 25,
+      "anchors": [
+        {"type": "display", "at": {"x": 0, "z": -15}, "facing": 0, "height": 80, "size": {"w": 50, "d": 35}},
+        {"type": "stand", "at": {"x": 0, "z": -62}, "facing": 180}
+      ],
+      "capabilities": [{"name": "read", "at": "display"}, {"name": "inspect", "at": "stand"}],
+      "height": 120
+    },
+    {
+      "id": "kiosk",
+      "name": "Kiosk",
+      "description": "A standing screen for browsing what a place holds.",
+      "class": "fixture",
+      "footprint": [{"x": -40, "z": -25, "w": 80, "d": 50}],
+      "sized": false,
+      "snap": 25,
+      "anchors": [
+        {"type": "display", "at": {"x": 0, "z": -25}, "facing": 0, "height": 90, "size": {"w": 60, "d": 80}},
+        {"type": "stand", "at": {"x": 0, "z": -62}, "facing": 180}
+      ],
+      "capabilities": [{"name": "read", "at": "display"}, {"name": "inspect", "at": "stand"}],
+      "height": 180
+    },
+    {
+      "id": "steps",
+      "name": "Steps",
+      "description": "Broad stone steps to sit on, looking out from the top step.",
+      "class": "fixture",
+      "footprint": [{"x": -150, "z": 0, "w": 300, "d": 100}],
+      "sized": false,
+      "snap": 25,
+      "anchors": [
+        {"type": "sit", "at": {"x": -100, "z": -37}, "facing": 0},
+        {"type": "sit", "at": {"x": 0, "z": -37}, "facing": 0},
+        {"type": "sit", "at": {"x": 100, "z": -37}, "facing": 0}
+      ],
+      "capabilities": [{"name": "sit", "at": "sit"}, {"name": "inspect"}],
+      "height": 45
+    },
+    {
+      "id": "low-wall",
+      "name": "Low wall",
+      "description": "Three metres of low wall, sat on along its north face.",
+      "class": "fixture",
+      "footprint": [{"x": -150, "z": -15, "w": 300, "d": 30}],
+      "sized": false,
+      "snap": 25,
+      "anchors": [
+        {"type": "sit", "at": {"x": -120, "z": -40}, "facing": 0},
+        {"type": "sit", "at": {"x": -60, "z": -40}, "facing": 0},
+        {"type": "sit", "at": {"x": 0, "z": -40}, "facing": 0},
+        {"type": "sit", "at": {"x": 60, "z": -40}, "facing": 0},
+        {"type": "sit", "at": {"x": 120, "z": -40}, "facing": 0}
+      ],
+      "capabilities": [{"name": "sit", "at": "sit"}, {"name": "inspect"}],
+      "height": 45
+    },
+    {
+      "id": "fountain-rim",
+      "name": "Fountain",
+      "description": "A round fountain basin whose rim people sit on, facing out.",
+      "class": "fixture",
+      "footprint": [{"x": 0, "z": 0, "r": 150}],
+      "sized": false,
+      "snap": 25,
+      "anchors": [
+        {"type": "sit", "at": {"x": 0, "z": -180}, "facing": 0},
+        {"type": "sit", "at": {"x": 127, "z": -127}, "facing": 45},
+        {"type": "sit", "at": {"x": 180, "z": 0}, "facing": 90},
+        {"type": "sit", "at": {"x": 127, "z": 127}, "facing": 135},
+        {"type": "sit", "at": {"x": 0, "z": 180}, "facing": 180},
+        {"type": "sit", "at": {"x": -127, "z": 127}, "facing": 225},
+        {"type": "sit", "at": {"x": -180, "z": 0}, "facing": 270},
+        {"type": "sit", "at": {"x": -127, "z": -127}, "facing": 315}
+      ],
+      "capabilities": [{"name": "sit", "at": "sit"}, {"name": "inspect"}],
+      "height": 45
+    },
+    {
+      "id": "street-tree",
+      "name": "Street tree",
+      "description": "A tree planted along a street or verge.",
+      "class": "planting",
+      "footprint": [{"x": 0, "z": 0, "r": 25}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 500
+    },
+    {
+      "id": "palm",
+      "name": "Palm",
+      "description": "A palm tree.",
+      "class": "planting",
+      "footprint": [{"x": 0, "z": 0, "r": 25}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 800
+    },
+    {
+      "id": "great-tree",
+      "name": "Great tree",
+      "description": "The old tree at the heart of the tree square, roots included.",
+      "class": "planting",
+      "footprint": [{"x": -260, "z": -255, "w": 520, "d": 510}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 1200
+    },
+    {
+      "id": "shrub",
+      "name": "Shrub",
+      "description": "A low shrub in a planted bed.",
+      "class": "planting",
+      "footprint": [{"x": 0, "z": 0, "r": 105}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 80
+    },
+    {
+      "id": "planter",
+      "name": "Planter",
+      "description": "A raised planting box.",
+      "class": "planting",
+      "footprint": [{"x": -65, "z": -65, "w": 130, "d": 130}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 45
+    },
+    {
+      "id": "flowerbed",
+      "name": "Flowerbed",
+      "description": "A kerbed bed of flowers that people walk round.",
+      "class": "planting",
+      "footprint": [{"x": -155, "z": -55, "w": 310, "d": 110}],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 70
+    },
+    {
+      "id": "path",
+      "name": "Path",
+      "description": "A paved path, flush with the ground it crosses.",
+      "class": "planting",
+      "footprint": [],
+      "sized": false,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 2
+    },
+    {
+      "id": "meadow",
+      "name": "Meadow",
+      "description": "A patch of tall grass and flowers that parts as people walk through.",
+      "class": "planting",
+      "footprint": [],
+      "soft": [{"x": -50, "z": -50, "w": 100, "d": 100}],
+      "sized": true,
+      "snap": 25,
+      "capabilities": [{"name": "inspect"}],
+      "height": 90
+    },
+    {
+      "id": "block-house",
+      "name": "House block",
+      "description": "A house-scale city block, sized to its lot.",
+      "class": "block",
+      "footprint": [],
+      "sized": true,
+      "snap": 200,
+      "capabilities": [{"name": "inspect"}],
+      "height": 700
+    },
+    {
+      "id": "block-shop",
+      "name": "Shop block",
+      "description": "A shop-scale city block, sized to its lot.",
+      "class": "block",
+      "footprint": [],
+      "sized": true,
+      "snap": 200,
+      "capabilities": [{"name": "inspect"}],
+      "height": 500
+    },
+    {
+      "id": "block-tower",
+      "name": "Tower block",
+      "description": "A tower-scale city block, sized to its lot.",
+      "class": "block",
+      "footprint": [],
+      "sized": true,
+      "snap": 200,
+      "capabilities": [{"name": "inspect"}],
+      "height": 1800
+    },
+    {
+      "id": "guild-hall",
+      "name": "Guild hall",
+      "description": "The sawtooth-roofed hall where the makers work.",
+      "class": "building",
+      "footprint": [],
+      "sized": false,
+      "snap": 100,
+      "wall": 25,
+      "door_width": 200,
+      "capabilities": [{"name": "inspect"}],
+      "height": 500
+    },
+    {
+      "id": "library",
+      "name": "Library",
+      "description": "The domed library.",
+      "class": "building",
+      "footprint": [],
+      "sized": false,
+      "snap": 100,
+      "wall": 25,
+      "door_width": 200,
+      "capabilities": [{"name": "inspect"}],
+      "height": 900
+    },
+    {
+      "id": "cafe",
+      "name": "Café",
+      "description": "The café building behind its terrace.",
+      "class": "building",
+      "footprint": [],
+      "sized": false,
+      "snap": 100,
+      "wall": 25,
+      "door_width": 200,
+      "capabilities": [{"name": "inspect"}],
+      "height": 400
+    },
+    {
+      "id": "tram",
+      "name": "Tram",
+      "description": "The tram that runs the boulevard line.",
+      "class": "vehicle",
+      "footprint": [],
+      "sized": false,
+      "snap": 25,
+      "anchors": [{"type": "enter", "at": {"x": 0, "z": 0}, "facing": 0}],
+      "capabilities": [{"name": "board", "at": "enter"}, {"name": "inspect"}],
+      "height": 450,
+      "width": 250
+    }
+  ]
+}

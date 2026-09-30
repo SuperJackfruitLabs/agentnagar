@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-style="11-low-poly-tropical-diorama">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Low-poly tropical diorama · Agentnagar style studies</title>
+<meta name="description" content="Style study 11, Low-poly tropical diorama: a rotating model of the reference district with a day and night slider.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<link rel="stylesheet" href="assets/diorama.css">
+</head>
+<body>
+<a class="skip" href="#legend">Skip to the landmark list</a>
+<header class="topbar">
+  <div class="brand">
+    <span class="num" data-num></span>
+    <div>
+      <p class="kicker">Agentnagar style study</p>
+      <h1>Low-poly tropical diorama</h1>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button type="button" class="chip-btn" id="spin-btn" aria-pressed="true">Pause turntable</button>
+    <button type="button" class="chip-btn solid" id="notes-btn">Read the notes</button>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="stage" aria-label="Interactive model of the reference district">
+    <div class="sky" aria-hidden="true"></div>
+    <canvas id="scene" aria-label="Rotating low-poly 3D model of the reference district: the River on the west edge, North bridge, the three-bay Workshop, Tree Square, the Library with its rounded roof, downtown towers and the tram boulevard. Illustrative model built for this page, not a concept sheet." role="img"></canvas>
+    <div class="pins" aria-hidden="true"></div>
+    <div class="fallback" hidden></div>
+
+    <div class="plaque intro">
+      <p class="plaque-tag">Illustrative model</p>
+      <p>Drag to turn the table. Click a landmark, or pick one from the list, to open its card. Built for this page from the brief; the concept sheets are in the Bridge card.</p>
+    </div>
+
+    <div class="dock">
+      <div class="clock">
+        <label for="time" class="plaque-tag">Time of day</label>
+        <div class="slider-row">
+          <span aria-hidden="true" class="sun-ico"></span>
+          <input type="range" id="time" min="0" max="100" value="22" aria-valuetext="Afternoon">
+          <span aria-hidden="true" class="moon-ico"></span>
+        </div>
+        <output id="time-out" for="time">Afternoon</output>
+      </div>
+      <nav class="legend" id="legend" aria-label="Landmarks"></nav>
+    </div>
+  </section>
+
+  <aside class="panel" id="panel" aria-label="Landmark card" tabindex="-1"></aside>
+</main>
+
+<footer class="foot">
+  <div id="nav-slot"></div>
+  <p class="fine">The 3D model on this page is an original illustration assembled from simple shapes for comparison. It is not a concept sheet, a game capture or a production asset, and it says nothing about polygon budgets.</p>
+</footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script src="../../../shared/page-kit/vendor/three/three.global.min.js"></script>
+<script src="assets/content.js"></script>
+<script src="assets/diorama.js"></script>
+</body>
+</html>

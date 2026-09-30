@@ -1,0 +1,1 @@
+Use case: precise-object-edit. Edit workshop roof ONLY in TRANSIT upper-right, NIGHT AND RAIN bottom-left, WATERFRONT PARK bottom-right: reduce all to exactly THREE peaks/bays in single low hall; remove the small fourth annex/peak. Keep district ground tram, people, all else untouched. Output1536x1024. Preserve entire existing clay medium, captions and footer.

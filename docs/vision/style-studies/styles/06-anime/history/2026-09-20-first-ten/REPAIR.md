@@ -1,0 +1,25 @@
+> Historical record migrated from `docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/REPAIR.md`. File paths in prose/JSON may describe the old layout; use the migration ledger for exact mappings.
+
+# Cel-shaded anime repair — 2026-09-20
+
+Built-in imagegen; originals preserved byte-for-byte. [Exact prompts](../../README.md), [all candidates](../../README.md) and [actual tool output paths](generation-outputs.json) preserve provenance.
+
+| Sheet | Selected candidate | SHA-256 |
+| --- | --- | --- |
+| 00-city-perspectives | [pass 7](../../sheets/00-city-perspectives/r008/image.png) | `c91bb1de0cdfc87eeecb58e72166c8030c998b2d0088b578f7e08a59bd9b2328` |
+| 01-living-community | [pass 2](../../sheets/01-living-community/r003/image.png) | `6cd109ded8d9c2f3b447ab0d043234d3c1f917903a8e23392547a77259ee9fb2` |
+| 02-creating-exploring | [pass 1](../../sheets/02-creating-exploring/r002/image.png) | `44e6489a309d25b634d8d42064fd7169e50da6bb73ed767a55ef9b6182570d47` |
+| 03-interfaces-perspectives | [pass 3](../../sheets/03-interfaces-perspectives/r004/image.png) | `889b8694969b9c2f02aa3c73900f725670c8459c3a9949d422e3c1022a47e215` |
+
+## Inspection
+All16 panels inspected with independent review. Contemporary warm-climate district now recurs through home/workshop/gathering/transit/rain/park and interfaces; historic European skyline removed. Living central tree, broad rounded two-storey library, three northern stepped towers, west river/north lowbridge, ground southern tram and southwest park retained. A1 is original indigo-haired bun/blue-eyed woman with white-blue jacket and leaf badge; phone portrait matches with explicit leaf A1 marker. Phone map, selected Workshop card, City Agent A1 and Ask availability/action fit inside bezel. Facility Book now calendar, distinct Browse openbook and Ask bubble. XYZ uses redX, greenY/up, blueZ with letters. AR selects lowworkshop with fourcategory legend and External viewer label. Home/roof westward camera crops repaired.
+
+## Residuals
+Not full contract compliance. Seven overview attempts showed alternating roof regressions before selected pass7 finally displayed three workshop bays in all four overview panels. All attempts are preserved. MAP retains shaded tree/roof glyphs and elevation-style bridge; TOP-DOWN retains visible facades and tilt. Workshop roof slopes/heights vary across scenes. Generated margins/caption typography are not pixel-exact. Small badge text in conversation is less legible than explicit mobile A1 marker. No measured accessibility, usability or runtime performance claim.
+
+## Provenance
+No image postprocessing. [Originals](originals/README.md) remain historical evidence. `hashes.sha256` records originals/all candidates. Each candidate matches the actual tool file byte-for-byte.
+
+## Final isolated follow-ups
+
+Pass6 added one bay to the two visible STREET bays, but DIAGONAL simultaneously regressed to four. Pass7 removed only the rightmost fourth DIAGONAL bay from pass6, preserving its correct STREET count. Inspection of pass7 confirms three bays in MAP, TOP-DOWN, DIAGONAL and STREET. Pass7 is the selected gallery image; the previously recorded roof-count issue is resolved. Cartographic and camera residuals above remain.

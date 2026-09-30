@@ -1,0 +1,1 @@
+Use case: precise-object-edit. Edit ONLY bottom-right STREET: low workshop on LEFT has four sawtooth peaks; reduce to EXACTLY THREE peaks/bays, keeping one rectangular hall. All other panels untouched. Output1536x1024. Preserve entire existing clay medium, captions and footer.

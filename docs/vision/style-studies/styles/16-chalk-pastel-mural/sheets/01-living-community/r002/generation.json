@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "045d8b08910d2dec05737ad8ce9a7da34687e18067171cc2d48c8dcee0693fbc",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "cc3db3bd976f8e48d2586813249b6901b8d4dfd791fbf689e906d58bd5aa7055"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/16-chalk-pastel-mural/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

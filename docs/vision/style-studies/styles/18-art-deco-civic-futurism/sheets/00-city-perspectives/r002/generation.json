@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "db6bae6c4e6cd2d0b203e473e91450dbe9213af1fef4748dff0968bff866bcec",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/18-art-deco-civic-futurism/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

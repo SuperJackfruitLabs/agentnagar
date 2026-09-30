@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "d2bcb1977e450a4ae9875b4375edded1ddf2bbe24c328c227419f112d3c8ab4e",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/26-soft-3d-plush-miniature/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "29d49a75f1bb4949824e25f6677b50c07890de3ef43d7879498e1d0639b02824",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "66ae5315da09b056d7f60f62425a165f14c93d25aeb0faee9d2a971d78e326cf"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/01-graphic/02-creating-exploring.pass-1.png"
+  ],
+  "reference_images": [
+    "../../00-city-perspectives/r003/image.png",
+    "../../01-living-community/r001/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

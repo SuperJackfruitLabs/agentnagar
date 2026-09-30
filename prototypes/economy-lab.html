@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agentnagar — economy lab</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#243e34;background:#f6f2e7;line-height:1.55}*{box-sizing:border-box}body{margin:0}main{max-width:1200px;margin:auto;padding:32px 22px}h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3.8rem);line-height:1.1;margin:12px 0}h2{font-family:Georgia,serif;font-size:1.5rem;margin:0 0 14px}h3{margin:18px 0 8px;font-size:1rem}p{margin:0 0 16px}a{color:#285e49}.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.intro{max-width:750px}nav{display:flex;flex-wrap:wrap;gap:18px;margin:18px 0 26px}.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}.card{background:#fffcf4;border:1px solid #d6decc;border-radius:18px;padding:22px;min-width:0}.wide{grid-column:span 2}.balance{font-size:2.6rem;line-height:1.2;font-weight:750;font-variant-numeric:tabular-nums;margin:10px 0}.unit,.fine{font-size:.85rem;color:#50655a}.tag{display:inline-block;padding:4px 10px;background:#e6eedb;border-radius:30px;font-size:.8rem;margin:0 6px 12px 0}.actions{display:grid;gap:9px;margin:14px 0}button{font:inherit;font-weight:650;border:1px solid #698368;border-radius:9px;padding:10px 12px;background:#eaf0df;color:#243e34;cursor:pointer;text-align:left;min-height:44px}button.primary{background:#2b604c;color:white}button:disabled{opacity:.5;cursor:default}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #b06b23;outline-offset:3px}.notice{background:#fff0cd;border-left:4px solid #b68632;padding:14px;margin:20px 0;min-height:52px}.open{background:#f3ecf7;border-left:4px solid #7758bb;padding:12px 14px;margin:14px 0;font-size:.85rem}.bar{height:14px;background:#e5e5d6;border-radius:15px;overflow:hidden;margin:14px 0}.fill{height:100%;background:#55834d;transition:width .2s}.row{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #e8e9de;padding:7px 0;font-variant-numeric:tabular-nums}.row.sub{padding-left:14px;font-size:.9rem}.row.external{background:#f3ecf7;padding-left:8px;padding-right:8px}.assessment{border:1px solid #d6decc;border-radius:12px;padding:10px 14px;margin:12px 0;background:#f6f7ea}.assessment .row:last-child{border-bottom:0}.journal{padding-left:22px;max-height:320px;overflow:auto}.journal li{padding:5px 0}.foot{padding-top:24px;font-size:.85rem}#house{font-size:3rem}details{margin-top:16px}summary{cursor:pointer;font-weight:650;min-height:44px}@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.cash{grid-column:span 2}}@media(max-width:560px){main{padding:24px 16px}.grid{grid-template-columns:1fr}.wide,.cash{grid-column:auto}.card{padding:18px}}@media(prefers-reduced-motion:reduce){.fill{transition:none}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">Agentnagar · design experiment</div><h1>Your wallet.<br>Our city.</h1><p class="intro">Earn from a funded job. See the tax assessment, book a study room, improve your home, and send the credits round the loop again. Every action is a transfer between named accounts—nothing is created or destroyed.</p><span class="tag">Fictional JC · local state · no checkout or Razorpay connection</span><span class="tag">“JC” is a working label — rename pending (RD06)</span></header>
+<nav aria-label="Planning documents"><a href="../docs/gameplay/ECONOMY.md">Economy design</a><a href="../docs/vision/OPERATING_MODEL.md">Operating model (OP05 tax)</a><a href="../docs/integrations/payments/RAZORPAY.md">Razorpay plan</a><a href="city-lab.html">City services lab</a><a href="atlas.html">Planning atlas</a></nav>
+<noscript><p class="notice">This experiment needs JavaScript. The linked economy design includes the complete payment matrix and worked example.</p></noscript>
+<div class="grid">
+<section class="card" aria-labelledby="wallet-title"><div class="eyebrow" id="wallet-title">Resident wallet</div><div class="balance"><span id="wallet">1,200</span> <span class="unit">JC spendable</span></div>
+<div class="row sub"><span>Earned in the city</span><strong id="bal-earned">—</strong></div><div class="row sub"><span>Included with tier</span><strong id="bal-tier">—</strong></div><div class="row sub"><span>Purchased with money (fixture)</span><strong id="bal-purchased">—</strong></div>
+<p class="fine" style="margin-top:10px">Illustrative spend order for in-game purchases: tier-included → earned → purchased. Refunds return to the balance they came from.</p>
+<h3 id="assess-title">Tax assessment for the next 400 JC job</h3>
+<div class="assessment" role="group" aria-labelledby="assess-title">
+<div class="row"><span>Eligible income already this period</span><strong id="as-before">—</strong></div>
+<div class="row"><span>This job, gross</span><strong id="as-gross">—</strong></div>
+<div class="row"><span>Cumulative after the job</span><strong id="as-after">—</strong></div>
+<div class="row"><span>Exempt (first 1,000 JC per period)</span><strong id="as-exempt">—</strong></div>
+<div class="row"><span>Taxable excess</span><strong id="as-excess">—</strong></div>
+<div class="row"><span>Cumulative liability at 10%</span><strong id="as-liability">—</strong></div>
+<div class="row"><span>Already assessed this period</span><strong id="as-already">—</strong></div>
+<div class="row"><span>Tax on this job</span><strong id="as-tax">—</strong></div>
+<div class="row"><span>Net received</span><strong id="as-net">—</strong></div>
+</div>
+<p class="fine" id="quote"></p>
+<p class="fine">OP05 fictional tuning example, not an adopted rate: the city publishes the threshold and rate; a resident does not set their own tax. Liability is cumulative and uses integer arithmetic, so splitting a reward into tiny receipts cannot round the tax away. Tier grants, purchased credits and refunds are not income.</p>
+<div class="actions"><button class="primary" id="job">Complete funded job · +400 gross JC</button><button id="errand">Run a small errand · +15 gross JC</button><button id="utilities">Pay utility bill · 30 JC</button><button id="book">Book study room · 50 JC</button><button id="cancel" disabled>Cancel study-room booking</button><button id="pledge">Support the park · 200 JC</button><button id="period">Start the next civic period</button></div>
+<p class="fine" id="period-state"></p></section>
+<section class="card" aria-labelledby="treasury-title"><div class="eyebrow" id="treasury-title">City treasury</div><div class="balance"><span id="treasury">2,000</span> <span class="unit">JC</span></div><p>Taxes and fees fund staffing, maintenance and public services. Payments move to other accounts.</p><div class="row"><span>Next full service period</span><strong>300 JC</strong></div><div class="row"><span>Periods funded</span><strong id="runway">6</strong></div><div class="bar" aria-hidden="true"><div class="fill" id="coverage-bar" style="width:100%"></div></div><p id="coverage">Last service period: not settled.</p><div class="actions"><button id="settle">Settle a city service period</button><button id="safety">Request basic fire response · free</button></div><p class="fine">With insufficient funds, this sketch pays partial upkeep and reduces the displayed staffing percentage. The full design adds minimum-service budgets, routes and utility dependencies.</p>
+<h3>Employer job budget</h3><div class="row"><span>Reserved for jobs</span><strong id="job-budget">—</strong></div><p class="fine" id="job-budget-note"></p>
+<div class="actions"><button id="recirculate">Recirculate local spending → job budget</button></div><p class="fine">Labelled recirculation path (illustrative, 100%): the kit supplier and service staff spend what they received at the employer's business, which refills the job budget. That closes the loop: employer → resident → treasury and suppliers → staff → employer.</p></section>
+<section class="card cash" aria-labelledby="tier"><div class="eyebrow">Lifestyle progression</div><div id="house" aria-hidden="true">⌂</div><h2 id="tier">R1 · Starter home</h2><p id="home-state"></p><div class="actions"><button class="primary" id="upgrade">Unlock cottage kit · 800 JC</button><button id="cash-start">Preview a cash upgrade</button><button id="cash-confirm" disabled>Simulate verified purchase</button><button id="cash-cancel" disabled>Cancel pending purchase</button><button id="furniture" disabled>Add a cottage workbench · 450 JC</button></div><p class="fine" id="cash-state"></p><p class="fine">A pending cash order holds the JC route so the kit cannot be bought twice. You can cancel it, and it expires by itself after 60 seconds or at the next civic period. It creates no order, charge or subscription. A real integration would verify capture through the city backend and expire on the provider's timeout.</p>
+<h3>Credits from money and tiers (RD07)</h3><div class="actions"><button id="buy-credits">Buy 500 JC with money (fixture)</button><button id="tier-once">Buy a one-time tier · 300 JC included once</button><button id="subscribe">Start a subscription tier · 100 JC each period</button><button id="unsubscribe" disabled>Cancel the subscription tier</button></div><p class="fine" id="tier-state"></p>
+<p class="open"><strong>Open question (RD07/RD08).</strong> Credits are meant to pay for real compute and storage as well as game items. Which balance may pay for them—earned, tier-included or purchased—and with what caps, refunds and expiry, is not decided. This lab therefore offers no compute purchase.</p></section>
+<section class="card wide" aria-labelledby="journal-title"><h2 id="journal-title">Follow every transfer</h2><p id="message" class="notice" role="status" aria-live="polite"></p><ol class="journal" id="journal" aria-label="Transaction journal"></ol></section>
+<section class="card" aria-labelledby="accounts-title"><h2 id="accounts-title">Where the credits are</h2><div id="accounts"></div><div class="row"><strong>Total supply</strong><strong id="supply">6,000 JC</strong></div><p class="fine" id="invariant" role="status"></p><p class="fine">The 4,200 JC worked example plus a labelled external account of 1,800 JC. “External · payments fixture” stands in for issuance against verified real-money receipts; it is outside the city, finite here, and the only place tier and purchased credits come from. No action changes the total.</p><button id="reset">Reset the fictional scenario</button><details><summary>What this leaves out</summary><p class="fine">No accounts, server, payment SDK, cash valuation, real resident data, durable save, taxes in real currency, or multiplayer. Prices, the threshold and the rate are invented. The payments fixture moves fictional credits only; no money, order, refund or subscription exists. Credit expiry, refunds of purchased credits, transfers between residents and no-cash-out rules are open. No loans or player markets are implemented.</p></details></section>
+</div><footer class="foot">Internal planning · revised 18 September 2026 · fictional data · <a href="../docs/README.md">Full design index</a></footer>
+</main>
+<script>
+"use strict";
+const el=id=>document.getElementById(id);
+const fmt=n=>n.toLocaleString('en-US');
+const TOTAL_SUPPLY=6000;
+const TAX={exemption:1000,rateBps:1000}; // OP05 fictional tuning example: first 1,000 JC exempt, 10% above it.
+const JOB_GROSS=400,ERRAND_GROSS=15,CASH_EXPIRY_MS=60000;
+const SPEND_ORDER=['tier','earned','purchased'];
+const names={earned:'Resident · earned',tier:'Resident · included with tier',purchased:'Resident · purchased',treasury:'Treasury',employer:'Employer · job budget',supplier:'Kit supplier',services:'Service recipients',payments:'External · payments fixture'};
+const short={earned:'earned',tier:'tier-included',purchased:'purchased'};
+let state;
+
+/* Pure rules ---------------------------------------------------------- */
+function liability(cumulative){return Math.floor(Math.max(0,cumulative-TAX.exemption)*TAX.rateBps/10000);}
+function assess(period,gross){const before=period.eligible,after=before+gross,total=liability(after),tax=total-period.assessed;return{before,gross,after,excess:Math.max(0,after-TAX.exemption),liability:total,already:period.assessed,tax,net:gross-tax};}
+function supply(balances){return Object.values(balances).reduce((a,v)=>a+v,0);}
+function splitPayment(balances,amount){let left=amount;const split={};for(const key of SPEND_ORDER){const part=Math.min(balances[key],left);if(part>0)split[key]=part;left-=part;}return left===0?split:null;}
+function describeSplit(split){return Object.entries(split).map(([key,value])=>`${fmt(value)} ${short[key]}`).join(' + ');}
+
+/* Ledger -------------------------------------------------------------- */
+function move(from,to,amount){if(!Number.isSafeInteger(amount)||amount<0||state.balances[from]<amount)return false;state.balances[from]-=amount;state.balances[to]+=amount;return true;}
+function spendable(){return SPEND_ORDER.reduce((sum,key)=>sum+state.balances[key],0);}
+function pay(to,amount){const split=splitPayment(state.balances,amount);if(!split)return null;for(const [key,part]of Object.entries(split))move(key,to,part);return split;}
+function refund(from,split){const amount=Object.values(split).reduce((a,v)=>a+v,0);if(state.balances[from]<amount)return false;for(const [key,part]of Object.entries(split))move(from,key,part);return true;}
+function note(text){el('message').textContent=text;const item=document.createElement('li');item.textContent=text;el('journal').prepend(item);while(el('journal').children.length>40)el('journal').lastChild.remove();}
+
+function reset(){
+  state={balances:{earned:1200,tier:0,purchased:0,treasury:2000,employer:1000,supplier:0,services:0,payments:1800},period:{number:1,eligible:900,assessed:0},utilitiesPaid:false,booking:null,kit:false,furniture:false,cash:'idle',cashExpiresAt:0,coverage:null,tierOnce:false,subscribed:false};
+  el('journal').replaceChildren();
+  note('Opening fixture: 6,000 JC across eight accounts. This civic period already records 900 JC of eligible income, all under the 1,000 JC exemption.');
+  render();
+}
+function earn(gross,label){
+  const a=assess(state.period,gross);
+  if(!move('employer','earned',gross)){note(`Job declined: the employer's funded budget holds ${fmt(state.balances.employer)} JC, less than the ${fmt(gross)} JC reward. Recirculate local spending to refill it. Nothing was minted.`);return;}
+  move('earned','treasury',a.tax);state.period.eligible=a.after;state.period.assessed=a.liability;
+  note(`${label}: employer paid ${fmt(gross)} JC gross. Period income ${fmt(a.before)} → ${fmt(a.after)}; taxable excess ${fmt(a.excess)}; liability ${fmt(a.liability)} − ${fmt(a.already)} already assessed = ${fmt(a.tax)} JC tax to the treasury; ${fmt(a.net)} JC net received.`);
+  render();
+}
+function expireCash(reason){if(state.cash!=='pending')return;state.cash='expired';state.cashExpiresAt=0;note(`Pending cash purchase expired (${reason}). No benefit was granted and the JC route is open again.`);render();}
+function tick(){if(state.cash!=='pending')return;if(Date.now()>=state.cashExpiresAt){expireCash('60-second fixture timeout');return;}renderCash();}
+
+function renderCash(){
+  const seconds=Math.max(0,Math.ceil((state.cashExpiresAt-Date.now())/1000));
+  el('cash-state').textContent=state.cash==='pending'?`Cash route: pending fixture, no benefit yet. Expires in about ${seconds} s unless confirmed or cancelled.`:state.cash==='fulfilled'?'Cash route: fictional verified grant applied once. No charge was made.':state.cash==='cancelled'?'Cash route: pending purchase cancelled. Nothing was granted; you can start again or pay with JC.':state.cash==='expired'?'Cash route: pending purchase expired. Nothing was granted; you can start again or pay with JC.':'Cash route: no purchase started. Real prices remain undecided.';
+}
+function render(){
+  const b=state.balances,a=assess(state.period,JOB_GROSS),small=assess(state.period,ERRAND_GROSS);
+  el('wallet').textContent=fmt(spendable());el('bal-earned').textContent=fmt(b.earned)+' JC';el('bal-tier').textContent=fmt(b.tier)+' JC';el('bal-purchased').textContent=fmt(b.purchased)+' JC';
+  el('as-before').textContent=fmt(a.before)+' JC';el('as-gross').textContent=fmt(a.gross)+' JC';el('as-after').textContent=fmt(a.after)+' JC';el('as-exempt').textContent='−'+fmt(Math.min(a.after,TAX.exemption))+' JC';el('as-excess').textContent=fmt(a.excess)+' JC';el('as-liability').textContent=fmt(a.liability)+' JC';el('as-already').textContent='−'+fmt(a.already)+' JC';el('as-tax').textContent=fmt(a.tax)+' JC';el('as-net').textContent=fmt(a.net)+' JC';
+  el('quote').textContent=`${fmt(a.gross)} JC gross → ${fmt(a.tax)} tax → ${fmt(a.net)} net. The small errand would pay ${fmt(small.tax)} JC tax on ${fmt(small.gross)} JC.`;
+  el('period-state').textContent=`Civic period ${state.period.number}: ${fmt(state.period.eligible)} JC eligible income, ${fmt(state.period.assessed)} JC tax assessed. Utility bill ${state.utilitiesPaid?'paid':'due'} for this period.`;
+  el('treasury').textContent=fmt(b.treasury);el('runway').textContent=Math.floor(b.treasury/300);
+  el('coverage').textContent=state.coverage===null?'Last service period: not settled.':`Last service period: ${state.coverage}% funded.`;el('coverage-bar').style.width=(state.coverage??100)+'%';
+  el('job-budget').textContent=fmt(b.employer)+' JC';el('job-budget-note').textContent=`Funds ${Math.floor(b.employer/JOB_GROSS)} more ${fmt(JOB_GROSS)} JC job${Math.floor(b.employer/JOB_GROSS)===1?'':'s'}. The job is repeatable while the budget lasts; an empty budget declines the job instead of minting credits.`;
+  el('recirculate').disabled=b.supplier+b.services===0;
+  el('utilities').disabled=state.utilitiesPaid;el('book').disabled=!!state.booking;el('cancel').disabled=!state.booking;
+  el('furniture').disabled=!state.kit||state.furniture;el('upgrade').disabled=state.kit||state.cash==='pending';el('cash-start').disabled=state.kit||state.cash==='pending';el('cash-confirm').disabled=state.cash!=='pending';el('cash-cancel').disabled=state.cash!=='pending';
+  el('tier').textContent=state.kit?'R2 · Cottage life':'R1 · Starter home';
+  el('home-state').textContent=state.kit?'Cottage kit unlocked, including the standard shell. Furnishings and recurring service plans are separate.':'The neighbourhood objective is complete in this fixture. Choose an eligible route to the same cottage kit.';
+  el('tier-once').disabled=state.tierOnce;el('subscribe').disabled=state.subscribed;el('unsubscribe').disabled=!state.subscribed;
+  el('tier-state').textContent=`One-time tier: ${state.tierOnce?'bought; its 300 JC were granted once and never again':'not bought'}. Subscription tier: ${state.subscribed?'active; 100 JC arrive at the start of each civic period until cancelled':'not active'}. Payments fixture holds ${fmt(b.payments)} JC.`;
+  renderCash();
+  el('accounts').replaceChildren();
+  for(const [key,value]of Object.entries(b)){const row=document.createElement('div');row.className='row'+(key==='payments'?' external':'');const label=document.createElement('span');label.textContent=names[key];const amount=document.createElement('strong');amount.textContent=fmt(value)+' JC';row.append(label,amount);el('accounts').append(row);}
+  const total=supply(b);el('supply').textContent=fmt(total)+' JC';
+  const ok=total===TOTAL_SUPPLY&&Object.values(b).every(v=>Number.isSafeInteger(v)&&v>=0);
+  el('invariant').textContent=ok?`Conservation check passed: eight accounts sum to ${fmt(TOTAL_SUPPLY)} JC and none is negative.`:'Conservation check FAILED.';
+  if(!ok)throw Error('Ledger invariant failed');
+}
+
+el('job').onclick=()=>earn(JOB_GROSS,'Funded job accepted');
+el('errand').onclick=()=>earn(ERRAND_GROSS,'Small errand accepted');
+el('utilities').onclick=()=>{if(state.utilitiesPaid)return;const split=pay('treasury',30);if(!split){note('Not enough JC. No utility payment or cash charge made.');return;}state.utilitiesPaid=true;note(`Utility bill settled for this period: 30 JC to the treasury (${describeSplit(split)}).`);render();};
+el('book').onclick=()=>{if(state.booking)return;const split=pay('treasury',50);if(!split){note('Not enough JC for the study room. No booking or cash charge made.');return;}state.booking={split};note(`Study room booked: 50 JC to the treasury (${describeSplit(split)}). One slot reserved.`);render();};
+el('cancel').onclick=()=>{if(!state.booking)return;if(!refund('treasury',state.booking.split)){note('Refund pending: treasury has insufficient funds. Booking retained; no duplicate refund.');return;}note(`Booking cancelled: 50 JC returned to the balances it came from (${describeSplit(state.booking.split)}). A refund is not income.`);state.booking=null;render();};
+el('pledge').onclick=()=>{const split=pay('treasury',200);if(!split){note('Not enough JC for the park contribution. No cash charge made.');return;}note(`Park contribution: 200 JC transferred to the public budget (${describeSplit(split)}). This is an immediate gift, not project escrow.`);render();};
+el('period').onclick=()=>{state.period={number:state.period.number+1,eligible:0,assessed:0};state.utilitiesPaid=false;let text=`Civic period ${state.period.number} begins: eligible income and assessed tax restart at 0, so the first 1,000 JC is exempt again. Settled income is never re-taxed.`;if(state.subscribed){text+=move('payments','tier',100)?' Subscription tier grant: 100 JC moved from the payments fixture to the tier-included balance.':' Subscription grant skipped: the payments fixture is empty, and this lab does not mint.';}note(text);if(state.cash==='pending')expireCash('civic period ended');else render();};
+el('upgrade').onclick=()=>{if(state.kit||state.cash==='pending')return;const split=pay('supplier',800);if(!split){note('Cottage kit needs 800 JC. Keep saving; no partial debit and no cash charge made.');return;}state.kit=true;note(`Cottage kit unlocked once: 800 JC transferred to the kit supplier (${describeSplit(split)}).`);render();};
+el('furniture').onclick=()=>{if(!state.kit||state.furniture)return;const split=pay('supplier',450);if(!split){note('Workbench needs 450 JC. Not enough credits; no cash charge made.');return;}state.furniture=true;note(`Workbench delivered: 450 JC transferred to the supplier (${describeSplit(split)}).`);render();};
+el('cash-start').onclick=()=>{if(state.kit||state.cash==='pending')return;state.cash='pending';state.cashExpiresAt=Date.now()+CASH_EXPIRY_MS;note('Cash purchase preview opened. This is a pending fixture, not Razorpay Checkout. It can be cancelled and expires after 60 seconds.');render();};
+el('cash-confirm').onclick=()=>{if(state.cash!=='pending')return;state.cash='fulfilled';state.cashExpiresAt=0;state.kit=true;note('Fictional verified purchase grants the cottage kit once. JC balances stay unchanged; no money was charged.');render();};
+el('cash-cancel').onclick=()=>{if(state.cash!=='pending')return;state.cash='cancelled';state.cashExpiresAt=0;note('Pending cash purchase cancelled. Nothing was granted and the JC route is open again.');render();};
+el('buy-credits').onclick=()=>{if(!move('payments','purchased',500)){note('Payments fixture cannot cover 500 JC. A real issuer would mint against a verified receipt; this lab keeps supply constant, so the purchase is declined.');return;}note('Fixture purchase: 500 JC moved from the external payments fixture to the PURCHASED balance. No money changed hands; purchased credits are not income and stay separate from earned credits.');render();};
+el('tier-once').onclick=()=>{if(state.tierOnce)return;if(!move('payments','tier',300)){note('Payments fixture cannot cover the 300 JC tier grant; tier not bought.');return;}state.tierOnce=true;note('One-time tier bought (fixture): 300 JC granted once from the payments fixture to the tier-included balance. There is no renewal and no second grant.');render();};
+el('subscribe').onclick=()=>{if(state.subscribed)return;state.subscribed=true;const granted=move('payments','tier',100);note(`Subscription tier started (fixture): ${granted?'100 JC granted now from the payments fixture, and':'the payments fixture is empty so nothing is granted now;'} 100 JC will arrive at each new civic period until you cancel.`);render();};
+el('unsubscribe').onclick=()=>{if(!state.subscribed)return;state.subscribed=false;note('Subscription tier cancelled: no further period grants. Credits already granted stay in the tier-included balance in this sketch; expiry rules are open.');render();};
+el('recirculate').onclick=()=>{const amount=state.balances.supplier+state.balances.services;if(amount===0)return;move('supplier','employer',state.balances.supplier);move('services','employer',state.balances.services);note(`Recirculation: the kit supplier and service staff spent ${fmt(amount)} JC at the employer's business. The job budget is now ${fmt(state.balances.employer)} JC.`);render();};
+el('settle').onclick=()=>{const committed=state.booking?50:0;const paid=Math.min(300,Math.max(0,state.balances.treasury-committed));move('treasury','services',paid);state.coverage=Math.floor(paid/300*100);note(`City paid ${fmt(paid)} JC to service recipients (${state.coverage}% of this period). A refundable booking's 50 JC is protected.`);render();};
+el('safety').onclick=()=>{note('Basic fire response requested: no wallet debit or tier check. Actual dispatch still depends on city crews, water and routes.');};
+el('reset').onclick=reset;reset();setInterval(tick,1000);
+</script>
+</body></html>

@@ -1,0 +1,138 @@
+# Checks every pull request and every push to main. Three jobs run in
+# parallel: Rust (fmt, clippy, tests, the wasm32 core build), the fixtures
+# and style-kit tooling (Python and the glTF validator), and the Godot
+# client (headless import plus tests/run_all.gd against a freshly built
+# extension). All of it calls the repo's own scripts and test commands
+# rather than hard-coding test names, so it keeps working as those grow
+# (for example, a new cargo test, a new generate.py --check, and new Godot
+# tests all get picked up without touching this file).
+#
+# The frame-rate benchmark (city/scripts/bench.sh) is intentionally not
+# run here: it needs a real display and GPU that a CI runner doesn't have.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+  GODOT_VERSION: "4.6.3"
+  GODOT_STATUS: stable
+
+jobs:
+  rust:
+    name: Rust (fmt, clippy, tests, wasm32)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          # No rust-toolchain.toml pins a specific version, so this matches
+          # package.yml: whatever "stable" is when the job runs.
+          targets: wasm32-unknown-unknown
+          components: rustfmt, clippy
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: city -> target
+          key: ci
+
+      - name: cargo fmt --check
+        run: cargo fmt --all --check
+        working-directory: city
+
+      - name: cargo clippy
+        run: cargo clippy --workspace --all-targets -- -D warnings
+        working-directory: city
+
+      - name: cargo test
+        run: cargo test --workspace
+        working-directory: city
+
+      - name: city-core builds for wasm32 (the Godot client's target)
+        run: cargo build -p city-core --target wasm32-unknown-unknown
+        working-directory: city
+
+  fixtures-and-kits:
+    name: Fixtures and style kits (Python)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: prototypes/voxel-work-bay/tools/package-lock.json
+
+      - name: Pillow and numpy (the pixel-art kit's build and test tools)
+        # Pillow is pinned to the version the style kits' generators were
+        # built and committed against (see docs/superpowers/plans/2026-09-24-
+        # city-walk-in-style.md): a newer Pillow's PNG encoder writes
+        # different bytes for the same pixels, which fails the atlas kits'
+        # byte-reproducibility tests even though nothing is actually wrong.
+        run: pip install --quiet "pillow==10.2" numpy
+
+      - name: The pinned Khronos glTF validator (validate.sh, kittests.py)
+        run: npm ci --prefix prototypes/voxel-work-bay/tools
+
+      - name: The district fixture matches its generator
+        run: python3 city/fixtures/district/generate.py --check
+
+      - name: Every style kit's own tests
+        run: |
+          for t in city/tools/styles/*/test_*.py; do
+              echo "::group::$t"
+              python3 -m unittest "$t"
+              echo "::endgroup::"
+          done
+
+  godot:
+    name: Godot client (headless import and tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: city -> target
+          key: ci-godot
+
+      - name: Build the city-godot extension
+        run: bash city/scripts/build-godot.sh
+
+      - name: Godot ${{ env.GODOT_VERSION }}
+        env:
+          # One template is enough: this job never exports or packages, so
+          # it doesn't need the rest of install-godot.sh's template set.
+          EDITOR_SUFFIX: linux.x86_64
+          TEMPLATES: linux_release.x86_64
+        run: bash .github/scripts/install-godot.sh
+
+      - name: Import the project (writes the editor's import cache)
+        run: "\"$GODOT\" --headless --path godot --import --quit"
+        working-directory: city
+
+      - name: Run tests/run_all.gd
+        # The suite calls quit(1) on any failure, so a non-zero exit here
+        # is a real failure, not just a flaky headless run.
+        run: "\"$GODOT\" --headless --path godot --script res://tests/run_all.gd"
+        working-directory: city

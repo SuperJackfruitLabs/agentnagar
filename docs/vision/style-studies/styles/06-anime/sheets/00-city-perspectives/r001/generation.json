@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "sha256": "a3cd01a8a144252cbc84ae988a7fd901d0656dbc6cd911ef96c3c738c5a9c582",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "39bb3b8f2c84ce01f1790b16ac7d649110a51a1766f8880cc968ce513b5637fa"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/originals/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6",
+  "prompt_source": {
+    "path": "../../../history/initial-prompt-sources/00-city-perspectives.prompt.md.source.txt",
+    "format": "markdown-fenced-text",
+    "sha256": "62dd0215ccf601d522d963b0d2e3478b59da59854b7ece5f9bede677de5923fe"
+  }
+}

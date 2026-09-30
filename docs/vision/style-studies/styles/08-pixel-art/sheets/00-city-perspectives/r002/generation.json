@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sha256": "3a49ed861cfb9fb25e04219f39c43ed89d7577aecff27d3d793969d2fcf89f14",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "8fc79b755d6b5a320aef79f34806dfad8f535c326a264c39b01c1ac42918da2f"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/00-city-perspectives-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

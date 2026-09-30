@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "4b2c2439ceda388a3e12a5c2630ae56831469ead980f5bd482e58b5179be304f",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "4562c9627c9dd3d7f3d484f43357495d70b8660f182ed492087efb7eae27c874"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/originals/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

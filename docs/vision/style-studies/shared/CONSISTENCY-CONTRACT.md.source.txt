@@ -1,0 +1,70 @@
+# Style comparison contract — revision 1
+
+Originally applied to corrections of styles 11–30 requested on 2026-09-19, following the [visual review](REVIEW-2026-09-19.md). On 2026-09-20 the user requested the same repair work for styles 01–10; their [repair record](REPAIR-FIRST-TEN-2026-09-20.md) adopts this contract as the target. This is a concept-art comparison contract, not an engine, production geometry or gameplay specification. Original sheets remain historical evidence until replacements pass inspection.
+
+## 1. Reference district
+
+The editable [reference plan](reference-district.svg) is the layout guide supplied to image generation. It is deliberately independent of any candidate's art style.
+
+All positions below use a normalized 100 × 100 north-up plan: x increases east; y increases north. The illustrated district has one straight river along its west edge, not through its centre. No additional waterways or islands.
+
+| ID | Landmark | Position and invariant |
+| --- | --- | --- |
+| R1 | River | x=0–20, flowing north to south; continuous west edge |
+| B1 | North bridge | East–west crossing at y=85; one low three-span bridge, no suspension towers |
+| W1 | Workshop | x=35, y=50; low rectangular hall, three sawtooth roof bays; entrance faces east |
+| T1 | Tree Square | x=55, y=50; one large living shade tree at the centre of an open square; no substitute fountain, monument or sculpture |
+| L1 | Library | x=78, y=50; broad two-storey building with a rounded reading-room roof; entrance faces west |
+| S1 | Tram boulevard | y=20, running east–west on the ground; two tracks, one stop south of the square; cream tram with a coral stripe |
+| D1 | Downtown | x=55–90, y=78–95; cluster of three stepped towers behind the civic district |
+| P1 | Waterfront park | x=22–32, y=25–40; path, shade trees and seating along the east riverbank |
+
+Architecture may vary in ornament, texture, roof finish and facade language. Keep these landmark masses, entrances, connections and relative positions. Palette may translate the tram stripe into the nearest permitted warm accent in a restricted-ink style. Preserve its silhouette and stripe.
+
+MAP is flat cartography with north up. TOP-DOWN is a vertical roof view of the same extent. DIAGONAL looks from the southeast toward the northwest: river stays on the west edge. STREET stands south of Tree Square looking north: workshop left, library right, tree centre, downtown behind. A north arrow uses N at top, E right, S bottom, W left.
+
+Experience sheets show places inside this district. Home and rooftop views look west from above the library; workshop interiors belong to W1; gatherings take place around T1. Interior windows and conversation close-ups may show nearby foliage or courtyard details rather than a second city panorama. Where landmarks are visible, their placement must agree with the overview. Mobile and AR use the same north-up district, without inventing a larger river network. If a future study needs a larger extent, it must include a labelled outline locating this district.
+
+## 2. Interaction and identity
+
+- The recurring city agent is **A1**, displayed as **City Agent A1** in conversation and mobile. Preserve the conversation agent's face silhouette, two characteristic features and leaf badge in its mobile avatar within each style. Medium and ornament may vary across styles; species or identity must not change between sheets. Style 21 can retain a human-presenting agent with a visible A1 leaf badge. Style 25 retains its leaf-like agent; style 23 retains its CRT face. These are visual representations of the same reference role, not new simulation rules.
+
+  For styles 01–10, retain recognizable conversation-character features when defining A1, including human-presenting guides in 01, 03–08 and robots in 02, 09 and 10. A small badge on a human figure is insufficient to establish continuity unless its face and distinguishing features also carry into the phone portrait.
+- Build controls: **X red**, **Y green/up**, **Z blue**, with visible letters as well as colour. This is a comparison convention, not an engine choice. Decorative style palettes do not recolour semantic controls.
+- Facility actions are **Browse** (open book), **Book** (calendar), **Ask** (speech bubble). Do not reuse one icon for different actions.
+- Map categories: **Workshop** orange + crossed tools; **Library** blue + open book; **Transit** purple + tram; **Park** green + leaf. Labels and distinct shapes accompany colour.
+- Mobile task: locate W1, select it, and ask City Agent A1 about availability. One phone screen contains map, selected Workshop card and the Ask action with agent avatar. No detached companion panel or second device. UI text uses English consistently in this comparison set.
+- AR shows the same district on a table, with the same category legend and identifiable landmarks. Real-world hands may remain realistic outside the virtual scene; caption this boundary **External viewer**.
+
+## 3. Controlled comparison variables
+
+Vary render medium, architectural decoration and palette according to each candidate brief. Keep the same contemporary, warm-climate maker city, ordinary human residents in contemporary everyday clothing, agent role, ground-level tram route and tasks. Retro hardware may change casing, not capabilities; the cassette-style mobile client is a rugged handheld with the same one-screen task.
+
+Stained-glass, print, chalk, ceramic and plush treatments are rendering conventions. People, plants and animals remain living subjects; glass seams or ceramic decoration must not imply literal ceramic animals or glass skin. Ceramic finishes belong primarily on buildings and objects. Plush virtual residents and external human viewers are explicitly different presentation layers.
+
+Biomorphic architecture may retain root-like structural shapes and fungal lamps, while residents and transit follow the shared baseline. Preserve the original fantasy experiments as historical explorations. Woodblock and Madhubani-inspired studies vary drawing grammar without adding an unrequested historical setting, mountain landmark or language change. These labels do not certify cultural authenticity.
+
+## 4. Sheet presentation
+
+Target 1536 × 1024, four equally sized panels in a 2 × 2 grid, 20 px outer matte, 12 px gutters and a reserved 44 px footer. Each panel has a quiet 32 px caption strip at its top; captions never overlap scene content. Use the same placement and typography for all four sheets within a style. Keep the matte/accent colours from the candidate brief. Footer: **[style number] [style name] · [sheet name] · Concept study**. No decorative slogans, invented UI copy or microtext.
+
+| Sheet | Top left | Top right | Bottom left | Bottom right |
+| --- | --- | --- | --- | --- |
+| 00 City perspectives | MAP | TOP-DOWN | DIAGONAL | STREET |
+| 01 Living and community | WORKSHOP | HOME | CONVERSATION | GATHERING |
+| 02 Creating and exploring | BUILD MODE | TRANSIT | NIGHT AND RAIN | WATERFRONT PARK |
+| 03 Interfaces and perspectives | FACILITY | MOBILE | ROOFTOP | AR TABLETOP |
+
+Prefer separate, editable presentation text where the production workflow supports it. Generated captions are provisional until every word and edge has been inspected. Do not claim pixel-exact margins from a prompt alone.
+
+## 5. Acceptance checks
+
+Inspect each output against its original and this contract before replacing or linking it as corrected. Check every panel, not just the overall aesthetic:
+
+1. Eight landmarks and camera orientation remain consistent wherever visible; the central tree is living and unmistakable.
+2. Conversation and mobile agent share identity; phone task fits inside one screen; action and map symbols keep their meanings; axes and compass are correct.
+3. Medium, architecture and era remain separated; preserve the useful visual character of each original style.
+4. All four captions and footer are correctly spelled, fully visible and consistently placed; no malformed environmental slogans.
+5. At full size and half-size viewing, locate W1 from S1, identify A1, and distinguish a selected object from decoration. Simplify pattern immediately around faces, paths and controls, especially in 14, 15, 20, 27 and 29. Record visual judgments; do not claim accessibility compliance or measured usability.
+
+Runtime cost and interactive usability require a future prototype after a style is shortlisted; these static corrections cannot establish them.

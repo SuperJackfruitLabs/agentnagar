@@ -1,0 +1,50 @@
+{
+  "anime_cel": {
+    "player_pass": 0,
+    "reverse_blocked": 0,
+    "through": 0,
+    "tram_overlap": 0,
+    "walker_pass": 0,
+    "within_10cm": 0
+  },
+  "lowpoly_tropical": {
+    "player_pass": 0,
+    "reverse_blocked": 0,
+    "through": 0,
+    "tram_overlap": 0,
+    "walker_pass": 0,
+    "within_10cm": 0
+  },
+  "neon_noir": {
+    "player_pass": 0,
+    "reverse_blocked": 0,
+    "through": 0,
+    "tram_overlap": 0,
+    "walker_pass": 0,
+    "within_10cm": 0
+  },
+  "pixel_art": {
+    "player_pass": 0,
+    "reverse_blocked": 0,
+    "through": 0,
+    "tram_overlap": 0,
+    "walker_pass": 0,
+    "within_10cm": 0
+  },
+  "solarpunk": {
+    "player_pass": 0,
+    "reverse_blocked": 0,
+    "through": 0,
+    "tram_overlap": 0,
+    "walker_pass": 0,
+    "within_10cm": 0
+  },
+  "voxel": {
+    "player_pass": 0,
+    "reverse_blocked": 0,
+    "through": 0,
+    "tram_overlap": 0,
+    "walker_pass": 0,
+    "within_10cm": 0
+  }
+}

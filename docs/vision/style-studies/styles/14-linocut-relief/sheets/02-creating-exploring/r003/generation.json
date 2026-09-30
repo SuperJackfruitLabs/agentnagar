@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "0e278b6b357bac3939c5dec38ee62e2aa05ae5c459489ac68fc3b16b9be1f900",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "745a93035f3bd8acfa1e1e507226befe82ad2efdfff5faf7eff05209f25a066f"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/14-linocut-relief/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-19/14-linocut-relief/02-creating-exploring.pass-2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "8e481e7900e23680063aec01564681771f7e73e15b977e9fa6d54fc08d79f97a",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "974b21485a37abf269703aa193edc4052ea97c88f2020a0498a95d30ec2b3aec"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/25-biomorphic-eco-fantasy/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

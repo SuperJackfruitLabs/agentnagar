@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "69b8d9b571d2dfb67ab9c968fcb2fe847acb87a8648585110846afea032ce7b3",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "431edb6735818747a75cfc72d6fd1302765fb13be8ec3b299fccc0844ce576e2"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/08-pixel-art/03-interfaces-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass7.png"
+  ],
+  "reference_images": [
+    "../r007/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

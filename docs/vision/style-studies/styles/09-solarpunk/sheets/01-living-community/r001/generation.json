@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "b9eea271158ed19a62062dde0bc18ffade1c1f74bbf994952764851ddb0ae3f1",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "459b314c67718d08b98efcc6c2c911b60804043d30e2104731a100af69e9065b"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/originals/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

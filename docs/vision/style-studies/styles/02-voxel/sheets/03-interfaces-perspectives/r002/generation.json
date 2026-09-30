@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "927bca59e89c2e266fbf6636d87feee5e39d88b1fd4a438bdb9c8f4540c4ac81",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "e1146b4f8f4c0bce44014351fff349163b2b59b21aa0dee195da9e0ade1ac670"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/02-voxel/03-interfaces-perspectives.pass-1.png"
+  ],
+  "reference_images": [
+    "../../00-city-perspectives/r004/image.png",
+    "../../01-living-community/r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

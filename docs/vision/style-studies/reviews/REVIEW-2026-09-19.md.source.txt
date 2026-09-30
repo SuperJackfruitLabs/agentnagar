@@ -1,0 +1,142 @@
+# Visual consistency review: styles 11–30
+
+Reviewed 2026-09-19 against repository commit `2e835a3`. Style-specific evidence links below are pinned to that baseline so later gallery corrections do not change the evidence. See [repair status](REPAIR-STATUS.md) for the current artwork.
+
+## Scope and method
+
+All **76 existing PNG sheets** in the twenty new style folders were opened and visually inspected, covering **304 panels**. Four of the intended 80 sheets are missing. The original styles 01–10 were not re-audited. This is a review of illustrations, not a runtime, accessibility-conformance, cultural-authenticity, or performance test.
+
+Reference requirements: [candidate briefs and frame contract](CANDIDATE-STYLES.md), [collection and experience program](README.md), and [original shared camera/landmark brief](INITIAL-PROMPT-BRIEFS.md). The current documentation explicitly permits approximate geography and different architecture. Consequently, the continuity findings below are **limitations for comparing or implementing the same city across styles**, not claims that every approximation violates an approved production specification.
+
+Sheet codes used below:
+
+| Code | Filename | Panels, in reading order |
+| --- | --- | --- |
+| 00 | `00-city-perspectives.png` | Map; top-down; diagonal; street |
+| 01 | `01-living-community.png` | Workshop; home; conversation; gathering |
+| 02 | `02-creating-exploring.png` | Build mode; transit; night/rain; waterfront park |
+| 03 | `03-interfaces-perspectives.png` | Facility; mobile; rooftop; AR tabletop |
+
+Priority: **P1** blocks a complete, controlled comparison; **P2** materially changes interpretation or usability; **P3** is presentation cleanup. These priorities concern the review collection, not shipping severity.
+
+## Main findings
+
+### R01 — P1: four styles have no camera comparison sheet
+
+**15 Stained glass, 23 Cassette futurism, 24 Dieselpunk, and 25 Biomorphic eco-fantasy** have sheets 01–03 but no 00. Their sixteen overview panels cannot be evaluated. Do not rank their map readability or consistency across all four camera views against complete sets.
+
+The 76 existing files all have the requested 1536×1024 dimensions. Correct dimensions do not establish correct margins or label placement.
+
+### R02 — P1: the city changes between sheets
+
+The strongest examples are changes in identifiable bridge construction, skyline, and river layout, rather than small perspective discrepancies:
+
+- **11:** [00](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/11-low-poly-tropical-diorama/00-city-perspectives.png) uses a stone-arch bridge and a bell-tower hill; [03 mobile/rooftop/AR](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/11-low-poly-tropical-diorama/03-interfaces-perspectives.png) introduces a cable-stayed bridge and modern towers. The tropical palette carries over, but the landmark identity does not.
+- **13:** [00](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/13-risograph-print/00-city-perspectives.png) shows a low-rise, pitched-roof city and masonry bridge. [01](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/13-risograph-print/01-living-community.png) introduces a modern high-rise skyline and cable-supported/trussed bridges; [03 AR](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/13-risograph-print/03-interfaces-perspectives.png) uses another prominent arch bridge.
+- **14:** [00](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/14-linocut-relief/00-city-perspectives.png) has a historic roofscape and turreted stone bridge; [01–03](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/14-linocut-relief/README.md) move to skyscrapers and a suspension bridge.
+- **16:** [00](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/16-chalk-pastel-mural/00-city-perspectives.png) is a compact district with the river to the west. [03 AR](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/16-chalk-pastel-mural/03-interfaces-perspectives.png) depicts a channel through the middle of a different block layout. Its mobile, rooftop and tabletop panels also show different bridge forms.
+- **19, 20, 21, 29, 30:** the relatively clear one-bank atlas district becomes a broader river/canal composition in 03. No crop boundary or selected district identifies where the workshop–square–library arrangement went.
+
+A larger AR extent or another bridge elsewhere in the city could explain some differences. The sheets supply neither a shared reference map nor a camera locator, so that explanation cannot be verified. Preserve landmark IDs and show the selected district before treating these as interchangeable presentations.
+
+### R03 — P1: the central tree landmark is not held constant
+
+The shared brief specifies a central tree square. In **18, 19, 20, 22, and 27**, 00 instead centers on a fountain or monument with smaller trees around it. Examples: [19 map/street](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/19-bauhaus-primary-form/00-city-perspectives.png), [20 map/top-down](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/20-memphis-playful-geometry/00-city-perspectives.png), [22 map/street](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/22-streamline-retro-future/00-city-perspectives.png), [27 map/top-down](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/27-ceramic-tile-city/00-city-perspectives.png). Styles 20 and 22 even retain the label “Tree Square.”
+
+A different square design can be valid, but it changes the test scene. Restore the major tree for a controlled comparison, or explicitly approve a theme variant that replaces it.
+
+### R04 — P2: mobile concepts do not share a device boundary
+
+In **13, 17, 20, 25, and 26**, sheet 03 places the companion panel outside the main phone display. In 17, 25 and 26 it resembles a second attached device; in 13 and 20 it reads as a floating card. Other styles, such as 12, 18, 21 and 22, contain the companion in one screen.
+
+Examples: [13 mobile](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/13-risograph-print/03-interfaces-perspectives.png), [17 mobile](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/17-art-nouveau-botanical/03-interfaces-perspectives.png), [20 mobile](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/20-memphis-playful-geometry/03-interfaces-perspectives.png), [25 mobile](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/25-biomorphic-eco-fantasy/03-interfaces-perspectives.png), [26 mobile](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/26-soft-3d-plush-miniature/03-interfaces-perspectives.png).
+
+A detached explanatory callout is acceptable in concept art, but must be labelled as such. It cannot count as evidence that the same controls fit on a phone. Define one device viewport and the same task/state before comparing mobile layouts.
+
+### R05 — P2: interaction symbols and spatial controls change meaning
+
+- **Build-axis colors:** the vertical arrow is green in 11, 16, 20, 23–25, 28 and 30; blue in 12, 13, 15, 17–19, 21, 22, 26, 27 and 29; red in 14. Style 19 substitutes yellow for one of the usual RGB axes. These are visible differences in 02/build, not an assertion that a particular engine's axis convention is required. A shared editor needs one convention and non-color labels.
+- **30:** [03 mobile](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/30-afrofuturist-maker-metropolis/03-interfaces-perspectives.png) uses purple for crossed tools; the same sheet's AR legend uses orange for Makerspaces and purple for Transit. This is a concrete within-sheet semantic conflict.
+- **19:** [03 facility/mobile](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/19-bauhaus-primary-form/03-interfaces-perspectives.png) reuses the blue circle/red square/yellow triangle for different action wording. “Book” becomes “Suggest something to do”; no explanation establishes whether these are categories or action symbols.
+- **28:** [00 map](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/28-ukiyo-e-woodblock-city/00-city-perspectives.png) has a compass-like inset with 西 (west) above the arrow, 北 (north) to the left, 東 (east) to the right, and 南 (south) below. That is not a coherent four-direction compass. Replace it with verified cardinal labels.
+
+The repeated facility actions **Browse / Book / Ask** are a useful consistency success across the collection. Preserve that semantic backbone while allowing visual styling.
+
+### R06 — P2: the agent's identity cannot be followed between experiences
+
+Many 01/conversation panels show a robot while 03/mobile uses a human-looking “Your City Agent” portrait: examples include **11, 12, 14–18, 22, 24, 26–29**. These may be different agents or alternate representations; the art gives no stable name, badge, or relationship to establish which.
+
+In **21**, the conversation shows two apparently human people, while only the phone explicitly labels an agent. In **25**, a leaf-like humanoid in conversation becomes a mushroom-like companion on mobile. **30** does show a visibly synthetic neck/hand and glowing ear hardware in conversation; it is not accurate to say the image contains no agent cues.
+
+Agents do not have to be robots. The missing contract is identity continuity: preserve a name, emblem, avatar feature or explicit alternate-form label. **23** offers a promising repeated CRT/device motif, but its portable companion is still not proven to be the same entity as its humanoid.
+
+### R07 — P2: comparisons combine style, setting, era and world rules
+
+- **12, 14, 16, 26** use historic European-looking overview architecture, even though the medium brief alone does not require that setting. Several later sheets add modern towers.
+- **18 and 24** add period costumes and a period social atmosphere. The retro-futurist themes make this understandable, but it should be evaluated separately from the rendering style. In 18, 01 has comparatively contemporary clothing while 02/transit strongly adopts period dress.
+- **25** adds visibly nonhuman residents, creatures and suspended cabin transit. This is an explicitly relevant boundary experiment for its candidate brief, not automatically a failed image; it needs a decision about skins versus different world premises.
+- **28** adds historical Japanese-style clothing, architecture and a snow-capped conical mountain in 01/home. That changes setting as well as print grammar. Do not infer an exact historical place or period from generated imagery.
+- **27** applies the ceramic motif even to a dog's body and birds in 02. **15** extends glass-like segmentation across people, fabrics and landscape. Decide whether these are image-wide render treatments, literal world materials, or decorated ordinary objects.
+
+The brief intentionally varies architecture and material language. Those differences should not be counted as errors merely because they are different. They become a comparability problem when the same object, action, resident identity or navigable space silently changes.
+
+### R08 — P2/P3: legibility and sheet presentation are not controlled
+
+**Visual hierarchy risks:** dense marks compete with people and routes in **14**; glass leading competes with facial/scene outlines in **15**; pattern covers both subjects and backgrounds in **20, 27 and 29**. These are visual-review judgments, not measured accessibility failures. Test the same task at actual target display size before claiming usability.
+
+**Frame and label defects:** 22/00 clips the MAP and TOP-DOWN labels; 29/00 clips its top-row labels; 25/02 clips BUILD MODE and TRANSIT. Several other sheets put text against or under the lower frame. The specified common footer position, narrow gutters and label treatment are not consistently followed even within a style.
+
+Examples of intra-style redesign: **12** changes top-left labels to below-panel captions and then back; **17** does the same in 02; **19** changes label decorations and switches to a dark footer in 03; **20** changes yellow chips to pastel caption bars and then plain text; **24** changes bottom label chips to top overlays to bottom text. In **18/01**, “concept” is misspelled in the footer.
+
+Generated slogans consume unusually large amounts of wall, clothing, book and mug space across many sets. Their changing wording and occasional malformed letters should not define civic identity or UI copy. Use intentional signage selectively, and typeset labels and footers outside the image generator in a future revision.
+
+## Style-by-style disposition
+
+This table covers every new style. “Keep” means preserve useful visual evidence, not approve a production style. Links lead to the existing per-style galleries; sheet/panel codes identify the evidence.
+
+| Style | Specific inconsistency or unresolved comparison | Suggested treatment |
+| --- | --- | --- |
+| [11 Low-poly tropical](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/11-low-poly-tropical-diorama/README.md) | 00 stone bridge/bell-tower skyline becomes 03 cable-stayed bridge/modern towers. 00/01/03 footers are cut or crowded; 02 uses a different label treatment. Faceting is strongest in foliage and people, weaker in buildings. | Keep tropical palette and character shapes; anchor all views to one bridge/skyline. Do not infer polygon count from the illustration. |
+| [12 Gouache](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/12-gouache-storybook/README.md) | 00 low-rise town becomes a denser tower skyline in 01–03. Tram color moves from red in 00 to yellow/blue in later sheets. 01 labels sit below panels while other sheets use top labels. | Keep painted warmth; fix the reference tram and landmarks and apply one sheet template. |
+| [13 Risograph](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/13-risograph-print/README.md) | Historic 00 versus modern 01–03 bridge/skyline. 03/mobile companion is outside the phone. Footer placement differs between 00 and 01 and is clipped in 02/03. | Keep limited-ink visual language and clear landmark symbols; repair layout and viewport before judging mobile clarity. |
+| [14 Linocut](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/14-linocut-relief/README.md) | 00 masonry bridge/historic town becomes suspension bridge/skyscrapers in 01–03. 02/build uses red as up. Dense hatching competes with silhouettes in 01/gathering and 02/night. | Keep carved line character; simplify selected backgrounds and fix geography and control semantics. |
+| [15 Stained glass](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/15-stained-glass-mosaic/README.md) | Missing 00. 01–02 have below-panel mosaic captions; 03 uses top black labels. Glass segmentation crosses clothes, skin and sky; the natural-versus-constructed central tree is ambiguous. | Complete the overview; decide whether glass is a rendering treatment or literal material, then preserve that rule. |
+| [16 Chalk pastel](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/16-chalk-pastel-mural/README.md) | 00 compact historic district versus modern river-through-city composition in 03. 00 serif labels/ornamental footer become hand-lettered slabs and different footer treatments. | Keep chalk texture; lock composition and captions. Specify the intended degree of realistic human detail. |
+| [17 Art Nouveau](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/17-art-nouveau-botanical/README.md) | 03/mobile appears to need a second device. 03/AR changes the atlas into a round, multi-waterway model without locating the original district. 02 labels move below panels. | Keep botanical metalwork and climate cues; use the same district and one-screen mobile task. |
+| [18 Art Deco](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/18-art-deco-civic-futurism/README.md) | 00 central tree replaced by fountain/monument. Clothing shifts toward period costume in 02. 03 uses a larger river-crossing composition and top labels rather than lower caption bars; 01 footer typo. | Retain strong palette and silhouette; decide era separately, restore the test landmark and fix template/text. |
+| [19 Bauhaus](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/19-bauhaus-primary-form/README.md) | 00 center is a fountain. 03 river layout loses the atlas arrangement. 02/build introduces a yellow axis; 03 repeats shape/color tokens for different actions. 03 dark footer differs from earlier light footers. | Preserve readable geometry; standardize spatial controls, semantic tokens and comparison scene. |
+| [20 Memphis](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/20-memphis-playful-geometry/README.md) | 00 “Tree Square” centers on a fountain; 01/gathering uses an arch sculpture, 02/night a stacked-shape fountain. 03/mobile card is outside the phone. Patterns compete across floors, clothes and furniture. | Fix the civic landmark and mobile boundary; reserve visually quiet surfaces around interactive subjects. |
+| [21 Brutalist tropical](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/21-brutalist-tropical-modernism/README.md) | Strong tropical cues are present. 01/conversation supplies no clear agent identifier. 03/AR shows a different river-centered extent rather than a located atlas district. Label size/placement varies. | Keep shaded concrete, screens and planting; establish agent identity and model extent. Realism alone is not a contradiction of this brief. |
+| [22 Streamline](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/22-streamline-retro-future/README.md) | 00 “Tree Square” is a fountain. 00 ground-level tram network becomes elevated transport in 01/03 without a shared route reference. 00 top labels clip; 03/mobile human portrait does not identify the robot from 01. | Keep vehicle/material language; document transit layers and agent continuity, then repair cropped labels. |
+| [23 Cassette futurism](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/23-cassette-futurism/README.md) | Missing 00. Rugged CRT terminal and robot coexist with a conventional slim phone in 03. 01 uses physical-looking label plates, later sheets use plain overlays; lower captions clip. | Keep the coherent device/robot motif; decide whether the phone is an external client or in-world hardware and add the overview. |
+| [24 Dieselpunk](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/24-dieselpunk-civic-works/README.md) | Missing 00. 01 robot versus 03 human agent portrait. Labels change across all three sheets. Period costumes, airships and heavy workshop machinery change the baseline experience. | Keep industrial warmth; separate period/world choices from styling, preserve identity and complete camera views. |
+| [25 Biomorphic](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/25-biomorphic-eco-fantasy/README.md) | Missing 00. 01 leaf humanoid versus 03 mushroom companion; 03 companion sits beyond phone. 02 includes nonhuman passengers and hanging transit; top labels clip. | Decide whether this is an alternate world theme. Define resident/agent forms and device boundary before generating the missing views. |
+| [26 Plush](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/26-soft-3d-plush-miniature/README.md) | 00 historic toy town becomes modern towers/green roofs in 03. Robot in 01 becomes human plush avatar in 03; companion panel sits beside phone. Real hands appear in mobile/AR. | Keep tactile residents; fix city/agent continuity. Label the real-world observer boundary before deciding whether realistic hands need changes. |
+| [27 Ceramic](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/27-ceramic-tile-city/README.md) | 00 fountain replaces central tree. 02 dog and birds carry ceramic-like decoration; 03 people are more realistically rendered than some 02 figures. Labels cycle between tile plaques, bottom text and top text. | Keep glazed architecture; define material treatment of living subjects and normalize illustration/template choices. |
+| [28 Woodblock](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/28-ukiyo-e-woodblock-city/README.md) | 00 compass labels are inconsistent. 01–03 broaden the setting into a historical/fantastical Japanese city; 03/AR becomes a water-surrounded settlement rather than the atlas district. Japanese-looking environmental signs become English-heavy in 03. | Correct compass; choose setting and signage language explicitly, and preserve the original district in device views. |
+| [29 Madhubani-inspired](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/29-madhubani-contemporary-city/README.md) | 00 labels clip. 03/AR rearranges the district into a river-through model. 01 robot becomes 03 human agent portrait. Heavy patterns compete with figures and routes; 02/night adds much smoother reflective shading than flatter panels. | Keep the strong drawn motif; restore shared landmarks/identity, reduce competing detail and choose shading rules. |
+| [30 Afrofuturist](https://github.com/SuperJackfruitLabs/agentnagar/blob/2e835a36e8a9845a77499a1ecb625c502969f17e/docs/vision/style-studies/30-afrofuturist-maker-metropolis/README.md) | 00 has a distinct tree-square layout; 03 becomes intertwined waterways/elevated routes. 03 mobile tools are purple but AR Makerspaces are orange and Transit is purple. 01 synthetic agent cues do not carry to the phone portrait. | Keep patterned towers and shade structures; first repair semantic colors, district continuity and agent identification. |
+
+## Corrections to earlier review interpretations
+
+The existing collection README and style descriptions are useful notes, not ground truth. This review qualifies several of their conclusions:
+
+1. **“Only 11” is clearly tropical is too strong.** Style 21 visibly has palms, a banyan-like tree, breeze blocks and deep shade; 17 also has palms and shaded botanical architecture. The problem is inconsistent reference geography, not total absence of tropical cues elsewhere.
+2. **Photographic appearance is not inherently a style failure.** The briefs for architectural/material styles do not all prescribe a nonrealistic renderer. Treat realism as a separate axis of comparison. Static art does not establish frame rate or latency.
+3. **Realistic hands in 26/mobile and AR may be intentional.** They can represent an external person using a plush virtual city. The ambiguity is whether the image depicts an in-world resident or the real-world user.
+4. **30 has visible synthetic-agent cues.** Its conversation figure has a mechanical neck/hand and illuminated ear hardware. Identity across representations remains unclear; a blanket “indistinguishable from residents” judgment overstates the evidence.
+5. **24 has readable, unclipped footers, but not a uniform label system.** Bottom chips in 01, top overlays in 02 and bottom white text in 03 differ.
+6. **13 and 19 are clearer in some overview panels, not universal winners.** 13 has mobile overflow and setting discontinuity; 19 replaces the required tree and changes interaction tokens. A clear atlas does not validate the entire set.
+
+These qualifications do not rewrite the original inspection notes or approve any style.
+
+## Recommended repair order
+
+1. **Establish one reference district:** river west, bridge north, workshop west, central tree, library east, tram boulevard south, recognizable downtown. Give major landmarks IDs, fix their relative positions, and define which architectural shapes may vary by style. Use camera locators and an explicit wider-extent inset for mobile/AR when needed.
+2. **Fix shared interaction semantics:** one named reference agent with alternate forms explicitly identified; one build-axis convention; stable action and map symbols; one phone viewport and representative task. Style can change the rendering without silently changing meaning.
+3. **Define comparison variables:** distinguish render medium, architectural theme, era, resident appearance, device quality and world rules. Keep changes deliberate. A real-world hand may remain outside the virtual style if that boundary is labelled.
+4. **Generate the four missing overview sheets** against that reference, then address the clearest continuity failures in 11, 13, 14 and 16 and the tree substitutions in 18, 19, 20, 22 and 27. Fix other device/extent discrepancies using the same reference.
+5. **Apply one sheet template per style:** identical safe margins, caption placement, gutters and footer; verified text added as a separate presentation layer. Correct 28's compass and 30's conflicting map colors.
+6. **Review hierarchy at target size:** use the same route-finding, agent-identification and object-selection tasks, particularly for 14, 15, 20, 27 and 29. Prototype shortlisted treatments to measure runtime cost; do not score it from images.
+
+No images were changed or regenerated for this review. This report proposes repairs and decisions; it does not select a style or authorize implementation.

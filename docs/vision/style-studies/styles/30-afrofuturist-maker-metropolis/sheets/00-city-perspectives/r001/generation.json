@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "5509f12d34ef4ca4155f0bf59a9d0822676c9d421b4d0397667629f9cae7a4bc",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/30-afrofuturist-maker-metropolis/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

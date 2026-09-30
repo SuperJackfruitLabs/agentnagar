@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+	<!-- You are here: a dot ringed in white, the arrow on top pointing the way you face. -->
+	<path d="M24 0.5 L31.5 11 H16.5 Z" fill="#D6246E" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round"/>
+	<circle cx="24" cy="24" r="15" fill="#FFFFFF"/>
+	<circle cx="24" cy="24" r="11.5" fill="#D6246E"/>
+	<circle cx="24" cy="24" r="4" fill="#FFFFFF"/>
+</svg>

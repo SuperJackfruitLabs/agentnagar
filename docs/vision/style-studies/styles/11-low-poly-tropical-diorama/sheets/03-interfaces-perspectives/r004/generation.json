@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "14cf0c14eb32f4ac7edc167aa82f1c006309225df5f118ac7289aaff30ffbe1c",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "3236e1e38adb7900da205690c9f26865d0f682258b6e46415c4063fd4bddb9dc"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/11-low-poly-tropical-diorama/03-interfaces-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-19/11-low-poly-tropical-diorama/03-interfaces-perspectives.pass-3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

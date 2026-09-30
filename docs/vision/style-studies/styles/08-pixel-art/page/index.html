@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en" data-style="08-pixel-art">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>08 Pixel art · Agentnagar style study</title>
+<meta name="description" content="A walkable pixel-art district: talk to the townsfolk to learn about Agentnagar and the pixel art style study.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root {
+  --matte: #0b243d;
+  --night: #061937;
+  --panel: #10304f;
+  --panel-2: #173d63;
+  --cream: #f3e9d2;
+  --dim: #b9c6d8;
+  --river: #016aab;
+  --sky: #56a6fd;
+  --grass: #76bb37;
+  --sand: #f5d9a8;
+  --brick: #97453b;
+  --tram: #c81c2b;
+  --amber: #f8ba77;
+  --scarf: #1d53a7;
+  --peach: #e7824c;
+  --px: 4px;
+  --pixel: 'Press Start 2P', ui-monospace, monospace;
+  --body: 'VT323', ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+html { background: var(--matte); }
+body {
+  margin: 0;
+  color: var(--cream);
+  background-color: var(--matte);
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 8px 8px;
+  font-family: var(--body);
+  font-size: 23px;
+  line-height: 1.25;
+  -webkit-font-smoothing: none;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--amber); text-underline-offset: 3px; }
+a:hover { color: #fff; }
+:focus-visible { outline: 4px dashed var(--amber); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--amber); color: var(--night); padding: 8px 12px; font-family: var(--pixel); font-size: 11px; z-index: 50; }
+.skip:focus { left: 8px; }
+.wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
+
+/* Pixel border: notched corners, the page's one frame idiom. */
+.pix {
+  position: relative;
+  background: var(--panel);
+  box-shadow:
+    0 calc(-1 * var(--px)) 0 0 var(--cream),
+    0 var(--px) 0 0 var(--cream),
+    calc(-1 * var(--px)) 0 0 0 var(--cream),
+    var(--px) 0 0 0 var(--cream),
+    inset 0 calc(-1 * var(--px)) 0 0 rgba(0,0,0,.35),
+    inset 0 var(--px) 0 0 rgba(255,255,255,.08);
+}
+.btn {
+  font-family: var(--pixel);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--night);
+  background: var(--amber);
+  border: 0;
+  padding: 10px 14px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow:
+    0 -4px 0 0 var(--night), 0 4px 0 0 var(--night), -4px 0 0 0 var(--night), 4px 0 0 0 var(--night),
+    inset 0 -4px 0 0 #c4803f;
+}
+.btn:hover { background: #ffd39a; color: var(--night); }
+.btn:active { transform: translateY(2px); box-shadow: 0 -4px 0 0 var(--night), 0 4px 0 0 var(--night), -4px 0 0 0 var(--night), 4px 0 0 0 var(--night), inset 0 4px 0 0 #c4803f; }
+.btn.ghost { background: var(--panel-2); color: var(--cream); box-shadow: 0 -4px 0 0 var(--cream), 0 4px 0 0 var(--cream), -4px 0 0 0 var(--cream), 4px 0 0 0 var(--cream), inset 0 -4px 0 0 rgba(0,0,0,.35); }
+.btn.ghost:hover { background: #245385; color: #fff; }
+
+/* Title screen */
+header.title { padding: 36px 0 20px; text-align: center; }
+.cart {
+  display: inline-block; font-family: var(--pixel); font-size: 10px; letter-spacing: 2px;
+  color: var(--night); background: var(--grass); padding: 6px 10px 7px; margin-bottom: 18px;
+}
+h1 {
+  font-family: var(--pixel); font-weight: 400; margin: 0;
+  font-size: clamp(22px, 5.4vw, 58px); line-height: 1.15; letter-spacing: 2px;
+  color: var(--cream);
+  text-shadow: 4px 4px 0 var(--tram), 8px 8px 0 var(--night);
+}
+h1 small { display: block; line-height: 1.7; font-size: clamp(10px, 1.6vw, 16px); margin-top: 16px; color: var(--amber); text-shadow: 3px 3px 0 var(--night); letter-spacing: 1px; }
+.lede { max-width: 44ch; margin: 18px auto 0; color: var(--dim); }
+.lede b { color: var(--cream); font-weight: 400; }
+.title-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin-top: 22px; }
+
+/* Game */
+.game-shell { margin-top: 20px; padding: 14px; background: #1b1f33; }
+.game-shell.pix { background: #1c2238; }
+.screen-row { display: flex; justify-content: center; }
+.screen {
+  position: relative; background: #000; line-height: 0;
+  box-shadow: 0 0 0 4px #000, 0 0 0 8px #3a4468;
+}
+.screen:focus-visible { outline: 4px dashed var(--amber); outline-offset: 10px; }
+#world { image-rendering: pixelated; image-rendering: crisp-edges; display: block; cursor: pointer; touch-action: none; }
+.hud { position: absolute; left: 8px; top: 8px; right: 8px; display: flex; justify-content: space-between; gap: 8px; pointer-events: none; line-height: 1; }
+.hud span { font-family: var(--pixel); font-size: 9px; color: var(--cream); background: rgba(6,25,55,.86); padding: 6px 7px; box-shadow: 0 0 0 2px var(--cream); }
+.hud .found { color: var(--amber); }
+.dlg {
+  position: absolute; left: 8px; right: 8px; bottom: 8px; line-height: 1.25;
+  display: none; gap: 12px; padding: 12px; background: rgba(6,25,55,.97);
+  box-shadow: 0 -4px 0 0 var(--cream), 0 4px 0 0 var(--cream), -4px 0 0 0 var(--cream), 4px 0 0 0 var(--cream);
+  max-height: calc(100% - 44px); overflow: auto;
+}
+.dlg.open { display: flex; }
+.dlg canvas { width: 72px; height: 72px; image-rendering: pixelated; flex: none; background: var(--panel-2); box-shadow: 0 0 0 3px var(--amber); }
+.dlg-body { flex: 1; min-width: 0; }
+.dlg-name { font-family: var(--pixel); font-size: 10px; color: var(--amber); margin: 0 0 6px; line-height: 1.5; }
+.dlg-text { margin: 0; font-size: 22px; min-height: 2.5em; }
+.dlg-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; align-items: center; }
+.dlg-actions .btn { font-size: 9px; padding: 8px 10px 10px; }
+.dlg-actions a.plain { font-size: 20px; }
+
+.console { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; margin-top: 16px; }
+.dpad { display: grid; grid-template-columns: repeat(3, 46px); grid-template-rows: repeat(3, 46px); gap: 0; }
+.dpad button, .ab button {
+  font-family: var(--pixel); font-size: 12px; border: 0; color: var(--cream); background: #2c3552; cursor: pointer;
+  touch-action: none; user-select: none; -webkit-user-select: none;
+}
+.dpad button { box-shadow: inset 0 -4px 0 0 #171c2e, inset 0 4px 0 0 #3f4a70; }
+.dpad button:active, .dpad button.held { background: #445283; }
+.dpad .up { grid-column: 2; grid-row: 1; }
+.dpad .left { grid-column: 1; grid-row: 2; }
+.dpad .hub { grid-column: 2; grid-row: 2; background: #2c3552; }
+.dpad .right { grid-column: 3; grid-row: 2; }
+.dpad .down { grid-column: 2; grid-row: 3; }
+.ab { display: flex; gap: 14px; align-items: center; transform: rotate(-12deg); }
+.ab button { width: 58px; height: 58px; border-radius: 50%; font-size: 14px; }
+.ab .a { background: var(--tram); box-shadow: inset 0 -5px 0 0 #7d0f19; }
+.ab .b { background: #5a4a7a; box-shadow: inset 0 -5px 0 0 #2f2645; }
+.ab button span { display: block; font-size: 7px; margin-top: 4px; }
+.help { font-size: 20px; color: var(--dim); text-align: center; }
+.help kbd { font-family: var(--pixel); font-size: 9px; color: var(--night); background: var(--cream); padding: 3px 5px; margin: 0 2px; box-shadow: 0 2px 0 #8894a8; }
+.travel { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: center; }
+.travel p { margin: 0; font-family: var(--pixel); font-size: 9px; color: var(--dim); width: 100%; text-align: center; }
+.travel button { font-family: var(--body); font-size: 20px; background: transparent; color: var(--cream); border: 0; border-bottom: 2px dotted var(--dim); padding: 2px 0; cursor: pointer; }
+.travel button:hover { color: var(--amber); border-color: var(--amber); }
+.travel button.done::before { content: '★ '; color: var(--amber); }
+.honest { font-size: 19px; color: var(--dim); margin: 16px 0 0; text-align: center; }
+
+/* Codex */
+.codex-head { margin: 64px 0 24px; display: flex; align-items: end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+h2 { font-family: var(--pixel); font-weight: 400; font-size: clamp(15px, 2.2vw, 22px); line-height: 1.4; margin: 0; color: var(--cream); text-shadow: 3px 3px 0 var(--night); }
+.codex-head p { margin: 0; color: var(--dim); max-width: 46ch; }
+.codex { display: grid; grid-template-columns: repeat(12, 1fr); gap: 36px 32px; margin-bottom: 48px; }
+.entry { grid-column: span 12; padding: 24px 22px 22px; scroll-margin-top: 24px; }
+.entry.half { grid-column: span 6; }
+.entry-top { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.entry-top canvas { width: 48px; height: 48px; image-rendering: pixelated; flex: none; background: var(--panel-2); }
+.entry-top .who { font-family: var(--pixel); font-size: 9px; color: var(--amber); display: block; margin-top: 6px; line-height: 1.5; }
+.entry h3 { font-family: var(--pixel); font-weight: 400; font-size: 14px; line-height: 1.5; margin: 0; }
+.entry h4 { font-family: var(--pixel); font-weight: 400; font-size: 10px; color: var(--amber); margin: 22px 0 10px; line-height: 1.5; }
+.entry p { margin: 0 0 12px; }
+.entry.found .entry-top h3::after { content: ' ★'; color: var(--amber); }
+.entry ul { margin: 0; padding: 0; list-style: none; }
+.entry li { padding-left: 22px; position: relative; margin-bottom: 8px; }
+.entry li::before { content: ''; position: absolute; left: 4px; top: .45em; width: 8px; height: 8px; background: var(--grass); }
+.kit-project .kit-tagline { font-size: 26px; color: var(--cream); }
+.kit-project dl, .tradeoffs dl { display: grid; grid-template-columns: minmax(120px, 13ch) 1fr; gap: 8px 18px; margin: 16px 0; }
+.kit-project dt, .tradeoffs dt { font-family: var(--pixel); font-size: 9px; color: var(--amber); padding-top: 6px; line-height: 1.5; }
+.kit-project dd, .tradeoffs dd { margin: 0; }
+.kit-small { color: var(--dim); font-size: 20px; }
+.trade dt { font-family: var(--pixel); font-size: 9px; color: var(--amber); margin: 18px 0 6px; line-height: 1.5; }
+.trade dt:first-child { margin-top: 0; }
+.trade dd { margin: 0; }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 16px; }
+.swatch { font-size: 18px; line-height: 1.1; }
+.swatch i { display: block; height: 44px; margin-bottom: 8px; box-shadow: 4px 4px 0 0 var(--night), 0 0 0 2px var(--cream); }
+.swatch code { font-family: var(--pixel); font-size: 8px; color: var(--dim); display: block; margin-top: 4px; }
+.sheets { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.sheets figure { margin: 0; }
+.sheets .kit-sheet { width: 100%; height: auto; box-shadow: 0 0 0 4px var(--night), 0 0 0 8px var(--panel-2); }
+.sheets figcaption { font-size: 19px; color: var(--dim); margin-top: 12px; }
+.sheets figcaption b { font-family: var(--pixel); font-weight: 400; font-size: 9px; color: var(--cream); display: block; margin-bottom: 6px; line-height: 1.5; }
+.landmarks { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; margin: 0 0 22px; }
+.landmarks li::before { background: var(--sky) !important; }
+.landmarks b { font-family: var(--pixel); font-size: 9px; font-weight: 400; color: var(--amber); margin-right: 6px; }
+.concept { font-size: 19px; color: var(--dim); border-left: 4px solid var(--amber); padding-left: 12px; margin-top: 18px !important; }
+.agents-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px; align-items: start; }
+.agents-grid .kit-panel { box-shadow: 0 0 0 4px var(--night), 0 0 0 8px var(--panel-2); }
+.roster { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 10px; }
+.roster li { display: flex; gap: 10px; align-items: flex-start; padding: 0 !important; font-size: 19px; line-height: 1.1; }
+.roster li::before { display: none; }
+.roster i { flex: none; width: 28px; height: 28px; display: grid; place-items: center; font-family: var(--pixel); font-style: normal; font-size: 10px; color: var(--night); box-shadow: 3px 3px 0 var(--night); }
+.roster b { display: block; font-weight: 400; color: var(--cream); font-size: 21px; }
+.roster span { color: var(--dim); }
+.kit-status .kit-summary { font-size: 26px; color: var(--cream); background: var(--night); padding: 12px 14px; }
+.kit-status .kit-concept, .kit-status .kit-links { color: var(--dim); }
+.kit-status ul { margin: 10px 0 14px !important; }
+.nav-slot .kit-nav { display: flex; flex-wrap: wrap; gap: 22px; justify-content: space-between; align-items: center; }
+.nav-slot .kit-nav a {
+  font-family: var(--pixel); font-size: 10px; line-height: 1.5; text-decoration: none; color: var(--night); background: var(--grass); padding: 12px 14px 14px;
+  box-shadow: 0 -4px 0 0 var(--cream), 0 4px 0 0 var(--cream), -4px 0 0 0 var(--cream), 4px 0 0 0 var(--cream), inset 0 -4px 0 0 #4f8a22;
+}
+.nav-slot .kit-nav a.kit-index { background: var(--amber); box-shadow: 0 -4px 0 0 var(--cream), 0 4px 0 0 var(--cream), -4px 0 0 0 var(--cream), 4px 0 0 0 var(--cream), inset 0 -4px 0 0 #c4803f; }
+.nav-slot .kit-nav a:hover { filter: brightness(1.12); }
+footer { padding: 0 0 48px; color: var(--dim); font-size: 19px; text-align: center; }
+
+/* Notes dialog */
+.kit-dialog { width: min(820px, calc(100% - 24px)); max-height: 88vh; border: 0; padding: 22px; color: var(--cream); background: var(--night); font-family: var(--body); font-size: 22px; box-shadow: 0 0 0 4px var(--cream), 0 0 0 8px var(--night); }
+.kit-dialog::backdrop { background: rgba(3,10,24,.8); }
+.kit-dialog h1 { font-size: 18px; text-shadow: 3px 3px 0 var(--tram); margin-bottom: 20px; }
+.kit-dialog h2 { font-size: 13px; margin: 26px 0 10px; color: var(--amber); }
+.kit-dialog dt { font-family: var(--pixel); font-size: 9px; color: var(--amber); margin-top: 10px; line-height: 1.5; }
+.kit-dialog dd { margin: 4px 0 0; }
+.kit-dialog figure { margin: 12px 0 18px; }
+.kit-dialog figcaption { color: var(--dim); font-size: 19px; }
+.kit-dialog .kit-palette { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.kit-dialog .kit-swatch { display: inline-block; width: 18px; height: 18px; vertical-align: -3px; box-shadow: 0 0 0 2px var(--cream); }
+.kit-dialog .kit-nav { display: flex; flex-wrap: wrap; gap: 16px; }
+.kit-close { position: sticky; top: 0; float: right; font-family: var(--pixel); font-size: 10px; background: var(--amber); color: var(--night); border: 0; padding: 10px 12px; cursor: pointer; z-index: 2; }
+
+@media (max-width: 860px) {
+  .entry.half { grid-column: span 12; }
+  .agents-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  body { font-size: 21px; }
+  .sheets { grid-template-columns: 1fr; }
+  .console { grid-template-columns: auto auto; justify-content: space-between; }
+  .help { grid-column: 1 / -1; grid-row: 2; }
+  .dpad { grid-template-columns: repeat(3, 44px); grid-template-rows: repeat(3, 44px); }
+  .game-shell { padding: 10px; }
+  .entry { padding: 20px 16px; }
+  .kit-project dl, .tradeoffs dl { grid-template-columns: 1fr; }
+  .kit-project dt, .tradeoffs dt { padding-top: 8px; }
+  .dlg canvas { width: 48px; height: 48px; }
+  .dlg-text { font-size: 20px; }
+  .hud span { font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+</style>
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+</head>
+<body>
+<a class="skip" href="#codex">Skip the game: go to the codex</a>
+
+<header class="title wrap">
+  <span class="cart" id="cart">STYLE 08 / 30</span>
+  <h1>AGENTNAGAR<small>PIXEL ART · ONE DISTRICT, ON FOOT</small></h1>
+  <p class="lede">Walk the reference district and talk to the townsfolk. <b>Each one holds a section of this study.</b> Nothing is locked: the codex below and the notes hold the same content.</p>
+  <div class="title-actions">
+    <button class="btn" type="button" id="notes-btn">▶ Read the notes</button>
+    <a class="btn ghost" href="#codex">Open the codex ↓</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="game-shell pix" aria-label="Playable district">
+    <div class="screen-row">
+      <div class="screen" id="screen" tabindex="0" role="application" aria-roledescription="game" aria-label="Pixel district. Arrow keys or W A S D to walk, E, Enter or Space to talk, Escape to close a conversation. Or use the talk buttons below the game.">
+        <canvas id="world" aria-hidden="true"></canvas>
+        <div class="hud" aria-hidden="true"><span id="place">NORTH BRIDGE</span><span class="found" id="found">★ 0/7</span></div>
+        <div class="dlg" id="dlg" role="dialog" aria-modal="false" aria-labelledby="dlg-name">
+          <canvas id="dlg-face" width="48" height="48" aria-hidden="true"></canvas>
+          <div class="dlg-body">
+            <p class="dlg-name" id="dlg-name"></p>
+            <p class="dlg-text" id="dlg-text" aria-live="polite"></p>
+            <div class="dlg-actions" id="dlg-actions"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="console">
+      <div class="dpad" aria-label="Walk">
+        <button class="up" type="button" data-dir="up" aria-label="Walk up">▲</button>
+        <button class="left" type="button" data-dir="left" aria-label="Walk left">◀</button>
+        <span class="hub" aria-hidden="true"></span>
+        <button class="right" type="button" data-dir="right" aria-label="Walk right">▶</button>
+        <button class="down" type="button" data-dir="down" aria-label="Walk down">▼</button>
+      </div>
+      <p class="help">Walk with <kbd>←↑↓→</kbd> or <kbd>WASD</kbd>, talk with <kbd>E</kbd> or <kbd>A</kbd>. Tap the map to walk there; tap a person to talk.</p>
+      <div class="ab">
+        <button class="b" type="button" id="btn-b" aria-label="B: close conversation">B<span>BACK</span></button>
+        <button class="a" type="button" id="btn-a" aria-label="A: talk or next line">A<span>TALK</span></button>
+      </div>
+    </div>
+    <div class="travel" id="travel"><p>Or talk to someone directly:</p></div>
+    <p class="honest">The playable district is illustrative pixel art drawn for this page, not artwork from the concept sheets. Guild sprites are placeholders: roles are proposed and card designs pending review.</p>
+  </section>
+
+  <div class="codex-head" id="codex">
+    <h2>CODEX</h2>
+    <p>Everything the townsfolk say, written out in full. Entries you have heard in the game get a star.</p>
+  </div>
+  <div class="codex" id="codex-grid"></div>
+</main>
+<footer class="wrap" id="foot"></footer>
+
+<script>
+// Style-specific prose for this page, written from brief.md, the four sheets and the repair record.
+window.PIXEL_CONTENT = {
+  intent: 'A city expressed through visible pixel clusters, a controlled palette and selective dithering. Its appeal comes from deliberate shape and colour placement rather than smooth surfaces. The concept sheets explore both broad city scenes and close-up character moments.',
+  principles: [
+    'Place every cluster on purpose: shape and colour carry the image, never blur or smooth gradients.',
+    'Silhouette first: roof profiles, window rhythms and entrances must read at limited resolution.',
+    'Pick a pixel scale per layer and keep it: readable text is sized independently of scene detail.',
+    'Props, not texture: interiors are furnished with chosen props rather than continuous fine detail.',
+    'Know people by outline, outfit, portrait and expressive animation.'
+  ],
+  palette: [
+    { name: 'Indigo matte', hex: '#0B243D' },
+    { name: 'River blue', hex: '#016AAB' },
+    { name: 'Sky', hex: '#56A6FD' },
+    { name: 'Park green', hex: '#76BB37' },
+    { name: 'Plaza sand', hex: '#F5D9A8' },
+    { name: 'Workshop brick', hex: '#97453B' },
+    { name: 'Tram red', hex: '#C81C2B' },
+    { name: 'Lamp amber', hex: '#F8BA77' },
+    { name: 'A1 scarf blue', hex: '#1D53A7' },
+    { name: 'Warm peach', hex: '#E7824C' }
+  ],
+  materials: 'Visible pixel clusters with selective dithering on foliage, water and paving. Brick, glass and slate are repeating tile patterns; night scenes set warm amber lamps and lit windows against cool blues. Every sheet sits on an indigo matte with thin light keylines.',
+  type: 'The sheets label panels in a small white pixel face on the indigo matte, with boxed map labels (WORKSHOP, TREE SQUARE, LIBRARY, PARK). This page sets titles in Press Start 2P and body text in VT323.',
+  agents: 'On the sheets City Agent A1 is human-presenting: white hair with blue streaks, a blue scarf, a dark jacket, a backpack with a leaf emblem and a "City Agent A1" leaf badge. A1 appears in Conversation, Build mode, Transit, Night and rain, Waterfront park, Facility, Mobile and Rooftop. A small white robot helper sits on the Workshop bench and is a separate character from A1. The sheets do not depict the Guild residents; the sprites in this page\'s game are illustrative placeholders.',
+  tradeoffs: [
+    { label: 'Map vs street', text: 'Map and top-down plans read at a glance: boxed labels, strong roof shapes, a clear west river and south tram line. The repair record notes the MAP stays a pictorial overhead plan with pictorial roofs rather than flat cartography. Street and gathering views carry the most charm but need far more pixel density than the map.' },
+    { label: 'Device and production cost', text: 'The brief asks for intentional pixel scales and text sized independently from scene detail. Lower tiers could reduce background density and effects; higher tiers could enrich animation and atmosphere. The open question is authored sprites, pixel-styled 3D or a hybrid, and the sheets do not choose. Authored sprites for four views and many residents is a large art budget; the art here is directional reference, not a sprite atlas.' },
+    { label: 'UI legibility', text: 'Pixel type is crisp at large sizes and struggles small. The repair record notes the tiny A1 avatar badge in the Mobile panel is not reliably readable, and typography size, matte and gutters are not uniform across sheets.' },
+    { label: 'Camera, conversation and AR', text: 'Conversation framing, free camera movement and future AR must be tested against the sprite-or-3D choice (brief). Fixed pixel grids resist free rotation.' },
+    { label: 'Review risks', text: 'Repeated targeted generations softened some pixel edges and background detail. Sawtooth edges are not identical across views, some views show only two of the three towers, and façade slivers remain. The repair record calls the sheets design comparisons, not accessibility certification or performance evidence.' }
+  ]
+};
+</script>
+<script src="assets/game.js"></script>
+</body>
+</html>

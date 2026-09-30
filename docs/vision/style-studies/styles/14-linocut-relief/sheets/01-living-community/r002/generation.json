@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "967d9afc86875c5c9ca93ba9b7e9050d89c9ab75b0b7935cc3781b31b04ab7cc",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "d03239509a9b1ba06fa50150defed54f66f9402e283f52c82a08c304269a7a05"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/14-linocut-relief/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

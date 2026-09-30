@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "f384182c3f3a7712fa47ac5e3d6656a35c75cf01815f1a54d6f9b7f7d4fd1d6c",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/12-gouache-storybook/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

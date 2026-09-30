@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "5532f60e999730822587e0ab44097aed658d187fc0c6414e563de061b589abb8",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "1c378ab58c6fe48aca5c1d8b9701638d28f1d911c64689188df47a3ed945c06d"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/candidates/03-pass1.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

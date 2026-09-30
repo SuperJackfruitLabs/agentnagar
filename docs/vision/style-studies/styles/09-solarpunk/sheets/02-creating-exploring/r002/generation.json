@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sha256": "0a294f0e375459bb4540283aa33c9539e91e5fd38d67ee764e4e978744d89b22",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "a6ef4a4fc1d2456a6388b61f1f954b565878191b92ebc15df4a00f5997556907"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/02-creating-exploring-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png",
+    "../../00-city-perspectives/r004/image.png",
+    "../../01-living-community/r001/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

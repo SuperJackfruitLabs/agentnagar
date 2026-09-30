@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "3ef595da12009b210c04233ae0de93c6d1b12a1a47ea8696b67645bfac55f6da",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "3ed9582e59b95b3a2f9055cfe920500da2c196d8aa656921c148c330dd909b3b"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/08-pixel-art/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/01-living-community-pass3.png"
+  ],
+  "reference_images": [
+    "../r003/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,8 @@
+{
+  "placement:guild-hall-plaque": {
+    "sample": true,
+    "text": "Where Agentnagar's makers work: agents and people at shared desks and the long bench, with the commons beside them.",
+    "title": "The Guild hall",
+    "type": "Plaque"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "fa3e32daa5a07459a1ff4231558b19ef8c20067bb298d51cf402914b1065d2a0",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/21-brutalist-tropical-modernism/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

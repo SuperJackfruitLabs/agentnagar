@@ -1,0 +1,19 @@
+[package]
+name = "city-core"
+version = "0.1.0"
+description = "The pure, deterministic rules of the Agentnagar city world"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+city-contracts.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rand_chacha.workspace = true
+rand_core.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true

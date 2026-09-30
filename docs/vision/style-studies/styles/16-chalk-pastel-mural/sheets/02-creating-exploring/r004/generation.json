@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "8df12f1167936f9e17001b9c2816260066106e9e5f28cef62631fea87856ced9",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "12f0c5fd6722f6c4d77d950fea57376840d5030c51aa1b53d3cd7750098bb788"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/16-chalk-pastel-mural/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-19/16-chalk-pastel-mural/02-creating-exploring.pass-3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

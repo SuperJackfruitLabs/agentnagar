@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "2edb9c6fcc4ff2e367c44b5079a01524ac00249ab44e33da6cf15d3646bb88c5",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "5f5576e142e946664a5ae572019d2e87e94526cb3b1919ca20080279cc25f3f0"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/05-claymation/03-interfaces-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/05-claymation/candidates/03-pass3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

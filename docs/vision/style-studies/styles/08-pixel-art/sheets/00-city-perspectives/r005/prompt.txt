@@ -1,0 +1,1 @@
+Use case: precise-object-edit. Add small clear N arrow pointing UP in MAP and TOP-DOWN caption bands. Preserve every other pixel of all four scenes and footer.

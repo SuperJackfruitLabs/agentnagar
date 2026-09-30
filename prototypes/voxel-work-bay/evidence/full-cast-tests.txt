@@ -1,0 +1,132 @@
+# Full-cast gate output — 2026-09-23T01:19:14Z
+# Run from prototypes/voxel-work-bay
+
+== python3 scripts/test_shared_assets.py ==
+test_awning_clears_the_walking_head_height (__main__.CourtyardKit.test_awning_clears_the_walking_head_height) ... ok
+test_every_arm_reaches_paving_or_the_doorway (__main__.CourtyardKit.test_every_arm_reaches_paving_or_the_doorway) ... ok
+test_hall_and_courtyard_remain_flush (__main__.CourtyardKit.test_hall_and_courtyard_remain_flush)
+GS-014 is Blocked because this rise is zero; fail if that ever changes silently. ... ok
+test_no_paved_neighbour_is_left_unconnected (__main__.CourtyardKit.test_no_paved_neighbour_is_left_unconnected) ... ok
+test_perimeter_railing_has_no_gaps (__main__.CourtyardKit.test_perimeter_railing_has_no_gaps) ... ok
+test_public_route_is_a_closed_loop (__main__.CourtyardKit.test_public_route_is_a_closed_loop) ... ok
+test_doorway_moved_east_with_the_wall (__main__.HallEnvelope.test_doorway_moved_east_with_the_wall) ... ok
+test_every_bay_holds_a_resident (__main__.HallEnvelope.test_every_bay_holds_a_resident) ... ok
+test_hall_is_twelve_by_sixteen_metres (__main__.HallEnvelope.test_hall_is_twelve_by_sixteen_metres) ... ok
+test_stations_are_seated_in_roster_order (__main__.HallEnvelope.test_stations_are_seated_in_roster_order) ... ok
+test_three_sawtooth_bays_cover_the_wider_hall (__main__.HallEnvelope.test_three_sawtooth_bays_cover_the_wider_hall) ... ok
+test_layout_and_clearance (__main__.SharedAssets.test_layout_and_clearance) ... ok
+test_manifest_and_geometry (__main__.SharedAssets.test_manifest_and_geometry) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.026s
+
+OK
+
+== python3 scripts/test_exports.py ==
+test_all_assets_contain_portable_triangle_geometry (__main__.ExportTests.test_all_assets_contain_portable_triangle_geometry) ... ok
+test_all_residents_share_rig_and_animation_data (__main__.ExportTests.test_all_residents_share_rig_and_animation_data) ... ok
+test_character_keeps_skin_and_seven_distinct_animated_clips (__main__.ExportTests.test_character_keeps_skin_and_seven_distinct_animated_clips) ... ok
+test_closed_assets_have_outward_triangle_winding (__main__.ExportTests.test_closed_assets_have_outward_triangle_winding) ... ok
+test_furniture_retains_mount_anchors (__main__.ExportTests.test_furniture_retains_mount_anchors) ... ok
+test_skinned_mesh_is_scene_root_without_ignored_parent_transform (__main__.ExportTests.test_skinned_mesh_is_scene_root_without_ignored_parent_transform) ... ok
+test_every_resident_in_the_table_is_exported (__main__.ResidentTable.test_every_resident_in_the_table_is_exported) ... ok
+test_every_resident_shares_the_rig_and_clip_set (__main__.ResidentTable.test_every_resident_shares_the_rig_and_clip_set) ... ok
+test_pipeline_does_not_hardcode_the_cast (__main__.ResidentTable.test_pipeline_does_not_hardcode_the_cast) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.068s
+
+OK
+
+== npm run --prefix tools validate ==
+
+> agentnagar-voxel-pilot-validation@0.0.0 validate
+> node ../scripts/validate_exports.cjs
+
+analyst-echo.glb: 0 errors, 0 warnings
+chair.glb: 0 errors, 0 warnings
+cleaner-cody.glb: 0 errors, 0 warnings
+controller-casey.glb: 0 errors, 0 warnings
+desk.glb: 0 errors, 0 warnings
+environment.glb: 0 errors, 0 warnings
+kai.glb: 0 errors, 0 warnings
+lyra.glb: 0 errors, 0 warnings
+onboarding-olivia.glb: 0 errors, 0 warnings
+optimizer-ollie.glb: 0 errors, 0 warnings
+predictor-paul.glb: 0 errors, 0 warnings
+project-manager-pete.glb: 0 errors, 0 warnings
+research-ray.glb: 0 errors, 0 warnings
+strategy-sam.glb: 0 errors, 0 warnings
+super-chotu.glb: 0 errors, 0 warnings
+terminal.glb: 0 errors, 0 warnings
+threat-hunter-theo.glb: 0 errors, 0 warnings
+writer-quill.glb: 0 errors, 0 warnings
+
+== node scripts/validate_shared_exports.cjs ==
+awning.glb: 0 errors, 0 warnings
+bench.glb: 0 errors, 0 warnings
+door.glb: 0 errors, 0 warnings
+floor.glb: 0 errors, 0 warnings
+lawn.glb: 0 errors, 0 warnings
+path.glb: 0 errors, 0 warnings
+path_corner.glb: 0 errors, 0 warnings
+path_t.glb: 0 errors, 0 warnings
+planter.glb: 0 errors, 0 warnings
+railing.glb: 0 errors, 0 warnings
+roof.glb: 0 errors, 0 warnings
+shelf.glb: 0 errors, 0 warnings
+sign.glb: 0 errors, 0 warnings
+tree.glb: 0 errors, 0 warnings
+wall.glb: 0 errors, 0 warnings
+window.glb: 0 errors, 0 warnings
+
+== blender check_contacts.py ==
+00:00.258  blend            | Read blend: "<checkout>/prototypes/voxel-work-bay/source/work-bay.blend"
+BlenderMCP addon registered
+CONTACT_CHECK {"failures": [], "failure_count": 0, "samples": 6146}
+BlenderMCP addon unregistered
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:34:58)
+
+Blender quit
+
+== godot --headless --editor --path godot --import --quit ==
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+
+== fixture_test.gd ==
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"test":"fixture"}
+
+== import_test.gd ==
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"assets":{"analyst-echo":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"chair":{"meshes":1},"cleaner-cody":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"controller-casey":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"desk":{"meshes":1},"environment":{"meshes":2},"kai":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"lyra":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"onboarding-olivia":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"optimizer-ollie":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"predictor-paul":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"project-manager-pete":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"research-ray":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"strategy-sam":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"super-chotu":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"terminal":{"meshes":1},"threat-hunter-theo":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"writer-quill":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1}},"failures":0,"test":"import"}
+
+== scene_test.gd ==
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"missing_assets":[],"test":"scene"}
+
+== movement_test.gd ==
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"test":"movement"}
+
+== journey_test.gd ==
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"test":"journey"}
+
+== shared_workshop_test.gd ==
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"test":"shared_workshop"}
+
+== bay_pitch_test.gd ==
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"test":"bay_pitch"}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "6cd109ded8d9c2f3b447ab0d043234d3c1f917903a8e23392547a77259ee9fb2",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "65de4081961301b7f6853384b3c243702675119a3a355729bd844dac9ae6ad06"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/06-anime/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/candidates/01-pass2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

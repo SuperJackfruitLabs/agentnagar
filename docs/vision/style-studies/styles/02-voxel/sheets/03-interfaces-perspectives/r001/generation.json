@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "e9b52242ff531fc989525bced52690bf5183826e40f24c2345aa2cf9fad40c3f",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "74401ef1fac8c0ad3f65626f1567582848b5d353300724dd11c7f7399e7387b3"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/02-voxel/originals/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

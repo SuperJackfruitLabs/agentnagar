@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Agentnagar City
+Comment=The Agentnagar district, simulated from fixtures
+Exec=AppRun
+Icon=agentnagar-city
+Categories=Game;Simulation;
+Terminal=false

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "c01c4e19a581cb2c1887459ae60f3524c43459b1629f65e538f7cf8a285aa77f",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/20-memphis-playful-geometry/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "28901adedb60216c7a6ea9577ab9073b4b519118d1fd8c2ec8ab32b336feb3dd",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/13-risograph-print/originals/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

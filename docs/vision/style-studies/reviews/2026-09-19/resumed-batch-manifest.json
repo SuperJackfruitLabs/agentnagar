@@ -1,0 +1,260 @@
+{
+  "session": "01a0bab2-aa4f-7222-b764-2453b985a802",
+  "tool": "built-in image_gen",
+  "baseline": "2e835a3",
+  "outputs": [
+    {
+      "generated_file": "exec-0d2f08b2-99ef-4caf-b49e-7e573a767ea3.png",
+      "sha256": "00496566b1509ed0c2c044047067d1cd20f04befaf51de1e1b445b31d8a76179",
+      "archived_image": "revisions/2026-09-19/13-risograph-print/03-interfaces-perspectives.pass-2.png",
+      "prompt": "13-risograph-print/03-interfaces-perspectives.revision-2.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-235b9c9a-6cc7-4673-9f8a-4d49cde82923.png",
+      "sha256": "8df12f1167936f9e17001b9c2816260066106e9e5f28cef62631fea87856ced9",
+      "archived_image": "revisions/2026-09-19/16-chalk-pastel-mural/02-creating-exploring.pass-3.png",
+      "prompt": "16-chalk-pastel-mural/02-creating-exploring.revision-3.prompt.txt",
+      "gallery_image": "16-chalk-pastel-mural/02-creating-exploring.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-4220ecb6-3c1c-4aa4-b98c-b9cbc30ae564.png",
+      "sha256": "66170ffbc3fc109e3c72dd2a5100b636f9d6091e8a65d91da792d1f77eaed162",
+      "archived_image": "revisions/2026-09-19/14-linocut-relief/01-living-community.pass-2.png",
+      "prompt": "14-linocut-relief/01-living-community.revision-2.prompt.txt",
+      "gallery_image": "14-linocut-relief/01-living-community.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-45357655-73a5-47c7-a829-89b37a0ad9e2.png",
+      "sha256": "31e96dd4be851b29570fee10377455011635d7d9a7be5842f103b5d85a5a764b",
+      "archived_image": "revisions/2026-09-19/16-chalk-pastel-mural/02-creating-exploring.pass-2.png",
+      "prompt": "16-chalk-pastel-mural/02-creating-exploring.revision-2.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-459e2b5d-1844-4f2e-96ac-509b8ba8dbed.png",
+      "sha256": "592f7c955c53e935fe6dc6c8f451b7615d32a58ece3f903215de5f43c83ea660",
+      "archived_image": "revisions/2026-09-19/13-risograph-print/02-creating-exploring.pass-2.png",
+      "prompt": "13-risograph-print/02-creating-exploring.revision-2.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-482a64bd-7b01-4d99-9932-9d56b394619a.png",
+      "sha256": "7049703cbf8cc96d3123f36b281ae5aecccc566a3167184f94198452712f3a8e",
+      "archived_image": "revisions/2026-09-19/16-chalk-pastel-mural/00-city-perspectives.pass-4.png",
+      "prompt": "16-chalk-pastel-mural/00-city-perspectives.revision-4.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-4ec1539d-31cf-47b3-8a1d-5b5633fc9f2e.png",
+      "sha256": "f825059154930f69cb701126af20392d7a61d9a8ef4b0fb9ff316b99db26d0d8",
+      "archived_image": "revisions/2026-09-19/14-linocut-relief/03-interfaces-perspectives.pass-4.png",
+      "prompt": "14-linocut-relief/03-interfaces-perspectives.revision-4.prompt.txt",
+      "gallery_image": "14-linocut-relief/03-interfaces-perspectives.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-57a40257-6aba-458c-89cf-19707d2f66e9.png",
+      "sha256": "e318ddb8de8f74e9333f51990b7eb07021a35a75749aa4f2b72b242dea019da1",
+      "archived_image": "revisions/2026-09-19/13-risograph-print/02-creating-exploring.pass-3.png",
+      "prompt": "13-risograph-print/02-creating-exploring.revision-3.prompt.txt",
+      "gallery_image": "13-risograph-print/02-creating-exploring.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-5c7fe1a0-7ee6-4ce6-a94a-51567d2e514c.png",
+      "sha256": "16278aee33c086b932c866090d5cbac53b5629fd28548742ff10dfa052a06ec5",
+      "archived_image": "revisions/2026-09-19/16-chalk-pastel-mural/01-living-community.pass-2.png",
+      "prompt": "16-chalk-pastel-mural/01-living-community.revision-2.prompt.txt",
+      "gallery_image": "16-chalk-pastel-mural/01-living-community.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-5daf1cd2-0bcc-4b56-88b4-af6c0ce1cc6c.png",
+      "sha256": "acc1e5fb61a2735371c20dd911c8841badfa5c758779665760dab4d6719f2fa4",
+      "archived_image": "revisions/2026-09-19/13-risograph-print/03-interfaces-perspectives.pass-3.png",
+      "prompt": "13-risograph-print/03-interfaces-perspectives.revision-3.prompt.txt",
+      "gallery_image": "13-risograph-print/03-interfaces-perspectives.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-71acbeb9-17bf-4f6d-a49d-2c4290184922.png",
+      "sha256": "132077844f81bc369a7295e74b674b799ac85da5cbef07959d6d8aa116c9cae2",
+      "archived_image": "revisions/2026-09-19/14-linocut-relief/03-interfaces-perspectives.pass-2.png",
+      "prompt": "14-linocut-relief/03-interfaces-perspectives.revision-2.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-71cb17c8-e5b3-48be-9bbf-075814e69cb4.png",
+      "sha256": "68bfe29356904036796c8cd5c07b25e34b2da75a9dc7c3260f79d38ff25befe1",
+      "archived_image": "revisions/2026-09-19/16-chalk-pastel-mural/00-city-perspectives.pass-3.png",
+      "prompt": "16-chalk-pastel-mural/00-city-perspectives.revision-3.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-72aa5af8-258a-42c5-a971-0bde030e2b82.png",
+      "sha256": "0e278b6b357bac3939c5dec38ee62e2aa05ae5c459489ac68fc3b16b9be1f900",
+      "archived_image": "revisions/2026-09-19/14-linocut-relief/02-creating-exploring.pass-2.png",
+      "prompt": "14-linocut-relief/02-creating-exploring.revision-2.prompt.txt",
+      "gallery_image": "14-linocut-relief/02-creating-exploring.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-77c47e98-feaa-44b2-8afa-4bd17a21e6ab.png",
+      "sha256": "9ab6c0342c79ef563b5c672f4635ac3eb9960b40ddd0e00eba4a5e06eb3b12b5",
+      "archived_image": "revisions/2026-09-19/19-bauhaus-primary-form/00-city-perspectives.png",
+      "prompt": "19-bauhaus-primary-form/00-city-perspectives.revision-1.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-7e237ea5-8abf-49cf-97f9-33f3af3683b4.png",
+      "sha256": "4f0c6a374043f1792733015a73a09b5304e0b48a7fd72d637286e4265211e84b",
+      "archived_image": "revisions/2026-09-19/22-streamline-retro-future/00-city-perspectives.png",
+      "prompt": "22-streamline-retro-future/00-city-perspectives.revision-1.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-a3d285b0-3f90-4527-8631-769fdc96de99.png",
+      "sha256": "2c1ea40cb8bffcde7a7d5fdb6946791d987b5cb70eeca480f548453d22369e58",
+      "archived_image": "revisions/2026-09-19/16-chalk-pastel-mural/03-interfaces-perspectives.pass-2.png",
+      "prompt": "16-chalk-pastel-mural/03-interfaces-perspectives.revision-2.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-afcab9d8-32d2-4e9f-b403-1aa37b784efe.png",
+      "sha256": "a52cbe663e2118a4d1d927ea9494b1c15d408d29040b7f9a6604310aafe7b0c2",
+      "archived_image": "revisions/2026-09-19/14-linocut-relief/03-interfaces-perspectives.pass-3.png",
+      "prompt": "14-linocut-relief/03-interfaces-perspectives.revision-3.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-b133e1cf-6484-4626-932a-469927295018.png",
+      "sha256": "14cf0c14eb32f4ac7edc167aa82f1c006309225df5f118ac7289aaff30ffbe1c",
+      "archived_image": "revisions/2026-09-19/11-low-poly-tropical-diorama/03-interfaces-perspectives.pass-3.png",
+      "prompt": "11-low-poly-tropical-diorama/03-interfaces-perspectives.revision-3.prompt.txt",
+      "gallery_image": "11-low-poly-tropical-diorama/03-interfaces-perspectives.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-cd94ce99-84cf-4889-bb5f-85c37b22bce3.png",
+      "sha256": "3405fba30e1c12dde28ddfc6603ba75b54331f6fd0dd48db0088b88ff76584bf",
+      "archived_image": "revisions/2026-09-19/18-art-deco-civic-futurism/00-city-perspectives.png",
+      "prompt": "18-art-deco-civic-futurism/00-city-perspectives.revision-1.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-cfe08b5a-9a7f-46be-9e53-d25768222817.png",
+      "sha256": "60ff1541bb622877b45ca40bf40d1882629da6479015d6a06e2fc601e662a1b0",
+      "archived_image": "revisions/2026-09-19/27-ceramic-tile-city/00-city-perspectives.png",
+      "prompt": "27-ceramic-tile-city/00-city-perspectives.revision-1.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-da1f6f62-e71b-404f-8006-19341aa191b1.png",
+      "sha256": "c21d70c6639feb1eb5c45475f34134e245821512630b1391d9c7907ea09a91f9",
+      "archived_image": "revisions/2026-09-19/11-low-poly-tropical-diorama/03-interfaces-perspectives.pass-2.png",
+      "prompt": "11-low-poly-tropical-diorama/03-interfaces-perspectives.revision-2.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-ddb594b2-16b4-4bbf-92c9-e0695d8bd10a.png",
+      "sha256": "0c12e6ed97976bdf64f2cbf5f3ef1208f868d039295abdccb11a0d6374392382",
+      "archived_image": "revisions/2026-09-19/20-memphis-playful-geometry/00-city-perspectives.png",
+      "prompt": "20-memphis-playful-geometry/00-city-perspectives.revision-1.prompt.txt",
+      "gallery_image": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "generated_file": "exec-e4605c34-4430-4845-a863-d062513556b3.png",
+      "sha256": "97a132ff3d964b803ca6cc376df287ae60b6edea2774f3fa13fda254cec97283",
+      "archived_image": "revisions/2026-09-19/13-risograph-print/01-living-community.pass-2.png",
+      "prompt": "13-risograph-print/01-living-community.revision-2.prompt.txt",
+      "gallery_image": "13-risograph-print/01-living-community.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ]
+}

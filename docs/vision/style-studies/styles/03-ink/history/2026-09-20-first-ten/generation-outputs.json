@@ -1,0 +1,164 @@
+[
+  {
+    "style": "03-ink",
+    "sheet": "00-city-perspectives",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-3d76fd3a-514e-4c42-b77e-92bdb9e824b9.png",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/03-ink/00-city-perspectives.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/00-city-perspectives.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "00-city-perspectives",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-8f48fbc8-72c9-459a-bc44-56805bd23bac.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-3d76fd3a-514e-4c42-b77e-92bdb9e824b9.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-1.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "00-city-perspectives",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-9d39fa4b-207b-4fbc-8a75-895b69ef8588.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-8f48fbc8-72c9-459a-bc44-56805bd23bac.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-2.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "01-living-community",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-ac916955-4406-4bcd-8d6a-9ff0cb90f574.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-9d39fa4b-207b-4fbc-8a75-895b69ef8588.png",
+      "docs/vision/style-studies/03-ink/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-3.png",
+      "originals/01-living-community.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "01-living-community",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-3603949f-d35f-48d9-9884-2b47b51a46fa.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-ac916955-4406-4bcd-8d6a-9ff0cb90f574.png"
+    ],
+    "archived_reference_snapshots": [
+      "01-living-community.pass-1.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "02-creating-exploring",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-94d840e9-89e0-44a2-8f1e-93d230c58670.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-9d39fa4b-207b-4fbc-8a75-895b69ef8588.png",
+      "docs/vision/style-studies/03-ink/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-3.png",
+      "originals/01-living-community.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "02-creating-exploring",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-ca04f180-eccb-40b1-90f2-93c13897e8bf.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-94d840e9-89e0-44a2-8f1e-93d230c58670.png"
+    ],
+    "archived_reference_snapshots": [
+      "02-creating-exploring.pass-1.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-5e0a697a-8c9c-4b97-823c-33d62cab07cf.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-9d39fa4b-207b-4fbc-8a75-895b69ef8588.png",
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-ac916955-4406-4bcd-8d6a-9ff0cb90f574.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-3.png",
+      "01-living-community.pass-1.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-fbd8bec0-15bc-45b3-80f4-3b2262431987.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-5e0a697a-8c9c-4b97-823c-33d62cab07cf.png"
+    ],
+    "archived_reference_snapshots": [
+      "03-interfaces-perspectives.pass-1.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "00-city-perspectives",
+    "pass": 4,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-a60f3d29-d323-482f-ab5e-c59e4776ea83.png",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/03-ink/00-city-perspectives.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-3.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "01-living-community",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-de5852d9-006f-4744-b55b-35504eaac5b4.png",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/03-ink/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "01-living-community.pass-2.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "02-creating-exploring",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-5c32a2ce-7228-4580-a75d-5f0356cb93f6.png",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/03-ink/02-creating-exploring.png"
+    ],
+    "archived_reference_snapshots": [
+      "02-creating-exploring.pass-2.png"
+    ]
+  },
+  {
+    "style": "03-ink",
+    "sheet": "02-creating-exploring",
+    "pass": 4,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-94f6f4b5-f861-40c6-b05c-9dc53f5ba41a.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-5c32a2ce-7228-4580-a75d-5f0356cb93f6.png"
+    ],
+    "archived_reference_snapshots": [
+      "02-creating-exploring.pass-3.png"
+    ]
+  }
+]

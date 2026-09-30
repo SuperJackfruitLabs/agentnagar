@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en" data-style="25-biomorphic-eco-fantasy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biomorphic eco-fantasy · Agentnagar style study 25</title>
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<style>
+:root{
+  --night:#0C1E16; --grove:#183D2D; --moss:#6D8746; --ivory:#EFE6D0; --ivory-2:#C9C0A8; --gold:#E3A655; --glow:#FCECBB;
+  --teal:#33778E; --spore:#9FF0DA; --lavender:#A99BD6; --timber:#946334;
+  --display:'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --body:'EB Garamond', Georgia, serif;
+  --hand:'Caveat', cursive;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ivory);font:400 19px/1.6 var(--body);overflow-x:hidden;
+  background:radial-gradient(ellipse 80% 50% at 70% 0%,#1d4a36 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 0% 40%,#123526 0%,transparent 70%),var(--night)}
+a{color:var(--glow);text-decoration-color:rgba(227,166,85,.6);text-underline-offset:3px}
+a:hover{color:#fff}
+:focus-visible{outline:2px solid var(--spore);outline-offset:4px;border-radius:6px;box-shadow:0 0 0 6px rgba(159,240,218,.18)}
+.skip{position:absolute;left:12px;top:-60px;background:var(--glow);color:var(--night);padding:8px 14px;border-radius:20px;z-index:9;font-weight:700}
+.skip:focus{top:12px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+
+.kit-nav{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;align-items:center;font:500 13px/1.3 var(--mono);letter-spacing:.06em}
+.kit-nav a{color:var(--ivory-2);text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(227,166,85,.35)}
+.kit-nav a:hover{color:var(--glow);border-color:var(--gold)}
+.top{padding:14px 0}
+
+/* hero */
+.hero{position:relative;padding:30px 0 40px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center}
+.eyebrow{font:500 12.5px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+h1{font:500 clamp(46px,7.4vw,104px)/.9 var(--display);margin:0 0 18px;letter-spacing:-.01em}
+h1 i{display:block;font-weight:400;color:var(--glow);text-shadow:0 0 28px rgba(252,236,187,.35)}
+.lede{font-size:21px;line-height:1.5;color:var(--ivory-2);max-width:34em;margin:0 0 18px}
+.fieldnote{font:500 24px/1.2 var(--hand);color:var(--spore);transform:rotate(-2deg);display:inline-block;margin:0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
+.btn{font:500 17px/1 var(--display);font-weight:700;letter-spacing:.02em;padding:13px 22px;border-radius:999px;border:1px solid var(--gold);background:rgba(227,166,85,.12);color:var(--glow);cursor:pointer;box-shadow:0 0 22px -6px rgba(227,166,85,.6)}
+.btn:hover{background:rgba(227,166,85,.24)}
+.plate{position:relative;margin:0;padding:14px;border-radius:214px 214px 22px 22px/164px 164px 22px 22px;background:linear-gradient(160deg,rgba(227,166,85,.35),rgba(24,61,45,.5));box-shadow:0 0 60px -10px rgba(159,240,218,.25),0 30px 60px -30px #000}
+.plate .kit-panel{border-radius:200px 200px 12px 12px/150px 150px 12px 12px;overflow:hidden}
+.plate .kit-panel img{filter:saturate(1.05)}
+.plate figcaption{font:500 12px/1.5 var(--mono);color:var(--ivory-2);padding:12px 8px 2px;text-align:center}
+.plate::after{content:"";position:absolute;inset:6px;border-radius:208px 208px 18px 18px/158px 158px 18px 18px;border:1px solid rgba(252,236,187,.45);pointer-events:none}
+.spores{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.spores i{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--glow);box-shadow:0 0 10px 3px rgba(252,236,187,.6);opacity:0;animation:drift 9s linear infinite}
+@keyframes drift{0%{transform:translate(0,0);opacity:0}15%{opacity:.9}100%{transform:translate(var(--dx),-240px);opacity:0}}
+
+/* the guide */
+main.guide{position:relative;padding:40px 0 60px}
+svg.myc{position:absolute;left:0;top:0;width:100%;pointer-events:none;overflow:visible}
+.myc path{fill:none;stroke-linecap:round}
+.myc .halo{stroke:var(--spore);stroke-opacity:.14;stroke-width:7}
+.myc .core{stroke:#C9F7EA;stroke-opacity:.85;stroke-width:1.3}
+.myc .trunk .halo{stroke-width:12;stroke-opacity:.12}
+.myc .trunk .core{stroke-width:2.2;stroke:#E6FFF6}
+.myc .grow path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s cubic-bezier(.3,.6,.3,1)}
+.myc .grow.grown path{stroke-dashoffset:0}
+.myc .tip{fill:var(--glow);opacity:0;transition:opacity .8s 1.4s}
+.myc .off .core{stroke-opacity:.55}
+.myc .off .halo{stroke-opacity:.08}
+.myc .grown .tip{opacity:.95}
+.myc .node{fill:var(--night);stroke:var(--gold);stroke-width:2}
+.myc .node-glow{fill:var(--gold);opacity:.25}
+.myc .pulse .node-glow{animation:pulse 1.6s ease-out infinite}
+@keyframes pulse{0%{opacity:.5;transform:scale(1)}100%{opacity:0;transform:scale(3)}}
+.myc .node-glow{transform-box:fill-box;transform-origin:center}
+.plant-hint{font:500 21px/1.2 var(--hand);color:var(--spore);text-align:center;margin:0 0 30px;opacity:.9}
+
+.specimens{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr);row-gap:70px}
+.spec{position:relative;align-self:start;background:linear-gradient(170deg,rgba(24,61,45,.86),rgba(12,30,22,.9));border:1px solid rgba(227,166,85,.4);padding:30px clamp(20px,3vw,40px) 34px;
+  box-shadow:0 0 0 1px rgba(0,0,0,.4),0 30px 60px -30px #000,inset 0 0 60px -30px rgba(159,240,218,.25);backdrop-filter:blur(2px)}
+.spec.l{grid-column:1;border-radius:60px 14px 60px 14px}
+.spec.r{grid-column:3;border-radius:14px 60px 14px 60px;margin-top:150px}
+.spec.wide{grid-column:1 / -1;border-radius:60px 60px 24px 24px}
+.spec-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;border-bottom:1px solid rgba(227,166,85,.35);padding-bottom:10px;margin-bottom:18px;flex-wrap:wrap}
+.cat{font:500 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.spec h2{font:600 clamp(32px,4vw,50px)/1 var(--display);margin:0;color:var(--ivory)}
+.spec h2 small{display:block;font:italic 400 .5em/1.3 var(--display);color:var(--spore);margin-top:6px;letter-spacing:.01em}
+h3{font:600 italic 24px/1.2 var(--display);color:var(--glow);margin:22px 0 8px}
+.spec p{margin:0 0 12px}
+.note{font:500 20px/1.3 var(--hand);color:var(--spore)}
+.kit-project .kit-tagline{font:italic 500 27px/1.3 var(--display);color:var(--glow);margin:0 0 14px}
+.kit-project dl,.conditions{margin:18px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:10px 18px}
+.kit-project dt,.conditions dt{font:500 11.5px/1.6 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--gold);padding-top:4px}
+.kit-project dd,.conditions dd{margin:0;font-size:17.5px}
+.kit-small{font-size:15.5px;color:var(--ivory-2)}
+.marks{list-style:none;padding:0;margin:0}
+.marks li{position:relative;padding:6px 0 6px 30px}
+.marks li::before{content:"";position:absolute;left:4px;top:15px;width:10px;height:10px;border-radius:50% 50% 50% 0;background:var(--moss);box-shadow:0 0 12px 2px rgba(159,240,218,.35);transform:rotate(-45deg)}
+.pigments{list-style:none;padding:0;margin:4px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:16px}
+.pigments li{text-align:center;font-size:15px}
+.pigments .drop{width:74px;height:74px;margin:0 auto 8px;border-radius:50% 50% 50% 8px;transform:rotate(-45deg);box-shadow:inset -8px 8px 16px rgba(255,255,255,.18),inset 6px -10px 18px rgba(0,0,0,.35),0 0 26px -6px var(--c)}
+.pigments b{display:block;font-weight:600}
+.pigments code{font:500 12px var(--mono);color:var(--ivory-2)}
+.lettering{display:grid;gap:10px}
+.lettering div{border:1px solid rgba(227,166,85,.25);border-radius:14px;padding:10px 14px}
+.lettering small{display:block;font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ivory-2);margin-top:4px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
+
+.landmarks{display:flex;flex-wrap:wrap;gap:8px 10px;list-style:none;padding:0;margin:0 0 18px}
+.landmarks li{border:1px solid rgba(159,240,218,.35);border-radius:999px;padding:4px 14px 4px 6px;font-size:16px;display:flex;gap:8px;align-items:center}
+.landmarks b{font:500 11px var(--mono);background:var(--gold);color:var(--night);border-radius:999px;padding:4px 7px}
+.sightings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
+.sighting{margin:0}
+.sighting img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid rgba(227,166,85,.45);box-shadow:0 20px 40px -24px #000}
+.sighting figcaption{font-size:16px;line-height:1.45;color:var(--ivory-2);padding:12px 4px 0}
+.sighting figcaption b{display:block;font:600 22px/1.2 var(--display);color:var(--ivory)}
+.forms{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.forms figure{margin:0}
+.forms .kit-panel{border-radius:16px;border:1px solid rgba(227,166,85,.45)}
+.forms figcaption{font:500 12px/1.45 var(--mono);color:var(--ivory-2);padding-top:8px}
+.guild{list-style:none;padding:0;margin:10px 0 0;columns:2 220px;column-gap:26px}
+.guild li{break-inside:avoid;padding:5px 0 5px 22px;position:relative;font-size:16.5px;line-height:1.35}
+.guild li::before{content:"";position:absolute;left:3px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--glow);box-shadow:0 0 8px 2px rgba(252,236,187,.5)}
+.guild b{color:var(--ivory)}
+.guild span{color:var(--ivory-2)}
+.kit-status .kit-summary{font:italic 500 25px/1.35 var(--display);color:var(--glow)}
+.kit-status ul{padding-left:20px}
+.kit-concept{font-size:16px;color:var(--ivory-2)}
+.nav-spec .kit-nav{justify-content:center;gap:14px 34px;font-size:14px}
+footer{padding:0 0 50px;text-align:center;color:var(--ivory-2);font-size:15.5px}
+footer p{max-width:760px;margin:0 auto}
+
+/* notes */
+.kit-dialog{max-width:880px;width:calc(100% - 24px);max-height:88vh;border:1px solid var(--gold);border-radius:26px;padding:0;background:#10261C;color:var(--ivory);box-shadow:0 0 80px -10px rgba(159,240,218,.3)}
+.kit-dialog::backdrop{background:rgba(3,10,7,.78)}
+.kit-dialog .kit-close{position:sticky;top:10px;float:right;margin:10px;font:700 16px var(--display);border:1px solid var(--gold);background:#183D2D;color:var(--glow);border-radius:999px;padding:9px 16px;cursor:pointer;z-index:1}
+.kit-notes{padding:12px 28px 30px}
+.kit-notes h1{font-size:40px}
+.kit-notes h2{font:600 28px var(--display);color:var(--glow);border-bottom:1px solid rgba(227,166,85,.4);margin-top:28px}
+.kit-notes img{max-width:100%;height:auto;border-radius:12px}
+.kit-notes .kit-swatch{display:inline-block;width:16px;height:16px;border-radius:50%;vertical-align:-2px}
+.kit-notes dt{color:var(--gold);font-weight:700}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .plate{max-width:520px}
+  .specimens{grid-template-columns:34px minmax(0,1fr);row-gap:44px}
+  .spec.l,.spec.r,.spec.wide{grid-column:2;border-radius:40px 12px 40px 12px;margin-top:0}
+  .sightings{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  body{font-size:18px}
+  .specimens{grid-template-columns:22px minmax(0,1fr)}
+  .spec{padding:22px 18px 26px}
+  .kit-project dl,.conditions{grid-template-columns:1fr;gap:2px}
+  .kit-project dd,.conditions dd{margin-bottom:10px}
+  .forms{grid-template-columns:1fr}
+  .kit-nav{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .spores{display:none}
+  .myc .grow path{transition:none}
+  .myc .tip{transition:none}
+  .myc .pulse .node-glow{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#guide">Skip to the specimens</a>
+<div class="top"><div class="wrap" id="nav-slot"></div></div>
+
+<header class="hero">
+  <div class="spores" aria-hidden="true" id="spores"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow" id="eyebrow">Style study</p>
+      <h1>A field guide to a city <i>grown, not built</i></h1>
+      <p class="lede">Biomorphic eco-fantasy: root-like timber lattices, bone-white arches, mushroom-cap canopies and fungal lamps around clear teal water. Seven specimens follow, joined by the network that feeds them.</p>
+      <p class="fieldnote">Field note: most scenes are lit by the living things themselves.</p>
+      <div class="hero-actions">
+        <button class="btn" type="button" id="notes-btn">Read the notes</button>
+        <a href="#guide">Follow the mycelium ↓</a>
+      </div>
+    </div>
+    <figure class="plate" id="plate"></figure>
+  </div>
+</header>
+
+<main class="guide" id="guide" tabindex="-1">
+  <svg class="myc" id="myc" aria-hidden="true" focusable="false"></svg>
+  <div class="wrap">
+    <p class="plant-hint" id="plant-hint">Tap the dark ground between specimens to plant a spore.</p>
+    <div class="specimens" id="specimens"></div>
+  </div>
+</main>
+
+<footer><div class="wrap"><p id="foot"></p></div></footer>
+
+<script>
+(function () {
+  const S = Kit.style('25-biomorphic-eco-fantasy');
+  const A = window.AGENTNAGAR;
+  const el = Kit.el;
+  const reduced = Kit.reducedMotion();
+  const NS = 'http://www.w3.org/2000/svg';
+
+  const CONTENT = {
+    intent: 'A grown rather than built city. Root-like timber lattices, bone-white arches, mushroom-cap canopies, glowing fungal lamps, wisteria and waterfalls define the identity. Ivory, warm gold, moss green, lavender and clear teal water carry the palette, with most scenes lit by bioluminescence.',
+    principles: [
+      'Grown, not built: branching towers and layered arch bridges with no straight edges.',
+      'Light comes from living things: fungal lamps and bioluminescence carry most scenes.',
+      'Large views read as tiered organic terraces around water.',
+      'Street scenes rely on lantern light and wet stone; close-ups are densely detailed.',
+      'Keep branching silhouettes, warm glow and the green and gold palette at every tier.'
+    ],
+    palette: [
+      { name: 'Grove frame', hex: '#183D2D' },
+      { name: 'Moss', hex: '#6D8746' },
+      { name: 'Bone ivory', hex: '#E5D9BF' },
+      { name: 'Lamp gold', hex: '#E3A655' },
+      { name: 'Glow cream', hex: '#FCECBB' },
+      { name: 'River teal', hex: '#33778E' },
+      { name: 'Dusk lavender', hex: '#586992' },
+      { name: 'Root timber', hex: '#946334' }
+    ],
+    materials: 'Root-like timber lattices, bone-white arches, mushroom-cap canopies, woven cushions, curved shelving, lamp-shaped fungi, wisteria, waterfalls and wet stone. The kiosk, phone and tabletop take grown, glowing forms.',
+    type: 'The sheets caption in a classical serif. This page uses Cormorant Garamond for display, EB Garamond for reading, Caveat for field notes and IBM Plex Mono for catalogue numbers.',
+    agents: 'The brief describes the city agent as a leaf-crowned plant being with luminous skin, and 01 Conversation shows exactly that. The 03 phone instead shows a small mushroom-capped creature on a "Your Companion" panel; the review notes the change. Residents include humans alongside pointed-eared people, a blue-skinned maker and a large mushroom-capped creature on the tram. The sheets do not depict individual Guild residents.',
+    tradeoffs: [
+      { label: 'Map scale', text: 'The later-added overview reads clearly: river west, arched bridge north, labelled workshop, tree square, library and tram. The repair record notes it still uses some illustrated roof symbols, and it has not been reconciled with the other three sheets, which show a much larger fantasy city.' },
+      { label: 'Street scale', text: 'Lantern light, wet stone and glowing canopies give strong atmosphere. Dense detail and vast backdrops of waterfalls and towers compete with the reference landmarks.' },
+      { label: 'Device cost', text: 'The brief keeps branching silhouettes, warm glow and green and gold at every tier. Lower tiers would reduce foliage, waterfalls and glow; higher tiers could animate light and water. Glow and foliage density drive the cost.' },
+      { label: 'UI legibility', text: 'The kiosk (Browse, Book, Ask) and phone ("Explore the Riverfront") take soft, glowing forms. On mobile the companion panel sits beyond the phone like a second device.' },
+      { label: 'World premise', text: 'The brief says the sheets introduce fantasy species and costume rather than an architectural treatment, so this is a different world premise, and that boundary must be decided before comparison. 02 adds nonhuman passengers and hanging cabin transit, and clips its BUILD MODE and TRANSIT labels.' }
+    ]
+  };
+
+  Kit.mountNav(document.getElementById('nav-slot'), S).removeAttribute('data-core');
+  document.getElementById('eyebrow').textContent = `Agentnagar style study ${S.number} · Biomorphic eco-fantasy`;
+  document.getElementById('foot').textContent = `${A.status} ${A.conceptNote}`;
+
+  // Hero plate: a cropped panel of a concept sheet
+  const plate = document.getElementById('plate');
+  plate.append(Kit.sheetImg(S, 2, 'br', { eager: true, alt: `${S.name} concept study, Creating exploring, Waterfront park panel (${S.sheets[2].revision}): residents on a timber bench under wisteria and a fungal lamp, sailboats on teal water, layered arch bridges and waterfalls beyond.` }));
+  plate.append(el('figcaption', { text: `Plate: Waterfront park, from sheet 02 (${S.sheets[2].revision}). Concept study, not a game capture.` }));
+
+  // Drifting spores in the hero
+  if (!reduced) {
+    const sp = document.getElementById('spores');
+    for (let i = 0; i < 26; i++) {
+      const s = el('i');
+      s.style.left = `${Math.random() * 100}%`; s.style.top = `${40 + Math.random() * 60}%`;
+      s.style.setProperty('--dx', `${(Math.random() - .5) * 120}px`);
+      s.style.animationDelay = `${-Math.random() * 9}s`; s.style.animationDuration = `${7 + Math.random() * 6}s`;
+      sp.append(s);
+    }
+  }
+
+  // ---------- Specimens ----------
+  const list = document.getElementById('specimens');
+  const specs = [];
+  function spec(core, side, cat, title, latin, body) {
+    const h = el('h2', { id: `h-${core}` }, [title, el('small', { text: latin })]);
+    const sec = el('section', { class: `spec ${side}`, 'data-core': core, 'aria-labelledby': `h-${core}` }, [
+      el('div', { class: 'spec-head' }, [h, el('span', { class: 'cat', text: cat })]), ...body
+    ]);
+    list.append(sec);
+    specs.push(sec);
+    return sec;
+  }
+
+  const proj = Kit.projectBlock();
+  proj.removeAttribute('data-core');
+  spec('project', 'l', 'Specimen I', 'Agentnagar', 'the settlement this guide describes', [proj]);
+
+  spec('style', 'r', 'Specimen II', 'The style', 'identifying marks, pigments, substrate', [
+    el('p', { text: CONTENT.intent }),
+    el('h3', { text: 'Identifying marks' }),
+    el('ul', { class: 'marks' }, CONTENT.principles.map((t) => el('li', { text: t }))),
+    el('h3', { text: 'Pigments, sampled from the sheets' }),
+    el('ul', { class: 'pigments' }, CONTENT.palette.map((c) => el('li', {}, [el('div', { class: 'drop', style: `background:${c.hex};--c:${c.hex}`, 'aria-hidden': 'true' }), el('b', { text: c.name }), el('code', { text: c.hex })]))),
+    el('h3', { text: 'Substrate' }),
+    el('p', { text: CONTENT.materials }),
+    el('h3', { text: 'Lettering' }),
+    el('p', { text: CONTENT.type }),
+    el('div', { class: 'lettering' }, [
+      el('div', {}, [el('span', { style: 'font:600 34px/1 var(--display)', text: 'Tree Square' }), el('small', { text: 'Display · Cormorant Garamond' })]),
+      el('div', {}, [el('span', { style: 'font:500 26px/1 var(--hand);color:var(--spore)', text: 'lamps glow after rain' }), el('small', { text: 'Field notes · Caveat' })])
+    ])
+  ]);
+
+  const SIGHT = [
+    'Map, top-down, diagonal and street. River down the west, a pale arched bridge to the north, the workshop (W1) west with three copper roof bays, one great tree in the square (T1), the library (L1) with its curved glass reading-room roof to the east, housing towers (D1), a park (P1), and the tram (S1) along the south.',
+    'Workshop, home, conversation and gathering. Makers at a glowing lattice sculpture; a reader in a woven nook above the river; A1, a leaf-crowned being, in conversation by waterfalls; an assembly under banners and mushroom canopies.',
+    'Build mode, transit, night and rain, waterfront park. A glowing outline structure on a timber terrace; a tram interior with a mushroom-capped passenger and hanging cabins outside; lantern light on wet stone; wisteria over the waterfront.',
+    'Facility, mobile, rooftop and AR tabletop. A grown kiosk offering Browse, Book and Ask; a phone map with a companion panel beside it; a rooftop at dusk over arched bridges; a glowing tabletop model of the river city.'
+  ];
+  spec('views', 'wide', 'Specimen III', 'One district, four sightings', 'the same riverside district, seen four ways', [
+    el('ul', { class: 'landmarks', 'aria-label': 'Reference district landmarks' }, A.district.map((d) => el('li', {}, [el('b', { text: d.id }), d.name]))),
+    el('p', { class: 'note', text: A.conceptNote }),
+    el('div', { class: 'sightings' }, S.sheets.map((sh, i) => el('figure', { class: 'sighting' }, [
+      Kit.sheetImg(S, i, null, { alt: `${S.name} concept study, ${sh.title} (${sh.revision}): ${SIGHT[i]}` }),
+      el('figcaption', {}, [el('b', { text: `${sh.title} · ${sh.revision}` }), SIGHT[i]])
+    ])))
+  ]);
+
+  spec('agents', 'l', 'Specimen IV', 'Residents and the guide', 'City Agent A1, recorded in two forms', [
+    el('p', { text: CONTENT.agents }),
+    el('div', { class: 'forms' }, [
+      el('figure', {}, [Kit.sheetImg(S, 1, 'bl', { alt: `${S.name} concept study, Living community, Conversation panel (${S.sheets[1].revision}): a resident talks with a leaf-crowned plant being with luminous skin, the city agent, beside waterfalls.` }), el('figcaption', { text: 'Form A · 01 Conversation: leaf-crowned, luminous.' })]),
+      el('figure', {}, [Kit.sheetImg(S, 3, 'tr', { alt: `${S.name} concept study, Interfaces perspectives, Mobile panel (${S.sheets[3].revision}): a phone map of the riverfront with a companion panel beside it, topped by a small mushroom-capped creature.` }), el('figcaption', { text: 'Form B · 03 Mobile: mushroom-capped companion.' })])
+    ]),
+    el('p', { class: 'kit-small', text: `${A.agentA1} ${A.conceptNote}` }),
+    el('h3', { text: 'The fourteen Guild residents' }),
+    el('p', { class: 'kit-small', text: `${A.guildNote} No sheet in this study depicts them; whether they would be human, plant-like or other species is part of the world-premise question.` }),
+    el('ul', { class: 'guild' }, A.guild.map((g) => el('li', {}, [el('b', { text: g.name }), ' ', el('span', { text: `· ${g.role}` })])))
+  ]);
+
+  spec('tradeoffs', 'r', 'Specimen V', 'Field conditions', 'where it thrives, where it struggles', [
+    el('dl', { class: 'conditions' }, CONTENT.tradeoffs.flatMap((t) => [el('dt', { text: t.label }), el('dd', { text: t.text })]))
+  ]);
+
+  const status = Kit.statusBlock(S);
+  status.removeAttribute('data-core');
+  spec('status', 'l', 'Specimen VI', 'Herbarium record', 'revisions, review and sources', [status]);
+
+  const navSpec = spec('nav', 'r nav-spec', 'Specimen VII', 'Neighbouring species', 'the studies on either side', [el('p', { text: 'The network runs on to the next study, back to the last, or out to all thirty.' })]);
+  Kit.mountNav(navSpec, S).removeAttribute('data-core');
+
+  Kit.notesDialog(S, CONTENT, document.getElementById('notes-btn'));
+
+  // ---------- Mycelium ----------
+  const main = document.getElementById('guide');
+  const svg = document.getElementById('myc');
+  let trunkGroup = null, groups = [], offshoots = [], seed = 25;
+  const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  function path(d, cls) {
+    const g = document.createElementNS(NS, 'g');
+    g.innerHTML = `<path class="halo" d="${d}" pathLength="1"/><path class="core" d="${d}" pathLength="1"/>`;
+    if (cls) g.setAttribute('class', cls);
+    return g;
+  }
+  // Recursive hyphae: returns path data strings and tip points.
+  function hyphae(x, y, ang, len, depth, out) {
+    if (depth <= 0 || len < 8) { out.tips.push([x, y]); return; }
+    const bend = (rnd() - .5) * .9;
+    const x2 = x + Math.cos(ang) * len, y2 = y + Math.sin(ang) * len;
+    const cx = x + Math.cos(ang + bend) * len * .55, cy = y + Math.sin(ang + bend) * len * .55;
+    out.d.push(`M${x.toFixed(1)} ${y.toFixed(1)}Q${cx.toFixed(1)} ${cy.toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`);
+    const n = depth > 2 ? 2 : (rnd() < .6 ? 2 : 1);
+    for (let i = 0; i < n; i++) hyphae(x2, y2, ang + (rnd() - .5) * 1.3 + (i ? .35 : -.35), len * (.62 + rnd() * .18), depth - 1, out);
+  }
+  function cluster(x, y, baseAng, len, depth, count) {
+    const out = { d: [], tips: [] };
+    for (let i = 0; i < count; i++) hyphae(x, y, baseAng + (rnd() - .5) * 1.6, len * (.7 + rnd() * .5), depth, out);
+    const g = document.createElementNS(NS, 'g');
+    g.setAttribute('class', 'grow');
+    out.d.forEach((d, i) => {
+      const p = path(d);
+      p.querySelectorAll('path').forEach((q) => { q.style.transitionDelay = `${(i % 7) * 90}ms`; });
+      g.append(p);
+    });
+    out.tips.forEach(([tx, ty]) => {
+      const c = document.createElementNS(NS, 'circle');
+      c.setAttribute('class', 'tip'); c.setAttribute('cx', tx.toFixed(1)); c.setAttribute('cy', ty.toFixed(1)); c.setAttribute('r', (1.4 + rnd() * 1.6).toFixed(1));
+      g.append(c);
+    });
+    return g;
+  }
+
+  function build() {
+    seed = 25;
+    const W = main.clientWidth, H = main.scrollHeight;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svg.setAttribute('height', H);
+    svg.textContent = '';
+    groups = [];
+    const mRect = main.getBoundingClientRect();
+    const narrow = window.innerWidth <= 900;
+    const listRect = list.getBoundingClientRect();
+    const trunkX = narrow ? (listRect.left - mRect.left) + (window.innerWidth <= 560 ? 6 : 12) : W / 2;
+    const hint = document.getElementById('plant-hint');
+    const pts = [[trunkX, hint.offsetTop + hint.offsetHeight + 6]];
+    const nodes = [];
+    specs.forEach((s) => {
+      const r = s.getBoundingClientRect();
+      const top = r.top - mRect.top;
+      const side = s.classList.contains('l') ? -1 : s.classList.contains('r') ? 1 : 0;
+      let nx, ny = top + 60;
+      if (narrow) nx = trunkX;
+      else if (side === 0) { nx = W / 2; ny = top - 18; }
+      else nx = W / 2 + side * 22;
+      nodes.push({ x: nx, y: ny, side, top, bottom: r.bottom - mRect.top, left: r.left - mRect.left, right: r.right - mRect.left, s });
+      pts.push([nx, ny]);
+    });
+    pts.push([trunkX, H - 20]);
+    let d = `M${pts[0][0]} ${pts[0][1]}`;
+    for (let i = 1; i < pts.length; i++) {
+      const [x0, y0] = pts[i - 1], [x1, y1] = pts[i];
+      const sway = narrow ? 6 : 50;
+      d += `C${(x0 + (i % 2 ? sway : -sway)).toFixed(1)} ${(y0 + (y1 - y0) * .4).toFixed(1)} ${(x1 + (i % 2 ? -sway : sway)).toFixed(1)} ${(y1 - (y1 - y0) * .4).toFixed(1)} ${x1.toFixed(1)} ${y1.toFixed(1)}`;
+    }
+    trunkGroup = path(d, 'trunk');
+    offshoots = [];
+    // sample the trunk and sprout side hyphae that grow as the trunk reaches them
+    const probe = document.createElementNS(NS, 'path');
+    probe.setAttribute('d', d);
+    svg.append(probe);
+    const L = probe.getTotalLength();
+    const step = narrow ? 170 : 110;
+    for (let at = step * 1.3, k = 0; at < L - 40; at += step * (.7 + rnd() * .6), k++) {
+      const pt = probe.getPointAtLength(at);
+      const dir = narrow ? 0 : (k % 2 ? 0 : Math.PI);
+      const c = cluster(pt.x, pt.y, dir + (rnd() - .5) * .8, narrow ? 26 : 46 + rnd() * 30, narrow ? 3 : 4, narrow ? 1 : 2);
+      c.classList.add('off');
+      svg.append(c);
+      offshoots.push({ y: pt.y, g: c });
+    }
+    probe.remove();
+    svg.append(trunkGroup);
+    nodes.forEach((n) => {
+      const g = document.createElementNS(NS, 'g');
+      // side hyphae spread into the gutter and up along the card edge
+      if (narrow) {
+        g.append(cluster(n.x, n.y, Math.PI / 2, 40, 3, 2));
+      } else if (n.side === 0) {
+        g.append(cluster(n.x, n.y, -Math.PI / 2 + .9, 70, 4, 2));
+        g.append(cluster(n.x, n.y, -Math.PI / 2 - .9, 70, 4, 2));
+      } else {
+        const edge = n.side < 0 ? n.right : n.left;
+        g.append(cluster(n.x, n.y, n.side < 0 ? Math.PI : 0, Math.abs(edge - n.x) * .9 + 10, 4, 3));
+        g.append(cluster(n.x, n.y + 30, n.side < 0 ? 0 : Math.PI, 60, 3, 2));
+      }
+      const glow = document.createElementNS(NS, 'circle');
+      glow.setAttribute('class', 'node-glow'); glow.setAttribute('cx', n.x); glow.setAttribute('cy', n.y); glow.setAttribute('r', 9);
+      const dot = document.createElementNS(NS, 'circle');
+      dot.setAttribute('class', 'node'); dot.setAttribute('cx', n.x); dot.setAttribute('cy', n.y); dot.setAttribute('r', 6);
+      g.append(glow, dot);
+      svg.append(g);
+      groups.push({ g, s: n.s });
+    });
+    if (reduced) svg.querySelectorAll('.grow').forEach((g) => g.classList.add('grown'));
+    else groups.forEach(({ g, s }) => { if (s.dataset.seen) g.querySelectorAll('.grow').forEach((c) => c.classList.add('grown')); });
+    spores.forEach((sp) => svg.append(sp));
+    updateTrunk();
+  }
+
+  function updateTrunk() {
+    if (!trunkGroup) return;
+    const r = main.getBoundingClientRect();
+    const p = reduced ? 1 : Math.max(0, Math.min(1, (window.innerHeight * .8 - r.top) / r.height));
+    trunkGroup.querySelectorAll('path').forEach((q) => { q.style.strokeDasharray = '1'; q.style.strokeDashoffset = String(1 - p); });
+    const reach = p * r.height;
+    offshoots.forEach((o) => o.g.classList.toggle('grown', o.y <= reach));
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.dataset.seen = '1';
+      const grp = groups.find((x) => x.s === e.target);
+      if (grp) grp.g.querySelectorAll('.grow').forEach((c) => c.classList.add('grown'));
+    });
+  }, { rootMargin: '0px 0px -20% 0px' });
+  specs.forEach((s) => io.observe(s));
+
+  // Hover or focus in a specimen pulses its node
+  specs.forEach((s) => {
+    const on = () => { const grp = groups.find((x) => x.s === s); if (grp) grp.g.classList.add('pulse'); };
+    const off = () => { const grp = groups.find((x) => x.s === s); if (grp) grp.g.classList.remove('pulse'); };
+    s.addEventListener('pointerenter', on); s.addEventListener('pointerleave', off);
+    s.addEventListener('focusin', on); s.addEventListener('focusout', off);
+  });
+
+  // Plant a spore: click the dark ground
+  const spores = [];
+  main.addEventListener('click', (e) => {
+    if (e.target.closest('.spec, a, button')) return;
+    const r = main.getBoundingClientRect();
+    const x = e.clientX - r.left, y = e.clientY - r.top;
+    const g = cluster(x, y, Math.random() * Math.PI * 2, 34, 3, 5);
+    svg.append(g);
+    spores.push(g);
+    if (spores.length > 24) spores.shift().remove();
+    if (reduced) g.classList.add('grown');
+    else requestAnimationFrame(() => requestAnimationFrame(() => g.classList.add('grown')));
+    document.getElementById('plant-hint').textContent = `${spores.length} spore${spores.length === 1 ? '' : 's'} planted.`;
+  });
+
+  let raf = 0;
+  window.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; updateTrunk(); }); }, { passive: true });
+  let t = 0;
+  new ResizeObserver(() => { clearTimeout(t); t = setTimeout(build, 120); }).observe(main);
+  build();
+})();
+</script>
+</body>
+</html>

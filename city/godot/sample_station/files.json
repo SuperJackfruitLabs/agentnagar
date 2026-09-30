@@ -1,0 +1,66 @@
+{
+  ".": [
+    {
+      "name": "src",
+      "path": "src",
+      "type": "dir",
+      "size": null,
+      "modified": "2026-09-28T09:03:12.000Z"
+    },
+    {
+      "name": "tests",
+      "path": "tests",
+      "type": "dir",
+      "size": null,
+      "modified": "2026-09-28T08:51:47.000Z"
+    },
+    {
+      "name": "Cargo.toml",
+      "path": "Cargo.toml",
+      "type": "file",
+      "size": 172,
+      "modified": "2026-09-27T16:31:04.000Z"
+    }
+  ],
+  "src": [
+    {
+      "name": "lib.rs",
+      "path": "src/lib.rs",
+      "type": "file",
+      "size": 571,
+      "modified": "2026-09-28T09:03:12.000Z"
+    },
+    {
+      "name": "main.rs",
+      "path": "src/main.rs",
+      "type": "file",
+      "size": 370,
+      "modified": "2026-09-28T08:57:02.000Z"
+    }
+  ],
+  "tests": [
+    {
+      "name": "fixtures",
+      "path": "tests/fixtures",
+      "type": "dir",
+      "size": null,
+      "modified": "2026-09-27T16:38:20.000Z"
+    },
+    {
+      "name": "count.rs",
+      "path": "tests/count.rs",
+      "type": "file",
+      "size": 773,
+      "modified": "2026-09-28T08:51:47.000Z"
+    }
+  ],
+  "tests/fixtures": [
+    {
+      "name": "latin1.txt",
+      "path": "tests/fixtures/latin1.txt",
+      "type": "file",
+      "size": 11,
+      "modified": "2026-09-27T16:38:20.000Z"
+    }
+  ]
+}

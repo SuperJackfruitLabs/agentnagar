@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "44e6489a309d25b634d8d42064fd7169e50da6bb73ed767a55ef9b6182570d47",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "375b2614bae572d67c4d0e12adb05a32c4fb38acef34283eabdde4fd32b82fa3"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/06-anime/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/candidates/02-pass1.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

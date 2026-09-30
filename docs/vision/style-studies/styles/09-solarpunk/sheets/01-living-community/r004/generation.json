@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sha256": "5e753438b225633397a1dc83def1197015c1ca5a88252269553a0c6768109594",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "f771416edeade3cd6478b0c3ebc25b7960c74e30d1494d15fd813c5023ef38d5"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/09-solarpunk/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/01-living-community-pass3.png"
+  ],
+  "reference_images": [
+    "../r003/image.png",
+    "../r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

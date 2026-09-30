@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en" data-style="18-art-deco-civic-futurism">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>18 Art Deco civic futurism · Agentnagar style study</title>
+<meta name="description" content="A civic prospectus for Agentnagar, ridden floor by floor in an Art Deco elevator.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root {
+  --midnight: #081b2e;     /* sampled: frame navy */
+  --navy: #0f2a44;
+  --navy-2: #173656;
+  --gold: #cbae70;         /* sampled: brass line */
+  --gold-hi: #e9d29a;
+  --gold-lo: #8f7440;
+  --cream: #f1cf9c;        /* sampled: lit stone */
+  --text: #efe4cc;
+  --muted: #c9bda3;
+  --river: #14495c;        /* sampled: water */
+  --glow: #f0c883;         /* sampled: window glow */
+  --rust: #723b20;         /* sampled: upholstery */
+  --dome: #3b5160;         /* sampled: dome tile */
+  --display: 'Limelight', 'Poiret One', Georgia, serif;
+  --deco: 'Poiret One', 'Josefin Sans', sans-serif;
+  --body: 'Josefin Sans', 'Inter Variable', system-ui, sans-serif;
+  --num: 'Big Shoulders Display', 'Josefin Sans', sans-serif;
+  --panel-w: 272px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body {
+  margin: 0; color: var(--text); font: 400 1.1rem/1.65 var(--body);
+  background-color: var(--midnight);
+  background-image:
+    radial-gradient(circle at 50% 100%, transparent 0 30px, rgba(203,174,112,.07) 30px 31px, transparent 31px 44px, rgba(203,174,112,.05) 44px 45px, transparent 45px),
+    linear-gradient(180deg, #081b2e, #0b2238 50%, #081b2e);
+  background-size: 90px 45px, 100% 100%;
+  overflow-x: hidden;
+}
+a { color: var(--gold-hi); text-decoration-color: var(--gold-lo); text-underline-offset: 4px; }
+a:hover { color: #fff3d6; }
+:focus-visible { outline: 3px solid var(--gold-hi); outline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--gold); color: var(--midnight); padding: 8px 14px; z-index: 50; }
+.skip:focus { top: 12px; }
+p { margin: 0 0 .9rem; }
+
+/* ---------- elevator panel ---------- */
+.car {
+  position: fixed; left: 0; top: 0; bottom: 0; width: var(--panel-w); z-index: 20;
+  padding: 18px 22px 16px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto;
+  background:
+    repeating-linear-gradient(90deg, rgba(203,174,112,.06) 0 2px, transparent 2px 14px),
+    linear-gradient(180deg, #132f4c, #0a2036);
+  box-shadow: inset -2px 0 0 var(--gold), inset -6px 0 0 var(--midnight), inset -7px 0 0 var(--gold-lo), 8px 0 30px rgba(0,0,0,.4);
+}
+.car .brand { text-align: center; font: 400 .78rem/1.3 var(--deco); letter-spacing: .32em; color: var(--gold); text-transform: uppercase; }
+.dial { position: relative; width: 86%; margin: 0 auto; }
+.dial svg { display: block; width: 100%; height: auto; }
+#needle { transform-origin: 120px 118px; transition: transform .5s cubic-bezier(.3,1.4,.5,1); }
+@media (prefers-reduced-motion: reduce) { #needle { transition: none; } }
+.readout { text-align: center; margin-top: -4px; }
+.readout .fl { font: 700 2.1rem/1 var(--num); color: var(--glow); text-shadow: 0 0 12px rgba(240,200,131,.45); letter-spacing: .06em; }
+.readout .nm { font: 400 .95rem/1.25 var(--deco); color: var(--text); letter-spacing: .08em; min-height: 2.5em; margin-top: 4px; }
+.buttons { display: grid; grid-template-columns: 1fr; gap: 8px; padding: 14px 16px; border-radius: 6px;
+  background: linear-gradient(180deg, #0a1d31, #0e2740); box-shadow: inset 0 0 0 1px var(--gold-lo), inset 0 0 0 5px #0b2036, inset 0 0 0 6px rgba(203,174,112,.35); }
+.fbtn {
+  display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 12px; padding: 0; border: 0; background: none; color: var(--text);
+  font: 400 .88rem/1.1 var(--deco); letter-spacing: .1em; text-align: left; cursor: pointer; text-transform: uppercase;
+}
+.fbtn .b {
+  width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
+  font: 700 1.15rem/1 var(--num); color: var(--midnight);
+  background: radial-gradient(circle at 35% 30%, #fff1c9, var(--gold) 45%, var(--gold-lo) 100%);
+  box-shadow: 0 0 0 2px #0a1d31, 0 0 0 3px var(--gold-lo), 0 3px 6px rgba(0,0,0,.5);
+  transition: box-shadow .2s, color .2s;
+}
+.fbtn:hover .b { box-shadow: 0 0 0 2px #0a1d31, 0 0 0 3px var(--gold-hi), 0 0 14px rgba(240,200,131,.5); }
+.fbtn[aria-current="true"] .b, .fbtn.called .b { color: #5a2408; box-shadow: 0 0 0 2px #0a1d31, 0 0 0 3px var(--glow), 0 0 18px 4px rgba(240,200,131,.65); background: radial-gradient(circle at 35% 30%, #fff8e0, var(--glow) 50%, #c79a4e); }
+.fbtn:focus-visible { outline: none; }
+.fbtn:focus-visible .b { outline: 3px solid var(--gold-hi); outline-offset: 4px; }
+.car .notes-btn { margin-top: auto; }
+.notes-btn {
+  font: 400 .9rem/1 var(--deco); letter-spacing: .2em; text-transform: uppercase; color: var(--midnight); cursor: pointer;
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold)); border: 0; padding: 13px 16px;
+  clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0 50%);
+}
+.notes-btn:hover { background: linear-gradient(180deg, #fff3d6, var(--gold-hi)); }
+.car .hint { font: 400 .8rem/1.4 var(--body); color: var(--muted); text-align: center; margin: 0; }
+
+/* ---------- doors ---------- */
+.doors { position: fixed; top: 0; bottom: 0; left: var(--panel-w); right: 0; z-index: 15; pointer-events: none; display: flex; }
+.leaf {
+  flex: 1; transform: translateX(-100%); transition: transform .45s cubic-bezier(.6,0,.3,1);
+  background:
+    repeating-linear-gradient(90deg, rgba(203,174,112,.0) 0 22px, rgba(203,174,112,.22) 22px 24px),
+    radial-gradient(circle at 100% 50%, transparent 0 60px, rgba(203,174,112,.5) 60px 62px, transparent 62px 90px, rgba(203,174,112,.4) 90px 92px, transparent 92px),
+    repeating-conic-gradient(from 180deg at 100% 50%, rgba(203,174,112,.14) 0 4deg, transparent 4deg 10deg),
+    linear-gradient(90deg, #0d263f, #163a5e);
+  box-shadow: inset -3px 0 0 var(--gold);
+}
+.leaf.r { transform: translateX(100%); background:
+    repeating-linear-gradient(90deg, rgba(203,174,112,.0) 0 22px, rgba(203,174,112,.22) 22px 24px),
+    radial-gradient(circle at 0 50%, transparent 0 60px, rgba(203,174,112,.5) 60px 62px, transparent 62px 90px, rgba(203,174,112,.4) 90px 92px, transparent 92px),
+    repeating-conic-gradient(from 0deg at 0 50%, rgba(203,174,112,.14) 0 4deg, transparent 4deg 10deg),
+    linear-gradient(270deg, #0d263f, #163a5e);
+  box-shadow: inset 3px 0 0 var(--gold); }
+.doors.shut .leaf { transform: none; }
+
+/* ---------- shaft & floors ---------- */
+.shaft { margin-left: var(--panel-w); }
+.floor { position: relative; padding: 70px clamp(20px, 5vw, 80px) 80px; border-bottom: 2px solid var(--gold-lo); scroll-margin-top: 0; }
+.floor::after { content: ''; position: absolute; left: 50%; bottom: -9px; width: 16px; height: 16px; background: var(--midnight); border: 2px solid var(--gold); transform: translateX(-50%) rotate(45deg); }
+.floor:last-child::after { display: none; }
+.floor-head { text-align: center; margin: 0 auto 38px; max-width: 900px; }
+.medal { width: 104px; height: 104px; margin: 0 auto 12px; display: grid; place-items: center; position: relative;
+  background: repeating-conic-gradient(from 0deg, var(--gold) 0 3deg, transparent 3deg 12deg); border-radius: 50%; }
+.medal::before { content: ''; position: absolute; inset: 16px; border-radius: 50%; background: var(--midnight); box-shadow: 0 0 0 2px var(--gold), 0 0 0 6px var(--midnight), 0 0 0 7px var(--gold-lo); }
+.medal span { position: relative; font: 700 2.4rem/1 var(--num); color: var(--glow); }
+.floor-no { font: 400 .9rem/1 var(--deco); letter-spacing: .4em; color: var(--gold); text-transform: uppercase; }
+.floor h2 { font: 400 clamp(2rem, 4.4vw, 3.4rem)/1.1 var(--display); color: var(--cream); margin: 10px 0 8px; letter-spacing: .03em; }
+.floor h2:focus { outline: none; }
+.floor .dept { font: 400 1.1rem/1.4 var(--deco); letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+.chev { display: block; width: 240px; height: 18px; margin: 16px auto 0; background:
+  linear-gradient(135deg, transparent 6px, var(--gold) 6px 8px, transparent 8px) 0 0 / 16px 18px repeat-x,
+  linear-gradient(225deg, transparent 6px, var(--gold) 6px 8px, transparent 8px) 0 0 / 16px 18px repeat-x; opacity: .8; }
+.wrap { max-width: 1040px; margin: 0 auto; }
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 56px; }
+h3 { font: 400 1.05rem/1.3 var(--deco); letter-spacing: .22em; color: var(--gold-hi); text-transform: uppercase; margin: 0 0 .7rem; font-weight: 700; }
+.frame { position: relative; padding: 10px; background: linear-gradient(180deg, #102b47, #0a1f35);
+  clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px);
+  box-shadow: inset 0 0 0 1px var(--gold), inset 0 0 0 5px #0b2036, inset 0 0 0 6px var(--gold-lo); }
+.trim { overflow: hidden; }
+figure { margin: 0; }
+figcaption { font: 400 .98rem/1.45 var(--body); color: var(--muted); padding-top: 10px; }
+
+/* lobby */
+.lobby { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .9fr); gap: 40px; align-items: center; padding-top: 50px; }
+.lobby .kicker { font: 400 .95rem/1.4 var(--deco); letter-spacing: .38em; color: var(--gold); text-transform: uppercase; margin: 0 0 16px; }
+.lobby h1 { font: 400 clamp(2.6rem, 5.4vw, 5.2rem)/.95 var(--display); color: var(--cream); margin: 0; letter-spacing: .02em; text-shadow: 0 0 40px rgba(240,200,131,.18); }
+.lobby h1 small { display: block; font: 400 clamp(1.2rem, 2.2vw, 1.7rem)/1.3 var(--deco); letter-spacing: .3em; color: var(--gold-hi); margin-top: 18px; text-transform: uppercase; }
+.lobby .intro { font-size: 1.22rem; max-width: 44ch; margin-top: 26px; }
+.lobby .ride { margin-top: 18px; font: 400 .95rem/1.5 var(--deco); letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+.tower svg { width: 100%; height: auto; display: block; max-height: 78vh; }
+.tower figcaption { text-align: center; }
+
+/* charter hall (project) */
+.kit-project .kit-tagline { font: 400 clamp(1.4rem, 2.6vw, 2rem)/1.35 var(--deco); color: var(--cream); text-align: center; max-width: 34ch; margin: 0 auto 26px; letter-spacing: .04em; }
+.kit-project .lead { columns: 2; column-gap: 56px; }
+.kit-project dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; margin: 26px 0 16px; background: var(--gold-lo); padding: 2px; }
+.kit-project dl > div { background: var(--navy); padding: 18px 20px; }
+.kit-project dl > div:last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+.kit-project dt { font: 700 .82rem/1.2 var(--deco); letter-spacing: .24em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.kit-project dd { margin: 0; font-size: 1.02rem; }
+.kit-project .kit-small { text-align: center; color: var(--muted); font-size: .98rem; max-width: 70ch; margin: 0 auto; }
+
+/* design office */
+.principles { list-style: none; padding: 0; margin: 0; counter-reset: c; }
+.principles li { counter-increment: c; position: relative; padding: 0 0 14px 54px; }
+.principles li::before { content: counter(c, upper-roman); position: absolute; left: 0; top: 0; width: 38px; height: 26px; display: grid; place-items: center; font: 700 .9rem/1 var(--num); color: var(--midnight); background: var(--gold); clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%); }
+.swatches { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 14px; }
+.swatches li { text-align: center; }
+.swatches .cw { filter: drop-shadow(0 0 1px var(--gold)) drop-shadow(0 0 1px var(--gold)); }
+.swatches .chip { height: 118px; background: var(--c); clip-path: polygon(0 100%, 0 30%, 18% 30%, 18% 15%, 36% 15%, 36% 0, 64% 0, 64% 15%, 82% 15%, 82% 30%, 100% 30%, 100% 100%); box-shadow: inset 0 0 0 1px rgba(255,255,255,.1); position: relative; }
+.swatches .chip::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 2px, transparent 2px 12px); }
+.swatches b { display: block; font: 700 .82rem/1.3 var(--deco); letter-spacing: .14em; text-transform: uppercase; color: var(--text); margin-top: 8px; }
+.swatches code { font: 400 .95rem/1 var(--body); color: var(--muted); letter-spacing: .06em; }
+.typeplate { margin-top: 18px; padding: 18px 20px; border: 1px solid var(--gold-lo); background: rgba(15,42,68,.6); }
+.typeplate .a { font: 400 2rem/1.1 var(--display); color: var(--cream); }
+.typeplate .b2 { font: 400 1.3rem/1.3 var(--deco); letter-spacing: .3em; color: var(--gold-hi); text-transform: uppercase; }
+
+/* gallery */
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.gallery img { display: block; width: 100%; height: auto; }
+.gallery figcaption b { display: block; font: 400 1.25rem/1.3 var(--display); color: var(--cream); }
+.gallery figcaption i { font-style: normal; font: 400 .85rem/1 var(--deco); letter-spacing: .2em; color: var(--gold); text-transform: uppercase; }
+.concept { text-align: center; color: var(--muted); max-width: 64ch; margin: -14px auto 30px; font-style: italic; }
+.legend { list-style: none; margin: 36px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; background: var(--gold-lo); border: 2px solid var(--gold-lo); }
+.legend li { background: var(--navy); padding: 16px 18px; }
+.legend b { display: block; font: 700 .85rem/1.3 var(--deco); letter-spacing: .2em; color: var(--gold-hi); text-transform: uppercase; margin-bottom: 4px; }
+.legend b::before { content: '◆ '; color: var(--gold); }
+
+/* residents' hall */
+.arch { padding: 12px; background: linear-gradient(180deg, #102b47, #0a1f35); border-radius: 50% 50% 0 0 / 30% 30% 0 0; box-shadow: inset 0 0 0 1px var(--gold), inset 0 0 0 6px #0b2036, inset 0 0 0 7px var(--gold-lo); }
+.arch .trim { border-radius: 50% 50% 0 0 / 30% 30% 0 0; }
+.directory { margin-top: 18px; padding: 22px 24px; background: #06121f; border: 2px solid var(--gold); box-shadow: inset 0 0 0 5px #06121f, inset 0 0 0 6px var(--gold-lo); }
+.directory h3 { text-align: center; }
+.directory ul { list-style: none; margin: 0; padding: 0; }
+.directory li { display: flex; gap: 10px; align-items: baseline; padding: 5px 0; font: 400 .98rem/1.35 var(--body); }
+.directory li b { font: 700 .88rem/1.3 var(--deco); letter-spacing: .16em; color: var(--glow); text-transform: uppercase; white-space: nowrap; }
+.directory li i { flex: 1; border-bottom: 1px dotted var(--gold-lo); transform: translateY(-4px); min-width: 16px; }
+.directory li span { text-align: right; color: var(--text); }
+.directory .note { text-align: center; color: var(--muted); font-size: .92rem; margin: 12px 0 0; }
+
+/* engineering office */
+.report { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 48px; margin-top: 34px; }
+.report > div { border-top: 2px solid var(--gold); padding-top: 14px; position: relative; }
+.report > div::before { content: attr(data-n); position: absolute; right: 0; top: -14px; background: var(--midnight); padding: 0 0 0 10px; font: 700 1.1rem/1 var(--num); color: var(--gold); }
+
+/* records office */
+.kit-status { max-width: 900px; margin: 0 auto; padding: 30px 34px; border: 2px solid var(--gold); background: rgba(15,42,68,.55); box-shadow: inset 0 0 0 6px var(--midnight), inset 0 0 0 7px var(--gold-lo); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 6px 40px; }
+.kit-status .kit-summary { grid-column: 1; grid-row: 1; font: 400 1.35rem/1.45 var(--deco); color: var(--cream); letter-spacing: .02em; }
+.kit-status .kit-concept { grid-column: 1; grid-row: 2 / span 2; color: var(--muted); font-size: .98rem; }
+.kit-status .kit-revisions { grid-column: 2; grid-row: 1; } .kit-status .kit-sources { grid-column: 2; grid-row: 2; } .kit-status .kit-links { grid-column: 2; grid-row: 3; font: 700 .9rem/1.6 var(--deco); letter-spacing: .14em; text-transform: uppercase; }
+.kit-status ul { list-style: none; padding: 0; margin: 0 0 14px; }
+.kit-status li { padding: 6px 0; border-bottom: 1px solid rgba(203,174,112,.3); font-size: 1rem; }
+
+/* roof terrace (nav) */
+.kit-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: stretch; max-width: 1000px; margin: 0 auto; }
+.kit-nav a { display: grid; place-items: center; text-align: center; padding: 22px 20px; text-decoration: none; color: var(--cream); font: 400 1.25rem/1.25 var(--display); letter-spacing: .03em;
+  background: linear-gradient(180deg, #143455, #0b2239); box-shadow: inset 0 0 0 1px var(--gold), inset 0 0 0 5px #0b2239, inset 0 0 0 6px var(--gold-lo);
+  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px); }
+.kit-nav a:hover { background: linear-gradient(180deg, #1c4570, #0f2c49); color: #fff3d6; }
+.kit-nav .kit-index { color: var(--midnight); background: linear-gradient(180deg, var(--gold-hi), var(--gold)); box-shadow: none; font-family: var(--deco); font-weight: 700; letter-spacing: .2em; text-transform: uppercase; font-size: 1rem; }
+.kit-nav .kit-index:hover { background: linear-gradient(180deg, #fff3d6, var(--gold-hi)); color: var(--midnight); }
+.colophon { text-align: center; color: var(--muted); font-size: .95rem; margin: 28px auto 0; max-width: 70ch; }
+
+/* notes dialog */
+.kit-dialog { max-width: min(880px, 94vw); max-height: 90vh; border: 0; padding: 0; background: #0c2238; color: var(--text); box-shadow: 0 0 0 2px var(--gold), 0 0 0 7px var(--midnight), 0 0 0 8px var(--gold-lo), 0 30px 80px rgba(0,0,0,.6); }
+.kit-dialog::backdrop { background: rgba(4,12,22,.8); }
+.kit-dialog .kit-close { position: sticky; top: 0; float: right; margin: 14px; font: 700 .85rem/1 var(--deco); letter-spacing: .18em; text-transform: uppercase; background: var(--gold); color: var(--midnight); border: 0; padding: 11px 16px; cursor: pointer; z-index: 2; }
+.kit-notes { padding: 24px 32px 34px; }
+.kit-notes h1 { font: 400 2.2rem/1.1 var(--display); color: var(--cream); }
+.kit-notes h2 { font: 700 1rem/1.3 var(--deco); letter-spacing: .24em; text-transform: uppercase; color: var(--gold-hi); margin-top: 2rem; }
+.kit-notes img { max-width: 100%; height: auto; }
+.kit-notes .kit-palette { list-style: none; padding: 0; }
+.kit-notes .kit-swatch { display: inline-block; width: 1.1em; height: 1.1em; vertical-align: -3px; box-shadow: 0 0 0 1px var(--gold); }
+.kit-notes dt { font-weight: 700; color: var(--gold-hi); } .kit-notes dd { margin: 0 0 .7rem; }
+.kit-notes .kit-nav { grid-template-columns: 1fr; }
+.kit-notes .kit-nav a { font-size: 1rem; padding: 14px; }
+
+@media (max-width: 1000px) {
+  :root { --panel-w: 0px; }
+  .car { position: sticky; top: 0; bottom: auto; width: auto; height: auto; flex-direction: row; align-items: center; gap: 10px; padding: 8px 10px; box-shadow: inset 0 -2px 0 var(--gold), 0 6px 20px rgba(0,0,0,.4); }
+  .car .brand, .car .hint { display: none; }
+  .dial { width: 86px; flex: 0 0 86px; }
+  .readout { display: none; }
+  .buttons { flex: 1; display: flex; gap: 8px; overflow-x: auto; padding: 8px 10px; scrollbar-width: thin; }
+  .fbtn { grid-template-columns: 40px; }
+  .fbtn .t { display: none; }
+  .fbtn .b { width: 40px; height: 40px; font-size: 1.1rem; }
+  .car .notes-btn { margin: 0; padding: 12px 12px; font-size: .72rem; letter-spacing: .1em; flex: 0 0 auto; }
+  .doors { left: 0; }
+  .floor { scroll-margin-top: 70px; }
+  .lobby, .cols, .gallery, .report, .kit-status { grid-template-columns: 1fr; }
+  .kit-project dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kit-project dl > div:last-child:nth-child(3n+1) { grid-column: auto; }
+  .kit-project dl > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .buttons { grid-template-columns: none; }
+  .kit-status > * { grid-column: 1 !important; grid-row: auto !important; }
+  .legend { grid-template-columns: 1fr 1fr; }
+  .lobby { min-height: 0; }
+  .kit-project .lead { columns: 1; }
+}
+@media (max-width: 560px) {
+  .dial { width: 64px; flex-basis: 64px; }
+  .fbtn .b { width: 34px; height: 34px; font-size: 1rem; }
+  .fbtn { grid-template-columns: 34px; }
+  .buttons { gap: 6px; padding: 6px 8px; }
+  .legend { grid-template-columns: 1fr; }
+  .kit-project dl { grid-template-columns: 1fr; }
+  .floor { padding: 50px 16px 60px; }
+  .kit-nav { grid-template-columns: 1fr; }
+  .kit-status { padding: 22px 18px; }
+  .directory { padding: 18px 14px; }
+  .directory li { flex-wrap: wrap; gap: 0 8px; }
+  .directory li i { display: none; }
+  .directory li span { text-align: left; width: 100%; }
+  body { font-size: 1.05rem; }
+}
+.kit-notes .kit-project dl { display: grid; grid-template-columns: minmax(8rem, max-content) 1fr; gap: 10px 20px; background: none; padding: 0; }
+.kit-notes .kit-project dt { margin: 0; }
+</style>
+</head>
+<body>
+<a class="skip" href="#floor-1">Skip to floor 1</a>
+
+<aside class="car" aria-label="Elevator">
+  <div class="brand">Agentnagar<br>Civic Elevator</div>
+  <div class="dial" aria-hidden="true">
+    <svg viewBox="0 0 240 132" id="dial-svg">
+      <defs>
+        <radialGradient id="face" cx="50%" cy="100%" r="100%"><stop offset="0" stop-color="#f6e2b0"/><stop offset=".7" stop-color="#cbae70"/><stop offset="1" stop-color="#8f7440"/></radialGradient>
+      </defs>
+      <path d="M8 124 A 112 112 0 0 1 232 124 Z" fill="#081b2e" stroke="#cbae70" stroke-width="2"/>
+      <path d="M20 124 A 100 100 0 0 1 220 124 Z" fill="url(#face)"/>
+      <g id="rays" stroke="#8f7440" stroke-width="1" opacity=".5"></g>
+      <g id="ticks" font-family="Big Shoulders Display, sans-serif" font-weight="700" font-size="15" fill="#081b2e" text-anchor="middle"></g>
+      <g id="needle"><path d="M120 118 L116 112 L120 34 L124 112 Z" fill="#081b2e"/><circle cx="120" cy="118" r="9" fill="#081b2e" stroke="#cbae70" stroke-width="2"/></g>
+      <rect x="8" y="124" width="224" height="8" fill="#cbae70"/>
+    </svg>
+  </div>
+  <div class="readout" aria-live="polite"><div class="fl" id="fl">L</div><div class="nm" id="nm">Lobby</div></div>
+  <div class="buttons" id="buttons" role="group" aria-label="Call a floor"></div>
+  <button class="notes-btn" id="notes" type="button">Directory</button>
+  <p class="hint">Press a floor, or simply scroll: the needle follows the car.</p>
+</aside>
+
+<div class="doors" id="doors" aria-hidden="true"><div class="leaf l"></div><div class="leaf r"></div></div>
+
+<main class="shaft" id="shaft">
+  <section class="floor" id="floor-0" data-floor="0" aria-labelledby="h0">
+    <div class="lobby wrap">
+      <div>
+        <p class="kicker">Style study 18 · A civic prospectus</p>
+        <h1 id="h0" tabindex="-1">Agentnagar<small>Art Deco civic futurism</small></h1>
+        <p class="intro">A formal, symmetrical public city of stepped towers, sunburst reliefs and fluted pilasters, in midnight blue, brass and cream stone. This prospectus is a building: take the elevator floor by floor, or read the whole directory at once.</p>
+        <p class="ride">Seven floors · one district · four views</p>
+      </div>
+      <figure class="tower">
+        <svg viewBox="0 0 420 520" role="img" aria-label="Illustrative drawing: a symmetrical stepped tower in gold line on midnight blue, a sunburst rising behind it, flanked by two lower wings with arched entrances, a tram line and a single tree in front.">
+          <defs>
+            <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1cf9c"/><stop offset="1" stop-color="#b8935c"/></linearGradient>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f2a44"/><stop offset="1" stop-color="#173656"/></linearGradient>
+          </defs>
+          <rect width="420" height="520" fill="url(#sky)"/>
+          <g id="sun" stroke="#cbae70" stroke-width="1.4" opacity=".75"></g>
+          <circle cx="210" cy="190" r="62" fill="#f0c883" opacity=".9"/>
+          <circle cx="210" cy="190" r="74" fill="none" stroke="#cbae70" stroke-width="2"/>
+          <g fill="url(#stone)" stroke="#8f7440" stroke-width="1">
+            <path d="M40 440 V330 H90 V310 H130 V440 Z"/>
+            <path d="M380 440 V330 H330 V310 H290 V440 Z"/>
+            <path d="M150 440 V230 H162 V170 H176 V120 H190 V80 H200 V40 H220 V80 H230 V120 H244 V170 H258 V230 H270 V440 Z"/>
+          </g>
+          <g stroke="#8f7440" stroke-width="1.2">
+            <path d="M176 440 V240 M190 440 V240 M204 440 V240 M216 440 V240 M230 440 V240 M244 440 V240"/>
+            <path d="M52 440 V345 M66 440 V345 M354 440 V345 M368 440 V345"/>
+          </g>
+          <g fill="#f0c883">
+            <rect x="178" y="130" width="8" height="30"/><rect x="206" y="90" width="8" height="30"/><rect x="234" y="130" width="8" height="30"/>
+            <rect x="96" y="340" width="10" height="16"/><rect x="112" y="340" width="10" height="16"/><rect x="298" y="340" width="10" height="16"/><rect x="314" y="340" width="10" height="16"/>
+          </g>
+          <path d="M186 440 V380 A 24 24 0 0 1 234 380 V440 Z" fill="#081b2e" stroke="#cbae70" stroke-width="2"/>
+          <g stroke="#cbae70" stroke-width="1.2"><path d="M210 440 V384 M210 404 L192 388 M210 404 L228 388 M210 404 L200 382 M210 404 L220 382"/></g>
+          <path d="M92 440 V400 A 14 14 0 0 1 120 400 V440 Z M300 440 V400 A 14 14 0 0 1 328 400 V440 Z" fill="#081b2e" stroke="#cbae70" stroke-width="1.5"/>
+          <path d="M200 40 L210 14 L220 40" fill="#cbae70"/>
+          <rect x="0" y="440" width="420" height="80" fill="#081b2e"/>
+          <path d="M0 462 H420 M0 470 H420" stroke="#cbae70" stroke-width="1.5"/>
+          <g stroke="#cbae70" stroke-width="1" opacity=".6"><path d="M10 458 v16 M40 458 v16 M70 458 v16 M100 458 v16 M130 458 v16 M160 458 v16 M190 458 v16 M220 458 v16 M250 458 v16 M280 458 v16 M310 458 v16 M340 458 v16 M370 458 v16 M400 458 v16"/></g>
+          <rect x="250" y="446" width="92" height="22" rx="6" fill="#f1cf9c" stroke="#8f7440"/><rect x="250" y="456" width="92" height="4" fill="#e07a5f"/>
+          <path d="M70 440 C 68 420, 72 410, 70 398" stroke="#3a5a3a" stroke-width="5" fill="none"/>
+          <circle cx="70" cy="388" r="20" fill="#3d6b4a"/><circle cx="58" cy="394" r="12" fill="#335c3f"/><circle cx="82" cy="394" r="12" fill="#335c3f"/>
+          <path d="M0 500 H420" stroke="#8f7440" stroke-width="1"/>
+        </svg>
+        <figcaption>Illustrative drawing made for this page, not a concept sheet.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="floor" id="floor-1" data-floor="1" aria-labelledby="h1f">
+    <div class="floor-head"><div class="medal"><span>1</span></div><div class="floor-no">Floor One</div><h2 id="h1f" tabindex="-1">Charter Hall</h2><div class="dept">The project: Agentnagar</div><span class="chev" aria-hidden="true"></span></div>
+    <div class="wrap" id="project-slot"></div>
+  </section>
+
+  <section class="floor" id="floor-2" data-floor="2" data-core="style" aria-labelledby="h2f">
+    <div class="floor-head"><div class="medal"><span>2</span></div><div class="floor-no">Floor Two</div><h2 id="h2f" tabindex="-1">Design Office</h2><div class="dept">The style: intent, principles, palette, materials, type</div><span class="chev" aria-hidden="true"></span></div>
+    <div class="wrap">
+      <p id="intent" style="font-size:1.24rem;text-align:center;max-width:64ch;margin:0 auto 36px"></p>
+      <div class="cols">
+        <div><h3>Principles</h3><ol class="principles" id="principles"></ol></div>
+        <div>
+          <h3>Materials &amp; texture</h3><p id="materials"></p>
+          <h3>Typography</h3><p id="type"></p>
+          <div class="typeplate" aria-hidden="true"><div class="a">Tree Square</div><div class="b2">Tram boulevard</div></div>
+        </div>
+      </div>
+      <h3 style="margin-top:36px;text-align:center">Palette</h3>
+      <p style="text-align:center;color:var(--muted);font-size:.98rem">Sampled from the selected sheets (averaged over matching pixels, rounded).</p>
+      <ul class="swatches" id="palette"></ul>
+    </div>
+  </section>
+
+  <section class="floor" id="floor-3" data-floor="3" data-core="views" aria-labelledby="h3f">
+    <div class="floor-head"><div class="medal"><span>3</span></div><div class="floor-no">Floor Three</div><h2 id="h3f" tabindex="-1">Observation Gallery</h2><div class="dept">One district, four views</div><span class="chev" aria-hidden="true"></span></div>
+    <div class="wrap">
+      <p class="concept" id="concept-note"></p>
+      <div class="gallery" id="gallery"></div>
+      <ul class="legend" id="legend" aria-label="Reference-district landmarks"></ul>
+    </div>
+  </section>
+
+  <section class="floor" id="floor-4" data-floor="4" data-core="agents" aria-labelledby="h4f">
+    <div class="floor-head"><div class="medal"><span>4</span></div><div class="floor-no">Floor Four</div><h2 id="h4f" tabindex="-1">Residents' Hall</h2><div class="dept">City Agent A1 and the Guild</div><span class="chev" aria-hidden="true"></span></div>
+    <div class="wrap cols">
+      <div id="agent-figs" style="display:grid;gap:26px;align-content:start"></div>
+      <div>
+        <p id="agents-text"></p>
+        <p id="a1-text" style="color:var(--muted)"></p>
+        <div class="directory">
+          <h3>Guild directory</h3>
+          <ul id="directory"></ul>
+          <p class="note" id="guild-note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="floor" id="floor-5" data-floor="5" data-core="tradeoffs" aria-labelledby="h5f">
+    <div class="floor-head"><div class="medal"><span>5</span></div><div class="floor-no">Floor Five</div><h2 id="h5f" tabindex="-1">Surveyor's Office</h2><div class="dept">Strengths and trade-offs</div><span class="chev" aria-hidden="true"></span></div>
+    <div class="wrap">
+      <div class="cols" id="scale-figs"></div>
+      <div class="report" id="report"></div>
+    </div>
+  </section>
+
+  <section class="floor" id="floor-6" data-floor="6" aria-labelledby="h6f">
+    <div class="floor-head"><div class="medal"><span>6</span></div><div class="floor-no">Floor Six</div><h2 id="h6f" tabindex="-1">Records Office</h2><div class="dept">Status, revisions and review sources</div><span class="chev" aria-hidden="true"></span></div>
+    <div class="wrap" id="status-slot"></div>
+  </section>
+
+  <section class="floor" id="floor-7" data-floor="7" aria-labelledby="h7f">
+    <div class="floor-head"><div class="medal"><span>7</span></div><div class="floor-no">Floor Seven</div><h2 id="h7f" tabindex="-1">Roof Terrace</h2><div class="dept">Connections to the other styles</div><span class="chev" aria-hidden="true"></span></div>
+    <div id="nav-slot"></div>
+    <p class="colophon">Tower, dial, doors and ornament are drawn for this page with SVG and CSS; only the four sheets are concept art.</p>
+  </section>
+</main>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  const S = Kit.style('18-art-deco-civic-futurism');
+  const A = window.AGENTNAGAR;
+  const el = Kit.el;
+  const NS = 'http://www.w3.org/2000/svg';
+  const reduce = Kit.reducedMotion();
+
+  const PALETTE = [
+    { name: 'Midnight', hex: '#081b2e' },
+    { name: 'Brass', hex: '#cbae70' },
+    { name: 'Cream stone', hex: '#f1cf9c' },
+    { name: 'River blue', hex: '#14495c' },
+    { name: 'Dome tile', hex: '#3b5160' },
+    { name: 'Window glow', hex: '#f0c883' },
+    { name: 'Upholstery rust', hex: '#723b20' }
+  ];
+  const CONTENT = {
+    intent: 'A formal, symmetrical public city of stepped towers, sunburst reliefs and fluted pilasters. Midnight blue, brass and cream stone set the palette, with blue and gold tiled domes and warm window light. The map includes a legend.',
+    principles: [
+      'Symmetry first: plazas, towers and panels balance on a central axis.',
+      'Step, do not slope: silhouettes rise in set-backs to a central tower.',
+      'The sunburst is the signature: it crowns doors, banners, badges and A1\'s emblem.',
+      'Midnight and brass at every scale: navy panels with thin gold rules and cream stone.',
+      'Warm light as welcome: window glow and lamp light carry the night and interiors.'
+    ],
+    palette: PALETTE,
+    materials: 'Monumental cream stone with tall arched entrances and fluted pilasters; blue and gold tiled domes. Interiors use brass fittings, navy upholstery and marble. Trams run on the boulevard; plazas have fountains and planted beds.',
+    type: 'Sheet labels are wide-spaced capitals in brass on navy plaques with thin rule ornaments; slogans sit on tall navy banners with a sunburst. This page uses Limelight for display, Poiret One for spaced capitals, Josefin Sans for text and Big Shoulders Display for floor numerals.',
+    agents: 'City Agent A1 appears in the Living community sheet (Conversation panel) as a cream and navy android with a gold ear disc, a cream sash over a navy body and a gold sunburst emblem on the chest. People in the transit and night panels wear hats and long coats, which reads as a 1930s period setting; the Living community sheet dresses them more contemporarily. The Interfaces sheet\'s mobile panel shows a human-looking "Your city agent" portrait, so A1\'s identity is not yet consistent. The sheets do not depict the Guild residents individually.',
+    tradeoffs: [
+      { label: 'Map vs street', text: 'Large views hold together through symmetry and the central tower, and the map has a legend naming each landmark. Street scenes are grand plazas with fountains; close-ups are warmly lit and detailed. The overview centres on a fountain ringed by trees rather than one large living tree, so the Tree Square test landmark is not held.' },
+      { label: 'Device and production cost', text: 'Proposed: keep the stepped silhouettes, the sunburst motif and the midnight and brass palette at every tier. Lower tiers remove relief detail and reflections; higher tiers add metallic highlights and window glow. These are the most photorealistic sheets of the set, which is costly to match in real time.' },
+      { label: 'UI legibility', text: 'Interfaces are dark navy panels with brass trim and large icons, which read clearly. The Interfaces sheet uses top labels rather than the lower caption bars of the other sheets, and the Living community footer misspells "concept".' },
+      { label: 'Review risks', text: 'The costume leans on 1930s period dress, strongest in the transit panel; decide the era and how stylised figures should be separately from the rendering style. The Interfaces sheet uses a larger river-crossing composition than the overview. A1 and the human mobile portrait are not reconciled.' }
+    ]
+  };
+
+  const FLOORS = [
+    ['L', 'Lobby'], ['1', 'Charter Hall'], ['2', 'Design Office'], ['3', 'Observation Gallery'],
+    ['4', "Residents' Hall"], ['5', "Surveyor's Office"], ['6', 'Records Office'], ['7', 'Roof Terrace']
+  ];
+  const ANG = (i) => -80 + i * (160 / 7);
+
+  // dial ticks and rays
+  const ticks = document.getElementById('ticks'), rays = document.getElementById('rays');
+  for (let i = 0; i < 36; i++) { const a = Math.PI + (i / 35) * Math.PI; const l = document.createElementNS(NS, 'line'); l.setAttribute('x1', 120 + Math.cos(a) * 40); l.setAttribute('y1', 118 + Math.sin(a) * 40); l.setAttribute('x2', 120 + Math.cos(a) * 96); l.setAttribute('y2', 118 + Math.sin(a) * 96); rays.append(l); }
+  FLOORS.forEach(([n], i) => {
+    const a = (ANG(i) - 90) * Math.PI / 180;
+    const t = document.createElementNS(NS, 'text');
+    t.setAttribute('x', (120 + Math.cos(a) * 84).toFixed(1)); t.setAttribute('y', (123 + Math.sin(a) * 84).toFixed(1)); t.textContent = n;
+    ticks.append(t);
+  });
+  // tower sunburst
+  const sun = document.getElementById('sun');
+  for (let i = 0; i < 40; i++) { const a = Math.PI + (i / 39) * Math.PI; const l = document.createElementNS(NS, 'line'); l.setAttribute('x1', 210 + Math.cos(a) * 80); l.setAttribute('y1', 190 + Math.sin(a) * 80); l.setAttribute('x2', 210 + Math.cos(a) * 200); l.setAttribute('y2', 190 + Math.sin(a) * 200); sun.append(l); }
+
+  function crop(i, panel, alt, caption, t, b, cls) {
+    const box = Kit.sheetImg(S, i, panel, { alt });
+    const PH = (panel[0] === 't' ? 450 : 438) / 740;
+    const wrap = el('div', { class: 'trim' });
+    wrap.style.aspectRatio = `${1 / (PH * (1 - t - b))}`;
+    box.style.marginTop = `${-t * PH * 100}%`;
+    wrap.append(box);
+    return el('figure', {}, [el('div', { class: cls || 'frame' }, [wrap]), el('figcaption', { text: caption })]);
+  }
+
+  // Floor 1
+  const project = Kit.projectBlock();
+  project.removeAttribute('data-core');
+  const dl = project.querySelector('dl'); const items = [...dl.children]; dl.textContent = '';
+  for (let i = 0; i < items.length; i += 2) dl.append(el('div', {}, [items[i], items[i + 1]]));
+  const lead = el('div', { class: 'lead' });
+  [...project.querySelectorAll(':scope > p:not(.kit-tagline):not(.kit-small)')].forEach((p) => lead.append(p));
+  project.querySelector('.kit-tagline').after(lead);
+  document.getElementById('project-slot').append(project);
+  document.getElementById('floor-1').setAttribute('data-core', 'project');
+
+  // Floor 2
+  document.getElementById('intent').textContent = CONTENT.intent;
+  document.getElementById('materials').textContent = CONTENT.materials;
+  document.getElementById('type').textContent = CONTENT.type;
+  CONTENT.principles.forEach((p) => document.getElementById('principles').append(el('li', { text: p })));
+  PALETTE.forEach((p) => document.getElementById('palette').append(el('li', {}, [el('div', { class: 'cw', 'aria-hidden': 'true' }, [el('div', { class: 'chip', style: `--c:${p.hex}` })]), el('b', { text: p.name }), el('code', { text: p.hex })])));
+
+  // Floor 3
+  document.getElementById('concept-note').textContent = A.conceptNote;
+  const NOTES = [
+    'Map with a legend, top-down, diagonal and street. The river runs down the west with docks and the North bridge; the Workshop is a dark iron hall with cranes on the dock; the square at the centre holds a fountain ringed by trees; the domed Library sits east; trams run along the southern boulevard.',
+    'Workshop, home, conversation and gathering. Navy banners with sunbursts hang in every scene; A1 appears in the conversation panel. The footer misspells "concept".',
+    'Build mode, transit, night and rain, waterfront park. A glass pavilion is placed on a tiled plaza; the tram interior has brass rails and navy seats; riders wear 1930s hats and coats.',
+    'Facility, mobile, rooftop and AR tabletop. Navy kiosks with Browse, Book, Ask; the phone shows the riverfront and a "Your city agent" card; the tabletop model centres on the tower.'
+  ];
+  S.sheets.forEach((sheet, i) => document.getElementById('gallery').append(el('figure', {}, [
+    el('a', { class: 'frame', href: Kit.href(sheet.image), style: 'display:block', 'aria-label': `Open the full ${sheet.title} sheet, ${sheet.revision}` }, [
+      Kit.sheetImg(S, i, null, { alt: `${S.name} concept study, ${sheet.title} (${sheet.revision}): ${Kit.PANEL_NAMES[i].join(', ')} panels. ${NOTES[i]}` })]),
+    el('figcaption', {}, [el('i', { text: `Exhibit ${i + 1} · ${sheet.revision} · concept study` }), el('b', { text: sheet.title }), NOTES[i]])
+  ])));
+  const WHERE = { R1: 'Deep blue water with docks and ships along the west.', B1: 'A towered crossing at the north edge of the map.', W1: 'Dark iron hall with sawtooth roofs and cranes on the dock.', T1: 'Drawn as a fountain ringed by tree clusters, not one great tree.', L1: 'Blue and gold tiled dome in a formal garden to the east.', S1: 'Tracks and trams along the southern avenue.' };
+  A.district.forEach((d) => document.getElementById('legend').append(el('li', {}, [el('b', { text: d.name }), el('span', { text: `${d.note} In this style: ${WHERE[d.id]}` })])));
+
+  // Floor 4
+  const af = document.getElementById('agent-figs');
+  af.append(crop(1, 'bl', `${S.name} concept study, Living community (${S.sheets[1].revision}), Conversation panel: a woman in a rust shirt talks with City Agent A1, a cream and navy android with a gold ear disc and a sunburst emblem.`, `Living community, Conversation panel (${S.sheets[1].revision}). A1 as drawn in the sheet.`, 0, 0.175, 'arch'));
+  af.append(crop(3, 'tr', `${S.name} concept study, Interfaces perspectives (${S.sheets[3].revision}), Mobile panel: a phone over the riverfront, with a "Your city agent" card showing a human portrait.`, `Interfaces, Mobile panel (${S.sheets[3].revision}). The agent card shows a human portrait, not A1.`, 0.05, 0));
+  document.getElementById('agents-text').textContent = CONTENT.agents;
+  document.getElementById('a1-text').textContent = A.agentA1;
+  document.getElementById('guild-note').textContent = A.guildNote;
+  A.guild.forEach((g) => document.getElementById('directory').append(el('li', {}, [el('b', { text: g.name }), el('i', { 'aria-hidden': 'true' }), el('span', { text: g.role })])));
+
+  // Floor 5
+  const sf = document.getElementById('scale-figs');
+  sf.append(crop(0, 'tl', `${S.name} concept study, City perspectives (${S.sheets[0].revision}), Map panel: a symmetrical plan with a compass, a legend listing the landmarks, and a fountain at the centre of the square.`, 'Map: symmetry and a legend hold the plan together; the square centres on a fountain.', 0, 0.09));
+  sf.append(crop(0, 'br', `${S.name} concept study, City perspectives (${S.sheets[0].revision}), Street panel: a grand plaza before a stepped central tower with sunburst banners, a fountain, and people in 1930s dress.`, 'Street: a grand plaza, warm light and period dress.', 0, 0.12));
+  CONTENT.tradeoffs.forEach((t, i) => document.getElementById('report').append(el('div', { 'data-n': `§ ${i + 1}` }, [el('h3', { text: t.label }), el('p', { text: t.text })])));
+
+  // Floors 6 and 7
+  document.getElementById('status-slot').append(Kit.statusBlock(S));
+  Kit.mountNav(document.getElementById('nav-slot'), S);
+  Kit.notesDialog(S, CONTENT, document.getElementById('notes'));
+
+  // ---------- the elevator ----------
+  const floors = [...document.querySelectorAll('.floor')];
+  const btnWrap = document.getElementById('buttons');
+  const btns = FLOORS.map(([n, name], i) => {
+    const b = el('button', { class: 'fbtn', type: 'button', 'aria-label': `${i ? 'Floor ' + n : 'Lobby'}: ${name}` }, [el('span', { class: 'b', text: n }), el('span', { class: 't', text: name })]);
+    b.addEventListener('click', () => ride(i));
+    btnWrap.append(b);
+    return b;
+  });
+  const needle = document.getElementById('needle'), fl = document.getElementById('fl'), nm = document.getElementById('nm');
+  const doors = document.getElementById('doors');
+  let current = -1, riding = false;
+
+  function position() {
+    const mid = window.innerHeight * 0.35;
+    let idx = 0, frac = 0;
+    for (let i = 0; i < floors.length; i++) {
+      const r = floors[i].getBoundingClientRect();
+      if (r.top <= mid) { idx = i; frac = Math.min(1, Math.max(0, (mid - r.top) / Math.max(1, r.height))); }
+    }
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) { idx = floors.length - 1; frac = 0; }
+    const pos = Math.min(floors.length - 1, idx + (idx < floors.length - 1 ? frac * 0.999 : 0));
+    needle.style.transform = `rotate(${ANG(pos)}deg)`;
+    if (idx !== current) {
+      current = idx;
+      fl.textContent = FLOORS[idx][0]; nm.textContent = FLOORS[idx][1];
+      btns.forEach((b, i) => b.setAttribute('aria-current', i === idx ? 'true' : 'false'));
+      const cb = btns[idx]; if (btnWrap.scrollWidth > btnWrap.clientWidth) btnWrap.scrollTo({ left: cb.offsetLeft - btnWrap.offsetLeft - 40, behavior: reduce ? 'auto' : 'smooth' });
+    }
+  }
+  function arrive(i) {
+    floors[i].scrollIntoView({ block: 'start', behavior: 'auto' });
+    position();
+    const h = floors[i].querySelector('h1, h2'); if (h) h.focus({ preventScroll: true });
+  }
+  function ride(i) {
+    if (riding) return;
+    btns[i].classList.add('called');
+    if (reduce) { arrive(i); btns[i].classList.remove('called'); return; }
+    riding = true;
+    doors.classList.add('shut');
+    setTimeout(() => {
+      arrive(i);
+      setTimeout(() => { doors.classList.remove('shut'); btns[i].classList.remove('called'); riding = false; }, 260);
+    }, 480);
+  }
+  window.addEventListener('scroll', () => requestAnimationFrame(position), { passive: true });
+  window.addEventListener('resize', position);
+  position();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.6
+reloadable = false
+
+; One library per platform and architecture, all built in release (the
+; client never loads a debug build of the core). scripts/build-godot.sh
+; builds the Linux x86_64 one; scripts/package.sh builds the rest. The iOS
+; entry is added by package.sh only while it exports that target, which
+; happens on a Mac.
+[libraries]
+linux.debug.x86_64 = "res://bin/libcity_godot.linux.x86_64.so"
+linux.release.x86_64 = "res://bin/libcity_godot.linux.x86_64.so"
+linux.debug.arm64 = "res://bin/libcity_godot.linux.arm64.so"
+linux.release.arm64 = "res://bin/libcity_godot.linux.arm64.so"
+windows.debug.x86_64 = "res://bin/city_godot.windows.x86_64.dll"
+windows.release.x86_64 = "res://bin/city_godot.windows.x86_64.dll"
+macos.debug = "res://bin/libcity_godot.macos.universal.dylib"
+macos.release = "res://bin/libcity_godot.macos.universal.dylib"
+android.debug.arm64 = "res://bin/libcity_godot.android.arm64.so"
+android.release.arm64 = "res://bin/libcity_godot.android.arm64.so"
+web.debug.wasm32 = "res://bin/city_godot.web.wasm32.wasm"
+web.release.wasm32 = "res://bin/city_godot.web.wasm32.wasm"

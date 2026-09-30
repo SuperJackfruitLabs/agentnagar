@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sha256": "fcf00db6ba0d6f7e96702f71948616c1962c4c3f9a2a817f8e6bb41d4642406d",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "6afd0cfa7d9db4290f251554d22d5329c4b53bd79e3e8a1c0f881098cf216141"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/02-creating-exploring-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png",
+    "../../00-city-perspectives/r003/image.png",
+    "../../01-living-community/r001/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "794bcb1ee5f4d1c38269b45bb84ae0bf76cb1cd566b1ae2b042a1ca4c299a275",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/29-madhubani-contemporary-city/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,11 @@
+bin/
+.godot/
+evidence/*.json
+# The collision audit's budget and measured kind sizes are evidence kept
+# with the code.
+!evidence/placement-*.json
+# The district fixture, staged here by scripts/package.sh while it exports.
+/fixtures/
+# The licence and third-party notices, staged here by scripts/package.sh
+# while it exports.
+/licenses/

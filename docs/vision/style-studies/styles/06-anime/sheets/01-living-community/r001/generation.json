@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "c54c56cbf90f4626421b646f16770752a70073eaf8793e9a23ef9a4f3673e706",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "a9c72941245f9ca4cf7787dc861e5373e3704bbbc4d6d2b6f60078f2e525cbae"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/originals/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

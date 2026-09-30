@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "sha256": "f1096380a3b2bedc75ffd17ed2dd6154174f033d6ca06364d61ffbcc0c9d2f61",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "7327bb9a92a18cbb6fa99ef3fde610665bfbf57a388ff453e8a0528be9e5e891"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/originals/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6",
+  "prompt_source": {
+    "path": "../../../history/initial-prompt-sources/00-city-perspectives.prompt.md.source.txt",
+    "format": "markdown-fenced-text",
+    "sha256": "f469b51d3ee7c0e7ea42a19d2db5c8a77907b597962b6525838c0dcec4825b4e"
+  }
+}

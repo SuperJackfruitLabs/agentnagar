@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "0ca99b3b155105d8cd407f06a65cf3cb88a3ba18f5a0da77d861b991b6e3c1c9",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "b383379c621fcdf9521b3e6ba2e852ed36c4df26e62e78dbd7e308b9bfc2299c"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/07-paper-craft/00-city-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/candidates/00-pass3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

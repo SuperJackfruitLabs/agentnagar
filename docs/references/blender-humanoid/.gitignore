@@ -1,0 +1,6 @@
+output/
+.venv/
+__pycache__/
+*.blend1
+godot-check/humanoid-wave.glb
+godot-check/humanoid-wave.glb.import

@@ -1,0 +1,2 @@
+# Python client only; Blender and the community MCP server are separate.
+mcp==1.29.0

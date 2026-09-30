@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "catalogue": 1,
+  "city": {
+    "id": "city:agentnagar",
+    "name": "Agentnagar",
+    "districts": [
+      {
+        "id": "district:guild-quarter",
+        "name": "Guild quarter",
+        "facilities": [
+          {
+            "id": "facility:guild-hall",
+            "name": "Guild hall",
+            "rooms": [
+              {
+                "id": "room:workshop",
+                "name": "Workshop",
+                "capacity": 4,
+                "pods": [{ "id": "pod:making", "department": "making" }],
+                "seats": [
+                  { "id": "seat:w1", "pod": "pod:making" },
+                  { "id": "seat:w2", "pod": "pod:making" },
+                  { "id": "seat:w3", "reserved_for": "agent:kai" },
+                  { "id": "seat:w4" }
+                ],
+                "overflow": "room:commons",
+                "doors": [
+                  { "id": "door:workshop-commons", "to": "room:commons", "transit": { "min": 2, "max": 4 } }
+                ]
+              },
+              {
+                "id": "room:commons",
+                "name": "Commons",
+                "capacity": 2,
+                "seats": [{ "id": "seat:c1" }, { "id": "seat:c2" }],
+                "doors": [
+                  { "id": "door:commons-workshop", "to": "room:workshop", "transit": { "min": 2, "max": 4 } }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "seat_policy": "department-first",
+  "occupants": [
+    { "id": "agent:kai", "kind": { "type": "GuildAgent" }, "display_name": "Kai", "role": "maker", "department": "making", "work": "room:workshop" },
+    { "id": "agent:lyra", "kind": { "type": "GuildAgent" }, "display_name": "Lyra", "role": "maker", "department": "making", "work": "room:workshop" },
+    { "id": "agent:echo", "kind": { "type": "GuildAgent" }, "display_name": "Echo", "role": "researcher", "department": "knowledge", "work": "room:workshop" },
+    { "id": "agent:theo", "kind": { "type": "GuildAgent" }, "display_name": "Theo", "role": "builder", "work": "room:workshop" },
+    { "id": "city:librarian", "kind": { "type": "CityRoleAgent" }, "display_name": "Librarian", "role": "librarian", "work": "room:commons" }
+  ]
+}

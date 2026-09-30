@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "2ddd4382a3d215cda1416bbed600c22f5a3d3baf536ca3edfd0d8de1c6e5eed7",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/17-art-nouveau-botanical/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

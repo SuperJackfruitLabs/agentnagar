@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "b4c9084d136b38e324b467f64eb02a8f11483a0c34673d635c259ed9bc7f2171",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/23-cassette-futurism/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

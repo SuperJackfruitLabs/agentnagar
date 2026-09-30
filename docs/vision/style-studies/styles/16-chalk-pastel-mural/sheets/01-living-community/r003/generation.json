@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "16278aee33c086b932c866090d5cbac53b5629fd28548742ff10dfa052a06ec5",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ca044c0d220f27094c2fc8eca6911077afccb4f1ec54a7dba8c337ba9ee0f6ad"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/16-chalk-pastel-mural/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-19/16-chalk-pastel-mural/01-living-community.pass-2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

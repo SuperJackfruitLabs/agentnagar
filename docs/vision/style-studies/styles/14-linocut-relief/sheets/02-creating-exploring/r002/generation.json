@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "436c0950c46b2b6662d84c4b05b8ec148e484a52b8cdac528a7a9f1042b008d9",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "87e68725b766b289fa12eeadc552c5c09971bfc8583856ba1fe70c3c026fe0d7"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/14-linocut-relief/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

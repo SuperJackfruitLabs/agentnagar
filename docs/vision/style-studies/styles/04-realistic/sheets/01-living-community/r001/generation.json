@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "1028a7ed97eedaaaeb29729de249a2c4b2279e6d8245a2acaae4fa5ad7d139f0",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "e59e5fbcb800edbe6062f9f82169995e2959354781f9ed5810357a6458cdf584"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/originals/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

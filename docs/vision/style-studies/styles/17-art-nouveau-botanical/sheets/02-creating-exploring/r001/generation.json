@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "831aaa85022f0f28e5a5edd19492e9cd6fdc1ff206375d7a73315b4cfc0c1c6e",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/17-art-nouveau-botanical/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

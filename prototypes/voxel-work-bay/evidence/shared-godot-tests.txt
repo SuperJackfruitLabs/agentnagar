@@ -1,0 +1,29 @@
+fixture: exit 0
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"test":"fixture"}
+
+import: exit 0
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"assets":{"chair":{"meshes":1},"desk":{"meshes":1},"environment":{"meshes":2},"kai":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"lyra":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"terminal":{"meshes":1}},"failures":0,"test":"import"}
+
+scene: exit 0
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"missing_assets":[],"test":"scene"}
+
+movement: exit 0
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"test":"movement"}
+
+journey: exit 0
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"test":"journey"}
+
+shared_workshop: exit 0
+Godot Engine v4.6.3.stable.flathub.7d41c59c4 - https://godotengine.org
+
+{"failures":0,"test":"shared_workshop"}

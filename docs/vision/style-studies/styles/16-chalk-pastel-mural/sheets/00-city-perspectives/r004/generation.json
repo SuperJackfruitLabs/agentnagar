@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "7049703cbf8cc96d3123f36b281ae5aecccc566a3167184f94198452712f3a8e",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "aca8825e17f39492de36f74942c20eb377b6096ac28dea1eb9c1fdeaf151e9e5"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/16-chalk-pastel-mural/00-city-perspectives.pass-4.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

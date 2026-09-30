@@ -1,0 +1,34 @@
+{"record": "header", "schema_version": 1, "source": "fixture:two-room", "fixture": true, "description": "Scripted gate scene for the city world core. A fixture, not real agent state."}
+{"record": "entry", "at": 1, "fixture": true, "command": {"type": "Arrive", "occupant": "agent:lyra"}}
+{"record": "entry", "at": 1, "fixture": true, "command": {"type": "Arrive", "occupant": "agent:echo"}}
+{"record": "entry", "at": 1, "fixture": true, "command": {"type": "Arrive", "occupant": "agent:theo"}}
+{"record": "entry", "at": 1, "fixture": true, "command": {"type": "Observe", "occupant": "agent:lyra", "observation": {"dimension": "Process", "value": "Running", "stamp": {"observed_at": 1, "fetched_at": 1, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 1, "fixture": true, "command": {"type": "Observe", "occupant": "agent:lyra", "observation": {"dimension": "Task", "value": {"state": "Working", "summary": "Glazing test tiles"}, "stamp": {"observed_at": 1, "fetched_at": 1, "expires_at": 12, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 1, "fixture": true, "command": {"type": "Observe", "occupant": "agent:echo", "observation": {"dimension": "Process", "value": "Running", "stamp": {"observed_at": 1, "fetched_at": 1, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 1, "fixture": true, "command": {"type": "Observe", "occupant": "agent:echo", "observation": {"dimension": "Task", "value": {"state": "Idle"}, "stamp": {"observed_at": 1, "fetched_at": 1, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 1, "fixture": true, "command": {"type": "Observe", "occupant": "agent:theo", "observation": {"dimension": "Process", "value": "Running", "stamp": {"observed_at": 1, "fetched_at": 1, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 2, "fixture": true, "command": {"type": "Arrive", "occupant": "person:asha", "room": "room:workshop", "profile": {"id": "person:asha", "kind": {"type": "Human", "tier": "Registered"}, "display_name": "Asha"}}}
+{"record": "entry", "at": 2, "fixture": true, "command": {"type": "Observe", "occupant": "person:asha", "observation": {"dimension": "Connection", "value": "Connected", "stamp": {"observed_at": 2, "fetched_at": 2, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 3, "fixture": true, "command": {"type": "Arrive", "occupant": "agent:kai"}}
+{"record": "entry", "at": 3, "fixture": true, "command": {"type": "Observe", "occupant": "agent:kai", "observation": {"dimension": "Process", "value": "Running", "stamp": {"observed_at": 3, "fetched_at": 3, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 3, "fixture": true, "command": {"type": "Observe", "occupant": "agent:kai", "observation": {"dimension": "Task", "value": {"state": "Working", "summary": "Sketching the kiln door", "summary_public": true}, "stamp": {"observed_at": 3, "fetched_at": 3, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 4, "fixture": true, "command": {"type": "Arrive", "occupant": "city:librarian"}}
+{"record": "entry", "at": 4, "fixture": true, "command": {"type": "Observe", "occupant": "city:librarian", "observation": {"dimension": "Process", "value": "Running", "stamp": {"observed_at": 4, "fetched_at": 4, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 4, "fixture": true, "command": {"type": "Observe", "occupant": "city:librarian", "observation": {"dimension": "Task", "value": {"state": "Waiting"}, "stamp": {"observed_at": 4, "fetched_at": 4, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 5, "fixture": true, "command": {"type": "Arrive", "occupant": "person:guest", "room": "room:commons", "profile": {"id": "person:guest", "kind": {"type": "Human", "tier": "Observer"}, "display_name": "Guest"}}}
+{"record": "entry", "at": 5, "fixture": true, "command": {"type": "Observe", "occupant": "person:guest", "observation": {"dimension": "Connection", "value": "Connected", "stamp": {"observed_at": 5, "fetched_at": 5, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 5, "fixture": true, "command": {"type": "Arrive", "occupant": "pa:asha-notes", "room": "room:workshop", "profile": {"id": "pa:asha-notes", "kind": {"type": "PersonalAgent", "owner": "person:asha"}, "display_name": "Asha's notes"}}}
+{"record": "entry", "at": 6, "fixture": true, "command": {"type": "Observe", "occupant": "pa:asha-notes", "observation": {"dimension": "Process", "value": "Running", "stamp": {"observed_at": 6, "fetched_at": 6, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 6, "fixture": true, "command": {"type": "Observe", "occupant": "pa:asha-notes", "observation": {"dimension": "Task", "value": {"state": "Working", "summary": "Collecting kiln readings for Asha"}, "stamp": {"observed_at": 6, "fetched_at": 6, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 10, "fixture": true, "command": {"type": "Move", "occupant": "person:asha", "to": "room:workshop"}}
+{"record": "entry", "at": 11, "fixture": true, "command": {"type": "Arrive", "occupant": "person:ravi", "room": "room:commons", "profile": {"id": "person:ravi", "kind": {"type": "Human", "tier": "Resident"}, "display_name": "Ravi"}}}
+{"record": "entry", "at": 11, "fixture": true, "command": {"type": "Observe", "occupant": "person:ravi", "observation": {"dimension": "Connection", "value": "Connected", "stamp": {"observed_at": 11, "fetched_at": 11, "expires_at": 40, "source": "fixture:two-room", "source_version": "1"}}}}
+{"record": "entry", "at": 16, "fixture": true, "command": {"type": "Depart", "occupant": "agent:theo"}}
+{"record": "entry", "at": 18, "fixture": true, "command": {"type": "Depart", "occupant": "agent:echo"}}
+{"record": "entry", "at": 20, "fixture": true, "command": {"type": "Depart", "occupant": "agent:lyra"}}
+{"record": "entry", "at": 22, "fixture": true, "command": {"type": "Depart", "occupant": "agent:kai"}}
+{"record": "entry", "at": 24, "fixture": true, "command": {"type": "Depart", "occupant": "pa:asha-notes"}}
+{"record": "entry", "at": 26, "fixture": true, "command": {"type": "Depart", "occupant": "city:librarian"}}
+{"record": "entry", "at": 28, "fixture": true, "command": {"type": "Depart", "occupant": "person:guest"}}
+{"record": "entry", "at": 29, "fixture": true, "command": {"type": "Depart", "occupant": "person:ravi"}}
+{"record": "entry", "at": 30, "fixture": true, "command": {"type": "Depart", "occupant": "person:asha"}}

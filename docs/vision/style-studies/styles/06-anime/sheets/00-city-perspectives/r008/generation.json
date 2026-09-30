@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "c91bb1de0cdfc87eeecb58e72166c8030c998b2d0088b578f7e08a59bd9b2328",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ed8de5e09355df161749ca6175d6d2fbb8d1dcf08db677df3a6a0dae0fffbaff"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/06-anime/00-city-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/candidates/00-pass7.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

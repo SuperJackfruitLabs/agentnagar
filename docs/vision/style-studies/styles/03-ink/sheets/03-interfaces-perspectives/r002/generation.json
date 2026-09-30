@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "9bd69d4048e1ee75eb92157ae51f4efbde9f95536eb1da10d429d7687b7d2d9b",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "400ac0c5c90c7571bed3dfe37e8b6f5ff80cee9f235e395067dee50c51058f0d"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/03-ink/03-interfaces-perspectives.pass-1.png"
+  ],
+  "reference_images": [
+    "../../00-city-perspectives/r004/image.png",
+    "../../01-living-community/r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

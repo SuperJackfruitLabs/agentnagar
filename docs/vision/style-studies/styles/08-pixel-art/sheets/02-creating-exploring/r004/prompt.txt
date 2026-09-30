@@ -1,0 +1,1 @@
+Use case: precise-object-edit. Change ONLY the four caption words from center-aligned to LEFT ALIGNED in existing fullwidth navy strips,using same small pixel typography as reference overview: BUILD MODE, TRANSIT, NIGHT AND RAIN, WATERFRONT PARK. Preserve all four scenes,axes,people,palette,footer exactly.

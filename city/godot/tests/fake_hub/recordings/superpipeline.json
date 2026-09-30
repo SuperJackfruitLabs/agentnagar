@@ -1,0 +1,303 @@
+{
+ "boards": {
+  "boards": [
+   {
+    "id": "brd_build",
+    "name": "Build board"
+   }
+  ]
+ },
+ "agents": {
+  "agents": [
+   {
+    "id": "agt_sample",
+    "tenantId": "tnt_sample",
+    "name": "Sample agent",
+    "capabilities": [
+     "code"
+    ],
+    "iconUrl": null,
+    "concurrency": 1,
+    "externalId": null,
+    "externalSource": null,
+    "tokenIds": []
+   }
+  ]
+ },
+ "snapshot": {
+  "boardId": "brd_build",
+  "tenantId": "tnt_sample",
+  "name": "Build board",
+  "stages": [
+   {
+    "key": "backlog",
+    "name": "Backlog",
+    "order": 0,
+    "ownerKind": "human"
+   },
+   {
+    "key": "build",
+    "name": "Build",
+    "order": 1,
+    "ownerKind": "capability",
+    "owner": "code",
+    "wipLimit": 1
+   },
+   {
+    "key": "review",
+    "name": "Review",
+    "order": 2,
+    "ownerKind": "human",
+    "gate": "approval"
+   },
+   {
+    "key": "done",
+    "name": "Done",
+    "order": 3,
+    "ownerKind": "human"
+   }
+  ],
+  "cards": [
+   {
+    "id": "crd_sample_tabs",
+    "title": "Count words split by tabs",
+    "spec": "A line joined by tabs counts as one word. It should count each word, as wc does.",
+    "ownerUserId": "usr_sample",
+    "queuedBy": "usr_sample",
+    "queuedGrant": null,
+    "currentStageKey": "review",
+    "state": "input-required",
+    "delegateAgentId": null,
+    "priority": 1,
+    "contextId": "ctx_sample_tabs",
+    "createdAt": "2026-09-28T08:45:00.000Z",
+    "updatedAt": "2026-09-28T09:04:40.000Z",
+    "costUsd": 0.18,
+    "overBudget": false,
+    "attemptCount": 1
+   },
+   {
+    "id": "crd_sample_json",
+    "title": "Add a --json output flag",
+    "spec": "Print the counts as JSON when --json is given, for scripts.",
+    "ownerUserId": "usr_sample",
+    "queuedBy": "usr_sample",
+    "queuedGrant": null,
+    "currentStageKey": "build",
+    "state": "input-required",
+    "delegateAgentId": "agt_sample",
+    "priority": 0,
+    "contextId": "ctx_sample_json",
+    "createdAt": "2026-09-28T09:06:00.000Z",
+    "updatedAt": "2026-09-28T09:12:30.000Z",
+    "costUsd": 0.07,
+    "overBudget": false,
+    "attemptCount": 1
+   },
+   {
+    "id": "crd_sample_files",
+    "title": "Read files named on the command line",
+    "spec": "tally reads stdin only. Count each named file, then a total, as wc does.",
+    "ownerUserId": "usr_sample",
+    "queuedBy": "usr_sample",
+    "queuedGrant": null,
+    "currentStageKey": "backlog",
+    "state": "submitted",
+    "delegateAgentId": null,
+    "priority": 0,
+    "contextId": "ctx_sample_files",
+    "createdAt": "2026-09-28T09:10:00.000Z",
+    "updatedAt": null,
+    "costUsd": 0,
+    "overBudget": false,
+    "attemptCount": 0
+   }
+  ],
+  "gates": [
+   {
+    "id": "gate_sample",
+    "cardId": "crd_sample_tabs",
+    "stageKey": "review",
+    "status": "pending",
+    "decision": null,
+    "options": [
+     {
+      "name": "approve",
+      "title": "Approve"
+     },
+     {
+      "name": "request_changes",
+      "title": "Request changes",
+      "interactive": true
+     },
+     {
+      "name": "reject",
+      "title": "Reject"
+     }
+    ],
+    "producedBy": "agt_sample",
+    "createdAt": "2026-09-28T09:04:40.000Z",
+    "decidedBy": null,
+    "comment": null,
+    "resolvedAt": null
+   }
+  ],
+  "elicitations": [
+   {
+    "id": "elc_sample",
+    "cardId": "crd_sample_json",
+    "runId": "run_sample_2",
+    "stageKey": "build",
+    "agentId": "agt_sample",
+    "question": "Should --json print one object per input, or one array holding them all?",
+    "signal": null,
+    "options": [
+     {
+      "name": "object",
+      "title": "One object per input",
+      "promptFill": null,
+      "interactive": false
+     },
+     {
+      "name": "array",
+      "title": "One array for all inputs",
+      "promptFill": null,
+      "interactive": false
+     },
+     {
+      "name": "other",
+      "title": "Something else",
+      "promptFill": null,
+      "interactive": true
+     }
+    ],
+    "status": "pending",
+    "answer": null,
+    "createdAt": "2026-09-28T09:12:30.000Z"
+   }
+  ],
+  "references": [],
+  "usage": {
+   "totalCostUsd": 0.25,
+   "estimatedCostUsd": 0.25,
+   "budgetUsd": null,
+   "cardUsdCap": null,
+   "overBudget": false
+  },
+  "github": {
+   "issueTrigger": false,
+   "webhookConfigured": false,
+   "triggerGrantCount": null
+  }
+ },
+ "activities": {
+  "crd_sample_tabs": {
+   "activities": [
+    {
+     "seq": 1,
+     "runId": "run_sample_1",
+     "type": "thought",
+     "ts": "2026-09-28T08:58:02.000Z",
+     "body": "The new tab test fails; reading count() in src/lib.rs.",
+     "action": null,
+     "parameter": null,
+     "result": null,
+     "signal": null
+    },
+    {
+     "seq": 2,
+     "runId": "run_sample_1",
+     "type": "action",
+     "ts": "2026-09-28T08:58:10.000Z",
+     "body": "cargo test",
+     "action": "run",
+     "parameter": {
+      "command": "cargo test"
+     },
+     "result": {
+      "exitCode": 101
+     },
+     "signal": null
+    },
+    {
+     "seq": 3,
+     "runId": "run_sample_1",
+     "type": "action",
+     "ts": "2026-09-28T09:03:12.000Z",
+     "body": "Edit src/lib.rs",
+     "action": "edit",
+     "parameter": {
+      "path": "src/lib.rs"
+     },
+     "result": {
+      "insertions": 1,
+      "deletions": 1
+     },
+     "signal": null
+    },
+    {
+     "seq": 4,
+     "runId": "run_sample_1",
+     "type": "action",
+     "ts": "2026-09-28T09:04:20.000Z",
+     "body": "cargo test",
+     "action": "run",
+     "parameter": {
+      "command": "cargo test"
+     },
+     "result": {
+      "exitCode": 0
+     },
+     "signal": null
+    },
+    {
+     "seq": 5,
+     "runId": "run_sample_1",
+     "type": "response",
+     "ts": "2026-09-28T09:04:40.000Z",
+     "body": "Words now split on any whitespace. All 7 tests pass.",
+     "action": null,
+     "parameter": null,
+     "result": null,
+     "signal": null
+    }
+   ],
+   "handoff": {
+    "summary": "Words now split on any whitespace: one line in src/lib.rs. All 7 tests pass.",
+    "files": [
+     "src/lib.rs"
+    ]
+   }
+  }
+ },
+ "frames": {
+  "source": "superpipeline@d53992ff: apps/api/src/board/board-do.ts:2530-2541 (snapshot on connect; webSocketMessage is a no-op) and 2994-3003 (emit)",
+  "board": {
+   "client": {},
+   "server": {
+    "snapshot": {"kind": "snapshot", "state": "<BoardSnapshot>"},
+    "event": {"kind": "event", "event": {"seq": 42, "type": "card.moved", "payload": {}, "ts": "2026-09-29T09:30:00.000Z"}}
+   }
+  }
+ },
+ "board_events": {
+  "source": "superpipeline@d53992ff: apps/api/src/board/board-do.ts, the this.emit(type, payload) call sites (line of each)",
+  "card.created": {"line": 1029, "payload": {"card": "<CardView>"}},
+  "card.moved": {"line": 1127, "payload": {"cardId": "crd_sample_json", "from": "build", "to": "review", "by": "usr_player"}},
+  "card.updated": {"line": 1172, "payload": {"card": "<CardView>"}},
+  "card.deleted": {"line": 1184, "payload": {"cardId": "crd_sample_files"}},
+  "board.stages_changed": {"line": 1253, "payload": {"stages": "<StageDef[]>"}},
+  "board.renamed": {"line": 1315, "payload": {"name": "Build board"}},
+  "card.claimed": {"line": 2172, "payload": {"cardId": "crd_sample_files", "agentId": "agt_sample", "runId": "run_sample_3"}},
+  "activity": {"line": 2253, "payload": {"runId": "run_sample_2", "cardId": "crd_sample_json", "activityType": "thought"}},
+  "card.changes_requested": {"line": 2339, "payload": {"cardId": "crd_sample_tabs", "gateId": "gate_sample", "to": "build"}},
+  "card.rejected": {"line": 2347, "payload": {"cardId": "crd_sample_tabs", "gateId": "gate_sample"}},
+  "gate.resolved": {"line": 2349, "payload": {"gateId": "gate_sample", "cardId": "crd_sample_tabs", "decision": "approve", "decidedBy": "usr_player"}},
+  "elicitation.answered": {"line": 2441, "payload": {"elicitationId": "elc_sample", "cardId": "crd_sample_json", "runId": "run_sample_2", "option": "array", "answeredBy": "usr_player"}},
+  "run.released": {"line": 2500, "payload": {"cardId": "crd_sample_json", "runId": "run_sample_2"}},
+  "card.completed": {"line": 2599, "payload": {"cardId": "crd_sample_tabs"}},
+  "card.advanced": {"line": 2611, "payload": {"cardId": "crd_sample_tabs", "from": "review", "to": "done"}},
+  "gate.opened": {"line": 2630, "payload": {"gateId": "gate_new", "cardId": "crd_sample_json", "stageKey": "review"}},
+  "elicitation.opened": {"line": 2660, "payload": {"elicitationId": "elc_new", "cardId": "crd_sample_files", "runId": "run_sample_3", "signal": null}}
+ }
+}

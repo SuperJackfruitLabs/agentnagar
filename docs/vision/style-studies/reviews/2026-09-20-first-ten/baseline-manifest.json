@@ -1,0 +1,165 @@
+{
+  "baseline": "ba5f4242d02aa37686b2a18b9add8813c5490130",
+  "images": [
+    {
+      "path": "docs/vision/style-studies/01-graphic/00-city-perspectives.png",
+      "sha256": "0240573ea32e580868967d4d6eaf7356a054fc1711771ff4705a9c40e9426c71"
+    },
+    {
+      "path": "docs/vision/style-studies/01-graphic/01-living-community.png",
+      "sha256": "89dc227add0ee86072394513e39bb99e2bd0f51308c1ac09a4b87508047523be"
+    },
+    {
+      "path": "docs/vision/style-studies/01-graphic/02-creating-exploring.png",
+      "sha256": "a59cf262b62237d552bc39e887930ee7fb892c0bfadb9fad5580013c86ac108b"
+    },
+    {
+      "path": "docs/vision/style-studies/01-graphic/03-interfaces-perspectives.png",
+      "sha256": "f672caad4ad8672be55ec1ad30b2805af5f14db26d21172f9647c882781b0992"
+    },
+    {
+      "path": "docs/vision/style-studies/02-voxel/00-city-perspectives.png",
+      "sha256": "725fe46baa41c66ca70ad72781baf7f34f39c3860d350606e7fbbe579735db14"
+    },
+    {
+      "path": "docs/vision/style-studies/02-voxel/01-living-community.png",
+      "sha256": "971be580fbf26802467c01a3eb096117ea7e41957b8f4f32315534ab4f9cf66c"
+    },
+    {
+      "path": "docs/vision/style-studies/02-voxel/02-creating-exploring.png",
+      "sha256": "9154ac1a8acfa6ebec3fafb6ed8b6357ed8ee9df462068c985435f1fd19fcef2"
+    },
+    {
+      "path": "docs/vision/style-studies/02-voxel/03-interfaces-perspectives.png",
+      "sha256": "e9b52242ff531fc989525bced52690bf5183826e40f24c2345aa2cf9fad40c3f"
+    },
+    {
+      "path": "docs/vision/style-studies/03-ink/00-city-perspectives.png",
+      "sha256": "9ef33ef9f56e0a02001a0d67db42e91a52d6673d1087280ec8476b046423bde3"
+    },
+    {
+      "path": "docs/vision/style-studies/03-ink/01-living-community.png",
+      "sha256": "604aa8e9fa310e292c05899ba973a0b82df9f77a9e74934153947c9ed7ae06ac"
+    },
+    {
+      "path": "docs/vision/style-studies/03-ink/02-creating-exploring.png",
+      "sha256": "3c8fdaca187b0b3fc5e5479cb292eb7a687d6e5c6439fbbc1ad70c1c12a035c7"
+    },
+    {
+      "path": "docs/vision/style-studies/03-ink/03-interfaces-perspectives.png",
+      "sha256": "2b1c4b6c5aebc258cd34af5cf0ed0f9c6b5ef57d9a64b15e7b062f44bcfc5735"
+    },
+    {
+      "path": "docs/vision/style-studies/04-realistic/00-city-perspectives.png",
+      "sha256": "c009fac4ef397c0e8ce2fe37ebfc8f8df6bdc42bcfce38e85236f7bf74c0dd1b"
+    },
+    {
+      "path": "docs/vision/style-studies/04-realistic/01-living-community.png",
+      "sha256": "1028a7ed97eedaaaeb29729de249a2c4b2279e6d8245a2acaae4fa5ad7d139f0"
+    },
+    {
+      "path": "docs/vision/style-studies/04-realistic/02-creating-exploring.png",
+      "sha256": "99a373971a2a0c701456af2ac18e068dad277d5db0cef2904b087a0d1c320cc3"
+    },
+    {
+      "path": "docs/vision/style-studies/04-realistic/03-interfaces-perspectives.png",
+      "sha256": "517d5971dcefffeb64b92b7143d6ff381bfd91fba85258788319123e198cc3ae"
+    },
+    {
+      "path": "docs/vision/style-studies/05-claymation/00-city-perspectives.png",
+      "sha256": "567a9385f8e1bc7ff98615232f7dbfaa8f062332105a757502ba85745d05fa47"
+    },
+    {
+      "path": "docs/vision/style-studies/05-claymation/01-living-community.png",
+      "sha256": "45f8ed0f5e4020078f62959ca531257c7d65da0661d3081addbd6d50ad68915f"
+    },
+    {
+      "path": "docs/vision/style-studies/05-claymation/02-creating-exploring.png",
+      "sha256": "8e6bf1f25ea6ede133cbdc39d3e60d0a0b829b6a1012605ea14806bb268e0fd1"
+    },
+    {
+      "path": "docs/vision/style-studies/05-claymation/03-interfaces-perspectives.png",
+      "sha256": "57dd20ed4f7addb757c68e48d575777d9f6fb3e228d864d1a2add73a70343699"
+    },
+    {
+      "path": "docs/vision/style-studies/06-anime/00-city-perspectives.png",
+      "sha256": "a3cd01a8a144252cbc84ae988a7fd901d0656dbc6cd911ef96c3c738c5a9c582"
+    },
+    {
+      "path": "docs/vision/style-studies/06-anime/01-living-community.png",
+      "sha256": "c54c56cbf90f4626421b646f16770752a70073eaf8793e9a23ef9a4f3673e706"
+    },
+    {
+      "path": "docs/vision/style-studies/06-anime/02-creating-exploring.png",
+      "sha256": "d3ee490663b8914b16bceb30af6826f6050cf3a11d6ff93e51e7bc15fb8190e1"
+    },
+    {
+      "path": "docs/vision/style-studies/06-anime/03-interfaces-perspectives.png",
+      "sha256": "50eba6e70deff0d383974ee5208b4b302102a6117958fe14aa641e99663bb3ad"
+    },
+    {
+      "path": "docs/vision/style-studies/07-paper-craft/00-city-perspectives.png",
+      "sha256": "caa6874be31e69465e4e153ebafa19e33652a2d65349a88080df4b46a63c0776"
+    },
+    {
+      "path": "docs/vision/style-studies/07-paper-craft/01-living-community.png",
+      "sha256": "a8d71860b2e6e5ae76fb7fdf5299f97084a75ef7167c3682d8d4cfc1ca178fbc"
+    },
+    {
+      "path": "docs/vision/style-studies/07-paper-craft/02-creating-exploring.png",
+      "sha256": "209354b36a8cf9558d6ebb8f9cb696485c134a85e7afa5c6ef7666a47fd55899"
+    },
+    {
+      "path": "docs/vision/style-studies/07-paper-craft/03-interfaces-perspectives.png",
+      "sha256": "372e24aa02f6541bccce261f8c1ed10ac7ae0a3f3a71a4c5bbf89e78bee012d3"
+    },
+    {
+      "path": "docs/vision/style-studies/08-pixel-art/00-city-perspectives.png",
+      "sha256": "ca19af83c557ba52671bdc88955c8047b749bc8e863422d8efaac1da671e8145"
+    },
+    {
+      "path": "docs/vision/style-studies/08-pixel-art/01-living-community.png",
+      "sha256": "9f44c30f86bee41b59dc3f15814f3dc1baee5e1bc5371ecb4957907cbfa66e6c"
+    },
+    {
+      "path": "docs/vision/style-studies/08-pixel-art/02-creating-exploring.png",
+      "sha256": "8e659939937c5142344818230425ae3c7154d4ce74c7c00503958cf85fe0b7d3"
+    },
+    {
+      "path": "docs/vision/style-studies/08-pixel-art/03-interfaces-perspectives.png",
+      "sha256": "113614224901ab06f3d5a0fed23efa86010bf19a3fc554cb75b4d5c27d22c24d"
+    },
+    {
+      "path": "docs/vision/style-studies/09-solarpunk/00-city-perspectives.png",
+      "sha256": "bb9bca88f37444bab33a8be84fca2fa2267ac2773052b1518cce95761215fd1f"
+    },
+    {
+      "path": "docs/vision/style-studies/09-solarpunk/01-living-community.png",
+      "sha256": "b9eea271158ed19a62062dde0bc18ffade1c1f74bbf994952764851ddb0ae3f1"
+    },
+    {
+      "path": "docs/vision/style-studies/09-solarpunk/02-creating-exploring.png",
+      "sha256": "ef6bc987bd6af766ca5fbbfcf633c73825e0297d40c2f9d708393d8d8410363a"
+    },
+    {
+      "path": "docs/vision/style-studies/09-solarpunk/03-interfaces-perspectives.png",
+      "sha256": "371020704864529660bb8d745e657925b16c61c7a300781729928f2405321e2f"
+    },
+    {
+      "path": "docs/vision/style-studies/10-neon-noir/00-city-perspectives.png",
+      "sha256": "f1096380a3b2bedc75ffd17ed2dd6154174f033d6ca06364d61ffbcc0c9d2f61"
+    },
+    {
+      "path": "docs/vision/style-studies/10-neon-noir/01-living-community.png",
+      "sha256": "4b2c2439ceda388a3e12a5c2630ae56831469ead980f5bd482e58b5179be304f"
+    },
+    {
+      "path": "docs/vision/style-studies/10-neon-noir/02-creating-exploring.png",
+      "sha256": "825993c789045609d83af155edb5cc5f28a03926affa98f95768517241b7caeb"
+    },
+    {
+      "path": "docs/vision/style-studies/10-neon-noir/03-interfaces-perspectives.png",
+      "sha256": "1dceb1114f1dd9eac084fc4cb244a5c29431a85e6f24b801c24c8069aebb4dee"
+    }
+  ]
+}

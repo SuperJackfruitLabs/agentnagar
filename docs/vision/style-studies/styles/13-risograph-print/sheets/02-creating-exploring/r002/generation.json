@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "def3edc21f7625abbad5a753925281ede59b6e81aa0961591c83c281f83a1a62",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "82c5856064a8feb3868e75d4b3fbc83e4e7cc53dadadc5c3c18a799f6a030419"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/13-risograph-print/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

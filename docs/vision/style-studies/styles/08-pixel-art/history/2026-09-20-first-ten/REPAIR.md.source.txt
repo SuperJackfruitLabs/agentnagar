@@ -1,0 +1,60 @@
+# Pixel art repair record — 2026-09-20
+
+Status: four improved revised sheets promoted to the gallery, with residual issues below. **Not certified as fully contract-compliant.**
+
+[Current gallery](../../../08-pixel-art/README.md) · [Comparison contract](../../../CONSISTENCY-CONTRACT.md) · [Original archive](originals/README.md) · [Hashes, dimensions and selections](manifest.json)
+
+## Scope and provenance
+
+Baseline `ba5f4242d02aa37686b2a18b9add8813c5490130`. All nine original files, including four PNGs, four original prompt documents and README, are preserved byte-for-byte under `originals/` and compared against that Git commit. Built-in `image_gen.imagegen` was used for every correction; no Python image editing or CLI fallback. Every returned candidate and exact submitted prompt is retained.
+
+Pixel clustering, indigo matte, peach/teal/emerald/amber palette and living human residents retained. The robot helper in WORKSHOP is distinct from the recurring human-presenting City Agent A1.
+
+## Selected sheets
+
+| Sheet | Selected pass | Inspection |
+| --- | --- | --- |
+| 00 City perspectives | 4 | Modern district replaces medieval skyline; west river, low north bridge, three-sawtooth hall, tree, rounded library, ground tram and three stepped towers. STREET tram moved into foreground; overhead facades substantially reduced; north arrows restored. |
+| 01 Living and community | 3 | Workshop windows now show nearby foliage, home looks west without invented towers, conversation retains white/blue-haired human A1 with leaf badge, gathering returns to the living tree. Roof counts corrected in home and gathering. |
+| 02 Creating and exploring | 3 | X red / Y green up / Z blue have visible letters. Transit is ground-level boarding at the square; medieval skyline removed. Night square and waterfront use modern district forms. |
+| 03 Interfaces and perspectives | 7 | Browse open book / Book calendar / Ask bubble; one complete phone with map, selected Workshop, Ask and matching white/blue-haired A1. AR selects low workshop and keeps category meanings; External viewer restored. Rooftop now faces west with three attached sawtooth roof bays; A1 leaf badge repaired. |
+
+Each promoted PNG is 1536 × 1024 and byte-identical to its selected candidate. The JSON manifest lists full SHA-256 hashes for originals, candidates, exact prompts and gallery files. All panels were visually inspected at the returned image size; a separate measured half-size usability test was not performed.
+
+## Iteration review
+
+Overview passes 1–2 reduced inherited obliqueness; pass 3 moved STREET tram forward and simplified roof views; pass 4 restored N arrows. Living pass 2 removed contradictory panoramas, pass 3 corrected visible roof counts. Creating passes 2–3 removed medieval background and aligned captions. Interface pass 2 corrected rooftop but accidentally added a second AR waterway; pass 3 restored AR. Pass 4 improved captions but clipped the phone and lost External viewer; pass 5 corrected those regressions. A sixth isolated rooftop-only pass was requested by independent review; it overshot to two roof bays and softened the pixel treatment, so it was not promoted. A seventh isolated pass added exactly one bay to that two-bay intermediate, producing the required three attached roof slopes while retaining the phone and AR fixes; pass 7 was promoted.
+
+## Residual issues
+
+Full compliance is not claimed. The final rooftop workshop now shows three attached long roof slopes. Repeated targeted generations softened some pixel edges and background detail relative to the original; the image is a direction reference, not a production sprite atlas. Small map and roof views retain pictorial roofs rather than perfectly flat symbols/orthographic geometry; some façade-edge slivers remain. Some experience views show only two clearly exposed downtown towers, with trees/cropping obscuring the intended third. Mobile A1 identity is clear but the tiny avatar badge is not reliably readable. Typography size, outer matte, gutter widths and exact 32/44 px strips are not uniform or pixel-verified. Transit changed from a passenger interior to boarding; this still shows the shared transit task.
+
+## Prompt and candidate inventory
+
+[Actual generation output paths and reference snapshots](generation-outputs.json).
+
+| Candidate | Exact prompt | Selected |
+| --- | --- | --- |
+| [00-city-perspectives-pass1.png](candidates/00-city-perspectives-pass1.png) | [Prompt](prompts/00-city-perspectives-pass1.txt) | No |
+| [00-city-perspectives-pass2.png](candidates/00-city-perspectives-pass2.png) | [Prompt](prompts/00-city-perspectives-pass2.txt) | No |
+| [00-city-perspectives-pass3.png](candidates/00-city-perspectives-pass3.png) | [Prompt](prompts/00-city-perspectives-pass3.txt) | No |
+| [00-city-perspectives-pass4.png](candidates/00-city-perspectives-pass4.png) | [Prompt](prompts/00-city-perspectives-pass4.txt) | Yes |
+| [01-living-community-pass1.png](candidates/01-living-community-pass1.png) | [Prompt](prompts/01-living-community-pass1.txt) | No |
+| [01-living-community-pass2.png](candidates/01-living-community-pass2.png) | [Prompt](prompts/01-living-community-pass2.txt) | No |
+| [01-living-community-pass3.png](candidates/01-living-community-pass3.png) | [Prompt](prompts/01-living-community-pass3.txt) | Yes |
+| [02-creating-exploring-pass1.png](candidates/02-creating-exploring-pass1.png) | [Prompt](prompts/02-creating-exploring-pass1.txt) | No |
+| [02-creating-exploring-pass2.png](candidates/02-creating-exploring-pass2.png) | [Prompt](prompts/02-creating-exploring-pass2.txt) | No |
+| [02-creating-exploring-pass3.png](candidates/02-creating-exploring-pass3.png) | [Prompt](prompts/02-creating-exploring-pass3.txt) | Yes |
+| [03-interfaces-perspectives-pass1.png](candidates/03-interfaces-perspectives-pass1.png) | [Prompt](prompts/03-interfaces-perspectives-pass1.txt) | No |
+| [03-interfaces-perspectives-pass2.png](candidates/03-interfaces-perspectives-pass2.png) | [Prompt](prompts/03-interfaces-perspectives-pass2.txt) | No |
+| [03-interfaces-perspectives-pass3.png](candidates/03-interfaces-perspectives-pass3.png) | [Prompt](prompts/03-interfaces-perspectives-pass3.txt) | No |
+| [03-interfaces-perspectives-pass4.png](candidates/03-interfaces-perspectives-pass4.png) | [Prompt](prompts/03-interfaces-perspectives-pass4.txt) | No |
+| [03-interfaces-perspectives-pass5.png](candidates/03-interfaces-perspectives-pass5.png) | [Prompt](prompts/03-interfaces-perspectives-pass5.txt) | No |
+| [03-interfaces-perspectives-pass6.png](candidates/03-interfaces-perspectives-pass6.png) | [Prompt](prompts/03-interfaces-perspectives-pass6.txt) | No |
+| [03-interfaces-perspectives-pass7.png](candidates/03-interfaces-perspectives-pass7.png) | [Prompt](prompts/03-interfaces-perspectives-pass7.txt) | Yes |
+
+## Reference inputs
+
+Initial overview calls used the original overview for style. Styles 09 and 10 also used the corrected style 08 overview as a geometry reference. Initial experience calls used that style’s original experience sheet, corrected overview and original living sheet for A1 identity. Targeted passes used the immediately preceding candidate unless noted: style 08 interface pass 3 additionally used pass 1 to restore AR; style 09 living pass 3 additionally used pass 1 to restore gathering; style 10 interface pass 3 additionally used pass 1 for geography and labels. All local reference images were viewed before use.
+
+These remain design comparisons, not implemented city behavior, runtime geometry, accessibility certification or performance evidence.

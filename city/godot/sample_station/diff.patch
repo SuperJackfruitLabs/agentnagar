@@ -1,0 +1,51 @@
+diff --git a/src/main.rs b/src/main.rs
+index c64ae12..10a1f93 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -5,6 +5,7 @@ fn main() -> io::Result<()> {
+     io::stdin().read_to_end(&mut input)?;
+     let text = String::from_utf8_lossy(&input);
+     let counts = tally::count(&text);
+-    println!("{} {} {}", counts.words, counts.lines, counts.chars);
++    // The same order as `wc`: lines, words, then characters.
++    println!("{:>7} {:>7} {:>7}", counts.lines, counts.words, counts.chars);
+     Ok(())
+ }
+diff --git a/tests/count.rs b/tests/count.rs
+index f892090..ce7622e 100644
+--- a/tests/count.rs
++++ b/tests/count.rs
+@@ -19,3 +19,20 @@ fn counts_words_split_by_spaces() {
+ fn counts_characters_not_bytes() {
+     assert_eq!(count("café").chars, 4);
+ }
++
++#[test]
++fn counts_words_split_by_tabs() {
++    assert_eq!(count("one\ttwo\tthree").words, 3);
++}
++
++#[test]
++fn blank_lines_hold_no_words() {
++    assert_eq!(count("\n\n\n").words, 0);
++}
++
++#[test]
++fn text_that_is_not_utf8_still_counts() {
++    let bytes = include_bytes!("fixtures/latin1.txt");
++    let text = String::from_utf8_lossy(bytes);
++    assert_eq!(count(&text).words, 2);
++}
+diff --git a/src/lib.rs b/src/lib.rs
+index 91af345..6dfd915 100644
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -13,7 +13,7 @@ pub struct Counts {
+ pub fn count(text: &str) -> Counts {
+     Counts {
+         lines: text.matches('\n').count(),
+-        words: text.lines().flat_map(|line| line.split(' ')).filter(|w| !w.is_empty()).count(),
++        words: text.split_whitespace().count(),
+         chars: text.chars().count(),
+     }
+ }

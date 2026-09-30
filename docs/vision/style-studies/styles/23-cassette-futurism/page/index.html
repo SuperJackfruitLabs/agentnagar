@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en" data-style="23-cassette-futurism">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAPE-OS · 23 Cassette futurism</title>
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root{
+  --bezel:#192229; --beige:#d6ccb8; --cream:#ece3d1; --phos:#517c61; --amber:#efac3c; --orange:#c68d33;
+  --teal:#6cc2ad; --mustard:#ecbc78; --banner:#db8157;
+  --glass:#07120d; --g:#a4f0b2; --g2:#79c98b; --gdim:#3f7a52;
+  --mono:'VT323','IBM Plex Mono',ui-monospace,monospace;
+  --silk:'Space Grotesk Variable','Space Grotesk',system-ui,sans-serif;
+  --hand:'Patrick Hand','Kalam','Comic Sans MS',cursive;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;min-height:100vh;color:#241d15;font:400 1rem/1.5 var(--silk);
+  background:radial-gradient(ellipse at 50% -10%,#6b4a22 0,#2a1d12 38%,#120e0b 75%) fixed,#120e0b;overflow-x:hidden}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+button{font:inherit;color:inherit}
+
+.desk{width:min(1200px,calc(100% - 24px));margin:18px auto 0}
+.machine{position:relative;border-radius:30px;padding:18px 22px 20px;
+  background:linear-gradient(180deg,#e6ddca 0%,#d6ccb8 22%,#c9bea7 100%);
+  box-shadow:inset 0 2px 0 #fff8,inset 0 -6px 0 #a89c84,0 2px 0 #8a7e67,0 30px 60px rgba(0,0,0,.55)}
+.machine::before{content:"";position:absolute;inset:0;border-radius:30px;pointer-events:none;opacity:.35;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .35 0 0 0 0 .25 0 0 0 .25 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 6px 14px;flex-wrap:wrap}
+.plate{display:inline-flex;align-items:center;gap:12px;background:var(--bezel);color:var(--cream);border-radius:6px;padding:7px 14px 7px 10px;box-shadow:inset 0 -4px 0 var(--orange),0 1px 0 #fff6}
+.plate::before{content:"";width:6px;height:22px;border-radius:2px;background:var(--amber)}
+.plate b{font:700 .95rem/1 var(--silk);letter-spacing:.2em;white-space:nowrap}
+.plate small{font:500 .72rem/1 var(--silk);letter-spacing:.14em;color:#c9c2b3}
+.leds{display:flex;gap:14px;align-items:center;font:700 .66rem/1 var(--silk);letter-spacing:.14em;color:#4c4234}
+.led{display:inline-flex;align-items:center;gap:6px}
+.led i{width:10px;height:10px;border-radius:50%;background:#6d5a3a;box-shadow:inset 0 1px 2px #0006}
+.led.on i{background:var(--amber);box-shadow:0 0 8px var(--amber),inset 0 -1px 2px #0003}
+.led.g.on i{background:#7de38f;box-shadow:0 0 8px #7de38f}
+.vents{display:flex;gap:5px}.vents span{width:4px;height:22px;border-radius:3px;background:#9b8f78;box-shadow:inset 0 2px 2px #0004}
+
+/* CRT */
+.hood{background:#2a2621;border-radius:26px;padding:16px;box-shadow:inset 0 3px 8px #000c,0 1px 0 #fff8}
+.screen{position:relative;height:clamp(430px,52vh,600px);border-radius:22px/26px;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#0e2218 0,#07120d 70%,#030805 100%);color:var(--g);font:400 1.32rem/1.35 var(--mono);text-shadow:0 0 6px rgba(126,240,150,.45);
+  box-shadow:inset 0 0 60px #000,inset 0 0 18px rgba(80,200,120,.18)}
+.screen::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;border-radius:inherit;
+  background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 1px,transparent 1px 3px),radial-gradient(ellipse at 50% 50%,transparent 60%,rgba(0,0,0,.55) 100%)}
+.screen.noscan::after{background:radial-gradient(ellipse at 50% 50%,transparent 60%,rgba(0,0,0,.45) 100%)}
+.screen.on{animation:poweron .5s ease-out}
+@keyframes poweron{0%{transform:scale(1,.004);filter:brightness(4)}45%{transform:scale(1,.02)}100%{transform:none;filter:none}}
+.flick{animation:flicker 5s steps(1) infinite}
+@keyframes flicker{0%,100%{opacity:1}48%{opacity:.96}50%{opacity:1}72%{opacity:.975}}
+.screen a{color:#d7ffdf;text-decoration-thickness:1px;text-underline-offset:3px}
+.screen a:hover{background:var(--g);color:var(--glass);text-shadow:none}
+.screen :focus-visible{outline:2px dashed var(--g);outline-offset:2px}
+
+/* boot */
+.boot{position:absolute;inset:0;padding:22px 26px;z-index:4;background:inherit;overflow:hidden}
+.boot pre{margin:0;font:inherit;white-space:pre-wrap}
+.boot .skip{position:absolute;right:18px;bottom:18px;background:transparent;border:2px solid var(--g);color:var(--g);font:400 1.2rem/1 var(--mono);padding:8px 12px;cursor:pointer;text-shadow:inherit}
+.boot .skip:hover{background:var(--g);color:var(--glass)}
+.cur::after{content:"█";animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* desktop */
+.os{position:absolute;inset:0;display:flex;flex-direction:column}
+.menubar{display:flex;align-items:center;gap:6px 18px;padding:8px 16px;border-bottom:2px solid var(--gdim);flex-wrap:wrap;font-size:1.15rem}
+.menubar .grow{flex:1}
+.mbtn{background:none;border:0;padding:2px 8px;color:var(--g);cursor:pointer;text-shadow:inherit;font:400 1.15rem/1.2 var(--mono)}
+.mbtn:hover,.mbtn[aria-pressed="true"]{background:var(--g);color:var(--glass);text-shadow:none}
+.stage{position:relative;flex:1;min-height:0}
+.home,.win{position:absolute;inset:0;overflow:auto;padding:16px 20px 22px}
+.home{display:grid;grid-template-columns:1.1fr 1fr;gap:18px 26px;align-content:start}
+.home h1{font:400 2.3rem/1 var(--mono);margin:.1rem 0 .4rem;color:#d7ffdf}
+.home p{margin:.3rem 0}
+.dim{color:var(--g2)}
+.dir{margin:.5rem 0;padding:0;list-style:none}
+.dir li{display:grid;grid-template-columns:2.2ch 14ch 1fr;gap:1ch}
+.map svg{width:100%;height:auto;max-height:320px;display:block;filter:drop-shadow(0 0 4px rgba(126,240,150,.5))}
+.map figcaption{font-size:1.02rem;color:var(--g2)}
+.win[hidden],.home[hidden]{display:none}
+.win h2{font:400 2rem/1 var(--mono);margin:0 0 .6rem;color:#d7ffdf;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.win h2 span{background:var(--g);color:var(--glass);text-shadow:none;padding:0 8px}
+.win h3{font:400 1.5rem/1.1 var(--mono);margin:1.1rem 0 .4rem;color:#d7ffdf;border-bottom:1px dashed var(--gdim);padding-bottom:4px}
+.win p{margin:.35rem 0 .7rem;max-width:74ch}
+.win ul,.win ol{padding-left:2.2ch;margin:.3rem 0 .8rem}
+.win li{margin:.2rem 0}
+.win li::marker{content:"> "}
+.win .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.load{position:absolute;inset:0;display:grid;place-items:center;text-align:center;z-index:3;background:rgba(3,8,5,.92)}
+.load[hidden]{display:none}
+.bar{width:min(420px,70vw);height:22px;border:2px solid var(--g);margin:10px auto 0;padding:2px}
+.bar i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,var(--g) 0 10px,transparent 10px 13px)}
+
+/* palette on screen: real colours in a phosphor frame */
+.pal{list-style:none!important;padding:0!important;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pal li::marker{content:none}
+.pal li{border:2px solid var(--gdim);padding:6px;margin:0!important}
+.pal .sw{height:52px;border-radius:3px}
+.pal code{font:inherit;color:#d7ffdf}
+.kit-project .kit-tagline{font-size:1.6rem;color:#d7ffdf;margin-top:0}
+.kit-project dl{display:grid;grid-template-columns:14ch 1fr;gap:4px 16px}
+.kit-project dt{color:var(--amber);text-shadow:0 0 6px rgba(239,172,60,.5)}
+.kit-project dt::after{content:":"}
+.kit-project dd{margin:0}
+.kit-small{color:var(--g2);font-size:1.1rem}
+.crt-img{position:relative;border:2px solid var(--gdim);padding:4px;background:#000}
+.crt-img::after{content:"";position:absolute;inset:4px;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px)}
+.screen.noscan .crt-img::after{display:none}
+.chan{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.chan button{background:none;border:2px solid var(--g);color:var(--g);font:400 1.15rem/1 var(--mono);padding:6px 10px;cursor:pointer;text-shadow:inherit}
+.chan button[aria-selected="true"],.chan button:hover{background:var(--g);color:var(--glass);text-shadow:none}
+.panels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.panels figure{margin:0}.panels figcaption{font-size:1rem;color:var(--g2)}
+.agentgrid{display:grid;grid-template-columns:200px 1fr 1fr;gap:14px;align-items:start}
+.agentgrid figure{margin:0}.agentgrid figcaption{font-size:1rem;color:var(--g2);margin-top:4px}
+.guild{display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px;list-style:none!important;padding:0!important}
+.guild li::marker{content:none}
+.guild li{display:grid;grid-template-columns:3ch 12ch 1fr;gap:1ch;border-bottom:1px dotted var(--gdim)}
+.trade dt{color:var(--amber);text-shadow:0 0 6px rgba(239,172,60,.5);margin-top:.7rem;font-size:1.4rem}
+.trade dd{margin:0 0 0 2ch;max-width:80ch}
+.kit-status .kit-summary{font-size:1.55rem;color:#d7ffdf}
+.kit-status .kit-concept{color:var(--g2)}
+.kit-status ul{padding-left:2.2ch}
+.kit-sources li::marker{content:"# "}
+
+/* console */
+.console{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:18px;margin-top:14px;align-items:stretch}
+.deck{background:var(--bezel);border-radius:14px;padding:12px;box-shadow:inset 0 2px 6px #000a,0 1px 0 #fff8;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;color:var(--cream)}
+.slot{position:relative;height:104px;border-radius:8px;background:linear-gradient(#0b0f12,#1b2328);box-shadow:inset 0 3px 10px #000;display:grid;place-items:center;overflow:hidden;border:2px solid #36424a}
+.slot.drop{border-color:var(--amber);box-shadow:inset 0 0 18px rgba(239,172,60,.5)}
+.slot .empty{font:600 .78rem/1.3 var(--silk);letter-spacing:.16em;color:#9aa6ac;text-align:center;text-transform:uppercase}
+.slot .tape{position:absolute;inset:8px 10px;transform:none;cursor:default}
+.slot .tape .lab{top:12%;height:58%}
+.slot .tape.in{animation:insert .45s cubic-bezier(.2,.9,.3,1)}
+@keyframes insert{from{transform:translateY(-120%)}to{transform:none}}
+.counter{display:flex;flex-direction:column;gap:8px;align-items:center}
+.digits{font:400 2.2rem/1 var(--mono);color:var(--amber);background:#150e05;padding:4px 10px;border-radius:4px;letter-spacing:.1em;text-shadow:0 0 8px rgba(239,172,60,.7);box-shadow:inset 0 2px 4px #000}
+.counter small{font:700 .62rem/1 var(--silk);letter-spacing:.2em;color:#b9b2a2}
+.transport{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-content:center}
+.key{appearance:none;border:0;border-radius:8px;cursor:pointer;min-height:54px;padding:6px 6px 10px;background:linear-gradient(#f2eadb,#d3c8b1);color:#2b241b;
+  box-shadow:0 5px 0 #8f846d,0 6px 8px #0005,inset 0 1px 0 #fff;font:700 .68rem/1.15 var(--silk);letter-spacing:.12em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px}
+.key svg{width:20px;height:16px}
+.key:active,.key[aria-pressed="true"]{transform:translateY(4px);box-shadow:0 1px 0 #8f846d,inset 0 2px 4px #0003}
+.key.hot{background:linear-gradient(#f2b85a,#d98f2a);box-shadow:0 5px 0 #8a5a17,0 6px 8px #0005,inset 0 1px 0 #ffd99a}
+.key.teal{background:linear-gradient(#8fd6c3,#5fb39d);box-shadow:0 5px 0 #33715f,0 6px 8px #0005,inset 0 1px 0 #c9f2e6}
+.fn{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:center}
+.fn .key{font-size:.74rem;min-height:54px}
+.strip{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--orange),var(--banner) 60%,var(--amber));margin:16px 4px 0;box-shadow:inset 0 1px 2px #0005}
+
+/* rack of tapes */
+.rackhead{display:flex;justify-content:space-between;align-items:baseline;margin:16px 6px 8px;font:700 .72rem/1.3 var(--silk);letter-spacing:.18em;text-transform:uppercase;color:#4c4234;gap:10px;flex-wrap:wrap}
+.rack{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;padding:12px;background:#b7ab93;border-radius:14px;box-shadow:inset 0 3px 8px #0005}
+.tape{position:relative;display:block;width:100%;aspect-ratio:1.6;border:0;border-radius:7px;padding:0;cursor:grab;
+  background:linear-gradient(#3a3f42,#23282b);box-shadow:0 4px 0 #111,0 6px 10px #0006;transition:transform .15s,opacity .2s;text-align:left}
+.tape:hover{transform:translateY(-4px)}
+.tape[aria-pressed="true"]{opacity:.35;transform:translateY(6px)}
+.tape .lab{position:absolute;left:7%;right:7%;top:9%;height:52%;border-radius:4px;background:var(--cream);padding:11px 8px 4px;overflow:hidden;box-shadow:inset 0 -1px 0 #0002}
+.tape .lab::before{content:"";position:absolute;left:0;right:0;top:0;height:7px;background:var(--c,#c68d33)}
+.tape .lab b{display:block;font:400 clamp(.95rem,1.35vw,1.2rem)/1 var(--hand);color:#1d1a16;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tape .lab small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font:700 .56rem/1.2 var(--silk);letter-spacing:.14em;color:#4b4336;text-transform:uppercase}
+.tape .side{position:absolute;right:8%;bottom:12%;font:700 .9rem/1 var(--silk);color:#d6ccb8;opacity:.8}
+.tape .win2{position:absolute;left:24%;right:24%;bottom:12%;height:20%;border-radius:10px;background:#0e1113;display:flex;justify-content:space-between;align-items:center;padding:0 8%}
+.tape .win2 i{width:24%;aspect-ratio:1;border-radius:50%;border:3px dotted #d6ccb8}
+.spin .win2 i{animation:reel 1s linear infinite}
+@keyframes reel{to{transform:rotate(360deg)}}
+
+/* nav plate */
+.navplate{display:flex;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap}
+.navplate .lbl{font:700 .7rem/1 var(--silk);letter-spacing:.2em;color:#4c4234;text-transform:uppercase}
+.kit-nav{display:flex;gap:10px;flex:1;flex-wrap:wrap}
+.kit-nav a{flex:1;min-width:180px;text-decoration:none;text-align:center;border-radius:8px;padding:12px 10px 14px;background:linear-gradient(#3a3f42,#23282b);color:var(--cream);font:700 .82rem/1.2 var(--silk);letter-spacing:.08em;box-shadow:0 5px 0 #111,0 6px 8px #0005}
+.kit-nav a:hover{background:linear-gradient(#4a5155,#2e3438)}
+.kit-nav .kit-index{background:linear-gradient(#f2b85a,#d98f2a);color:#241a0c;box-shadow:0 5px 0 #8a5a17,0 6px 8px #0005}
+.kit-nav a:active{transform:translateY(4px);box-shadow:0 1px 0 #111}
+.under{color:#cbbfa6;font-size:.92rem;margin:18px 6px 36px;max-width:90ch}
+.under a{color:var(--mustard)}
+
+/* dialog */
+.kit-dialog{width:min(900px,calc(100% - 20px));max-height:90vh;border:14px solid #d6ccb8;border-radius:22px;padding:0;background:#07120d;color:var(--g);font:400 1.25rem/1.4 var(--mono);box-shadow:0 30px 80px #000c}
+.kit-dialog::backdrop{background:rgba(10,8,5,.8)}
+.kit-dialog .kit-close{position:sticky;top:0;float:right;margin:12px;background:var(--g);color:var(--glass);border:0;font:400 1.2rem/1 var(--mono);padding:8px 12px;cursor:pointer;z-index:2}
+.kit-notes{padding:10px 22px 26px}
+.kit-notes h1,.kit-notes h2{font-weight:400;color:#d7ffdf}
+.kit-notes h2{border-bottom:1px dashed var(--gdim)}
+.kit-notes a{color:#d7ffdf}
+.kit-notes figure{margin:0 0 14px}.kit-notes figcaption{color:var(--g2);font-size:1.05rem}
+.kit-palette{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px 16px}
+.kit-swatch{display:inline-block;width:1em;height:1em;vertical-align:-.1em;border:1px solid var(--g)}
+.kit-notes dt{color:var(--amber)}.kit-notes dd{margin:0 0 .6rem}
+
+@media (max-width:900px){
+  .home{grid-template-columns:1fr}
+  .console{grid-template-columns:1fr 1fr}
+  .deck{grid-column:1/-1}
+  .rack{grid-template-columns:repeat(3,1fr)}
+  .agentgrid{grid-template-columns:1fr 1fr}
+  .agentgrid figure:first-child{grid-column:1/-1;max-width:200px}
+  .panels,.pal{grid-template-columns:repeat(2,1fr)}
+  .win .cols,.guild{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .desk{width:calc(100% - 16px);margin-top:8px}
+  .machine{padding:10px 10px 14px;border-radius:20px}
+  .hood{padding:8px;border-radius:18px}
+  .screen{height:72vh;min-height:480px;font-size:1.22rem}
+  .home,.win{padding:12px 12px 18px}
+  .console{grid-template-columns:1fr}
+  .rack{grid-template-columns:repeat(2,1fr);gap:10px;padding:10px}
+  .agentgrid{grid-template-columns:1fr}
+  .kit-project dl{grid-template-columns:1fr}
+  .guild li{grid-template-columns:3ch 1fr}
+  .guild li span:last-child{grid-column:2}
+  .leds .led:nth-child(n+3),.vents{display:none}
+  .kit-nav a{min-width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  .screen.on,.flick,.cur::after,.spin .win2 i,.slot .tape.in{animation:none}
+  .tape,.key{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="desk">
+  <div class="machine" id="machine">
+    <div class="top">
+      <span class="plate"><b>TAPE-OS</b><small>MODEL 23 · CASSETTE FUTURISM</small></span>
+      <span class="vents" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+      <span class="leds" aria-hidden="true"><span class="led on"><i></i>POWER</span><span class="led g" id="led-tape"><i></i>TAPE</span><span class="led" id="led-read"><i></i>READ</span></span>
+    </div>
+
+    <div class="hood">
+      <div class="screen flick" id="screen" role="region" aria-label="TAPE-OS screen">
+        <div class="boot" id="boot" aria-live="off">
+          <pre id="boot-log"></pre>
+          <button class="skip" type="button" id="skip">Skip boot [Esc]</button>
+        </div>
+
+        <div class="os" id="os">
+          <div class="menubar">
+            <span>A:\AGENTNAGAR&gt;</span><span class="dim" id="status-line">NO TAPE</span><span class="grow"></span>
+            <button class="mbtn" type="button" id="notes-screen">Read the notes [N]</button>
+            <button class="mbtn" type="button" id="scan-btn" aria-pressed="false">Scanlines off [S]</button>
+            <button class="mbtn" type="button" id="eject-screen" hidden>Eject [E]</button>
+          </div>
+          <div class="stage">
+            <div class="home" id="home">
+              <div>
+                <h1>AGENTNAGAR / STYLE 23</h1>
+                <p class="dim">Cassette futurism. A simulated terminal built for this page; not a concept sheet, product or planned interface.</p>
+                <p>Insert a tape to open a section. Click a cassette, drag it into the deck, or press its number key.</p>
+                <ul class="dir" id="dir" aria-label="Tape directory"></ul>
+                <p class="dim">Keys: 1–6 load · E eject · ← → change tape · N notes · S scanlines</p>
+                <p class="cur">A:\&gt; </p>
+              </div>
+              <figure class="map" style="margin:0">
+                <svg viewBox="0 0 400 300" role="img" aria-labelledby="mapt">
+                  <title id="mapt">Illustrative phosphor line map of the reference district: the river on the west, the North bridge at the top, the three-bay Workshop, Tree Square with one tree, the Library with a rounded roof, and the tram boulevard along the south.</title>
+                  <g fill="none" stroke="#a4f0b2" stroke-width="2">
+                    <path d="M40 0 C60 80 30 160 55 300 M95 0 C110 90 80 170 105 300" stroke-dasharray="1 0"/>
+                    <path d="M20 44 H130 M20 58 H130" /><path d="M58 44 V58 M86 44 V58"/>
+                    <path d="M150 110 l18 -18 v18 l18 -18 v18 l18 -18 v18 v46 h-54z"/>
+                    <circle cx="258" cy="130" r="26"/><circle cx="258" cy="130" r="12" stroke-dasharray="3 3"/>
+                    <rect x="300" y="100" width="70" height="56" rx="16"/>
+                    <path d="M130 228 H400 M130 240 H400"/>
+                    <rect x="236" y="222" width="46" height="24" rx="4"/>
+                    <path d="M130 0 V300 M130 190 H400 M210 0 V190 M290 0 V190" stroke="#3f7a52"/>
+                  </g>
+                  <g fill="#a4f0b2" font-family="VT323, monospace" font-size="18">
+                    <text x="60" y="130">R1</text><text x="46" y="36">B1</text><text x="160" y="178">W1</text><text x="250" y="178">T1</text><text x="324" y="178">L1</text><text x="244" y="268">S1</text><text x="376" y="24">N↑</text>
+                  </g>
+                </svg>
+                <figcaption>Illustrative line map drawn for this page from the shared district description.</figcaption>
+              </figure>
+            </div>
+
+            <section class="win" id="w-project" hidden aria-labelledby="h-project" tabindex="0">
+              <h2 id="h-project" tabindex="-1"><span>TAPE 1</span>AGENTNAGAR.TXT</h2>
+              <div id="project-slot"></div>
+              <h3>District: six landmarks</h3>
+              <ul id="district"></ul>
+            </section>
+
+            <section class="win" id="w-style" data-core="style" hidden aria-labelledby="h-style" tabindex="0">
+              <h2 id="h-style" tabindex="-1"><span>TAPE 2</span>STYLE.DOC</h2>
+              <p id="intent"></p>
+              <h3>Principles</h3><ol id="principles"></ol>
+              <h3>Palette (sampled from the sheets)</h3><ul class="pal" id="palette"></ul>
+              <div class="cols"><div><h3>Materials</h3><p id="materials"></p></div><div><h3>Typography</h3><p id="type"></p></div></div>
+            </section>
+
+            <section class="win" id="w-views" data-core="views" hidden aria-labelledby="h-views" tabindex="0">
+              <h2 id="h-views" tabindex="-1"><span>TAPE 3</span>VIEWS.IMG</h2>
+              <div class="chan" role="tablist" aria-label="Concept sheets" id="chan"></div>
+              <div class="crt-img" id="sheet-view"></div>
+              <p id="sheet-cap"></p>
+              <div class="panels" id="panels"></div>
+              <p class="dim" id="concept"></p>
+            </section>
+
+            <section class="win" id="w-agents" data-core="agents" hidden aria-labelledby="h-agents" tabindex="0">
+              <h2 id="h-agents" tabindex="-1"><span>TAPE 4</span>AGENTS.DAT</h2>
+              <div class="agentgrid">
+                <figure>
+                  <svg viewBox="0 0 200 230" role="img" aria-labelledby="bott" style="width:100%;height:auto;background:#d6ccb8;border-radius:10px">
+                    <title id="bott">Illustrative drawing of the agent as sheet 01 shows it: a boxy cream robot head with a green CRT face smiling, an orange indicator light and an olive scarf.</title>
+                    <rect x="40" y="170" width="120" height="70" rx="14" fill="#ece3d1" stroke="#5a4f40" stroke-width="3"/>
+                    <circle cx="100" cy="196" r="6" fill="#efac3c"/>
+                    <path d="M44 166 Q100 196 156 166 L150 186 Q100 210 50 186Z" fill="#6f7a4a"/>
+                    <rect x="30" y="30" width="140" height="130" rx="18" fill="#ece3d1" stroke="#5a4f40" stroke-width="3"/>
+                    <rect x="48" y="48" width="104" height="84" rx="14" fill="#1b2e22" stroke="#192229" stroke-width="5"/>
+                    <path d="M76 82 q6 -8 12 0 M112 82 q6 -8 12 0" stroke="#a4f0b2" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M84 104 q16 12 32 0" stroke="#a4f0b2" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <rect x="160" y="70" width="18" height="40" rx="5" fill="#6cc2ad" stroke="#5a4f40" stroke-width="3"/>
+                    <rect x="54" y="140" width="40" height="8" rx="3" fill="#c68d33"/>
+                    <circle cx="140" cy="144" r="5" fill="#efac3c"/>
+                  </svg>
+                  <figcaption>Illustrative, drawn after sheet 01. No leaf badge appears in the sheets.</figcaption>
+                </figure>
+                <figure id="ag-conv"><figcaption></figcaption></figure>
+                <figure id="ag-mobile"><figcaption></figcaption></figure>
+              </div>
+              <p id="agents-text"></p>
+              <p id="a1-text" class="dim"></p>
+              <h3>GUILD.DAT: fourteen residents</h3>
+              <ul class="guild" id="guild"></ul>
+              <p class="dim" id="guild-note"></p>
+            </section>
+
+            <section class="win" id="w-trade" data-core="tradeoffs" hidden aria-labelledby="h-trade" tabindex="0">
+              <h2 id="h-trade" tabindex="-1"><span>TAPE 5</span>TRADEOFF.LOG</h2>
+              <p class="dim">Internal comparison. Candid by design.</p>
+              <dl class="trade" id="tradeoffs"></dl>
+            </section>
+
+            <section class="win" id="w-status" hidden aria-labelledby="h-status" tabindex="0">
+              <h2 id="h-status" tabindex="-1"><span>TAPE 6</span>STATUS.SYS</h2>
+              <div id="status-slot"></div>
+            </section>
+
+            <div class="load" id="load" hidden><div><p id="load-text">LOADING…</p><div class="bar"><i id="load-bar"></i></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="console">
+      <div class="deck">
+        <div class="slot" id="slot" aria-label="Tape deck"><span class="empty" id="slot-empty">Deck empty<br>insert a tape</span></div>
+        <div class="counter"><span class="digits" id="digits" aria-hidden="true">000</span><small>COUNTER</small></div>
+      </div>
+      <div class="transport" role="group" aria-label="Transport">
+        <button class="key" type="button" id="k-prev"><svg viewBox="0 0 20 16" aria-hidden="true"><path d="M10 2 2 8l8 6zM18 2l-8 6 8 6z" fill="currentColor"/></svg>Prev tape</button>
+        <button class="key hot" type="button" id="k-play"><svg viewBox="0 0 20 16" aria-hidden="true"><path d="M5 2l11 6-11 6z" fill="currentColor"/></svg>Play</button>
+        <button class="key" type="button" id="k-eject"><svg viewBox="0 0 20 16" aria-hidden="true"><path d="M10 2l8 8H2zM2 12h16v3H2z" fill="currentColor"/></svg>Eject</button>
+        <button class="key" type="button" id="k-next"><svg viewBox="0 0 20 16" aria-hidden="true"><path d="M2 2l8 6-8 6zM10 2l8 6-8 6z" fill="currentColor"/></svg>Next tape</button>
+      </div>
+      <div class="fn">
+        <button class="key teal" type="button" id="notes-hw">Read the notes</button>
+        <button class="key" type="button" id="reboot">Reboot</button>
+      </div>
+    </div>
+    <div class="strip" aria-hidden="true"></div>
+
+    <div class="rackhead"><span id="rack-label">Tape rack · six cassettes</span><span>Press a cassette or drag it to the deck</span></div>
+    <div class="rack" id="rack" role="group" aria-labelledby="rack-label"></div>
+
+    <div class="navplate"><span class="lbl">Other machines</span><div id="nav-slot" style="flex:1;display:flex"></div></div>
+  </div>
+  <p class="under" id="under"></p>
+</div>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  const A = window.AGENTNAGAR;
+  const S = Kit.style('23-cassette-futurism');
+  const el = Kit.el;
+  const $ = (id) => document.getElementById(id);
+  const reduced = Kit.reducedMotion();
+
+  const C = {
+    intent: 'A warm, hands-on tech city where machines are boxes with buttons. Beige plastic housings, green-phosphor CRT screens, orange indicator strips, cassette motifs, and stackable hard cases define the identity. Amber evening light, charcoal, teal, and mustard carry the palette.',
+    principles: [
+      'Machines are boxes with buttons: kiosk, workbench monitor, robot and pocket companion are all beige housings with a screen, keys and indicator lights.',
+      'Indicator colour is the language: orange and amber strips, green phosphor and teal keys recur on kiosks, crates, the robot and the phone interface.',
+      'Hands-on clutter: interiors are dense with monitors, tool crates and cables, so making and repairing stay visible.',
+      'Warm, not cold, technology: amber evening light, knit sweaters, plants and a sleeping cat soften the hardware.'
+    ],
+    palette: [
+      { name: 'Charcoal bezel', hex: '#192229' }, { name: 'Beige housing', hex: '#d6ccb8' },
+      { name: 'Cream plastic', hex: '#ece3d1' }, { name: 'Phosphor green', hex: '#517c61' },
+      { name: 'Amber indicator', hex: '#efac3c' }, { name: 'Label orange', hex: '#c68d33' },
+      { name: 'Kiosk teal', hex: '#6cc2ad' }, { name: 'Mustard key', hex: '#ecbc78' }
+    ],
+    materials: 'Beige moulded plastic with vents, screws and worn edges; charcoal panels; curved green CRT glass; orange and amber indicator strips; stackable yellow, olive and charcoal hard cases; cassette tapes, cables and knit textiles, all under amber evening light.',
+    type: 'Sheet 01 letters its labels on physical plates (dark plate, condensed white capitals, orange strip); later sheets switch to plain overlays. This page uses VT323 for the phosphor screen, Space Grotesk for silkscreened hardware legends and Patrick Hand for handwritten tape labels, all open-licence and bundled locally.',
+    agents: 'Sheet 01 (Conversation) shows the city agent as a boxy cream robot with a smiling green CRT face, an olive scarf and an orange indicator light, talking with a resident by the river; a similar small robot sits on the Workshop bench. Sheet 03 (Mobile) puts a smaller version in a clamshell case beside the phone, captioned "Your City Agent On Hand". The 2026-09-19 review calls the repeated CRT motif promising but notes the pocket companion is not proven to be the same entity as the humanoid. No leaf badge is visible. Residents are painted humans in workwear, beanies and knit sweaters. No Guild resident is depicted, so the directory below lists names and proposed roles only.',
+    tradeoffs: [
+      { label: 'Map versus street', text: 'The overview (added 2026-09-19; all four cameras inspected, cross-sheet reconciliation pending) reads clearly: labelled W1, T1, L1, P1, S1 and D1, one large tree, a three-bay workshop and a cream tram with an orange stripe. But its buildings look like an ordinary contemporary city; the cassette identity lives mostly in interiors and devices, so at map scale the style is weak. Street scale works through amber light, reflections and glowing signs.' },
+      { label: 'Device and production cost', text: 'Proposed adaptation: keep the beige plastic, indicator colours and the robot agent at every tier. Lower tiers would remove screen glow, cable clutter and rain reflections; higher tiers could add scanlines and worn plastic edges. Clutter-heavy interiors are expensive to model and to keep readable.' },
+      { label: 'UI legibility', text: 'Kiosk and phone labels are partly garbled (the first phone tab and kiosk button are hard to read), so interface text needs a real typographic pass. The Browse, Book and Ask kiosk actions match the rest of the collection.' },
+      { label: 'Consistency', text: 'Sheet 01 uses physical label plates; later sheets use plain overlays, and footer captions clip on two sheets. A rugged CRT kiosk and robot coexist with a conventional slim phone: decide whether the phone is an external client or in-world hardware. Waterfront park and Rooftop show a suspension bridge, not the low North bridge.' },
+      { label: 'Strength', text: 'A coherent device language: every object, from kiosk to tabletop model, shares the same plastic-and-indicator vocabulary, and the CRT face offers a plausible identity anchor for A1.' }
+    ]
+  };
+  const LANDMARKS = [
+    'Map, Top-down, Diagonal and Street label the district: River (W) on the west with the North bridge at the top, Workshop W1 with three sawtooth bays, Tree Square T1 with one large tree, Library L1 with a rounded glass roof, park P1, downtown D1, and tram boulevard S1 with a cream tram with an orange stripe. Compass arrows mark north.',
+    'Workshop (CRT monitors, a small boxy robot on the bench), Home (CRTs and stacked hard cases, river view), Conversation (a resident with the CRT-faced robot by the river), Gathering (a riverside concert, elevated tram bridge behind).',
+    'Build mode (a glowing box outline with axis arrows on a rooftop plot), Transit (tram interior with teal seats and orange straps), Night and rain (amber-lit wet street, a tram-stop sign), Waterfront park (promenade, suspension bridge beyond).',
+    'Facility (a beige kiosk: Browse, Book, Ask), Mobile (a slim phone map and a clamshell case holding a small robot), Rooftop at sunset, AR tabletop (a hardware-edged district model with teal and orange pins).'
+  ];
+  const TAPES = [
+    { id: 'w-project', title: 'Agentnagar', sub: 'Project', c: '#c68d33' },
+    { id: 'w-style', title: 'The style', sub: 'Palette · type', c: '#6cc2ad' },
+    { id: 'w-views', title: 'Four views', sub: 'Concept sheets', c: '#ecbc78' },
+    { id: 'w-agents', title: 'Agents', sub: 'A1 · Guild', c: '#db8157' },
+    { id: 'w-trade', title: 'Trade-offs', sub: 'Candid log', c: '#517c61' },
+    { id: 'w-status', title: 'Status', sub: 'Review · links', c: '#efac3c' }
+  ];
+
+  /* ---------- fill sections ---------- */
+  $('project-slot').append(Kit.projectBlock());
+  A.district.forEach((d) => $('district').append(el('li', { text: `${d.id} ${d.name}: ${d.note}` })));
+  $('intent').textContent = C.intent;
+  C.principles.forEach((p) => $('principles').append(el('li', { text: p })));
+  C.palette.forEach((p) => $('palette').append(el('li', {}, [el('div', { class: 'sw', style: `background:${p.hex}`, 'aria-hidden': 'true' }), el('div', { text: p.name }), el('code', { text: p.hex })])));
+  $('materials').textContent = C.materials;
+  $('type').textContent = C.type;
+
+  const ORDER = ['tl', 'tr', 'bl', 'br'];
+  let sheetIdx = 0;
+  function showSheet(i) {
+    sheetIdx = i;
+    [...$('chan').children].forEach((b, j) => { b.setAttribute('aria-selected', String(j === i)); b.tabIndex = j === i ? 0 : -1; });
+    $('sheet-view').replaceChildren(Kit.sheetImg(S, i));
+    const sh = S.sheets[i];
+    $('sheet-cap').textContent = `CH ${String(i).padStart(2, '0')} · ${sh.title} (${sh.revision}). ${LANDMARKS[i]}`;
+    $('panels').replaceChildren(...ORDER.map((p, k) => el('figure', {}, [el('div', { class: 'crt-img' }, [Kit.sheetImg(S, i, p)]), el('figcaption', { text: Kit.PANEL_NAMES[i][k] })])));
+  }
+  S.sheets.forEach((sh, i) => {
+    const b = el('button', { type: 'button', role: 'tab', text: `CH ${String(i).padStart(2, '0')} ${sh.title}` });
+    b.addEventListener('click', () => showSheet(i));
+    b.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return; e.preventDefault(); e.stopPropagation();
+      const n = (sheetIdx + d + 4) % 4; showSheet(n); $('chan').children[n].focus();
+    });
+    $('chan').append(b);
+  });
+  showSheet(0);
+  $('concept').textContent = A.conceptNote;
+
+  const conv = el('div', { class: 'crt-img' }, [Kit.sheetImg(S, 1, 'bl')]);
+  $('ag-conv').prepend(conv);
+  $('ag-conv').querySelector('figcaption').textContent = `Sheet 01 Conversation (${S.sheets[1].revision}). Concept study.`;
+  $('ag-mobile').prepend(el('div', { class: 'crt-img' }, [Kit.sheetImg(S, 3, 'tr')]));
+  $('ag-mobile').querySelector('figcaption').textContent = `Sheet 03 Mobile (${S.sheets[3].revision}): clamshell companion. Concept study.`;
+  $('agents-text').textContent = C.agents;
+  $('a1-text').textContent = A.agentA1;
+  A.guild.forEach((g, i) => $('guild').append(el('li', {}, [el('span', { class: 'dim', text: String(i + 1).padStart(2, '0') }), el('span', { text: g.name }), el('span', { class: 'dim', text: g.role })])));
+  $('guild-note').textContent = A.guildNote;
+  C.tradeoffs.forEach((t) => $('tradeoffs').append(el('dt', { text: t.label }), el('dd', { text: t.text })));
+  $('status-slot').append(Kit.statusBlock(S));
+  Kit.mountNav($('nav-slot'), S);
+  $('under').textContent = `${S.number} ${S.name}. The machine is an illustrative interface for this page, not a concept sheet or planned product. ${A.status}`;
+
+  /* ---------- notes ---------- */
+  const dialog = Kit.notesDialog(S, C);
+  const openNotes = () => { if (!dialog.open) dialog.showModal(); };
+  $('notes-hw').addEventListener('click', openNotes);
+  $('notes-screen').addEventListener('click', openNotes);
+
+  /* ---------- rack ---------- */
+  const rack = $('rack');
+  const dir = $('dir');
+  const tapeBtns = TAPES.map((t, i) => {
+    const b = el('button', { class: 'tape', type: 'button', draggable: 'true', 'aria-pressed': 'false', 'aria-label': `Tape ${i + 1}: ${t.title}. Insert into deck.`, style: `--c:${t.c}` }, [
+      el('span', { class: 'lab' }, [el('small', { text: `Tape ${i + 1} · ${t.sub}` }), el('b', { text: t.title })]),
+      el('span', { class: 'side', text: 'A', 'aria-hidden': 'true' }),
+      el('span', { class: 'win2', 'aria-hidden': 'true' }, [el('i'), el('i')])
+    ]);
+    b.addEventListener('click', () => insert(i));
+    b.addEventListener('dragstart', (e) => { e.dataTransfer.setData('text/plain', String(i)); e.dataTransfer.effectAllowed = 'move'; });
+    rack.append(b);
+    dir.append(el('li', {}, [el('span', { text: String(i + 1) }), el('span', { text: t.title.toUpperCase() }), el('span', { class: 'dim', text: t.sub })]));
+    return b;
+  });
+  const slot = $('slot');
+  slot.addEventListener('dragover', (e) => { e.preventDefault(); slot.classList.add('drop'); });
+  slot.addEventListener('dragleave', () => slot.classList.remove('drop'));
+  slot.addEventListener('drop', (e) => { e.preventDefault(); slot.classList.remove('drop'); const i = +e.dataTransfer.getData('text/plain'); if (TAPES[i]) insert(i); });
+
+  /* ---------- deck state ---------- */
+  let loaded = -1, cursor = 0, busy = false, booted = false;
+  const screen = $('screen');
+  function setCounter(v) { $('digits').textContent = String(v).padStart(3, '0'); }
+  function hideAll() { TAPES.forEach((t) => { $(t.id).hidden = true; }); $('home').hidden = true; }
+
+  function insert(i) {
+    if (!booted) finishBoot();
+    if (busy) return;
+    cursor = i;
+    tapeBtns.forEach((b, j) => b.setAttribute('aria-pressed', String(j === i)));
+    const t = TAPES[i];
+    const deckTape = el('span', { class: 'tape in spin', style: `--c:${t.c}`, 'aria-hidden': 'true' }, [
+      el('span', { class: 'lab' }, [el('small', { text: `Tape ${i + 1} · ${t.sub}` }), el('b', { text: t.title })]),
+      el('span', { class: 'win2' }, [el('i'), el('i')])
+    ]);
+    slot.replaceChildren(deckTape);
+    $('led-tape').classList.add('on');
+    $('led-read').classList.add('on');
+    $('status-line').textContent = `TAPE ${i + 1} · ${t.title.toUpperCase()}`;
+    $('eject-screen').hidden = false;
+    const target = (i + 1) * 137 % 1000;
+    const show = () => {
+      $('load').hidden = true;
+      hideAll();
+      $(t.id).hidden = false;
+      $(t.id).scrollTop = 0;
+      loaded = i; busy = false;
+      $('led-read').classList.remove('on');
+      deckTape.classList.remove('spin');
+      setCounter(target);
+      $(t.id).querySelector('h2').focus({ preventScroll: true });
+    };
+    if (reduced) { show(); return; }
+    busy = true;
+    $('load-text').textContent = `LOADING TAPE ${i + 1}: ${t.title.toUpperCase()}`;
+    $('load').hidden = false;
+    const bar = $('load-bar');
+    const t0 = performance.now(); const dur = 750;
+    const step = (now) => {
+      const k = Math.min(1, (now - t0) / dur);
+      bar.style.width = (k * 100) + '%';
+      setCounter(Math.round(target * k));
+      if (k < 1) requestAnimationFrame(step); else show();
+    };
+    requestAnimationFrame(step);
+  }
+  function eject() {
+    if (loaded < 0 || busy) return;
+    const was = loaded;
+    loaded = -1;
+    hideAll();
+    $('home').hidden = false;
+    slot.innerHTML = '<span class="empty">Deck empty<br>insert a tape</span>';
+    tapeBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+    $('led-tape').classList.remove('on');
+    $('status-line').textContent = 'NO TAPE';
+    $('eject-screen').hidden = true;
+    setCounter(0);
+    tapeBtns[was].focus();
+  }
+  const move = (d) => insert(((loaded < 0 ? cursor - (d > 0 ? 1 : 0) : loaded) + d + TAPES.length) % TAPES.length);
+  $('k-play').addEventListener('click', () => insert(loaded < 0 ? cursor : loaded));
+  $('k-eject').addEventListener('click', eject);
+  $('eject-screen').addEventListener('click', eject);
+  $('k-prev').addEventListener('click', () => move(-1));
+  $('k-next').addEventListener('click', () => move(1));
+  $('scan-btn').addEventListener('click', () => {
+    const off = screen.classList.toggle('noscan');
+    $('scan-btn').setAttribute('aria-pressed', String(off));
+    $('scan-btn').textContent = off ? 'Scanlines on [S]' : 'Scanlines off [S]';
+  });
+  $('reboot').addEventListener('click', () => { if (loaded >= 0) { loaded = -1; } startBoot(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (dialog.open || e.metaKey || e.ctrlKey || e.altKey) return;
+    const tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    if (!booted) { if (e.key !== 'Tab' && e.key !== 'Shift') { e.preventDefault(); finishBoot(); } return; }
+    if (/^[1-6]$/.test(e.key)) { e.preventDefault(); insert(+e.key - 1); }
+    else if (e.key === 'e' || e.key === 'E' || e.key === 'Escape') { if (loaded >= 0) { e.preventDefault(); eject(); } }
+    else if (e.key === 'n' || e.key === 'N') { e.preventDefault(); openNotes(); }
+    else if (e.key === 's' || e.key === 'S') { e.preventDefault(); $('scan-btn').click(); }
+    else if ((e.key === 'ArrowRight' || e.key === 'ArrowLeft') && (e.target.closest('.rack') || e.target.closest('.transport') || e.target === document.body)) {
+      e.preventDefault();
+      if (e.target.closest('.rack')) { const i = tapeBtns.indexOf(e.target.closest('.tape')); tapeBtns[(i + (e.key === 'ArrowRight' ? 1 : -1) + 6) % 6].focus(); }
+      else move(e.key === 'ArrowRight' ? 1 : -1);
+    }
+  });
+
+  /* ---------- boot ---------- */
+  const LOG = [
+    'TAPE-OS BIOS  (illustrative)  MODEL 23',
+    'MEMORY TEST ........................ 640K OK',
+    'PHOSPHOR WARM-UP ................... OK',
+    'DETECTING TAPE DECK ................ 1 FOUND',
+    'READING DISTRICT TABLE ............. R1 B1 W1 T1 L1 S1',
+    `STYLE ${S.number} · ${S.name.toUpperCase()}`,
+    'SHEETS ON FILE ..................... ' + S.sheets.map((s) => s.revision).join(' '),
+    'GUILD DIRECTORY .................... ' + A.guild.length + ' ENTRIES',
+    '',
+    'READY. INSERT A TAPE.'
+  ];
+  let bootTimer = null;
+  function finishBoot() {
+    clearTimeout(bootTimer);
+    $('boot').hidden = true;
+    $('os').hidden = false;
+    booted = true;
+    if (loaded < 0) { hideAll(); $('home').hidden = false; }
+  }
+  function startBoot() {
+    booted = false;
+    hideAll();
+    slot.innerHTML = '<span class="empty">Deck empty<br>insert a tape</span>';
+    tapeBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+    $('led-tape').classList.remove('on'); $('status-line').textContent = 'NO TAPE'; $('eject-screen').hidden = true; setCounter(0);
+    if (reduced) { $('boot-log').textContent = LOG.join('\n'); finishBoot(); return; }
+    $('os').hidden = true;
+    $('boot').hidden = false;
+    screen.classList.remove('on'); void screen.offsetWidth; screen.classList.add('on');
+    const log = $('boot-log');
+    log.textContent = '';
+    let n = 0;
+    const tick = () => {
+      if (n < LOG.length) { log.textContent += LOG[n++] + '\n'; bootTimer = setTimeout(tick, 120); }
+      else bootTimer = setTimeout(finishBoot, 600);
+    };
+    bootTimer = setTimeout(tick, 350);
+  }
+  $('skip').addEventListener('click', finishBoot);
+  screen.addEventListener('click', (e) => { if (!booted && e.target.id !== 'skip') finishBoot(); });
+  startBoot();
+})();
+</script>
+</body>
+</html>

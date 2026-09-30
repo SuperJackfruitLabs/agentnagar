@@ -1,0 +1,15 @@
+{
+  "name": "Fake",
+  "order": 1,
+  "occupants": {"GuildAgent": {}, "CityRoleAgent": {}, "PersonalAgent": {}, "SimCitizen": {}},
+  "seats": {"desk": {}, "bench": {}, "cafe-table": {}, "reading-chair": {}},
+  "rooms": {"workshop": {}, "commons": {}, "reading-room": {}, "cafe": {}, "plaza": {}},
+  "exteriors": {"guild-hall": {}, "library": {}, "cafe": {}},
+  "props": {"tree": {}, "lamp": {}, "palm": {}, "bookshelf": {}},
+  "headlines": {"Working": {}, "Waiting": {}, "Queued": {}, "Idle": {}, "Done": {}, "Present": {},
+                "Offline": {}, "Error": {}, "Stale": {}, "Unknown": {}},
+  "badges": {"Ai": {}, "Simulation": {}},
+  "day_night": {},
+  "surfaces": {"far": {"icon_key": "chip"}, "near": {"max_lines": 3}, "open": {"overlay": "panel"}},
+  "declared_placeholders": []
+}

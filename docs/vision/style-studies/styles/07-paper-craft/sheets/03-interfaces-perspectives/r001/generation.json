@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "372e24aa02f6541bccce261f8c1ed10ac7ae0a3f3a71a4c5bbf89e78bee012d3",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "d9664af1b80f83bc3a2d24333766bb2af4c1f633dc3e05b103d3841b382a325b"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/originals/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

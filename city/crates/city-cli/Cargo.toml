@@ -1,0 +1,20 @@
+[package]
+name = "city-cli"
+version = "0.1.0"
+description = "The city command line: validate, run, inspect, diff and schema"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "city"
+path = "src/main.rs"
+
+[dependencies]
+city-contracts.workspace = true
+city-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+clap.workspace = true

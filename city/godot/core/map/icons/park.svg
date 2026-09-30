@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+	<!-- Park: a leaf on its stem, its midrib showing through. -->
+	<g transform="rotate(40 24 24)" fill="#FFFFFF">
+		<path fill-rule="evenodd" d="M24 3 C36 11 37 28 24 38 C11 28 12 11 24 3 Z M23.2 11 H24.8 V33 H23.2 Z"/>
+		<rect x="22.8" y="35" width="2.4" height="11" rx="1.2"/>
+	</g>
+</svg>

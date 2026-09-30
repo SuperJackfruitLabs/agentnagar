@@ -1,0 +1,24 @@
+{
+  "repo": { "branch": "count-tabs", "head": "48b082141918063d74e54f11e961ebf205d2b00b", "detached": false },
+  "base": { "ref": "origin/main", "sha": "c3050977e72b4e09e21cb43330e835a0e50b90fc", "reason": "upstream" },
+  "uncommitted": {
+    "files": [
+      { "path": "src/lib.rs", "oldPath": null, "status": "modified", "insertions": 1, "deletions": 1, "binary": false }
+    ],
+    "insertions": 1,
+    "deletions": 1
+  },
+  "committed": {
+    "files": [
+      { "path": "src/main.rs", "oldPath": null, "status": "modified", "insertions": 2, "deletions": 1, "binary": false },
+      { "path": "tests/count.rs", "oldPath": null, "status": "modified", "insertions": 17, "deletions": 0, "binary": false }
+    ],
+    "insertions": 19,
+    "deletions": 1,
+    "commits": [
+      { "sha": "48b082141918063d74e54f11e961ebf205d2b00b", "shortSha": "48b0821", "subject": "Print counts in wc's order", "author": "Sample agent", "committedAt": "2026-09-28T08:57:31.000Z" },
+      { "sha": "bd81a2931f7b02a7344cc4d2b976a0824b814add", "shortSha": "bd81a29", "subject": "Test tabs, blank lines and text that is not UTF-8", "author": "Sample agent", "committedAt": "2026-09-28T08:52:10.000Z" }
+    ]
+  },
+  "truncatedFiles": false
+}

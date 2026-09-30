@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "ed607821ad5d4dcf91fbf74328a2b350c440a3efe5f2ac8f84f0730341974f12",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/20-memphis-playful-geometry/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

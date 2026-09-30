@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "0e1723f8607ee8ea6b6f0cf16e7c7abcc3dd0b225a4319ecd02afef7a8f7e934",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "6b27bd74633ba5899b1c7e478d4a5da5cb0f42025fd83fb27ff027fdac7fe0b9"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/05-claymation/candidates/00-pass1.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

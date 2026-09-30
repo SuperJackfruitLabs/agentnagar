@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-style="03-ink">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ink and watercolor · Agentnagar sketchbook</title>
+<meta name="description" content="Style study 03, Ink and watercolor, shown as a travel sketchbook of Agentnagar's reference district.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<link rel="stylesheet" href="assets/sketchbook.css">
+</head>
+<body>
+<a class="skip" href="#project">Skip to the notes</a>
+
+<!-- Shared watercolour and ink filters, generated in the browser. -->
+<svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <filter id="bleed" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="12" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="11" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.9 1.2" result="ga"/>
+      <feComposite in="d" in2="ga" operator="in"/>
+    </filter>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="2" result="r"/>
+      <feDisplacementMap in="SourceGraphic" in2="r" scale="1.3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="desk">
+<main class="book" id="book">
+  <span class="ribbon" aria-hidden="true"></span>
+
+  <!-- Cover spread -->
+  <header class="cover">
+    <div class="cover-head">
+      <p class="hand kicker">Style study <span data-fill="number"></span> · a travel sketchbook</p>
+      <h1><span class="hand big">Agentnagar,</span> <span class="title-sub">in ink and watercolor</span></h1>
+      <p class="lede" data-fill="intent-short"></p>
+      <div class="cover-actions">
+        <button type="button" class="pen-btn" id="dusk" aria-pressed="false">Wash it for dusk</button>
+        <button type="button" class="pen-btn" id="notes-btn">Read as plain notes</button>
+      </div>
+    </div>
+    <aside class="itinerary" aria-label="Itinerary">
+      <p class="hand it-h">Itinerary</p>
+      <ol class="hand" id="itinerary"></ol>
+      <p class="it-f" id="it-f"></p>
+    </aside>
+    <figure class="hero" id="hero">
+      <svg id="hero-svg" viewBox="0 0 1200 560" role="img" aria-labelledby="hero-t hero-d">
+        <title id="hero-t">Illustrative ink sketch of the reference district from the south</title>
+        <desc id="hero-d">An original line drawing made for this page, not a concept sheet: the river and low three-span north bridge to the west, the brick Workshop with three sawtooth roof bays, one large shade tree in Tree Square, the Library with its rounded reading-room roof, and a tram on the two-track boulevard in front.</desc>
+      </svg>
+      <figcaption class="hand">Illustrative sketch drawn for this page · not a concept sheet · not to scale</figcaption>
+      <ol class="hero-key" aria-label="Landmarks in the sketch"></ol>
+    </figure>
+  </header>
+
+  <!-- 1 · Project -->
+  <section class="spread" id="project" data-core="project" aria-labelledby="h-project">
+    <div class="leaf left">
+      <p class="pg hand" aria-hidden="true">p. 2</p>
+      <h2 id="h-project"><span class="swash" data-wash="ochre"></span>Where this journey goes</h2>
+      <div id="project-slot"></div>
+    </div>
+    <aside class="leaf right margin-notes" aria-label="Margin notes">
+      <p class="note hand n1">An open maker village that could grow into a city, shared by people and agents.</p>
+      <svg class="doodle" viewBox="0 0 320 240" id="doodle-village" role="img" aria-label="Illustrative doodle: a small brick hall, a tree and a lamp post"></svg>
+      <p class="note hand n2">First slice: just walk the streets and watch the fourteen Guild agents at their work.</p>
+      <p class="note hand n3">“Agentnagar” is still a working name.</p>
+    </aside>
+  </section>
+
+  <!-- 2 · Style -->
+  <section class="spread" id="style" data-core="style" aria-labelledby="h-style">
+    <div class="leaf left">
+      <p class="pg hand" aria-hidden="true">p. 4</p>
+      <h2 id="h-style"><span class="swash" data-wash="teal"></span>How the city is drawn</h2>
+      <blockquote class="intent" data-fill="intent"></blockquote>
+      <p class="cite hand">from the style brief</p>
+      <h3 class="hand">Five rules I kept to</h3>
+      <ol class="principles" id="principles"></ol>
+    </div>
+    <div class="leaf right">
+      <h3 class="hand">Paint box <span class="aside">hex values sampled from the sheets, approximate</span></h3>
+      <ul class="paintbox" id="paintbox" aria-label="Palette swatches"></ul>
+      <h3 class="hand">Materials &amp; texture</h3>
+      <p id="materials"></p>
+      <h3 class="hand">Lettering</h3>
+      <p id="typeface"></p>
+      <p class="specimen" aria-hidden="true"><span class="sp-serif">WORKSHOP</span><span class="sp-hand">Tree Square →</span></p>
+    </div>
+  </section>
+
+  <!-- 3 · Views -->
+  <section class="spread views" id="views" data-core="views" aria-labelledby="h-views">
+    <div class="leaf full">
+      <p class="pg hand" aria-hidden="true">p. 6</p>
+      <h2 id="h-views"><span class="swash" data-wash="sage"></span>One district, four views</h2>
+      <p class="concept" id="concept-note"></p>
+      <div class="map-row">
+        <figure class="guide">
+          <svg id="guide-svg" viewBox="0 0 600 440" role="img" aria-labelledby="guide-t guide-d">
+            <title id="guide-t">Illustrative hand-drawn guide map of the reference district</title>
+            <desc id="guide-d">Original sketch map for this page, not a concept sheet. River along the west edge, north bridge, Workshop, Tree Square and Library in a row, tram boulevard to the south.</desc>
+          </svg>
+          <figcaption class="hand">My guide map · illustrative, not to scale</figcaption>
+        </figure>
+        <div class="legend">
+          <h3 class="hand">Six landmarks every sheet keeps</h3>
+          <p class="small">Choose one to circle it on the map.</p>
+          <ul id="landmarks" class="landmarks"></ul>
+          <p class="lm-note hand" id="lm-note" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="sheets" id="sheets"></div>
+      <h3 class="hand closer">Two close looks</h3>
+      <div class="details" id="details"></div>
+    </div>
+  </section>
+
+  <!-- 4 · Agents -->
+  <section class="spread" id="agents" data-core="agents" aria-labelledby="h-agents">
+    <div class="leaf left">
+      <p class="pg hand" aria-hidden="true">p. 10</p>
+      <h2 id="h-agents"><span class="swash" data-wash="rust"></span>Who guides you</h2>
+      <p id="a1-text"></p>
+      <p id="a1-shared" class="small"></p>
+      <div class="a1-crops" id="a1-crops"></div>
+    </div>
+    <div class="leaf right">
+      <h3 class="hand">The Guild, a roster to fill in</h3>
+      <p id="guild-intro"></p>
+      <ol class="roster" id="roster"></ol>
+      <p class="small hand-note" id="guild-note"></p>
+    </div>
+  </section>
+
+  <!-- 5 · Trade-offs -->
+  <section class="spread" id="tradeoffs" data-core="tradeoffs" aria-labelledby="h-trade">
+    <div class="leaf left">
+      <p class="pg hand" aria-hidden="true">p. 12</p>
+      <h2 id="h-trade"><span class="swash" data-wash="teal"></span>What works, what worries me</h2>
+      <dl class="ledger" id="ledger"></dl>
+    </div>
+    <div class="leaf right">
+      <figure class="hatch-demo">
+        <h3 class="hand">Hatching by device tier</h3>
+        <div class="tiers" role="group" aria-label="Hatching density">
+          <button type="button" class="pen-btn small-btn" data-tier="low" aria-pressed="false">Small screen</button>
+          <button type="button" class="pen-btn small-btn" data-tier="mid" aria-pressed="true">Middle</button>
+          <button type="button" class="pen-btn small-btn" data-tier="high" aria-pressed="false">High tier</button>
+        </div>
+        <svg id="hatch-svg" viewBox="0 0 360 222" role="img" aria-label="Illustrative Workshop elevation with adjustable hatching density"></svg>
+        <figcaption class="small">Illustrative only. The brief proposes fewer hatch lines and small marks on smaller screens and richer texture on higher tiers; nothing here is measured.</figcaption>
+      </figure>
+      <div class="residuals">
+        <h3 class="hand">From the repair record</h3>
+        <ul id="residuals"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · Status -->
+  <section class="spread status" id="status-sec" aria-labelledby="h-status">
+    <div class="leaf full">
+      <p class="pg hand" aria-hidden="true">p. 14</p>
+      <h2 id="h-status"><span class="swash" data-wash="ochre"></span>Where the sheets stand</h2>
+      <div class="card" id="status-slot"></div>
+    </div>
+  </section>
+
+  <footer class="spread endpaper" id="nav-slot" aria-label="Continue to other style pages">
+    <p class="hand onward">Continue the journey</p>
+  </footer>
+</main>
+</div>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script src="assets/sketch.js"></script>
+<script src="assets/page.js"></script>
+</body>
+</html>

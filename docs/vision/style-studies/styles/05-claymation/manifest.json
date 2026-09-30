@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "05-claymation",
+  "name": "Claymation",
+  "selected": {
+    "00-city-perspectives": "r003",
+    "01-living-community": "r004",
+    "02-creating-exploring": "r004",
+    "03-interfaces-perspectives": "r004"
+  },
+  "review_summary": "Revised and inspected concept sheets; approximate projection, proportions, small details and typography remain.",
+  "review_sources": [
+    "history/2026-09-20-first-ten/REPAIR.md"
+  ]
+}

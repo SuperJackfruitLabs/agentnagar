@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sha256": "a912a3d0024903e500c548007467a4166ea43482ba1d22311c34bbd4404d5981",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "a48139c7d8ac99e3a835c9039c508a08b1d37698bb1f8bf661654829228c7b73"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/02-creating-exploring-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png",
+    "../../00-city-perspectives/r003/image.png",
+    "../../01-living-community/r001/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

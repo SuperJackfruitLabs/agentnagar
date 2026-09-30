@@ -1,0 +1,22 @@
+{
+  "hall_wall": {"size": [4.02, 5.2, 0.46], "tris": 900, "nodes": ["wall"]},
+  "hall_window_wall": {"size": [4.02, 5.2, 0.46], "tris": 900, "nodes": ["wall"]},
+  "hall_door_wall": {"size": [3.2, 5.2, 1.52], "tris": 1200, "nodes": ["wall"]},
+  "hall_corner": {"size": [0.72, 5.32, 0.72], "tris": 400, "nodes": ["pier"]},
+  "hall_sawtooth_bay": {"size": [4.2, 2.8, 4.08], "tris": 1200, "nodes": ["roof"]},
+  "hall_sawtooth_gable": {"size": [4.1, 2.4, 0.36], "tris": 300, "nodes": ["gable"]},
+  "lib_wall_arch": {"size": [2.0, 8.0, 0.66], "tris": 900, "nodes": ["wall"]},
+  "lib_column": {"size": [0.6, 7.8, 0.3], "tris": 300, "nodes": ["column"]},
+  "lib_entrance": {"size": [3.5, 8.67, 2.36], "tris": 1500, "nodes": ["entrance"]},
+  "lib_vault": {"size": [20.4, 6.3, 18.86], "tris": 3500, "nodes": ["vault"]},
+  "lib_banner": {"size": [1.31, 4.33, 0.65], "tris": 400, "nodes": ["banner"]},
+  "tower_a": {"size": [11.84, 26.39, 11.99], "tris": 6000, "nodes": ["tower", "garden"]},
+  "tower_b": {"size": [11.87, 21.36, 11.91], "tris": 5000, "nodes": ["tower", "garden"]},
+  "house_a": {"size": [6.7, 8.25, 8.85], "tris": 3000, "nodes": ["house", "plants"]},
+  "house_b": {"size": [6.6, 8.42, 8.8], "tris": 3000, "nodes": ["house", "plants"]},
+  "house_c": {"size": [6.6, 8.62, 8.8], "tris": 3000, "nodes": ["house", "plants"]},
+  "shop_a": {"size": [5.14, 8.56, 9.04], "tris": 3000, "nodes": ["shop", "plants"]},
+  "tram_shelter": {"size": [4.75, 2.97, 2.32], "tris": 1000, "nodes": ["shelter"]},
+  "hall_door_leaves": {"size": [0.26, 3.0, 0.28], "tris": 200, "nodes": ["leaves"]},
+  "lib_door_leaves": {"size": [0.26, 3.0, 0.34], "tris": 200, "nodes": ["leaves"]}
+}

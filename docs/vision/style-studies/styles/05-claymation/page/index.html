@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" data-style="05-claymation">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claymation · the making of Agentnagar · style study 05</title>
+<meta name="description" content="Style study 05, Claymation, presented as a stop-motion making-of for the Agentnagar reference district.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<link rel="stylesheet" href="assets/clay.css">
+</head>
+<body>
+<a class="skip" href="#story">Skip to the story</a>
+
+<!-- Shared clay defs: filters, gradients, thumbprints and the illustrative A1 puppet -->
+<svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <filter id="clay" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="2" result="warp">
+        <animate class="boil" attributeName="seed" values="2;5;8;3" dur=".5s" calcMode="discrete" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="wobble"/>
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="9" result="grain"/>
+      <feDiffuseLighting in="grain" surfaceScale="1.4" lighting-color="#fff" result="lit"><feDistantLight azimuth="225" elevation="58"/></feDiffuseLighting>
+      <feComposite in="lit" in2="wobble" operator="in" result="litin"/>
+      <feBlend in="wobble" in2="litin" mode="multiply"/>
+    </filter>
+    <radialGradient id="g-brick" cx=".3" cy=".25" r=".9"><stop offset="0" stop-color="#e59a78"/><stop offset=".55" stop-color="#c8694a"/><stop offset="1" stop-color="#8f3f2b"/></radialGradient>
+    <radialGradient id="g-teal" cx=".3" cy=".25" r=".9"><stop offset="0" stop-color="#5f8e96"/><stop offset=".6" stop-color="#395259"/><stop offset="1" stop-color="#1c3740"/></radialGradient>
+    <radialGradient id="g-mustard" cx=".3" cy=".2" r=".9"><stop offset="0" stop-color="#f0b050"/><stop offset=".6" stop-color="#c56d21"/><stop offset="1" stop-color="#8c4712"/></radialGradient>
+    <radialGradient id="g-blue" cx=".3" cy=".2" r=".9"><stop offset="0" stop-color="#6c8cc0"/><stop offset=".6" stop-color="#3d5a8a"/><stop offset="1" stop-color="#27395a"/></radialGradient>
+    <radialGradient id="g-green" cx=".32" cy=".25" r=".85"><stop offset="0" stop-color="#b8bf6a"/><stop offset=".55" stop-color="#899347"/><stop offset="1" stop-color="#55602a"/></radialGradient>
+    <radialGradient id="g-cream" cx=".3" cy=".2" r=".95"><stop offset="0" stop-color="#fff6ea"/><stop offset=".6" stop-color="#f4dec7"/><stop offset="1" stop-color="#d7b797"/></radialGradient>
+    <radialGradient id="g-silver" cx=".35" cy=".2" r=".9"><stop offset="0" stop-color="#f4f4f6"/><stop offset=".55" stop-color="#b9bcc4"/><stop offset="1" stop-color="#7d818c"/></radialGradient>
+    <radialGradient id="g-water" cx=".4" cy=".3" r=".9"><stop offset="0" stop-color="#58b3dd"/><stop offset=".6" stop-color="#2288ba"/><stop offset="1" stop-color="#155f86"/></radialGradient>
+    <radialGradient id="g-skin" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#e8b48a"/><stop offset=".65" stop-color="#c98b5e"/><stop offset="1" stop-color="#9c6440"/></radialGradient>
+    <radialGradient id="g-wood" cx=".4" cy=".1" r="1"><stop offset="0" stop-color="#e0a468"/><stop offset=".6" stop-color="#b8743d"/><stop offset="1" stop-color="#7a4a24"/></radialGradient>
+    <symbol id="thumb" viewBox="-30 -22 60 44">
+      <g fill="none" stroke="#000" stroke-width="1.1" opacity=".5">
+        <ellipse rx="6" ry="4"/><ellipse rx="11" ry="7.5"/><ellipse rx="16" ry="11"/><ellipse rx="21" ry="14.5"/><path d="M-26 2 A26 18 0 0 1 24 -8"/>
+      </g>
+    </symbol>
+    <symbol id="puppet" viewBox="0 0 200 330">
+      <!-- legs and shoes -->
+      <rect x="66" y="232" width="28" height="70" rx="13" fill="url(#g-blue)"/>
+      <rect x="106" y="232" width="28" height="70" rx="13" fill="url(#g-blue)"/>
+      <ellipse cx="78" cy="306" rx="24" ry="13" fill="url(#g-wood)"/>
+      <ellipse cx="122" cy="306" rx="24" ry="13" fill="url(#g-wood)"/>
+      <!-- jacket -->
+      <path d="M52 170 C50 140 70 124 100 124 C130 124 150 140 148 170 L152 244 C152 256 140 260 100 260 C60 260 48 256 48 244 Z" fill="url(#g-blue)"/>
+      <path d="M100 138 V258" stroke="#27395a" stroke-width="2" opacity=".6"/>
+      <!-- left arm (resting) -->
+      <path d="M56 150 C34 170 32 206 44 226" stroke="url(#g-blue)" stroke-width="24" stroke-linecap="round" fill="none"/>
+      <circle cx="46" cy="230" r="12" fill="url(#g-skin)"/>
+      <!-- right arm (waving) -->
+      <g class="wave">
+        <path d="M144 150 C166 140 176 118 172 92" stroke="url(#g-blue)" stroke-width="24" stroke-linecap="round" fill="none"/>
+        <circle cx="172" cy="84" r="13" fill="url(#g-skin)"/>
+      </g>
+      <!-- badge -->
+      <circle cx="124" cy="184" r="15" fill="url(#g-cream)"/>
+      <path d="M118 188 C118 178 126 172 132 174 C132 182 126 188 118 188 Z" fill="#3f7a3a"/>
+      <text x="124" y="198" font-size="7" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" fill="#3a2a22">A1</text>
+      <!-- scarf -->
+      <path d="M62 128 C80 142 120 142 138 128 L140 144 C120 158 80 158 60 144 Z" fill="url(#g-mustard)"/>
+      <path d="M74 146 C72 170 76 196 70 214 L90 214 C94 194 92 168 92 150 Z" fill="url(#g-mustard)"/>
+      <path d="M72 150 h20 M72 164 h19 M72 178 h19 M71 192 h20 M70 206 h20" stroke="#8c4712" stroke-width="1.6" opacity=".45"/>
+      <!-- head -->
+      <g class="head">
+        <circle cx="54" cy="84" r="14" fill="#3a2418"/><circle cx="146" cy="84" r="14" fill="#3a2418"/>
+        <circle cx="50" cy="104" r="12" fill="#3a2418"/><circle cx="150" cy="104" r="12" fill="#3a2418"/>
+        <ellipse cx="100" cy="88" rx="48" ry="46" fill="url(#g-skin)"/>
+        <ellipse cx="80" cy="84" rx="12" ry="14" fill="#fff"/><ellipse cx="120" cy="84" rx="12" ry="14" fill="#fff"/>
+        <g class="eyes"><circle cx="83" cy="87" r="7" fill="#2a1a12"/><circle cx="123" cy="87" r="7" fill="#2a1a12"/><circle cx="85" cy="84" r="2.2" fill="#fff"/><circle cx="125" cy="84" r="2.2" fill="#fff"/></g>
+        <path d="M68 66 q12 -8 24 -2 M108 64 q12 -6 24 2" stroke="#3a2418" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <ellipse cx="68" cy="106" rx="9" ry="6" fill="#e0715a" opacity=".45"/><ellipse cx="132" cy="106" rx="9" ry="6" fill="#e0715a" opacity=".45"/>
+        <path d="M86 110 q14 14 28 0" stroke="#6b2d1c" stroke-width="4" stroke-linecap="round" fill="#8f3b2a"/>
+        <!-- hat -->
+        <path d="M50 74 C48 32 76 20 100 20 C124 20 152 32 150 74 C130 64 70 64 50 74 Z" fill="url(#g-teal)"/>
+        <path d="M48 72 C70 60 130 60 152 72 L150 84 C130 74 70 74 50 84 Z" fill="#2f4a51"/>
+        <path d="M62 66 V36 M74 62 V28 M86 60 V24 M100 60 V22 M114 60 V24 M126 62 V28 M138 66 V36" stroke="#1c3740" stroke-width="2" opacity=".5"/>
+        <circle cx="100" cy="16" r="15" fill="url(#g-teal)"/>
+        <path d="M92 10 l4 4 M102 6 l3 5 M106 16 l4 3 M92 20 l4 -2" stroke="#1c3740" stroke-width="1.6" opacity=".6"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="studio" id="top">
+  <div class="topbar">
+    <p class="crew-tag"><span data-num></span>/30 · Behind the scenes</p>
+    <button type="button" class="tape-btn" id="notes-btn" aria-haspopup="dialog">Read the notes</button>
+  </div>
+  <div class="studio-inner">
+    <div class="slate-col">
+      <div class="clapper" aria-hidden="true">
+        <div class="clap-top"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="clap-body">
+          <div class="cb-row"><span>PROD.</span><b>Agentnagar</b></div>
+          <div class="cb-grid">
+            <div><span>ROLL</span><b data-num></b></div>
+            <div><span>SCENE</span><b>District</b></div>
+            <div><span>TAKE</span><b id="slate-take"></b></div>
+          </div>
+          <div class="cb-row"><span>STYLE</span><b>Claymation</b></div>
+        </div>
+      </div>
+      <h1><span class="h-small">The making of</span><span class="h-big">Agentnagar</span><span class="h-sub">in clay</span></h1>
+      <p class="intro">A warm city that resembles a handmade stop-motion set: rounded sculpted forms, slight irregularities and tactile surfaces. Here is how the reference district was modelled, lit and shot, one frame at a time.</p>
+    </div>
+    <figure class="set">
+      <svg class="clay-set" viewBox="0 0 800 520" role="img" aria-labelledby="set-t set-d">
+        <title id="set-t">Illustrative clay set of the reference district</title>
+        <desc id="set-d">A tabletop model lit by a spotlight: a blue clay river on the left, a brick-red Workshop with three sawtooth bays, a lumpy green shade tree in Tree Square, a silver round-roofed Library, three small towers behind, a cream tram with a coral stripe in front, and a clay City Agent A1 puppet in a teal pompom hat and mustard scarf, waving.</desc>
+        <ellipse cx="400" cy="486" rx="380" ry="26" fill="#000" opacity=".35"/>
+        <g filter="url(#clay)">
+          <!-- table slab -->
+          <path d="M30 380 Q30 350 60 346 L740 346 Q772 350 772 380 L772 452 Q772 476 740 478 L60 478 Q30 476 30 452 Z" fill="url(#g-wood)"/>
+          <path d="M40 360 Q40 336 70 334 L730 334 Q762 336 762 360 L762 400 Q762 418 730 420 L70 420 Q40 418 40 400 Z" fill="url(#g-cream)"/>
+          <path d="M40 364 Q40 338 68 336 L170 336 C186 360 176 392 196 420 L70 420 Q40 418 40 400 Z" fill="url(#g-water)"/>
+          <path d="M62 372 q10 -6 20 0 t20 0 M90 396 q10 -6 20 0 t20 0" stroke="#bfe6f7" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- towers behind -->
+          <g opacity=".9">
+            <path d="M246 336 V210 Q246 200 256 200 H326 Q336 200 336 210 V336 Z" fill="url(#g-cream)"/>
+            <path d="M378 336 V186 Q378 176 388 176 H458 Q468 176 468 186 V336 Z" fill="url(#g-cream)"/>
+            <path d="M560 336 V204 Q560 194 570 194 H640 Q650 194 650 204 V336 Z" fill="url(#g-cream)"/>
+            <path d="M256 226 h70 M256 252 h70 M388 202 h70 M388 228 h70 M570 220 h70 M570 246 h70" stroke="#7aa0b8" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="266" cy="198" r="9" fill="url(#g-green)"/><circle cx="292" cy="194" r="11" fill="url(#g-green)"/><circle cx="318" cy="198" r="9" fill="url(#g-green)"/>
+            <circle cx="400" cy="174" r="10" fill="url(#g-green)"/><circle cx="428" cy="170" r="12" fill="url(#g-green)"/><circle cx="454" cy="174" r="9" fill="url(#g-green)"/>
+            <circle cx="584" cy="192" r="10" fill="url(#g-green)"/><circle cx="612" cy="188" r="11" fill="url(#g-green)"/><circle cx="638" cy="192" r="9" fill="url(#g-green)"/>
+          </g>
+          <!-- workshop -->
+          <path d="M206 372 V262 L262 214 V262 L318 214 V262 L374 214 V372 Q374 380 366 380 H214 Q206 380 206 372 Z" fill="url(#g-brick)"/>
+          <path d="M222 290 h30 v70 h-30 z M278 290 h30 v70 h-30 z M334 290 h30 v70 h-30 z" fill="#f4c36a" stroke="#6b2d1c" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M237 290 v70 M293 290 v70 M349 290 v70 M222 325 h30 M278 325 h30 M334 325 h30" stroke="#6b2d1c" stroke-width="3"/>
+          <!-- tree -->
+          <path d="M466 380 C470 340 462 318 470 290 L490 290 C496 318 488 344 494 380 Z" fill="url(#g-wood)"/>
+          <circle cx="440" cy="268" r="42" fill="url(#g-green)"/><circle cx="512" cy="262" r="44" fill="url(#g-green)"/><circle cx="478" cy="226" r="46" fill="url(#g-green)"/><circle cx="440" cy="232" r="30" fill="url(#g-green)"/><circle cx="522" cy="224" r="30" fill="url(#g-green)"/><circle cx="478" cy="282" r="34" fill="url(#g-green)"/>
+          <!-- library -->
+          <path d="M556 380 V290 C556 236 700 236 700 290 V380 Z" fill="url(#g-cream)"/>
+          <path d="M550 294 C550 226 706 226 706 294 C690 272 566 272 550 294 Z" fill="url(#g-silver)"/>
+          <path d="M594 380 V318 C594 290 662 290 662 318 V380 Z" fill="#f4c36a" stroke="#7d818c" stroke-width="4"/>
+          <path d="M616 380 V302 M640 380 V302 M594 340 h68" stroke="#7d818c" stroke-width="3"/>
+          <!-- tram -->
+          <path d="M120 462 V436 Q120 422 134 422 H470 Q498 422 506 440 L511 454 Q513 466 498 466 H130 Q120 466 120 462 Z" fill="url(#g-cream)"/>
+          <path d="M120 450 H510 V458 H120 Z" fill="#b75239"/>
+          <path d="M138 430 h34 v13 h-34 z M184 430 h34 v13 h-34 z M230 430 h34 v13 h-34 z M290 430 h34 v13 h-34 z M336 430 h34 v13 h-34 z M382 430 h34 v13 h-34 z M432 430 h38 v13 h-38 z" fill="#8fbfd6" stroke="#6a5a4c" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="170" cy="470" r="8" fill="#4a3b31"/><circle cx="460" cy="470" r="8" fill="#4a3b31"/>
+          <!-- little residents on the square -->
+          <g><circle cx="410" cy="384" r="7" fill="url(#g-skin)"/><rect x="403" y="390" width="14" height="22" rx="6" fill="#c8694a"/>
+          <circle cx="530" cy="382" r="7" fill="url(#g-skin)"/><rect x="523" y="388" width="14" height="24" rx="6" fill="url(#g-teal)"/>
+          <circle cx="720" cy="386" r="7" fill="url(#g-skin)"/><rect x="713" y="392" width="14" height="22" rx="6" fill="url(#g-mustard)"/></g>
+        </g>
+        <!-- thumbprints pressed into the clay -->
+        <g class="thumbs" opacity=".22">
+          <use href="#thumb" x="228" y="236" width="60" height="44"/>
+          <use href="#thumb" x="480" y="198" width="54" height="40"/>
+          <use href="#thumb" x="600" y="244" width="48" height="36"/>
+          <use href="#thumb" x="660" y="352" width="60" height="44"/>
+          <use href="#thumb" x="380" y="398" width="46" height="34"/>
+        </g>
+        <g class="set-puppet" filter="url(#clay)"><use href="#puppet" x="620" y="258" width="150" height="248"/></g>
+        <g class="set-labels" font-family="Fredoka, sans-serif" font-weight="700" font-size="15" text-anchor="middle">
+          <rect x="81" y="378" width="38" height="21" rx="9" fill="rgba(34,26,21,.78)"/><rect x="271" y="266" width="38" height="21" rx="9" fill="rgba(34,26,21,.78)"/><rect x="459" y="220" width="38" height="21" rx="9" fill="rgba(34,26,21,.78)"/><rect x="296" y="432" width="38" height="21" rx="9" fill="rgba(251,243,230,.9)"/>
+          <text x="100" y="394" fill="#e8f6fc">R1</text><text x="290" y="282" fill="#fff3e6">W1</text><text x="478" y="236" fill="#fbf7e0">T1</text><text x="628" y="286" fill="#6a5345">L1</text><text x="315" y="448" fill="#6a5345">S1</text>
+        </g>
+      </svg>
+      <figcaption>Illustrative clay set drawn for this page with SVG, not a concept sheet. Labels: R1 river, W1 Workshop, T1 Tree Square, L1 Library, S1 tram. The surfaces "boil" at 8 frames a second, like hand-animated clay (held still when reduced motion is on).</figcaption>
+    </figure>
+  </div>
+  <nav class="call-sheet" aria-label="Call sheet: jump to a department">
+    <ol>
+      <li><a href="#story"><b>01</b> The story</a></li>
+      <li><a href="#art"><b>02</b> Art department</a></li>
+      <li><a href="#set"><b>03</b> Set: four views</a></li>
+      <li><a href="#puppets"><b>04</b> Puppets</a></li>
+      <li><a href="#cadence"><b>05</b> Frame-rate test</a></li>
+      <li><a href="#director"><b>06</b> Director's notes</a></li>
+      <li><a href="#log"><b>07</b> Production log</a></li>
+      <li><a href="#credits"><b>08</b> Credits</a></li>
+    </ol>
+  </nav>
+</header>
+
+<main>
+  <section class="board" id="story" aria-labelledby="h-story" data-core="project">
+    <header class="board-head"><span class="tape">Scene 01</span><h2 id="h-story">The story we are shooting</h2></header>
+    <div class="storyboard" id="project-slot"></div>
+  </section>
+
+  <section class="board" id="art" aria-labelledby="h-art" data-core="style">
+    <header class="board-head"><span class="tape">Dept. 02</span><h2 id="h-art">Art department</h2></header>
+    <div class="art-grid">
+      <div class="card intent-card">
+        <h3>Intent <span class="hand">from the brief</span></h3>
+        <p class="lede">A warm city that resembles a handmade stop-motion set. Rounded sculpted forms, slight irregularities, and tactile surfaces give buildings and residents an approachable personality.</p>
+        <p>Architecture should retain useful distinctions despite its softness: workshops, homes, and public buildings need different silhouettes and entrances. Interiors can combine sculpted furniture with textile-like details and carefully arranged props.</p>
+      </div>
+      <div class="card principles-card">
+        <h3>Sculpting rules</h3>
+        <ol class="rules" id="principles">
+          <li><b>Soft but distinct.</b> Rounded forms, yet the sawtooth Workshop, the vaulted Library and the planted towers keep separate silhouettes and entrances.</li>
+          <li><b>Show the hand.</b> Slight irregularities, knit and crochet textures and thumb-pressed surfaces, never factory-smooth.</li>
+          <li><b>Faces carry it.</b> Big expressive eyes, clear gestures and a shared handmade look for people and agents alike.</li>
+          <li><b>Model at the overview, intimate at the street.</b> The city reads as a large physical model; homes and streets feel close and cosy.</li>
+          <li><b>Cadence is a separate choice.</b> The look does not require a low frame rate; motion is chosen for responsiveness and comfort.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="card jars-card">
+      <h3>Clay tubs <span class="hand">colours sampled from the concept sheets</span></h3>
+      <ul class="jars" id="palette"></ul>
+    </div>
+    <div class="art-grid">
+      <div class="card">
+        <h3>Materials and texture</h3>
+        <p>Modelling clay with visible tool marks and thumbprints; knit and crochet for hats, scarves and cardigans; textile cushions and throws; wooden benches and props; glossy water with sculpted ripples; small warm practical lights on the set at night.</p>
+      </div>
+      <div class="card type-card">
+        <h3>Typography</h3>
+        <p class="t-fredoka">Fredoka, rounded like a rolled coil</p>
+        <p class="t-nunito">Nunito for reading, soft and open</p>
+        <p class="t-hand">Patrick Hand for crew notes and tape labels</p>
+        <p class="small">The sheets themselves use a plain bold sans for panel captions and a rounded sans on the phone and kiosk UI.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="board board-dark" id="set" aria-labelledby="h-set" data-core="views">
+    <header class="board-head"><span class="tape">Dept. 03</span><h2 id="h-set">The set: one district, four views</h2></header>
+    <p class="concept" id="concept-note"></p>
+    <div class="projector">
+      <div class="screen-wrap">
+        <div class="screen" id="screen" aria-live="polite"></div>
+        <div class="gate" aria-hidden="true"></div>
+      </div>
+      <div class="deck">
+        <p class="counter"><span class="hand">frame</span> <b id="frame-no">01</b><span class="of">/16</span></p>
+        <p class="frame-title" id="frame-title"></p>
+        <p class="frame-note" id="frame-note"></p>
+        <div class="deck-btns" role="group" aria-label="Projector controls">
+          <button type="button" class="clay-btn" id="prev" aria-label="Previous frame">◀ Step</button>
+          <button type="button" class="clay-btn play" id="play" aria-pressed="false">Play</button>
+          <button type="button" class="clay-btn" id="next" aria-label="Next frame">Step ▶</button>
+        </div>
+        <p class="small hand-small">Arrow keys step frames when the film strip has focus. Play advances two frames a second.</p>
+      </div>
+    </div>
+    <div class="filmstrip" id="filmstrip" role="listbox" tabindex="0" aria-label="Film strip of the sixteen concept panels" aria-orientation="horizontal"></div>
+    <ul class="sheet-links" id="sheet-links"></ul>
+  </section>
+
+  <section class="board" id="puppets" aria-labelledby="h-pup" data-core="agents">
+    <header class="board-head"><span class="tape">Dept. 04</span><h2 id="h-pup">Puppet department</h2></header>
+    <div class="pup-grid">
+      <figure class="armature">
+        <svg viewBox="0 0 200 330" class="pup-svg" role="img" aria-labelledby="pup-t"><title id="pup-t">Illustrative clay puppet of City Agent A1: teal pompom hat, dark curls, big eyes, mustard scarf, blue jacket and a leaf A1 badge.</title><g filter="url(#clay)"><use href="#puppet"/></g></svg>
+        <figcaption class="hand">Our own sculpt, after the sheets. Illustrative.</figcaption>
+      </figure>
+      <div class="pup-text">
+        <p class="lede" id="a1-shared"></p>
+        <p>In the clay sheets A1 wears a <b>teal knit pompom hat</b> over dark curls, a chunky <b>mustard scarf</b> and a <b>blue jacket</b>, with large eyes and rosy cheeks. The leaf badge sits on the jacket; the repair record keeps that look in every close view and in the phone portrait.</p>
+        <p>A1 sculpts a small model of the sawtooth Workshop at the bench, reads at home with a sleeping cat, talks under the shade tree with a grey-curled resident holding a leaf mug, and helps her at the library kiosk. Clay faces are the style's biggest draw: the Conversation panel is where it is most appealing.</p>
+        <figure class="sheet-crop">
+          <div id="a1-crop"></div>
+          <figcaption class="small">Concept study crop: Conversation panel, Living community sheet.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="card callsheet">
+      <h3>Puppets not yet sculpted <span class="hand">Guild residents</span></h3>
+      <p class="small">The concept sheets do not show any Guild resident; the other puppets are unnamed residents. Proposed roles only. <span id="guild-note"></span></p>
+      <ol class="guild" id="guild"></ol>
+    </div>
+  </section>
+
+  <section class="board board-set" id="cadence" aria-labelledby="h-cad">
+    <header class="board-head"><span class="tape">Test 05</span><h2 id="h-cad">Frame-rate test</h2></header>
+    <p class="cad-intro">The brief is explicit: <em>"The visual style does not require a low animation frame rate; motion cadence should be chosen separately for responsiveness and comfort."</em> Same puppet, same walk, three cadences. Choose one.</p>
+    <div class="cad-stage">
+      <svg viewBox="0 0 900 260" class="cad-svg" role="img" aria-labelledby="cad-t">
+        <title id="cad-t">A clay A1 puppet walking along a wooden shelf, animated at the chosen frame rate (illustrative).</title>
+        <rect x="0" y="222" width="900" height="38" rx="8" fill="url(#g-wood)"/>
+        <g id="walker"><g filter="url(#clay)"><use href="#puppet" x="-60" y="30" width="120" height="198"/></g></g>
+      </svg>
+      <div class="cad-controls" role="radiogroup" aria-label="Frame rate">
+        <button type="button" role="radio" class="clay-btn" data-fps="8" aria-checked="false">8 fps <span>on threes</span></button>
+        <button type="button" role="radio" class="clay-btn" data-fps="12" aria-checked="true">12 fps <span>on twos</span></button>
+        <button type="button" role="radio" class="clay-btn" data-fps="60" aria-checked="false">Smooth <span>display rate</span></button>
+        <button type="button" class="clay-btn ghost" id="cad-toggle" aria-pressed="false">Pause</button>
+      </div>
+      <p class="small" id="cad-status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="board" id="director" aria-labelledby="h-dir" data-core="tradeoffs">
+    <header class="board-head"><span class="tape">Notes 06</span><h2 id="h-dir">Director's notes: strengths and trade-offs</h2></header>
+    <div class="notepad" id="tradeoffs"></div>
+  </section>
+
+  <section class="board" id="log" aria-labelledby="h-log">
+    <header class="board-head"><span class="tape">Log 07</span><h2 id="h-log">Production log</h2></header>
+    <div class="clipboard" id="status-slot"></div>
+  </section>
+</main>
+
+<footer class="credits" id="credits">
+  <div class="credits-roll">
+    <p class="cr-title">Credits</p>
+    <dl>
+      <dt>A study for</dt><dd>Agentnagar, by Super Jackfruit Labs</dd>
+      <dt>Concept sheets</dt><dd>Generated concept studies, reviewed and repaired</dd>
+      <dt>Clay set and puppet</dt><dd>Illustrative SVG made for this page</dd>
+      <dt>Type</dt><dd>Fredoka · Nunito · Patrick Hand</dd>
+    </dl>
+    <p class="cr-next">Now showing elsewhere</p>
+    <div id="nav-slot"></div>
+  </div>
+</footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script src="assets/clay.js"></script>
+</body>
+</html>

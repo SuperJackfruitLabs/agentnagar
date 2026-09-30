@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "3b96919459ca676d1b2838a48e5ff4f987933f1f58640f625b67f0e87e10cb8d",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "b3bdaf92f582eb588d1d93099d3daf9db3737e6a1db8451944a8137103506f70"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/07-paper-craft/03-interfaces-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/candidates/03-pass3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

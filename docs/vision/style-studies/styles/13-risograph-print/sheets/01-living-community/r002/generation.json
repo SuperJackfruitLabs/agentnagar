@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "6f4bffdc5d9858ed7a854d0decda99c09afdba69867b1b4a5d8d8bb1dc730684",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "83074b8b898435b08be058fe7abcb1796927da118ba4cd4138eac3c22cbf0e10"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/13-risograph-print/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

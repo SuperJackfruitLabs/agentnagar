@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "8502eef966a238fc562628edd71688826e648d175270e1fc409934acff2d7106",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "092465d1ea3dec837a039e37992b38fcb29d737f0f1723922d404a74c70d0b4e"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/11-low-poly-tropical-diorama/00-city-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-19/11-low-poly-tropical-diorama/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

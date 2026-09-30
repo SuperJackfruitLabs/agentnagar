@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en" data-style="24-dieselpunk-civic-works">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Civic Works Control Room · 24 Dieselpunk civic works</title>
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root{
+  --steel:#4d4f4f; --soot:#130f0c; --brick:#8c5531; --brass:#b3894b; --lamp:#f3d1ac; --leather:#4b382b;
+  --navy:#324751; --river:#366982; --parch:#efe4cc; --ink:#231a12; --sodium:#f5a54a;
+  --sign:'Big Shoulders Display','Archivo Black',Impact,sans-serif;
+  --sten:'Staatliches','Big Shoulders Display',Impact,sans-serif;
+  --serif:'Old Standard TT','EB Garamond',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --glow:1;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{background:var(--soot)}
+body{margin:0;color:#eadcc2;font:400 1.06rem/1.6 var(--serif);min-height:100vh;overflow-x:hidden;
+  background:
+   radial-gradient(ellipse 60% 40% at 18% 0%,rgba(245,165,74,calc(.28*var(--glow))),transparent 70%),
+   radial-gradient(ellipse 50% 35% at 85% 8%,rgba(245,165,74,calc(.2*var(--glow))),transparent 70%),
+   radial-gradient(ellipse 80% 50% at 50% 100%,rgba(140,85,49,calc(.25*var(--glow))),transparent 70%),
+   linear-gradient(#1f1b17,#15110e);transition:--glow .6s}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;mix-blend-mode:multiply;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .08 0 0 0 0 .06 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+body.dark{--glow:.15}
+.room{position:relative;z-index:1;width:min(1220px,calc(100% - 24px));margin:0 auto;padding:18px 0 40px}
+img{max-width:100%;display:block}
+a{color:var(--lamp)}
+:focus-visible{outline:3px solid var(--sodium);outline-offset:3px}
+button{font:inherit;color:inherit}
+
+/* riveted steel */
+.steel{position:relative;border-radius:10px;background:linear-gradient(170deg,#5d605f 0%,#4d4f4f 35%,#3d3f3f 100%);box-shadow:inset 0 1px 0 #ffffff26,inset 0 -3px 0 #0005,0 10px 26px #000a}
+.steel::before{content:"";position:absolute;inset:6px;pointer-events:none;border-radius:6px;
+  --r:radial-gradient(circle,#c9c6b8 0 1.6px,#6b6c68 2.2px,#1d1d1b 3px,transparent 3.6px);
+  background:var(--r) left top/26px 10px repeat-x,var(--r) left bottom/26px 10px repeat-x,var(--r) left top/10px 26px repeat-y,var(--r) right top/10px 26px repeat-y}
+.steel::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:.35;
+  background:repeating-linear-gradient(95deg,transparent 0 3px,#ffffff08 3px 4px),linear-gradient(transparent 60%,rgba(19,15,12,.55))}
+
+/* header plaque */
+.plaque{padding:26px 34px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center}
+.gear{width:84px;height:84px;color:var(--brass)}
+.gear.spin{animation:rot 14s linear infinite}.gear.rev{animation-direction:reverse}
+@keyframes rot{to{transform:rotate(360deg)}}
+.cast{text-align:center}
+.cast p{margin:0;font:700 .82rem/1.2 var(--sten);letter-spacing:.34em;color:#f0d49e}
+.cast h1{margin:.2rem 0 .1rem;font:900 clamp(2rem,5.4vw,4.4rem)/.9 var(--sign);letter-spacing:.04em;text-transform:uppercase;
+  background:linear-gradient(180deg,#f3d9a6 0%,#c69a55 45%,#7d5a2a 55%,#d8b173 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 0 #1b140c) drop-shadow(0 0 calc(18px*var(--glow)) rgba(245,165,74,.35))}
+.cast .sub{font:400 1.02rem/1.4 var(--serif);letter-spacing:0;color:#e3d3b5;margin-top:.5rem}
+
+/* toolbar row */
+.ops{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:18px 0}
+.manual{appearance:none;border:0;cursor:pointer;padding:14px 20px 12px;border-radius:6px;background:linear-gradient(#c79a55,#8a6530);color:#1b140c;font:700 1.05rem/1 var(--sten);letter-spacing:.14em;box-shadow:inset 0 1px 0 #f3d9a6,0 4px 0 #4a3418,0 8px 14px #0008}
+.manual:hover{filter:brightness(1.08)}
+.manual:active{transform:translateY(3px);box-shadow:inset 0 1px 0 #f3d9a6,0 1px 0 #4a3418}
+.toggles{display:flex;gap:18px;flex-wrap:wrap}
+.toggle{appearance:none;border:0;background:none;cursor:pointer;display:flex;align-items:center;gap:10px;color:#e3d3b5;font:700 .9rem/1.1 var(--sten);letter-spacing:.14em;padding:4px}
+.toggle .sw{position:relative;width:34px;height:52px;border-radius:6px;background:linear-gradient(#2a2b2b,#161615);box-shadow:inset 0 2px 5px #000,0 1px 0 #ffffff22}
+.toggle .sw::after{content:"";position:absolute;left:9px;width:16px;height:26px;border-radius:5px 5px 8px 8px;background:linear-gradient(90deg,#8e8f8a,#e3e1d8 45%,#6d6e6a);top:4px;transition:top .18s,transform .18s}
+.toggle[aria-pressed="false"] .sw::after{top:22px;transform:scaleY(-1)}
+.toggle .pl{width:10px;height:10px;border-radius:50%;background:#5a3b1b}
+.toggle[aria-pressed="true"] .pl{background:var(--sodium);box-shadow:0 0 10px var(--sodium)}
+
+/* console: gauges + levers */
+.console{padding:26px 28px 22px}
+.label-strip{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:700 .78rem/1.2 var(--sten);letter-spacing:.26em;color:var(--lamp);opacity:.9;margin:0 4px 14px}
+.gauges{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:22px}
+.gauge{margin:0;text-align:center}
+.gauge svg{width:100%;max-width:150px;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 6px 8px #000a)}
+.needle{transform-origin:100px 100px;transition:transform 1.4s cubic-bezier(.3,1.6,.5,1)}
+.gauge figcaption{font:700 .86rem/1.2 var(--sten);letter-spacing:.16em;color:#e3d3b5;margin-top:4px}
+.gauge figcaption b{display:block;font:700 1.25rem/1.1 var(--mono);color:var(--lamp);letter-spacing:0}
+.levers{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;padding:18px 16px 14px;border-radius:8px;background:linear-gradient(#2b2c2c,#1d1e1e);box-shadow:inset 0 3px 10px #000c}
+.lever{appearance:none;border:0;background:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px;padding:6px 2px;touch-action:none;border-radius:8px}
+.lever .lampL{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#8a5a2a,#3b2410 70%);box-shadow:inset 0 0 0 3px #7a6a52,0 0 0 2px #1a1a18;transition:background .25s,box-shadow .25s}
+.lever[aria-pressed="true"] .lampL{background:radial-gradient(circle at 40% 35%,#fff3d6,#f5a54a 45%,#b8641c 80%);box-shadow:inset 0 0 0 3px #b3894b,0 0 0 2px #1a1a18,0 0 22px calc(10px*var(--glow)) rgba(245,165,74,.55)}
+.lever .track{position:relative;width:26px;height:120px;border-radius:14px;background:linear-gradient(90deg,#0c0c0b,#262625 50%,#0c0c0b);box-shadow:inset 0 2px 6px #000,0 0 0 3px #5b5d5c,0 0 0 5px #1b1b1a}
+.lever .arm{position:absolute;left:50%;top:10px;width:12px;height:52px;margin-left:-6px;border-radius:4px;background:linear-gradient(90deg,#6d6e6a,#e3e1d8 45%,#6d6e6a);transition:top .35s cubic-bezier(.5,1.6,.4,1)}
+.lever .arm::before{content:"";position:absolute;left:50%;top:-18px;width:40px;height:40px;margin-left:-20px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff1c9 0 8%,#d6a85e 30%,#8a5f28 70%,#4a3016 100%);box-shadow:0 5px 8px #000a}
+.lever[aria-pressed="true"] .arm{top:62px}
+.lever .tag{display:block;min-width:100%;padding:7px 6px 6px;border-radius:3px;background:linear-gradient(#f0e6cf,#d7c7a3);color:#241a10;font:400 1rem/1 var(--sten);letter-spacing:.12em;text-align:center;box-shadow:0 2px 0 #6b5a3c,inset 0 0 0 1px #8c7a55}
+.lever .tag small{display:block;font:700 .66rem/1.2 var(--mono);letter-spacing:.06em;color:#5a4a33;margin-bottom:2px}
+.lever:hover .arm::before{filter:brightness(1.12)}
+.hint{margin:12px 4px 0;font:400 .96rem/1.4 var(--serif);color:#d8c7a6}
+kbd{font:700 .82rem/1 var(--mono);background:#2a2b2b;color:var(--lamp);border-radius:3px;padding:2px 5px;box-shadow:0 2px 0 #000}
+
+/* inspection hatch */
+.bay{margin-top:26px;padding:22px}
+.bay-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:0 6px 12px}
+.bay-head .lbl{font:700 .82rem/1 var(--sten);letter-spacing:.26em;color:var(--lamp)}
+.bay-head .now{font:700 1.02rem/1 var(--mono);color:#f3d1ac}
+.hatch{position:relative;border-radius:6px;overflow:hidden;background:var(--parch);color:var(--ink);box-shadow:inset 0 0 0 6px #2a2520,inset 0 0 40px rgba(75,56,43,.35);min-height:420px}
+.doors{position:absolute;inset:0;pointer-events:none;z-index:3}
+.door{position:absolute;top:0;bottom:0;width:50.5%;background:linear-gradient(90deg,#3d3f3f,#5d605f 50%,#3d3f3f);transition:transform .38s cubic-bezier(.7,0,.3,1);
+  background-image:radial-gradient(circle,#c9c6b8 0 1.6px,#1d1d1b 3px,transparent 3.6px),repeating-linear-gradient(0deg,#0000 0 60px,#0004 60px 62px),linear-gradient(90deg,#3d3f3f,#5d605f 50%,#3d3f3f);background-size:24px 24px,auto,auto}
+.door.l{left:0;transform:translateX(-101%);box-shadow:inset -6px 0 0 #2a2b2b}
+.door.r{right:0;transform:translateX(101%);box-shadow:inset 6px 0 0 #2a2b2b}
+.closed .door{transform:none}
+.sheet{padding:30px 38px 36px;position:relative}
+.sheet::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:radial-gradient(ellipse at 10% 0%,rgba(140,85,49,.18),transparent 50%),radial-gradient(ellipse at 100% 100%,rgba(75,56,43,.2),transparent 45%)}
+.wo{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:3px double #6b5a3c;padding-bottom:8px;margin-bottom:16px;font:700 .8rem/1.2 var(--mono);color:#5a4a33;letter-spacing:.06em;text-transform:uppercase}
+.sheet h2{font:900 clamp(1.9rem,4vw,3rem)/1 var(--sign);text-transform:uppercase;letter-spacing:.02em;margin:0 0 .8rem;color:#2c2118}
+.sheet h3{font:400 1.35rem/1.1 var(--sten);letter-spacing:.1em;color:#7a4626;margin:1.4rem 0 .5rem}
+.sheet p{max-width:78ch;margin:.4rem 0 .8rem}
+.sheet a{color:#7a3f18}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:10px 34px}
+.plist{counter-reset:p;list-style:none;padding:0;margin:0}
+.plist li{position:relative;padding-left:3rem;margin:.2rem 0 .8rem}
+.plist li::before{counter-increment:p;content:counter(p);position:absolute;left:0;top:.05rem;width:2.1rem;height:2.1rem;border-radius:50%;display:grid;place-items:center;font:700 1rem/1 var(--sten);color:#fff4dc;background:radial-gradient(circle at 35% 30%,#d6a85e,#7a5424);box-shadow:0 2px 0 #3b2812}
+.swatches{list-style:none;padding:0;margin:.4rem 0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.swatches li{border:2px solid #6b5a3c;border-radius:4px;background:#f7efdc;padding:6px;font-size:.92rem;line-height:1.25}
+.swatches .chip{height:56px;border-radius:2px;margin-bottom:6px;box-shadow:inset 0 0 0 1px #0003}
+.swatches code{font:700 .86rem/1 var(--mono)}
+.kit-project .kit-tagline{font:400 1.45rem/1.3 var(--serif);font-style:italic;margin-top:0}
+.kit-project dl{display:grid;grid-template-columns:max-content 1fr;gap:.4rem 1.2rem;border-top:1px solid #b9a67d;padding-top:.8rem}
+.kit-project dt{font:400 1.02rem/1.5 var(--sten);letter-spacing:.1em;color:var(--brick)}
+.kit-project dd{margin:0}
+.kit-small{font-size:.92rem;color:#4b3b2a}
+.district{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:.4rem 0}
+.district li{border-left:5px solid var(--brick);background:#f7efdc;padding:8px 12px;font-size:.95rem}
+.district b{font:400 1.05rem/1.2 var(--sten);letter-spacing:.08em;display:block}
+.yard{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.yard button{appearance:none;border:2px solid #2c2118;background:#f7efdc;color:#2c2118;border-radius:3px;padding:8px 12px 6px;font:400 1rem/1 var(--sten);letter-spacing:.1em;cursor:pointer}
+.yard button[aria-selected="true"]{background:#2c2118;color:var(--lamp)}
+.plate{border:8px solid #3d3326;border-radius:3px;box-shadow:0 0 0 2px #b3894b,0 8px 18px rgba(0,0,0,.35);background:#000}
+.panels4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.panels4 figure{margin:0}.panels4 figcaption,.figs figcaption{font-size:.88rem;color:#4b3b2a;margin-top:4px}
+.concept{font-style:italic;font-size:.92rem;color:#4b3b2a}
+.figs{display:grid;grid-template-columns:220px 1fr 1fr;gap:16px;align-items:start}
+.figs figure{margin:0}
+.roster{columns:2;column-gap:34px;padding:0;list-style:none;margin:.4rem 0}
+.roster li{break-inside:avoid;padding:.35rem 0;border-bottom:1px dashed #b9a67d;display:grid;grid-template-columns:2.6rem 1fr}
+.roster li span{font:700 .9rem/1.6 var(--mono);color:var(--brick)}
+.roster li i{grid-column:2;font-size:.92rem;color:#4b3b2a}
+.ledger{border-collapse:collapse;width:100%}
+.ledger div{display:grid;grid-template-columns:230px 1fr;gap:18px;padding:12px 0;border-top:1px solid #b9a67d}
+.ledger dt{font:400 1.2rem/1.2 var(--sten);letter-spacing:.08em;color:var(--brick)}
+.ledger dd{margin:0}
+.kit-status .kit-summary{font:400 1.3rem/1.45 var(--serif);font-style:italic;border-left:6px solid var(--brick);padding-left:14px;margin-top:0}
+.kit-status .kit-concept{font-size:.92rem;color:#4b3b2a}
+.kit-status ul{padding-left:1.2rem}
+
+/* nav as line signs */
+.signs{margin-top:26px;padding:18px 22px}
+.signs .kit-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:12px}
+.kit-nav a{display:block;text-decoration:none;padding:14px 18px 12px;border-radius:4px;background:#1d2a30;color:#f3e6cc;font:400 1.15rem/1.15 var(--sten);letter-spacing:.1em;box-shadow:inset 0 0 0 2px #b3894b,inset 0 0 0 5px #1d2a30,inset 0 0 0 6px #b3894b88,0 6px 12px #000a}
+.kit-nav a:hover{background:#274050}
+.kit-nav .kit-index{background:var(--brick);color:#fff1dc}
+.kit-nav .kit-next{text-align:right}
+.foot{font-size:.92rem;color:#cdbb99;margin:22px 6px 0;max-width:95ch}
+
+/* dialog */
+.kit-dialog{width:min(900px,calc(100% - 20px));max-height:90vh;padding:0;border:10px solid #4d4f4f;border-radius:8px;background:var(--parch);color:var(--ink);box-shadow:0 0 0 2px #b3894b,0 30px 80px #000}
+.kit-dialog::backdrop{background:rgba(10,8,6,.8)}
+.kit-dialog .kit-close{position:sticky;top:0;float:right;margin:12px;background:#2c2118;color:var(--lamp);border:0;border-radius:3px;padding:10px 14px 8px;font:400 1rem/1 var(--sten);letter-spacing:.12em;cursor:pointer;z-index:2}
+.kit-notes{padding:12px 28px 28px}
+.kit-notes h1,.kit-notes h2{font-family:var(--sign);font-weight:900;text-transform:uppercase}
+.kit-notes h2{color:var(--brick);border-bottom:2px solid #b9a67d}
+.kit-notes a{color:#7a3f18}
+.kit-notes .kit-nav a{color:#f3e6cc}.kit-notes .kit-nav .kit-index{color:#fff1dc}
+.kit-notes figure{margin:0 0 14px}.kit-notes figcaption{font-size:.9rem;color:#4b3b2a}
+.kit-palette{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px 16px}
+.kit-swatch{display:inline-block;width:1em;height:1em;vertical-align:-.12em;box-shadow:0 0 0 1px #0006}
+.kit-notes dt{font-weight:700;color:var(--brick)}.kit-notes dd{margin:0 0 .6rem}
+
+@media (max-width:980px){
+  .levers{grid-template-columns:repeat(3,1fr);row-gap:22px}
+  .gauges{grid-template-columns:repeat(2,1fr)}
+  .figs{grid-template-columns:1fr 1fr}.figs figure:first-child{grid-column:1/-1;max-width:220px}
+  .district{grid-template-columns:1fr 1fr}
+  .swatches{grid-template-columns:repeat(2,1fr)}
+  .panels4{grid-template-columns:1fr 1fr}
+  .cols{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .room{width:calc(100% - 16px);padding-top:8px}
+  .plaque{grid-template-columns:1fr;padding:22px 18px 18px;gap:8px}
+  .plaque .gear{display:none}
+  .console{padding:20px 14px 16px}
+  .levers{grid-template-columns:repeat(2,1fr);padding:16px 8px}
+  .bay{padding:22px 12px 14px}
+  .sheet{padding:22px 18px 26px}
+  .figs,.district{grid-template-columns:1fr}
+  .roster{columns:1}
+  .ledger div{grid-template-columns:1fr;gap:4px}
+  .kit-project dl{grid-template-columns:1fr}
+  .signs .kit-nav{grid-template-columns:1fr}
+  .kit-nav .kit-next{text-align:left}
+  .gauge svg{max-width:130px}
+}
+@media (prefers-reduced-motion:reduce){
+  .gear.spin{animation:none}
+  .needle,.lever .arm,.door,.toggle .sw::after,.lever .lampL{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="room">
+  <header class="steel plaque">
+    <svg class="gear" id="gear1" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M44 4h12l2 12 8 3 10-7 8 8-7 10 3 8 12 2v12l-12 2-3 8 7 10-8 8-10-7-8 3-2 12H44l-2-12-8-3-10 7-8-8 7-10-3-8-12-2V44l12-2 3-8-7-10 8-8 10 7 8-3z"/><circle cx="50" cy="50" r="16" fill="#2a2520"/><circle cx="50" cy="50" r="7" fill="currentColor"/></svg>
+    <div class="cast">
+      <p>Agentnagar · Style study No. 24</p>
+      <h1>Civic Works<br>Control Room</h1>
+      <p class="sub">Dieselpunk civic works. Throw a lever to open an inspection hatch. The control room is a presentation device for comparing styles; no such department, plant or system is planned.</p>
+    </div>
+    <svg class="gear rev" id="gear2" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M44 4h12l2 12 8 3 10-7 8 8-7 10 3 8 12 2v12l-12 2-3 8 7 10-8 8-10-7-8 3-2 12H44l-2-12-8-3-10 7-8-8 7-10-3-8-12-2V44l12-2 3-8-7-10 8-8 10 7 8-3z"/><circle cx="50" cy="50" r="16" fill="#2a2520"/><circle cx="50" cy="50" r="7" fill="currentColor"/></svg>
+  </header>
+
+  <div class="ops">
+    <button class="manual" type="button" id="manual">Read the notes · operator's manual</button>
+    <div class="toggles">
+      <button class="toggle" type="button" id="t-lamps" aria-pressed="true"><span class="sw" aria-hidden="true"></span><span class="pl" aria-hidden="true"></span>Sodium lamps</button>
+      <button class="toggle" type="button" id="t-mach" aria-pressed="true"><span class="sw" aria-hidden="true"></span><span class="pl" aria-hidden="true"></span>Machinery</button>
+    </div>
+  </div>
+
+  <section class="steel console" aria-label="Control console">
+    <div class="label-strip"><span>Plant readings · from the style record</span><span>Illustrative instruments</span></div>
+    <div class="gauges" id="gauges"></div>
+    <div class="label-strip"><span id="lever-label">Section levers · throw one to open its hatch</span><span>Keys <kbd>1</kbd>–<kbd>6</kbd></span></div>
+    <div class="levers" id="levers" role="group" aria-labelledby="lever-label"></div>
+    <p class="hint">Click, tap or pull a lever down; Enter or Space throws the focused lever; <kbd>←</kbd> <kbd>→</kbd> move along the bank; <kbd>M</kbd> opens the manual.</p>
+  </section>
+
+  <section class="steel bay" aria-label="Inspection hatch">
+    <div class="bay-head"><span class="lbl">Inspection hatch</span><span class="now" id="now" aria-live="polite"></span></div>
+    <div class="hatch" id="hatch">
+      <div class="doors" aria-hidden="true"><div class="door l"></div><div class="door r"></div></div>
+
+      <article class="sheet" id="s-project">
+        <div class="wo"><span>Work order 24-1</span><span>Subject: the city</span></div>
+        <h2 tabindex="-1">Agentnagar</h2>
+        <div id="project-slot"></div>
+        <h3>The reference district</h3>
+        <ul class="district" id="district"></ul>
+      </article>
+
+      <article class="sheet" id="s-style" data-core="style" hidden>
+        <div class="wo"><span>Work order 24-2</span><span>Subject: the style</span></div>
+        <h2 tabindex="-1">Brick, iron and lamplight</h2>
+        <p id="intent"></p>
+        <div class="cols">
+          <div><h3>Principles</h3><ol class="plist" id="principles"></ol></div>
+          <div><h3>Palette, sampled from the sheets</h3><ul class="swatches" id="palette"></ul></div>
+        </div>
+        <div class="cols">
+          <div><h3>Materials and texture</h3><p id="materials"></p></div>
+          <div><h3>Typography</h3><p id="type"></p></div>
+        </div>
+      </article>
+
+      <article class="sheet" id="s-views" data-core="views" hidden>
+        <div class="wo"><span>Work order 24-3</span><span>Subject: four views</span></div>
+        <h2 tabindex="-1">One district, four sheets</h2>
+        <div class="yard" role="tablist" aria-label="Concept sheets" id="yard"></div>
+        <div class="plate" id="sheet-view"></div>
+        <p id="sheet-cap"></p>
+        <div class="panels4" id="panels4"></div>
+        <p class="concept" id="concept"></p>
+      </article>
+
+      <article class="sheet" id="s-agents" data-core="agents" hidden>
+        <div class="wo"><span>Work order 24-4</span><span>Subject: agents</span></div>
+        <h2 tabindex="-1">City Agent A1 and the Guild</h2>
+        <div class="figs">
+          <figure>
+            <svg viewBox="0 0 220 250" role="img" aria-labelledby="rbt" style="width:100%;height:auto;background:#2a2520;border-radius:4px">
+              <title id="rbt">Illustrative drawing after sheet 01: a riveted metal robot head with round brass lamp eyes, above a long work coat with a gear emblem and a ledger under its arm.</title>
+              <path d="M30 250 V190 Q30 160 110 156 Q190 160 190 190 V250Z" fill="#4b4d55"/>
+              <path d="M96 160 L110 250 L124 160Z" fill="#6f5a44"/>
+              <circle cx="160" cy="200" r="14" fill="#b3894b"/><circle cx="160" cy="200" r="6" fill="#4b4d55"/>
+              <rect x="40" y="196" width="46" height="54" rx="4" fill="#4b382b" stroke="#2a1d14" stroke-width="3"/>
+              <path d="M70 60 Q70 20 110 20 Q150 20 150 60 V120 Q150 150 110 152 Q70 150 70 120Z" fill="#9a968c" stroke="#3a3833" stroke-width="3"/>
+              <g fill="#3a3833"><circle cx="78" cy="70" r="2.5"/><circle cx="78" cy="96" r="2.5"/><circle cx="78" cy="122" r="2.5"/><circle cx="142" cy="70" r="2.5"/><circle cx="142" cy="96" r="2.5"/><circle cx="142" cy="122" r="2.5"/><circle cx="110" cy="28" r="2.5"/></g>
+              <circle cx="92" cy="84" r="16" fill="#3a2a18" stroke="#b3894b" stroke-width="5"/><circle cx="128" cy="84" r="16" fill="#3a2a18" stroke="#b3894b" stroke-width="5"/>
+              <circle cx="92" cy="84" r="8" fill="#f5a54a"/><circle cx="128" cy="84" r="8" fill="#f5a54a"/>
+              <path d="M94 124 H126" stroke="#3a3833" stroke-width="4"/><path d="M96 132 H124" stroke="#3a3833" stroke-width="3"/>
+            </svg>
+            <figcaption>Illustrative, drawn after sheet 01. The sheets show a gear emblem, not a leaf badge.</figcaption>
+          </figure>
+          <figure id="ag-conv"><figcaption></figcaption></figure>
+          <figure id="ag-mobile"><figcaption></figcaption></figure>
+        </div>
+        <p id="agents-text"></p>
+        <p id="a1-text" class="kit-small"></p>
+        <h3>Guild roster (proposed)</h3>
+        <ul class="roster" id="roster"></ul>
+        <p class="kit-small" id="guild-note"></p>
+      </article>
+
+      <article class="sheet" id="s-trade" data-core="tradeoffs" hidden>
+        <div class="wo"><span>Work order 24-5</span><span>Subject: strengths and trade-offs</span></div>
+        <h2 tabindex="-1">Inspector's report</h2>
+        <p class="kit-small">Internal comparison, written candidly.</p>
+        <dl class="ledger" id="tradeoffs"></dl>
+      </article>
+
+      <article class="sheet" id="s-status" hidden>
+        <div class="wo"><span>Work order 24-6</span><span>Subject: status and records</span></div>
+        <h2 tabindex="-1">Status of this study</h2>
+        <div id="status-slot"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="steel signs" aria-label="Other styles">
+    <div class="label-strip"><span>Connecting lines</span><span>Previous · all · next</span></div>
+    <div id="nav-slot"></div>
+  </section>
+  <p class="foot" id="foot"></p>
+</div>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  const A = window.AGENTNAGAR;
+  const S = Kit.style('24-dieselpunk-civic-works');
+  const el = Kit.el;
+  const $ = (id) => document.getElementById(id);
+  const reduced = Kit.reducedMotion();
+
+  const C = {
+    intent: 'An industrious brick and iron city with warm light in every window. Riveted steel, exposed girders, brass fittings, chain hoists, and copper domes set the identity. Steel gray, ochre, brick red, and amber lamplight carry the palette, with airships and arched iron bridges in most skylines.',
+    principles: [
+      'Show the structure: girders, rivets, trusses and chains stay visible and are celebrated rather than clad.',
+      'Warm light in every window: amber lamplight against steel grey and brick holds every scene together, by day or night.',
+      'Civic scale and pride: brick halls, glass-vaulted stations, domed towers, banners and monuments frame public life.',
+      'One material kit everywhere: brass, leather and riveted steel carry from the tram interior to the kiosk, phone frame and tabletop model.'
+    ],
+    palette: [
+      { name: 'Steel grey', hex: '#4d4f4f' }, { name: 'Soot', hex: '#130f0c' },
+      { name: 'Brick red', hex: '#8c5531' }, { name: 'Brass ochre', hex: '#b3894b' },
+      { name: 'Lamp amber', hex: '#f3d1ac' }, { name: 'Leather brown', hex: '#4b382b' },
+      { name: 'Banner navy', hex: '#324751' }, { name: 'River blue', hex: '#366982' }
+    ],
+    materials: 'Riveted steel plate, exposed iron girders and trusses, brick, brass fittings and lamp housings, chain hoists, copper and glass domes, wood-panelled trams, leather trunks and satchels, canvas overalls; soot in the corners and warm lamp glow on every surface.',
+    type: 'The sheets use serif caption labels on cream chips (WORKSHOP, HOME) and condensed stencil-like capitals on banners and signposts. This page uses Big Shoulders Display for plant signage, Staatliches for stencilled plates, Old Standard TT for work-order text and IBM Plex Mono for gauge figures, all open-licence and bundled locally.',
+    agents: 'Sheet 01 (Conversation) shows the city agent as a riveted metal humanoid with a domed head, round brass lamp eyes and a long work coat with a gear emblem on the shoulder, carrying a ledger and talking with a resident in goggles by the river. Sheet 03 (Mobile) instead shows a human portrait labelled "Your City Agent"; the 2026-09-19 review lists this robot-versus-portrait split as an identity gap. No leaf badge is visible. Residents wear overalls, flat caps, goggles and long coats. No Guild resident is depicted, so the roster lists names and proposed roles only.',
+    tradeoffs: [
+      { label: 'Map versus street', text: 'The overview (added 2026-09-19; all four cameras inspected, cross-sheet reconciliation pending) reads cleanly: the three-bay brick Workshop W1, one large tree at T1, the glass-vaulted Library L1, park P1, downtown D1 and the tram boulevard S1 with a red-and-cream tram, with north arrows throughout. Brick and iron silhouettes hold at map scale; street scale adds lamplit plazas, monuments and signposts.' },
+      { label: 'Device and production cost', text: 'Proposed adaptation: keep brick and iron silhouettes, ochre and steel colours and the tram at every tier. Lower tiers would simplify rivets, girders and crowds; higher tiers could add rain reflections and moving machinery. Rivet and girder detail is the costly part and turns to noise at small sizes.' },
+      { label: 'UI legibility', text: 'The kiosk (City Library & Maker Services: Browse, Book, Ask) and the phone\'s labelled pins (Makers\' Quarter, Civic Works, Riverside Walk, Foundry Market) are readable against pale screens set in brass. The label system is not uniform: bottom chips in 01, top overlays in 02 and bottom white text in 03 (review).' },
+      { label: 'Era drift', text: 'Period costume, a heroic worker statue, airships and civic monuments push the city toward a 1930s setting rather than a contemporary one, the concern the candidate brief asked this study to check. The review asks for period and world choices to be judged separately from the rendering style; heavy workshop machinery on chains also changes the baseline experience.' },
+      { label: 'Agent identity', text: 'The riveted robot in 01 and the human portrait in 03 are not tied together by name, badge or emblem.' }
+    ]
+  };
+  const LANDMARKS = [
+    'Map, Top-down, Diagonal and Street label the river (W) on the west with the North bridge at the top, Workshop W1 (brick hall, three roof bays), Tree Square T1 with one large tree, Library L1 under a glass barrel vault, park P1, downtown D1 and the tram boulevard S1 with a red-and-cream tram.',
+    'Workshop (an engine hung on chains, drafting tables, banners), Home (leather trunks, a reading nook, river and bridge view), Conversation (a resident in goggles with the riveted robot agent), Gathering (a bandstand concert with airships and towers beyond).',
+    'Build mode (a translucent hall outline with axis arrows on a riverside plot), Transit (a wood-panelled, brass-lit tram with a conductor), Night and rain (a lamplit plaza, a worker statue, signposts to Riverfront, Market, Foundry and Civic Hall), Waterfront park (a promenade, iron truss bridge and airship).',
+    'Facility (a riveted brass kiosk: City Library & Maker Services), Mobile (an "Explore the City" phone with a human "Your City Agent" portrait), Rooftop at dusk, AR tabletop (a brick-and-dome district model).'
+  ];
+  const SECTIONS = [
+    { id: 's-project', name: 'Project', key: 'Agentnagar' },
+    { id: 's-style', name: 'Style', key: 'Palette · type' },
+    { id: 's-views', name: 'Views', key: 'Four sheets' },
+    { id: 's-agents', name: 'Agents', key: 'A1 · Guild' },
+    { id: 's-trade', name: 'Trade-offs', key: 'Report' },
+    { id: 's-status', name: 'Status', key: 'Records' }
+  ];
+
+  /* ----- content ----- */
+  $('project-slot').append(Kit.projectBlock());
+  A.district.forEach((d) => $('district').append(el('li', {}, [el('b', { text: `${d.id} · ${d.name}` }), d.note])));
+  $('intent').textContent = C.intent;
+  C.principles.forEach((p) => $('principles').append(el('li', { text: p })));
+  C.palette.forEach((p) => $('palette').append(el('li', {}, [el('div', { class: 'chip', style: `background:${p.hex}`, 'aria-hidden': 'true' }), p.name, el('br'), el('code', { text: p.hex })])));
+  $('materials').textContent = C.materials;
+  $('type').textContent = C.type;
+
+  const ORDER = ['tl', 'tr', 'bl', 'br'];
+  let sheetIdx = 0;
+  function showSheet(i) {
+    sheetIdx = i;
+    [...$('yard').children].forEach((b, j) => { b.setAttribute('aria-selected', String(j === i)); b.tabIndex = j === i ? 0 : -1; });
+    $('sheet-view').replaceChildren(Kit.sheetImg(S, i));
+    const sh = S.sheets[i];
+    $('sheet-cap').textContent = `${sh.title} (${sh.revision}). ${LANDMARKS[i]}`;
+    $('panels4').replaceChildren(...ORDER.map((p, k) => el('figure', {}, [el('div', { class: 'plate' }, [Kit.sheetImg(S, i, p)]), el('figcaption', { text: Kit.PANEL_NAMES[i][k] })])));
+  }
+  S.sheets.forEach((sh, i) => {
+    const b = el('button', { type: 'button', role: 'tab', text: `Line ${String(i).padStart(2, '0')} · ${sh.title}` });
+    b.addEventListener('click', () => showSheet(i));
+    b.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return; e.preventDefault(); e.stopPropagation();
+      const n = (sheetIdx + d + 4) % 4; showSheet(n); $('yard').children[n].focus();
+    });
+    $('yard').append(b);
+  });
+  showSheet(0);
+  $('concept').textContent = A.conceptNote;
+
+  $('ag-conv').prepend(el('div', { class: 'plate' }, [Kit.sheetImg(S, 1, 'bl')]));
+  $('ag-conv').querySelector('figcaption').textContent = `Sheet 01 Conversation (${S.sheets[1].revision}): the robot agent. Concept study.`;
+  $('ag-mobile').prepend(el('div', { class: 'plate' }, [Kit.sheetImg(S, 3, 'tr')]));
+  $('ag-mobile').querySelector('figcaption').textContent = `Sheet 03 Mobile (${S.sheets[3].revision}): a human "Your City Agent" portrait. Concept study.`;
+  $('agents-text').textContent = C.agents;
+  $('a1-text').textContent = A.agentA1;
+  A.guild.forEach((g, i) => $('roster').append(el('li', {}, [el('span', { text: String(i + 1).padStart(2, '0') }), el('b', { text: g.name }), el('i', { text: g.role })])));
+  $('guild-note').textContent = A.guildNote;
+  C.tradeoffs.forEach((t) => $('tradeoffs').append(el('div', {}, [el('dt', { text: t.label }), el('dd', { text: t.text })])));
+  $('status-slot').append(Kit.statusBlock(S));
+  Kit.mountNav($('nav-slot'), S);
+  $('foot').textContent = `${S.number} ${S.name}. Gauges, levers and switches are illustrative page controls, not concept art. ${A.status}`;
+
+  /* ----- gauges ----- */
+  const READINGS = [
+    { label: 'Concept sheets', v: S.sheets.length, max: 8 },
+    { label: 'District landmarks', v: A.district.length, max: 12 },
+    { label: 'Guild residents', v: A.guild.length, max: 20 },
+    { label: 'Review sources', v: S.review_sources.length, max: 5 }
+  ];
+  const NS = 'http://www.w3.org/2000/svg';
+  const needles = READINGS.map((r) => {
+    let ticks = '';
+    for (let k = 0; k <= r.max; k++) {
+      const a = (-120 + 240 * k / r.max) * Math.PI / 180;
+      const x1 = 100 + Math.sin(a) * 72, y1 = 100 - Math.cos(a) * 72, x2 = 100 + Math.sin(a) * 60, y2 = 100 - Math.cos(a) * 60;
+      ticks += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="#231a12" stroke-width="${k % 2 ? 1.5 : 3}"/>`;
+      if (k % (r.max > 12 ? 4 : r.max > 8 ? 2 : 1) === 0) { const tx = 100 + Math.sin(a) * 48, ty = 100 - Math.cos(a) * 48 + 4; ticks += `<text x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#231a12">${k}</text>`; }
+    }
+    const fig = el('figure', { class: 'gauge' });
+    fig.innerHTML = `<svg viewBox="0 0 200 200" role="img" aria-label="${r.label} gauge reading ${r.v}">
+      <defs><radialGradient id="face${r.max}" cx=".45" cy=".4"><stop offset="0" stop-color="#fbf1dc"/><stop offset=".8" stop-color="#e6d3ad"/><stop offset="1" stop-color="#b99e6b"/></radialGradient>
+      <linearGradient id="rim${r.max}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d9a6"/><stop offset=".5" stop-color="#8a6530"/><stop offset="1" stop-color="#d8b173"/></linearGradient></defs>
+      <circle cx="100" cy="100" r="96" fill="url(#rim${r.max})"/><circle cx="100" cy="100" r="84" fill="#1d1d1b"/><circle cx="100" cy="100" r="80" fill="url(#face${r.max})"/>
+      <path d="M${(100 + Math.sin(80 * Math.PI / 180) * 66).toFixed(1)} ${(100 - Math.cos(80 * Math.PI / 180) * 66).toFixed(1)} A66 66 0 0 1 ${(100 + Math.sin(120 * Math.PI / 180) * 66).toFixed(1)} ${(100 - Math.cos(120 * Math.PI / 180) * 66).toFixed(1)}" stroke="#8c5531" stroke-width="7" fill="none"/>
+      ${ticks}
+      <g class="needle"><path d="M97 104 L100 30 L103 104Z" fill="#8c1f12"/><circle cx="100" cy="100" r="9" fill="#3a3833"/><circle cx="100" cy="100" r="3.5" fill="#d6a85e"/></g>
+    </svg><figcaption><b>${String(r.v).padStart(2, '0')}</b>${r.label}</figcaption>`;
+    $('gauges').append(fig);
+    const n = fig.querySelector('.needle');
+    n.style.transform = 'rotate(-120deg)';
+    return { n, r };
+  });
+  function setNeedles(jitter) {
+    needles.forEach(({ n, r }) => { n.style.transform = `rotate(${-120 + 240 * r.v / r.max + (jitter ? (Math.random() * 6 - 3) : 0)}deg)`; });
+  }
+  if (reduced) { needles.forEach(({ n }) => { n.style.transition = 'none'; }); setNeedles(false); }
+  else requestAnimationFrame(() => requestAnimationFrame(() => setNeedles(false)));
+
+  /* ----- levers and hatch ----- */
+  let active = 0, busy = false;
+  const hatch = $('hatch');
+  const levers = SECTIONS.map((s, i) => {
+    const b = el('button', { class: 'lever', type: 'button', 'aria-pressed': String(i === 0), 'aria-controls': s.id, 'aria-label': `Lever ${i + 1}: open ${s.name}` }, [
+      el('span', { class: 'lampL', 'aria-hidden': 'true' }),
+      el('span', { class: 'track', 'aria-hidden': 'true' }, [el('span', { class: 'arm' })]),
+      el('span', { class: 'tag', 'aria-hidden': 'true' }, [el('small', { text: `No. ${i + 1} · ${s.key}` }), s.name])
+    ]);
+    b.addEventListener('click', () => { if (!b._dragged) open(i, true); b._dragged = false; });
+    // pull the lever: drag down on it
+    let y0 = null;
+    b.addEventListener('pointerdown', (e) => { y0 = e.clientY; });
+    b.addEventListener('pointermove', (e) => { if (y0 !== null && e.clientY - y0 > 28) { y0 = null; b._dragged = true; open(i, true); } });
+    const end = () => { y0 = null; };
+    b.addEventListener('pointerup', end); b.addEventListener('pointercancel', end); b.addEventListener('pointerleave', end);
+    b.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
+      if (!d) return; e.preventDefault(); levers[(i + d + SECTIONS.length) % SECTIONS.length].focus();
+    });
+    $('levers').append(b);
+    return b;
+  });
+  function setNow() { $('now').textContent = `Hatch ${active + 1} open · ${SECTIONS[active].name}`; }
+  setNow();
+  function open(i, focusHeading) {
+    if (busy) return;
+    levers.forEach((b, j) => b.setAttribute('aria-pressed', String(j === i)));
+    const swap = () => {
+      SECTIONS.forEach((s, j) => { $(s.id).hidden = j !== i; });
+      active = i; setNow();
+      if (focusHeading) {
+        const top = hatch.getBoundingClientRect().top;
+        if (top < 0 || top > innerHeight * .6) hatch.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+      }
+    };
+    if (reduced || i === active) { swap(); return; }
+    busy = true;
+    if (machinery) setNeedles(true);
+    hatch.classList.add('closed');
+    setTimeout(() => { swap(); hatch.classList.remove('closed'); setTimeout(() => { busy = false; setNeedles(false); }, 380); }, 400);
+  }
+
+  /* ----- toggles ----- */
+  let machinery = !reduced;
+  const gears = [$('gear1'), $('gear2')];
+  const mach = $('t-mach');
+  mach.setAttribute('aria-pressed', String(machinery));
+  gears.forEach((g) => g.classList.toggle('spin', machinery));
+  mach.addEventListener('click', () => {
+    machinery = !machinery;
+    mach.setAttribute('aria-pressed', String(machinery));
+    gears.forEach((g) => g.classList.toggle('spin', machinery && !reduced));
+  });
+  const lamps = $('t-lamps');
+  lamps.addEventListener('click', () => {
+    const on = lamps.getAttribute('aria-pressed') !== 'true';
+    lamps.setAttribute('aria-pressed', String(on));
+    document.body.classList.toggle('dark', !on);
+  });
+
+  /* ----- notes and keys ----- */
+  const dialog = Kit.notesDialog(S, C, $('manual'));
+  document.addEventListener('keydown', (e) => {
+    if (dialog.open || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (/^[1-6]$/.test(e.key)) { e.preventDefault(); levers[+e.key - 1].focus({ preventScroll: true }); open(+e.key - 1, true); }
+    else if (e.key === 'm' || e.key === 'M') { e.preventDefault(); dialog.showModal(); }
+  });
+})();
+</script>
+</body>
+</html>

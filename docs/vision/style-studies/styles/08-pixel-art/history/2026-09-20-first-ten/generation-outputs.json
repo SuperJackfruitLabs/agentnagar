@@ -1,0 +1,271 @@
+[
+  {
+    "style": "08-pixel-art",
+    "sheet": "00-city-perspectives",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-10ad84b8-7ea1-4d92-a97b-21850294342f.png",
+    "candidate": "candidates/00-city-perspectives-pass1.png",
+    "sha256": "3a49ed861cfb9fb25e04219f39c43ed89d7577aecff27d3d793969d2fcf89f14",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/08-pixel-art/00-city-perspectives.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/00-city-perspectives.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "00-city-perspectives",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-d06a27cc-d325-46d4-a52f-ba8c3f7286a1.png",
+    "candidate": "candidates/00-city-perspectives-pass2.png",
+    "sha256": "743471b60da785d03f5cc8f8ff3aedbcc0bddbcfde1fcb15c0845565ebba3a2f",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/00-city-perspectives-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/00-city-perspectives-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "00-city-perspectives",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-244933df-89e1-490d-a02d-5d82a16872cf.png",
+    "candidate": "candidates/00-city-perspectives-pass3.png",
+    "sha256": "36ca01a78eebbc86dd25dbac1e236ff7878702847ad5c4517f6519b7d7ffd5c2",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/00-city-perspectives-pass2.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/00-city-perspectives-pass2.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "00-city-perspectives",
+    "pass": 4,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-47c4e6db-3643-4473-973d-d1467831272b.png",
+    "candidate": "candidates/00-city-perspectives-pass4.png",
+    "sha256": "f1e42e923ee8f276cb31f74723d29734995bcd12df5381fab01a4085d006a7e8",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/00-city-perspectives-pass3.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/00-city-perspectives-pass3.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "01-living-community",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-b7967e63-0741-4103-b5df-75ca49c509fa.png",
+    "candidate": "candidates/01-living-community-pass1.png",
+    "sha256": "b198eae3bc40cf226c72be3fc5c035af63ccce126f43a39eb367043bb5f0e0c1",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/08-pixel-art/01-living-community.png",
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/00-city-perspectives-pass2.png",
+      "docs/vision/style-studies/08-pixel-art/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/01-living-community.png",
+      "candidates/00-city-perspectives-pass2.png",
+      "originals/01-living-community.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "01-living-community",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-f3d6f3bd-4a9c-4b5a-94ae-7b20c5dfc9fa.png",
+    "candidate": "candidates/01-living-community-pass2.png",
+    "sha256": "4ab7ba7f8798e54cc0dc6ffadc0e3938c16611494d83aa8b3da443ad2534568d",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/01-living-community-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/01-living-community-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "01-living-community",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-d1b440a1-8413-4522-a38e-9a860dd26bc1.png",
+    "candidate": "candidates/01-living-community-pass3.png",
+    "sha256": "3ef595da12009b210c04233ae0de93c6d1b12a1a47ea8696b67645bfac55f6da",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/01-living-community-pass2.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/01-living-community-pass2.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "02-creating-exploring",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-f9aa8344-9f7d-4ed9-aa6c-76896562c575.png",
+    "candidate": "candidates/02-creating-exploring-pass1.png",
+    "sha256": "a912a3d0024903e500c548007467a4166ea43482ba1d22311c34bbd4404d5981",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/08-pixel-art/02-creating-exploring.png",
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/00-city-perspectives-pass2.png",
+      "docs/vision/style-studies/08-pixel-art/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/02-creating-exploring.png",
+      "candidates/00-city-perspectives-pass2.png",
+      "originals/01-living-community.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "02-creating-exploring",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-42152c9e-ac8d-4000-b2ec-81034e8a2ace.png",
+    "candidate": "candidates/02-creating-exploring-pass2.png",
+    "sha256": "eaa70f58004327e8eaee6e8696fbd078dc884b0ab576dfdd324a5c6b57a59007",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/02-creating-exploring-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/02-creating-exploring-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "02-creating-exploring",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-996f87c7-1a31-4666-8dd7-1b0158367b80.png",
+    "candidate": "candidates/02-creating-exploring-pass3.png",
+    "sha256": "5ac602cedf2cc11ee4c29ee7f82cf66580037cafd966076a38775a82b137a5cc",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/02-creating-exploring-pass2.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/02-creating-exploring-pass2.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-06a89663-c7d1-4a13-ba40-7c5655fe3c26.png",
+    "candidate": "candidates/03-interfaces-perspectives-pass1.png",
+    "sha256": "01af1102b9186601eac0a1a2b81f0921b4be13ab06e115419380c5f5882eab30",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/08-pixel-art/03-interfaces-perspectives.png",
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/00-city-perspectives-pass2.png",
+      "docs/vision/style-studies/08-pixel-art/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/03-interfaces-perspectives.png",
+      "candidates/00-city-perspectives-pass2.png",
+      "originals/01-living-community.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-1d3935d3-5686-40c9-86e9-238795d79ea4.png",
+    "candidate": "candidates/03-interfaces-perspectives-pass2.png",
+    "sha256": "781f441941c9b4e87810c9d55007ea943738584d062a33cf18ff175f7193f41b",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/03-interfaces-perspectives-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-3df4e2aa-3836-4fbc-a357-f8727be2ae17.png",
+    "candidate": "candidates/03-interfaces-perspectives-pass3.png",
+    "sha256": "093dc3b1f1ff97711a8fd9011fcedbb1407fc473a284f53fb49646e32d303ed4",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass2.png",
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/03-interfaces-perspectives-pass2.png",
+      "candidates/03-interfaces-perspectives-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 4,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-659bbf8f-9c65-4838-8205-6f21d68f0b36.png",
+    "candidate": "candidates/03-interfaces-perspectives-pass4.png",
+    "sha256": "a7035f6bce4267f18a8e84a517a397615c8f610cfe09f301e6ce21386db9c526",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass3.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/03-interfaces-perspectives-pass3.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 5,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-0290551a-019c-4ca6-b417-5a872a9d74f8.png",
+    "candidate": "candidates/03-interfaces-perspectives-pass5.png",
+    "sha256": "a4a2f992d1033acc47e809dabc727fe205cbc21a80b3040ab25a5dc8ffb7ac47",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass4.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/03-interfaces-perspectives-pass4.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 6,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-6bbe1bf1-d7e9-4686-84d6-4d809655fedc.png",
+    "candidate": "candidates/03-interfaces-perspectives-pass6.png",
+    "sha256": "e08802c20435a1909733aae6aaed75fbd667f3bbe7a46628aa455c43a55d8998",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass5.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/03-interfaces-perspectives-pass5.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "08-pixel-art",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 7,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-167d82d0-ffb9-47aa-a1e7-f05a8c801004.png",
+    "candidate": "candidates/03-interfaces-perspectives-pass7.png",
+    "sha256": "69b8d9b571d2dfb67ab9c968fcb2fe847acb87a8648585110846afea032ce7b3",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass6.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/03-interfaces-perspectives-pass6.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  }
+]

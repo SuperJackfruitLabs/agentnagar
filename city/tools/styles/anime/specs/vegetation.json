@@ -1,0 +1,20 @@
+{
+  "tree_banyan": {"size": [11.90, 9.50, 11.90], "tris": 7500, "nodes": ["tree_banyan", "body", "canopy"]},
+  "tree_round_a": {"size": [4.60, 5.48, 5.20], "tris": 2000, "nodes": ["tree_round_a", "body"]},
+  "tree_round_b": {"size": [3.40, 4.33, 3.60], "tris": 2000, "nodes": ["tree_round_b", "body"]},
+  "palm_a": {"size": [5.46, 8.64, 5.27], "tris": 2000, "nodes": ["palm_a", "body"]},
+  "palm_b": {"size": [4.36, 6.60, 4.48], "tris": 2000, "nodes": ["palm_b", "body"]},
+  "palm_c": {"size": [3.50, 4.54, 3.41], "tris": 2000, "nodes": ["palm_c", "body"]},
+  "shrub_round": {"size": [1.10, 0.82, 1.10], "tris": 1500, "nodes": ["shrub_round", "body"]},
+  "shrub_leafy": {"size": [1.10, 1.24, 1.10], "tris": 1500, "nodes": ["shrub_leafy", "body"]},
+  "flowerbed": {"size": [3.02, 0.58, 1.05], "tris": 1500, "nodes": ["flowerbed", "body"]},
+  "planter_square": {"size": [1.20, 1.40, 1.20], "tris": 1500, "nodes": ["planter_square", "body"]},
+  "planter_pot": {"size": [0.86, 1.14, 0.83], "tris": 1500, "nodes": ["planter_pot", "body"]},
+  "tree_round_a_far": {"size": [3.86, 5.16, 4.37], "tris": 800, "nodes": ["body"]},
+  "tree_round_b_far": {"size": [2.86, 4.15, 3.02], "tris": 800, "nodes": ["body"]},
+  "palm_a_far": {"size": [5.46, 8.64, 5.27], "tris": 900, "nodes": ["body"]},
+  "palm_b_far": {"size": [4.36, 6.6, 4.48], "tris": 900, "nodes": ["body"]},
+  "palm_c_far": {"size": [3.5, 4.54, 3.41], "tris": 900, "nodes": ["body"]},
+  "meadow_grass": {"size": [0.33, 0.88, 0.31], "tris": 100, "nodes": ["meadow_grass", "body"]},
+  "meadow_flowers": {"size": [0.33, 0.89, 0.3], "tris": 200, "nodes": ["meadow_flowers", "body"]}
+}

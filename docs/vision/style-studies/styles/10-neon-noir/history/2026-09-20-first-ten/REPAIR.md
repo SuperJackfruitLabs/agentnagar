@@ -1,0 +1,56 @@
+> Historical record migrated from `docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/REPAIR.md`. File paths in prose/JSON may describe the old layout; use the migration ledger for exact mappings.
+
+# Neon noir repair record — 2026-09-20
+
+Status: four improved revised sheets promoted to the gallery, with residual issues below. **Not certified as fully contract-compliant.**
+
+[Current gallery](../gallery-before-migration/README.md) · [Comparison contract](../../../../shared/CONSISTENCY-CONTRACT.md) · [Original archive](originals/README.md) · [Hashes, dimensions and selections](manifest.json)
+
+## Scope and provenance
+
+Baseline `ba5f4242d02aa37686b2a18b9add8813c5490130`. All nine original files, including four PNGs, four original prompt documents and README, are preserved byte-for-byte under `originals/` and compared against that Git commit. Built-in `image_gen.imagegen` was used for every correction; no Python image editing or CLI fallback. Every returned candidate and exact submitted prompt is retained.
+
+Dark charcoal/navy architecture, cyan/amber/magenta light, wet paving and warm occupied interiors retained. The original elevated transit was an intentional part of the historical study: replacement by the ground route is a deliberate controlled-comparison change, not a claim that elevated transit was an accidental original defect.
+
+## Selected sheets
+
+| Sheet | Selected pass | Inspection |
+| --- | --- | --- |
+| 00 City perspectives | 5 | Single west river and low north bridge, low sawtooth workshop, living tree, rounded two-storey library, three stepped towers, southwest park and foreground ground tram replace the original sprawling/elevated network. |
+| 01 Living and community | 1 | Angular dark/silver robot, cyan vertical eyes and ear ring, dark scarf and leaf A1 badge retained. Workshop foliage-only windows, west-facing home, conversation close-up and gathering at central tree. |
+| 02 Creating and exploring | 2 | Red X / green-up Y / blue Z labels; foreground east–west ground tram. Extra distant skyline removed and waterfront bridge simplified. |
+| 03 Interfaces and perspectives | 3 | Correct facility actions; one device contains district, selected Workshop, matching angular robot, City Agent A1, Availability? and Ask. AR selects low hall with category names/colors and External viewer. Duplicate rooftop library and extra water strip removed. |
+
+Each promoted PNG is 1536 × 1024 and byte-identical to its selected candidate. The JSON manifest lists full SHA-256 hashes for originals, candidates, exact prompts and gallery files. All panels were visually inspected at the returned image size; a separate measured half-size usability test was not performed.
+
+## Iteration review
+
+Overview pass 2 removed second river crossing, simplified overhead facades and moved tram to foreground. Independent review found a fourth STREET roof bay; pass 3 retained it, pass 4 overshot to two bays, and pass 5 restored exactly three visible bays. Experience generation initially failed with a connection error after the three Solarpunk outputs returned; the three Neon noir prompts were retried unchanged successfully. Creating pass 2 corrected transit direction and background skyline. Interface pass 2 fixed malformed device shell but lost map geography/labels; pass 3 restored west-river map, names, agent task and AR labels. No CLI fallback used.
+
+## Residual issues
+
+Full compliance is not claimed. Mobile map remains pictorial/oblique rather than flat cartography; the single phone is landscape oriented. The rooftop west river is narrow and partly hidden by planting, so the west-facing geography is less legible than desired. Some close views show only two exposed towers while the night and overview views show three. MAP and TOP-DOWN retain stylized pictorial projections; the broad library’s proportions differ between views. Pictorial roofs and bridge spans are not exact geometry. Captions use top strips, but weight/size and outer margins vary between sheets. Small category symbols/text and A1 badge need enlargement; no accessibility or measured usability claims are made.
+
+## Prompt and candidate inventory
+
+[Actual generation output paths and reference snapshots](generation-outputs.json).
+
+| Candidate | Exact prompt | Selected |
+| --- | --- | --- |
+| [00-city-perspectives-pass1.png](../../sheets/00-city-perspectives/r002/image.png) | [Prompt](../../sheets/00-city-perspectives/r002/prompt.txt) | No |
+| [00-city-perspectives-pass2.png](../../sheets/00-city-perspectives/r003/image.png) | [Prompt](../../sheets/00-city-perspectives/r003/prompt.txt) | No |
+| [00-city-perspectives-pass3.png](../../sheets/00-city-perspectives/r004/image.png) | [Prompt](../../sheets/00-city-perspectives/r004/prompt.txt) | No |
+| [00-city-perspectives-pass4.png](../../sheets/00-city-perspectives/r005/image.png) | [Prompt](../../sheets/00-city-perspectives/r005/prompt.txt) | No |
+| [00-city-perspectives-pass5.png](../../sheets/00-city-perspectives/r006/image.png) | [Prompt](../../sheets/00-city-perspectives/r006/prompt.txt) | Yes |
+| [01-living-community-pass1.png](../../sheets/01-living-community/r002/image.png) | [Prompt](../../sheets/01-living-community/r002/prompt.txt) | Yes |
+| [02-creating-exploring-pass1.png](../../sheets/02-creating-exploring/r002/image.png) | [Prompt](../../sheets/02-creating-exploring/r002/prompt.txt) | No |
+| [02-creating-exploring-pass2.png](../../sheets/02-creating-exploring/r003/image.png) | [Prompt](../../sheets/02-creating-exploring/r003/prompt.txt) | Yes |
+| [03-interfaces-perspectives-pass1.png](../../sheets/03-interfaces-perspectives/r002/image.png) | [Prompt](../../sheets/03-interfaces-perspectives/r002/prompt.txt) | No |
+| [03-interfaces-perspectives-pass2.png](../../sheets/03-interfaces-perspectives/r003/image.png) | [Prompt](../../sheets/03-interfaces-perspectives/r003/prompt.txt) | No |
+| [03-interfaces-perspectives-pass3.png](../../sheets/03-interfaces-perspectives/r004/image.png) | [Prompt](../../sheets/03-interfaces-perspectives/r004/prompt.txt) | Yes |
+
+## Reference inputs
+
+Initial overview calls used the original overview for style. Styles 09 and 10 also used the corrected style 08 overview as a geometry reference. Initial experience calls used that style’s original experience sheet, corrected overview and original living sheet for A1 identity. Targeted passes used the immediately preceding candidate unless noted: style 08 interface pass 3 additionally used pass 1 to restore AR; style 09 living pass 3 additionally used pass 1 to restore gathering; style 10 interface pass 3 additionally used pass 1 for geography and labels. All local reference images were viewed before use.
+
+These remain design comparisons, not implemented city behavior, runtime geometry, accessibility certification or performance evidence.

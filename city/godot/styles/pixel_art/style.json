@@ -1,0 +1,584 @@
+{
+  "bridge_deck": 1.6,
+  "bridge_ramp": 2.0,
+  "name": "Pixel art",
+  "order": 2,
+  "dimension": "2d",
+  "note": "Pre-rendered from Blender models by city/tools/styles/pixel (models.py, render.py, post.py; placement conventions in assets/kit.json), plus the hand-drawn characters, seats and icons. Direction from style study 08; not a production style decision.",
+  "iso": {
+    "tile_w": 32,
+    "tile_h": 16,
+    "metre_up": 16,
+    "zoom_levels": [
+      1,
+      2,
+      3
+    ]
+  },
+  "night_from": 1140,
+  "day_from": 360,
+  "occupants": {
+    "GuildAgent": {
+      "sheet": "assets/characters/robot_guild.png"
+    },
+    "CityRoleAgent": {
+      "sheet": "assets/characters/robot_city.png"
+    },
+    "PersonalAgent": {
+      "sheet": "assets/characters/robot_personal.png"
+    },
+    "SimCitizen": {
+      "sheet": "assets/characters/human_muted.png"
+    },
+    "Human": {
+      "sheet": "assets/characters/human_0_0.png",
+      "outfits": [
+        "assets/characters/human_0_0.png",
+        "assets/characters/human_0_1.png",
+        "assets/characters/human_0_2.png",
+        "assets/characters/human_0_3.png",
+        "assets/characters/human_1_0.png",
+        "assets/characters/human_1_1.png",
+        "assets/characters/human_1_2.png",
+        "assets/characters/human_1_3.png",
+        "assets/characters/human_2_0.png",
+        "assets/characters/human_2_1.png",
+        "assets/characters/human_2_2.png",
+        "assets/characters/human_2_3.png",
+        "assets/characters/human_3_0.png",
+        "assets/characters/human_3_1.png",
+        "assets/characters/human_3_2.png",
+        "assets/characters/human_3_3.png",
+        "assets/characters/human_4_0.png",
+        "assets/characters/human_4_1.png",
+        "assets/characters/human_4_2.png",
+        "assets/characters/human_4_3.png",
+        "assets/characters/human_5_0.png",
+        "assets/characters/human_5_1.png",
+        "assets/characters/human_5_2.png",
+        "assets/characters/human_5_3.png",
+        "assets/characters/human_6_0.png",
+        "assets/characters/human_6_1.png",
+        "assets/characters/human_6_2.png",
+        "assets/characters/human_6_3.png",
+        "assets/characters/human_7_0.png",
+        "assets/characters/human_7_1.png",
+        "assets/characters/human_7_2.png",
+        "assets/characters/human_7_3.png"
+      ]
+    }
+  },
+  "seats": {
+    "desk": {
+      "sprite": "assets/scenery/seats/desk_0.png",
+      "facings": {
+        "0": "assets/scenery/seats/desk_0.png",
+        "45": "assets/scenery/seats/desk_45.png",
+        "90": "assets/scenery/seats/desk_90.png",
+        "135": "assets/scenery/seats/desk_135.png",
+        "180": "assets/scenery/seats/desk_180.png",
+        "225": "assets/scenery/seats/desk_225.png",
+        "270": "assets/scenery/seats/desk_270.png",
+        "315": "assets/scenery/seats/desk_315.png"
+      }
+    },
+    "workstation": {
+      "sprite": "assets/scenery/seats/workstation_0.png",
+      "facings": {
+        "0": "assets/scenery/seats/workstation_0.png",
+        "45": "assets/scenery/seats/workstation_45.png",
+        "90": "assets/scenery/seats/workstation_90.png",
+        "135": "assets/scenery/seats/workstation_135.png",
+        "180": "assets/scenery/seats/workstation_180.png",
+        "225": "assets/scenery/seats/workstation_225.png",
+        "270": "assets/scenery/seats/workstation_270.png",
+        "315": "assets/scenery/seats/workstation_315.png"
+      },
+      "screen": {
+        "idle": "#1C2246",
+        "glow": "#78B4DC"
+      }
+    },
+    "bench": {
+      "sprite": "assets/scenery/seats/bench_0.png",
+      "facings": {
+        "0": "assets/scenery/seats/bench_0.png",
+        "36": "assets/scenery/seats/bench_36.png",
+        "45": "assets/scenery/seats/bench_45.png",
+        "72": "assets/scenery/seats/bench_72.png",
+        "90": "assets/scenery/seats/bench_90.png",
+        "108": "assets/scenery/seats/bench_108.png",
+        "135": "assets/scenery/seats/bench_135.png",
+        "144": "assets/scenery/seats/bench_144.png",
+        "180": "assets/scenery/seats/bench_180.png",
+        "216": "assets/scenery/seats/bench_216.png",
+        "225": "assets/scenery/seats/bench_225.png",
+        "252": "assets/scenery/seats/bench_252.png",
+        "270": "assets/scenery/seats/bench_270.png",
+        "288": "assets/scenery/seats/bench_288.png",
+        "315": "assets/scenery/seats/bench_315.png",
+        "324": "assets/scenery/seats/bench_324.png"
+      }
+    },
+    "cafe-table": {
+      "sprite": "assets/scenery/seats/cafe-table_0.png",
+      "facings": {
+        "0": "assets/scenery/seats/cafe-table_0.png",
+        "45": "assets/scenery/seats/cafe-table_45.png",
+        "90": "assets/scenery/seats/cafe-table_90.png",
+        "135": "assets/scenery/seats/cafe-table_135.png",
+        "180": "assets/scenery/seats/cafe-table_180.png",
+        "225": "assets/scenery/seats/cafe-table_225.png",
+        "270": "assets/scenery/seats/cafe-table_270.png",
+        "315": "assets/scenery/seats/cafe-table_315.png"
+      }
+    },
+    "reading-chair": {
+      "sprite": "assets/scenery/seats/reading-chair_0.png",
+      "facings": {
+        "0": "assets/scenery/seats/reading-chair_0.png",
+        "45": "assets/scenery/seats/reading-chair_45.png",
+        "90": "assets/scenery/seats/reading-chair_90.png",
+        "135": "assets/scenery/seats/reading-chair_135.png",
+        "180": "assets/scenery/seats/reading-chair_180.png",
+        "225": "assets/scenery/seats/reading-chair_225.png",
+        "270": "assets/scenery/seats/reading-chair_270.png",
+        "315": "assets/scenery/seats/reading-chair_315.png"
+      }
+    },
+    "perch": {
+      "sprite": "assets/scenery/perch_seat_0.png",
+      "facings": {
+        "0": "assets/scenery/perch_seat_0.png",
+        "45": "assets/scenery/perch_seat_45.png",
+        "90": "assets/scenery/perch_seat_90.png",
+        "135": "assets/scenery/perch_seat_135.png",
+        "180": "assets/scenery/perch_seat_180.png",
+        "225": "assets/scenery/perch_seat_225.png",
+        "270": "assets/scenery/perch_seat_270.png",
+        "315": "assets/scenery/perch_seat_315.png"
+      }
+    }
+  },
+  "rooms": {
+    "ground": {
+      "bare": true,
+      "outdoor": true
+    },
+    "workshop": {
+      "tile": "assets/ground/floor_wood.png"
+    },
+    "commons": {
+      "tile": "assets/ground/floor_stone.png"
+    },
+    "reading-room": {
+      "tile": "assets/ground/floor_carpet.png"
+    },
+    "cafe": {
+      "tiles": [
+        "assets/ground/paving_0.png",
+        "assets/ground/paving_1.png",
+        "assets/ground/paving_2.png",
+        "assets/ground/paving_3.png"
+      ]
+    },
+    "cafe-terrace": {
+      "tiles": [
+        "assets/ground/paving_0.png",
+        "assets/ground/paving_1.png",
+        "assets/ground/paving_2.png",
+        "assets/ground/paving_3.png"
+      ],
+      "outdoor": true
+    },
+    "plaza": {
+      "tiles": [
+        "assets/ground/paving_0.png",
+        "assets/ground/paving_1.png",
+        "assets/ground/paving_2.png",
+        "assets/ground/paving_3.png"
+      ],
+      "outdoor": true
+    },
+    "park": {
+      "tiles": [
+        "assets/ground/grass_0.png",
+        "assets/ground/grass_1.png"
+      ],
+      "paths": "assets/ground/path.png",
+      "outdoor": true
+    },
+    "tram-stop": {
+      "tiles": [
+        "assets/ground/paving_0.png",
+        "assets/ground/paving_1.png",
+        "assets/ground/paving_2.png",
+        "assets/ground/paving_3.png"
+      ],
+      "outdoor": true
+    }
+  },
+  "exteriors": {
+    "guild-hall": {
+      "folder": "buildings/hall",
+      "roof": "sawtooth",
+      "wall_top": 5.2
+    },
+    "library": {
+      "folder": "buildings/library",
+      "roof": "flat",
+      "wall_top": 8.0,
+      "banners": true,
+      "dome": "assets/buildings/library/dome.png",
+      "roof_tile": "assets/buildings/library/roof.png"
+    },
+    "cafe": {
+      "sprite": "assets/scenery/umbrella.png"
+    }
+  },
+  "props": {
+    "desk": {
+      "seat": "desk"
+    },
+    "workstation": {
+      "seat": "workstation"
+    },
+    "bench": {
+      "seat": "bench"
+    },
+    "cafe-table": {
+      "seat": "cafe-table"
+    },
+    "reading-chair": {
+      "seat": "reading-chair"
+    },
+    "bookshelf": {
+      "sprite": "assets/scenery/bookshelf_0.png",
+      "facings": {
+        "0": "assets/scenery/bookshelf_0.png",
+        "90": "assets/scenery/bookshelf_90.png",
+        "180": "assets/scenery/bookshelf_180.png",
+        "270": "assets/scenery/bookshelf_270.png"
+      }
+    },
+    "workbench": {
+      "sprite": "assets/scenery/workbench.png",
+      "fit": [
+        2.0,
+        0.9
+      ]
+    },
+    "cafe-table-top": {
+      "sprite": "assets/scenery/cafe_table.png"
+    },
+    "street-lamp": {
+      "sprite": "assets/scenery/lamp.png",
+      "light": 3.4
+    },
+    "bollard": {
+      "sprite": "assets/scenery/bollard.png"
+    },
+    "umbrella": {
+      "sprite": "assets/scenery/umbrella.png"
+    },
+    "tram-shelter": {
+      "sprite": "assets/scenery/tram_shelter_0.png",
+      "facings": {
+        "0": "assets/scenery/tram_shelter_0.png",
+        "90": "assets/scenery/tram_shelter_90.png",
+        "180": "assets/scenery/tram_shelter_180.png",
+        "270": "assets/scenery/tram_shelter_270.png"
+      },
+      "perch": "perch"
+    },
+    "catenary-pole": {
+      "pole": "outline"
+    },
+    "street-tree": {
+      "sprites": [
+        "assets/scenery/tree_round_a.png",
+        "assets/scenery/tree_round_b.png"
+      ]
+    },
+    "palm": {
+      "sprites": [
+        "assets/scenery/palm_tall.png",
+        "assets/scenery/palm_short.png"
+      ]
+    },
+    "great-tree": {
+      "sprite": "assets/scenery/tree_square.png",
+      "under": "assets/scenery/tree_roots.png"
+    },
+    "shrub": {
+      "sprite": "assets/scenery/shrub.png"
+    },
+    "planter": {
+      "sprite": "assets/scenery/planter.png"
+    },
+    "flowerbed": {
+      "sprite": "assets/scenery/flowerbed_0.png",
+      "facings": {
+        "0": "assets/scenery/flowerbed_0.png",
+        "90": "assets/scenery/flowerbed_90.png",
+        "180": "assets/scenery/flowerbed_0.png",
+        "270": "assets/scenery/flowerbed_90.png"
+      }
+    },
+    "path": {
+      "ground": "assets/ground/path.png"
+    },
+    "noticeboard": {
+      "sprite": "assets/scenery/noticeboard_0.png",
+      "facings": {
+        "0": "assets/scenery/noticeboard_0.png",
+        "90": "assets/scenery/noticeboard_90.png",
+        "180": "assets/scenery/noticeboard_180.png",
+        "270": "assets/scenery/noticeboard_270.png"
+      }
+    },
+    "plaque": {
+      "sprite": "assets/scenery/plaque_0.png",
+      "facings": {
+        "0": "assets/scenery/plaque_0.png",
+        "90": "assets/scenery/plaque_90.png",
+        "180": "assets/scenery/plaque_180.png",
+        "270": "assets/scenery/plaque_270.png"
+      }
+    },
+    "kiosk": {
+      "sprite": "assets/scenery/kiosk_0.png",
+      "facings": {
+        "0": "assets/scenery/kiosk_0.png",
+        "90": "assets/scenery/kiosk_90.png",
+        "180": "assets/scenery/kiosk_180.png",
+        "270": "assets/scenery/kiosk_270.png"
+      }
+    },
+    "steps": {
+      "sprite": "assets/scenery/steps_0.png",
+      "facings": {
+        "0": "assets/scenery/steps_0.png",
+        "90": "assets/scenery/steps_90.png",
+        "180": "assets/scenery/steps_180.png",
+        "270": "assets/scenery/steps_270.png"
+      },
+      "perch": "perch"
+    },
+    "low-wall": {
+      "sprite": "assets/scenery/low_wall_0.png",
+      "facings": {
+        "0": "assets/scenery/low_wall_0.png",
+        "90": "assets/scenery/low_wall_90.png",
+        "180": "assets/scenery/low_wall_180.png",
+        "270": "assets/scenery/low_wall_270.png"
+      },
+      "perch": "perch"
+    },
+    "fountain-rim": {
+      "pieces": [
+        "assets/scenery/fountain_back.png",
+        "assets/scenery/fountain_front.png"
+      ],
+      "perch": "perch"
+    },
+    "meadow": {
+      "meadow": {
+        "spacing": 0.25,
+        "flowering": 0.2,
+        "grass": [
+          ["assets/scenery/meadow/grass_a_0.png", "assets/scenery/meadow/grass_a_1.png", "assets/scenery/meadow/grass_a_2.png"],
+          ["assets/scenery/meadow/grass_b_0.png", "assets/scenery/meadow/grass_b_1.png", "assets/scenery/meadow/grass_b_2.png"]
+        ],
+        "flowers": [
+          ["assets/scenery/meadow/flowers_0.png", "assets/scenery/meadow/flowers_1.png", "assets/scenery/meadow/flowers_2.png"]
+        ]
+      }
+    },
+    "block-house": {
+      "block": "house"
+    },
+    "block-shop": {
+      "block": "shop"
+    },
+    "block-tower": {
+      "block": "tower"
+    },
+    "guild-hall": {
+      "building": "guild-hall"
+    },
+    "library": {
+      "building": "library"
+    },
+    "cafe": {
+      "building": "cafe"
+    },
+    "tram": {
+      "vehicle": true
+    }
+  },
+  "headlines": {
+    "Working": {
+      "icon": "assets/icons/working.png"
+    },
+    "Waiting": {
+      "icon": "assets/icons/waiting.png"
+    },
+    "Queued": {
+      "icon": "assets/icons/queued.png"
+    },
+    "Idle": {
+      "icon": "assets/icons/idle.png"
+    },
+    "Done": {
+      "icon": "assets/icons/done.png"
+    },
+    "Present": {
+      "icon": "assets/icons/present.png"
+    },
+    "Offline": {
+      "icon": "assets/icons/offline.png"
+    },
+    "Error": {
+      "icon": "assets/icons/error.png"
+    },
+    "Stale": {
+      "icon": "assets/icons/stale.png"
+    },
+    "Unknown": {
+      "icon": "assets/icons/unknown.png"
+    }
+  },
+  "badges": {
+    "Ai": {
+      "icon": "assets/icons/badge_ai.png"
+    },
+    "Simulation": {
+      "icon": "assets/icons/badge_simulation.png"
+    }
+  },
+  "day_night": {
+    "night_from": 1140,
+    "day_from": 360
+  },
+  "declared_placeholders": [],
+  "ground": {
+    "grass": [
+      "assets/ground/grass_0.png",
+      "assets/ground/grass_1.png"
+    ],
+    "water": [
+      "assets/ground/water_0.png",
+      "assets/ground/water_1.png"
+    ],
+    "quay_w": "assets/ground/quay_w.png",
+    "quay_e": "assets/ground/quay_e.png",
+    "street": "assets/ground/street.png",
+    "dash_x": "assets/ground/street_dash_x.png",
+    "dash_z": "assets/ground/street_dash_z.png",
+    "crossing_x": "assets/ground/crossing_x.png",
+    "crossing_z": "assets/ground/crossing_z.png",
+    "kerb_n": "assets/ground/kerb_n.png",
+    "kerb_s": "assets/ground/kerb_s.png",
+    "kerb_e": "assets/ground/kerb_e.png",
+    "kerb_w": "assets/ground/kerb_w.png",
+    "track_x": "assets/ground/track_x.png",
+    "track_z": "assets/ground/track_z.png",
+    "track_x_n": "assets/ground/track_x_n.png",
+    "track_x_s": "assets/ground/track_x_s.png",
+    "track_z_w": "assets/ground/track_z_w.png",
+    "track_z_e": "assets/ground/track_z_e.png"
+  },
+  "scenery": {
+    "railing": {
+      "post": "assets/scenery/railing_post.png",
+      "x": "assets/scenery/railing_x.png",
+      "z": "assets/scenery/railing_z.png"
+    },
+    "houses": [
+      "assets/buildings/blocks/house_a.png",
+      "assets/buildings/blocks/house_b.png",
+      "assets/buildings/blocks/house_c.png"
+    ],
+    "shops": [
+      "assets/buildings/blocks/shop_a.png"
+    ],
+    "tower": {
+      "base": "assets/buildings/blocks/tower_base.png",
+      "mid": "assets/buildings/blocks/tower_mid.png",
+      "top": "assets/buildings/blocks/tower_top.png"
+    },
+    "tram": {
+      "back": ["assets/scenery/tram/back_00.png", "assets/scenery/tram/back_01.png", "assets/scenery/tram/back_02.png", "assets/scenery/tram/back_03.png", "assets/scenery/tram/back_04.png", "assets/scenery/tram/back_05.png", "assets/scenery/tram/back_06.png", "assets/scenery/tram/back_07.png", "assets/scenery/tram/back_08.png", "assets/scenery/tram/back_09.png", "assets/scenery/tram/back_10.png", "assets/scenery/tram/back_11.png", "assets/scenery/tram/back_12.png", "assets/scenery/tram/back_13.png", "assets/scenery/tram/back_14.png", "assets/scenery/tram/back_15.png", "assets/scenery/tram/back_16.png", "assets/scenery/tram/back_17.png", "assets/scenery/tram/back_18.png", "assets/scenery/tram/back_19.png", "assets/scenery/tram/back_20.png"],
+      "front": ["assets/scenery/tram/front_00.png", "assets/scenery/tram/front_01.png", "assets/scenery/tram/front_02.png", "assets/scenery/tram/front_03.png", "assets/scenery/tram/front_04.png", "assets/scenery/tram/front_05.png", "assets/scenery/tram/front_06.png", "assets/scenery/tram/front_07.png", "assets/scenery/tram/front_08.png", "assets/scenery/tram/front_09.png", "assets/scenery/tram/front_10.png", "assets/scenery/tram/front_11.png", "assets/scenery/tram/front_12.png", "assets/scenery/tram/front_13.png", "assets/scenery/tram/front_14.png", "assets/scenery/tram/front_15.png", "assets/scenery/tram/front_16.png", "assets/scenery/tram/front_17.png", "assets/scenery/tram/front_18.png", "assets/scenery/tram/front_19.png", "assets/scenery/tram/front_20.png"],
+      "door": "assets/scenery/tram/door.png",
+      "back_z": -1.3,
+      "front_z": 1.3,
+      "leaf_z": 1.22
+    },
+    "bridge": {
+      "folder": "scenery/bridge"
+    },
+    "garden": {
+      "wall_x": "assets/scenery/garden_wall_x.png",
+      "wall_z": "assets/scenery/garden_wall_z.png",
+      "gate_x": "assets/scenery/garden_gate_x.png",
+      "gate_z": "assets/scenery/garden_gate_z.png"
+    }
+  },
+  "map": {
+    "minutes": 720,
+    "letterbox": "#141B33",
+    "pin": "square",
+    "plate": { "fill": "#141B33", "ink": "#E8ECFF", "case": "upper" },
+    "scale_bar": false,
+    "glow": false
+  },
+  "surfaces": {
+    "far": {"icon_key": "chip"},
+    "near": {"colour": "#E8ECFF", "font": "res://styles/pixel_art/assets/fonts/PressStart2P-Regular.ttf", "font_scale": 1, "max_lines": 3},
+    "open": {"overlay": "panel"}
+  },
+  "ui": {
+    "font_display": "res://styles/pixel_art/assets/fonts/PressStart2P-Regular.ttf",
+    "font_body": "res://styles/pixel_art/assets/fonts/PixelifySans-Variable.ttf",
+    "pixel_font": true,
+    "pixel_base": 8,
+    "pixel_base_body": 10,
+    "text_size": 30,
+    "colours": {
+      "panel": "#141B33",
+      "panel_edge": "#3E5AA8",
+      "ink": "#E8ECFF",
+      "ink_muted": "#A8B3DA",
+      "accent": "#2F5FD0",
+      "accent_ink": "#FFFFFF",
+      "focus": "#7FB2FF",
+      "scrim": "#0A0F2280"
+    },
+    "panel": {
+      "shape": "nine",
+      "radius": 0,
+      "border": 0,
+      "shadow": 0
+    },
+    "button": {
+      "shape": "nine",
+      "radius": 0,
+      "case": "title",
+      "height": 48
+    },
+    "focus": "glow",
+    "frame": {
+      "texture": "res://styles/pixel_art/assets/ui/pixel_frame.png",
+      "margin": 6
+    },
+    "bezel": {
+      "shape": "crt",
+      "colour": "#CDC6BC",
+      "edge": "#AAA096",
+      "radius": 24,
+      "margin": 28
+    }
+  }
+}

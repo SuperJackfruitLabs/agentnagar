@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en" data-style="17-art-nouveau-botanical">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>17 Art Nouveau botanical · Agentnagar style study</title>
+<meta name="description" content="A herbarium of Agentnagar: botanical plates cataloguing the district in the Art Nouveau botanical style study.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root {
+  --parchment: #f4e5c0;   /* sampled: frame cream */
+  --vellum: #f8eed4;
+  --sage: #677a59;        /* sampled: leaf */
+  --vine: #4d5f3c;        /* sampled: deep leaf */
+  --ink: #2e3a26;
+  --brass: #c09760;       /* sampled: brass fittings */
+  --brass-deep: #7d5e32;
+  --lavender: #9f8cb7;    /* sampled: wisteria */
+  --lav-deep: #5e4a7c;
+  --teal: #477f85;        /* sampled: water */
+  --teal-deep: #2f5f64;
+  --display: 'Cinzel Decorative', 'Cormorant Garamond', Georgia, serif;
+  --serif: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  --script: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; color: var(--ink); font: 400 1.16rem/1.6 var(--serif);
+  background-color: var(--parchment);
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(192,151,96,.18), transparent 40%),
+    radial-gradient(ellipse at 88% 60%, rgba(103,122,89,.12), transparent 45%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .04' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .22 0 0 0 .5 -.15'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23f)'/%3E%3C/svg%3E");
+  overflow-x: hidden;
+}
+a { color: var(--teal-deep); text-decoration-color: var(--brass); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+a:hover { color: var(--lav-deep); }
+:focus-visible { outline: 3px solid var(--lav-deep); outline-offset: 3px; border-radius: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--vine); color: var(--vellum); padding: 8px 14px; z-index: 30; }
+.skip:focus { top: 12px; }
+p { margin: 0 0 .85rem; }
+
+/* ---------- frontispiece ---------- */
+.front { max-width: 1180px; margin: 0 auto; padding: 28px 20px 10px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 36px; align-items: stretch; }
+.mucha {
+  position: relative; padding: 46px 34px 34px; text-align: center; isolation: isolate;
+  background: linear-gradient(180deg, var(--vellum), #efe0b6);
+  border-radius: 320px 320px 14px 14px;
+  box-shadow: inset 0 0 0 2px var(--brass), inset 0 0 0 8px var(--vellum), inset 0 0 0 10px var(--sage), 0 12px 30px rgba(77,95,60,.18);
+  overflow: hidden;
+}
+.halo { display: block; width: min(330px, 78%); aspect-ratio: 1; margin: 0 auto 18px; }
+.halo .spin { transform-origin: 250px 250px; animation: spin 140s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .halo .spin { animation: none; } }
+.front .kicker { font: 700 .95rem/1.5 var(--display); letter-spacing: .18em; color: var(--brass-deep); margin: 0 0 12px; text-transform: uppercase; }
+h1 { margin: 0; font: 700 clamp(2rem, 4.5vw, 3.7rem)/1.02 var(--display); color: var(--vine); letter-spacing: .01em; }
+h1 .and { display: block; font: italic 400 clamp(1.3rem, 2.4vw, 1.9rem)/1.3 var(--script); color: var(--brass-deep); margin: 14px 0 6px; letter-spacing: 0; }
+.title-zone { padding: 0; }
+.front .lede { font: italic 500 1.3rem/1.45 var(--script); max-width: 36ch; margin: 18px auto 0; color: var(--ink); position: relative; }
+.front .notes-btn { margin-top: 22px; }
+.notes-btn, .lens-tag {
+  font: 700 .9rem/1 var(--display); letter-spacing: .08em; color: var(--vellum); background: var(--vine);
+  border: 0; border-radius: 999px; padding: 12px 22px; cursor: pointer;
+  box-shadow: inset 0 0 0 2px var(--vine), inset 0 0 0 3px var(--brass);
+}
+.notes-btn:hover { background: var(--teal-deep); }
+.mosaic { height: 26px; margin: 26px -24px -24px; border-radius: 0 0 8px 8px; background:
+  radial-gradient(circle at 50% 50%, var(--brass) 0 3px, transparent 3.5px) 0 0 / 26px 26px,
+  conic-gradient(from 45deg, var(--sage) 0 25%, var(--parchment) 0 50%, var(--teal) 0 75%, var(--parchment) 0) 0 0 / 26px 26px;
+  border-top: 2px solid var(--brass); opacity: .9; }
+
+/* index of plates */
+.index { position: relative; padding: 30px 30px 24px; background: var(--vellum); border-radius: 14px; box-shadow: inset 0 0 0 1px var(--brass), inset 0 0 0 6px var(--vellum), inset 0 0 0 7px var(--sage); }
+.index h2 { font: 700 1.5rem/1.2 var(--display); color: var(--vine); margin: 0 0 4px; text-align: center; }
+.index .sub { font: italic 1.12rem/1.4 var(--script); text-align: center; margin: 0 0 14px; color: var(--brass-deep); }
+.index ol { list-style: none; margin: 0; padding: 0; }
+.index li a { display: grid; grid-template-columns: 58px 1fr; align-items: baseline; gap: 10px; padding: 9px 4px; text-decoration: none; color: var(--ink); border-bottom: 1px dotted rgba(125,94,50,.5); }
+.index li a:hover { background: rgba(159,140,183,.16); }
+.index li b { font: 700 1rem/1 var(--display); color: var(--brass-deep); }
+.index li span { font-size: 1.12rem; }
+.index li em { display: block; font: italic 1rem/1.3 var(--script); color: #56684a; }
+.index .sprig { position: absolute; width: 110px; right: -8px; bottom: -14px; opacity: .85; pointer-events: none; }
+
+/* ---------- plates ---------- */
+main { max-width: 1180px; margin: 0 auto; padding: 16px 20px 20px; }
+.plate {
+  position: relative; margin: 56px 0 0; padding: 54px clamp(20px, 4vw, 56px) 44px;
+  background: var(--vellum); border-radius: 22px;
+  box-shadow: inset 0 0 0 2px var(--brass), inset 0 0 0 9px var(--vellum), inset 0 0 0 10px var(--sage), 0 10px 26px rgba(77,95,60,.14);
+}
+.corner { position: absolute; width: 96px; height: 96px; pointer-events: none; color: var(--sage); }
+.corner.tl { left: 4px; top: 4px; } .corner.tr { right: 4px; top: 4px; transform: scaleX(-1); }
+.corner.bl { left: 4px; bottom: 4px; transform: scaleY(-1); } .corner.br { right: 4px; bottom: 4px; transform: scale(-1, -1); }
+.plate-head { text-align: center; margin-bottom: 26px; }
+.plate-no { font: 700 .95rem/1 var(--display); letter-spacing: .24em; color: var(--brass-deep); text-transform: uppercase; }
+.plate h2 { font: 700 clamp(1.9rem, 3.6vw, 2.7rem)/1.1 var(--display); color: var(--vine); margin: 8px 0 4px; }
+.binomial { font: italic 500 1.3rem/1.3 var(--script); color: var(--lav-deep); }
+.rule { display: block; width: min(420px, 80%); height: 40px; margin: 10px auto 0; color: var(--brass); }
+.vine-draw path { stroke-dasharray: 1400; stroke-dashoffset: 1400; transition: stroke-dashoffset 2.6s ease; }
+.grown .vine-draw path { stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: reduce) { .vine-draw path { stroke-dashoffset: 0; transition: none; } }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 30px 48px; }
+h3 { font: 700 1.2rem/1.25 var(--display); color: var(--teal-deep); margin: 0 0 .5rem; letter-spacing: .02em; }
+.caption { font: italic 1.08rem/1.45 var(--script); color: #4a4a36; }
+
+/* project */
+.kit-project .kit-tagline { font: italic 500 clamp(1.5rem, 2.8vw, 2rem)/1.3 var(--script); color: var(--vine); text-align: center; max-width: 36ch; margin: 0 auto 20px; }
+.kit-project .lead { columns: 2; column-gap: 48px; }
+.kit-project dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 16px; margin: 22px 0 10px; }
+.kit-project dl > div { position: relative; padding: 16px 18px 14px 18px; background: #fbf5e3; border-radius: 4px 4px 60px 4px; box-shadow: inset 0 0 0 1px rgba(125,94,50,.45); }
+.kit-project dl > div:last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+.kit-project dl > div::after { content: ''; position: absolute; right: 14px; top: 12px; width: 10px; height: 10px; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--brass); }
+.kit-project dt { font: 700 .95rem/1.2 var(--display); color: var(--brass-deep); letter-spacing: .06em; margin-bottom: 4px; }
+.kit-project dd { margin: 0; font-size: 1.05rem; }
+.kit-project .kit-small { font: italic 1.05rem/1.45 var(--script); color: #4a4a36; text-align: center; max-width: 70ch; margin: 10px auto 0; }
+
+/* style */
+.principles { list-style: none; padding: 0; margin: 0; }
+.principles li { position: relative; padding: 0 0 12px 40px; }
+.principles li svg { position: absolute; left: 0; top: 4px; width: 26px; height: 26px; color: var(--sage); }
+.pigments { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px 14px; }
+.pigments li { text-align: center; }
+.pigments svg { width: 88px; height: 88px; display: block; margin: 0 auto 4px; }
+.pigments b { display: block; font: 600 1.05rem/1.2 var(--serif); }
+.pigments code { font: 500 .98rem/1 var(--serif); color: #4a4a36; letter-spacing: .04em; }
+.specimen-type { margin-top: 18px; padding: 16px 20px; border-radius: 4px 40px 4px 40px; background: #fbf5e3; box-shadow: inset 0 0 0 1px rgba(125,94,50,.45); }
+.specimen-type .d { font: 700 1.9rem/1.1 var(--display); color: var(--vine); }
+.specimen-type .s { font: italic 1.4rem/1.2 var(--script); color: var(--lav-deep); }
+
+/* views: hand lens */
+.lens-stage { position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 2px var(--brass), 0 0 0 7px var(--vellum), 0 0 0 8px var(--sage); cursor: none; touch-action: none; }
+.lens-stage:focus-visible { outline-offset: 6px; }
+#lens-help { margin-top: 16px; }
+.lens {
+  position: absolute; width: 190px; height: 190px; border-radius: 50%; pointer-events: none;
+  margin: -95px 0 0 -95px; background-repeat: no-repeat;
+  box-shadow: 0 0 0 5px var(--brass), 0 0 0 7px var(--brass-deep), 0 8px 24px rgba(0,0,0,.35), inset 0 0 18px rgba(0,0,0,.25);
+  transition: left .35s ease, top .35s ease;
+}
+.lens.follow { transition: none; }
+@media (prefers-reduced-motion: reduce) { .lens { transition: none; } }
+.lens::after { content: ''; position: absolute; left: 50%; bottom: -58px; width: 16px; height: 56px; margin-left: -8px; background: linear-gradient(90deg, var(--brass-deep), var(--brass), var(--brass-deep)); border-radius: 0 0 8px 8px; transform-origin: 50% -95px; transform: rotate(-38deg); }
+.lens-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 30px; align-items: start; }
+.tags { list-style: none; margin: 0 0 14px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.lens-tag { font-size: .8rem; padding: 9px 14px; background: var(--vellum); color: var(--vine); box-shadow: inset 0 0 0 1.5px var(--sage); }
+.lens-tag[aria-pressed="true"] { background: var(--vine); color: var(--vellum); }
+.specimen-note { padding: 16px 18px; background: #fbf5e3; border-radius: 4px 4px 40px 4px; box-shadow: inset 0 0 0 1px rgba(125,94,50,.45); min-height: 150px; }
+.specimen-note h3 { margin-bottom: 4px; }
+.plates-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px; margin-top: 36px; }
+.sheet-plate { margin: 0; }
+.sheet-plate a { display: block; padding: 10px; background: #fbf5e3; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--brass), inset 0 0 0 5px #fbf5e3, inset 0 0 0 6px var(--sage); }
+.sheet-plate img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.sheet-plate figcaption { padding: 10px 6px 0; }
+.sheet-plate figcaption b { font: 700 1.08rem/1.2 var(--display); color: var(--vine); }
+.sheet-plate figcaption i { font: italic 1.08rem/1.2 var(--script); color: var(--lav-deep); }
+.concept { text-align: center; font: italic 1.15rem/1.45 var(--script); color: var(--brass-deep); max-width: 60ch; margin: 0 auto 22px; }
+
+/* agents */
+.arch-frame { position: relative; padding: 12px; background: #fbf5e3; border-radius: 240px 240px 12px 12px; box-shadow: inset 0 0 0 2px var(--brass), inset 0 0 0 8px #fbf5e3, inset 0 0 0 9px var(--sage); }
+.arch-frame .trim { border-radius: 228px 228px 6px 6px; overflow: hidden; }
+.crop-fig { margin: 0; }
+.crop-fig figcaption { padding: 8px 4px 0; font: italic 1.02rem/1.4 var(--script); color: #4a4a36; }
+.trim { overflow: hidden; border-radius: 6px; }
+.labels { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); gap: 10px; }
+.labels li { position: relative; padding: 10px 12px 10px 30px; background: #fbf5e3; border-radius: 3px 3px 3px 22px; box-shadow: inset 0 0 0 1px rgba(125,94,50,.45); font-size: 1rem; line-height: 1.35; }
+.labels li::before { content: ''; position: absolute; left: 11px; top: 15px; width: 8px; height: 8px; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--brass-deep); }
+.labels b { display: block; font: 700 .95rem/1.2 var(--display); color: var(--vine); }
+
+/* tradeoffs */
+.obs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 40px; margin-top: 26px; }
+.obs > div { padding: 0 0 0 26px; border-left: 2px solid var(--brass); position: relative; }
+.obs > div::before { content: '❦'; position: absolute; left: -12px; top: -4px; background: var(--vellum); color: var(--sage); font-size: 1.3rem; line-height: 1; }
+
+/* status */
+.kit-status { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 6px 44px; }
+.kit-status .kit-summary { grid-column: 1; grid-row: 1; font: italic 500 1.5rem/1.4 var(--script); color: var(--vine); }
+.kit-status .kit-concept { grid-column: 1; grid-row: 2 / span 2; font: italic 1.1rem/1.45 var(--script); color: #4a4a36; }
+.kit-status .kit-revisions { grid-column: 2; grid-row: 1; } .kit-status .kit-sources { grid-column: 2; grid-row: 2; } .kit-status .kit-links { grid-column: 2; grid-row: 3; font: 700 .95rem/1.6 var(--display); letter-spacing: .05em; }
+.kit-status ul { list-style: none; padding: 0; margin: 0 0 12px; }
+.kit-status li { padding: 5px 0; border-bottom: 1px dotted rgba(125,94,50,.5); font-size: 1.05rem; }
+
+/* nav */
+footer { max-width: 1180px; margin: 0 auto; padding: 20px 20px 50px; }
+.kit-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; margin-top: 30px; }
+.kit-nav a { font: 700 1rem/1.3 var(--display); letter-spacing: .04em; text-decoration: none; color: var(--vine); padding: 16px 20px; background: var(--vellum); border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--brass), inset 0 0 0 5px var(--vellum), inset 0 0 0 6px var(--sage); }
+.kit-nav a:hover { background: #efe3c3; color: var(--lav-deep); }
+.kit-nav .kit-next { text-align: right; } .kit-nav .kit-index { text-align: center; }
+.colophon { text-align: center; font: italic 1.05rem/1.4 var(--script); color: #4a4a36; margin-top: 20px; }
+
+/* notes dialog */
+.kit-dialog { max-width: min(860px, 94vw); max-height: 90vh; border: 0; padding: 0; background: var(--vellum); color: var(--ink); border-radius: 18px; box-shadow: inset 0 0 0 2px var(--brass), 0 20px 60px rgba(0,0,0,.4); }
+.kit-dialog::backdrop { background: rgba(46,58,38,.6); }
+.kit-dialog .kit-close { position: sticky; top: 0; float: right; margin: 14px; font: 700 .85rem/1 var(--display); background: var(--vine); color: var(--vellum); border: 0; border-radius: 999px; padding: 10px 16px; cursor: pointer; z-index: 2; }
+.kit-notes { padding: 22px 30px 30px; }
+.kit-notes h1 { font-size: 2rem; }
+.kit-notes h2 { font: 700 1.4rem/1.2 var(--display); color: var(--vine); margin-top: 1.6rem; }
+.kit-notes img { max-width: 100%; height: auto; }
+.kit-notes .kit-palette { list-style: none; padding: 0; }
+.kit-notes .kit-swatch { display: inline-block; width: 1.1em; height: 1.1em; border-radius: 50%; vertical-align: -3px; box-shadow: inset 0 0 0 1px var(--ink); }
+.kit-notes dt { font-weight: 700; color: var(--teal-deep); } .kit-notes dd { margin: 0 0 .6rem; }
+.kit-notes .kit-nav { grid-template-columns: 1fr; }
+.kit-notes .kit-nav a { text-align: left !important; }
+
+@media (max-width: 900px) {
+  .front, .two, .lens-layout, .plates-grid, .obs, .kit-status { grid-template-columns: 1fr; }
+  .kit-status > * { grid-column: 1 !important; grid-row: auto !important; }
+  .kit-project .lead { columns: 1; }
+}
+@media (max-width: 560px) {
+  .mucha { padding: 30px 18px 26px; border-radius: 200px 200px 12px 12px; }
+  .mosaic { margin: 22px -10px -18px; }
+  .plate { padding: 46px 16px 34px; border-radius: 16px; }
+  .corner { width: 64px; height: 64px; }
+  .index { padding: 24px 16px 20px; }
+  .kit-nav { grid-template-columns: 1fr; }
+  .kit-nav a, .kit-nav .kit-next, .kit-nav .kit-index { text-align: center; }
+  .lens { width: 130px; height: 130px; margin: -65px 0 0 -65px; }
+  .lens::after { transform-origin: 50% -65px; height: 40px; bottom: -40px; }
+  body { font-size: 1.1rem; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#plates">Skip to the plates</a>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <symbol id="corner" viewBox="0 0 96 96">
+      <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M6 90 C 6 40, 20 12, 62 8 C 84 6, 92 20, 80 30 C 70 38, 56 30, 62 20"/>
+        <path d="M12 70 C 16 44, 30 26, 52 22"/>
+        <path d="M6 90 C 20 70, 40 64, 44 46 C 47 34, 38 30, 33 38"/>
+      </g>
+      <path d="M26 30 C 34 16, 48 14, 50 20 C 44 30, 34 32, 26 30 Z" fill="currentColor" opacity=".85"/>
+      <path d="M14 56 C 8 42, 14 32, 20 34 C 22 44, 20 52, 14 56 Z" fill="currentColor" opacity=".7"/>
+      <circle cx="62" cy="20" r="3" fill="#c09760"/>
+    </symbol>
+    <symbol id="leaf" viewBox="0 0 26 26"><path d="M3 23 C 3 10, 12 3, 23 3 C 23 14, 16 23, 3 23 Z M3 23 L 16 10" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  </defs>
+</svg>
+
+<header class="front">
+  <div class="mucha">
+    <svg class="halo" viewBox="0 0 500 500" aria-hidden="true">
+      <circle cx="250" cy="250" r="238" fill="none" stroke="#c09760" stroke-width="2"/>
+      <circle cx="250" cy="250" r="226" fill="rgba(159,140,183,.12)" stroke="#677a59" stroke-width="1.2"/>
+      <g class="spin" id="halo-leaves"></g>
+      <circle cx="250" cy="250" r="168" fill="rgba(248,238,212,.75)" stroke="#c09760" stroke-width="1.5"/>
+      <circle cx="250" cy="250" r="158" fill="none" stroke="#677a59" stroke-width="1" stroke-dasharray="2 6"/>
+      <g fill="none" stroke-linecap="round">
+        <path d="M130 360 H370" stroke="#c09760" stroke-width="3"/>
+        <path d="M150 372 H350" stroke="#677a59" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <path d="M250 360 C 246 320, 256 290, 250 250" stroke="#4d5f3c" stroke-width="10"/>
+        <path d="M250 360 C 230 350, 200 356, 186 344 C 176 336, 182 324, 192 328" stroke="#4d5f3c" stroke-width="3"/>
+        <path d="M250 360 C 270 350, 300 356, 314 344 C 324 336, 318 324, 308 328" stroke="#4d5f3c" stroke-width="3"/>
+        <path d="M250 262 C 220 240, 180 250, 164 226 C 152 206, 172 190, 186 202" stroke="#4d5f3c" stroke-width="4"/>
+        <path d="M250 262 C 280 240, 320 250, 336 226 C 348 206, 328 190, 314 202" stroke="#4d5f3c" stroke-width="4"/>
+        <path d="M250 256 C 244 220, 258 190, 250 150" stroke="#4d5f3c" stroke-width="4"/>
+        <path d="M250 150 C 236 134, 244 118, 256 124" stroke="#4d5f3c" stroke-width="3"/>
+      </g>
+      <g fill="#677a59" opacity=".9">
+        <ellipse cx="250" cy="182" rx="74" ry="52"/><ellipse cx="186" cy="214" rx="46" ry="34"/><ellipse cx="314" cy="214" rx="46" ry="34"/>
+      </g>
+      <g fill="#4d5f3c" opacity=".55"><ellipse cx="226" cy="196" rx="30" ry="18"/><ellipse cx="282" cy="170" rx="26" ry="16"/><ellipse cx="300" cy="222" rx="20" ry="12"/><ellipse cx="190" cy="222" rx="22" ry="12"/></g>
+      <g fill="#c09760"><circle cx="208" cy="248" r="6"/><circle cx="292" cy="248" r="6"/><circle cx="250" cy="238" r="4"/></g>
+      <g fill="#9f8cb7"><circle cx="220" cy="160" r="4"/><circle cx="276" cy="200" r="4"/><circle cx="170" cy="206" r="3.5"/><circle cx="330" cy="206" r="3.5"/><circle cx="252" cy="146" r="3.5"/></g>
+      <path d="M208 254 v14 M292 254 v14" stroke="#7d5e32" stroke-width="2"/>
+    </svg>
+    <div class="title-zone">
+    <p class="kicker">Style study 17 · A herbarium</p>
+    <h1>Agentnagar<span class="and">its places, pressed &amp; catalogued in</span>Art Nouveau</h1>
+    </div>
+    <p class="lede">A garden city of curved iron and glass, where plant forms shape the architecture, the furniture and the lettering.</p>
+    <button class="notes-btn" id="notes" type="button">Read the notes</button>
+    <div class="mosaic" aria-hidden="true"></div>
+  </div>
+  <nav class="index" aria-label="Index of plates">
+    <h2>Index of Plates</h2>
+    <p class="sub">Seven plates, one district</p>
+    <ol>
+      <li><a href="#plate-1"><b>I</b><span>Agentnagar<em>Urbs communis: the project</em></span></a></li>
+      <li><a href="#plate-2"><b>II</b><span>The style<em>Intent, principles, pigments, letters</em></span></a></li>
+      <li><a href="#plate-3"><b>III</b><span>One district, four views<em>The hand lens and the four sheets</em></span></a></li>
+      <li><a href="#plate-4"><b>IV</b><span>Agents in this style<em>A1 and the Guild residents</em></span></a></li>
+      <li><a href="#plate-5"><b>V</b><span>Strengths &amp; trade-offs<em>Observations in the field</em></span></a></li>
+      <li><a href="#plate-6"><b>VI</b><span>Status<em>Accession record</em></span></a></li>
+      <li><a href="#more"><b>VII</b><span>Neighbouring herbaria<em>Previous, all 30, next</em></span></a></li>
+    </ol>
+    <p class="caption" style="margin:18px 8px 0;text-align:center">Every plate is one note on the style. The figures are the four selected concept sheets; the ornament, pigments and lens are drawn for this page.</p>
+    <svg class="sprig" viewBox="0 0 110 110" aria-hidden="true"><g fill="none" stroke="#677a59" stroke-width="2"><path d="M100 104 C 70 80, 50 50, 58 8"/><path d="M76 78 C 60 76, 48 64, 50 54 C 62 56, 72 66, 76 78 Z" fill="rgba(103,122,89,.35)"/><path d="M62 44 C 74 38, 86 40, 90 48 C 80 54, 68 52, 62 44 Z" fill="rgba(103,122,89,.35)"/></g><circle cx="58" cy="10" r="6" fill="#9f8cb7"/><circle cx="50" cy="18" r="4" fill="#9f8cb7"/></svg>
+  </nav>
+</header>
+
+<main id="plates">
+  <section class="plate" id="plate-1" aria-labelledby="h1p">
+    <div class="plate-head">
+      <div class="plate-no">Plate I</div>
+      <h2 id="h1p">Agentnagar</h2>
+      <div class="binomial">Urbs communis, a village that may grow into a city</div>
+      <svg class="rule vine-draw" viewBox="0 -14 420 54" aria-hidden="true"><path d="M4 13 C 70 -6, 120 32, 210 13 S 350 -6, 416 13" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </div>
+    <div id="project-slot"></div>
+  </section>
+
+  <section class="plate" id="plate-2" data-core="style" aria-labelledby="h2p">
+    <div class="plate-head">
+      <div class="plate-no">Plate II</div>
+      <h2 id="h2p">The style</h2>
+      <div class="binomial">Ferrum et vitrum florens: iron and glass in flower</div>
+      <svg class="rule vine-draw" viewBox="0 -14 420 54" aria-hidden="true"><path d="M4 13 C 70 -6, 120 32, 210 13 S 350 -6, 416 13" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </div>
+    <p id="intent" style="font-size:1.24rem;max-width:70ch;margin:0 auto 26px;text-align:center"></p>
+    <div class="two">
+      <div>
+        <h3>Principles</h3>
+        <ul class="principles" id="principles"></ul>
+      </div>
+      <div>
+        <h3>Materials &amp; texture</h3>
+        <p id="materials"></p>
+        <h3>Lettering</h3>
+        <p id="type"></p>
+        <div class="specimen-type" aria-hidden="true"><div class="d">Tree Square</div><div class="s">Library, reading room</div></div>
+      </div>
+    </div>
+    <h3 style="margin-top:30px;text-align:center">Pigments, pressed</h3>
+    <p class="caption" style="text-align:center">Sampled from the selected sheets (averaged over matching pixels, rounded).</p>
+    <ul class="pigments" id="palette"></ul>
+  </section>
+
+  <section class="plate" id="plate-3" data-core="views" aria-labelledby="h3p">
+    <div class="plate-head">
+      <div class="plate-no">Plate III</div>
+      <h2 id="h3p">One district, four views</h2>
+      <div class="binomial">Examined under the hand lens</div>
+      <svg class="rule vine-draw" viewBox="0 -14 420 54" aria-hidden="true"><path d="M4 13 C 70 -6, 120 32, 210 13 S 350 -6, 416 13" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </div>
+    <p class="concept" id="concept-note"></p>
+    <div class="lens-layout">
+      <div>
+        <div class="lens-stage" id="stage" tabindex="0" aria-describedby="lens-help"><div class="lens" id="lens" aria-hidden="true"></div></div>
+        <p class="caption" id="lens-help">Hand lens over the Map panel of City perspectives. Move the pointer, or focus the map and use the arrow keys; the specimen tags jump to each landmark.</p>
+      </div>
+      <div>
+        <h3>Reference-district specimens</h3>
+        <ul class="tags" id="tags"></ul>
+        <div class="specimen-note" id="note" aria-live="polite"></div>
+      </div>
+    </div>
+    <div class="plates-grid" id="sheets"></div>
+  </section>
+
+  <section class="plate" id="plate-4" data-core="agents" aria-labelledby="h4p">
+    <div class="plate-head">
+      <div class="plate-no">Plate IV</div>
+      <h2 id="h4p">Agents in this style</h2>
+      <div class="binomial">A1, inlaid with leaves; the Guild, catalogued</div>
+      <svg class="rule vine-draw" viewBox="0 -14 420 54" aria-hidden="true"><path d="M4 13 C 70 -6, 120 32, 210 13 S 350 -6, 416 13" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </div>
+    <div class="two">
+      <div id="agent-figs" style="display:grid;gap:22px"></div>
+      <div>
+        <p id="agents-text"></p>
+        <p id="a1-text" class="caption"></p>
+        <h3 style="margin-top:20px">Catalogue of Guild residents</h3>
+        <p class="caption" id="guild-note"></p>
+        <ul class="labels" id="labels"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="plate" id="plate-5" data-core="tradeoffs" aria-labelledby="h5p">
+    <div class="plate-head">
+      <div class="plate-no">Plate V</div>
+      <h2 id="h5p">Strengths &amp; trade-offs</h2>
+      <div class="binomial">Observations in the field</div>
+      <svg class="rule vine-draw" viewBox="0 -14 420 54" aria-hidden="true"><path d="M4 13 C 70 -6, 120 32, 210 13 S 350 -6, 416 13" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </div>
+    <div class="two" id="scale-figs"></div>
+    <div class="obs" id="obs"></div>
+  </section>
+
+  <section class="plate" id="plate-6" aria-labelledby="h6p">
+    <div class="plate-head">
+      <div class="plate-no">Plate VI</div>
+      <h2 id="h6p">Status</h2>
+      <div class="binomial">Accession record</div>
+      <svg class="rule vine-draw" viewBox="0 -14 420 54" aria-hidden="true"><path d="M4 13 C 70 -6, 120 32, 210 13 S 350 -6, 416 13" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </div>
+    <div id="status-slot"></div>
+  </section>
+</main>
+
+<footer id="more">
+  <h2 class="sr">Neighbouring herbaria</h2>
+  <div id="nav-slot"></div>
+  <p class="colophon">Ornament, the Tree Square emblem in the halo, pigments and hand lens are illustrative, drawn for this page with SVG and CSS; only the four sheets are concept art.</p>
+</footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  const S = Kit.style('17-art-nouveau-botanical');
+  const A = window.AGENTNAGAR;
+  const el = Kit.el;
+  const NS = 'http://www.w3.org/2000/svg';
+
+  const PALETTE = [
+    { name: 'Parchment cream', hex: '#f4e5c0' },
+    { name: 'Sage leaf', hex: '#677a59' },
+    { name: 'Deep vine', hex: '#4d5f3c' },
+    { name: 'Brass', hex: '#c09760' },
+    { name: 'Wisteria lavender', hex: '#9f8cb7' },
+    { name: 'Teal water', hex: '#477f85' }
+  ];
+  const CONTENT = {
+    intent: 'A garden city of curved iron and glass, where plant forms shape the architecture, furniture and lettering. Sage green, cream, brass and lavender dominate, with teal water and palms placing the setting in a warm climate. Floral borders frame every panel.',
+    principles: [
+      'Whiplash silhouettes: iron, glass and lettering follow one continuous curving line.',
+      'Green and brass hold the palette; lavender and teal are accents, never the ground.',
+      'Ornament as wayfinding: floral banners and mosaic paving mark where to go.',
+      'Plants are structure: arches, lamps and railings grow from stems and leaves.',
+      'Warm climate, open glass: palms, greenhouse halls and daylight through iron ribs.'
+    ],
+    palette: PALETTE,
+    materials: 'Arched greenhouse halls, spired towers and tiled domes; the workshop is a glass shed on the dock. Interiors carry leaf motifs into lamps, bedding, rugs and tram seats, over mosaic paving and brass fittings.',
+    type: 'Roman capitals on cream cartouches with sage borders label each panel; slogans sit on tall arched cream plaques. This page uses Cinzel Decorative for plate titles, EB Garamond for text and Cormorant Garamond italic for captions.',
+    agents: 'City Agent A1 appears in the Living community sheet (Conversation panel) as a white, smooth-faced figure with green and gold leaf inlays across its head, shoulders and arms, and a round leaf disc at the ear. Residents wear botanical prints. The Interfaces sheet\'s mobile panel shows a human-looking "Your City Agent" portrait on what looks like a second device, so A1\'s identity is not yet consistent. The sheets do not depict the Guild residents individually.',
+    tradeoffs: [
+      { label: 'Map vs street', text: 'The map is legible, with named districts and cream label cartouches. The diagonal view is dense enough that landmarks blur together. Street and close-up scenes read well, with ornament working as wayfinding.' },
+      { label: 'Device and production cost', text: 'Proposed: keep the whiplash silhouettes, the green and brass palette and the mosaic paving at every tier. Lower tiers simplify ironwork to flat outlines and remove climbing plants; higher tiers add glass reflections and inlay.' },
+      { label: 'UI legibility', text: 'Floral borders frame every panel and ornament covers every surface, so the city reads as a palace garden rather than a maker district. The Creating sheet moves its labels from the top-left to below the panels.' },
+      { label: 'Review risks', text: 'The mobile panel appears to need a second device. The AR tabletop turns the atlas into a round, multi-waterway model without locating the original district. A1 and the human "Your City Agent" portrait are not reconciled. Repair status for this style is recorded as pending.' }
+    ]
+  };
+
+  // halo leaves
+  const hl = document.getElementById('halo-leaves');
+  for (let i = 0; i < 36; i++) {
+    const g = document.createElementNS(NS, 'g');
+    g.setAttribute('transform', `rotate(${i * 10} 250 250)`);
+    g.innerHTML = i % 2
+      ? '<circle cx="250" cy="28" r="5" fill="#c09760"/><circle cx="250" cy="44" r="3" fill="#9f8cb7"/>'
+      : '<path d="M250 20 C 262 34, 262 50, 250 62 C 238 50, 238 34, 250 20 Z" fill="#677a59" opacity=".8"/><path d="M250 22 L250 60" stroke="#f4e5c0" stroke-width="1"/>';
+    hl.append(g);
+  }
+  // plate corners
+  document.querySelectorAll('.plate').forEach((p) => ['tl', 'tr', 'bl', 'br'].forEach((c) => {
+    const s = document.createElementNS(NS, 'svg');
+    s.setAttribute('class', `corner ${c}`); s.setAttribute('aria-hidden', 'true'); s.setAttribute('viewBox', '0 0 96 96');
+    s.innerHTML = '<use href="#corner"/>';
+    p.append(s);
+  }));
+
+  function crop(i, panel, alt, caption, t, b, cls) {
+    const box = Kit.sheetImg(S, i, panel, { alt });
+    const PH = (panel[0] === 't' ? 450 : 438) / 740;
+    const wrap = el('div', { class: 'trim' });
+    wrap.style.aspectRatio = `${1 / (PH * (1 - t - b))}`;
+    box.style.marginTop = `${-t * PH * 100}%`;
+    wrap.append(box);
+    const inner = cls ? el('div', { class: cls }, [wrap]) : wrap;
+    return el('figure', { class: 'crop-fig' }, [inner, el('figcaption', { text: caption })]);
+  }
+
+  // Plate I
+  const project = Kit.projectBlock();
+  project.removeAttribute('data-core');
+  const dl = project.querySelector('dl'); const items = [...dl.children]; dl.textContent = '';
+  for (let i = 0; i < items.length; i += 2) dl.append(el('div', {}, [items[i], items[i + 1]]));
+  const lead = el('div', { class: 'lead' });
+  [...project.querySelectorAll(':scope > p:not(.kit-tagline):not(.kit-small)')].forEach((p) => lead.append(p));
+  project.querySelector('.kit-tagline').after(lead);
+  document.getElementById('project-slot').append(project);
+  document.getElementById('plate-1').setAttribute('data-core', 'project');
+
+  // Plate II
+  document.getElementById('intent').textContent = CONTENT.intent;
+  document.getElementById('materials').textContent = CONTENT.materials;
+  document.getElementById('type').textContent = CONTENT.type;
+  CONTENT.principles.forEach((p) => {
+    const li = el('li', { text: p });
+    li.insertAdjacentHTML('afterbegin', '<svg aria-hidden="true" viewBox="0 0 26 26"><use href="#leaf"/></svg>');
+    document.getElementById('principles').append(li);
+  });
+  PALETTE.forEach((p, i) => {
+    const li = el('li');
+    const petals = Array.from({ length: 6 }, (_, k) => `<ellipse cx="44" cy="22" rx="11" ry="20" transform="rotate(${k * 60} 44 44)" fill="${p.hex}" stroke="#7d5e32" stroke-width="1"/>`).join('');
+    li.innerHTML = `<svg viewBox="0 0 88 88" aria-hidden="true"><circle cx="44" cy="44" r="42" fill="none" stroke="#c09760" stroke-width="1" stroke-dasharray="2 4"/>${petals}<circle cx="44" cy="44" r="8" fill="#c09760" stroke="#7d5e32"/></svg>`;
+    li.append(el('b', { text: p.name }), el('code', { text: p.hex }));
+    document.getElementById('palette').append(li);
+  });
+
+  // Plate III: hand lens over the Map panel (sheet coords 1536 x 1024; kit tl panel = 16,42,740,450)
+  document.getElementById('concept-note').textContent = A.conceptNote;
+  const stage = document.getElementById('stage');
+  const mapBox = Kit.sheetImg(S, 0, 'tl', { eager: true, alt: `${S.name} concept study, City perspectives (${S.sheets[0].revision}), Map panel: the river along the west edge, the North bridge, the glass Workshop sheds on the dock, Tree Square at the centre, the domed Library to the east and the tram boulevard to the south, each with a cream label.` });
+  const stageTrim = el('div', { class: 'trim', style: `aspect-ratio: ${1 / ((450 / 740) * 0.94)}; border-radius: 0` });
+  stageTrim.append(mapBox);
+  stage.prepend(stageTrim);
+  const lens = document.getElementById('lens');
+  const P0 = [16, 42, 740, 450], Z = 2.6;
+  const SPOTS = {
+    R1: [70, 250, 'Teal water along the whole west edge, with docks and boats; label "River (West)".'],
+    B1: [205, 98, 'A low, many-arched crossing in the north with iron lamps; label "Bridge (North)".'],
+    W1: [215, 300, 'Glass-roofed greenhouse sheds on the dock beside the river; label "Workshop (West)".'],
+    T1: [392, 262, 'A round square with one great tree at its centre, ringed by paths and planting.'],
+    L1: [590, 262, 'A domed glass hall set in gardens to the east; label "Library (East)".'],
+    S1: [392, 398, 'A double track with a green tram along the south; label "Tram boulevard (South)".']
+  };
+  let cur = [392, 262];
+  function placeLens(sx, sy, follow) {
+    cur = [Math.max(P0[0], Math.min(P0[0] + P0[2], sx)), Math.max(P0[1], Math.min(P0[1] + P0[3], sy))];
+    const w = stage.clientWidth, k = w / P0[2], R = lens.offsetWidth / 2;
+    lens.classList.toggle('follow', !!follow);
+    lens.style.left = `${(cur[0] - P0[0]) * k}px`;
+    lens.style.top = `${(cur[1] - P0[1]) * k}px`;
+    lens.style.backgroundImage = `url("${Kit.href(S.sheets[0].image)}")`;
+    lens.style.backgroundSize = `${1536 * k * Z}px ${1024 * k * Z}px`;
+    lens.style.backgroundPosition = `${-(cur[0] * k * Z - R)}px ${-(cur[1] * k * Z - R)}px`;
+  }
+  stage.addEventListener('pointermove', (e) => {
+    const r = stage.getBoundingClientRect(), k = r.width / P0[2];
+    placeLens(P0[0] + (e.clientX - r.left) / k, P0[1] + (e.clientY - r.top) / k, true);
+  });
+  stage.addEventListener('pointerdown', (e) => { const r = stage.getBoundingClientRect(), k = r.width / P0[2]; placeLens(P0[0] + (e.clientX - r.left) / k, P0[1] + (e.clientY - r.top) / k, true); });
+  stage.addEventListener('keydown', (e) => {
+    const d = e.shiftKey ? 40 : 12;
+    const m = { ArrowLeft: [-d, 0], ArrowRight: [d, 0], ArrowUp: [0, -d], ArrowDown: [0, d] }[e.key];
+    if (!m) return;
+    e.preventDefault(); placeLens(cur[0] + m[0], cur[1] + m[1], true);
+  });
+  const note = document.getElementById('note');
+  const tagList = document.getElementById('tags');
+  function showSpot(d, btn) {
+    const [x, y, txt] = SPOTS[d.id];
+    placeLens(x, y, false);
+    [...tagList.querySelectorAll('button')].forEach((b) => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
+    note.replaceChildren(el('h3', { text: d.name }), el('p', { text: d.note }), el('p', { class: 'caption', text: `In this sheet: ${txt}` }));
+  }
+  A.district.forEach((d, i) => {
+    const b = el('button', { class: 'lens-tag', type: 'button', 'aria-pressed': 'false', text: d.name });
+    b.addEventListener('click', () => showSpot(d, b));
+    tagList.append(el('li', {}, [b]));
+  });
+  const firstImg = mapBox.querySelector('img');
+  const init = () => showSpot(A.district[3], tagList.querySelectorAll('button')[3]);
+  if (firstImg.complete) init(); else firstImg.addEventListener('load', init);
+  window.addEventListener('resize', () => placeLens(cur[0], cur[1], true));
+
+  const SHEET_NOTES = [
+    'Map with named cartouches, top-down, diagonal and street. River to the west, the North bridge, glass Workshop sheds on the dock, Tree Square with its great tree, the domed Library to the east and the tram boulevard to the south.',
+    'Workshop, home, conversation and gathering. A1 sits across a café table in the conversation panel; arched slogan plaques frame every scene.',
+    'Build mode, transit, night and rain, waterfront park. A glass greenhouse is placed in build mode; the tram interior has leaf-print seats; labels sit below the panels on this sheet.',
+    'Facility, mobile, rooftop and AR tabletop. Kiosk buttons Browse, Book, Ask; the phone pairs a map with a "Your City Agent" card; the tabletop is a round multi-waterway model.'
+  ];
+  S.sheets.forEach((sheet, i) => {
+    document.getElementById('sheets').append(el('figure', { class: 'sheet-plate' }, [
+      el('a', { href: Kit.href(sheet.image), 'aria-label': `Open the full ${sheet.title} sheet, ${sheet.revision}` }, [
+        Kit.sheetImg(S, i, null, { alt: `${S.name} concept study, ${sheet.title} (${sheet.revision}): ${Kit.PANEL_NAMES[i].join(', ')} panels. ${SHEET_NOTES[i]}` })]),
+      el('figcaption', {}, [el('b', { text: `Fig. ${i + 1}. ${sheet.title}` }), ' ', el('i', { text: `${sheet.revision}, concept study` }), el('p', { class: 'caption', text: SHEET_NOTES[i], style: 'margin:.3rem 0 0' })])
+    ]));
+  });
+
+  // Plate IV
+  const af = document.getElementById('agent-figs');
+  af.append(crop(1, 'bl', `${S.name} concept study, Living community (${S.sheets[1].revision}), Conversation panel: a woman with a white flower in her hair talks with City Agent A1, a white figure inlaid with green and gold leaves.`, `Living community, Conversation panel (${S.sheets[1].revision}): A1 as drawn in the sheet.`, 0.01, 0.08, 'arch-frame'));
+  af.append(crop(3, 'tr', `${S.name} concept study, Interfaces perspectives (${S.sheets[3].revision}), Mobile panel: a phone map beside a second screen showing a human-looking "Your City Agent" portrait.`, `Interfaces, Mobile panel (${S.sheets[3].revision}): the "Your City Agent" card is a human portrait on a second screen.`, 0.05, 0.02));
+  document.getElementById('agents-text').textContent = CONTENT.agents;
+  document.getElementById('a1-text').textContent = A.agentA1;
+  document.getElementById('guild-note').textContent = `The fourteen Guild residents, by proposed public role. ${A.guildNote}`;
+  A.guild.forEach((g) => document.getElementById('labels').append(el('li', {}, [el('b', { text: g.name }), g.role])));
+
+  // Plate V
+  const sf = document.getElementById('scale-figs');
+  sf.append(crop(0, 'tl', `${S.name} concept study, City perspectives (${S.sheets[0].revision}), Map panel: legible, with named cartouches for each district.`, 'Map: legible, with named districts.', 0.03, 0.06));
+  sf.append(crop(0, 'bl', `${S.name} concept study, City perspectives (${S.sheets[0].revision}), Diagonal panel: greenhouse sheds, domes, palms and towers packed so densely that landmarks blur together.`, 'Diagonal: dense enough that landmarks blur together.', 0.02, 0.09));
+  CONTENT.tradeoffs.forEach((t) => document.getElementById('obs').append(el('div', {}, [el('h3', { text: t.label }), el('p', { text: t.text })])));
+
+  // Plate VI + nav + notes
+  document.getElementById('status-slot').append(Kit.statusBlock(S));
+  Kit.mountNav(document.getElementById('nav-slot'), S);
+  Kit.notesDialog(S, CONTENT, document.getElementById('notes'));
+
+  // vines grow in as plates arrive
+  const rules = document.querySelectorAll('.plate-head');
+  if ('IntersectionObserver' in window && !Kit.reducedMotion()) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('grown'); io.unobserve(e.target); } }), { threshold: .3 });
+    rules.forEach((r) => io.observe(r));
+  } else rules.forEach((r) => r.classList.add('grown'));
+})();
+</script>
+</body>
+</html>

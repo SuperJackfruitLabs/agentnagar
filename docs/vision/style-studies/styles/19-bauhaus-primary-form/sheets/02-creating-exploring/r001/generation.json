@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "1de50286d96fc1d34fee3ed80f33399d405480af24025c1f014e0a409250f6f6",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/19-bauhaus-primary-form/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

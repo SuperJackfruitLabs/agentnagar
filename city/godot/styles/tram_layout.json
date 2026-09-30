@@ -1,0 +1,257 @@
+{
+ "length_cm": 2050,
+ "capacity": 40,
+ "across_cm": 50,
+ "doors_cm": [
+  410,
+  1025,
+  1640
+ ],
+ "door_width_cm": 130,
+ "door_slide_cm": 60,
+ "floor_cm": 40,
+ "seat_cm": 45,
+ "seated_eye_cm": 120,
+ "slots": [
+  {
+   "slot": 0,
+   "along_cm": 51,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 1,
+   "along_cm": 51,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 2,
+   "along_cm": 153,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 3,
+   "along_cm": 153,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 4,
+   "along_cm": 256,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 5,
+   "along_cm": 256,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 6,
+   "along_cm": 358,
+   "across_cm": 50,
+   "pose": "standing"
+  },
+  {
+   "slot": 7,
+   "along_cm": 358,
+   "across_cm": -50,
+   "pose": "standing"
+  },
+  {
+   "slot": 8,
+   "along_cm": 461,
+   "across_cm": 50,
+   "pose": "standing"
+  },
+  {
+   "slot": 9,
+   "along_cm": 461,
+   "across_cm": -50,
+   "pose": "standing"
+  },
+  {
+   "slot": 10,
+   "along_cm": 563,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 11,
+   "along_cm": 563,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 12,
+   "along_cm": 666,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 13,
+   "along_cm": 666,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 14,
+   "along_cm": 768,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 15,
+   "along_cm": 768,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 16,
+   "along_cm": 871,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 17,
+   "along_cm": 871,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 18,
+   "along_cm": 973,
+   "across_cm": 50,
+   "pose": "standing"
+  },
+  {
+   "slot": 19,
+   "along_cm": 973,
+   "across_cm": -50,
+   "pose": "standing"
+  },
+  {
+   "slot": 20,
+   "along_cm": 1076,
+   "across_cm": 50,
+   "pose": "standing"
+  },
+  {
+   "slot": 21,
+   "along_cm": 1076,
+   "across_cm": -50,
+   "pose": "standing"
+  },
+  {
+   "slot": 22,
+   "along_cm": 1178,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 23,
+   "along_cm": 1178,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 24,
+   "along_cm": 1281,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 25,
+   "along_cm": 1281,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 26,
+   "along_cm": 1383,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 27,
+   "along_cm": 1383,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 28,
+   "along_cm": 1486,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 29,
+   "along_cm": 1486,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 30,
+   "along_cm": 1588,
+   "across_cm": 50,
+   "pose": "standing"
+  },
+  {
+   "slot": 31,
+   "along_cm": 1588,
+   "across_cm": -50,
+   "pose": "standing"
+  },
+  {
+   "slot": 32,
+   "along_cm": 1691,
+   "across_cm": 50,
+   "pose": "standing"
+  },
+  {
+   "slot": 33,
+   "along_cm": 1691,
+   "across_cm": -50,
+   "pose": "standing"
+  },
+  {
+   "slot": 34,
+   "along_cm": 1793,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 35,
+   "along_cm": 1793,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 36,
+   "along_cm": 1896,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 37,
+   "along_cm": 1896,
+   "across_cm": -50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 38,
+   "along_cm": 1998,
+   "across_cm": 50,
+   "pose": "sitting"
+  },
+  {
+   "slot": 39,
+   "along_cm": 1998,
+   "across_cm": -50,
+   "pose": "sitting"
+  }
+ ]
+}

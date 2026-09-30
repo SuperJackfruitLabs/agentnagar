@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" data-style="02-voxel">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>02 Voxel · Agentnagar style study</title>
+<meta name="description" content="A playable isometric block district in the Voxel style study for Agentnagar. Open the Workshop to watch the robot Guild at work.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<link rel="stylesheet" href="assets/voxel.css">
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script src="../../../shared/page-kit/vendor/three/three.global.min.js"></script>
+</head>
+<body>
+<a class="skip" href="#guide">Skip the district, go to the guide</a>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="02 Voxel, top of page">
+    <svg class="brand-cube" viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,3 37,12 20,21 3,12" fill="#efc332"/><polygon points="3,12 20,21 20,38 3,29" fill="#0e4099"/><polygon points="37,12 20,21 20,38 37,29" fill="#50ad41"/></svg>
+    <span class="brand-num">02</span><span class="brand-name">Voxel</span>
+  </a>
+  <p class="topbar-mid">Agentnagar · city style study</p>
+  <div class="topbar-actions">
+    <a class="pill-selected" href="#selected">Selected for first-scene assets</a>
+    <button class="btn btn-notes" type="button" id="notes-btn">Read the notes</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="stage-wrap" aria-labelledby="stage-title">
+    <div class="hero-card" id="hero-card">
+        <p class="eyebrow">Style study 02 · playable block district</p>
+        <h1 id="stage-title">Voxel</h1>
+        <p class="hero-sub">Chunky cubes, stepped forms, one district. <strong>Pick the yellow Workshop</strong> to lift its sawtooth roof and watch the robot Guild at their desks.</p>
+        <p class="hero-note">Illustrative scene built for this page from boxes. Not a game capture and not engine evidence.</p>
+      </div>
+    <div class="stage" id="stage">
+      <div class="stage-canvas" id="stage-canvas" tabindex="0" role="application"
+           aria-roledescription="3D district"
+           aria-label="Block district. Arrow keys rotate and tilt the view, plus and minus zoom, zero resets. Use the landmark buttons to visit places; the Workshop opens its interior."
+           aria-describedby="stage-help"></div>
+      <div class="pins" id="pins" aria-hidden="true"></div>
+
+
+
+      <div class="hud" id="hud" aria-live="polite">
+        <div class="hud-card" id="hud-card" hidden>
+          <p class="hud-kicker" id="hud-kicker"></p>
+          <h2 class="hud-title" id="hud-title"></h2>
+          <p class="hud-text" id="hud-text"></p>
+          <p class="hud-actions" id="hud-actions"></p>
+        </div>
+      </div>
+
+      <div class="inside" id="inside" hidden>
+        <div class="inside-head">
+          <p class="inside-title">Inside the Workshop <span>· 14 Guild residents</span></p>
+          <button class="btn btn-leave" type="button" id="leave-btn">Leave workshop <kbd>Esc</kbd></button>
+        </div>
+        <p class="inside-note">Illustrative animation with sample poses. No live agent feed; the robot look follows the local work-bay prototype, where 12 of 14 appearances await review.</p>
+        <div class="roster" id="roster" role="group" aria-label="Guild residents in the Workshop"></div>
+      </div>
+
+      <div class="counter" id="counter" aria-live="polite"><span class="counter-cubes" id="counter-cubes" aria-hidden="true"></span><span id="counter-text">0 of 6 landmarks visited</span></div>
+      <p class="fallback" id="fallback" hidden></p>
+    </div>
+
+    <div class="controls">
+      <div class="toolbar" id="toolbar" role="toolbar" aria-label="District landmarks"></div>
+      <p class="help" id="stage-help"><span class="help-pointer">Drag to orbit · scroll or pinch to zoom · tap a landmark.</span> <span class="help-keys">Keys: arrows rotate · + / − zoom · 0 reset · Esc leave.</span> <button class="linkish" type="button" id="motion-btn" aria-pressed="false">Pause motion</button></p>
+    </div>
+  </section>
+
+  <div class="guide" id="guide">
+    <aside class="selected" id="selected" aria-labelledby="selected-title">
+      <div class="selected-badge" aria-hidden="true">★</div>
+      <div>
+        <h2 id="selected-title">The selected style for first-scene assets</h2>
+        <p>On 2026-09-22 Rakesh selected Voxel for building the first scene assets and authorised a local Blender → GLB → validation → Godot work-bay experiment. That authorised the local experiment only: full Workshop integration, publication, final engine selection and acceptance of all fourteen character designs remain separate decisions. Selection does not imply review approval of these sheets.</p>
+        <p>Since RD18 on 2026-09-24 the city is being built so its mechanics work in any style. Low-poly (11) and pixel art (08) prove that first; Voxel follows as the third style pack in the Godot city client.</p>
+        <p class="selected-links"><a id="proto-link" href="#">Work-bay prototype README</a> · <a id="decision-link" href="#">Decision register</a></p>
+      </div>
+    </aside>
+
+    <section class="block" id="project" data-core="project" aria-labelledby="h-project">
+      <header class="block-cap"><span class="cap-tag">Tree Square</span><h2 id="h-project">Agentnagar</h2></header>
+      <div class="block-body" id="project-body"></div>
+    </section>
+
+    <section class="block" id="style" data-core="style" aria-labelledby="h-style">
+      <header class="block-cap"><span class="cap-tag">Library</span><h2 id="h-style">The style</h2></header>
+      <div class="block-body">
+        <p class="lede" id="style-intent"></p>
+        <h3>Principles</h3>
+        <ol class="principles" id="style-principles"></ol>
+        <h3>Palette <span class="small">sampled from the selected sheets</span></h3>
+        <ul class="palette" id="style-palette"></ul>
+        <div class="two">
+          <div><h3>Materials and texture</h3><p id="style-materials"></p></div>
+          <div><h3>Typography</h3><p id="style-type"></p><p class="type-demo"><span class="td-display">Workshop</span> <span class="td-body">Nunito carries the reading text.</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="views" data-core="views" aria-labelledby="h-views">
+      <header class="block-cap"><span class="cap-tag">River</span><h2 id="h-views">One district, four views</h2></header>
+      <div class="block-body">
+        <p class="concept" id="views-note"></p>
+        <ul class="landmarks" id="views-landmarks"></ul>
+        <div class="sheets" id="views-sheets"></div>
+      </div>
+    </section>
+
+    <section class="block" id="agents" data-core="agents" aria-labelledby="h-agents">
+      <header class="block-cap"><span class="cap-tag">Workshop</span><h2 id="h-agents">Agents in this style</h2></header>
+      <div class="block-body" id="agents-body"></div>
+    </section>
+
+    <section class="block" id="tradeoffs" data-core="tradeoffs" aria-labelledby="h-tradeoffs">
+      <header class="block-cap"><span class="cap-tag">Tram boulevard</span><h2 id="h-tradeoffs">Strengths and trade-offs</h2></header>
+      <div class="block-body"><dl class="trade" id="trade-list"></dl></div>
+    </section>
+
+    <section class="block" id="status" aria-labelledby="h-status">
+      <header class="block-cap"><span class="cap-tag">North bridge</span><h2 id="h-status">Status</h2></header>
+      <div class="block-body" id="status-body"></div>
+    </section>
+
+    <section class="board-wrap" id="nav" aria-labelledby="h-nav">
+      <h2 id="h-nav" class="board-title">Next stop</h2>
+      <div class="board" id="nav-body"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="foot"><p>Page artwork (district, robots, cube swatches) is illustrative and built for this page. Concept sheets are shown as they are. Local file, no network.</p></footer>
+
+<script src="assets/content.js"></script>
+<script src="assets/district.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "e0e94d9696cce3921c930835f0e30387a1c763ce6df47a4262b96935d36f7328",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "5bc9313515fe7357e5103bf90d5d3d7eed0c8c3f480fd185bc10f18626bd3e8c"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/16-chalk-pastel-mural/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

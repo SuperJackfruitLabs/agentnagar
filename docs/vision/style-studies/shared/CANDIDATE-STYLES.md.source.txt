@@ -1,0 +1,92 @@
+# Twenty candidate city styles
+
+Proposed on 2026-09-18 for the next round of visual exploration, and
+illustrated on 2026-09-19. Each candidate now has its own folder in the parent
+directory with the same sheet program as styles 01 to 10, and a README that
+describes what the generated sheets show. This document remains the brief:
+no production assets, engine choice, or style selection is implied. The
+original generation prompts for these twenty styles were not saved, so the
+table and frame contract below record the initial intent. New correction
+prompts are saved beside their outputs; the [consistency contract](CONSISTENCY-CONTRACT.md)
+and [progress record](REPAIR-STATUS.md) govern that subsequent pass.
+
+The set deliberately varies rendering language, material language,
+architecture, light, and cultural reference. The image studies use the same
+riverfront maker-city program and the four established camera views so each
+result can be compared with the existing collection, and each style has been
+tested on the workshop, home, conversation, gathering, build mode, transit,
+rain, waterfront, mobile, rooftop, and tabletop experiences. The four missing
+city-perspectives sheets (15, 23, 24, 25) were added in the correction pass.
+
+| # | Candidate | Visual language | Why it is worth testing |
+| --- | --- | --- | --- |
+| 11 | **Low-poly tropical diorama** | Faceted geometry, crisp planes, limewash, terracotta, leaf green, and jackfruit yellow. | Closest to the current low-poly guidance; tests whether a warm, economical 3D kit can carry the city identity. |
+| 12 | **Gouache storybook** | Opaque brushwork, softened edges, saturated painted color, and expressive architectural shapes. | Tests a welcoming illustrated world with more depth and material richness than ink and watercolor. |
+| 13 | **Risograph print** | Limited overprinted inks, visible registration offsets, halftone texture, and bold flat compositions. | Gives maps and interfaces a strong common language while testing how print texture holds up in motion. |
+| 14 | **Linocut and relief print** | Carved marks, high-contrast shapes, rough ink edges, and a small earthy palette. | Tests dramatic silhouettes, night readability, and a handmade visual identity without relying on realistic detail. |
+| 15 | **Stained-glass mosaic** | Translucent color fields, dark leading, tiled surfaces, and light projected across civic spaces. | Tests a strongly graphic treatment of windows, transit, wayfinding, and day-to-night atmosphere. |
+| 16 | **Chalk pastel mural** | Powdery color, broad visible strokes, charcoal contours, and weathered wall-like surfaces. | Explores a community-made, tactile feeling with a different surface language from paper and clay. |
+| 17 | **Art Nouveau botanical** | Whiplash curves, floral ironwork, decorative tiles, and organic lettering. | Connects the tropical setting to architecture and wayfinding, while testing whether ornament can remain legible at play distance. |
+| 18 | **Art Deco civic futurism** | Stepped forms, sunbursts, strong symmetry, brass, terracotta, and midnight blue. | Tests a formal, optimistic public-city identity distinct from solarpunk's organic retro-futurism. |
+| 19 | **Bauhaus primary-form** | Geometric composition, primary colors, modular grids, and functional typography. | Tests a systematic kit and high-clarity interface language for construction and cross-device use. |
+| 20 | **Memphis playful geometry** | Patterned surfaces, squiggles, bright blocks, and deliberately unconventional forms. | Tests a high-energy social world and whether strong patterns can coexist with accessible navigation cues. |
+| 21 | **Brutalist tropical modernism** | Exposed concrete, deep shade, perforated screens, climbing plants, and monsoon-weathered surfaces. | Tests monumental but climate-aware architecture, with clear landmark silhouettes and material depth. |
+| 22 | **Streamline retro future** | Aerodynamic curves, enamel color, chrome accents, rounded transit, and optimistic signage. | Separates vehicle and transit-led retro futurism from solarpunk's ecological focus. |
+| 23 | **Cassette futurism** | Industrial plastic, CRT glow, modular panels, amber and teal indicators, and practical machinery. | Tests an approachable maker-tech city whose interfaces are tangible rather than holographic. |
+| 24 | **Dieselpunk civic works** | Riveted metal, brick, mechanical transit, muted steel, ochre, and warm window light. | Tests an industrious workshop character while checking that the city still feels cooperative and contemporary. |
+| 25 | **Biomorphic eco-fantasy** | Root-like structures, fungal lamps, woven bridges, and luminous natural materials. | Tests a more fantastical inhabited ecology and the boundary between an architectural style and a different world premise. |
+| 26 | **Soft 3D plush miniature** | Felt, knit, embroidery, padded forms, and cozy miniature-set lighting. | Tests character warmth and home interiors, while revealing whether a soft-material world can support precise building tools. |
+| 27 | **Ceramic tile city** | Glazed tiles, hand-painted motifs, terracotta, cobalt, and repeating geometric borders. | Tests durable public-space materials and a map language that can bridge roofs, walls, furniture, and UI. |
+| 28 | **Ukiyo-e-inspired woodblock city** | Flat perspective planes, carved contour lines, patterned water and clouds, and restrained pigments. | Tests a historical print grammar for landscape, transit, weather, and large city composition. Use original motifs and seek specialist review before production use. |
+| 29 | **Madhubani-inspired contemporary city** | Dense hand-drawn pattern, flat color, decorative borders, and botanical or civic motifs. | Tests a richly patterned visual language rooted in Mithila art. It requires collaboration with artists knowledgeable about the tradition before any production treatment. |
+| 30 | **Afrofuturist maker metropolis** | Bold silhouette, crafted metal and textile pattern, vivid earth-and-jewel palette, and future-facing civic technology. | Tests a communal, contemporary future aesthetic. Define a specific creative partnership and regional reference rather than treating Afrofuturism as a generic surface style. |
+
+## Suggested evaluation order
+
+All twenty are illustrated, so this is an order for review rather than for
+generation. Start with **11 Low-poly tropical diorama**, **12 Gouache storybook**, **18 Art
+Deco civic futurism**, and **23 Cassette futurism**. Together they test the
+project's existing tropical low-poly direction, two illustration/material
+approaches, and two different visions of civic technology. They are distinct
+from the current ten and can be evaluated without using a living cultural
+tradition as visual decoration.
+
+Then review the remaining candidates in groups chosen by what the first set
+reveals: print and surface language (13–16, 27–29), architecture and geometry
+(17–22), or material and world premise (24–26, 30). For every candidate,
+assess landmark recognition, resident expression, route visibility, text and
+non-color interaction cues, animation stability, and cost on the lowest
+target device. A style that works in one static city view is not yet a viable
+city-wide presentation system.
+
+## Frame contract
+
+The four sheets for one style share one frame treatment. The frame is a
+presentation system around the generated panels, not a claim that the city
+uses one universal material. Every output remains 1536×1024 landscape, with
+the same 20 px outer frame, the same narrow panel gutters, and the same footer
+position within a style. The outer frame may express the style through a
+restrained material or color, while labels stay high-contrast and readable.
+
+| Styles | Shared frame treatment |
+| --- | --- |
+| 11 Low-poly tropical | Warm cream matte with a thin coral accent rule. |
+| 12 Gouache storybook | Warm painted-paper matte with a muted ochre accent rule. |
+| 13 Risograph | Uncoated paper matte with a navy registration accent. |
+| 14 Linocut | Ivory paper matte with a dark ink accent. |
+| 15 Stained glass | Deep navy matte with a restrained jewel-blue accent. |
+| 16 Chalk pastel | Pale slate-paper matte with a charcoal accent. |
+| 17 Art Nouveau | Warm cream matte with a muted green botanical accent. |
+| 18 Art Deco | Midnight-blue matte with a brass accent. |
+| 19 Bauhaus | Cream matte with a primary-color accent rule. |
+| 20 Memphis | Clean white matte with a small multicolor accent rule. |
+| 21 Brutalist tropical | Concrete-gray matte with a terracotta accent. |
+| 22 Streamline retro future | Pale enamel matte with a teal accent. |
+| 23 Cassette futurism | Charcoal matte with an amber indicator accent. |
+| 24 Dieselpunk civic works | Steel-gray matte with an ochre accent. |
+| 25 Biomorphic eco-fantasy | Deep forest matte with a bioluminescent green accent. |
+| 26 Soft 3D plush | Soft cream matte with a coral textile accent. |
+| 27 Ceramic tile | Cobalt matte with a glazed cream accent. |
+| 28 Ukiyo-e woodblock | Rice-paper matte with an indigo accent. |
+| 29 Madhubani-inspired | Vermilion matte with a black-ink accent. |
+| 30 Afrofuturist | Deep plum matte with a copper accent. |

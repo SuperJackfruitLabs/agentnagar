@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en" data-style="01-graphic">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphic Minimalist Line</title>
+<meta name="description" content="Style 01, Graphic minimalist: a Swiss wayfinding poster for Agentnagar, read as one transit line with seven stations.">
+<meta name="color-scheme" content="light">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+  /* Palette sampled from the Graphic minimalist sheets (City perspectives r004). */
+  :root {
+    --navy: #264c6e;      /* workshop roof, downtown blocks */
+    --ink: #17263b;       /* text: a deepened navy for AA contrast */
+    --coral: #fb8a70;     /* residential blocks, tram stripe */
+    --coral-deep: #c9452b;/* line on cream when it must carry meaning */
+    --cream: #fdfdf4;     /* sheet matte */
+    --sand: #feeed7;      /* square paving */
+    --mint: #a2d7b8;      /* glass towers */
+    --park: #9ad082;      /* park lawn */
+    --leaf: #408554;      /* tree canopy */
+    --river: #2ba4e3;     /* river */
+    --band: #d8e3df;      /* caption band */
+    --muted: #4a5a6e;
+    --rail-x: 72px;
+    --focus: #1f5fd6;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--cream); color: var(--ink); font: 400 17px/1.55 'Inter Variable', system-ui, sans-serif; font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiased; }
+  a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-color: var(--coral); }
+  a:hover { text-decoration-color: var(--navy); }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  img { max-width: 100%; display: block; }
+  .skip { position: absolute; left: -9999px; top: 8px; background: var(--ink); color: #fff; padding: 10px 14px; z-index: 50; }
+  .skip:focus { left: 8px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* ---------- sticky line indicator ---------- */
+  .indicator { position: sticky; top: 0; z-index: 20; background: var(--ink); color: #fff; }
+  .indicator .in { display: flex; align-items: center; gap: 18px; max-width: 1440px; margin: 0 auto; padding: 0 24px; height: 60px; }
+  .roundel { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--coral); color: var(--ink); font: 800 15px/1 'Inter Variable', sans-serif; letter-spacing: -.02em; }
+  .where { flex: none; min-width: 0; font: 600 13px/1.2 'Inter Variable', sans-serif; letter-spacing: .02em; }
+  .where b { display: block; font-size: 16px; letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 18ch; }
+  .where span { color: #b9c6d6; text-transform: uppercase; font-size: 11px; letter-spacing: .14em; }
+  .stops { flex: 1; display: flex; align-items: center; list-style: none; margin: 0; padding: 0; position: relative; min-width: 0; }
+  .stops::before { content: ''; position: absolute; left: 9px; right: 9px; top: 50%; height: 6px; margin-top: -3px; background: #3c5575; border-radius: 3px; }
+  .stops::after { content: ''; position: absolute; left: 9px; top: 50%; height: 6px; margin-top: -3px; background: var(--coral); border-radius: 3px; width: calc((100% - 18px) * var(--done, 0)); transition: width .35s ease; }
+  .stops li { flex: 1; display: flex; justify-content: center; position: relative; z-index: 1; }
+  .stops li:first-child { justify-content: flex-start; }
+  .stops li:last-child { justify-content: flex-end; }
+  .stops a { display: flex; align-items: center; gap: 8px; text-decoration: none; color: #fff; font: 600 12px/1 'Inter Variable', sans-serif; padding: 10px 2px; }
+  .stops a i { width: 18px; height: 18px; border-radius: 50%; background: var(--ink); border: 4px solid #8497ad; flex: none; transition: border-color .2s, transform .2s; }
+  .stops a.passed i { border-color: var(--coral); }
+  .stops a[aria-current="step"] i { background: #fff; border-color: var(--coral); transform: scale(1.25); }
+  .stops a span { display: none; }
+  @media (min-width: 1180px) {
+    .stops a span { display: inline; background: var(--ink); padding: 2px 4px; }
+  }
+  @media (max-width: 560px) {
+    .indicator .in { gap: 10px; padding: 0 12px; }
+    .where { display: none; }
+    .roundel { width: 32px; height: 32px; font-size: 13px; }
+  }
+
+  /* ---------- poster hero ---------- */
+  .poster { max-width: 1440px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 0 24px; border-bottom: 10px solid var(--ink); }
+  .poster .meta { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-bottom: 2px solid var(--ink); padding: 18px 0 12px; font: 600 12px/1.3 'Inter Variable', sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+  .poster .num { grid-column: 1 / span 5; font: 800 clamp(150px, 26vw, 380px)/.78 'Inter Variable', sans-serif; letter-spacing: -.07em; margin: 28px 0 0 -0.04em; color: var(--ink); }
+  .poster .num em { font-style: normal; color: var(--coral); }
+  .poster .title { grid-column: 6 / -1; align-self: end; padding: 28px 0 0; }
+  .poster h1 { font: 800 clamp(44px, 7.4vw, 112px)/.9 'Inter Variable', sans-serif; letter-spacing: -.045em; margin: 0 0 18px; }
+  .poster .sub { font: 500 clamp(18px, 1.8vw, 24px)/1.3 'Inter Variable', sans-serif; letter-spacing: -.01em; max-width: 34ch; margin: 0; }
+  .signs { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin: 40px 0 0; list-style: none; padding: 0; border-top: 2px solid var(--ink); }
+  .signs li { border-right: 2px solid var(--ink); padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+  .signs li .sign { margin-bottom: 10px; }
+  .signs li:last-child { border-right: 0; }
+  .sign { width: 56px; height: 56px; border-radius: 8px; display: grid; place-items: center; }
+  .sign svg { width: 40px; height: 40px; }
+  .signs b { font: 700 16px/1.15 'Inter Variable', sans-serif; letter-spacing: -.01em; }
+  .signs small { font: 500 12px/1.3 'Inter Variable', sans-serif; color: var(--muted); }
+  .signs .code { font: 700 11px/1 'Inter Variable', sans-serif; letter-spacing: .12em; color: var(--muted); }
+  .illus-note { grid-column: 1 / -1; font: 500 12px/1.4 'Inter Variable', sans-serif; color: var(--muted); padding: 10px 0 18px; margin: 0; }
+  .poster .enter { grid-column: 1 / -1; display: flex; gap: 12px; align-items: center; padding: 0 0 26px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: #fff; text-decoration: none; font: 700 15px/1 'Inter Variable', sans-serif; padding: 14px 18px; border: 0; border-radius: 999px; cursor: pointer; }
+  .btn i { width: 14px; height: 14px; border-radius: 50%; background: var(--coral); }
+  .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
+  @media (max-width: 900px) {
+    .signs { grid-template-columns: repeat(3, 1fr); }
+    .signs li:nth-child(3) { border-right: 0; }
+    .signs li:nth-child(-n+3) { border-bottom: 2px solid var(--ink); }
+  }
+  @media (max-width: 700px) {
+    .poster { grid-template-columns: 1fr; padding: 0 16px; }
+    .poster .num, .poster .title { grid-column: 1; }
+    .poster .num { margin-top: 18px; }
+    .signs { grid-template-columns: 1fr 1fr; }
+    .signs li { border-right: 0 !important; border-bottom: 2px solid var(--ink); padding: 12px 6px 14px 0; display: grid; grid-template-columns: 44px 1fr; gap: 2px 10px; align-items: center; }
+    .signs li .sign { grid-row: span 2; margin: 0; }
+    .signs li:nth-child(odd) { border-right: 2px solid var(--ink) !important; }
+    .signs li:nth-child(even) { padding-left: 10px; }
+    .signs li:nth-last-child(-n+2) { border-bottom: 0; }
+    .sign { width: 44px; height: 44px; }
+    .sign svg { width: 32px; height: 32px; }
+    .signs small { display: none; }
+  }
+
+  /* ---------- the line ---------- */
+  main { position: relative; max-width: 1440px; margin: 0 auto; padding: 0 24px 40px; }
+  .rail { position: absolute; left: calc(24px + var(--rail-x) - 7px); top: 0; bottom: 0; width: 14px; border-radius: 7px; background: #f7d6cb; }
+  .rail::after { content: ''; position: absolute; inset: 0 0 auto 0; height: calc(var(--p, 0) * 100%); background: var(--coral); border-radius: 7px; }
+  .station { position: relative; padding: 72px 0 40px calc(var(--rail-x) + 64px); }
+  .station > header { position: relative; margin-bottom: 30px; }
+  .dot { position: absolute; left: calc(-64px - 17px); top: 6px; width: 34px; height: 34px; border-radius: 50%; background: #fff; border: 7px solid var(--ink); }
+  .station.passed .dot { border-color: var(--ink); background: var(--coral); }
+  .dot.terminus-dot { width: 64px; height: 18px; border-radius: 9px; left: calc(-64px - 32px); top: 14px; border-width: 5px; }
+  .dot.interchange { width: 34px; height: 84px; border-radius: 17px; top: -20px; }
+  .station > header .no { font: 700 13px/1 'Inter Variable', sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .tag { display: inline-block; font: 700 11px/1 'Inter Variable', sans-serif; letter-spacing: .12em; padding: 5px 8px; border-radius: 4px; background: var(--band); color: var(--ink); }
+  .station h2 { font: 800 clamp(38px, 5.4vw, 80px)/.92 'Inter Variable', sans-serif; letter-spacing: -.045em; margin: 0; }
+  .station h2 + p.lead { font: 500 clamp(18px, 1.6vw, 22px)/1.35 'Inter Variable', sans-serif; max-width: 46ch; margin: 16px 0 0; letter-spacing: -.01em; }
+  .station h3 { font: 700 13px/1.2 'Inter Variable', sans-serif; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 14px; padding-top: 12px; border-top: 2px solid var(--ink); }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px 24px; }
+  .c4 { grid-column: span 4; } .c5 { grid-column: span 5; } .c6 { grid-column: span 6; } .c7 { grid-column: span 7; } .c8 { grid-column: span 8; } .c12 { grid-column: 1 / -1; }
+  @media (max-width: 1000px) { .c4, .c5, .c6, .c7, .c8 { grid-column: 1 / -1; } }
+  @media (max-width: 700px) {
+    :root { --rail-x: 14px; }
+    main { padding: 0 16px 32px; }
+    .rail { left: calc(16px + var(--rail-x) - 5px); width: 10px; }
+    .station { padding: 56px 0 28px calc(var(--rail-x) + 30px); }
+    .dot { left: calc(-30px - 13px); width: 26px; height: 26px; border-width: 6px; top: 2px; }
+    .dot.terminus-dot { width: 64px; height: 18px; border-radius: 9px; left: calc(-64px - 32px); top: 14px; border-width: 5px; }
+  .dot.interchange { width: 26px; height: 64px; top: -16px; }
+  }
+
+  /* project */
+  .kit-project .kit-tagline { font: 700 clamp(24px, 2.6vw, 36px)/1.12 'Inter Variable', sans-serif; letter-spacing: -.025em; margin: 0 0 18px; max-width: 26ch; }
+  .kit-project > p { max-width: 62ch; margin: 0 0 14px; }
+  .kit-project dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0; margin: 26px 0 0; border-top: 2px solid var(--ink); }
+  .kit-project dl > div { padding: 14px 16px 18px 0; border-bottom: 1px solid #c9d3d0; }
+  .kit-project dt { font: 700 12px/1.2 'Inter Variable', sans-serif; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .kit-project dt::before { content: ''; width: 12px; height: 12px; border-radius: 50%; border: 3px solid var(--ink); background: #fff; }
+  .kit-project dd { margin: 0; font-size: 15px; }
+  .kit-project .kit-small { font-size: 14px; color: var(--muted); max-width: 70ch; margin-top: 22px; }
+
+  /* style */
+  .principles { list-style: none; margin: 0; padding: 0; counter-reset: p; }
+  .principles li { counter-increment: p; display: grid; grid-template-columns: 52px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid #c9d3d0; }
+  .principles li::before { content: counter(p); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 8px; background: var(--navy); color: #fff; font: 800 18px/1 'Inter Variable', sans-serif; }
+  .principles b { display: block; font-size: 18px; letter-spacing: -.01em; }
+  .principles span { font-size: 15px; color: var(--muted); }
+  .intent { font: 500 19px/1.45 'Inter Variable', sans-serif; max-width: 60ch; margin: 0 0 10px; letter-spacing: -.005em; }
+  .src { font-size: 13px; color: var(--muted); margin: 0; }
+  .palette { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 2px solid var(--ink); }
+  .palette li { min-height: 150px; padding: 12px; display: flex; flex-direction: column; justify-content: flex-end; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+  .palette li:nth-child(4n) { border-right: 0; }
+  .palette li:nth-last-child(-n+4) { border-bottom: 0; }
+  .palette b { font: 700 15px/1.2 'Inter Variable', sans-serif; }
+  .palette code { font: 600 13px/1.3 'IBM Plex Mono', monospace; }
+  .palette small { font-size: 12px; line-height: 1.3; }
+  .palette .dark { color: #fff; }
+  .palette .dark b, .palette .dark code, .palette .dark small { background: rgba(10,20,14,.35); box-shadow: 0 0 0 2px rgba(10,20,14,.35); }
+  @media (max-width: 700px) {
+    .palette { grid-template-columns: 1fr 1fr; }
+    .palette li { min-height: 110px; }
+    .palette li:nth-child(4n) { border-right: 2px solid var(--ink); }
+    .palette li:nth-child(2n) { border-right: 0; }
+    .palette li:nth-last-child(-n+4) { border-bottom: 2px solid var(--ink); }
+    .palette li:nth-last-child(-n+2) { border-bottom: 0; }
+  }
+  .spec { margin: 0; }
+  .spec div { display: grid; grid-template-columns: 130px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid #c9d3d0; }
+  .spec dt { font: 700 12px/1.4 'Inter Variable', sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+  .spec dd { margin: 0; font-size: 15px; }
+  @media (max-width: 480px) { .spec div { grid-template-columns: 1fr; gap: 4px; } }
+  .typeset { background: var(--band); padding: 18px; border-radius: 6px; }
+  .typeset .cap { font: 700 15px/1 'Inter Variable', sans-serif; letter-spacing: .22em; text-transform: uppercase; text-align: center; background: #e7eeeb; padding: 8px; margin-bottom: 12px; }
+  .typeset .big { font: 800 44px/.95 'Inter Variable', sans-serif; letter-spacing: -.04em; }
+  .typeset .sm { font-size: 14px; margin-top: 8px; }
+
+  /* views */
+  .sysmap { border: 2px solid var(--ink); background: #fff; }
+  .sysmap svg { display: block; width: 100%; height: auto; }
+  .sysmap .lm { transition: opacity .25s; }
+  .sysmap.focus .lm { opacity: .22; }
+  .sysmap.focus .lm.on { opacity: 1; }
+  .sysmap .ring { fill: none; stroke: var(--coral-deep); stroke-width: 5; stroke-dasharray: 10 6; opacity: 0; }
+  .sysmap .lm.on .ring { opacity: 1; }
+  .finder { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+  .finder button { font: 700 14px/1 'Inter Variable', sans-serif; display: inline-flex; gap: 8px; align-items: center; padding: 10px 14px 10px 10px; border-radius: 999px; border: 2px solid var(--ink); background: #fff; color: var(--ink); cursor: pointer; }
+  .finder button i { width: 22px; height: 22px; border-radius: 5px; display: grid; place-items: center; }
+  .finder button i svg { width: 16px; height: 16px; }
+  .finder button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  .seen { min-height: 3.2em; font-size: 15px; margin: 12px 0 0; }
+  .seen b { font-weight: 700; }
+  .platform { border-top: 10px solid var(--ink); padding-top: 18px; margin-top: 48px; }
+  .platform header { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; justify-content: space-between; margin-bottom: 14px; }
+  .platform h3 { border: 0; padding: 0; margin: 0; font: 800 clamp(26px, 3vw, 40px)/1 'Inter Variable', sans-serif; letter-spacing: -.035em; text-transform: none; }
+  .platform h3 small { display: block; font: 700 13px/1 'Inter Variable', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .pbtns { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pbtns button { font: 600 13px/1 'Inter Variable', sans-serif; padding: 9px 12px; border-radius: 4px; border: 2px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; letter-spacing: .02em; }
+  .pbtns button[aria-pressed="true"] { background: var(--coral); }
+  .frame { border: 2px solid var(--ink); background: var(--band); }
+  .frame .kit-panel img, .frame img { display: block; }
+  .platform figcaption { display: grid; grid-template-columns: 1fr auto; gap: 8px 24px; font-size: 15px; margin-top: 12px; }
+  .platform figcaption .concept { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+  .platform figcaption a { font-weight: 600; white-space: nowrap; }
+  @media (max-width: 600px) { .platform figcaption { grid-template-columns: 1fr; } }
+
+  /* agents */
+  .a1card { display: grid; grid-template-columns: 220px 1fr; gap: 24px; align-items: start; }
+  .a1card svg { width: 100%; height: auto; background: var(--mint); border-radius: 8px; }
+  .a1card ul { margin: 12px 0 0; padding: 0 0 0 18px; }
+  .a1card li { margin: 4px 0; }
+  @media (max-width: 560px) { .a1card { grid-template-columns: 1fr; } .a1card svg { max-width: 220px; } }
+  .board { background: var(--ink); color: #fff; border-radius: 8px; padding: 18px 18px 8px; }
+  .board h3 { color: #fff; border-color: #fff; }
+  .board ol { list-style: none; margin: 0; padding: 0; columns: 2 260px; column-gap: 28px; }
+  .board li { break-inside: avoid; display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 9px 0; border-bottom: 1px solid #36506f; }
+  .board li i { font: 700 12px/30px 'IBM Plex Mono', monospace; font-style: normal; text-align: center; width: 30px; height: 30px; border-radius: 50%; background: #fff; color: var(--ink); }
+  .board b { display: block; font-size: 16px; }
+  .board span { font-size: 14px; color: #d4dde8; }
+  .board .note { font-size: 13px; color: #d4dde8; margin: 12px 0 10px; }
+  .panelfig { margin: 0; }
+  .panelfig .kit-panel { border: 2px solid var(--ink); }
+  .panelfig figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+  /* trade-offs */
+  .notices { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .notices li { border: 2px solid var(--ink); border-radius: 8px; overflow: hidden; background: #fff; }
+  .notices .hd { display: flex; gap: 10px; align-items: center; padding: 10px 14px; font: 700 13px/1.2 'Inter Variable', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+  .notices .hd i { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font: 800 14px/1 'Inter Variable', sans-serif; font-style: normal; flex: none; }
+  .notices .good .hd { background: var(--mint); } .notices .good .hd i { background: #3a7a4d; color: #fff; }
+  .notices .mixed .hd { background: var(--sand); } .notices .mixed .hd i { background: var(--ink); color: #fff; }
+  .notices .risk .hd { background: var(--coral); } .notices .risk .hd i { background: var(--ink); color: #fff; }
+  .notices p { margin: 0; padding: 12px 14px 16px; font-size: 15px; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; margin: 0 0 16px; color: var(--muted); }
+  .legend span::before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; border: 1px solid var(--ink); }
+  .legend .g::before { background: var(--mint); } .legend .m::before { background: var(--sand); } .legend .r::before { background: var(--coral); }
+
+  /* status (Kit.statusBlock) as a timetable */
+  .kit-status { border: 2px solid var(--ink); background: #fff; }
+  .kit-status .kit-summary { margin: 0; padding: 18px 18px 14px; font: 700 clamp(19px, 1.9vw, 26px)/1.25 'Inter Variable', sans-serif; letter-spacing: -.02em; background: var(--sand); border-bottom: 2px solid var(--ink); }
+  .kit-status .kit-concept { margin: 0; padding: 12px 18px; font-size: 14px; color: var(--muted); border-bottom: 2px solid var(--ink); }
+  .kit-status ul { list-style: none; margin: 0; padding: 0; }
+  .kit-status .kit-revisions li { display: flex; gap: 8px; flex-wrap: wrap; align-items: baseline; padding: 12px 18px; border-bottom: 1px solid #c9d3d0; font-weight: 600; }
+  .kit-status .kit-revisions a:first-of-type { font: 700 14px/1 'IBM Plex Mono', monospace; background: var(--ink); color: #fff; padding: 5px 8px; border-radius: 4px; text-decoration: none; }
+  .kit-status .kit-sources li { padding: 12px 18px; border-bottom: 1px solid #c9d3d0; }
+  .kit-status .kit-sources li::before { content: 'Review source · '; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .kit-status .kit-links { margin: 0; padding: 14px 18px; font-weight: 700; }
+
+  /* nav (Kit.mountNav) as terminus signs */
+  .kit-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; }
+  .kit-nav a { display: flex; align-items: center; min-height: 74px; padding: 14px 18px; border-radius: 8px; text-decoration: none; font: 700 clamp(16px, 1.6vw, 22px)/1.15 'Inter Variable', sans-serif; letter-spacing: -.015em; }
+  .kit-nav .kit-prev { background: var(--ink); color: #fff; }
+  .kit-nav .kit-index { background: var(--coral); color: var(--ink); justify-content: center; }
+  .kit-nav .kit-next { background: var(--ink); color: #fff; justify-content: flex-end; text-align: right; }
+  .kit-nav a:hover { box-shadow: inset 0 0 0 4px var(--mint); }
+  @media (max-width: 700px) { .kit-nav { grid-template-columns: 1fr; } .kit-nav .kit-index, .kit-nav .kit-next { justify-content: flex-start; text-align: left; } }
+  .terminus { font: 600 clamp(20px, 2vw, 28px)/1.2 'Inter Variable', sans-serif; letter-spacing: -.04em; margin: 0 0 22px; }
+  footer.colophon { max-width: 1440px; margin: 0 auto; padding: 18px 24px 40px; border-top: 2px solid var(--ink); font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* reveal motion */
+  .rv { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .rv { opacity: 1; transform: none; transition: none; }
+    .rail::after { height: 100% !important; }
+    .stops::after, .stops a i, .sysmap .lm { transition: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#line">Skip to the line</a>
+
+<!-- Pictogram definitions (illustrative, drawn for this page) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="p-R1" viewBox="0 0 48 48"><g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M6 16c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M6 26c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M6 36c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/></g></symbol>
+    <symbol id="p-B1" viewBox="0 0 48 48"><g fill="#fff"><rect x="3" y="16" width="42" height="6"/><rect x="6" y="22" width="4" height="16"/><rect x="18" y="22" width="4" height="16"/><rect x="26" y="22" width="4" height="16"/><rect x="38" y="22" width="4" height="16"/></g><path d="M3 40h42" stroke="#fff" stroke-width="3"/></symbol>
+    <symbol id="p-W1" viewBox="0 0 48 48"><path fill="#fff" d="M5 40V22l11-10v10l11-10v10l11-10v10l5-2v20z"/><rect x="19" y="30" width="10" height="10" fill="currentColor"/></symbol>
+    <symbol id="p-T1" viewBox="0 0 48 48"><circle cx="24" cy="19" r="14" fill="#fff"/><rect x="21" y="28" width="6" height="14" fill="#fff"/><rect x="8" y="41" width="32" height="3" fill="#fff"/></symbol>
+    <symbol id="p-L1" viewBox="0 0 48 48"><path fill="#fff" d="M5 40V24c0-9 8-15 19-15s19 6 19 15v16z"/><g fill="currentColor"><rect x="10" y="26" width="5" height="10"/><rect x="18" y="26" width="5" height="10"/><rect x="26" y="26" width="5" height="10"/><rect x="34" y="26" width="5" height="10"/></g></symbol>
+    <symbol id="p-S1" viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="24" rx="6" fill="#fff"/><g fill="currentColor"><rect x="10" y="14" width="8" height="8" rx="1"/><rect x="20" y="14" width="8" height="8" rx="1"/><rect x="30" y="14" width="8" height="8" rx="1"/></g><rect x="6" y="26" width="36" height="3" fill="currentColor"/><path d="M4 42h40M14 34l-4 8M34 34l4 8" stroke="#fff" stroke-width="3"/></symbol>
+  </defs>
+</svg>
+
+<div class="indicator" role="navigation" aria-label="Stations on this page">
+  <div class="in">
+    <span class="roundel" aria-hidden="true">01</span>
+    <p class="where" aria-live="polite"><span>Now at</span><b id="now">Agentnagar</b></p>
+    <ol class="stops" id="stops"></ol>
+  </div>
+</div>
+
+<header class="poster">
+  <div class="meta"><span>Agentnagar · City style study</span><span>Line 01 · 7 stations</span></div>
+  <p class="num" aria-hidden="true">01<em>.</em></p>
+  <div class="title">
+    <h1>Graphic minimalist</h1>
+    <p class="sub">Strong silhouettes, broad colour areas, flat shading. One line through the district, seven stations.</p>
+  </div>
+  <ul class="signs" id="signs" aria-label="Reference district landmarks"></ul>
+  <p class="illus-note">Pictograms are original illustrative drawings for this page, not concept sheets.</p>
+  <div class="enter">
+    <a class="btn" href="#s-project"><i aria-hidden="true"></i>Board at station 1</a>
+    <a class="btn ghost" href="#s-views">Go to the four views</a>
+  </div>
+</header>
+
+<main id="line" tabindex="-1">
+  <div class="rail" id="rail" aria-hidden="true"></div>
+
+  <section class="station" id="s-project" data-core="project" aria-labelledby="h-project">
+    <header><span class="dot" aria-hidden="true"></span><p class="no">Station 1 <span class="tag">Project</span></p><h2 id="h-project">Agentnagar</h2></header>
+    <div id="project-slot" class="rv"></div>
+  </section>
+
+  <section class="station" id="s-style" data-core="style" aria-labelledby="h-style">
+    <header><span class="dot" aria-hidden="true"></span><p class="no">Station 2 <span class="tag">Style</span></p><h2 id="h-style">The style</h2>
+      <p class="lead">A bright, deliberately simplified city: a navigable illustration.</p></header>
+    <div class="grid">
+      <div class="c7 rv">
+        <h3>Intent</h3>
+        <p class="intent">A bright, deliberately simplified city built from strong silhouettes and broad color areas. Coral, navy, cream, and mint give neighborhoods a recognizable identity. Flat shading and sparse surface detail make the architecture feel like a navigable illustration.</p>
+        <p class="src">From the style brief. <a id="brief-link" href="#">Read the brief</a></p>
+      </div>
+      <div class="c5 rv">
+        <h3>Type on the sheets</h3>
+        <div class="typeset">
+          <div class="cap" aria-hidden="true">Tree Square</div>
+          <div class="big" aria-hidden="true">Workshop</div>
+          <p class="sm">The sheets letter panel captions in widely tracked geometric capitals on a pale mint-grey band, and sign buildings with a heavy sans. This page sets both in Inter (vendored, open licence) as a stand-in; the sheets name no typeface.</p>
+        </div>
+      </div>
+      <div class="c12 rv">
+        <h3>Principles</h3>
+        <ol class="principles">
+          <li><div><b>Silhouette first</b><span>The sawtooth hall, the single round tree and the vaulted library must read from their outline alone, at map and street distance.</span></div></li>
+          <li><div><b>Colour marks the place</b><span>Broad fields of coral, navy, cream and mint give each neighbourhood an identity; landmark colours carry from map to street.</span></div></li>
+          <li><div><b>Flat, with sparse detail</b><span>Flat shading and few surface marks. Close-ups earn their life from a few chosen props and gestures.</span></div></li>
+          <li><div><b>Roles never by colour alone</b><span>Faces, outfits, badges and icons carry identity: the brief asks that roles stay readable without relying only on colour.</span></div></li>
+          <li><div><b>Restrained, labelled interface</b><span>Mobile controls reuse the palette but pair every category colour with an icon and a word.</span></div></li>
+        </ol>
+      </div>
+      <div class="c7 rv">
+        <h3>Palette, sampled from the sheets</h3>
+        <ul class="palette" id="palette"></ul>
+        <p class="src" style="margin-top:8px">Hex values averaged from 5 × 5 pixel samples of City perspectives. Text on this page uses a deepened navy (#17263B) for contrast.</p>
+      </div>
+      <div class="c5 rv">
+        <h3>Materials and texture</h3>
+        <dl class="spec">
+          <div><dt>Surfaces</dt><dd>Flat colour fields with no grain; a single darker tone per face marks depth.</dd></div>
+          <div><dt>Buildings</dt><dd>Clean geometric volumes, generous glazing, clearly marked entrances. Navy for civic halls, coral brick-tone for housing, mint glass for towers.</dd></div>
+          <div><dt>Nature</dt><dd>Trees as clustered rounded canopies; lawns as flat light green; the river a single saturated blue.</dd></div>
+          <div><dt>Interiors</dt><dd>Desks, pegboards, shelving and seating in the same flat language (Living community, Workshop).</dd></div>
+          <div><dt>Light</dt><dd>Mostly shadowless daylight; night uses warm window rectangles and lamp glows on wet paving.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="station" id="s-views" data-core="views" aria-labelledby="h-views">
+    <header><span class="dot interchange" aria-hidden="true"></span><p class="no">Station 3 <span class="tag">Interchange · 4 platforms</span></p><h2 id="h-views">One district, four views</h2>
+      <p class="lead">The same reference district in every study: river, north bridge, Workshop, Tree Square, Library and tram boulevard.</p></header>
+    <div class="grid">
+      <div class="c7 rv">
+        <div class="sysmap" id="sysmap">
+          <svg viewBox="0 0 600 380" role="img" aria-labelledby="map-t map-d">
+            <title id="map-t">Illustrative system map of the reference district</title>
+            <desc id="map-d">A flat diagram drawn for this page: the river runs north to south on the west edge, crossed by one low bridge in the north. East of a park strip, the three-bay sawtooth Workshop sits west of Tree Square with its single tree, and the vaulted Library sits east. The tram boulevard runs east to west along the south.</desc>
+            <rect width="600" height="380" fill="#fdfdf4"/>
+            <g class="lm" data-lm="R1"><rect x="18" y="0" width="84" height="380" fill="#2ba4e3"/><rect class="ring" x="12" y="6" width="96" height="368" rx="8"/></g>
+            <g class="lm" data-lm="B1"><rect x="6" y="64" width="160" height="14" fill="#d8e3df" stroke="#264c6e" stroke-width="2"/><rect x="36" y="78" width="6" height="8" fill="#264c6e"/><rect x="78" y="78" width="6" height="8" fill="#264c6e"/><rect class="ring" x="0" y="56" width="172" height="36" rx="8"/></g>
+            <rect x="112" y="92" width="48" height="190" fill="#9ad082"/>
+            <g fill="#408554"><circle cx="126" cy="112" r="8"/><circle cx="146" cy="140" r="8"/><circle cx="126" cy="170" r="8"/><circle cx="146" cy="200" r="8"/><circle cx="126" cy="232" r="8"/><circle cx="146" cy="262" r="8"/></g>
+            <g>
+              <rect x="180" y="18" width="70" height="44" fill="#fb8a70"/><rect x="262" y="18" width="40" height="44" fill="#264c6e"/><rect x="314" y="18" width="96" height="44" fill="#fb8a70"/><rect x="422" y="18" width="50" height="44" fill="#a2d7b8"/><rect x="484" y="18" width="100" height="44" fill="#fb8a70"/>
+              <rect x="180" y="84" width="60" height="68" fill="#264c6e"/><rect x="252" y="84" width="50" height="68" fill="#fb8a70"/><rect x="314" y="84" width="60" height="44" fill="#fb8a70"/><rect x="340" y="84" width="34" height="80" fill="#264c6e"/><rect x="386" y="84" width="70" height="68" fill="#a2d7b8"/><rect x="468" y="84" width="54" height="68" fill="#fb8a70"/><rect x="534" y="84" width="50" height="68" fill="#264c6e"/>
+            </g>
+            <g class="lm" data-lm="W1"><path d="M186 270V206l32-24v24l32-24v24l32-24v88z" fill="#264c6e"/><rect x="226" y="248" width="16" height="22" fill="#feeed7"/><rect class="ring" x="176" y="172" width="118" height="108" rx="8"/></g>
+            <g class="lm" data-lm="T1"><rect x="306" y="186" width="118" height="92" fill="#feeed7"/><circle cx="365" cy="228" r="30" fill="#408554"/><circle cx="352" cy="220" r="14" fill="#4b9a59"/><rect x="334" y="264" width="12" height="5" fill="#fb8a70"/><rect x="386" y="264" width="12" height="5" fill="#fb8a70"/><rect class="ring" x="298" y="178" width="134" height="108" rx="8"/></g>
+            <g class="lm" data-lm="L1"><path d="M440 190h96a38 38 0 0 1 38 38v4a38 38 0 0 1-38 38h-96z" fill="#325b7f"/><rect x="440" y="190" width="18" height="80" fill="#a2d7b8"/><rect class="ring" x="432" y="182" width="152" height="96" rx="8"/></g>
+            <g class="lm" data-lm="S1"><rect x="102" y="296" width="498" height="30" fill="#e3e9e4"/><path d="M102 305h498M102 317h498" stroke="#9aa9a4" stroke-width="2"/><g><rect x="190" y="300" width="84" height="20" rx="6" fill="#fdfdf4" stroke="#264c6e" stroke-width="2"/><rect x="190" y="312" width="84" height="4" fill="#fb8a70"/></g><g><rect x="400" y="300" width="84" height="20" rx="6" fill="#fdfdf4" stroke="#264c6e" stroke-width="2"/><rect x="400" y="312" width="84" height="4" fill="#fb8a70"/></g><rect class="ring" x="96" y="290" width="500" height="42" rx="8"/></g>
+            <g><rect x="180" y="340" width="80" height="34" fill="#fb8a70"/><rect x="272" y="340" width="40" height="34" fill="#264c6e"/><rect x="324" y="340" width="110" height="34" fill="#fb8a70"/><rect x="446" y="340" width="40" height="34" fill="#264c6e"/><rect x="498" y="340" width="86" height="34" fill="#fb8a70"/></g>
+            <g font-family="Inter Variable, sans-serif" font-weight="700" font-size="12" letter-spacing="1.4" fill="#17263b"><text x="218" y="294" text-anchor="middle">WORKSHOP</text><text x="365" y="294" text-anchor="middle">TREE SQUARE</text><text x="508" y="294" text-anchor="middle">LIBRARY</text></g>
+            <g font-family="Inter Variable, sans-serif" font-weight="700" font-size="11" fill="#17263b"><text x="60" y="210" text-anchor="middle" transform="rotate(-90 60 210)" letter-spacing="3">RIVER</text></g>
+            <g transform="translate(60 30)"><circle r="16" fill="#fff" stroke="#17263b" stroke-width="2"/><path d="M0-11l5 11h-10z" fill="#17263b"/><text y="10" text-anchor="middle" font-family="Inter Variable, sans-serif" font-weight="800" font-size="9" fill="#17263b">N</text></g>
+          </svg>
+        </div>
+        <p class="src" style="margin-top:8px">Illustrative diagram drawn for this page; proportions are approximate and not taken from any calibrated plan.</p>
+      </div>
+      <div class="c5 rv">
+        <h3>Landmark finder</h3>
+        <div class="finder" id="finder" role="group" aria-label="Highlight a landmark on the map"></div>
+        <p class="seen" id="seen" aria-live="polite">Choose a landmark to highlight it on the diagram and list the panels that show it.</p>
+      </div>
+    </div>
+    <div id="platforms"></div>
+  </section>
+
+  <section class="station" id="s-agents" data-core="agents" aria-labelledby="h-agents">
+    <header><span class="dot" aria-hidden="true"></span><p class="no">Station 4 <span class="tag">Agents</span></p><h2 id="h-agents">Agents in this style</h2>
+      <p class="lead">City Agent A1 is drawn as a person in flat colour, recognised by outfit and badge rather than colour alone.</p></header>
+    <div class="grid">
+      <div class="c7 rv">
+        <h3>City Agent A1</h3>
+        <div class="a1card">
+          <svg viewBox="0 0 220 240" role="img" aria-labelledby="a1-t">
+            <title id="a1-t">Illustrative flat drawing of City Agent A1 as the sheets show her: black bob, navy jacket, cream shirt and a leaf A1 badge</title>
+            <path d="M40 240c0-54 30-80 70-80s70 26 70 80z" fill="#264c6e"/>
+            <path d="M92 162h36l-6 78h-24z" fill="#f4ecd8"/>
+            <path d="M92 162l18 26 18-26" fill="#f4ecd8"/>
+            <path d="M92 162l-14 20 14 30zM128 162l14 20-14 30z" fill="#1d3c58"/>
+            <rect x="100" y="140" width="20" height="26" fill="#e3a57f"/>
+            <path d="M62 104c0-40 22-62 48-62s48 22 48 62v26c-8 6-16 8-24 8V96H86v42c-8 0-16-2-24-8z" fill="#141414"/>
+            <ellipse cx="110" cy="104" rx="30" ry="36" fill="#eab28c"/>
+            <path d="M78 94c6-26 20-38 34-38 16 0 28 10 32 34-14-10-34-12-66 4z" fill="#141414"/>
+            <circle cx="99" cy="106" r="3.5" fill="#141414"/><circle cx="121" cy="106" r="3.5" fill="#141414"/>
+            <path d="M101 122c5 5 13 5 18 0" stroke="#8a3b2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="150" cy="196" r="16" fill="#fff" stroke="#17263b" stroke-width="2"/>
+            <path d="M150 196c-8-2-10-10-6-14 6 0 8 6 6 14zm0 0c8-2 10-10 6-14-6 0-8 6-6 14z" fill="#408554"/>
+            <text x="150" y="208" text-anchor="middle" font-family="Inter Variable, sans-serif" font-weight="800" font-size="9" fill="#17263b">A1</text>
+          </svg>
+          <div>
+            <p>On all four sheets A1 is a young woman with a <b>black bob</b>, a <b>navy jacket</b> over a <b>cream shirt</b>, and a round <b>leaf badge lettered “A1”</b>. She appears at a Workshop bench, in conversation under the trees (labelled “City Agent A1”), riding the tram, on a waterfront bench, at the Library kiosk, on a rooftop, and as the avatar in the phone’s “Workshop selected” card.</p>
+            <ul>
+              <li>Identity rests on outfit, hair and badge, as the brief asks: not on colour only.</li>
+              <li>The badge lettering is tiny at sheet scale; the repair record notes it needs the full image.</li>
+            </ul>
+            <p class="src">Drawing at left is illustrative, made for this page.</p>
+          </div>
+        </div>
+      </div>
+      <div class="c5 rv">
+        <figure class="panelfig" id="a1-panel"></figure>
+      </div>
+      <div class="c12 rv">
+        <div class="board">
+          <h3>Guild line · 14 residents</h3>
+          <p class="note">The Graphic minimalist sheets show A1 and human residents only; they do not depict any Guild resident. How the Guild would look in this style is not drawn. <span id="guild-note"></span></p>
+          <ol id="guild"></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="station" id="s-tradeoffs" data-core="tradeoffs" aria-labelledby="h-tradeoffs">
+    <header><span class="dot" aria-hidden="true"></span><p class="no">Station 5 <span class="tag">Service notices</span></p><h2 id="h-tradeoffs">Strengths and trade-offs</h2>
+      <p class="lead">Candid notes for internal comparison, from the brief and the repair record.</p></header>
+    <p class="legend rv"><span class="g">Runs well</span><span class="m">Mixed</span><span class="r">Known risk</span></p>
+    <ul class="notices rv">
+      <li class="good"><div class="hd"><i aria-hidden="true">✓</i>Map scale</div><p>The strongest view. Flat footprints and colour-coded blocks make the river, bridge, sawtooth hall, single tree and vault read at a glance, and the same shapes carry into the diagonal and street panels.</p></li>
+      <li class="mixed"><div class="hd"><i aria-hidden="true">~</i>Street scale</div><p>Landmark silhouettes hold, but the generic coral and navy housing repeats. The brief warns that excessive simplification could make different buildings feel interchangeable; depth and readability need prototyping first.</p></li>
+      <li class="mixed"><div class="hd"><i aria-hidden="true">~</i>Device and production cost</div><p>Proposed adaptation keeps silhouettes, colours and landmarks at every tier; lower tiers drop decorative props, shadow detail and background crowds; higher tiers add subtle material variation and richer lighting. Flat shading suggests a modest budget, but nothing has been measured.</p></li>
+      <li class="good"><div class="hd"><i aria-hidden="true">✓</i>UI legibility</div><p>The phone and AR panels pair each category with an icon and word (Workshop tools, Library book, Transit tram, Park leaf), and the kiosk uses Browse, Book and Ask icons. Tiny phone text needs the full image to read.</p></li>
+      <li class="risk"><div class="hd"><i aria-hidden="true">!</i>Projection is approximate</div><p>MAP keeps some pictorial roof shading rather than flat footprints; TOP-DOWN shows facade and roof-edge cues and is not a calibrated orthographic render.</p></li>
+      <li class="risk"><div class="hd"><i aria-hidden="true">!</i>Panel-to-panel drift</div><p>Road widths, roof orientations, tram-stop details and neighbouring low-rise masses vary between panels. Door directions and exact landmark coordinates cannot be certified from these illustrations.</p></li>
+      <li class="risk"><div class="hd"><i aria-hidden="true">!</i>Inhabited simplicity</div><p>Close-ups rely on carefully chosen props and gestures. Without them, flat interiors risk feeling empty; the sheets manage it, but hand-picked detail is a real authoring cost.</p></li>
+    </ul>
+  </section>
+
+  <section class="station" id="s-status" aria-labelledby="h-status">
+    <header><span class="dot" aria-hidden="true"></span><p class="no">Station 6 <span class="tag">Timetable</span></p><h2 id="h-status">Status</h2>
+      <p class="lead">Selected revision per sheet, the review summary and its sources.</p></header>
+    <div class="grid"><div class="c8 rv" id="status-slot"></div></div>
+  </section>
+
+  <section class="station" id="s-nav" aria-labelledby="h-nav">
+    <header><span class="dot terminus-dot" aria-hidden="true"></span><p class="no">Station 7 <span class="tag">Terminus · change here</span></p><h2 id="h-nav">Onward</h2></header>
+    <p class="terminus rv">This line ends here. Change for the other styles.</p>
+    <div id="nav-slot" class="rv"></div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <span>Style page 01 · Graphic minimalist · Agentnagar style studies</span>
+  <span>Original drawings on this page are illustrative. Concept sheets are not game captures.</span>
+</footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  var S = Kit.style('01-graphic');
+  var A = window.AGENTNAGAR;
+  var el = Kit.el;
+  var reduced = Kit.reducedMotion();
+
+  document.getElementById('brief-link').href = Kit.href(S.brief);
+
+  /* ---- landmarks: pictogram signs ---- */
+  var signColor = { R1: '#2ba4e3', B1: '#264c6e', W1: '#264c6e', T1: '#408554', L1: '#325b7f', S1: '#c9452b' };
+  var signText = { R1: '#17263b', B1: '#fff', W1: '#264c6e', T1: '#408554', L1: '#325b7f', S1: '#c9452b' };
+  function picto(id, size) {
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 48 48'); svg.setAttribute('aria-hidden', 'true'); svg.setAttribute('focusable', 'false');
+    svg.style.color = signColor[id];
+    var use = document.createElementNS(ns, 'use'); use.setAttribute('href', '#p-' + id);
+    svg.append(use);
+    if (size) { svg.style.width = size; svg.style.height = size; }
+    return svg;
+  }
+  var signs = document.getElementById('signs');
+  A.district.forEach(function (d) {
+    var box = el('span', { class: 'sign' }, picto(d.id)); box.style.background = signColor[d.id];
+    signs.append(el('li', {}, [box, el('b', { text: d.name }), el('span', { class: 'code', text: d.id }), el('small', { text: d.note })]));
+  });
+
+  /* ---- project ---- */
+  var proj = Kit.projectBlock();
+  proj.removeAttribute('data-core');
+  // wrap dt/dd pairs so each fact is a legend cell
+  var dl = proj.querySelector('dl');
+  var kids = Array.prototype.slice.call(dl.children);
+  for (var i = 0; i < kids.length; i += 2) { var w = el('div'); w.append(kids[i], kids[i + 1]); dl.append(w); }
+  document.getElementById('project-slot').append(proj);
+
+  /* ---- palette ---- */
+  var palette = [
+    { name: 'Navy', hex: '#264C6E', use: 'Workshop, downtown blocks', dark: true },
+    { name: 'Coral', hex: '#FB8A70', use: 'Housing, tram stripe' },
+    { name: 'Cream', hex: '#FDFDF4', use: 'Sheet matte, tram body' },
+    { name: 'Mint', hex: '#A2D7B8', use: 'Glass towers, library glazing' },
+    { name: 'River blue', hex: '#2BA4E3', use: 'River' },
+    { name: 'Park green', hex: '#9AD082', use: 'Lawns, park strip' },
+    { name: 'Canopy', hex: '#408554', use: 'Trees', dark: true },
+    { name: 'Sand', hex: '#FEEED7', use: 'Square paving' }
+  ];
+  var pal = document.getElementById('palette');
+  palette.forEach(function (p) {
+    var li = el('li', { class: p.dark ? 'dark' : '' }, [el('b', { text: p.name }), el('code', { text: p.hex }), el('small', { text: p.use })]);
+    li.style.background = p.hex;
+    pal.append(li);
+  });
+
+  /* ---- views: landmark finder ---- */
+  var seenIn = {
+    R1: 'City perspectives: Map, Top-down, Diagonal. Living: Home (looking west). Creating: Build mode, Waterfront park. Interfaces: Rooftop, Mobile, AR tabletop.',
+    B1: 'City perspectives: Map, Top-down, Diagonal. Living: Home. Creating: Build mode, Waterfront park. Interfaces: Rooftop, AR tabletop.',
+    W1: 'Every sheet. Its three-bay sawtooth roof appears in Map, Street, the Workshop interior, Gathering, Build mode (with the X/Y/Z gizmo), Night and rain, Mobile (“Workshop selected”) and AR tabletop.',
+    T1: 'City perspectives: all four panels. Living: Workshop doorway, Home, Gathering. Creating: Build mode, Transit, Night and rain. Interfaces: Rooftop, Mobile, AR tabletop.',
+    L1: 'City perspectives: Map, Top-down, Diagonal, Street. Living: Gathering. Creating: Build mode, Transit, Night and rain. Interfaces: Facility (the kiosk interior), Mobile, AR tabletop.',
+    S1: 'City perspectives: Map, Top-down, Diagonal, Street. Living: Gathering. Creating: Build mode, Transit (inside the tram), Night and rain. Interfaces: Mobile, AR tabletop.'
+  };
+  var map = document.getElementById('sysmap');
+  var finder = document.getElementById('finder');
+  var seen = document.getElementById('seen');
+  A.district.forEach(function (d) {
+    var ic = el('i', {}, picto(d.id)); ic.style.background = signColor[d.id];
+    var b = el('button', { type: 'button', 'aria-pressed': 'false' }, [ic, d.name]);
+    b.addEventListener('click', function () {
+      var on = b.getAttribute('aria-pressed') !== 'true';
+      finder.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+      map.querySelectorAll('.lm').forEach(function (g) { g.classList.toggle('on', on && g.dataset.lm === d.id); });
+      map.classList.toggle('focus', on);
+      if (on) {
+        b.setAttribute('aria-pressed', 'true');
+        seen.textContent = '';
+        seen.append(el('b', { text: d.name + ' (' + d.id + '). ' }), d.note + ' Seen in: ' + seenIn[d.id]);
+      } else {
+        seen.textContent = 'Choose a landmark to highlight it on the diagram and list the panels that show it.';
+      }
+    });
+    finder.append(b);
+  });
+
+  /* ---- views: four platforms ---- */
+  var sheetNotes = [
+    { alt: 'Map, Top-down, Diagonal and Street panels. The river runs down the west edge under a low north bridge; the navy three-bay sawtooth Workshop sits west of Tree Square and its single tree; the navy vaulted Library sits east; cream and coral trams run along the southern boulevard.',
+      text: 'Map, Top-down, Diagonal, Street. River on the west, low north bridge, sawtooth Workshop, Tree Square, vaulted Library, tram boulevard south; signed Workshop and Library facades face the square at street level.' },
+    { alt: 'Workshop, Home, Conversation and Gathering panels. A1 works at a bench inside the skylit Workshop; a resident reads at home looking west over the Workshop roofs and tree to the river and bridge; A1 is labelled City Agent A1 in conversation under trees; people gather around the tree between the Workshop and Library with a tram passing.',
+      text: 'Workshop, Home, Conversation, Gathering. A1 at a Workshop bench; the home looks west over sawtooth roofs to the river and bridge; A1 labelled in conversation; gathering at Tree Square with the tram.' },
+    { alt: 'Build mode, Transit, Night and rain, and Waterfront park panels. The Workshop is selected with red X, green Y and blue Z axes beside the river and bridge; A1 rides the tram past the square; the tram, Workshop and Library glow on a wet night; A1 sits on a bench on the east riverbank with the bridge and Workshop behind.',
+      text: 'Build mode, Transit, Night and rain, Waterfront park. X/Y/Z gizmo on the Workshop; A1 on the tram; lit windows and wet paving at night; the east riverbank with bridge and Workshop.' },
+    { alt: 'Facility, Mobile, Rooftop and AR tabletop panels. A1 helps a visitor at a Library kiosk with Browse, Book and Ask; a phone shows the district map with Workshop selected, A1 and an Ask button; A1 points west from a rooftop over the tree and Workshop to the river and bridge; a hand points to the highlighted Workshop on an AR table with a category legend and an External viewer label.',
+      text: 'Facility, Mobile, Rooftop, AR tabletop. Library kiosk (Browse, Book, Ask); phone with “Workshop selected” and A1; rooftop looking west; AR table with the Workshop highlighted and legend.' }
+  ];
+  var ORDER = ['tl', 'tr', 'bl', 'br'];
+  var platforms = document.getElementById('platforms');
+  S.sheets.forEach(function (sheet, i) {
+    var frame = el('div', { class: 'frame' });
+    var full = Kit.sheetImg(S, i, null, { alt: S.name + ' concept study, ' + sheet.title + ' (' + sheet.revision + '): ' + sheetNotes[i].alt, eager: i === 0 });
+    frame.append(full);
+    var btns = el('div', { class: 'pbtns', role: 'group', 'aria-label': sheet.title + ': show one panel' });
+    var all = el('button', { type: 'button', 'aria-pressed': 'true', text: 'Whole sheet' });
+    btns.append(all);
+    var buttons = [all];
+    function show(btn, node) {
+      buttons.forEach(function (x) { x.setAttribute('aria-pressed', String(x === btn)); });
+      frame.textContent = ''; frame.append(node);
+    }
+    all.addEventListener('click', function () { show(all, full); });
+    Kit.PANEL_NAMES[i].forEach(function (name, k) {
+      var b = el('button', { type: 'button', 'aria-pressed': 'false', text: name });
+      b.addEventListener('click', function () { show(b, Kit.sheetImg(S, i, ORDER[k], { alt: S.name + ' concept study: ' + sheet.title + ', ' + name + ' panel (' + sheet.revision + ').' })); });
+      buttons.push(b); btns.append(b);
+    });
+    var fig = el('figure', { style: 'margin:0' }, [frame, el('figcaption', {}, [
+      el('span', { text: sheetNotes[i].text }),
+      el('a', { href: Kit.href(sheet.image), text: 'Open full size' }),
+      el('span', { class: 'concept', text: A.conceptNote })
+    ])]);
+    platforms.append(el('article', { class: 'platform rv', 'aria-labelledby': 'pl-' + i }, [
+      el('header', {}, [el('h3', { id: 'pl-' + i }, [el('small', { text: 'Platform ' + (i + 1) + ' · ' + sheet.revision }), sheet.title]), btns]),
+      fig
+    ]));
+  });
+
+  /* ---- agents ---- */
+  var a1fig = document.getElementById('a1-panel');
+  a1fig.append(Kit.sheetImg(S, 1, 'bl', { alt: S.name + ' concept study: Living community, Conversation panel (' + S.sheets[1].revision + '). A1, with black bob, navy jacket, cream shirt and leaf A1 badge, talks with a resident under trees; a label reads City Agent A1.' }));
+  a1fig.append(el('figcaption', { text: 'From the sheet: Living community, Conversation (' + S.sheets[1].revision + '). ' + A.agentA1 }));
+  document.getElementById('guild-note').textContent = A.guildNote;
+  var g = document.getElementById('guild');
+  A.guild.forEach(function (r, n) {
+    g.append(el('li', {}, [el('i', { 'aria-hidden': 'true', text: String(n + 1).padStart(2, '0') }), el('div', {}, [el('b', { text: r.name }), el('span', { text: r.role })])]));
+  });
+
+  /* ---- status + nav ---- */
+  document.getElementById('status-slot').append(Kit.statusBlock(S));
+  Kit.mountNav(document.getElementById('nav-slot'), S);
+
+  /* ---- line indicator + progress ---- */
+  var stations = Array.prototype.slice.call(document.querySelectorAll('.station'));
+  var names = ['Agentnagar', 'The style', 'Four views', 'Agents', 'Trade-offs', 'Status', 'Onward'];
+  var stops = document.getElementById('stops');
+  var links = stations.map(function (s, n) {
+    var a = el('a', { href: '#' + s.id, 'aria-label': 'Station ' + (n + 1) + ': ' + names[n] }, [el('i'), el('span', { text: names[n] })]);
+    stops.append(el('li', {}, a));
+    return a;
+  });
+  var now = document.getElementById('now');
+  var main = document.getElementById('line');
+  var rail = document.getElementById('rail');
+  var current = -1;
+  function update() {
+    var mid = window.innerHeight * 0.4;
+    var idx = 0;
+    stations.forEach(function (s, n) { if (s.getBoundingClientRect().top < mid) idx = n; });
+    var atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+    if (atEnd) idx = stations.length - 1;
+    if (idx !== current) {
+      current = idx;
+      links.forEach(function (a, n) {
+        if (n === idx) a.setAttribute('aria-current', 'step'); else a.removeAttribute('aria-current');
+        a.classList.toggle('passed', n <= idx);
+      });
+      stations.forEach(function (s, n) { s.classList.toggle('passed', n <= idx); });
+      now.textContent = names[idx];
+      stops.style.setProperty('--done', (idx / (stations.length - 1)).toFixed(3));
+    }
+    if (!reduced) {
+      var r = main.getBoundingClientRect();
+      var p = atEnd ? 1 : Math.min(1, Math.max(0, (window.innerHeight * 0.55 - r.top) / r.height));
+      rail.style.setProperty('--p', p.toFixed(4));
+    }
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; update(); }); } }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+
+  /* ---- reveals ---- */
+  var rv = document.querySelectorAll('.rv');
+  if (reduced || !('IntersectionObserver' in window)) {
+    rv.forEach(function (n) { n.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(function (n) { io.observe(n); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+[package]
+name = "city-godot"
+version = "0.1.0"
+description = "A Godot extension exposing the city world to the Godot client"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+city-contracts.workspace = true
+city-core.workspace = true
+serde_json.workspace = true
+godot = { version = "0.5.5", features = ["api-4-6"] }
+# The station computer's terminal grid (TermGrid, term.rs). The plan's
+# "0.15.x" was a guess at the newest version at the time; 0.16.2 is newer
+# and fixes the scrollback-past-one-screen-height panic worked around in
+# an earlier fix round (see term::Grid::set_scrollback). Pinned exactly.
+vt100 = "=0.16.2"
+
+# The web build (scripts/package.sh web): gdext's threaded WebAssembly
+# support, with function tables loaded on first use.
+[target.'cfg(target_os = "emscripten")'.dependencies]
+godot = { version = "0.5.5", features = ["api-4-6", "experimental-wasm", "lazy-function-tables"] }

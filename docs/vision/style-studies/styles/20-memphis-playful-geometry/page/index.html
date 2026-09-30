@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en" data-style="20-memphis-playful-geometry">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20 Memphis playful geometry · Agentnagar TV</title>
+<meta name="description" content="Agentnagar style study 20, Memphis playful geometry, as a 1980s TV set: change channels to tour the style.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root{
+  --pink:#FB7995; --yellow:#FDCD4C; --teal:#04B0C2; --cobalt:#0562AB; --black:#000; --paper:#FBF8EF;
+  --mint:#9BDBCE; --powder:#96C8F9; --blush:#F7ADAA; --ink:#111;
+  --display:'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --text:'Bricolage Grotesque Variable', 'Trebuchet MS', system-ui, sans-serif;
+  --osd:'VT323', ui-monospace, monospace;
+  --line:4px solid var(--black);
+  --shadow:8px 8px 0 var(--black);
+  --gut:clamp(16px, 3vw, 40px);
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.55;overflow-x:hidden;
+  background-color:var(--paper);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 220 220'%3E%3Cpath d='M14 30q8-12 16 0t16 0' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round'/%3E%3Cpolygon points='150,20 166,46 134,46' fill='%23FDCD4C' stroke='%23000' stroke-width='2'/%3E%3Ccircle cx='96' cy='110' r='7' fill='%23FB7995'/%3E%3Crect x='178' y='132' width='16' height='16' fill='%2304B0C2' transform='rotate(20 186 140)'/%3E%3Cpath d='M30 170q10 10 20 0t20 0t20 0' fill='none' stroke='%230562AB' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='190' cy='200' r='3' fill='%23000'/%3E%3Ccircle cx='60' cy='80' r='3' fill='%23000'/%3E%3Ccircle cx='128' cy='176' r='3' fill='%23000'/%3E%3Cpath d='M120 70l10 10M130 70l-10 10' stroke='%23000' stroke-width='3'/%3E%3C/svg%3E");}
+img{max-width:100%;display:block}
+a{color:var(--cobalt);text-decoration-thickness:2px;text-underline-offset:3px}
+:focus-visible{outline:4px solid var(--black);outline-offset:3px;box-shadow:0 0 0 8px var(--yellow)}
+.skip{position:absolute;left:-999px;top:0;background:#000;color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gut)}
+.chip{display:inline-block;font:900 13px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;background:var(--yellow);border:3px solid #000;padding:7px 10px 6px;color:#000}
+.chip.pink{background:var(--pink)} .chip.teal{background:var(--teal)} .chip.mint{background:var(--mint)} .chip.powder{background:var(--powder)}
+.chip.cobalt{background:var(--cobalt);color:#fff}
+.sq{display:block;width:100%;height:18px;margin:10px 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='18' viewBox='0 0 48 18'%3E%3Cpath d='M0 9q6-8 12 0t12 0t12 0t12 0' fill='none' stroke='%23000' stroke-width='3.5'/%3E%3C/svg%3E") repeat-x}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Station ident ---------- */
+.ident{background:#000;color:var(--paper);border-bottom:var(--line)}
+.ident .wrap{display:flex;align-items:center;gap:16px;min-height:52px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.logo{font:900 18px/1 var(--display);letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo i{display:inline-block;width:18px;height:18px;border-radius:50%;background:var(--pink)}
+.logo i+i{border-radius:0;background:var(--teal);transform:rotate(15deg)}
+.logo i+i+i{background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%);transform:none}
+.ticker{flex:1;overflow:hidden;white-space:nowrap;font:400 22px/1 var(--osd);color:var(--yellow);min-width:0;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.ticker span{display:inline-block;padding-left:100%;animation:tick 38s linear infinite}
+@keyframes tick{to{transform:translateX(-100%)}}
+
+/* ---------- Hero / studio ---------- */
+.studio{position:relative;padding:clamp(24px,4vw,56px) 0 clamp(40px,5vw,72px)}
+.studio-grid{display:grid;grid-template-columns:300px minmax(0,1fr) 250px;gap:clamp(24px,2.6vw,40px);align-items:start}
+.headline{display:flex;flex-direction:column;gap:22px;padding-top:24px}
+.headline h1{margin:0;font:900 clamp(30px,3vw,42px)/1.12 var(--display);letter-spacing:-.02em;text-transform:uppercase}
+.headline h1 span{display:inline-block}
+.headline h1 .w1{background:var(--pink);border:var(--line);padding:0 .12em;display:inline-block;transform:rotate(-2deg);box-shadow:var(--shadow)}
+.headline h1 .w2{color:var(--cobalt);display:inline-block;margin-top:.12em}
+.headline h1 small{display:inline-block;font-size:.3em;letter-spacing:.04em;margin-top:.8em;color:#000;background:var(--teal);border:3px solid #000;padding:.5em .7em .4em;line-height:1.2}
+.headline p{max-width:430px;margin:0;font-size:17px;background:#fff;border:var(--line);padding:14px 16px;box-shadow:6px 6px 0 var(--teal)}
+
+/* TV set */
+.tv{position:relative;padding-top:clamp(56px,6vw,84px)}
+.antenna{position:absolute;left:50%;top:0;width:0;height:0}
+.antenna i{position:absolute;bottom:-100px;width:6px;height:clamp(80px,9vw,120px);background:#000;transform-origin:bottom center;left:-3px}
+.antenna i::after{content:"";position:absolute;top:-16px;left:-11px;width:28px;height:28px;border-radius:50%;border:4px solid #000}
+.antenna i:first-child{transform:rotate(-28deg)}
+.antenna i:first-child::after{background:var(--cobalt)}
+.antenna i:last-child{transform:rotate(24deg)}
+.antenna i:last-child::after{background:var(--pink)}
+.cabinet{position:relative;background:var(--yellow);border:var(--line);border-radius:34px;box-shadow:12px 12px 0 #000;padding:clamp(14px,2vw,26px);display:grid;grid-template-columns:minmax(0,1fr) clamp(80px,8vw,120px);gap:clamp(14px,2vw,24px);
+  background-image:radial-gradient(#000 1.6px,transparent 2px),radial-gradient(var(--pink) 2.4px,transparent 3px),radial-gradient(var(--teal) 2px,transparent 2.6px);
+  background-size:38px 38px,53px 53px,61px 61px;background-position:0 0,13px 21px,31px 7px}
+.screen-wrap{background:#000;border-radius:28px;padding:clamp(10px,1.4vw,18px);border:var(--line)}
+.screen{position:relative;aspect-ratio:4/3;container-type:size;border-radius:22px/30px;overflow:hidden;background:#101010;isolation:isolate}
+.screen .card{position:absolute;inset:0;display:grid}
+.screen::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.14) 0 2px,transparent 2px 4px),radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.45) 100%)}
+.osd{position:absolute;top:4%;right:5%;z-index:6;font:400 9cqw/1 var(--osd);color:#7CFF8E;text-shadow:0 0 8px rgba(124,255,142,.7),2px 2px 0 #000;background:rgba(0,0,0,.6);padding:2px 8px 0}
+.osd-name{position:absolute;left:5%;bottom:5%;z-index:6;font:400 5.6cqw/1 var(--osd);color:#fff;background:rgba(0,0,0,.7);padding:4px 10px 2px}
+#static{position:absolute;inset:0;width:100%;height:100%;z-index:7;opacity:0;pointer-events:none;image-rendering:pixelated}
+#static.on{opacity:1}
+.side{display:flex;flex-direction:column;gap:14px;align-items:center}
+.grille{width:100%;flex:1;min-height:120px;background:var(--teal);border:var(--line);border-radius:18px;background-image:radial-gradient(#000 3px,transparent 3.6px);background-size:14px 14px}
+.knob{width:clamp(56px,6vw,76px);aspect-ratio:1;border-radius:50%;background:var(--pink);border:var(--line);position:relative;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.knob::after{content:"";position:absolute;left:50%;top:6%;width:6px;height:40%;margin-left:-3px;background:#000;border-radius:3px}
+.knob.b{background:var(--cobalt);width:clamp(40px,4.4vw,56px)}
+.brand{font:900 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;background:#000;color:var(--yellow);padding:6px 8px 5px;border-radius:6px}
+.feet{display:flex;justify-content:space-between;padding:0 12%}
+.feet i{width:34px;height:26px;background:var(--cobalt);border:var(--line);border-top:none}
+.feet i:last-child{background:var(--pink)}
+
+/* Remote control */
+.remote{background:#1b1b1b;border:var(--line);border-radius:44px 44px 30px 30px;padding:24px 18px 22px;box-shadow:10px 10px 0 var(--pink);color:#fff;position:relative;margin-top:clamp(0px,3vw,40px)}
+.remote::before{content:"";display:block;width:14px;height:14px;border-radius:50%;background:#ff4a4a;margin:0 auto 14px;box-shadow:0 0 10px #ff4a4a}
+.remote h2{font:900 13px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;text-align:center;margin:0 0 14px;color:var(--yellow)}
+.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.key{appearance:none;border:3px solid #000;border-radius:16px;min-height:64px;padding:6px 4px 5px;cursor:pointer;font:900 22px/1 var(--display);color:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-shadow:0 5px 0 #000;transition:transform .08s, box-shadow .08s}
+.key small{font:600 11px/1.05 var(--text);letter-spacing:.02em;text-transform:none}
+.key:active{transform:translateY(4px);box-shadow:0 1px 0 #000}
+.key[aria-selected="true"]{outline:4px solid #fff;outline-offset:2px}
+.key:focus-visible{outline:4px solid #fff;outline-offset:3px;box-shadow:0 0 0 9px var(--pink)}
+.key.k1{background:var(--pink)} .key.k2{background:var(--yellow)} .key.k3{background:var(--teal)} .key.k4{background:var(--mint)} .key.k5{background:var(--powder)} .key.k6{background:var(--blush)} .key.k7{background:#fff;grid-column:span 3;min-height:52px}
+.rockers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.rock{appearance:none;border:3px solid #000;background:#3a3a3a;color:#fff;border-radius:999px;min-height:48px;font:900 14px/1 var(--display);cursor:pointer;box-shadow:0 4px 0 #000}
+.rock:focus-visible{outline:4px solid #fff;outline-offset:3px}
+.guide-btn{appearance:none;width:100%;margin-top:14px;border:3px solid #000;border-radius:14px;background:var(--yellow);color:#000;min-height:52px;font:900 14px/1.1 var(--display);letter-spacing:.04em;text-transform:uppercase;cursor:pointer;box-shadow:0 5px 0 #000}
+.guide-btn:focus-visible{outline:4px solid #fff;outline-offset:3px}
+.remote .hint{font-size:13px;color:#ddd;margin:14px 0 0;text-align:center;line-height:1.4}
+.remote kbd{font:400 18px/1 var(--osd);background:#000;border:1px solid #666;padding:0 4px}
+
+/* ---------- Title cards (inside screen) ---------- */
+.tc{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6%;overflow:hidden}
+.tc h3{font:900 7.4cqw/.95 var(--display);text-transform:uppercase;margin:0;letter-spacing:-.01em;position:relative;z-index:2}
+.tc p{font:600 3.6cqw/1.3 var(--text);margin:.6em 0 0;max-width:30em;position:relative;z-index:2}
+.tc svg{position:absolute;inset:0;width:100%;height:100%}
+.tc-1{background:var(--powder)}
+.tc-1{justify-content:flex-start;padding-top:9%}
+.tc-1 h3{background:#fff;border:4px solid #000;padding:.2em .4em;box-shadow:6px 6px 0 #000;transform:rotate(-3deg)}
+.tc-2{background:#fff;display:grid;grid-template-columns:repeat(5,1fr);padding:0}
+.tc-2 .bar{height:100%;border-right:4px solid #000}
+.tc-2 .bar:last-child{border-right:0}
+.tc-2 .lab{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-4deg);background:#000;color:#fff;padding:.4em .7em;border:4px solid #fff;box-shadow:0 0 0 4px #000}
+.tc-2 .lab h3{color:var(--yellow)}
+.tc-3{background:#000;padding:0}
+.tc-3 .kit-panel{position:absolute!important;top:0;bottom:0;left:50%;height:100%;width:auto;transform:translateX(-50%)}
+.tc-3 .kit-panel img{filter:saturate(1.15)}
+.tc-3 .lab{position:absolute;left:5%;top:5%;z-index:2}
+.tc-4{background:var(--mint)}
+.tc-5{background:var(--pink)}
+.tc-6{background:#000;padding:0}
+.tc-6 .bars{position:absolute;inset:0 0 28% 0;display:grid;grid-template-columns:repeat(7,1fr)}
+.tc-6 .bars i:nth-child(1){background:#fff}.tc-6 .bars i:nth-child(2){background:var(--yellow)}.tc-6 .bars i:nth-child(3){background:var(--teal)}.tc-6 .bars i:nth-child(4){background:var(--mint)}.tc-6 .bars i:nth-child(5){background:var(--pink)}.tc-6 .bars i:nth-child(6){background:#e8364a}.tc-6 .bars i:nth-child(7){background:var(--cobalt)}
+.tc-6 .strip{position:absolute;left:0;right:0;bottom:0;height:28%;background:#000;color:#fff;display:flex;align-items:flex-start;padding-top:2.5%;justify-content:center;font:400 6.4cqw/1 var(--osd);letter-spacing:.06em}
+.tc-6 .circ{position:absolute;left:50%;top:36%;width:34%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:6px solid #000;background:rgba(255,255,255,.2);display:grid;place-items:center;font:900 5cqw/1 var(--display);color:#000}
+.tc-7{background:var(--yellow)}
+.tc-7 h3{font-size:9cqw}
+.tc-7 .ul{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;justify-content:center;position:relative;z-index:2}
+.bob{animation:bob 2.4s ease-in-out infinite}
+.bob2{animation:bob 3.1s .4s ease-in-out infinite}
+.spin{animation:spin 9s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes bob{50%{transform:translateY(-6%)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.wave{animation:wave 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+@keyframes wave{50%{transform:rotate(-14deg)}}
+
+/* ---------- Now showing ---------- */
+.now{border-top:var(--line);border-bottom:var(--line);background:#000;color:#fff}
+.now .wrap{display:flex;align-items:center;gap:14px;min-height:64px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.now b{font:900 clamp(16px,2vw,24px)/1 var(--display);text-transform:uppercase}
+.now .live{font:400 26px/1 var(--osd);color:#ff5a6a}
+.programme{padding:clamp(40px,6vw,80px) 0}
+.channel{position:relative}
+.channel[hidden]{display:none}
+.ch-head{display:flex;align-items:center;gap:16px 24px;flex-wrap:wrap;margin-bottom:28px}
+.ch-num{font:900 clamp(64px,10vw,140px)/.8 var(--display);-webkit-text-stroke:4px #000;color:transparent;letter-spacing:-.04em;text-shadow:7px 7px 0 var(--pink)}
+.ch-head h2{font:900 clamp(28px,4.4vw,64px)/.95 var(--display);text-transform:uppercase;margin:0;letter-spacing:-.02em}
+.ch-head .chip{margin-top:10px}
+.panel{background:#fff;border:var(--line);box-shadow:var(--shadow);padding:clamp(18px,2.4vw,32px);position:relative}
+.panel h3{font:900 clamp(18px,1.8vw,24px)/1.1 var(--display);text-transform:uppercase;margin:0 0 12px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,32px)}
+.tilt-l{transform:rotate(-1deg)} .tilt-r{transform:rotate(1deg)}
+.bg-pink{background:var(--pink)} .bg-yellow{background:var(--yellow)} .bg-teal{background:var(--teal)} .bg-mint{background:var(--mint)} .bg-powder{background:var(--powder)}
+.terrazzo{background-color:#fff;background-image:radial-gradient(#000 1.4px,transparent 1.9px),radial-gradient(var(--pink) 2.4px,transparent 3px),radial-gradient(var(--teal) 2.2px,transparent 2.8px),radial-gradient(var(--yellow) 3px,transparent 3.6px);background-size:26px 26px,41px 41px,47px 47px,59px 59px;background-position:0 0,9px 17px,23px 5px,4px 31px}
+.terrazzo .inner{background:#fff;border:3px solid #000;padding:16px}
+
+/* project */
+.kit-project .kit-tagline{font:900 clamp(22px,2.6vw,38px)/1.08 var(--display);text-transform:uppercase;margin:0 0 16px}
+.kit-project p{margin:0 0 14px}
+.kit-project dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}
+.kit-project dl > div{border:3px solid #000;padding:12px 14px;background:#fff;border-radius:18px}
+.kit-project dt{display:inline-block;font:900 12px/1 var(--display);text-transform:uppercase;letter-spacing:.06em;background:var(--yellow);border:3px solid #000;padding:6px 8px 5px;margin-bottom:8px}
+.kit-project dl > div:nth-child(5n+2) dt{background:var(--pink)}
+.kit-project dl > div:nth-child(5n+3) dt{background:var(--teal)}
+.kit-project dl > div:nth-child(5n+4) dt{background:var(--mint)}
+.kit-project dl > div:nth-child(5n) dt{background:var(--powder)}
+.kit-project dd{margin:0;font-size:15px}
+.kit-project .kit-small{font-size:14px;background:var(--paper);border:3px dashed #000;padding:10px 12px;border-radius:14px}
+.district{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.district li{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;font-size:15px}
+.district .dot{width:52px;height:52px;border:3px solid #000;display:grid;place-items:center;font:900 13px/1 var(--display)}
+.district li:nth-child(1) .dot{background:var(--teal);border-radius:50%}
+.district li:nth-child(2) .dot{background:var(--cobalt);color:#fff;border-radius:999px 999px 0 0}
+.district li:nth-child(3) .dot{background:var(--pink)}
+.district li:nth-child(4) .dot{background:var(--mint);border-radius:50%}
+.district li:nth-child(5) .dot{background:var(--yellow);border-radius:26px 26px 4px 4px}
+.district li:nth-child(6) .dot{background:var(--powder);transform:rotate(12deg)}
+
+/* style */
+.intent{font:500 clamp(19px,1.8vw,24px)/1.4 var(--text);margin:0}
+.principles{list-style:none;counter-reset:p;padding:0;margin:0;display:grid;gap:14px}
+.principles li{counter-increment:p;display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start;font-size:16px}
+.principles li::before{content:counter(p);width:48px;height:48px;display:grid;place-items:center;font:900 20px/1 var(--display);border:3px solid #000;background:var(--yellow);border-radius:50%}
+.principles li:nth-child(2)::before{background:var(--pink);border-radius:0;transform:rotate(-8deg)}
+.principles li:nth-child(3)::before{background:var(--teal);border-radius:14px 14px 0 0}
+.principles li:nth-child(4)::before{background:var(--mint);border-radius:0 50% 50% 50%}
+.principles li:nth-child(5)::before{background:var(--powder)}
+.principles b{font-family:var(--display);font-weight:900;font-size:15px;text-transform:uppercase;display:block;margin-bottom:2px}
+.swatches{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.swatches li{border:3px solid #000;background:#fff;box-shadow:5px 5px 0 #000;font-size:14px}
+.swatches .sw{height:86px;border-bottom:3px solid #000;position:relative;overflow:hidden}
+.swatches li:nth-child(odd) .sw::after{content:"";position:absolute;right:-14px;top:-14px;width:44px;height:44px;border-radius:50%;border:3px solid #000;background:#fff}
+.swatches li:nth-child(even) .sw::after{content:"";position:absolute;left:10px;bottom:10px;width:40px;height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12'%3E%3Cpath d='M0 6q5-6 10 0t10 0t10 0t10 0' fill='none' stroke='%23000' stroke-width='3'/%3E%3C/svg%3E")}
+.swatches .sl{padding:8px 10px}
+.swatches b{display:block;font:900 12px/1.2 var(--display);text-transform:uppercase}
+.swatches code{font:600 14px var(--text)}
+
+/* views */
+.plate{margin:0;background:#fff;border:var(--line);box-shadow:var(--shadow)}
+.plate .ph{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;border-bottom:var(--line);flex-wrap:wrap}
+.plate .kit-sheet{width:100%;height:auto;border-bottom:var(--line)}
+.plate figcaption{padding:14px 16px;font-size:15px}
+.plate:nth-child(1) .ph{background:var(--yellow)} .plate:nth-child(2) .ph{background:var(--pink)} .plate:nth-child(3) .ph{background:var(--teal)} .plate:nth-child(4) .ph{background:var(--powder)}
+.concept{margin:28px 0 0;font-size:15px;background:#000;color:#fff;padding:14px 18px;border-radius:999px;display:inline-block;max-width:100%}
+@media (max-width:640px){.concept{border-radius:18px}}
+
+/* agents */
+.a1{margin:0}
+.a1 svg{width:100%;height:auto;display:block;border:var(--line);background:var(--mint)}
+.a1 figcaption{font-size:14px;margin-top:12px;background:#fff;border:3px solid #000;padding:10px 12px}
+.guild{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.guild li{border:3px solid #000;border-radius:999px;padding:8px 14px 7px;background:#fff;font-size:14px;line-height:1.25}
+.guild li:nth-child(5n+1){background:var(--yellow)} .guild li:nth-child(5n+2){background:var(--mint)} .guild li:nth-child(5n+3){background:var(--blush)} .guild li:nth-child(5n+4){background:var(--powder)}
+.guild b{font:900 13px/1 var(--display);text-transform:uppercase;margin-right:6px}
+
+/* trade-offs */
+.trade{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.trade li{border:var(--line);box-shadow:var(--shadow);padding:20px;background:#fff}
+.trade li:nth-child(1){background:var(--mint)} .trade li:nth-child(4){background:var(--yellow)} .trade li:nth-child(5){grid-column:1/-1;background:var(--blush)}
+.trade h3{font:900 18px/1.1 var(--display);text-transform:uppercase;margin:0 0 8px}
+.trade p{margin:0;font-size:16px}
+
+/* status */
+.kit-status .kit-summary{font:900 clamp(20px,2.2vw,30px)/1.2 var(--display);margin:0 0 16px;background:var(--yellow);border:var(--line);padding:16px 18px;box-shadow:var(--shadow)}
+.kit-status .kit-concept{background:#fff;border:3px solid #000;padding:10px 14px;font-size:15px}
+.kit-status ul{list-style:none;padding:0;margin:18px 0;display:grid;gap:8px}
+.kit-status li{border:3px solid #000;border-radius:999px;padding:8px 16px;background:#fff;font-size:15px}
+.kit-status .kit-links{font:900 14px/1 var(--display);text-transform:uppercase}
+.kit-status .kit-links a{background:var(--teal);color:#000;border:3px solid #000;padding:8px 10px 6px;text-decoration:none;display:inline-block;margin:4px 0}
+
+/* coming up */
+.listing{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.listing a{display:block;border:var(--line);box-shadow:var(--shadow);padding:22px;text-decoration:none;color:#000;min-height:150px;background:#fff}
+.listing a:nth-child(1){background:var(--powder)} .listing a:nth-child(2){background:var(--yellow)} .listing a:nth-child(3){background:var(--pink)}
+.listing small{display:block;font:400 22px/1 var(--osd);margin-bottom:8px}
+.listing b{font:900 clamp(18px,2vw,26px)/1.05 var(--display);text-transform:uppercase}
+.listing a:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 #000}
+
+/* footer nav */
+footer{background:#000;color:#fff;padding:36px 0 44px;border-top:var(--line)}
+.kit-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:14px}
+.kit-nav a{border:3px solid #fff;border-radius:999px;color:#fff;text-decoration:none;font:900 clamp(13px,1.4vw,17px)/1.15 var(--display);text-transform:uppercase;padding:16px 20px;display:flex;align-items:center;min-height:56px}
+.kit-nav .kit-index{background:var(--yellow);color:#000;border-color:var(--yellow);justify-content:center}
+.kit-nav .kit-next{justify-content:flex-end;text-align:right}
+.kit-nav a:hover{background:var(--pink);color:#000;border-color:var(--pink)}
+footer :focus-visible{outline-color:#fff;box-shadow:0 0 0 8px var(--pink)}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px;font-size:14px}
+.foot a{color:#fff}
+
+/* notes dialog */
+.kit-dialog{max-width:min(900px,calc(100vw - 24px));width:100%;max-height:calc(100vh - 24px);border:var(--line);border-radius:18px;padding:0;background:var(--paper);color:#000;box-shadow:12px 12px 0 var(--pink)}
+.kit-dialog::backdrop{background:rgba(0,0,0,.75)}
+.kit-close{position:sticky;top:0;display:block;margin-left:auto;z-index:2;border:3px solid #000;background:var(--yellow);font:900 14px/1 var(--display);text-transform:uppercase;padding:14px 16px;cursor:pointer;border-radius:0 0 0 14px}
+.kit-notes{padding:6px clamp(16px,4vw,40px) 40px}
+.kit-notes h1{font:900 clamp(26px,4vw,44px)/1 var(--display);text-transform:uppercase}
+.kit-notes h2{font:900 20px/1.1 var(--display);text-transform:uppercase;display:inline-block;background:var(--teal);border:3px solid #000;padding:8px 10px 6px;margin:34px 0 12px}
+.kit-notes figure{margin:0 0 20px}
+.kit-notes .kit-sheet{border:3px solid #000}
+.kit-notes figcaption{font-size:14px}
+.kit-notes .kit-palette{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.kit-notes .kit-palette li{border:2px solid #000;border-radius:999px;padding:4px 10px 4px 4px;display:flex;gap:6px;align-items:center;font-size:14px;background:#fff}
+.kit-notes .kit-swatch{width:22px;height:22px;border-radius:50%;border:2px solid #000;display:inline-block}
+.kit-notes dt{font-weight:800;margin-top:10px}
+.kit-notes dd{margin:0}
+.kit-notes .kit-nav{grid-template-columns:1fr}
+.kit-notes .kit-nav a{border-color:#000;color:#000}
+
+@media (max-width:1200px){
+  .studio-grid{grid-template-columns:minmax(0,1fr) 250px}
+  .headline{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;padding-top:0}
+}
+@media (max-width:1060px){
+  .studio-grid{grid-template-columns:1fr}
+  .key.k7{grid-column:auto}
+  .remote{margin-top:0;max-width:640px;width:100%;justify-self:center}
+  .keys{grid-template-columns:repeat(7,1fr)}
+  .key small{display:none}
+}
+@media (max-width:860px){
+  .grid2,.grid3,.trade,.listing{grid-template-columns:1fr}
+  .trade li:nth-child(5){grid-column:auto}
+  .swatches{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kit-project dl{grid-template-columns:1fr}
+  .kit-nav{grid-template-columns:1fr}
+  .kit-nav .kit-next{justify-content:flex-start;text-align:left}
+  .kit-nav .kit-index{justify-content:flex-start}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .cabinet{grid-template-columns:1fr;border-radius:24px;box-shadow:7px 7px 0 #000}
+  .side{flex-direction:row;justify-content:space-between}
+  .grille{min-height:44px;height:44px}
+  .brand{display:none}
+  .keys{grid-template-columns:repeat(4,1fr)}
+  .key.k7{grid-column:auto}
+  .key{min-height:52px;font-size:18px}
+  .tilt-l,.tilt-r{transform:none}
+  .ch-num{-webkit-text-stroke:3px #000;text-shadow:4px 4px 0 var(--pink)}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .ticker span{padding-left:0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#programme">Skip to the programme</a>
+
+<div class="ident">
+  <div class="wrap">
+    <span class="logo" aria-hidden="true"><i></i><i></i><i></i> AGENTNAGAR TV</span>
+    <div class="ticker" aria-hidden="true"><span id="ticker"></span></div>
+  </div>
+</div>
+
+<header class="studio">
+  <div class="wrap studio-grid">
+    <div class="headline">
+      <h1><span class="w1">Memphis</span><span class="w2">playful</span> geometry<small>Style study 20 · on every channel</small></h1>
+      <p>Arches, cylinders, tilted blocks and ball-topped towers on a white ground, speckled and squiggled in pink, yellow, teal, cobalt and black. Change the channel to tour the style.</p>
+    </div>
+
+    <div class="tv">
+      <div class="antenna" aria-hidden="true"><i></i><i></i></div>
+      <div class="cabinet">
+        <div class="screen-wrap">
+          <div class="screen" id="screen" role="region" aria-label="TV screen: current channel title card" aria-live="polite">
+            <div class="card" id="card"></div>
+            <div class="osd" id="osd" aria-hidden="true">CH 1</div>
+            <div class="osd-name" id="osd-name" aria-hidden="true"></div>
+            <canvas id="static" width="160" height="120" aria-hidden="true"></canvas>
+          </div>
+        </div>
+        <div class="side" aria-hidden="true">
+          <span class="brand">Agentnagar</span>
+          <div class="knob" id="knob"></div>
+          <div class="knob b"></div>
+          <div class="grille"></div>
+        </div>
+      </div>
+      <div class="feet" aria-hidden="true"><i></i><i></i></div>
+    </div>
+
+    <div class="remote">
+      <h2 id="remote-h">Channels</h2>
+      <div class="keys" role="tablist" aria-labelledby="remote-h" id="keys"></div>
+      <div class="rockers">
+        <button class="rock" type="button" id="ch-down" aria-label="Previous channel">CH −</button>
+        <button class="rock" type="button" id="ch-up" aria-label="Next channel">CH +</button>
+      </div>
+      <button class="guide-btn" type="button" id="notes-btn">TV Guide · Read the notes</button>
+      <p class="hint">Press <kbd>1</kbd>–<kbd>7</kbd> anywhere, or arrow keys on the channel buttons.</p>
+    </div>
+  </div>
+</header>
+
+<div class="now" aria-hidden="true"><div class="wrap"><span class="live">● ON AIR</span><b id="now-title">Now showing</b></div></div>
+
+<main class="programme" id="programme">
+  <div class="wrap">
+
+    <section class="channel" id="ch1" role="tabpanel" aria-labelledby="h1c" data-core="project">
+      <div class="ch-head"><span class="ch-num" aria-hidden="true">01</span><div><h2 id="h1c">Agentnagar</h2><span class="chip pink">The project</span></div></div>
+      <div class="grid2">
+        <div class="panel tilt-l" id="proj"></div>
+        <div class="panel terrazzo tilt-r" style="align-self:start"><div class="inner">
+          <h3>The reference district</h3>
+          <p style="margin:0 0 14px;font-size:15px">Every study draws the same six landmarks. Shapes here are illustrative.</p>
+          <ul class="district" id="district"></ul>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="channel" id="ch2" role="tabpanel" aria-labelledby="h2c" data-core="style" hidden>
+      <div class="ch-head"><span class="ch-num" aria-hidden="true">02</span><div><h2 id="h2c">The style</h2><span class="chip">Intent · principles · palette · type</span></div></div>
+      <div class="grid2">
+        <div class="panel bg-yellow"><h3>Intent</h3><p class="intent" id="intent"></p></div>
+        <div class="panel"><h3>Five principles</h3><ol class="principles" id="principles"></ol></div>
+      </div>
+      <div class="sq" aria-hidden="true" style="margin:36px 0"></div>
+      <h3 class="chip teal" style="font-size:15px;margin:0 0 18px">Palette, sampled from the sheets</h3>
+      <ul class="swatches" id="palette"></ul>
+      <div class="grid2" style="margin-top:36px">
+        <div class="panel terrazzo"><div class="inner"><h3>Materials &amp; texture</h3><p id="materials" style="margin:0"></p></div></div>
+        <div class="panel bg-powder"><h3>Typography</h3><p id="type" style="margin:0"></p></div>
+      </div>
+    </section>
+
+    <section class="channel" id="ch3" role="tabpanel" aria-labelledby="h3c" data-core="views" hidden>
+      <div class="ch-head"><span class="ch-num" aria-hidden="true">03</span><div><h2 id="h3c">One district, four views</h2><span class="chip mint">On location · concept sheets</span></div></div>
+      <div class="grid2" id="views"></div>
+      <p class="concept" id="concept"></p>
+    </section>
+
+    <section class="channel" id="ch4" role="tabpanel" aria-labelledby="h4c" data-core="agents" hidden>
+      <div class="ch-head"><span class="ch-num" aria-hidden="true">04</span><div><h2 id="h4c">Agents in this style</h2><span class="chip powder">City Agent A1 · the Guild</span></div></div>
+      <div class="grid2">
+        <figure class="a1">
+          <svg viewBox="0 0 400 340" role="img" aria-labelledby="a1t">
+            <title id="a1t">Illustrative City Agent A1 in this style: a white robot with blue, yellow and pink colour blocks, confetti dots and a smiling screen face.</title>
+            <circle cx="60" cy="60" r="26" fill="#FDCD4C" stroke="#000" stroke-width="4"/>
+            <path d="M300 40q12-16 24 0t24 0t24 0" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+            <polygon points="330,250 360,300 300,300" fill="#FB7995" stroke="#000" stroke-width="4"/>
+            <g class="bob">
+              <rect x="140" y="170" width="120" height="120" rx="18" fill="#fff" stroke="#000" stroke-width="5"/>
+              <rect x="140" y="170" width="60" height="60" rx="18" fill="#0562AB" stroke="#000" stroke-width="5"/>
+              <rect x="200" y="230" width="60" height="60" rx="18" fill="#FDCD4C" stroke="#000" stroke-width="5"/>
+              <g fill="#000"><circle cx="222" cy="190" r="4"/><circle cx="240" cy="204" r="4"/><circle cx="160" cy="258" r="4"/><circle cx="176" cy="274" r="4"/><circle cx="244" cy="184" r="3"/></g>
+              <circle cx="228" cy="196" r="10" fill="#04B0C2" stroke="#000" stroke-width="3"/>
+              <path d="M223 199q5-10 11-3q-5 6-11 3z" fill="#fff"/>
+              <g class="wave"><rect x="262" y="150" width="28" height="70" rx="14" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="276" cy="146" r="14" fill="#FB7995" stroke="#000" stroke-width="4"/></g>
+              <rect x="110" y="180" width="28" height="70" rx="14" fill="#FB7995" stroke="#000" stroke-width="5"/>
+              <rect x="185" y="146" width="30" height="26" fill="#000"/>
+              <circle cx="200" cy="96" r="62" fill="#fff" stroke="#000" stroke-width="5"/>
+              <path d="M150 70a50 50 0 0 1 100 0" fill="#0562AB" stroke="#000" stroke-width="5"/>
+              <circle cx="262" cy="100" r="18" fill="#FB7995" stroke="#000" stroke-width="5"/>
+              <circle cx="138" cy="100" r="18" fill="#04B0C2" stroke="#000" stroke-width="5"/>
+              <path d="M176 96q8-10 16 0M208 96q8-10 16 0" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+              <path d="M184 116q16 14 32 0" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+            </g>
+            <rect x="0" y="306" width="400" height="34" fill="#000"/>
+            <text x="16" y="330" font-family="Unbounded, sans-serif" font-weight="900" font-size="16" fill="#FDCD4C">A1 · ILLUSTRATIVE</text>
+          </svg>
+          <figcaption id="a1cap"></figcaption>
+        </figure>
+        <div>
+          <div class="panel"><h3>What the sheets show</h3><p id="agents-text" style="margin:0 0 12px"></p><p id="a1-shared" style="margin:0;font-size:15px"></p></div>
+          <h3 class="chip pink" style="font-size:14px;margin:28px 0 0">The Guild · 14 residents</h3>
+          <p style="font-size:14px;margin:10px 0 0;background:#fff;border:3px solid #000;padding:8px 12px" id="guild-note"></p>
+          <ul class="guild" id="guild"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="channel" id="ch5" role="tabpanel" aria-labelledby="h5c" data-core="tradeoffs" hidden>
+      <div class="ch-head"><span class="ch-num" aria-hidden="true">05</span><div><h2 id="h5c">Strengths &amp; trade-offs</h2><span class="chip">Candid, for internal comparison</span></div></div>
+      <ul class="trade" id="trade"></ul>
+    </section>
+
+    <section class="channel" id="ch6" role="tabpanel" aria-labelledby="h6c" hidden>
+      <div class="ch-head"><span class="ch-num" aria-hidden="true">06</span><div><h2 id="h6c">Status</h2><span class="chip teal">Please stand by · the record</span></div></div>
+      <div class="grid2">
+        <div id="status"></div>
+        <div class="panel bg-mint" style="align-self:start"><h3>What this page is</h3><p style="margin:0">A showcase for comparing the thirty studies. It does not select Memphis playful geometry or make any product decision. Channel art on the screen is illustrative, drawn for this page.</p></div>
+      </div>
+    </section>
+
+    <section class="channel" id="ch7" role="tabpanel" aria-labelledby="h7c" hidden>
+      <div class="ch-head"><span class="ch-num" aria-hidden="true">07</span><div><h2 id="h7c">Coming up next</h2><span class="chip cobalt">More styles</span></div></div>
+      <div class="listing" id="listing"></div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="chip" style="margin:0 0 16px">Channel guide · all styles</p>
+    <div id="nav"></div>
+    <div class="foot"><span>20 · Memphis playful geometry · Agentnagar style study</span><a href="#top" id="to-top">Back to the TV</a></div>
+  </div>
+</footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  const S = Kit.style('20-memphis-playful-geometry');
+  const A = window.AGENTNAGAR;
+  const el = Kit.el;
+  const $ = (id) => document.getElementById(id);
+  const reduce = Kit.reducedMotion();
+
+  const content = {
+    intent: 'A high-energy city of arches, cylinders, tilted blocks and ball-topped towers on a white ground. Pink, yellow, teal, cobalt and black share the palette, with terrazzo speckle and squiggle patterns on almost every surface, and section labels sit on coloured chips.',
+    principles: [
+      'Stacked primitives: buildings are arches, cylinders, tilted blocks and ball-topped towers.',
+      'Five loud colours on white: pink, yellow, teal, cobalt and black, with pastel tints for captions and buttons.',
+      'Pattern as skin: terrazzo speckle, squiggles and confetti run from facades to sofas, cups, clothes and the cat.',
+      'Labels ride on chips: section names sit on coloured blocks, and interfaces use pastel pill buttons.',
+      'Quiet ground keeps the map readable: the river and green squares break the pattern at city scale.'
+    ],
+    palette: [
+      { name: 'Hot pink', hex: '#FB7995' },
+      { name: 'Sun yellow', hex: '#FDCD4C' },
+      { name: 'Teal', hex: '#04B0C2' },
+      { name: 'Cobalt', hex: '#0562AB' },
+      { name: 'Black', hex: '#000000' },
+      { name: 'Paper white', hex: '#FBF8EF' },
+      { name: 'Mint caption', hex: '#9BDBCE' },
+      { name: 'Powder blue', hex: '#96C8F9' }
+    ],
+    materials: 'Terrazzo speckle, squiggle and confetti prints on facades, plazas, sofas, tables, cups, clothing and pets; speckled translucent blocks in build mode; soft plastic-like volumes with light shadows.',
+    type: 'The sheets use heavy geometric sans capitals on yellow chips or pastel caption bars, and hand-lettered slogans ending in a squiggle. This page uses Unbounded for chunky display, Bricolage Grotesque for reading, and VT323 for the on-screen channel display.',
+    agents: 'The Living community sheet draws City Agent A1 as a white robot with blue, yellow and red colour blocks, a speckled arm and a smiling screen face (Conversation panel). On the Interfaces sheet the agent becomes a card with a round smiling face beside, not inside, the phone (Mobile panel). No leaf badge is clearly visible. People wear bold prints. The Guild residents are not drawn in the sheets.',
+    tradeoffs: [
+      { label: 'Map scale', text: 'Readable: the river and green squares break the pattern, and the map names Workshop, Tree Square, Library, Tram boulevard and Downtown. But the labelled "Tree Square" centres on a fountain (review R03), and the north crossing is drawn as a suspension bridge rather than one low three-span bridge.' },
+      { label: 'Street scale', text: 'Busy but cheerful. The review (R08) notes pattern covers subjects and backgrounds alike, and the brief warns navigation cues are hard to separate from decoration.' },
+      { label: 'Device & production cost', text: 'Brief proposal: keep primitive silhouettes, the five-colour palette and speckle on landmarks at every tier. Lower tiers keep pattern only on hero buildings and clothing; higher tiers could animate confetti and add soft shadow.' },
+      { label: 'UI legibility', text: 'Pastel pill buttons with icons read clearly (Browse, Book, Ask). The mobile agent card floats outside the phone (review R04), and caption styles shift between sheets: yellow chips, pastel bars, then plain text.' },
+      { label: 'Test early', text: 'The brief asks for route visibility and pattern stability in motion to be tested early; dense speckle may shimmer when the camera moves. No such test has been run.' }
+    ]
+  };
+
+  // Ticker
+  $('ticker').textContent = 'AGENTNAGAR TV · STYLE STUDY 20 · ' + A.tagline.toUpperCase() + ' · CONCEPT ART ONLY · NOT GAME CAPTURES · SHEETS ' + S.sheets.map((s) => s.revision.toUpperCase()).join(' / ') + ' · STAY TUNED ·';
+
+  // CH1 project
+  const pb = Kit.projectBlock();
+  const dl = pb.querySelector('dl');
+  const pairs = [];
+  [...dl.children].forEach((n) => { if (n.tagName === 'DT') pairs.push(el('div', {}, [n])); else pairs[pairs.length - 1].append(n); });
+  dl.replaceChildren(...pairs);
+  $('proj').append(pb);
+  A.district.forEach((d) => $('district').append(el('li', {}, [el('span', { class: 'dot', 'aria-hidden': 'true', text: d.id }), el('span', {}, [el('b', { text: d.name + '. ' }), d.note])])));
+
+  // CH2 style
+  $('intent').textContent = content.intent;
+  const heads = ['Stacked primitives', 'Five loud colours', 'Pattern as skin', 'Labels on chips', 'Quiet ground'];
+  content.principles.forEach((p, i) => $('principles').append(el('li', {}, [el('span', {}, [el('b', { text: heads[i] }), p])])));
+  content.palette.forEach((p) => $('palette').append(el('li', {}, [el('div', { class: 'sw', style: 'background:' + p.hex, 'aria-hidden': 'true' }), el('div', { class: 'sl' }, [el('b', { text: p.name }), el('code', { text: p.hex })])])));
+  $('materials').textContent = content.materials;
+  $('type').textContent = content.type;
+
+  // CH3 views
+  const captions = [
+    'The map labels River, Workshop, Tree Square, Library, Tram boulevard and Downtown; a suspension bridge crosses the river to the north. The square centres on a fountain ringed by small trees. The street panel passes the Workshop front towards the fountain and the Library, with a yellow tram.',
+    'The Workshop with arch-block models and pegboard; a home with a terrazzo table and a speckled cat; A1 in conversation on the riverfront; and a gathering on stepped seats under banners, with an arch sculpture and the bridge behind.',
+    'Build mode stacks speckled translucent blocks with green, red and blue axis arrows; a tram interior along the river; a rainy night plaza with a stacked-shape fountain; and a waterfront park with an arch sculpture and yellow arched bridges.',
+    'A facility kiosk with pastel pill buttons (Browse, Book, Ask); a phone route map with a smiling agent card beside it; a rooftop terrace over the river; and an AR tabletop model of a river-centred city.'
+  ];
+  const chipCls = ['', 'pink', 'teal', 'powder'];
+  S.sheets.forEach((sheet, i) => {
+    $('views').append(el('figure', { class: 'plate' }, [
+      el('div', { class: 'ph' }, [el('b', { class: 'chip ' + chipCls[i], style: 'background:#fff', text: sheet.title }), el('span', { style: 'font:400 24px/1 var(--osd)', text: sheet.revision.toUpperCase() })]),
+      Kit.sheetImg(S, i, null, { alt: S.name + ' concept study, ' + sheet.title + ' sheet (' + sheet.revision + '): ' + Kit.PANEL_NAMES[i].join(', ') + ' panels. ' + captions[i] }),
+      el('figcaption', {}, [el('b', { text: Kit.PANEL_NAMES[i].join(' · ') + '. ' }), captions[i]])
+    ]));
+  });
+  $('concept').textContent = A.conceptNote;
+
+  // CH4 agents
+  $('agents-text').textContent = content.agents;
+  $('a1-shared').textContent = A.agentA1;
+  $('a1cap').textContent = 'Illustrative drawing for this page, after the Conversation panel. The small teal leaf badge follows the shared A1 description; the sheet does not clearly show one.';
+  $('guild-note').textContent = A.guildNote + ' The sheets do not depict them.';
+  A.guild.forEach((g) => $('guild').append(el('li', {}, [el('b', { text: g.name }), g.role])));
+
+  // CH5 trade-offs
+  content.tradeoffs.forEach((t) => $('trade').append(el('li', {}, [el('h3', { text: t.label }), el('p', { text: t.text })])));
+
+  // CH6 status
+  $('status').append(Kit.statusBlock(S));
+
+  // CH7 listing + footer nav
+  const n = Kit.navLinks(S);
+  $('listing').append(
+    el('a', { href: n.prev, rel: 'prev' }, [el('small', { text: '◀ PREVIOUSLY' }), el('b', { text: n.prevName })]),
+    el('a', { href: n.index }, [el('small', { text: '▦ FULL SCHEDULE' }), el('b', { text: 'All 30 styles' })]),
+    el('a', { href: n.next, rel: 'next' }, [el('small', { text: 'NEXT ▶' }), el('b', { text: n.nextName })])
+  );
+  Kit.mountNav($('nav'), S);
+
+  // Notes (TV Guide)
+  Kit.notesDialog(S, content, $('notes-btn'));
+
+  // ---------- Title cards ----------
+  const skyline = '<svg viewBox="0 0 400 300" aria-hidden="true" preserveAspectRatio="xMidYMax slice">' +
+    '<rect y="238" width="400" height="62" fill="#04B0C2"/><path d="M0 256q12-8 24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0t24 0" fill="none" stroke="#000" stroke-width="3"/>' +
+    '<g stroke="#000" stroke-width="4">' +
+    '<rect x="20" y="150" width="60" height="90" fill="#FB7995"/><path d="M30 240v-40a20 20 0 0 1 40 0v40" fill="#FBF8EF"/>' +
+    '<rect x="90" y="110" width="34" height="130" rx="17" fill="#FDCD4C"/>' +
+    '<g class="bob"><line x1="160" y1="70" x2="160" y2="40"/><circle cx="160" cy="34" r="14" fill="#0562AB"/></g><rect x="140" y="70" width="40" height="170" fill="#fff"/>' +
+    '<rect x="196" y="140" width="70" height="100" fill="#0562AB" transform="rotate(-8 231 190)"/>' +
+    '<rect x="280" y="120" width="44" height="120" rx="22" fill="#9BDBCE"/>' +
+    '<g class="bob2"><line x1="352" y1="96" x2="352" y2="70"/><circle cx="352" cy="62" r="12" fill="#FB7995"/></g><rect x="334" y="96" width="36" height="144" fill="#FDCD4C"/>' +
+    '</g><g fill="#000"><circle cx="152" cy="100" r="3"/><circle cx="168" cy="130" r="3"/><circle cx="150" cy="170" r="3"/><circle cx="166" cy="206" r="3"/><circle cx="346" cy="130" r="3"/><circle cx="360" cy="170" r="3"/></g>' +
+    '<circle class="spin" cx="330" cy="40" r="18" fill="none" stroke="#000" stroke-width="4" stroke-dasharray="10 8"/></svg>';
+  const a1mini = document.querySelector('.a1 svg').outerHTML.replace(/ role="img" aria-labelledby="a1t"/, ' aria-hidden="true"').replace(/<title[^>]*>.*?<\/title>/, '').replace(/<rect x="0" y="306"[\s\S]*?<\/text>/, '');
+  const cards = [
+    { name: 'Agentnagar', make: () => { const c = el('div', { class: 'tc tc-1' }); c.innerHTML = skyline; c.append(el('h3', { text: 'Agentnagar' })); c.append(el('p', { style: 'background:#fff;border:3px solid #000;padding:4px 8px;margin-top:8px', text: A.tagline })); return c; } },
+    { name: 'The style', make: () => el('div', { class: 'tc tc-2' }, [...['#FB7995', '#FDCD4C', '#04B0C2', '#0562AB', '#000'].map((c) => el('i', { class: 'bar', style: 'background:' + c })), el('div', { class: 'lab' }, [el('h3', { text: 'Five colours' }), el('p', { style: 'color:#fff', text: 'Pink · yellow · teal · cobalt · black' })])]) },
+    { name: 'On location', make: () => el('div', { class: 'tc tc-3' }, [Kit.sheetImg(S, 0, 'br', { eager: true }), el('span', { class: 'chip lab', text: 'Street · concept art' })]) },
+    { name: 'Meet A1', make: () => { const c = el('div', { class: 'tc tc-4' }); c.innerHTML = a1mini; c.firstChild.setAttribute('preserveAspectRatio', 'xMidYMid meet'); return c; } },
+    { name: 'Trade-offs', make: () => { const c = el('div', { class: 'tc tc-5' }); c.innerHTML = '<svg viewBox="0 0 400 300" aria-hidden="true"><polygon points="200,220 230,270 170,270" fill="#FDCD4C" stroke="#000" stroke-width="5"/><g class="bob"><rect x="40" y="206" width="320" height="16" fill="#fff" stroke="#000" stroke-width="5" transform="rotate(-8 200 214)"/><rect x="58" y="160" width="80" height="50" fill="#04B0C2" stroke="#000" stroke-width="5" transform="rotate(-8 200 214)"/><circle cx="310" cy="160" r="30" fill="#0562AB" stroke="#000" stroke-width="5"/></g><text x="98" y="196" text-anchor="middle" font-family="Unbounded" font-weight="900" font-size="15" transform="rotate(-8 200 214)">MAP</text><text x="310" y="166" text-anchor="middle" font-family="Unbounded" font-weight="900" font-size="12" fill="#fff">STREET</text></svg>'; c.style.justifyContent = 'flex-start'; c.append(el('h3', { style: 'background:#fff;border:4px solid #000;padding:.2em .4em', text: 'Trade-offs' })); return c; } },
+    { name: 'Please stand by', make: () => el('div', { class: 'tc tc-6' }, [el('div', { class: 'bars' }, [0, 1, 2, 3, 4, 5, 6].map(() => el('i'))), el('div', { class: 'circ', text: 'CH 6' }), el('div', { class: 'strip', text: 'STATUS · ' + S.sheets.map((s) => s.revision).join(' ') })]) },
+    { name: 'Coming up next', make: () => el('div', { class: 'tc tc-7' }, [el('h3', { text: 'Coming up next' }), el('div', { class: 'ul' }, [el('span', { class: 'chip powder', text: '◀ ' + n.prevName }), el('span', { class: 'chip pink', text: n.nextName + ' ▶' })])]) }
+  ];
+
+  // ---------- Channels ----------
+  const labels = ['Agentnagar', 'Style', 'Views', 'Agents', 'Trade-offs', 'Status', 'Next'];
+  const panels = [1, 2, 3, 4, 5, 6, 7].map((i) => $('ch' + i));
+  const keys = labels.map((l, i) => {
+    const k = el('button', { class: 'key k' + (i + 1), type: 'button', role: 'tab', id: 'tab' + (i + 1), 'aria-controls': 'ch' + (i + 1), 'aria-selected': 'false', tabindex: '-1' }, [String(i + 1), el('small', { text: l })]);
+    k.setAttribute('aria-label', 'Channel ' + (i + 1) + ': ' + l);
+    $('keys').append(k);
+    panels[i].setAttribute('aria-labelledby', 'tab' + (i + 1));
+    return k;
+  });
+  let cur = -1;
+  const canvas = $('static'), ctx = canvas.getContext('2d');
+  function staticBurst(done) {
+    if (reduce) { done(); return; }
+    canvas.classList.add('on');
+    const t0 = performance.now();
+    const img = ctx.createImageData(canvas.width, canvas.height);
+    let swapped = false;
+    (function frame(t) {
+      for (let i = 0; i < img.data.length; i += 4) { const v = Math.random() * 255 | 0; img.data[i] = img.data[i + 1] = img.data[i + 2] = v; img.data[i + 3] = 255; }
+      ctx.putImageData(img, 0, 0);
+      if (!swapped && t - t0 > 130) { swapped = true; done(); }
+      if (t - t0 < 300) requestAnimationFrame(frame); else canvas.classList.remove('on');
+    })(t0);
+  }
+  function tune(i, opts) {
+    i = (i + 7) % 7;
+    if (i === cur) return;
+    cur = i;
+    keys.forEach((k, j) => { k.setAttribute('aria-selected', String(j === i)); k.tabIndex = j === i ? 0 : -1; });
+    panels.forEach((p, j) => { p.hidden = j !== i; });
+    $('now-title').textContent = 'Now showing · CH ' + (i + 1) + ' · ' + panels[i].querySelector('h2').textContent;
+    $('knob').style.transform = 'rotate(' + (i * 51) + 'deg)';
+    staticBurst(() => {
+      $('card').replaceChildren(cards[i].make());
+      $('osd').textContent = 'CH ' + (i + 1);
+      $('osd-name').textContent = cards[i].name.toUpperCase();
+      $('screen').setAttribute('aria-label', 'TV screen showing channel ' + (i + 1) + ', ' + cards[i].name + '. Illustrative title card.');
+    });
+    if (opts && opts.focus) keys[i].focus();
+    if (opts && opts.hash !== false) history.replaceState(null, '', '#ch' + (i + 1));
+  }
+  keys.forEach((k, i) => {
+    k.addEventListener('click', () => tune(i));
+    k.addEventListener('keydown', (e) => {
+      const map = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
+      if (map[e.key]) { e.preventDefault(); tune(cur + map[e.key], { focus: true }); }
+      else if (e.key === 'Home') { e.preventDefault(); tune(0, { focus: true }); }
+      else if (e.key === 'End') { e.preventDefault(); tune(6, { focus: true }); }
+    });
+  });
+  $('ch-up').addEventListener('click', () => tune(cur + 1));
+  $('ch-down').addEventListener('click', () => tune(cur - 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.target.closest('input,textarea,select,dialog') || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (/^[1-7]$/.test(e.key)) tune(+e.key - 1);
+  });
+  const m = /^#ch([1-7])$/.exec(location.hash);
+  tune(m ? +m[1] - 1 : 0, { hash: false });
+  $('to-top').addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); keys[cur].focus({ preventScroll: true }); });
+})();
+</script>
+</body>
+</html>

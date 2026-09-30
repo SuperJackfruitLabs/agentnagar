@@ -1,0 +1,67 @@
+{
+  "placement:reading-shelf-1": {
+    "sample": true,
+    "spines": [
+      {
+        "subtitle": "docs/vision/VISION.md",
+        "title": "A maker city worth returning to"
+      },
+      {
+        "subtitle": "docs/vision/MASTER_PLAN.md",
+        "title": "An open maker city"
+      },
+      {
+        "subtitle": "docs/vision/CITY_PLAN.md",
+        "title": "The city map and its institutions"
+      },
+      {
+        "subtitle": "docs/vision/PEOPLE_AND_DAILY_LIFE.md",
+        "title": "People and daily life"
+      }
+    ],
+    "title": "The vision",
+    "type": "Shelf"
+  },
+  "placement:reading-shelf-2": {
+    "sample": true,
+    "spines": [
+      {
+        "subtitle": "docs/vision/FOUNDING_AGENTS.md",
+        "title": "The first agent residents"
+      },
+      {
+        "subtitle": "docs/vision/GUILD_RESIDENTS.md",
+        "title": "The Guild's fourteen founding residents"
+      },
+      {
+        "subtitle": "docs/vision/PROJECTS_AND_COLLABORATION.md",
+        "title": "Projects, creators and collaboration"
+      },
+      {
+        "subtitle": "docs/vision/EXPERIENCES.md",
+        "title": "Features and experiments"
+      }
+    ],
+    "title": "Residents and projects",
+    "type": "Shelf"
+  },
+  "placement:reading-shelf-3": {
+    "sample": true,
+    "spines": [
+      {
+        "subtitle": "docs/vision/ECOSYSTEM.md",
+        "title": "How SJL projects power the city"
+      },
+      {
+        "subtitle": "docs/vision/OPERATING_MODEL.md",
+        "title": "Ownership, access and funding"
+      },
+      {
+        "subtitle": "docs/vision/COMMUNITY_CHARTER.md",
+        "title": "Community, stewardship and creative rights"
+      }
+    ],
+    "title": "How the city runs",
+    "type": "Shelf"
+  }
+}

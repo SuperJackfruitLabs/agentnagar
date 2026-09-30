@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "a2772dae2c8a6ebfdb25b6baefddda932394969b1580938ecc890ff4ba794163",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "267338829f762683c63629ef4662a95f532d05048f5c0aa4ac1be659169ff418"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/14-linocut-relief/00-city-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-19/14-linocut-relief/00-city-perspectives.pass-2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

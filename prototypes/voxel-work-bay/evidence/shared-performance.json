@@ -1,0 +1,23 @@
+{
+  "camera": "overview",
+  "device": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+  "draw_calls": 237.0,
+  "frame_ms_max": 6.006,
+  "frame_ms_p50": 2.779,
+  "frame_ms_p95": 3.198,
+  "godot_version": "4.6.3-stable (flathub)",
+  "measurement_scope": "Actual live process-frame intervals with both residents continuously cycling; local machine only, no target-device acceptance claim.",
+  "missing_assets": [],
+  "node_count": 702.0,
+  "primitives": 12078.0,
+  "render_objects": 271.0,
+  "renderer": "gl_compatibility",
+  "sample_count": 10777,
+  "static_memory_bytes": 39171758.0,
+  "viewport": [
+    1060,
+    660
+  ],
+  "wall_span_seconds": 30.002053,
+  "warmup_seconds": 5.0
+}

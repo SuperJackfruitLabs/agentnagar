@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "0c12e6ed97976bdf64f2cbf5f3ef1208f868d039295abdccb11a0d6374392382",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "3b6f70ce9c4b31014ea62f8230e6acced5cd7b17c1dbc85f53de444a0fd48790"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/20-memphis-playful-geometry/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

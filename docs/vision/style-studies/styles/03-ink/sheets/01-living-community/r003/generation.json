@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sha256": "99ec3e7f17c25b6996946266e4ab4467527ba3af3da4712c3d3daa03935a0681",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "786426fc327aa79d88a242e7d7bc1fd74103f356c6f229bd0757b9cdcc3cbf1a"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/03-ink/01-living-community.pass-2.png"
+  ],
+  "reference_images": [
+    "../r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

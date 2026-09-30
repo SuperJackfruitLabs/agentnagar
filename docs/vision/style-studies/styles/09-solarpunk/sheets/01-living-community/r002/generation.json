@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "36e51791a8761d6da9f6e68a53220e0a529df7d2ae12eb3ec411c447be13c55f",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "42d048bd355af1e3ae1fcf069d0145126818d4116c46679bbe02a8b2755d127a"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/01-living-community-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png",
+    "../../00-city-perspectives/r004/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

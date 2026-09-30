@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "sha256": "bb9bca88f37444bab33a8be84fca2fa2267ac2773052b1518cce95761215fd1f",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "d97aaca0a5077dd97cb03a2da5009c23137151d35a9e9ef55b693fd73f29152a"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/originals/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6",
+  "prompt_source": {
+    "path": "../../../history/initial-prompt-sources/00-city-perspectives.prompt.md.source.txt",
+    "format": "markdown-fenced-text",
+    "sha256": "c2b96acff4ddb49f26f5fd5a0c3a8bf84de7afaf60244f2c13002756c443d65a"
+  }
+}

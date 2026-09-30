@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sha256": "32f3006fcc3827b953dcad9c1ec6701d8b259407a612246adae00934644e3806",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "c87d4c2d4bd4023238cc1a99477874200c82d8f55cd14d6edbd59a1e039106c4"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/03-interfaces-perspectives-pass2.png"
+  ],
+  "reference_images": [
+    "../r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

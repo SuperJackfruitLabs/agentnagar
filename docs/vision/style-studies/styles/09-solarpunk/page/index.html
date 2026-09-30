@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en" data-style="09-solarpunk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>09 Solarpunk retro-futurism · Agentnagar style study</title>
+<meta name="description" content="Agentnagar as a 1970s settlement design study: jade, coral, brass and cream.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root {
+  --cream: #fdf6e3;
+  --sand: #fce6ca;
+  --jade: #37847d;
+  --ink: #173f3a;
+  --ink-2: #3d5f59;
+  --coral: #e2492c;
+  --coral-text: #b33a20;
+  --brass: #b77629;
+  --turq: #0487bb;
+  --solar: #4576b7;
+  --olive: #687726;
+  --mint: #ddf7eb;
+  --display: 'Unbounded', 'Josefin Sans', system-ui, sans-serif;
+  --body: 'Fraunces Variable', Georgia, serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+html { background: var(--cream); }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.6; font-variation-settings: 'SOFT' 100, 'WONK' 0; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: var(--ink); text-decoration-color: var(--coral); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--coral-text); }
+:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 8px; z-index: 30; background: var(--sand); padding: 8px 12px; }
+.skip:focus { left: 8px; }
+
+/* ---------- Cover ---------- */
+.cover { position: relative; background: var(--ink); color: var(--cream); overflow: hidden; }
+.cover-inner { width: min(1200px, 100% - 32px); margin: 0 auto; padding: 36px 0 0; position: relative; z-index: 2; }
+.masthead { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: #cfe6df; border-bottom: 1px solid rgba(253,246,227,.3); padding-bottom: 12px; }
+.cover h1 { font-family: var(--display); font-weight: 900; font-size: clamp(38px, 8.4vw, 124px); line-height: .92; letter-spacing: -.01em; margin: 34px 0 0; color: var(--cream); }
+.cover h1 .sub { display: block; font-weight: 400; font-size: clamp(15px, 2.1vw, 28px); letter-spacing: .04em; margin-top: 18px; color: var(--sand); line-height: 1.25; }
+.cover-meta { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 28px; margin-top: 26px; align-items: end; }
+.cover-meta p { margin: 0; max-width: 46ch; color: #e7efe9; font-size: 18px; }
+.cover-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: flex-end; }
+.btn { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; border: 0; border-radius: 999px; padding: 13px 20px; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn.sun { background: var(--brass); color: #1e1406; }
+.btn.sun:hover { background: #cf8a37; color: #1e1406; }
+.btn.line { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 2px var(--cream); }
+.btn.line:hover { background: var(--cream); color: var(--ink); }
+
+/* 1970s supergraphic stripes */
+.stripes { position: absolute; left: -10%; right: -10%; top: 58%; height: 150px; z-index: 1; transform: rotate(-6deg); display: grid; grid-template-rows: repeat(4, 1fr); opacity: .95; }
+.stripes i { display: block; transform-origin: left; }
+.stripes i:nth-child(1) { background: var(--coral); }
+.stripes i:nth-child(2) { background: var(--brass); }
+.stripes i:nth-child(3) { background: var(--sand); }
+.stripes i:nth-child(4) { background: var(--jade); }
+@media (prefers-reduced-motion: no-preference) {
+  .stripes i { animation: sweep 1.4s cubic-bezier(.2,.8,.2,1) both; }
+  .stripes i:nth-child(2) { animation-delay: .12s; } .stripes i:nth-child(3) { animation-delay: .24s; } .stripes i:nth-child(4) { animation-delay: .36s; }
+  @keyframes sweep { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+
+/* Section through the district: the page's signature figure */
+.xsection { position: relative; z-index: 2; margin-top: 30px; background: var(--cream); color: var(--ink); border-radius: 22px 22px 0 0; padding: 22px 22px 18px; }
+.xsection svg { width: 100%; height: auto; display: block; border-radius: 12px; }
+.fig-label { font-family: var(--mono); font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.fig-label b { color: var(--coral-text); font-weight: 700; }
+.xs-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; align-items: baseline; margin-bottom: 12px; }
+.sunctl { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 16px; align-items: center; margin-top: 14px; font-family: var(--mono); font-size: 13px; }
+.sunctl label { text-transform: uppercase; letter-spacing: .08em; }
+.sunctl output { min-width: 9ch; text-align: right; color: var(--coral-text); font-weight: 700; }
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 34px; background: transparent; cursor: pointer; }
+input[type=range]::-webkit-slider-runnable-track { height: 10px; border-radius: 999px; background: linear-gradient(90deg, var(--coral), var(--brass) 30%, #f1d58f 50%, var(--brass) 70%, var(--coral)); }
+input[type=range]::-moz-range-track { height: 10px; border-radius: 999px; background: linear-gradient(90deg, var(--coral), var(--brass) 30%, #f1d58f 50%, var(--brass) 70%, var(--coral)); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; margin-top: -9px; border-radius: 50%; background: #f1d58f; border: 3px solid var(--ink); }
+input[type=range]::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: #f1d58f; border: 3px solid var(--ink); }
+.xs-note { margin: 10px 0 0; font-size: 15px; color: var(--ink-2); font-style: italic; }
+.key { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 12px 0 0; padding: 0; list-style: none; }
+.key button { font-family: var(--mono); font-size: 13px; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); border-radius: 999px; padding: 5px 12px 5px 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+.key button b { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--ink); color: var(--cream); font-size: 10.5px; }
+.key button:hover, .key button[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
+.key button[aria-pressed="true"] b { background: var(--brass); color: #1e1406; }
+.hot { transition: opacity .3s; }
+svg.focus .hot:not(.on) { opacity: .28; }
+
+/* ---------- Report body ---------- */
+.report { width: min(1200px, 100% - 32px); margin: 0 auto; }
+.toc { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; padding: 56px 0 40px; border-bottom: 3px double var(--ink); }
+.toc h2 { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .14em; text-transform: uppercase; margin: 0; }
+.toc ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 40px; }
+.toc li { break-inside: avoid; margin: 0 0 8px; }
+.toc a { display: flex; gap: 14px; text-decoration: none; font-size: 18px; padding: 4px 0; border-bottom: 1px dotted rgba(23,63,58,.35); }
+.toc a span { font-family: var(--mono); color: var(--coral-text); min-width: 2.2ch; font-weight: 700; }
+.toc a:hover { color: var(--coral-text); }
+
+.chapter { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; padding: 64px 0; border-bottom: 1px solid rgba(23,63,58,.25); scroll-margin-top: 16px; }
+.chapter > aside { position: relative; }
+.chapnum { font-family: var(--display); font-weight: 900; font-size: 96px; line-height: .85; color: var(--jade); }
+.chapnum small { display: block; font-family: var(--mono); font-weight: 400; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); margin-top: 14px; line-height: 1.5; }
+.chapter h2 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.4vw, 42px); line-height: 1.08; margin: 0 0 22px; letter-spacing: -.01em; }
+.chapter h3 { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; margin: 36px 0 12px; color: var(--ink); }
+.cols { columns: 2; column-gap: 40px; }
+.cols p { margin: 0 0 14px; }
+.lead { font-size: 23px; line-height: 1.4; margin: 0 0 22px; max-width: 42ch; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; font-size: 16px; }
+caption { caption-side: top; text-align: left; padding-bottom: 10px; }
+th, td { text-align: left; vertical-align: top; padding: 11px 14px 11px 0; border-bottom: 1px solid rgba(23,63,58,.22); }
+th { font-family: var(--mono); font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); width: 24%; }
+thead th { border-bottom: 2px solid var(--ink); color: var(--coral-text); }
+.small { font-size: 15px; color: var(--ink-2); }
+
+.criteria { counter-reset: c; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 16px; }
+.criteria li { counter-increment: c; background: var(--mint); border-radius: 18px 18px 18px 4px; padding: 18px 18px 18px; font-size: 16.5px; line-height: 1.45; }
+.criteria li::before { content: '2.' counter(c); display: block; font-family: var(--mono); font-weight: 700; font-size: 13px; color: var(--jade); margin-bottom: 6px; }
+.chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.chip { border: 1.5px solid var(--ink); border-radius: 14px; overflow: hidden; background: #fffdf6; }
+.chip i { display: block; height: 78px; background: var(--hex); }
+.chip div { padding: 10px 12px 12px; font-size: 15px; line-height: 1.3; }
+.chip code { font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); display: block; margin-top: 3px; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.panel-box { background: var(--sand); border-radius: 18px; padding: 20px 22px; }
+.panel-box p { margin: 0; }
+
+.plates { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 30px; }
+.plates figure { margin: 0; }
+.plates .kit-sheet { border-radius: 14px; border: 1.5px solid var(--ink); }
+.plates figcaption { margin-top: 10px; font-size: 15.5px; line-height: 1.45; }
+.concept { margin-top: 26px; padding: 14px 18px; border-left: 6px solid var(--coral); background: #fff8ea; font-size: 16px; }
+
+.agents-duo { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 32px; align-items: start; }
+.agents-duo .kit-panel { border-radius: 18px; border: 1.5px solid var(--ink); }
+.guild td:first-child { font-family: var(--display); font-weight: 700; font-size: 14px; width: 30%; }
+.guild td { padding: 8px 12px 8px 0; font-size: 15.5px; }
+
+.kit-status .kit-summary { font-family: var(--display); font-weight: 700; font-size: clamp(18px, 2vw, 24px); line-height: 1.3; margin-top: 0; }
+.kit-status ul { padding-left: 20px; }
+.kit-status .kit-concept { font-style: italic; color: var(--ink-2); }
+
+/* Back cover */
+.back { position: relative; background: var(--jade); color: var(--cream); overflow: hidden; margin-top: 40px; }
+.back .stripes { top: -10px; height: 72px; opacity: .92; }
+.back-inner { position: relative; z-index: 2; width: min(1200px, 100% - 32px); margin: 0 auto; padding: 190px 0 50px; }
+.back h2 { font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 18px; }
+.back .kit-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: stretch; }
+.back .kit-nav a { font-family: var(--display); font-weight: 700; font-size: clamp(15px, 1.8vw, 22px); text-decoration: none; color: var(--ink); background: var(--cream); border-radius: 999px; padding: 18px 26px; text-align: center; }
+.back .kit-nav a.kit-index { background: var(--brass); color: #1e1406; }
+.back .kit-nav a:hover { background: var(--sand); }
+.back footer { margin-top: 40px; font-family: var(--mono); font-size: 12.5px; letter-spacing: .06em; color: #e7f3ee; }
+
+.kit-dialog { width: min(820px, calc(100% - 24px)); max-height: 88vh; border: 0; border-radius: 18px; padding: 26px; background: var(--cream); color: var(--ink); }
+.kit-dialog::backdrop { background: rgba(23,63,58,.72); }
+.kit-dialog h1 { font-family: var(--display); font-size: 26px; margin-top: 0; }
+.kit-dialog h2 { font-family: var(--display); font-size: 17px; margin: 26px 0 8px; }
+.kit-dialog .kit-palette { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.kit-dialog .kit-swatch { display: inline-block; width: 16px; height: 16px; border-radius: 50%; vertical-align: -2px; }
+.kit-dialog dt { font-weight: 700; margin-top: 8px; } .kit-dialog dd { margin: 0; }
+.kit-dialog .kit-nav { display: flex; flex-wrap: wrap; gap: 16px; }
+.kit-close { float: right; position: sticky; top: 0; z-index: 2; font-family: var(--display); font-weight: 700; font-size: 12px; text-transform: uppercase; border: 0; border-radius: 999px; background: var(--brass); padding: 9px 14px; cursor: pointer; }
+
+.reveal { transition: opacity .8s, transform .8s cubic-bezier(.2,.8,.2,1); }
+.js .reveal:not(.in) { opacity: 0; transform: translateY(24px); }
+
+@media (max-width: 900px) {
+  .toc, .chapter { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .chapnum { font-size: 64px; display: flex; align-items: flex-end; gap: 16px; }
+  .chapnum small { margin: 0 0 6px; }
+  .cols, .toc ol { columns: 1; }
+  .cover-meta, .duo, .agents-duo, .plates { grid-template-columns: minmax(0, 1fr); }
+  .cover-actions { justify-content: flex-start; }
+  .back .kit-nav { grid-template-columns: 1fr; }
+  th { width: 34%; }
+}
+@media (max-width: 520px) {
+  .xsection { padding: 14px 12px; border-radius: 16px 16px 0 0; }
+  .sunctl { grid-template-columns: minmax(0, 1fr) auto; }
+  .sunctl label { grid-column: 1 / -1; }
+  table.params th, table.params td { display: block; width: auto; padding: 4px 0; border: 0; }
+  table.params tr { display: block; padding: 10px 0; border-bottom: 1px solid rgba(23,63,58,.22); }
+  .stripes { height: 90px; top: 64%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal:not(.in) { opacity: 1; transform: none; }
+}
+.back { background: #2c6b65; }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+</head>
+<body>
+<a class="skip" href="#contents">Skip to contents</a>
+
+<header class="cover">
+  <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="cover-inner">
+    <div class="masthead"><span id="series">Style study 09 of 30</span><span id="by">Super Jackfruit Labs</span></div>
+    <h1>Agentnagar<span class="sub">A settlement study in solarpunk retro-futurism</span></h1>
+    <div class="cover-meta">
+      <p id="cover-lede"></p>
+      <div class="cover-actions">
+        <a class="btn sun" href="#contents">Open the study</a>
+        <button class="btn line" type="button" id="notes-btn">Read the notes</button>
+      </div>
+    </div>
+    <figure class="xsection" style="margin-left:0;margin-right:0">
+      <div class="xs-head">
+        <span class="fig-label"><b>Figure 0.1</b> Section through the reference district, west to east</span>
+        <span class="fig-label">Illustrative diagram drawn for this page · not a concept sheet</span>
+      </div>
+      <svg id="xs" viewBox="0 0 1200 470" role="img" aria-labelledby="xs-title xs-desc">
+        <title id="xs-title">Section through the reference district</title>
+        <desc id="xs-desc">From west to east: the river with a sailboat and the low arched north bridge, the timber Workshop with three sawtooth solar roof bays, the Tree Square shade tree, the cream tram with a coral stripe on the boulevard, the curved cream Library with a turquoise glass dome, and three stepped planted towers behind. A sun moves across the sky along a dashed arc.</desc>
+      </svg>
+      <div class="sunctl">
+        <label for="sun">Sun position</label>
+        <input id="sun" type="range" min="0" max="100" value="38" aria-describedby="sun-out">
+        <output id="sun-out" for="sun">Morning</output>
+      </div>
+      <ul class="key" id="key" aria-label="Highlight a landmark in Figure 0.1"></ul>
+      <p class="xs-note">Drag the sun to follow shade across the square. The diagram is a presentation device, not a simulation or a design decision.</p>
+    </figure>
+  </div>
+</header>
+
+<main class="report">
+  <nav class="toc reveal" id="contents" aria-labelledby="toc-h">
+    <h2 id="toc-h">Contents</h2>
+    <ol>
+      <li><a href="#s1"><span>1</span>Summary of the settlement</a></li>
+      <li><a href="#s2"><span>2</span>The style: design criteria</a></li>
+      <li><a href="#s3"><span>3</span>One district, four views</a></li>
+      <li><a href="#s4"><span>4</span>Agents and residents</a></li>
+      <li><a href="#s5"><span>5</span>Findings and trade-offs</a></li>
+      <li><a href="#s6"><span>A</span>Appendix: review status</a></li>
+      <li><a href="#more"><span>→</span>Other studies in this series</a></li>
+    </ol>
+  </nav>
+
+  <section class="chapter reveal" id="s1" data-core="project" aria-labelledby="h1s">
+    <aside><div class="chapnum">1<small>Summary</small></div></aside>
+    <div id="project-body"><h2 id="h1s">Summary of the settlement</h2></div>
+  </section>
+
+  <section class="chapter reveal" id="s2" data-core="style" aria-labelledby="h2s">
+    <aside><div class="chapnum">2<small>Design criteria</small></div></aside>
+    <div>
+      <h2 id="h2s">The style: solarpunk retro-futurism</h2>
+      <p class="lead" id="intent"></p>
+      <h3>Design criteria</h3>
+      <ol class="criteria" id="criteria"></ol>
+      <h3><span class="fig-label" style="font-size:inherit;letter-spacing:inherit"><b>Figure 2.1</b></span> Colour standards, sampled from the sheets</h3>
+      <div class="chips" id="chips"></div>
+      <div class="duo" style="margin-top:28px">
+        <div class="panel-box"><h3 style="margin-top:0">Materials and texture</h3><p id="materials"></p></div>
+        <div class="panel-box" style="background:var(--mint)"><h3 style="margin-top:0">Typography</h3><p id="type"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter reveal" id="s3" data-core="views" aria-labelledby="h3s">
+    <aside><div class="chapnum">3<small>Plates 3.1 – 3.4</small></div></aside>
+    <div>
+      <h2 id="h3s">One district, four views</h2>
+      <p class="lead">Each plate draws the same reference district: <span id="landmarks"></span>.</p>
+      <div class="plates" id="plates"></div>
+      <p class="concept" id="concept"></p>
+    </div>
+  </section>
+
+  <section class="chapter reveal" id="s4" data-core="agents" aria-labelledby="h4s">
+    <aside><div class="chapnum">4<small>Residents</small></div></aside>
+    <div>
+      <h2 id="h4s">Agents and residents</h2>
+      <div class="agents-duo">
+        <figure style="margin:0" id="a1fig"></figure>
+        <div>
+          <p id="agents-text" style="margin-top:0"></p>
+          <p id="a1-text" class="small"></p>
+        </div>
+      </div>
+      <h3>Table 4.1 · The Guild: proposed resident roles</h3>
+      <table class="guild"><tbody id="guild"></tbody></table>
+      <p class="small" id="guild-note"></p>
+    </div>
+  </section>
+
+  <section class="chapter reveal" id="s5" data-core="tradeoffs" aria-labelledby="h5s">
+    <aside><div class="chapnum">5<small>Findings</small></div></aside>
+    <div>
+      <h2 id="h5s">Findings and trade-offs</h2>
+      <p class="lead">Candid notes for comparing the thirty studies, drawn from the brief and the repair record.</p>
+      <table class="params" id="trade-table">
+        <caption class="fig-label"><b>Table 5.1</b> Observations by criterion</caption>
+        <thead><tr><th scope="col">Criterion</th><th scope="col" style="width:auto">Observation</th></tr></thead>
+        <tbody id="trade"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="chapter reveal" id="s6" aria-labelledby="h6s">
+    <aside><div class="chapnum">A<small>Appendix</small></div></aside>
+    <div id="status-body"><h2 id="h6s">Appendix: review status</h2></div>
+  </section>
+</main>
+
+<section class="back" id="more" aria-labelledby="more-h">
+  <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="back-inner">
+    <h2 id="more-h">Other studies in this series</h2>
+    <div id="nav-slot"></div>
+    <footer id="foot"></footer>
+  </div>
+</section>
+
+<script>
+(function () {
+  const S = Kit.style('09-solarpunk');
+  const A = window.AGENTNAGAR;
+  const el = Kit.el;
+  const RM = Kit.reducedMotion();
+
+  // Style-specific prose, written from brief.md, the four sheets and the repair record.
+  const C = {
+    intent: 'An optimistic retro-futurist city where gardens, shared civic spaces and visible technology belong together. Curved ceramic architecture, brass details, turquoise glass, solar canopies and planted terraces establish the identity. Jade, coral and cream keep the city inviting.',
+    principles: [
+      'Civic life before spectacle: shared spaces are more prominent than machinery.',
+      'Useful, visible technology: workshop and library equipment is built into the architecture, not hidden.',
+      'Soft forms, warm metal: curved ceramic walls, brass details and turquoise glass.',
+      'Connected green: terraces, transit and green corridors join up, and rooftops are lived-in places.',
+      'Warmth without clutter: close-ups stay warm without foliage on every surface.'
+    ],
+    palette: [
+      { name: 'Ceramic cream', hex: '#FDFAE7' }, { name: 'Warm sand', hex: '#FCE6CA' }, { name: 'Kiosk jade', hex: '#37847D' },
+      { name: 'Tram coral', hex: '#F8270A' }, { name: 'Brass', hex: '#B77629' }, { name: 'River turquoise', hex: '#0487BB' },
+      { name: 'Solar blue', hex: '#4576B7' }, { name: 'Leaf olive', hex: '#687726' }, { name: 'Glass mint', hex: '#DDF7EB' }
+    ],
+    materials: 'Cream ceramic surfaces and curved walls, brass trims and fittings, turquoise glass domes, blue solar panels on timber sawtooth roofs, and planted terraces, all in warm low sunlight.',
+    type: 'The sheets label panels in widely spaced uppercase sans on cream tabs, with a caption rule flanked by leaf marks. This page borrows from 1970s study reports: Unbounded for display, Fraunces for text, IBM Plex Mono for figure and table labels.',
+    agents: 'On the sheets City Agent A1 is a cream, rounded robot with a black face screen, cyan eyes, brass ear rings, a teal scarf and a "City Agent A1" leaf badge; it works at the Workshop bench, chats at a café table, uses a tablet in Build mode and appears as the phone avatar. Residents are ordinary contemporary people in a warm-climate city, and some panels lean toward realism. The Guild residents are not depicted.',
+    tradeoffs: [
+      { label: 'Map vs street', text: 'MAP and TOP-DOWN read as tidy pictorial plans with boxed labels, a single west river and blue solar roofs. The repair record notes the MAP remains a pictorial overhead plan rather than flat cartography and TOP-DOWN uses simplified solar roof strips. Street and gathering views are the warmest and most persuasive, and also the densest.' },
+      { label: 'Device and production cost', text: 'The brief proposes keeping distinctive architecture and major planting masses on every tier and varying leaf detail, glass effects, reflections and distant decoration by tier. Foliage, glass and warm light are costly to render at the quality the sheets show.' },
+      { label: 'How stylised', text: 'The brief asks for a decision on how stylised characters and materials should be: some panels lean toward realism, which raises production cost and moves away from a clear visual language.' },
+      { label: 'UI legibility', text: 'The jade library kiosk (Browse, Book, Ask) and the phone card read clearly. The repair record notes some phone map and icon details need enlargement, and caption bands are partial on some panels.' },
+      { label: 'Review risks', text: 'Sawtooth edges are not identical across views, north bridge span counts vary in small views, and typography and outer matte do not match the requested dimensions. Static artwork does not demonstrate usability or performance.' },
+      { label: 'Theme or rendering', text: 'The brief notes this is both an architectural theme and a visual direction; its civic ideas could appear in other rendering styles.' }
+    ]
+  };
+
+  document.getElementById('series').textContent = `Style study ${S.number} of ${window.STYLE_DATA.styles.length} · ${S.name}`;
+  document.getElementById('by').textContent = A.by;
+  document.getElementById('cover-lede').textContent = `${A.tagline} This study draws the same reference district in jade, coral, brass and cream.`;
+
+  // ---------- Figure 0.1: section through the district ----------
+  const svg = document.getElementById('xs');
+  const NS = 'http://www.w3.org/2000/svg';
+  svg.insertAdjacentHTML('beforeend', `
+    <defs>
+      <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#173f3a" opacity=".22"/></pattern>
+      <pattern id="dotsl" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fdf6e3" opacity=".45"/></pattern>
+      <clipPath id="frame"><rect width="1200" height="470" rx="12"/></clipPath>
+    </defs>
+    <g clip-path="url(#frame)">
+      <g id="sky">${[0, 1, 2, 3, 4, 5].map((i) => `<rect y="${i * 52}" width="1200" height="53" data-band="${i}"/>`).join('')}</g>
+      <path id="arc" d="M60 330 Q600 -150 1140 330" fill="none" stroke="#173f3a" stroke-width="1.5" stroke-dasharray="3 7" opacity=".5"/>
+      <g id="sunG"><circle r="46" fill="#f1d58f" opacity=".35"/><circle r="30" fill="#f1d58f" stroke="#173f3a" stroke-width="2.5"/></g>
+      <!-- towers behind -->
+      <g class="hot" data-hot="L1-T" stroke="#173f3a" stroke-width="2.5" stroke-linejoin="round">
+        <path d="M640 330V190q0-22 22-22h70q22 0 22 22v140z" fill="#fdfae7"/><path d="M652 168v-20q0-14 14-14h62q14 0 14 14v20z" fill="#fdfae7"/>
+        <path d="M790 330V160q0-22 22-22h66q22 0 22 22v170z" fill="#fdfae7"/><path d="M802 138v-22q0-14 14-14h58q14 0 14 14v22z" fill="#fdfae7"/>
+        <path d="M940 330V200q0-22 22-22h68q22 0 22 22v130z" fill="#fdfae7"/><path d="M952 178v-18q0-14 14-14h60q14 0 14 14v18z" fill="#fdfae7"/>
+        <g fill="#0487bb" stroke-width="1.5">${[0, 1, 2, 3].map((r) => `<rect x="656" y="${200 + r * 30}" width="82" height="14" rx="7"/><rect x="806" y="${170 + r * 36}" width="78" height="14" rx="7"/><rect x="956" y="${208 + r * 30}" width="80" height="14" rx="7"/>`).join('')}</g>
+        <g fill="#687726" stroke-width="2">${[[660, 136], [690, 130], [720, 138], [812, 104], [846, 96], [878, 104], [960, 148], [996, 140], [1030, 150]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="13"/>`).join('')}</g>
+        <g fill="#4576b7" stroke-width="1.5"><path d="M674 148l14-12h22l-14 12zM826 116l14-12h22l-14 12zM976 160l14-12h22l-14 12z"/></g>
+      </g>
+      <!-- river and bridge -->
+      <g class="hot" data-hot="R1">
+        <path d="M0 360h260v110H0z" fill="#0487bb"/><path d="M0 360h260v110H0z" fill="url(#dotsl)"/>
+        <path d="M0 392c30-8 50 8 80 0s50 8 80 0 50 8 80 0" stroke="#fdf6e3" stroke-width="3" fill="none"/>
+        <path d="M70 428l26-52v52z" fill="#fdfae7" stroke="#173f3a" stroke-width="2"/><path d="M58 430h50l-9 11h-32z" fill="#173f3a"/>
+      </g>
+      <g class="hot" data-hot="B1" stroke="#173f3a" stroke-width="2.5">
+        <path d="M0 322h250v18H0z" fill="#fce6ca"/>
+        <path d="M6 340h238v20H6z" fill="#fce6ca"/>
+        <path d="M18 360q30-34 60 0zM96 360q30-34 60 0zM174 360q30-34 60 0z" fill="#0487bb"/>
+      </g>
+      <!-- ground -->
+      <path d="M250 340h950v130H250z" fill="#e8d6b4"/><path d="M250 340h950v130H250z" fill="url(#dots)"/>
+      <path d="M250 340h950" stroke="#173f3a" stroke-width="2.5"/>
+      <!-- shadows move with the sun -->
+      <g id="shadows" fill="#173f3a" opacity=".18"></g>
+      <!-- workshop -->
+      <g class="hot" data-hot="W1" stroke="#173f3a" stroke-width="2.5" stroke-linejoin="round">
+        <path d="M290 340V268l70-44v44l70-44v44l70-44v116z" fill="#d9a766"/>
+        <path d="M290 268l70-44v44zM360 268l70-44v44zM430 268l70-44v44z" fill="#4576b7"/>
+        <path d="M300 262l54-34M370 262l54-34M440 262l54-34" stroke="#ddf7eb" stroke-width="2"/>
+        <g fill="#f1d58f" stroke-width="2">${[0, 1, 2, 3, 4].map((i) => `<rect x="${304 + i * 38}" y="286" width="26" height="36" rx="3"/>`).join('')}</g>
+        <path d="M478 340v-40h18v40z" fill="#b77629"/>
+        <g fill="#687726" stroke-width="2"><circle cx="296" cy="332" r="10"/><circle cx="494" cy="330" r="12"/></g>
+      </g>
+      <!-- library -->
+      <g class="hot" data-hot="L1" stroke="#173f3a" stroke-width="2.5" stroke-linejoin="round">
+        <path d="M880 340v-86q0-26 26-26h212q26 0 26 26v86z" fill="#fdfae7"/>
+        <path d="M934 228q78-86 156 0z" fill="#0487bb"/><path d="M934 228q78-86 156 0z" fill="url(#dotsl)"/>
+        <path d="M960 228q52-56 104 0M1012 150v78" fill="none" stroke-width="2"/>
+        <path d="M880 272h264" stroke-width="2"/><path d="M880 254h264" stroke="#b77629" stroke-width="5"/>
+        <g fill="#ddf7eb" stroke-width="2">${[0, 1, 2, 3, 4, 5, 6].map((i) => `<rect x="${896 + i * 35}" y="282" width="26" height="44" rx="13"/>`).join('')}</g>
+        <path d="M1136 250q16-2 16 20" fill="none" stroke="#687726" stroke-width="6"/>
+      </g>
+      <!-- tree square -->
+      <g class="hot" data-hot="T1" stroke="#173f3a" stroke-width="2.5" stroke-linejoin="round">
+        <path d="M612 340c4-40 2-70-6-96h26c-8 26-8 56-2 96z" fill="#8a5a3c"/>
+        <path d="M618 262c-26-6-42-18-52-30M626 256c24-8 40-20 50-36" fill="none" stroke-width="5" stroke="#8a5a3c"/>
+        <path d="M510 236c-34 0-44-50-6-58 0-40 50-56 76-30 18-36 84-36 98 2 40-10 66 30 44 58 30 18 12 64-28 56-16 30-76 32-96 6-30 22-82 6-88-34z" fill="#687726"/>
+        <path d="M510 236c-34 0-44-50-6-58 0-40 50-56 76-30 18-36 84-36 98 2 40-10 66 30 44 58 30 18 12 64-28 56-16 30-76 32-96 6-30 22-82 6-88-34z" fill="url(#dots)"/>
+        <path d="M560 340h-24v-14h108v14h-24" fill="#fce6ca" stroke-width="2"/>
+      </g>
+      <!-- tram -->
+      <g class="hot" data-hot="S1" stroke="#173f3a" stroke-width="2.5" stroke-linejoin="round">
+        <path d="M250 440h950" stroke-width="3"/><path d="M250 452h950" stroke-width="3"/>
+        <path d="M520 434v-62q0-18 18-18h320q30 0 36 30l6 50z" fill="#fdfae7"/>
+        <path d="M520 410h380v14H520z" fill="#f8270a"/>
+        <g fill="#0487bb" stroke-width="2">${[0, 1, 2, 3, 4, 5, 6].map((i) => `<rect x="${534 + i * 46}" y="368" width="34" height="30" rx="6"/>`).join('')}</g>
+        <circle cx="570" cy="438" r="8" fill="#173f3a"/><circle cx="850" cy="438" r="8" fill="#173f3a"/>
+        <path d="M700 354v-22M760 354v-22M690 332h80" stroke-width="2"/>
+      </g>
+    </g>`);
+  const bands = [...svg.querySelectorAll('[data-band]')];
+  const sunG = svg.querySelector('#sunG');
+  const shadows = svg.querySelector('#shadows');
+  const sun = document.getElementById('sun');
+  const out = document.getElementById('sun-out');
+  const mix = (a, b, t) => { const p = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)); const x = p(a), y = p(b); return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, '0')).join(''); };
+  const DAWN = ['#f2a07f', '#f5b98f', '#f7cfa3', '#f9ddb6', '#fbe8c8', '#fcefd6'];
+  const NOON = ['#bfe5dc', '#cdeae1', '#dbf0e7', '#e6f4ea', '#f0f7ec', '#f7f8ec'];
+  // Objects that cast shade: [x centre, half width, height]
+  const casters = [[395, 105, 110], [595, 95, 150], [1012, 132, 110], [710, 180, 70]];
+  function setSun(v) {
+    const t = v / 100;
+    // point on the quadratic arc
+    const x = (1 - t) * (1 - t) * 60 + 2 * (1 - t) * t * 600 + t * t * 1140;
+    const y = (1 - t) * (1 - t) * 330 + 2 * (1 - t) * t * -150 + t * t * 330;
+    sunG.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+    const noonness = 1 - Math.abs(t - 0.5) * 2;
+    bands.forEach((b, i) => b.setAttribute('fill', mix(DAWN[i], NOON[i], Math.min(1, noonness * 1.4))));
+    const lean = (0.5 - t) * 2; // +1 morning (shade falls east), -1 evening
+    shadows.innerHTML = casters.map(([cx, hw, h]) => {
+      const len = h * (0.35 + (1 - noonness) * 1.2) * Math.sign(lean || 1);
+      return `<path d="M${cx - hw} 341 L${cx + hw} 341 L${cx + hw + len} 360 L${cx - hw + len} 360 Z"/>`;
+    }).join('');
+    out.value = t < 0.2 ? 'Early' : t < 0.42 ? 'Morning' : t < 0.58 ? 'Midday' : t < 0.8 ? 'Afternoon' : 'Evening';
+    sun.setAttribute('aria-valuetext', `${out.value} sun`);
+  }
+  sun.addEventListener('input', () => setSun(+sun.value));
+  if (RM) setSun(+sun.value);
+  else {
+    const start = performance.now();
+    const target = +sun.value;
+    setSun(4);
+    const rise = (now) => { const k = Math.min(1, (now - start) / 2200); const e = 1 - Math.pow(1 - k, 3); setSun(4 + (target - 4) * e); if (k < 1) requestAnimationFrame(rise); };
+    requestAnimationFrame(rise);
+  }
+  // Landmark key: highlight parts of the figure
+  const keyEl = document.getElementById('key');
+  A.district.forEach((d) => {
+    const b = el('button', { type: 'button', 'aria-pressed': 'false' }, [el('b', { text: d.id }), d.name]);
+    b.addEventListener('click', () => {
+      const on = b.getAttribute('aria-pressed') !== 'true';
+      keyEl.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', 'false'));
+      svg.querySelectorAll('.hot').forEach((g) => g.classList.toggle('on', on && g.dataset.hot === d.id));
+      svg.classList.toggle('focus', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+    keyEl.append(el('li', {}, b));
+  });
+
+  // ---------- 1 Project ----------
+  const pb = Kit.projectBlock();
+  pb.removeAttribute('data-core');
+  const body1 = document.getElementById('project-body');
+  const tag = pb.querySelector('.kit-tagline');
+  tag.className = 'lead';
+  body1.append(tag);
+  const cols = el('div', { class: 'cols' });
+  [...pb.querySelectorAll(':scope > p')].forEach((p) => { if (p !== tag && !p.classList.contains('kit-small')) cols.append(p); });
+  body1.append(cols);
+  const params = el('table', { class: 'params' }, [
+    el('caption', { class: 'fig-label' }, [el('b', { text: 'Table 1.1' }), ' Settlement parameters']),
+    el('tbody', {}, A.facts.map((f) => el('tr', {}, [el('th', { scope: 'row', text: f.label }), el('td', { text: f.text })])))
+  ]);
+  body1.append(el('h3', { text: 'Parameters' }), params, el('p', { class: 'small', style: 'margin-top:16px', text: `${A.status} ${A.nameNote}` }));
+
+  // ---------- 2 Style ----------
+  document.getElementById('intent').textContent = C.intent;
+  C.principles.forEach((p) => document.getElementById('criteria').append(el('li', { text: p })));
+  C.palette.forEach((p) => document.getElementById('chips').append(el('div', { class: 'chip' }, [el('i', { style: `--hex:${p.hex}`, 'aria-hidden': 'true' }), el('div', {}, [p.name, el('code', { text: p.hex })])])));
+  document.getElementById('materials').textContent = C.materials;
+  document.getElementById('type').textContent = C.type;
+
+  // ---------- 3 Views ----------
+  document.getElementById('landmarks').textContent = A.district.map((d) => d.name).join(', ');
+  S.sheets.forEach((sh, i) => {
+    const names = Kit.PANEL_NAMES[i];
+    document.getElementById('plates').append(el('figure', {}, [
+      Kit.sheetImg(S, i, null, { alt: `${S.name} concept study, ${sh.title} (${sh.revision}): panels ${names.join(', ')}, showing the river, low north bridge, timber Workshop with solar sawtooth roofs, Tree Square, domed Library and tram.` }),
+      el('figcaption', {}, [el('span', { class: 'fig-label' }, [el('b', { text: `Plate 3.${i + 1}` }), ` ${sh.title} · ${sh.revision}`]), el('br'), `Panels: ${names.join(', ')}.`])
+    ]));
+  });
+  document.getElementById('concept').textContent = A.conceptNote;
+
+  // ---------- 4 Agents ----------
+  document.getElementById('a1fig').append(
+    Kit.sheetImg(S, 1, 'bl', { alt: `${S.name} concept study, Living community, Conversation panel: City Agent A1, a cream rounded robot with cyan eyes, brass ears, teal scarf and leaf badge, talks with a young man at a café table.` }),
+    el('figcaption', { class: 'fig-label', style: 'margin-top:10px' }, [el('b', { text: 'Figure 4.1' }), ' Conversation panel, Living community · concept study'])
+  );
+  document.getElementById('agents-text').textContent = C.agents;
+  document.getElementById('a1-text').textContent = A.agentA1;
+  A.guild.forEach((g) => document.getElementById('guild').append(el('tr', {}, [el('td', { text: g.name }), el('td', { text: g.role })])));
+  document.getElementById('guild-note').textContent = `${A.guildNote} The sheets do not show the Guild.`;
+
+  // ---------- 5 Trade-offs ----------
+  C.tradeoffs.forEach((t) => document.getElementById('trade').append(el('tr', {}, [el('th', { scope: 'row', text: t.label }), el('td', { text: t.text })])));
+
+  // ---------- Appendix and navigation ----------
+  const status = Kit.statusBlock(S);
+  document.getElementById('status-body').append(status);
+  Kit.mountNav(document.getElementById('nav-slot'), S);
+  Kit.notesDialog(S, C, document.getElementById('notes-btn'));
+  document.getElementById('foot').textContent = `${A.name} · ${A.by}. ${A.nameNote}`;
+
+  // Sections settle in as they arrive
+  const rev = [...document.querySelectorAll('.reveal')];
+  if (RM || !('IntersectionObserver' in window)) rev.forEach((r) => r.classList.add('in'));
+  else {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.05 });
+    rev.forEach((r) => io.observe(r));
+  }
+})();
+</script>
+</body>
+</html>

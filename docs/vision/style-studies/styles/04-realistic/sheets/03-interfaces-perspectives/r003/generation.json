@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "f924a0e9826c30ea1a05af9360477d04dc6518170df0dcb44c9fd56c541cbc57",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "a1583a7d05ecfd675724afc0c0cff0f009ae9414a307d1a49384afd778d3a008"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/04-realistic/03-interfaces-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/candidates/03-pass2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

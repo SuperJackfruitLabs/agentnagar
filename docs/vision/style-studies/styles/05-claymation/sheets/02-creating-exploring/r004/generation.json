@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "200a693ed01869e482d69c0e969b5008649b4c0190a171eeac4e19c741b133fc",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "17dad9643ac5dfb29b0655c3c89d3360f0d10997dabfb06d8edb82ea112f567b"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/05-claymation/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/05-claymation/candidates/02-pass3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sha256": "a4a2f992d1033acc47e809dabc727fe205cbc21a80b3040ab25a5dc8ffb7ac47",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "6d72ae4c21f44b4afc8cf6bc2384676f4b04b03081b24249046570b3ce569f76"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass5.png"
+  ],
+  "reference_images": [
+    "../r005/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

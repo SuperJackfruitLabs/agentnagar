@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "acc1e5fb61a2735371c20dd911c8841badfa5c758779665760dab4d6719f2fa4",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "5c95141b22d5770c5f088cb588fee052c7de1e4c3caf2662a4a348ce158e9fb3"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/13-risograph-print/03-interfaces-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-19/13-risograph-print/03-interfaces-perspectives.pass-3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

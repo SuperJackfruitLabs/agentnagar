@@ -1,0 +1,5 @@
+source/*.blend1
+source/*.blend2
+evidence/*.log
+evidence/frames/
+tools/node_modules/

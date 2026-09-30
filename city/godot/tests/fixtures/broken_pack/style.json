@@ -1,0 +1,14 @@
+{
+  "name": "Broken",
+  "order": 2,
+  "occupants": {"GuildAgent": {}, "CityRoleAgent": {}, "PersonalAgent": {}, "SimCitizen": {}},
+  "seats": {"desk": {}, "bench": {}, "cafe-table": {}, "reading-chair": {}},
+  "rooms": {"workshop": {}, "commons": {}, "reading-room": {}, "cafe": {}, "plaza": {}},
+  "exteriors": {"guild-hall": {}, "library": {}, "cafe": {}},
+  "props": {"tree": {}, "lamp": {}, "palm": {}, "bookshelf": {}},
+  "headlines": {"Working": {}, "Waiting": {}, "Queued": {}, "Idle": {}, "Done": {}, "Present": {},
+                "Offline": {}, "Error": {}, "Stale": {}, "Unknown": {}},
+  "badges": {"Ai": {}, "Simulation": {}},
+  "day_night": {},
+  "declared_placeholders": []
+}

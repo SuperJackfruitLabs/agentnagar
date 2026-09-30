@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentnagar · Thirty city styles</title>
+<meta name="description" content="Index of the thirty Agentnagar style showcase pages, one per city style study.">
+<link rel="stylesheet" href="shared/page-kit/fonts/fonts.css">
+<style>
+  :root {
+    --bg: #f3efe6;
+    --ink: #1d1b18;
+    --muted: #5f5a52;
+    --line: #d9d2c3;
+    --card: #fffdf8;
+    --focus: #1f5fd6;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #151412; --ink: #f1ece2; --muted: #aaa295; --line: #34302a; --card: #1e1c19; --focus: #8fb4ff; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --bg: #151412; --ink: #f1ece2; --muted: #aaa295; --line: #34302a; --card: #1e1c19; --focus: #8fb4ff; color-scheme: dark; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 'Inter Variable', system-ui, sans-serif; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 16px; }
+
+  header.wrap { padding-top: 56px; padding-bottom: 28px; }
+  .eyebrow { font: 600 13px/1 'Space Grotesk Variable', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
+  h1 { font: 700 clamp(40px, 7vw, 92px)/.95 'Fraunces Variable', Georgia, serif; letter-spacing: -.02em; margin: 0 0 20px; font-variation-settings: 'SOFT' 50, 'opsz' 144; }
+  h1 em { font-style: italic; font-weight: 400; }
+  .lede { max-width: 62ch; font-size: 18px; margin: 0 0 12px; }
+  .note { max-width: 70ch; color: var(--muted); font-size: 14px; margin: 0; }
+  .note a { text-underline-offset: 3px; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; padding: 22px 0; position: sticky; top: 0; background: var(--bg); z-index: 2; border-bottom: 1px solid var(--line); }
+  .filters button { font: 600 14px/1 'Space Grotesk Variable', sans-serif; padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+  .filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .count { margin-left: auto; align-self: center; color: var(--muted); font-size: 14px; }
+
+  .grid { list-style: none; margin: 28px 0 64px; padding: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+  .tile { position: relative; border-radius: 14px; overflow: hidden; background: var(--t-bg); color: var(--t-fg); box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 10px 30px -18px rgba(0,0,0,.45); transition: transform .25s ease, box-shadow .25s ease; }
+  .tile:hover, .tile:focus-within { transform: translateY(-4px); box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 22px 40px -20px rgba(0,0,0,.55); }
+  .tile a { display: block; text-decoration: none; color: inherit; height: 100%; }
+  .tile a:focus-visible { outline-offset: -4px; }
+  .art { position: relative; }
+  .art .kit-panel { width: 100%; }
+  .art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, var(--t-bg) 100%); pointer-events: none; }
+  .body { padding: 4px 18px 18px; position: relative; }
+  .num { font: 700 13px/1 'Space Mono', monospace; letter-spacing: .08em; color: var(--t-num, var(--t-accent)); }
+  .name { font-family: var(--t-font); font-size: var(--t-size, 26px); line-height: 1.08; margin: 8px 0 10px; font-weight: var(--t-weight, 400); letter-spacing: var(--t-track, 0); text-transform: var(--t-case, none); }
+  .format { margin: 0; font-size: 14px; line-height: 1.45; opacity: .88; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+  .chip { font: 600 11px/1 'Space Grotesk Variable', sans-serif; letter-spacing: .08em; text-transform: uppercase; padding: 6px 8px; border-radius: 4px; background: color-mix(in srgb, var(--t-accent) 22%, transparent); }
+  .chip.role { background: var(--t-fg); color: var(--t-bg); }
+  .bar { position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--t-accent); z-index: 1; }
+  .tile[hidden] { display: none; }
+  @media (max-width: 640px) {
+    .filters { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 14px 0; }
+    .filters button { flex: none; }
+    .count { display: none; }
+  }
+
+  footer.wrap { border-top: 1px solid var(--line); padding-top: 24px; padding-bottom: 48px; color: var(--muted); font-size: 14px; }
+  @media (prefers-reduced-motion: reduce) { .tile, .tile:hover { transition: none; transform: none; } }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="eyebrow">Agentnagar · Style studies · Internal comparison</p>
+  <h1>Thirty ways to draw <em>one</em> city</h1>
+  <p class="lede" id="tagline"></p>
+  <p class="note">Each page describes the project and one candidate style, and is built in that style: some are games, some publications, some interfaces. Every page shows the same reference district and the same seven core notes. The sheets are AI-generated concept illustrations (released under CC0 1.0; each page names the generator where it was recorded), not game captures, and selection does not imply review approval. Since RD18 (2026-09-24) the city is built to work in any style: low-poly (11) and pixel art (08) prove it, and Voxel (02, selected for the first-scene experiment) is the third style pack. <a href="README.md">Sheet gallery</a> · <a href="shared/CONSISTENCY-CONTRACT.md">Comparison contract</a></p>
+</header>
+
+<div class="wrap">
+  <div class="filters" role="group" aria-label="Filter by format">
+    <button type="button" data-kind="all" aria-pressed="true">All</button>
+    <button type="button" data-kind="game" aria-pressed="false">Games &amp; 3D</button>
+    <button type="button" data-kind="story" aria-pressed="false">Stories</button>
+    <button type="button" data-kind="print" aria-pressed="false">Publications</button>
+    <button type="button" data-kind="interface" aria-pressed="false">Interfaces</button>
+    <button type="button" data-kind="poster" aria-pressed="false">Posters &amp; landing pages</button>
+    <span class="count" id="count" aria-live="polite"></span>
+  </div>
+  <ul class="grid" id="grid"></ul>
+</div>
+
+<footer class="wrap">
+  <p>Revisions and review summaries are generated from each style's manifest. Pages work offline and make no network requests.</p>
+</footer>
+
+<script src="shared/page-kit/styles-data.js"></script>
+<script src="shared/page-kit/project.js"></script>
+<script>
+  // Per-tile presentation: the style's display face, colours, format and kind.
+  const TILES = {
+    '01-graphic': { num: '#b04a32', font: "'Inter Variable'", weight: 800, track: '-.03em', bg: '#f4f1ea', fg: '#14213d', accent: '#e4572e', panel: 'tl', kind: 'poster', format: 'Swiss wayfinding poster that scrolls like a transit diagram' },
+    '02-voxel': { num: '#ff9c41', font: "'Press Start 2P'", size: '17px', bg: '#1f3f8f', fg: '#ffffff', accent: '#ff8a1f', panel: 'bl', kind: 'game', format: 'Playable isometric block district; watch the robot Guild at work' },
+    '03-ink': { num: '#3a7293', font: "'Caveat'", size: '34px', bg: '#f6f0e3', fg: '#2b2a33', accent: '#3c7a9e', panel: 'br', kind: 'story', format: 'Travel sketchbook where washes bleed in as you scroll' },
+    '04-realistic': { num: '#7a5f40', font: "'Cormorant Garamond'", size: '30px', weight: 700, bg: '#e9e6df', fg: '#1f2226', accent: '#8a6a45', panel: 'bl', kind: 'print', format: 'Design-competition monograph: plates, sections, specifications' },
+    '05-claymation': { num: '#aa3d24', font: "'Fredoka'", weight: 700, size: '28px', bg: '#ffd9b3', fg: '#3b2314', accent: '#d9482b', panel: 'br', kind: 'story', format: 'Stop-motion making-of with film strips and stepped frames' },
+    '06-anime': { font: "'Unbounded'", weight: 700, size: '22px', bg: '#101a3a', fg: '#ffffff', accent: '#ff5d8f', panel: 'br', kind: 'game', format: 'Visual novel: City Agent A1 guides you in dialogue' },
+    '07-paper-craft': { num: '#915f37', font: "'Patrick Hand'", size: '30px', bg: '#fbf4e4', fg: '#2d3a2e', accent: '#e27d3f', panel: 'bl', kind: 'story', format: 'Pop-up book with layered paper parallax' },
+    '08-pixel-art': { font: "'Press Start 2P'", size: '16px', bg: '#1b1b2f', fg: '#f7f3e3', accent: '#7bd389', panel: 'tr', kind: 'game', format: 'Top-down RPG: walk the district, talk to NPCs' },
+    '09-solarpunk': { num: '#8a5a00', font: "'Righteous'", size: '28px', bg: '#fff3d6', fg: '#27432f', accent: '#e8a317', panel: 'bl', kind: 'print', format: '1970s settlement-study report and world’s-fair brochure' },
+    '10-neon-noir': { font: "'Monoton'", size: '24px', bg: '#0b0a14', fg: '#f2ecff', accent: '#ff2e88', panel: 'br', kind: 'game', format: 'Rainy detective case file: investigate the city at night' },
+    '11-low-poly-tropical-diorama': { font: "'Baloo 2'", weight: 700, size: '26px', bg: '#0f5257', fg: '#fdfbf2', accent: '#ffcf56', panel: 'bl', kind: 'game', format: 'Rotating low-poly 3D diorama with a day/night slider' },
+    '12-gouache-storybook': { num: '#a8432b', font: "'Fraunces Variable'", weight: 600, size: '28px', bg: '#f7ead2', fg: '#3a2c24', accent: '#c4553a', panel: 'br', kind: 'story', format: 'Picture book, “A Day in Agentnagar”, with page turns' },
+    '13-risograph-print': { num: '#a54993', font: "'Archivo Black'", size: '26px', case: 'uppercase', bg: '#f5efe3', fg: '#1d3fbb', accent: '#ff4f79', panel: 'tl', kind: 'print', format: 'Fold-out zine with misregistered two-colour layers' },
+    '14-linocut-relief': { font: "'Old Standard TT'", weight: 700, size: '28px', bg: '#efe8d8', fg: '#161412', accent: '#b3261e', panel: 'br', kind: 'print', format: 'Broadsheet newspaper: The Agentnagar Gazette' },
+    '15-stained-glass-mosaic': { font: "'Cinzel Decorative'", weight: 700, size: '22px', bg: '#101826', fg: '#fdf6e3', accent: '#f2b705', panel: 'bl', kind: 'interface', format: 'A window whose panes light up to reveal each section' },
+    '16-chalk-pastel-mural': { font: "'Kalam'", weight: 700, size: '30px', bg: '#3b3f45', fg: '#fdfaf2', accent: '#ffb3c6', panel: 'br', kind: 'game', format: 'Sidewalk mural you can draw on' },
+    '17-art-nouveau-botanical': { num: '#7d6034', font: "'Poiret One'", size: '28px', bg: '#efe6cf', fg: '#2e3b2a', accent: '#a8743a', panel: 'tl', kind: 'print', format: 'Herbarium: botanical plates cataloguing districts' },
+    '18-art-deco-civic-futurism': { font: "'Limelight'", size: '26px', bg: '#10151c', fg: '#f4e9d0', accent: '#d4af37', panel: 'bl', kind: 'interface', format: 'Civic prospectus you ride through by elevator' },
+    '19-bauhaus-primary-form': { num: '#c62e1f', font: "'Josefin Sans'", weight: 700, size: '28px', case: 'lowercase', bg: '#f1ece1', fg: '#111111', accent: '#e63322', panel: 'tl', kind: 'game', format: 'Composition playground: drag primary shapes into a district' },
+    '20-memphis-playful-geometry': { num: '#a3004a', font: "'Shrikhand'", size: '28px', bg: '#ffe45e', fg: '#1a1a1a', accent: '#ff3f8e', panel: 'bl', kind: 'poster', format: 'Maximalist 1980s TV-channel page' },
+    '21-brutalist-tropical-modernism': { num: '#265828', font: "'Big Shoulders Display'", weight: 900, size: '34px', case: 'uppercase', bg: '#c9c5bc', fg: '#141414', accent: '#2f7d32', panel: 'bl', kind: 'poster', format: 'Raw web-brutalist manifesto in concrete type' },
+    '22-streamline-retro-future': { num: '#965853', font: "'Abril Fatface'", size: '28px', bg: '#fdf1e1', fg: '#1d3557', accent: '#e76f51', panel: 'bl', kind: 'poster', format: '1950s airline brochure: “Fly to Agentnagar”' },
+    '23-cassette-futurism': { font: "'VT323'", size: '34px', bg: '#10130f', fg: '#b6ff9e', accent: '#ffb000', panel: 'tr', kind: 'interface', format: 'CRT operating system: boot, then insert tapes' },
+    '24-dieselpunk-civic-works': { font: "'Staatliches'", size: '30px', bg: '#2a2622', fg: '#f1e4c8', accent: '#e39b2d', panel: 'bl', kind: 'interface', format: 'Public-works control room with gauges and levers' },
+    '25-biomorphic-eco-fantasy': { font: "'Syne Variable'", weight: 700, size: '26px', bg: '#0f1f1a', fg: '#e6fff5', accent: '#6ef3c5', panel: 'bl', kind: 'story', format: 'Field guide whose content grows like mycelium' },
+    '26-soft-3d-plush-miniature': { num: '#2c6480', font: "'Nunito Variable'", weight: 900, size: '26px', bg: '#fde2e4', fg: '#4a2c3a', accent: '#8ecae6', panel: 'bl', kind: 'game', format: 'Toy-box unboxing with squishy interactions' },
+    '27-ceramic-tile-city': { num: '#2e6cd1', font: "'EB Garamond'", weight: 700, size: '28px', bg: '#f4f7fb', fg: '#123a78', accent: '#2f6fd6', panel: 'tl', kind: 'game', format: 'Tile puzzle: arrange glazed tiles to complete the district' },
+    '28-ukiyo-e-woodblock-city': { num: '#b0382e', font: "'Zen Old Mincho'", weight: 700, size: '24px', bg: '#efe3c8', fg: '#1d2b4a', accent: '#c0392b', panel: 'bl', kind: 'story', format: 'Horizontal handscroll journey through the city' },
+    '29-madhubani-contemporary-city': { num: '#ce253b', font: "'Kalam'", weight: 700, size: '26px', bg: '#fbf0d9', fg: '#2a1b12', accent: '#d7263d', panel: 'br', kind: 'story', format: 'Bordered narrative wall of story panels' },
+    '30-afrofuturist-maker-metropolis': { font: "'Bricolage Grotesque Variable'", weight: 800, size: '26px', bg: '#1a1033', fg: '#fff6e5', accent: '#ffb627', panel: 'bl', kind: 'poster', format: 'Maker-festival broadcast site with bold pattern and rhythm' }
+  };
+  const PANELS = { tl: [18, 44, 736, 440], tr: [784, 44, 736, 440], bl: [18, 544, 736, 426], br: [784, 544, 736, 426] };
+  const ROLE = { '02-voxel': 'City style pack · first scene', '08-pixel-art': 'City style pack', '11-low-poly-tropical-diorama': 'City style pack' };
+  const KIND_LABEL = { game: 'Game / 3D', story: 'Story', print: 'Publication', interface: 'Interface', poster: 'Poster' };
+
+  document.getElementById('tagline').textContent = window.AGENTNAGAR.tagline;
+  const grid = document.getElementById('grid');
+
+  for (const s of window.STYLE_DATA.styles) {
+    const t = TILES[s.id];
+    const li = document.createElement('li');
+    li.className = 'tile';
+    li.dataset.kind = t.kind;
+    for (const [k, v] of Object.entries({ num: t.num, bg: t.bg, fg: t.fg, accent: t.accent, font: t.font, size: t.size, weight: t.weight, track: t.track, case: t.case })) {
+      if (v) li.style.setProperty(`--t-${k}`, v);
+    }
+    const [x, y, w, h] = PANELS[t.panel];
+    const panel = document.createElement('div');
+    panel.className = 'kit-panel';
+    Object.assign(panel.style, { position: 'relative', overflow: 'hidden', aspectRatio: `${w} / ${h}` });
+    const img = document.createElement('img');
+    img.src = s.sheets[0].image;
+    img.alt = '';
+    img.loading = 'lazy';
+    Object.assign(img.style, { position: 'absolute', maxWidth: 'none', width: `${(1536 / w) * 100}%`, height: `${(1024 / h) * 100}%`, left: `${(-x / w) * 100}%`, top: `${(-y / h) * 100}%` });
+    panel.append(img);
+
+    const a = document.createElement('a');
+    a.href = s.page;
+    a.setAttribute('aria-label', `${s.number} ${s.name}: ${t.format}`);
+    a.innerHTML = `<span class="bar"></span><div class="art"></div><div class="body">
+      <span class="num">${s.number}</span>
+      <h2 class="name"></h2>
+      <p class="format"></p>
+      <div class="chips"><span class="chip">${KIND_LABEL[t.kind]}</span>${ROLE[s.id] ? `<span class="chip role">${ROLE[s.id]}</span>` : ''}</div>
+    </div>`;
+    a.querySelector('.art').append(panel);
+    a.querySelector('.name').textContent = s.name;
+    a.querySelector('.format').textContent = t.format;
+    li.append(a);
+    grid.append(li);
+  }
+
+  const buttons = [...document.querySelectorAll('.filters button')];
+  const count = document.getElementById('count');
+  function apply(kind) {
+    let shown = 0;
+    for (const tile of grid.children) {
+      const match = kind === 'all' || tile.dataset.kind === kind;
+      tile.hidden = !match;
+      if (match) shown++;
+    }
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.kind === kind)));
+    count.textContent = `${shown} of ${grid.children.length} styles`;
+  }
+  buttons.forEach((b) => b.addEventListener('click', () => apply(b.dataset.kind)));
+  apply('all');
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "11cc34ebfe0fe6d50b90183f7ee7cec2581a13deb7d2d4037c05b410013c87d9",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "0f82f9b9e9050040d9700905f760455ae0ed0a82364728d7eb1598ce88e39e10"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/04-realistic/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/candidates/01-pass3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

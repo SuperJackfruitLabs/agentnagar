@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "0db36e70c9c1441a62aef5fc468605783e37d3619181d17d0c06b4c777311e86",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "158f2d293639910583b88df45fb67b131d536ed78ec2010825f514de41927fed"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/10-neon-noir/00-city-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/00-city-perspectives-pass5.png"
+  ],
+  "reference_images": [
+    "../r005/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

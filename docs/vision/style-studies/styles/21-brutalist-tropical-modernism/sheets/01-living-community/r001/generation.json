@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "4c1154b991d1c9ebe4b7f81d90546e7b6a3c8ac3628359db8ef9a3a0fd750c4a",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/21-brutalist-tropical-modernism/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

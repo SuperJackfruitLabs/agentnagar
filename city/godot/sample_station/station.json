@@ -1,0 +1,28 @@
+{
+  "stats": {
+    "nodes": { "total": 1, "online": 1 },
+    "agents": { "total": 1 },
+    "updatesAvailable": 0,
+    "running": 1
+  },
+  "agents": [
+    {
+      "stationId": "stn_sample",
+      "nodeId": "node_sample",
+      "nodeName": "sample-node",
+      "agentName": "Sample agent",
+      "harness": "sample",
+      "kind": "leaf",
+      "nodeStatus": "online",
+      "agentVersion": "0.0.0-sample",
+      "latestVersion": "0.0.0-sample",
+      "updateAvailable": false,
+      "capabilities": ["health", "logs", "fs.read", "terminal", "lifecycle", "acp", "changeset"],
+      "workspacePath": "/workspace/tally",
+      "status": "running",
+      "cpuPct": 3.1,
+      "memBytes": 88604672,
+      "uptimeSec": 1260
+    }
+  ]
+}

@@ -1,0 +1,591 @@
+{
+  "name": "Neon noir",
+  "order": 6,
+  "dimension": "3d",
+  "shading": "lit",
+  "note": "Generated from city/tools/styles/neon (Blender + Pillow). Direction from style study 10; not a production style decision.",
+  "budget": {
+    "normal_fps": 360,
+    "heavy_fps": 240,
+    "missed_pct": 1.0,
+    "normal_ms": 2.78,
+    "heavy_ms": 4.17
+  },
+  "bridge_deck": 0.36,
+  "bridge_ramp": 0.0,
+  "a1": "city:librarian",
+  "a1_look": {
+    "hoodie": "#1A1C22"
+  },
+  "agent_colours": {
+    "GuildAgent": {
+      "hoodie": "#3A2A4A"
+    },
+    "CityRoleAgent": {
+      "hoodie": "#23252D"
+    },
+    "PersonalAgent": {
+      "hoodie": "#2A3A4A"
+    }
+  },
+  "palette": {
+    "brick": "#3A3F4A",
+    "limewash": "#C9CCD3",
+    "sandstone": "#8C8F98",
+    "stone": "#6E7280",
+    "copper": "#22385A",
+    "grass": "#2E5534",
+    "water_deep": "#0F2C55",
+    "iron": "#1E2026",
+    "wood": "#6A4B36",
+    "paving": "#5A606B",
+    "paving_dark": "#454A55",
+    "glass_glow": "#FFB560",
+    "lamp_glow": "#FFC470",
+    "overcast": "#5A6272",
+    "rain": "#B8C8DC",
+    "neon_magenta": "#FF3DB8",
+    "neon_cyan": "#3FE3FF",
+    "vermilion": "#D8453A"
+  },
+  "outfits": [
+    "#2F8C8C",
+    "#E07A5F",
+    "#F2B632",
+    "#5A9E4A",
+    "#8A5A3B",
+    "#3E5C7A",
+    "#6E4E9E",
+    "#EFE6D2"
+  ],
+  "hair_colours": [
+    "#3A2A1E",
+    "#1B1B1B",
+    "#7A4A2A",
+    "#C9A26B"
+  ],
+  "skin": [
+    "#E0B08A",
+    "#C98E6B",
+    "#8D5B3F",
+    "#5E3A28"
+  ],
+  "bottoms": [
+    "#303A6E",
+    "#1E4678",
+    "#DEC496",
+    "#303A6E"
+  ],
+  "umbrellas": [
+    "#1E2230",
+    "#3FE3FF",
+    "#FF3DB8",
+    "#2A2E3A",
+    "#FFB23C",
+    "#9B5CFF",
+    "#23262E",
+    "#CC3129"
+  ],
+  "occupants": {
+    "GuildAgent": {
+      "scene": "assets/agent_neon.glb"
+    },
+    "CityRoleAgent": {
+      "scene": "assets/agent_neon.glb"
+    },
+    "PersonalAgent": {
+      "scene": "assets/agent_neon.glb",
+      "scale": 0.86
+    },
+    "SimCitizen": {
+      "scene": "assets/character_neon.glb",
+      "muted": true
+    },
+    "Human": {
+      "scene": "assets/character_neon.glb"
+    }
+  },
+  "seats": {
+    "desk": {
+      "scene": "assets/seat_desk_v2.glb",
+      "fill": true
+    },
+    "workstation": {
+      "scene": "assets/workstation.glb",
+      "fill": true,
+      "screen": {
+        "idle": "#0A0F1C",
+        "glow": "#35D6FF"
+      }
+    },
+    "bench": {
+      "scene": "assets/seat_bench_v2.glb",
+      "fill": true
+    },
+    "cafe-table": {
+      "scene": "assets/seat_cafe-table_v2.glb",
+      "fill": true
+    },
+    "reading-chair": {
+      "scene": "assets/seat_reading-chair_v2.glb"
+    }
+  },
+  "rooms": {
+    "ground": {
+      "bare": true,
+      "outdoor": true
+    },
+    "workshop": {
+      "floor": "#C8A078"
+    },
+    "commons": {
+      "floor": "#DCCBAA"
+    },
+    "reading-room": {
+      "floor": "#C99A72"
+    },
+    "cafe": {
+      "floor": "#EFE1C6"
+    },
+    "plaza": {
+      "floor": "#EADFCC",
+      "outdoor": true,
+      "ground": "#2E5534",
+      "paving": true
+    },
+    "cafe-terrace": {
+      "floor": "#EFE1C6",
+      "outdoor": true,
+      "paving": true
+    },
+    "park": {
+      "floor": "#EADFCC",
+      "outdoor": true,
+      "ground": "#2E5534",
+      "lawn": true
+    },
+    "tram-stop": {
+      "floor": "#EADFCC",
+      "outdoor": true,
+      "ground": "#2E5534",
+      "paving": true
+    }
+  },
+  "exteriors": {
+    "guild-hall": {
+      "scene": "assets/hall_sawtooth_bay.glb",
+      "place": "shell"
+    },
+    "library": {
+      "scene": "assets/lib_roof.glb",
+      "place": "shell"
+    },
+    "cafe": {
+      "scene": "assets/umbrella_cafe.glb",
+      "place": "shell"
+    }
+  },
+  "props": {
+    "desk": {
+      "seat": "desk"
+    },
+    "workstation": {
+      "seat": "workstation"
+    },
+    "bench": {
+      "seat": "bench"
+    },
+    "cafe-table": {
+      "seat": "cafe-table"
+    },
+    "reading-chair": {
+      "seat": "reading-chair"
+    },
+    "bookshelf": {
+      "scene": "assets/bookshelf_v2.glb",
+      "fit": [
+        2.0,
+        0.49
+      ]
+    },
+    "workbench": {
+      "scene": "assets/workbench.glb",
+      "fit": [
+        3.2,
+        1.0
+      ]
+    },
+    "cafe-table-top": {
+      "scene": "assets/cafe_table.glb",
+      "fill": true
+    },
+    "street-lamp": {
+      "scene": "assets/lamp_post.glb"
+    },
+    "bollard": {
+      "scene": "assets/bollard.glb"
+    },
+    "umbrella": {
+      "scene": "assets/umbrella_cafe.glb"
+    },
+    "tram-shelter": {
+      "scene": "assets/tram_shelter.glb",
+      "turn": 180,
+      "fill": true,
+      "perch": "assets/perch_seat.glb"
+    },
+    "catenary-pole": {
+      "pole": "iron"
+    },
+    "street-tree": {
+      "scenes": [
+        "assets/tree_round_a.glb",
+        "assets/tree_round_b.glb",
+        "assets/tree_round_a.glb"
+      ],
+      "tiled": true,
+      "fill": "trunk"
+    },
+    "palm": {
+      "scenes": [
+        "assets/palm_a.glb",
+        "assets/palm_b.glb",
+        "assets/palm_c.glb"
+      ],
+      "tiled": true,
+      "fill": "trunk"
+    },
+    "great-tree": {
+      "scene": "assets/tree_banyan.glb",
+      "fill": true
+    },
+    "shrub": {
+      "scenes": [
+        "assets/shrub_round.glb"
+      ],
+      "tiled": true,
+      "fill": true
+    },
+    "planter": {
+      "scene": "assets/planter_square.glb",
+      "fill": true
+    },
+    "flowerbed": {
+      "scene": "assets/flowerbed.glb",
+      "fit": [
+        3.0,
+        1.0
+      ]
+    },
+    "path": {
+      "scene": "assets/path.glb"
+    },
+    "noticeboard": {
+      "scene": "assets/noticeboard.glb",
+      "fill": true
+    },
+    "plaque": {
+      "scene": "assets/plaque.glb",
+      "fill": true
+    },
+    "kiosk": {
+      "scene": "assets/kiosk.glb",
+      "fill": true
+    },
+    "steps": {
+      "scene": "assets/steps.glb",
+      "fill": true,
+      "perch": "assets/perch_seat.glb"
+    },
+    "low-wall": {
+      "scene": "assets/low_wall.glb",
+      "fill": true,
+      "perch": "assets/perch_seat.glb"
+    },
+    "fountain-rim": {
+      "scene": "assets/fountain.glb",
+      "perch": "assets/perch_seat.glb"
+    },
+    "meadow": {
+      "meadow": [
+        "assets/meadow_grass.glb",
+        "assets/meadow_flowers.glb"
+      ]
+    },
+    "block-house": {
+      "block": "house"
+    },
+    "block-shop": {
+      "block": "shop"
+    },
+    "block-tower": {
+      "block": "tower"
+    },
+    "guild-hall": {
+      "building": "guild-hall"
+    },
+    "library": {
+      "building": "library"
+    },
+    "cafe": {
+      "building": "cafe"
+    },
+    "tram": {
+      "vehicle": true
+    },
+    "railing": {
+      "scene": "assets/railing.glb"
+    },
+    "railing-post": {
+      "scene": "assets/railing_post.glb"
+    }
+  },
+  "headlines": {
+    "Working": {
+      "icon": "assets/icons/working.png"
+    },
+    "Waiting": {
+      "icon": "assets/icons/waiting.png"
+    },
+    "Queued": {
+      "icon": "assets/icons/queued.png"
+    },
+    "Idle": {
+      "icon": "assets/icons/idle.png"
+    },
+    "Done": {
+      "icon": "assets/icons/done.png"
+    },
+    "Present": {
+      "icon": "assets/icons/present.png"
+    },
+    "Offline": {
+      "icon": "assets/icons/offline.png"
+    },
+    "Error": {
+      "icon": "assets/icons/error.png"
+    },
+    "Stale": {
+      "icon": "assets/icons/stale.png"
+    },
+    "Unknown": {
+      "icon": "assets/icons/unknown.png"
+    }
+  },
+  "badges": {
+    "Ai": {
+      "icon": "assets/icons/badge_ai.png"
+    },
+    "Simulation": {
+      "icon": "assets/icons/badge_simulation.png"
+    }
+  },
+  "day_night": {
+    "lamps_on_from": 1080,
+    "lamps_off_at": 400,
+    "keys": [
+      {
+        "m": 0,
+        "sun": "#7C8CC8",
+        "sun_energy": 0.3,
+        "sky_top": "#060A1C",
+        "horizon": "#131C3A",
+        "ambient": "#2E3A6C",
+        "ambient_energy": 0.85,
+        "fog": "#131C3A"
+      },
+      {
+        "m": 330,
+        "sun": "#C88A78",
+        "sun_energy": 0.25,
+        "sky_top": "#141C3C",
+        "horizon": "#5A4A6A",
+        "ambient": "#3A3A5E",
+        "ambient_energy": 0.5,
+        "fog": "#4A4460"
+      },
+      {
+        "m": 430,
+        "sun": "#D8E2F0",
+        "sun_energy": 0.75,
+        "sky_top": "#5A7AA8",
+        "horizon": "#B8C6D6",
+        "ambient": "#98A6BC",
+        "ambient_energy": 0.55,
+        "fog": "#AEBACC"
+      },
+      {
+        "m": 720,
+        "sun": "#E6EEF8",
+        "sun_energy": 1.05,
+        "sky_top": "#5F84B4",
+        "horizon": "#C4D0DE",
+        "ambient": "#A8B4C6",
+        "ambient_energy": 0.6,
+        "fog": "#BAC6D4"
+      },
+      {
+        "m": 990,
+        "sun": "#E4E6EE",
+        "sun_energy": 0.95,
+        "sky_top": "#56789E",
+        "horizon": "#BCC4D0",
+        "ambient": "#A0A8BC",
+        "ambient_energy": 0.58,
+        "fog": "#B4BCCA"
+      },
+      {
+        "m": 1080,
+        "sun": "#C88A9A",
+        "sun_energy": 0.45,
+        "sky_top": "#2A3464",
+        "horizon": "#8A6A8A",
+        "ambient": "#5A5478",
+        "ambient_energy": 0.5,
+        "fog": "#6A5A78"
+      },
+      {
+        "m": 1150,
+        "sun": "#7C8CC8",
+        "sun_energy": 0.3,
+        "sky_top": "#0A1026",
+        "horizon": "#1C2848",
+        "ambient": "#2E3A6C",
+        "ambient_energy": 0.85,
+        "fog": "#1C2848"
+      },
+      {
+        "m": 1440,
+        "sun": "#7C8CC8",
+        "sun_energy": 0.3,
+        "sky_top": "#060A1C",
+        "horizon": "#131C3A",
+        "ambient": "#2E3A6C",
+        "ambient_energy": 0.85,
+        "fog": "#131C3A"
+      }
+    ]
+  },
+  "declared_placeholders": [],
+  "wet_ground": true,
+  "extras": {
+    "jacket": {
+      "outfits": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "colour": "#23262E"
+    },
+    "hood": {
+      "outfits": [
+        0,
+        4
+      ]
+    },
+    "scarf": {
+      "outfits": [
+        2,
+        6
+      ],
+      "colour": "#7A2E3A"
+    }
+  },
+  "rain_streaks": true,
+  "neon": true,
+  "lamp_fade_m": 160.0,
+  "clouds": [
+    "assets/cloud_a.glb",
+    "assets/cloud_b.glb"
+  ],
+  "boat": "assets/sailboat.glb",
+  "paving": {
+    "tiles": [
+      "paving_tile_a",
+      "paving_tile_b",
+      "paving_tile_c"
+    ],
+    "size": 1.0,
+    "y": -0.062
+  },
+  "sway": {"stiffness": 1.1, "tint": "#8FE0C8"},
+  "paths": {
+    "tile": "path",
+    "size": 1.0,
+    "y": -0.05
+  },
+  "ssr_in_rain": true,
+  "neon_energy": 4.0,
+  "lamp_energy": 3.6,
+  "window_energy": 1.1,
+  "sheet_night": true,
+  "glass_glow": false,
+  "day_window": "#3A5270",
+  "lamp_range": 12.0,
+  "glow_lights": [
+    "tree_banyan"
+  ],
+  "shadow_min_sun": 0.35,
+  "msaa": 2,
+  "plant_shadow_m": 70.0,
+  "shadow_atlas": 2048,
+  "shadow_splits": 1,
+  "shadow_distance": 90.0,
+  "ssao": false,
+  "glow_night_only": true,
+  "map": {
+    "minutes": 1260,
+    "letterbox": "#0B1220",
+    "pin": "drop",
+    "plate": { "fill": "#0E1A2E", "ink": "#E6F1FF", "case": "upper" },
+    "scale_bar": true,
+    "glow": true,
+    "exposure": 2.2
+  },
+  "surfaces": {
+    "far": {"icon_key": "chip"},
+    "near": {"colour": "#35D6FF", "font_scale": 1, "max_lines": 3},
+    "open": {"overlay": "panel"}
+  },
+  "ui": {
+    "font_display": "res://styles/neon_noir/assets/fonts/Rajdhani-Bold.ttf",
+    "font_body": "res://styles/neon_noir/assets/fonts/Rajdhani-Medium.ttf",
+    "pixel_font": false,
+    "text_size": 22,
+    "colours": {
+      "panel": "#0E1A2EEB",
+      "panel_edge": "#2A8CC0",
+      "ink": "#E6F1FF",
+      "ink_muted": "#9DB2CC",
+      "accent": "#12324F",
+      "accent_ink": "#E6F1FF",
+      "focus": "#35D6FF",
+      "scrim": "#02060F80"
+    },
+    "panel": {
+      "shape": "rounded",
+      "radius": 6,
+      "border": 1,
+      "shadow": 12
+    },
+    "button": {
+      "shape": "rounded",
+      "radius": 4,
+      "border": 1,
+      "case": "title",
+      "height": 48
+    },
+    "focus": "glow",
+    "frame": null,
+    "bezel": {
+      "shape": "glass",
+      "colour": "#0E1A2E",
+      "edge": "#35D6FF",
+      "radius": 8,
+      "margin": 18
+    }
+  }
+}

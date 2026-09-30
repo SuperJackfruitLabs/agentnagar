@@ -1,0 +1,18 @@
+{
+  "street_tile": {"size": [2, 0.08, 2], "tris": 60, "nodes": ["street_tile", "street"]},
+  "street_kerb": {"size": [2.0, 0.16, 0.64], "tris": 60, "nodes": ["street_kerb", "kerb"]},
+  "tram_track": {"size": [2.0, 0.12, 2.8], "tris": 60, "nodes": ["tram_track", "track"]},
+  "water_tile": {"size": [4.0, 0.15, 4.0], "tris": 60, "nodes": ["water_tile", "water"]},
+  "bridge_span": {"size": [8.0, 4.7, 4.24], "tris": 2000, "nodes": ["bridge_span", "span", "lights"]},
+  "bridge_pier": {"size": [1.5, 9.38, 6.92], "tris": 2000, "nodes": ["bridge_pier", "pier", "lights"]},
+  "tram": {"size": [20.50, 4.39, 2.52], "tris": 10000, "nodes": ["tram", "body", "roof", "interior", "lights", "door_left_0_fore", "door_right_2_aft"]},
+  "cloud_a": {"size": [9.95, 4.0, 4.35], "tris": 1500, "nodes": ["cloud_a", "cloud"]},
+  "cloud_b": {"size": [8.16, 3.4, 3.75], "tris": 1500, "nodes": ["cloud_b", "cloud"]},
+  "sailboat": {"size": [1.8, 6.92, 4.9], "tris": 1000, "nodes": ["sailboat", "boat", "lights"]},
+  "paving_tile_a": {"size": [1.0, 0.06, 1.0], "tris": 60, "nodes": ["paving_tile_a"]},
+  "paving_tile_b": {"size": [1.0, 0.06, 1.0], "tris": 60, "nodes": ["paving_tile_b"]},
+  "paving_tile_c": {"size": [1.0, 0.06, 1.0], "tris": 60, "nodes": ["paving_tile_c"]},
+  "path": {"size": [1.0, 0.06, 1.0], "tris": 60, "nodes": ["path"]},
+  "railing": {"size": [2.0, 1.12, 0.14], "tris": 1000, "nodes": ["railing", "body"]},
+  "railing_post": {"size": [0.14, 1.12, 0.14], "tris": 1000, "nodes": ["railing_post", "body"]}
+}

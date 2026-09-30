@@ -1,0 +1,96 @@
+# City visual style studies
+
+Design exploration · 2026-09-18, extended 2026-09-19, revised 2026-09-20 · generated with the built-in image-generation tool.
+
+These are concept illustrations, not game captures, implemented interfaces, or performance evidence. Camera angles, geography, small text and object continuity are approximate. No engine or final visual style has been selected.
+
+The 2026-09-19 [consistency review](REVIEW-2026-09-19.md) supersedes the broad judgments in the original inspection notes below. Corrections follow the [shared contract](CONSISTENCY-CONTRACT.md), [reference district plan](reference-district.svg), and [per-sheet progress record](REPAIR-STATUS.md). A written rule or a generated draft does not establish that an image has passed review.
+
+The first ten styles were also reviewed on 2026-09-20. Their [review and repair record](REPAIR-FIRST-TEN-2026-09-20.md) tracks city continuity, agent identity, phone boundaries and shared controls separately from the earlier 11–30 work. Exact repair prompts, candidate images and original backups are retained in `revisions/2026-09-20-first-ten/`.
+
+Rakesh requested adaptive presentation across ordinary PCs, gaming PCs, handhelds such as Steam Deck, mobile, browser, and future VR/AR. Mobile and browser may prioritize exploration, communication, agent interaction and lightweight edits. Rakesh also proposed that a village/city owner can choose its visual style: establish mechanics with one style, then add further styles. This is a design direction, not a shipped capability.
+
+## Collection
+
+Thirty styles. The first ten were the original exploration; styles 11 to 30 were proposed as [candidate briefs](CANDIDATE-STYLES.md) and then illustrated with the same sheet program.
+
+| Style | Folder |
+| --- | --- |
+| 01 Graphic | [Graphic](01-graphic/) |
+| 02 Voxel | [Voxel](02-voxel/) |
+| 03 Ink | [Ink](03-ink/) |
+| 04 Realistic | [Realistic](04-realistic/) |
+| 05 Claymation | [Claymation](05-claymation/) |
+| 06 Cel-shaded anime | [Anime](06-anime/) |
+| 07 Paper craft | [Paper craft](07-paper-craft/) |
+| 08 Pixel art | [Pixel art](08-pixel-art/) |
+| 09 Solarpunk | [Solarpunk](09-solarpunk/) |
+| 10 Neon noir | [Neon noir](10-neon-noir/) |
+| 11 Low-poly tropical diorama | [Low-poly tropical diorama](11-low-poly-tropical-diorama/) |
+| 12 Gouache storybook | [Gouache storybook](12-gouache-storybook/) |
+| 13 Risograph print | [Risograph print](13-risograph-print/) |
+| 14 Linocut and relief print | [Linocut relief](14-linocut-relief/) |
+| 15 Stained-glass mosaic | [Stained-glass mosaic](15-stained-glass-mosaic/) |
+| 16 Chalk pastel mural | [Chalk pastel mural](16-chalk-pastel-mural/) |
+| 17 Art Nouveau botanical | [Art Nouveau botanical](17-art-nouveau-botanical/) |
+| 18 Art Deco civic futurism | [Art Deco civic futurism](18-art-deco-civic-futurism/) |
+| 19 Bauhaus primary-form | [Bauhaus primary-form](19-bauhaus-primary-form/) |
+| 20 Memphis playful geometry | [Memphis playful geometry](20-memphis-playful-geometry/) |
+| 21 Brutalist tropical modernism | [Brutalist tropical modernism](21-brutalist-tropical-modernism/) |
+| 22 Streamline retro future | [Streamline retro future](22-streamline-retro-future/) |
+| 23 Cassette futurism | [Cassette futurism](23-cassette-futurism/) |
+| 24 Dieselpunk civic works | [Dieselpunk civic works](24-dieselpunk-civic-works/) |
+| 25 Biomorphic eco-fantasy | [Biomorphic eco-fantasy](25-biomorphic-eco-fantasy/) |
+| 26 Soft 3D plush miniature | [Soft 3D plush miniature](26-soft-3d-plush-miniature/) |
+| 27 Ceramic tile city | [Ceramic tile city](27-ceramic-tile-city/) |
+| 28 Ukiyo-e-inspired woodblock city | [Ukiyo-e woodblock city](28-ukiyo-e-woodblock-city/) |
+| 29 Madhubani-inspired contemporary city | [Madhubani contemporary city](29-madhubani-contemporary-city/) |
+| 30 Afrofuturist maker metropolis | [Afrofuturist maker metropolis](30-afrofuturist-maker-metropolis/) |
+
+Every style now has `00-city-perspectives.png`: map, top-down, diagonal, and street views. The four missing overviews (15 Stained-glass mosaic, 23 Cassette futurism, 24 Dieselpunk civic works, 25 Biomorphic eco-fantasy) were added during the correction pass. Their completion resolves the missing-sheet finding; cross-sheet consistency remains tracked separately. Earlier combined sheets are retained in [comparisons](comparisons/). [Initial prompt briefs](INITIAL-PROMPT-BRIEFS.md) preserve the first exploration's intent.
+
+Styles 01 to 10 keep their exact original generation prompts: `00-city-perspectives.prompt.md` and a `.prompt.txt` per experience sheet. These describe the historical originals; each revised gallery links to its repair record and replacement prompts. Original prompts for styles 11 to 30 were not saved. Correction prompts are now saved beside their outputs; use the [candidate briefs](CANDIDATE-STYLES.md) together with the [correction contract](CONSISTENCY-CONTRACT.md).
+
+## Experience sheets
+
+Every style has three four-panel experience sheets in addition to its city perspectives. The galleries now contain 122 PNGs: 120 style sheets and two earlier comparisons, excluding revision drafts. Each sheet uses a different experience in each panel.
+
+| Sheet | Top left | Top right | Bottom left | Bottom right |
+| --- | --- | --- | --- | --- |
+| 01 Living and community | Workshop interior | Resident home interior | Conversation close-up | Public gathering |
+| 02 Creating and exploring | Building/editing mode | Transit passenger experience | Night and rain | Park/waterfront |
+| 03 Interfaces and perspectives | Facility interaction | Mobile exploration interface | Rooftop terrace | AR tabletop city |
+
+The two additional views proposed for this set are a rooftop terrace—an inhabited elevated place rather than another aerial map—and an AR tabletop city. The AR panel is a future experience concept, not a commitment to headset implementation. It should make miniature scale, tabletop context and spatial interaction legible. Interface text and annotations are illustrative, not an approved UI specification.
+
+The original reference program remains a riverfront maker city with a workshop, library, tree square, transit and a broader metropolitan skyline. Style sheets may differ in architecture and layout; they do not establish interchangeable production meshes or compatible collision shapes. Visual style, architectural theme, device quality and simulation behavior need separate contracts in subsequent design work. Pixel art in particular does not settle whether production rendering uses sprites or pixel-styled 3D.
+
+Sheets for styles 11 to 30 share a frame treatment per style, described in the [frame contract](CANDIDATE-STYLES.md#frame-contract): 1536×1024, a 20 px outer matte in a style-specific colour with an accent rule, labelled panels, and a footer naming the style and sheet.
+
+## Checkpoints and inspection
+
+The first checkpoint preserved the original twelve images. The second added thirty experience sheets for styles 01 to 10; all thirty were visually inspected for the four requested experiences. The third, on 2026-09-19, added 76 sheets for styles 11 to 30 and a README per style. One further sheet, the Stained-glass city perspectives, was written as an empty file during generation and has been removed.
+
+At those original checkpoints, illustrative interface callouts sometimes extended outside phone screens, some characters or buildings drifted toward realism, and exact layouts varied across sheets. These are historical findings; the dated repair records identify subsequent changes and remaining limitations. Notes from inspecting the third checkpoint are recorded in [inspection notes](#inspection-notes-styles-11-to-30) below and in each style's device-adaptation paragraph.
+
+## Inspection notes, styles 11 to 30
+
+Every existing sheet was viewed while writing its README. These are historical first-pass notes; four overview sheets were absent at that checkpoint. The [subsequent review](REVIEW-2026-09-19.md#corrections-to-earlier-review-interpretations) qualifies the tropical-setting, realism, agent-identity and frame-quality judgments below. In particular, styles 17 and 21 also have clear tropical cues, realistic external hands need not be an error, style 30 has visible synthetic-agent features, and style 24 changes caption placement between sheets.
+
+**Cross-cutting**
+
+- **Setting drift.** Only 11 Low-poly tropical keeps a clearly tropical riverfront. Styles 12, 13, 14, 16, 19, 22 and 30 render the skyline as a temperate European or generic modern city. Style 28 reads as historical Edo, with Mount Fuji and cherry blossom, contrary to the brief's "original motifs" note.
+- **Realism drift.** Styles 18, 21 and 30 are close to photographic; 16, 27 and 30 show painterly-realistic people; 26 shows a photographic human hand in the mobile and AR panels.
+- **Period drift.** Styles 18 and 24 dress residents in 1930s costume. Style 25 introduces fantasy species and a plant-being agent, so it reads as a different world premise rather than an architectural style, which is the boundary the brief asked it to test.
+- **Frame contract breaks.** Footer captions are clipped on at least one sheet of 11, 12, 13, 14, 15, 22, 23, 27, 28, 29 and 30. Panel-label placement or chip styling changes between sheets within 12, 17, 18, 19, 20, 23, 26, 27 and 29. Labels are clipped at the frame edge on 22 (sheet 00), 25 (sheet 02) and 29 (sheet 00). Sheet 01 of 18 misspells "concept" in its footer.
+- **Generated text.** Wall slogans and interface labels are frequently garbled (12, 21, 23, 28). Treat all text as decorative.
+- **Pattern versus legibility.** Where the surface treatment is applied uniformly, figures and interactive cues separate poorly: 14 (dense hatching), 15 (leading over faces), 20 (pattern on everything including pets), 27 and 29 (pattern on floors, clothing and furniture).
+- **Agent consistency.** The city agent is a robot in some panels and a human portrait in others within 22, and appears only as a human portrait in 21. Styles 23 and 30 are the strongest and weakest respectively at distinguishing the agent from residents.
+
+**Cleanest sets for comparison**
+
+- 13 Risograph and 19 Bauhaus have the most legible maps and labels, at the cost of a generic skyline.
+- 23 Cassette futurism has the most consistent agent and companion-device design.
+- 24 Dieselpunk has clean frame, labels and footer on all three sheets it has.
+
+**Cultural-reference styles.** The READMEs for 28, 29 and 30 carry the brief's caveat: specialist review or a named creative partnership is a precondition for any production use, not a follow-up.

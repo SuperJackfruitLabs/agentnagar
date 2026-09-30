@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "0f442e63780337a2062f6f56207019f428ff283656c1f9e8f2698d328cf27e39",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/27-ceramic-tile-city/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

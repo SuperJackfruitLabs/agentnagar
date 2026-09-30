@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "e31def6765bfc7f8fc3dd83a202153690d7585c7d0c4668eda52f54f4aed81b7",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/16-chalk-pastel-mural/originals/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

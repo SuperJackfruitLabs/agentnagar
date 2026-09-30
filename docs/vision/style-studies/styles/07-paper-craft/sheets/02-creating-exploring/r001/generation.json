@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "209354b36a8cf9558d6ebb8f9cb696485c134a85e7afa5c6ef7666a47fd55899",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "64bb03d4223e0fea8db2e7d0c99e24acbc82c0c3e4c4d16c8ef93a56b53acd8c"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/originals/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "0080652d9632c36e7cb28b277466dddd3af3349ea95a297217b7b01a71ef0f79",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/12-gouache-storybook/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

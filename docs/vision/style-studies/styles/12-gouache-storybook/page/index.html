@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-style="12-gouache-storybook">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Day in Agentnagar · Gouache storybook · Agentnagar style studies</title>
+<meta name="description" content="Style study 12, Gouache storybook, told as a picture book: A Day in Agentnagar.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<link rel="stylesheet" href="assets/book.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="gouache" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="9" xChannelSelector="R" yChannelSelector="G" result="wob"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="9" result="grain"/>
+      <feColorMatrix in="grain" type="saturate" values="0" result="g2"/>
+      <feComponentTransfer in="g2" result="g3"><feFuncA type="table" tableValues="0 .22"/></feComponentTransfer>
+      <feComposite in="g3" in2="wob" operator="in" result="g4"/>
+      <feBlend in="g4" in2="wob" mode="multiply"/>
+    </filter>
+    <filter id="stroke" x="-5%" y="-20%" width="110%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".06 .3" numOctaves="2" seed="2" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="6"/>
+    </filter>
+  </defs>
+</svg>
+
+<header class="shelf">
+  <p class="shelf-title"><span class="num" data-num></span> Gouache storybook <span class="sep" aria-hidden="true">·</span> <span class="muted">an Agentnagar style study</span></p>
+  <button type="button" class="pill" id="notes-btn">Read it as plain notes</button>
+</header>
+
+<main class="table">
+  <h1 class="visually-hidden">A Day in Agentnagar: the Gouache storybook style study as a picture book</h1>
+  <div class="book" id="book" aria-roledescription="picture book" aria-label="A Day in Agentnagar"></div>
+
+  <div class="controls" role="group" aria-label="Turn the pages">
+    <button type="button" class="turn prev" id="prev"><span aria-hidden="true">←</span> Previous page</button>
+    <ol class="dots" id="dots" aria-label="Spreads"></ol>
+    <button type="button" class="turn next" id="next">Next page <span aria-hidden="true">→</span></button>
+  </div>
+  <p class="where" id="where" aria-live="polite"></p>
+  <p class="hint">Use the arrow keys or the buttons to turn the page.</p>
+</main>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script src="assets/book.js"></script>
+</body>
+</html>

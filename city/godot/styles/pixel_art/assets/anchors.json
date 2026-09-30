@@ -1,0 +1,1166 @@
+{
+  "buildings/blocks/house_a.png": [
+    84,
+    197
+  ],
+  "buildings/blocks/house_b.png": [
+    84,
+    246
+  ],
+  "buildings/blocks/house_c.png": [
+    84,
+    197
+  ],
+  "buildings/blocks/shop_a.png": [
+    98,
+    189
+  ],
+  "buildings/blocks/tower_base.png": [
+    198,
+    162
+  ],
+  "buildings/blocks/tower_mid.png": [
+    196,
+    145
+  ],
+  "buildings/blocks/tower_top.png": [
+    196,
+    211
+  ],
+  "buildings/hall/corner.png": [
+    8,
+    88
+  ],
+  "buildings/hall/corner_low.png": [
+    5,
+    14
+  ],
+  "buildings/hall/e_door_l.png": [
+    4,
+    94
+  ],
+  "buildings/hall/e_door_m.png": [
+    3,
+    94
+  ],
+  "buildings/hall/e_door_r.png": [
+    3,
+    94
+  ],
+  "buildings/hall/e_low.png": [
+    3,
+    22
+  ],
+  "buildings/hall/e_plain.png": [
+    3,
+    94
+  ],
+  "buildings/hall/e_wall_0.png": [
+    3,
+    94
+  ],
+  "buildings/hall/e_wall_1.png": [
+    3,
+    94
+  ],
+  "buildings/hall/roof_mid.png": [
+    67,
+    50
+  ],
+  "buildings/hall/roof_n.png": [
+    67,
+    56
+  ],
+  "buildings/hall/roof_s.png": [
+    81,
+    50
+  ],
+  "buildings/hall/s_door_l.png": [
+    18,
+    94
+  ],
+  "buildings/hall/s_door_m.png": [
+    30,
+    94
+  ],
+  "buildings/hall/s_door_r.png": [
+    29,
+    94
+  ],
+  "buildings/hall/s_low.png": [
+    16,
+    22
+  ],
+  "buildings/hall/s_plain.png": [
+    18,
+    94
+  ],
+  "buildings/hall/s_wall_0.png": [
+    18,
+    94
+  ],
+  "buildings/hall/s_wall_1.png": [
+    18,
+    94
+  ],
+  "buildings/library/corner.png": [
+    13,
+    146
+  ],
+  "buildings/library/corner_low.png": [
+    5,
+    17
+  ],
+  "buildings/library/dome.png": [
+    110,
+    126
+  ],
+  "buildings/library/e_banner.png": [
+    4,
+    154
+  ],
+  "buildings/library/e_door_l.png": [
+    4,
+    154
+  ],
+  "buildings/library/e_door_m.png": [
+    4,
+    154
+  ],
+  "buildings/library/e_door_r.png": [
+    4,
+    154
+  ],
+  "buildings/library/e_low.png": [
+    4,
+    25
+  ],
+  "buildings/library/e_plain.png": [
+    4,
+    154
+  ],
+  "buildings/library/e_wall_0.png": [
+    4,
+    154
+  ],
+  "buildings/library/e_wall_1.png": [
+    4,
+    154
+  ],
+  "buildings/library/roof.png": [
+    16,
+    8
+  ],
+  "buildings/library/s_banner.png": [
+    20,
+    154
+  ],
+  "buildings/library/s_door_l.png": [
+    22,
+    154
+  ],
+  "buildings/library/s_door_m.png": [
+    27,
+    154
+  ],
+  "buildings/library/s_door_r.png": [
+    27,
+    154
+  ],
+  "buildings/library/s_low.png": [
+    16,
+    25
+  ],
+  "buildings/library/s_plain.png": [
+    20,
+    154
+  ],
+  "buildings/library/s_wall_0.png": [
+    20,
+    154
+  ],
+  "buildings/library/s_wall_1.png": [
+    20,
+    154
+  ],
+  "characters/human_0_0.png": [
+    16,
+    34
+  ],
+  "characters/human_0_1.png": [
+    16,
+    34
+  ],
+  "characters/human_0_2.png": [
+    16,
+    34
+  ],
+  "characters/human_0_3.png": [
+    16,
+    34
+  ],
+  "characters/human_1_0.png": [
+    16,
+    34
+  ],
+  "characters/human_1_1.png": [
+    16,
+    34
+  ],
+  "characters/human_1_2.png": [
+    16,
+    34
+  ],
+  "characters/human_1_3.png": [
+    16,
+    34
+  ],
+  "characters/human_2_0.png": [
+    16,
+    34
+  ],
+  "characters/human_2_1.png": [
+    16,
+    34
+  ],
+  "characters/human_2_2.png": [
+    16,
+    34
+  ],
+  "characters/human_2_3.png": [
+    16,
+    34
+  ],
+  "characters/human_3_0.png": [
+    16,
+    34
+  ],
+  "characters/human_3_1.png": [
+    16,
+    34
+  ],
+  "characters/human_3_2.png": [
+    16,
+    34
+  ],
+  "characters/human_3_3.png": [
+    16,
+    34
+  ],
+  "characters/human_4_0.png": [
+    16,
+    34
+  ],
+  "characters/human_4_1.png": [
+    16,
+    34
+  ],
+  "characters/human_4_2.png": [
+    16,
+    34
+  ],
+  "characters/human_4_3.png": [
+    16,
+    34
+  ],
+  "characters/human_5_0.png": [
+    16,
+    34
+  ],
+  "characters/human_5_1.png": [
+    16,
+    34
+  ],
+  "characters/human_5_2.png": [
+    16,
+    34
+  ],
+  "characters/human_5_3.png": [
+    16,
+    34
+  ],
+  "characters/human_6_0.png": [
+    16,
+    34
+  ],
+  "characters/human_6_1.png": [
+    16,
+    34
+  ],
+  "characters/human_6_2.png": [
+    16,
+    34
+  ],
+  "characters/human_6_3.png": [
+    16,
+    34
+  ],
+  "characters/human_7_0.png": [
+    16,
+    34
+  ],
+  "characters/human_7_1.png": [
+    16,
+    34
+  ],
+  "characters/human_7_2.png": [
+    16,
+    34
+  ],
+  "characters/human_7_3.png": [
+    16,
+    34
+  ],
+  "characters/human_muted.png": [
+    16,
+    34
+  ],
+  "characters/robot_city.png": [
+    16,
+    34
+  ],
+  "characters/robot_guild.png": [
+    16,
+    34
+  ],
+  "characters/robot_personal.png": [
+    16,
+    34
+  ],
+  "ground/crossing_x.png": [
+    16,
+    8
+  ],
+  "ground/crossing_z.png": [
+    16,
+    8
+  ],
+  "ground/floor_carpet.png": [
+    16,
+    8
+  ],
+  "ground/floor_stone.png": [
+    16,
+    8
+  ],
+  "ground/floor_wood.png": [
+    16,
+    8
+  ],
+  "ground/grass_0.png": [
+    16,
+    8
+  ],
+  "ground/grass_1.png": [
+    16,
+    8
+  ],
+  "ground/kerb_e.png": [
+    16,
+    8
+  ],
+  "ground/kerb_n.png": [
+    16,
+    8
+  ],
+  "ground/kerb_s.png": [
+    16,
+    8
+  ],
+  "ground/kerb_w.png": [
+    16,
+    8
+  ],
+  "ground/path.png": [
+    16,
+    8
+  ],
+  "ground/paving_0.png": [
+    16,
+    8
+  ],
+  "ground/paving_1.png": [
+    16,
+    8
+  ],
+  "ground/paving_2.png": [
+    16,
+    8
+  ],
+  "ground/paving_3.png": [
+    16,
+    8
+  ],
+  "ground/quay_e.png": [
+    16,
+    8
+  ],
+  "ground/quay_w.png": [
+    16,
+    8
+  ],
+  "ground/street.png": [
+    16,
+    8
+  ],
+  "ground/street_dash_x.png": [
+    16,
+    8
+  ],
+  "ground/street_dash_z.png": [
+    16,
+    8
+  ],
+  "ground/track_x.png": [
+    16,
+    8
+  ],
+  "ground/track_x_n.png": [
+    16,
+    8
+  ],
+  "ground/track_x_s.png": [
+    16,
+    8
+  ],
+  "ground/track_z.png": [
+    16,
+    8
+  ],
+  "ground/track_z_e.png": [
+    16,
+    8
+  ],
+  "ground/track_z_w.png": [
+    16,
+    8
+  ],
+  "ground/water_0.png": [
+    16,
+    8
+  ],
+  "ground/water_1.png": [
+    16,
+    8
+  ],
+  "scenery/bench_x.png": [
+    18,
+    25
+  ],
+  "scenery/bench_z.png": [
+    20,
+    25
+  ],
+  "scenery/bollard.png": [
+    3,
+    15
+  ],
+  "scenery/bookshelf_0.png": [
+    22,
+    47
+  ],
+  "scenery/bookshelf_180.png": [
+    22,
+    47
+  ],
+  "scenery/bookshelf_270.png": [
+    22,
+    47
+  ],
+  "scenery/bookshelf_90.png": [
+    22,
+    47
+  ],
+  "scenery/bridge/end_e_0_back.png": [
+    64,
+    53
+  ],
+  "scenery/bridge/end_e_0_front.png": [
+    22,
+    49
+  ],
+  "scenery/bridge/end_e_1_back.png": [
+    64,
+    21
+  ],
+  "scenery/bridge/end_e_1_front.png": [
+    16,
+    29
+  ],
+  "scenery/bridge/end_w_0_back.png": [
+    61,
+    13
+  ],
+  "scenery/bridge/end_w_0_front.png": [
+    16,
+    20
+  ],
+  "scenery/bridge/end_w_1_back.png": [
+    51,
+    26
+  ],
+  "scenery/bridge/end_w_1_front.png": [
+    16,
+    27
+  ],
+  "scenery/bridge/span_0_back.png": [
+    64,
+    54
+  ],
+  "scenery/bridge/span_0_front.png": [
+    22,
+    51
+  ],
+  "scenery/bridge/span_1_back.png": [
+    64,
+    53
+  ],
+  "scenery/bridge/span_1_front.png": [
+    22,
+    49
+  ],
+  "scenery/bridge/span_2_back.png": [
+    64,
+    53
+  ],
+  "scenery/bridge/span_2_front.png": [
+    22,
+    49
+  ],
+  "scenery/bridge/span_3_back.png": [
+    61,
+    53
+  ],
+  "scenery/bridge/span_3_front.png": [
+    22,
+    49
+  ],
+  "scenery/cafe_set.png": [
+    19,
+    24
+  ],
+  "scenery/cafe_table.png": [
+    12,
+    19
+  ],
+  "scenery/flowerbed_0.png": [
+    38,
+    24
+  ],
+  "scenery/flowerbed_90.png": [
+    38,
+    24
+  ],
+  "scenery/fountain_back.png": [
+    35,
+    1
+  ],
+  "scenery/fountain_front.png": [
+    35,
+    31
+  ],
+  "scenery/garden_gate_x.png": [
+    19,
+    32
+  ],
+  "scenery/garden_gate_z.png": [
+    19,
+    32
+  ],
+  "scenery/garden_wall_x.png": [
+    11,
+    23
+  ],
+  "scenery/garden_wall_z.png": [
+    11,
+    23
+  ],
+  "scenery/kiosk_0.png": [
+    11,
+    36
+  ],
+  "scenery/kiosk_180.png": [
+    11,
+    36
+  ],
+  "scenery/kiosk_270.png": [
+    11,
+    36
+  ],
+  "scenery/kiosk_90.png": [
+    11,
+    36
+  ],
+  "scenery/lamp.png": [
+    7,
+    63
+  ],
+  "scenery/low_wall_0.png": [
+    27,
+    21
+  ],
+  "scenery/low_wall_180.png": [
+    27,
+    21
+  ],
+  "scenery/low_wall_270.png": [
+    27,
+    21
+  ],
+  "scenery/low_wall_90.png": [
+    27,
+    21
+  ],
+  "scenery/meadow/flowers_0.png": [
+    4,
+    15
+  ],
+  "scenery/meadow/flowers_1.png": [
+    2,
+    14
+  ],
+  "scenery/meadow/flowers_2.png": [
+    5,
+    15
+  ],
+  "scenery/meadow/grass_a_0.png": [
+    3,
+    12
+  ],
+  "scenery/meadow/grass_a_1.png": [
+    2,
+    13
+  ],
+  "scenery/meadow/grass_a_2.png": [
+    4,
+    14
+  ],
+  "scenery/meadow/grass_b_0.png": [
+    4,
+    12
+  ],
+  "scenery/meadow/grass_b_1.png": [
+    3,
+    13
+  ],
+  "scenery/meadow/grass_b_2.png": [
+    4,
+    12
+  ],
+  "scenery/noticeboard_0.png": [
+    17,
+    47
+  ],
+  "scenery/noticeboard_180.png": [
+    17,
+    47
+  ],
+  "scenery/noticeboard_270.png": [
+    17,
+    47
+  ],
+  "scenery/noticeboard_90.png": [
+    17,
+    47
+  ],
+  "scenery/palm_short.png": [
+    47,
+    89
+  ],
+  "scenery/palm_tall.png": [
+    70,
+    121
+  ],
+  "scenery/perch_seat_0.png": [
+    10,
+    10
+  ],
+  "scenery/perch_seat_135.png": [
+    4,
+    13
+  ],
+  "scenery/perch_seat_180.png": [
+    5,
+    13
+  ],
+  "scenery/perch_seat_225.png": [
+    4,
+    10
+  ],
+  "scenery/perch_seat_270.png": [
+    5,
+    10
+  ],
+  "scenery/perch_seat_315.png": [
+    4,
+    10
+  ],
+  "scenery/perch_seat_45.png": [
+    10,
+    10
+  ],
+  "scenery/perch_seat_90.png": [
+    10,
+    13
+  ],
+  "scenery/planter.png": [
+    22,
+    25
+  ],
+  "scenery/planter_pot.png": [
+    21,
+    24
+  ],
+  "scenery/plaque_0.png": [
+    10,
+    24
+  ],
+  "scenery/plaque_180.png": [
+    10,
+    24
+  ],
+  "scenery/plaque_270.png": [
+    10,
+    24
+  ],
+  "scenery/plaque_90.png": [
+    10,
+    24
+  ],
+  "scenery/railing_post.png": [
+    3,
+    19
+  ],
+  "scenery/railing_x.png": [
+    10,
+    22
+  ],
+  "scenery/railing_z.png": [
+    10,
+    22
+  ],
+  "scenery/seats/bench_0.png": [
+    19,
+    20
+  ],
+  "scenery/seats/bench_108.png": [
+    21,
+    24
+  ],
+  "scenery/seats/bench_135.png": [
+    19,
+    20
+  ],
+  "scenery/seats/bench_144.png": [
+    20,
+    22
+  ],
+  "scenery/seats/bench_180.png": [
+    18,
+    25
+  ],
+  "scenery/seats/bench_216.png": [
+    9,
+    26
+  ],
+  "scenery/seats/bench_225.png": [
+    7,
+    25
+  ],
+  "scenery/seats/bench_252.png": [
+    14,
+    23
+  ],
+  "scenery/seats/bench_270.png": [
+    18,
+    20
+  ],
+  "scenery/seats/bench_288.png": [
+    20,
+    18
+  ],
+  "scenery/seats/bench_315.png": [
+    19,
+    14
+  ],
+  "scenery/seats/bench_324.png": [
+    20,
+    16
+  ],
+  "scenery/seats/bench_36.png": [
+    12,
+    25
+  ],
+  "scenery/seats/bench_45.png": [
+    9,
+    25
+  ],
+  "scenery/seats/bench_72.png": [
+    16,
+    26
+  ],
+  "scenery/seats/bench_90.png": [
+    19,
+    25
+  ],
+  "scenery/seats/cafe-table_0.png": [
+    9,
+    16
+  ],
+  "scenery/seats/cafe-table_135.png": [
+    6,
+    19
+  ],
+  "scenery/seats/cafe-table_180.png": [
+    8,
+    20
+  ],
+  "scenery/seats/cafe-table_225.png": [
+    6,
+    19
+  ],
+  "scenery/seats/cafe-table_270.png": [
+    8,
+    16
+  ],
+  "scenery/seats/cafe-table_315.png": [
+    6,
+    14
+  ],
+  "scenery/seats/cafe-table_45.png": [
+    7,
+    19
+  ],
+  "scenery/seats/cafe-table_90.png": [
+    9,
+    20
+  ],
+  "scenery/seats/desk_0.png": [
+    8,
+    28
+  ],
+  "scenery/seats/desk_135.png": [
+    16,
+    19
+  ],
+  "scenery/seats/desk_180.png": [
+    27,
+    20
+  ],
+  "scenery/seats/desk_225.png": [
+    22,
+    21
+  ],
+  "scenery/seats/desk_270.png": [
+    27,
+    28
+  ],
+  "scenery/seats/desk_315.png": [
+    16,
+    29
+  ],
+  "scenery/seats/desk_45.png": [
+    6,
+    21
+  ],
+  "scenery/seats/desk_90.png": [
+    8,
+    20
+  ],
+  "scenery/seats/reading-chair_0.png": [
+    16,
+    18
+  ],
+  "scenery/seats/reading-chair_135.png": [
+    11,
+    23
+  ],
+  "scenery/seats/reading-chair_180.png": [
+    15,
+    23
+  ],
+  "scenery/seats/reading-chair_225.png": [
+    10,
+    20
+  ],
+  "scenery/seats/reading-chair_270.png": [
+    15,
+    18
+  ],
+  "scenery/seats/reading-chair_315.png": [
+    11,
+    15
+  ],
+  "scenery/seats/reading-chair_45.png": [
+    12,
+    20
+  ],
+  "scenery/seats/reading-chair_90.png": [
+    16,
+    23
+  ],
+  "scenery/seats/workstation_0.png": [
+    8,
+    30
+  ],
+  "scenery/seats/workstation_135.png": [
+    16,
+    19
+  ],
+  "scenery/seats/workstation_180.png": [
+    27,
+    20
+  ],
+  "scenery/seats/workstation_225.png": [
+    22,
+    24
+  ],
+  "scenery/seats/workstation_270.png": [
+    27,
+    30
+  ],
+  "scenery/seats/workstation_315.png": [
+    16,
+    31
+  ],
+  "scenery/seats/workstation_45.png": [
+    6,
+    24
+  ],
+  "scenery/seats/workstation_90.png": [
+    8,
+    20
+  ],
+  "scenery/shrub.png": [
+    25,
+    24
+  ],
+  "scenery/steps_0.png": [
+    41,
+    20
+  ],
+  "scenery/steps_180.png": [
+    25,
+    26
+  ],
+  "scenery/steps_270.png": [
+    25,
+    20
+  ],
+  "scenery/steps_90.png": [
+    41,
+    26
+  ],
+  "scenery/tram/back_00.png": [
+    46,
+    52
+  ],
+  "scenery/tram/back_01.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_02.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_03.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_04.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_05.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_06.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_07.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_08.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_09.png": [
+    49,
+    66
+  ],
+  "scenery/tram/back_10.png": [
+    49,
+    71
+  ],
+  "scenery/tram/back_11.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_12.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_13.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_14.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_15.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_16.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_17.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_18.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_19.png": [
+    49,
+    55
+  ],
+  "scenery/tram/back_20.png": [
+    49,
+    55
+  ],
+  "scenery/tram/door.png": [
+    7,
+    47
+  ],
+  "scenery/tram/front_00.png": [
+    4,
+    52
+  ],
+  "scenery/tram/front_01.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_02.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_03.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_04.png": [
+    8,
+    54
+  ],
+  "scenery/tram/front_05.png": [
+    8,
+    54
+  ],
+  "scenery/tram/front_06.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_07.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_08.png": [
+    7,
+    53
+  ],
+  "scenery/tram/front_09.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_10.png": [
+    8,
+    54
+  ],
+  "scenery/tram/front_11.png": [
+    8,
+    54
+  ],
+  "scenery/tram/front_12.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_13.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_14.png": [
+    7,
+    53
+  ],
+  "scenery/tram/front_15.png": [
+    8,
+    54
+  ],
+  "scenery/tram/front_16.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_17.png": [
+    8,
+    54
+  ],
+  "scenery/tram/front_18.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_19.png": [
+    7,
+    54
+  ],
+  "scenery/tram/front_20.png": [
+    7,
+    67
+  ],
+  "scenery/tram_shelter_0.png": [
+    47,
+    71
+  ],
+  "scenery/tram_shelter_180.png": [
+    52,
+    68
+  ],
+  "scenery/tram_shelter_270.png": [
+    52,
+    71
+  ],
+  "scenery/tram_shelter_90.png": [
+    47,
+    68
+  ],
+  "scenery/tree_roots.png": [
+    85,
+    49
+  ],
+  "scenery/tree_round_a.png": [
+    56,
+    107
+  ],
+  "scenery/tree_round_b.png": [
+    49,
+    92
+  ],
+  "scenery/tree_square.png": [
+    116,
+    191
+  ],
+  "scenery/umbrella.png": [
+    31,
+    49
+  ],
+  "scenery/workbench.png": [
+    27,
+    41
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "2b1c4b6c5aebc258cd34af5cf0ed0f9c6b5ef57d9a64b15e7b062f44bcfc5735",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "0e6167f70f1d26f29848429dd90e104b29063e6736ce8bf12036f3b510a2f485"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/03-ink/originals/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

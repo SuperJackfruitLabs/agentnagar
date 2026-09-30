@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "b088d2d28ac24f4b2352bdf8874cf52492c19ec16a799b2fdfae00ca3f9c4637",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "cb38f628037023dc70544ad7cc10bf6037155ec4f6efe2e383ff53327d38b448"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/11-low-poly-tropical-diorama/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-19/11-low-poly-tropical-diorama/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "2c41032dccc09936867aef2b33228f1f590cf45120491cfe66c2783b394ebb81",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "9fcd89323f3fefe4364b8c9d9e030061a29a41c69f289ebc8a774de5aff97992"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/10-neon-noir/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/02-creating-exploring-pass2.png"
+  ],
+  "reference_images": [
+    "../r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

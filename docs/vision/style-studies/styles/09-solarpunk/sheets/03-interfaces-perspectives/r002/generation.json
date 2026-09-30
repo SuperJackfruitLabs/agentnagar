@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sha256": "b46b94f1c0e778d4c5daf6778de9d9d1365c70d117ab7ad4511bdc6381176aa9",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "4463df104858274a2a3632e445ff4325dc8b4de6f81d439de828f44a17dfae6d"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/03-interfaces-perspectives-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png",
+    "../../00-city-perspectives/r004/image.png",
+    "../../01-living-community/r001/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

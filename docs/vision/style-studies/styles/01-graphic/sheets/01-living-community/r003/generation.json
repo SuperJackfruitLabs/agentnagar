@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sha256": "1ae773892dab39686be3aed9475089960f53eca2b5e7ffcb74ab5e4f58ea3bcf",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "de444053d72c4e78a029ce084eb2fc528a60d8e526ff22e207767a42ff04befc"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/01-graphic/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/01-graphic/01-living-community.pass-2.png"
+  ],
+  "reference_images": [
+    "../r002/image.png",
+    "../../00-city-perspectives/r004/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sha256": "d2059a73278ed1048244cc896c97073e4a00664ad5051ee1d6a3a30af4d32e75",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "8c5a36e1229c60b2bd09808d82f1ed68d5eeebfe73dddbaf460e87e6616fd7c0"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/10-neon-noir/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/01-living-community-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png",
+    "../../00-city-perspectives/r003/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

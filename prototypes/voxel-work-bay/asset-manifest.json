@@ -1,0 +1,189 @@
+{
+  "revision": "pilot-r004-full-cast",
+  "style": "02-voxel",
+  "source_profiles": [
+    "coder-kai",
+    "artistic-lyra",
+    "onboarding-olivia",
+    "super-chotu",
+    "project-manager-pete",
+    "research-ray",
+    "writer-quill",
+    "analyst-echo",
+    "predictor-paul",
+    "strategy-sam",
+    "controller-casey",
+    "optimizer-ollie",
+    "threat-hunter-theo",
+    "cleaner-cody"
+  ],
+  "blender": "5.2.2 LTS",
+  "units": "metres; GLB Y-up",
+  "references": {
+    "00-city-perspectives": "r004",
+    "01-living-community": "r002",
+    "02-creating-exploring": "r002",
+    "03-interfaces-perspectives": "r003"
+  },
+  "provenance": "Original procedural meshes and animations; no imported geometry, textures or humanoid experiment assets.",
+  "acceptance": "Pilot technical evidence only; full cast production acceptance pending.",
+  "appearance_review": {
+    "coder-kai": "Kai robot appearance approved by user 2026-09-22; movement extension subject to technical verification",
+    "artistic-lyra": "Lyra robot appearance approved by user 2026-09-22; movement extension subject to technical verification",
+    "onboarding-olivia": "New Olivia appearance; operator review pending",
+    "super-chotu": "New Chotu appearance; operator review pending",
+    "project-manager-pete": "New Pete appearance; operator review pending",
+    "research-ray": "New Ray appearance; operator review pending",
+    "writer-quill": "New Quill appearance; operator review pending",
+    "analyst-echo": "New Echo appearance; operator review pending",
+    "predictor-paul": "New Paul appearance; operator review pending",
+    "strategy-sam": "New Sam appearance; operator review pending",
+    "controller-casey": "New Casey appearance; operator review pending",
+    "optimizer-ollie": "New Ollie appearance; operator review pending",
+    "threat-hunter-theo": "New Theo appearance; operator review pending",
+    "cleaner-cody": "New Cody appearance; operator review pending"
+  },
+  "motion": {
+    "fps": 24,
+    "walk_period_seconds": 1.3333333333333333,
+    "walk_stride_metres": 0.72,
+    "walk_speed_metres_per_second": 0.54,
+    "transition_seconds": 1.3333333333333333,
+    "standing_forward_offset_metres": 0.33630343441600474
+  },
+  "assets": {
+    "desk": {
+      "file": "godot/assets/desk.glb",
+      "bytes": 22868,
+      "sha256": "15782a6e06687c7f1a1a5f25214f9b471a9bd5f3c1896a20877a64a21782d604",
+      "source_vertices": 200,
+      "source_faces": 150
+    },
+    "chair": {
+      "file": "godot/assets/chair.glb",
+      "bytes": 10348,
+      "sha256": "e8a703e8140f04220a4a4833e3e618572de5d29519aa604babcd650aff3e206f",
+      "source_vertices": 80,
+      "source_faces": 60
+    },
+    "terminal": {
+      "file": "godot/assets/terminal.glb",
+      "bytes": 37040,
+      "sha256": "af3ad991da8dba1a61e0a10f42b132cea8da89a8e739f46c0e37672be96fc75d",
+      "source_vertices": 384,
+      "source_faces": 288
+    },
+    "environment": {
+      "file": "godot/assets/environment.glb",
+      "bytes": 229444,
+      "sha256": "1517fac4b4b02f70390f383d2a6f809ae5ba0ca3adb20cf5a666ebfc91ff8262",
+      "source_vertices": 3452,
+      "source_faces": 2569
+    },
+    "kai": {
+      "file": "godot/assets/kai.glb",
+      "bytes": 158412,
+      "sha256": "a61d35118f408bbf428870c8c3d7409e6a03475098524c48859ae0ce7f6eae99",
+      "source_vertices": 536,
+      "source_faces": 402
+    },
+    "lyra": {
+      "file": "godot/assets/lyra.glb",
+      "bytes": 159484,
+      "sha256": "c002b21914f3bd3f5acadd784a0c4778b8595155305ffbbc8528de9d8ce7ac16",
+      "source_vertices": 544,
+      "source_faces": 408
+    },
+    "onboarding-olivia": {
+      "file": "godot/assets/onboarding-olivia.glb",
+      "bytes": 158896,
+      "sha256": "0522689b2535c84ea9b25a054ed56657f783478245f25a552641ae1551dab4e7",
+      "source_vertices": 552,
+      "source_faces": 414
+    },
+    "super-chotu": {
+      "file": "godot/assets/super-chotu.glb",
+      "bytes": 154928,
+      "sha256": "a38d1de3a431fe60f3d75138ee787adfea9ef01c6fdbebc747af1a5a5083646e",
+      "source_vertices": 520,
+      "source_faces": 390
+    },
+    "project-manager-pete": {
+      "file": "godot/assets/project-manager-pete.glb",
+      "bytes": 152100,
+      "sha256": "39dd2a8522c1200f35c621a01e4188fc447565f298ffaafa310e6db16b51f6a9",
+      "source_vertices": 512,
+      "source_faces": 384
+    },
+    "research-ray": {
+      "file": "godot/assets/research-ray.glb",
+      "bytes": 153608,
+      "sha256": "65a9a51d22f438b81f9e3f093a948e135a55f58d1dfbca0c0a164fbf21ce5fcc",
+      "source_vertices": 520,
+      "source_faces": 390
+    },
+    "writer-quill": {
+      "file": "godot/assets/writer-quill.glb",
+      "bytes": 154384,
+      "sha256": "55d58982ae7caf193551851b834d79fada414bb7019d2eda256c60e47e9ba2ed",
+      "source_vertices": 520,
+      "source_faces": 390
+    },
+    "analyst-echo": {
+      "file": "godot/assets/analyst-echo.glb",
+      "bytes": 150832,
+      "sha256": "50856f433eab9cf94513dbc9d3141f75142ffcca4dfd63ac9e4dd645cfcc22b1",
+      "source_vertices": 512,
+      "source_faces": 384
+    },
+    "predictor-paul": {
+      "file": "godot/assets/predictor-paul.glb",
+      "bytes": 155756,
+      "sha256": "4ff8153a13a322078bea0e8f6ed992165c28a5222a6bce39fc17230dc9757064",
+      "source_vertices": 528,
+      "source_faces": 396
+    },
+    "strategy-sam": {
+      "file": "godot/assets/strategy-sam.glb",
+      "bytes": 151396,
+      "sha256": "9a7665f49fe0fb746149c0e7916805b226766e214e3c86662113ea396e65b723",
+      "source_vertices": 504,
+      "source_faces": 378
+    },
+    "controller-casey": {
+      "file": "godot/assets/controller-casey.glb",
+      "bytes": 156616,
+      "sha256": "80c33bef3c6cd9627fffedcea3adc25cdd1b1f64be3fb62cd8204bb3f98513d7",
+      "source_vertices": 544,
+      "source_faces": 408
+    },
+    "optimizer-ollie": {
+      "file": "godot/assets/optimizer-ollie.glb",
+      "bytes": 156336,
+      "sha256": "63e70c4afab7155d9e9832d662ec151188f6951dad7a0e4b887e3abc8246a685",
+      "source_vertices": 536,
+      "source_faces": 402
+    },
+    "threat-hunter-theo": {
+      "file": "godot/assets/threat-hunter-theo.glb",
+      "bytes": 150532,
+      "sha256": "380e8e46f06166d38fafba7d4448f6a989ef4c92abee7eb927c90817ae880115",
+      "source_vertices": 520,
+      "source_faces": 390
+    },
+    "cleaner-cody": {
+      "file": "godot/assets/cleaner-cody.glb",
+      "bytes": 156072,
+      "sha256": "7a67aa888c73ddcc283ae75f64d55b4b54150870faaf19ba9841385a21857299",
+      "source_vertices": 528,
+      "source_faces": 396
+    }
+  },
+  "source_sha256": "3a3807a567c925549c91ba4fcfeedf3dda1db416db3753f9c6418a880b3c8c87",
+  "recipe_sha256": {
+    "build_assets.py": "f90eef95daf23f068f204c252de033fa348195dfb9e01388449b1f2987eeee90",
+    "geometry.py": "0e74c177c86b0f89a84412cf283309451c8bf6c0404bb622d0954ea648bcad7b",
+    "workshop.py": "5fb946a0734d928eb0f9815026b5fd9f25b49c4d732c7815ccde5b224a34a5ae",
+    "character.py": "c48dfecf5a147b55cd3a39de24ad928c89c3cb9005354157a4ebfe3b38140917"
+  }
+}

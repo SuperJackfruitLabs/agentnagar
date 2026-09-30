@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "6975f351ae956c645602c8101495c935689b5d5c6587abb718221ef3c6f618c1",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "4fb097550182062f652ba5b09712bcc8a9eab8029777785dd2731446c47024a2"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/07-paper-craft/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/candidates/01-pass2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

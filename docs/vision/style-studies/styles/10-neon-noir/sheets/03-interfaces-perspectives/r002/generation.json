@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sha256": "2fac8cc261e373f0b845b8314307d4dcb8d31763d20f5efa106cfff3380b554a",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "243fad33ddbe5b9d4af4045e6d29f5532da9c1af6666bb829611e4b47abcc335"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/03-interfaces-perspectives-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png",
+    "../../00-city-perspectives/r003/image.png",
+    "../../01-living-community/r001/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

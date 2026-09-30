@@ -1,0 +1,9 @@
+{
+  "character_solarpunk": {"size": [0.99, 2.01, 1.0], "tris": 10000,
+    "nodes": ["rig_human", "skin", "top", "bottom", "shoes", "details", "hair_0", "hair_1", "hair_2", "hair_3",
+              "hat_sun", "backpack", "face", "far", "umbrella", "apron"],
+    "animations": ["walk", "sit", "idle", "typing"]},
+  "agent_solarpunk": {"size": [0.99, 2.01, 1.0], "tris": 7000,
+    "nodes": ["rig_robot", "shell", "trim", "joint", "visor", "eyes", "scarf", "badge", "umbrella", "far"],
+    "animations": ["walk", "sit", "idle", "typing"]}
+}

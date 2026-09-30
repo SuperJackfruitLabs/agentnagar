@@ -1,0 +1,240 @@
+{
+  "baseline": "ba5f4242d02aa37686b2a18b9add8813c5490130",
+  "tool": "built-in image_gen.imagegen",
+  "promoted": [
+    {
+      "gallery": "docs/vision/style-studies/10-neon-noir/00-city-perspectives.png",
+      "selected_candidate": "candidates/00-city-perspectives-pass5.png",
+      "prompt": "prompts/00-city-perspectives-pass5.txt",
+      "sha256": "0db36e70c9c1441a62aef5fc468605783e37d3619181d17d0c06b4c777311e86",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "gallery": "docs/vision/style-studies/10-neon-noir/01-living-community.png",
+      "selected_candidate": "candidates/01-living-community-pass1.png",
+      "prompt": "prompts/01-living-community-pass1.txt",
+      "sha256": "d2059a73278ed1048244cc896c97073e4a00664ad5051ee1d6a3a30af4d32e75",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "gallery": "docs/vision/style-studies/10-neon-noir/02-creating-exploring.png",
+      "selected_candidate": "candidates/02-creating-exploring-pass2.png",
+      "prompt": "prompts/02-creating-exploring-pass2.txt",
+      "sha256": "2c41032dccc09936867aef2b33228f1f590cf45120491cfe66c2783b394ebb81",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "gallery": "docs/vision/style-studies/10-neon-noir/03-interfaces-perspectives.png",
+      "selected_candidate": "candidates/03-interfaces-perspectives-pass3.png",
+      "prompt": "prompts/03-interfaces-perspectives-pass3.txt",
+      "sha256": "c865a700e9dbe2e2c759f05c6c7feeb9f3dd07c23b99bf476944ac16aba8588e",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "originals": [
+    {
+      "path": "originals/00-city-perspectives.png",
+      "sha256": "f1096380a3b2bedc75ffd17ed2dd6154174f033d6ca06364d61ffbcc0c9d2f61",
+      "baseline_equal": true
+    },
+    {
+      "path": "originals/00-city-perspectives.prompt.md",
+      "sha256": "f469b51d3ee7c0e7ea42a19d2db5c8a77907b597962b6525838c0dcec4825b4e",
+      "baseline_equal": true
+    },
+    {
+      "path": "originals/01-living-community.png",
+      "sha256": "4b2c2439ceda388a3e12a5c2630ae56831469ead980f5bd482e58b5179be304f",
+      "baseline_equal": true
+    },
+    {
+      "path": "originals/01-living-community.prompt.txt",
+      "sha256": "4562c9627c9dd3d7f3d484f43357495d70b8660f182ed492087efb7eae27c874",
+      "baseline_equal": true
+    },
+    {
+      "path": "originals/02-creating-exploring.png",
+      "sha256": "825993c789045609d83af155edb5cc5f28a03926affa98f95768517241b7caeb",
+      "baseline_equal": true
+    },
+    {
+      "path": "originals/02-creating-exploring.prompt.txt",
+      "sha256": "f5b7848ddd875170f78c3a4d0a4e5e5cdf5da2a0faa3011e6244322710730da3",
+      "baseline_equal": true
+    },
+    {
+      "path": "originals/03-interfaces-perspectives.png",
+      "sha256": "1dceb1114f1dd9eac084fc4cb244a5c29431a85e6f24b801c24c8069aebb4dee",
+      "baseline_equal": true
+    },
+    {
+      "path": "originals/03-interfaces-perspectives.prompt.txt",
+      "sha256": "17fc410bf0b1cddf84f77c92fbec1278ca2d1044ad491484c2d05e949c8489b5",
+      "baseline_equal": true
+    },
+    {
+      "path": "originals/README.md",
+      "sha256": "fcf326900133d0167f24c3de42ba580b8c89f23b43d123925eb4e5da6f9152e8",
+      "baseline_equal": true
+    }
+  ],
+  "candidates": [
+    {
+      "path": "candidates/00-city-perspectives-pass1.png",
+      "sha256": "8d0c09317b0b0bcc2bd2a32cb5dc9778d874897b313d0daa36e3c01b00bf945b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/00-city-perspectives-pass1.txt"
+    },
+    {
+      "path": "candidates/00-city-perspectives-pass2.png",
+      "sha256": "ea85e78ec610773d347af50cfaaee032d1bf9d8acff0c4ba7d28bb7339a0d7a7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/00-city-perspectives-pass2.txt"
+    },
+    {
+      "path": "candidates/00-city-perspectives-pass3.png",
+      "sha256": "d5669ab04d3c999f33fc060681c67e916e671e13132b7329c115a1c9e6db89ce",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/00-city-perspectives-pass3.txt"
+    },
+    {
+      "path": "candidates/00-city-perspectives-pass4.png",
+      "sha256": "123e42bd286053fcf0fa6bd28cfe8e28946f3b12f2635c1e5f757f33c1b41abe",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/00-city-perspectives-pass4.txt"
+    },
+    {
+      "path": "candidates/00-city-perspectives-pass5.png",
+      "sha256": "0db36e70c9c1441a62aef5fc468605783e37d3619181d17d0c06b4c777311e86",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/00-city-perspectives-pass5.txt"
+    },
+    {
+      "path": "candidates/01-living-community-pass1.png",
+      "sha256": "d2059a73278ed1048244cc896c97073e4a00664ad5051ee1d6a3a30af4d32e75",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/01-living-community-pass1.txt"
+    },
+    {
+      "path": "candidates/02-creating-exploring-pass1.png",
+      "sha256": "fcf00db6ba0d6f7e96702f71948616c1962c4c3f9a2a817f8e6bb41d4642406d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/02-creating-exploring-pass1.txt"
+    },
+    {
+      "path": "candidates/02-creating-exploring-pass2.png",
+      "sha256": "2c41032dccc09936867aef2b33228f1f590cf45120491cfe66c2783b394ebb81",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/02-creating-exploring-pass2.txt"
+    },
+    {
+      "path": "candidates/03-interfaces-perspectives-pass1.png",
+      "sha256": "2fac8cc261e373f0b845b8314307d4dcb8d31763d20f5efa106cfff3380b554a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/03-interfaces-perspectives-pass1.txt"
+    },
+    {
+      "path": "candidates/03-interfaces-perspectives-pass2.png",
+      "sha256": "32f3006fcc3827b953dcad9c1ec6701d8b259407a612246adae00934644e3806",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/03-interfaces-perspectives-pass2.txt"
+    },
+    {
+      "path": "candidates/03-interfaces-perspectives-pass3.png",
+      "sha256": "c865a700e9dbe2e2c759f05c6c7feeb9f3dd07c23b99bf476944ac16aba8588e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/03-interfaces-perspectives-pass3.txt"
+    }
+  ],
+  "prompts": [
+    {
+      "path": "prompts/00-city-perspectives-pass1.txt",
+      "sha256": "5a210a3296a436f8b2ab8f0e43c13e2e68b11ec7c00e4d8c17ffa6a7391cb28c"
+    },
+    {
+      "path": "prompts/00-city-perspectives-pass2.txt",
+      "sha256": "267fe83fe2eae808c5506d726d39ee3110020d0f2fe6f2a3e7f49321ea4a84f7"
+    },
+    {
+      "path": "prompts/00-city-perspectives-pass3.txt",
+      "sha256": "753c9be6bb629578460902a1604f3ecaac4af10eb4b5876a24e06bf07414c96b"
+    },
+    {
+      "path": "prompts/00-city-perspectives-pass4.txt",
+      "sha256": "dca2289e33590aeb2ad48d34c2acb5830c17698c4d470d7d4245e2c3a9573b5f"
+    },
+    {
+      "path": "prompts/00-city-perspectives-pass5.txt",
+      "sha256": "158f2d293639910583b88df45fb67b131d536ed78ec2010825f514de41927fed"
+    },
+    {
+      "path": "prompts/01-living-community-pass1.txt",
+      "sha256": "8c5a36e1229c60b2bd09808d82f1ed68d5eeebfe73dddbaf460e87e6616fd7c0"
+    },
+    {
+      "path": "prompts/02-creating-exploring-pass1.txt",
+      "sha256": "6afd0cfa7d9db4290f251554d22d5329c4b53bd79e3e8a1c0f881098cf216141"
+    },
+    {
+      "path": "prompts/02-creating-exploring-pass2.txt",
+      "sha256": "9fcd89323f3fefe4364b8c9d9e030061a29a41c69f289ebc8a774de5aff97992"
+    },
+    {
+      "path": "prompts/03-interfaces-perspectives-pass1.txt",
+      "sha256": "243fad33ddbe5b9d4af4045e6d29f5532da9c1af6666bb829611e4b47abcc335"
+    },
+    {
+      "path": "prompts/03-interfaces-perspectives-pass2.txt",
+      "sha256": "c87d4c2d4bd4023238cc1a99477874200c82d8f55cd14d6edbd59a1e039106c4"
+    },
+    {
+      "path": "prompts/03-interfaces-perspectives-pass3.txt",
+      "sha256": "0e1655dc148ffbe22d1e6004ee6777bff4a15f84f191a77e9d790cd046c9326c"
+    }
+  ]
+}

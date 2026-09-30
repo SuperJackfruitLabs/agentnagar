@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sha256": "3945326510bb4d456edf69b291e5feae6ccacd61111d9b6cc29637d45fb90c2b",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "26a32150305d61e81c4ca0f32390235c8c89d79789d6aed6cff6d9c9ee90ba89"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/02-voxel/00-city-perspectives.pass-2.png"
+  ],
+  "reference_images": [
+    "../r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

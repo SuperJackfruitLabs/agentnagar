@@ -1,0 +1,136 @@
+{
+  "revision": "shared-workshop-r004",
+  "blender": "5.2.2 LTS",
+  "units": "metres; GLB/Godot Y-up",
+  "references": {
+    "city": "02-voxel/00-city-perspectives/r004",
+    "living": "02-voxel/01-living-community/r002"
+  },
+  "provenance": "Original procedural modular environment; unchanged existing robot/furniture GLBs imported for editable source presentation.",
+  "scope": "One shared workshop and bounded courtyard, sample data. No full district or production acceptance.",
+  "assets": {
+    "floor": {
+      "file": "godot/assets/workshop/floor.glb",
+      "bytes": 8340,
+      "sha256": "eff0bb7ddaf7e8e6405463f12d3ad517c73a8ef5036ec1b8c844fc1664e94278",
+      "source_vertices": 72
+    },
+    "wall": {
+      "file": "godot/assets/workshop/wall.glb",
+      "bytes": 6012,
+      "sha256": "0bf5b18df20c292e528dae8dd8f4beaacaf7e14fb9ecee6cbbb81347eb00db6a",
+      "source_vertices": 40
+    },
+    "window": {
+      "file": "godot/assets/workshop/window.glb",
+      "bytes": 10040,
+      "sha256": "ba119225a63c1b4cd5cfd7b88106f1382827a640490b5e0d0b214b42bc365d56",
+      "source_vertices": 88
+    },
+    "door": {
+      "file": "godot/assets/workshop/door.glb",
+      "bytes": 6352,
+      "sha256": "d231ac414fa6ed7ed20e50bd2c08653edeec3f4c710ffa64466123b1e9742e5e",
+      "source_vertices": 48
+    },
+    "roof": {
+      "file": "godot/assets/workshop/roof.glb",
+      "bytes": 24584,
+      "sha256": "e1b5301debc3489653a82c535942f66a070543cec79ec0b1906309e11c725e91",
+      "source_vertices": 264
+    },
+    "path": {
+      "file": "godot/assets/workshop/path.glb",
+      "bytes": 5452,
+      "sha256": "24e424a5c6828a7211387dd2c078514cf78e08a3f68cd6a42f2905709fbe7a9e",
+      "source_vertices": 40
+    },
+    "lawn": {
+      "file": "godot/assets/workshop/lawn.glb",
+      "bytes": 1636,
+      "sha256": "bd70297b6ec805dfaa25bc97e71ccce9ebe0dc70f88af84bbe662d632a091694",
+      "source_vertices": 8
+    },
+    "path_corner": {
+      "file": "godot/assets/workshop/path_corner.glb",
+      "bytes": 8232,
+      "sha256": "9afc7b7f45a20ca1e08cf890a77bdbda930f1feb7fd58f7916c7bd9f7efba66e",
+      "source_vertices": 64
+    },
+    "path_t": {
+      "file": "godot/assets/workshop/path_t.glb",
+      "bytes": 8872,
+      "sha256": "6d05c4bc76aa8750582352594ae9c34ddfb422ffda67b14fd4b6414cbf9b0c25",
+      "source_vertices": 72
+    },
+    "railing": {
+      "file": "godot/assets/workshop/railing.glb",
+      "bytes": 5456,
+      "sha256": "c1550c54a2d54a8681d4f1b81682526ad39d51cf8aea5dd13c05544982df341f",
+      "source_vertices": 40
+    },
+    "awning": {
+      "file": "godot/assets/workshop/awning.glb",
+      "bytes": 14116,
+      "sha256": "2307e1bab62876ed33685141ff494bbaf3b35b14ca35926d8040d8676c22a2d5",
+      "source_vertices": 144
+    },
+    "planter": {
+      "file": "godot/assets/workshop/planter.glb",
+      "bytes": 7980,
+      "sha256": "932465a674ba6d0e9b360630a1c1a24638f83b48c82a081df55b084f3f0a9772",
+      "source_vertices": 64
+    },
+    "tree": {
+      "file": "godot/assets/workshop/tree.glb",
+      "bytes": 9172,
+      "sha256": "34154d33df664db79b3d2f860048a4af424900356374ca68fa7e2c0ff38188db",
+      "source_vertices": 64
+    },
+    "bench": {
+      "file": "godot/assets/workshop/bench.glb",
+      "bytes": 7448,
+      "sha256": "21ac4343db6f3d6a8fe79d2facab0c4e6ab2f3506ab8b05a3d9971e43738b500",
+      "source_vertices": 56
+    },
+    "shelf": {
+      "file": "godot/assets/workshop/shelf.glb",
+      "bytes": 19644,
+      "sha256": "2cf4c4e9b7d5d7ab4153b0f5ef28da530826d168773a277eb5be6477d17ce02a",
+      "source_vertices": 192
+    },
+    "sign": {
+      "file": "godot/assets/workshop/sign.glb",
+      "bytes": 144912,
+      "sha256": "77a8da2c1c50716075e6c3ad3f6e5778f0c9b12ff802a34da8d6989464f48dc2",
+      "source_vertices": 3660
+    }
+  },
+  "reused_assets": {
+    "desk": "15782a6e06687c7f1a1a5f25214f9b471a9bd5f3c1896a20877a64a21782d604",
+    "chair": "e8a703e8140f04220a4a4833e3e618572de5d29519aa604babcd650aff3e206f",
+    "terminal": "af3ad991da8dba1a61e0a10f42b132cea8da89a8e739f46c0e37672be96fc75d",
+    "onboarding-olivia": "0522689b2535c84ea9b25a054ed56657f783478245f25a552641ae1551dab4e7",
+    "super-chotu": "a38d1de3a431fe60f3d75138ee787adfea9ef01c6fdbebc747af1a5a5083646e",
+    "project-manager-pete": "39dd2a8522c1200f35c621a01e4188fc447565f298ffaafa310e6db16b51f6a9",
+    "kai": "a61d35118f408bbf428870c8c3d7409e6a03475098524c48859ae0ce7f6eae99",
+    "lyra": "c002b21914f3bd3f5acadd784a0c4778b8595155305ffbbc8528de9d8ce7ac16",
+    "research-ray": "65a9a51d22f438b81f9e3f093a948e135a55f58d1dfbca0c0a164fbf21ce5fcc",
+    "writer-quill": "55d58982ae7caf193551851b834d79fada414bb7019d2eda256c60e47e9ba2ed",
+    "analyst-echo": "50856f433eab9cf94513dbc9d3141f75142ffcca4dfd63ac9e4dd645cfcc22b1",
+    "predictor-paul": "4ff8153a13a322078bea0e8f6ed992165c28a5222a6bce39fc17230dc9757064",
+    "strategy-sam": "9a7665f49fe0fb746149c0e7916805b226766e214e3c86662113ea396e65b723",
+    "controller-casey": "80c33bef3c6cd9627fffedcea3adc25cdd1b1f64be3fb62cd8204bb3f98513d7",
+    "optimizer-ollie": "63e70c4afab7155d9e9832d662ec151188f6951dad7a0e4b887e3abc8246a685",
+    "threat-hunter-theo": "380e8e46f06166d38fafba7d4448f6a989ef4c92abee7eb927c90817ae880115",
+    "cleaner-cody": "7a67aa888c73ddcc283ae75f64d55b4b54150870faaf19ba9841385a21857299"
+  },
+  "source_sha256": "7b6d78e7b135b8ce3d9f6bdf5b83726c6675f09c921f46ea13a64183dfc7647a",
+  "layout_sha256": "c7a9043a68bcf28b559a3e0d6b438f7e419e8fdf28fa5596d7fdec789bd3c6ba",
+  "recipe_sha256": {
+    "build_shared_workshop.py": "366313674b4ec47b7c12f34a59c904b8939b9f1d795069b6ecdf9e9508f05f2b",
+    "shared_workshop.py": "f91196288b2cbe786c4974252d2a178dd90f586aa9bbfdeb7dba2039d8932d2e",
+    "geometry.py": "0e74c177c86b0f89a84412cf283309451c8bf6c0404bb622d0954ea648bcad7b",
+    "character.py": "c48dfecf5a147b55cd3a39de24ad928c89c3cb9005354157a4ebfe3b38140917"
+  }
+}

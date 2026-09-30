@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "2ebf80640d3be032a0caa40c63d3a62f9558c34ee0f3a2cda9a56eba8c83dce7",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/24-dieselpunk-civic-works/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

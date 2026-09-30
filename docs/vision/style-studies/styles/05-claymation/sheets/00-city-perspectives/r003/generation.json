@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "373768b6e8721d6b162097a76f09ff8a2e6b6a35739ae6773658855f3aacf158",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "a75c73c179210fb4000ddb6fda0ec1e64dc285389e934ef8625cea8679e7186e"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/05-claymation/00-city-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/05-claymation/candidates/00-pass2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

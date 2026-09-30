@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "a52cbe663e2118a4d1d927ea9494b1c15d408d29040b7f9a6604310aafe7b0c2",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "71ab53b9a5e5af604324a20f481c8415ec0995c4fad0231b42b685ee5822a4c2"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/14-linocut-relief/03-interfaces-perspectives.pass-3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

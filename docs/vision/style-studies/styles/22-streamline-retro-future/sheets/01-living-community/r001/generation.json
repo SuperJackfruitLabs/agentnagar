@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "5f64f95e9fa8ff88fad7df421fb63e1716e4a52f1aeb38d27c684c3b2e77bf15",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/22-streamline-retro-future/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

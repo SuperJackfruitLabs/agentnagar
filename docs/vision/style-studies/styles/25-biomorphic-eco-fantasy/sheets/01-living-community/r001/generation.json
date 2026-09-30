@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "4b136c8ef28aea5dcdc6634a5c08d756accbef489d75299bb345c2acdf268d0c",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/25-biomorphic-eco-fantasy/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

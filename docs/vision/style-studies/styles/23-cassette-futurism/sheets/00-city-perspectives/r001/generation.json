@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "45afd252404bd01dfa68b6241a638e5b4c0c5dfd96e93e4361345ed4c5dd14b8",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ecb5631d3faf9182f3b513f4d5aaa1ea59c3bf3677f56f9322f6fe60a4ad3ac6"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/23-cassette-futurism/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

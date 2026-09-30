@@ -1,0 +1,13 @@
+{
+  "name": "agentnagar-voxel-pilot-validation",
+  "private": true,
+  "version": "0.0.0",
+  "license": "AGPL-3.0-only",
+  "description": "Pinned Khronos validator for local pilot asset checks",
+  "scripts": {
+    "validate": "node ../scripts/validate_exports.cjs"
+  },
+  "dependencies": {
+    "gltf-validator": "2.0.0-dev.3.10"
+  }
+}

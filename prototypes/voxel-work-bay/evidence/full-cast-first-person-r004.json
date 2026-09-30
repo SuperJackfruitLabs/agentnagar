@@ -1,0 +1,18 @@
+{
+  "camera": "first_person",
+  "device": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+  "draw_calls": 381.0,
+  "error": 0,
+  "godot_version": "4.6.3-stable (flathub)",
+  "measurement_scope": "Single deterministic offline capture; not live frame timing",
+  "missing_assets": [],
+  "node_count": 1646.0,
+  "primitives": 18058.0,
+  "render_objects": 415.0,
+  "renderer": "gl_compatibility",
+  "static_memory_bytes": 53417443.0,
+  "viewport": [
+    1060,
+    660
+  ]
+}

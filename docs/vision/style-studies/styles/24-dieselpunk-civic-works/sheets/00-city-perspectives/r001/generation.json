@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "0a1cae28ae83082b615783ceaea0d1d4a79a35a545df600491917370e88f931a",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "8a8b3e0f099106476b71f797d93fc664c7fc02196fa55559aa26ccad1402ffc4"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/24-dieselpunk-civic-works/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

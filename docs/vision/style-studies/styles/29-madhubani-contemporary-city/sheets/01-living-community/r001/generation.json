@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "7913216df73a2430fd187fec7c8de1cc2ef8017b48adf97cfd89d15e50955846",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/29-madhubani-contemporary-city/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

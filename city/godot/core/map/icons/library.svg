@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+	<!-- Library: an open book, its two pages either side of the spine. -->
+	<g fill="#FFFFFF">
+		<path d="M22.5 12 C17 8.5 10 8 3 9.5 V37 C10 35.5 17 36 22.5 39.5 Z"/>
+		<path d="M25.5 12 C31 8.5 38 8 45 9.5 V37 C38 35.5 31 36 25.5 39.5 Z"/>
+		<path d="M3 39.5 C10 38 17 38.5 24 42.5 C31 38.5 38 38 45 39.5 V42 C38 40.5 31 41 24 45 C17 41 10 40.5 3 42 Z"/>
+	</g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+	<!-- Workshop: a hammer and a wrench, crossed. -->
+	<g transform="rotate(45 24 24)" fill="#FFFFFF">
+		<rect x="21" y="15" width="6" height="30" rx="3"/>
+		<path d="M13 5 H33 A3 3 0 0 1 36 8 V14 A3 3 0 0 1 33 17 H13 L8 11 Z"/>
+	</g>
+	<g transform="rotate(-45 24 24)" fill="#FFFFFF">
+		<rect x="21" y="15" width="6" height="30" rx="3"/>
+		<path d="M21 1.5 V11 H27 V1.5 A9 9 0 1 1 21 1.5 Z"/>
+	</g>
+</svg>

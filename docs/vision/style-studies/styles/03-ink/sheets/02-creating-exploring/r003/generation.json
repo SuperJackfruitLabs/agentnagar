@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sha256": "876482b8a8469a5000a939fe92ce8d58797fb8bd6f02ba593013e126f5670061",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ce81dc1e7881a01f9d20f06294f01ec7591c808b1fb6f372eefc074548521f5c"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/03-ink/02-creating-exploring.pass-2.png"
+  ],
+  "reference_images": [
+    "../r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

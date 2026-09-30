@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "889b8694969b9c2f02aa3c73900f725670c8459c3a9949d422e3c1022a47e215",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "007711c2da565365f25155b073c6bdb74795da43e93d03362a2d2616acb96b8f"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/06-anime/03-interfaces-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/candidates/03-pass3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "f1b7681f4b9600e84a841fa33294a6e9a88f56106b6f2b183fdec6637a4c5d3e",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/22-streamline-retro-future/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

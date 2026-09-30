@@ -1,0 +1,104 @@
+{
+  "fleet_agents": {
+    "stats": {"nodes": {"total": 2, "online": 1}, "agents": {"total": 2}, "updatesAvailable": 0, "running": 1},
+    "agents": [
+      {
+        "stationId": "stn_build", "nodeId": "nod_desk", "nodeName": "desk", "agentName": "Build box",
+        "harness": "claude-code", "kind": "agent", "nodeStatus": "online", "agentVersion": "1.2.3",
+        "latestVersion": "1.2.3", "updateAvailable": false,
+        "capabilities": ["health", "logs", "fs.read", "terminal", "lifecycle", "acp", "changeset"],
+        "workspacePath": "/home/player/build", "status": "running", "cpuPct": 2.5, "memBytes": 123456, "uptimeSec": 900
+      },
+      {
+        "stationId": "stn_quiet", "nodeId": "nod_attic", "nodeName": "attic", "agentName": "Quiet box",
+        "harness": "codex", "kind": "agent", "nodeStatus": "offline", "agentVersion": null,
+        "latestVersion": "1.2.3", "updateAvailable": false, "capabilities": ["health"],
+        "workspacePath": null, "status": "unknown", "cpuPct": null, "memBytes": null, "uptimeSec": null
+      }
+    ]
+  },
+  "health": {
+    "running": true, "pid": 4242, "cpuPct": 2.5, "memBytes": 123456, "diskBytes": null,
+    "uptimeSec": 900, "lastActivity": "2026-09-29T09:00:00.000Z", "note": null
+  },
+  "stopped_health": {
+    "running": false, "pid": null, "cpuPct": null, "memBytes": null, "diskBytes": null,
+    "uptimeSec": null, "lastActivity": "2026-09-29T09:00:00.000Z", "note": null
+  },
+  "files": {
+    ".": [
+      {"name": "src", "path": "src", "type": "dir", "size": null, "modified": "2026-09-29T08:00:00.000Z"},
+      {"name": "README.md", "path": "README.md", "type": "file", "size": 27, "modified": "2026-09-29T08:00:00.000Z"},
+      {"name": "logo.png", "path": "logo.png", "type": "file", "size": 8, "modified": "2026-09-29T08:00:00.000Z"}
+    ],
+    "src": [
+      {"name": "main.rs", "path": "src/main.rs", "type": "file", "size": 45, "modified": "2026-09-29T08:00:00.000Z"}
+    ]
+  },
+  "file_contents": {
+    "README.md": {"encoding": "utf8", "content": "# Build box\nCounts words.\n"},
+    "src/main.rs": {"encoding": "utf8", "content": "fn main() {\n    println!(\"wc — words\");\n}\n"},
+    "logo.png": {"encoding": "base64", "content": "iVBORw0KGgo=", "mime": "image/png"}
+  },
+  "changeset_status": {
+    "repo": {"branch": "main", "head": "abc1234def5678", "detached": false},
+    "base": {"ref": "origin/main", "sha": "def4567abc1234", "reason": "upstream"},
+    "uncommitted": {
+      "files": [{"path": "src/main.rs", "oldPath": null, "status": "modified", "insertions": 1, "deletions": 1, "binary": false}],
+      "insertions": 1, "deletions": 1
+    },
+    "committed": {
+      "files": [], "insertions": 0, "deletions": 0,
+      "commits": [{"sha": "abc1234def5678", "shortSha": "abc1234", "subject": "Count words", "author": "Build box", "committedAt": "2026-09-29T08:30:00.000Z"}]
+    },
+    "truncatedFiles": false
+  },
+  "changeset_diff": {
+    "content": "diff --git a/src/main.rs b/src/main.rs\n--- a/src/main.rs\n+++ b/src/main.rs\n@@ -1 +1 @@\n-fn main() {}\n+fn main() {\n",
+    "truncated": false, "binary": false
+  },
+  "acp_session": {
+    "id": "acps_1", "stationId": "stn_build", "userId": "usr_player", "mode": "ask", "status": "idle",
+    "endedReason": null, "createdAt": "2026-09-29T09:00:00.000Z", "lastEventAt": "2026-09-29T09:00:05.000Z",
+    "title": null, "lastSeq": 0
+  },
+  "frames": {
+    "source": "agentpod@9bc1997: apps/hub/src/routes/station-terminal.ts:12-17 and 180-215; packages/contract/src/acp-session.ts:35-38, 99-113; apps/hub/src/routes/station-acp.ts",
+    "terminal": {
+      "client": {
+        "input": {"t": "input", "data": "ls -la\n"},
+        "resize": {"t": "resize", "cols": 120, "rows": 40}
+      },
+      "server": {
+        "data": {"t": "data", "data": "bHMgLWxhCg=="},
+        "exit": {"t": "exit"}
+      },
+      "close": {"exited": 1000, "refused": 1008, "offline": 1011}
+    },
+    "chat": {
+      "client": {
+        "subscribe": {"t": "subscribe", "sinceSeq": 0},
+        "prompt": {"t": "prompt", "text": "run the tests"},
+        "cancel": {"t": "cancel"},
+        "permission-answer": {"t": "permission-answer", "requestSeq": 3, "optionId": "opt_1"},
+        "set-mode": {"t": "set-mode", "mode": "ask"}
+      },
+      "server": {
+        "session": {"t": "session", "session": "<AcpSessionRow>"},
+        "event": {"t": "event", "event": {"sessionId": "acps_1", "seq": 7, "type": "agent-update", "payload": {}, "createdAt": "2026-09-29T09:00:07.000Z"}},
+        "replay-done": {"t": "replay-done", "lastSeq": 12},
+        "bye": {"t": "bye", "reason": "Session ended."}
+      },
+      "close": {"ended": 1000, "refused": 1008, "failed": 1011}
+    }
+  },
+  "acp_events": [
+    {"type": "user-prompt", "payload": {"text": "run the tests"}},
+    {"type": "state", "payload": {"status": "working"}},
+    {"type": "agent-update", "payload": {"sessionUpdate": "agent_message_chunk", "content": {"type": "text", "text": "All 7 tests pass."}}},
+    {"type": "permission-request", "payload": {"toolCall": {"toolCallId": "call_1", "title": "Run cargo test", "kind": "execute"}, "options": [{"optionId": "opt_1", "kind": "allow_once", "name": "Allow once"}, {"optionId": "opt_2", "kind": "reject_once", "name": "Reject"}]}},
+    {"type": "permission-answer", "payload": {"requestSeq": 4, "optionId": "opt_1"}},
+    {"type": "error", "payload": {"message": "The station's node went offline.", "kind": "node_offline"}},
+    {"type": "state", "payload": {"status": "idle"}}
+  ]
+}

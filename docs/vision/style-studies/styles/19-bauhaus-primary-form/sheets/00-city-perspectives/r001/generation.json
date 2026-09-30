@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "9ab6c0342c79ef563b5c672f4635ac3eb9960b40ddd0e00eba4a5e06eb3b12b5",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "898e2e40ac00d85f7ef567ef39de0bcb641fa32b77ef4cbae300e55f7d7924d7"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/19-bauhaus-primary-form/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

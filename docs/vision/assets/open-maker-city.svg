@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1180" viewBox="0 0 1240 1180" role="img" aria-labelledby="map-title map-desc">
+<title id="map-title">Agentnagar: open maker-city concept map</title>
+<desc id="map-desc">Ten districts arranged around Jackfruit Square. A greenbelt borders the learning grove, orchard homes and festival fields. SJL workshops for AgentPod, Superpipeline, SuperMD and Supermessage, and independent maker studios with an evening night market, flank the square. Civic works, a market and an expedition harbour complete the connected public city. The labels name 10 districts and 25 facilities, F01 to F25, as listed in the city plan. Agentnagar is a working name. This is a planning diagram, not a playable map.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#20372e}.title{font-size:34px;font-weight:700}.sub{font-size:19px}.name{font-size:23px;font-weight:700}.body{font-size:18px}.meta{font-size:16px;fill:#475e52}</style>
+<rect width="1240" height="1180" fill="#f6f2e7"/>
+<text x="45" y="60" class="title">Agentnagar · An open maker city</text>
+<text x="45" y="96" class="sub">Full-vision concept plan · Proposed geography · Working name · September 2026</text>
+<g id="D10"><rect x="45" y="140" width="1150" height="125" rx="22" fill="#d7e6ce" stroke="#adc79d"/>
+<text x="70" y="178" class="name">D10  Greenbelt &amp; Watershed</text>
+<text x="70" y="214" class="body">Orchards · habitats · water · restoration · monsoon challenges</text>
+<text x="70" y="243" class="meta">F10, F17 · Ecological systems support neighbourhoods and public life</text>
+<path d="M925 178 q25 -34 50 0 q25 -34 50 0 q25 -34 50 0" fill="none" stroke="#6d9264" stroke-width="3"/>
+<path d="M933 226 q25 -18 50 0 t50 0 t50 0" fill="none" stroke="#679d9a" stroke-width="4"/></g>
+<path d="M220 265 V1040" fill="none" stroke="#d1c8b1" stroke-width="14"/>
+<path d="M620 265 V1040" fill="none" stroke="#d1c8b1" stroke-width="14"/>
+<path d="M1020 265 V1040" fill="none" stroke="#d1c8b1" stroke-width="14"/>
+<path d="M220 415 H1020" fill="none" stroke="#d1c8b1" stroke-width="14"/>
+<path d="M220 680 H1020" fill="none" stroke="#d1c8b1" stroke-width="14"/>
+<path d="M220 945 H1020" fill="none" stroke="#d1c8b1" stroke-width="14"/>
+<g id="D04"><rect x="45" y="320" width="350" height="190" rx="18" fill="#fffcf4" stroke="#c6c7b7"/>
+<text x="65" y="353" class="meta">D04</text>
+<text x="65" y="387" class="name">Learning Grove</text>
+<text x="65" y="424" class="body">Library · school · research</text>
+<text x="65" y="453" class="body">Archive and reading garden</text>
+<text x="65" y="482" class="meta">F05, F06, F07, F20</text>
+</g>
+<g id="D05"><rect x="445" y="320" width="350" height="190" rx="18" fill="#fffcf4" stroke="#c6c7b7"/>
+<text x="465" y="353" class="meta">D05</text>
+<text x="465" y="387" class="name">Orchard Neighbourhoods</text>
+<text x="465" y="424" class="body">Homes · gardens · clubs</text>
+<text x="465" y="453" class="body">Mixed lifestyles, stable addresses</text>
+<text x="465" y="482" class="meta">F08</text>
+</g>
+<g id="D08"><rect x="845" y="320" width="350" height="190" rx="18" fill="#fffcf4" stroke="#c6c7b7"/>
+<text x="865" y="353" class="meta">D08</text>
+<text x="865" y="387" class="name">Festival Fields</text>
+<text x="865" y="424" class="body">Park · recreation · stadium</text>
+<text x="865" y="453" class="body">Games, performances and festivals</text>
+<text x="865" y="482" class="meta">F10, F11, F12</text>
+</g>
+<g id="D02"><rect x="45" y="585" width="350" height="190" rx="18" fill="#fffcf4" stroke="#c6c7b7"/>
+<text x="65" y="618" class="meta">D02</text>
+<text x="65" y="652" class="name">SJL Quarter</text>
+<text x="65" y="689" class="body">Product workshops · observatory</text>
+<text x="65" y="718" class="body">AgentPod · Superpipeline · SuperMD</text>
+<text x="65" y="747" class="meta">Supermessage Post Office · F02, F19, F25</text>
+</g>
+<g id="D01"><rect x="445" y="585" width="350" height="190" rx="18" fill="#f3dc87" stroke="#c6c7b7"/>
+<text x="465" y="618" class="meta">D01</text>
+<text x="465" y="652" class="name">Jackfruit Square</text>
+<text x="465" y="689" class="body">Arrival · directory · public news</text>
+<text x="465" y="718" class="body">The shared centre of city life</text>
+<text x="465" y="747" class="meta">F01, F18, F22</text>
+</g>
+<g id="D03"><rect x="845" y="585" width="350" height="190" rx="18" fill="#fffcf4" stroke="#c6c7b7"/>
+<text x="865" y="618" class="meta">D03</text>
+<text x="865" y="652" class="name">Maker Commons</text>
+<text x="865" y="689" class="body">Exhibits · studios · asset forge</text>
+<text x="865" y="718" class="body">Independent and community projects</text>
+<text x="865" y="747" class="meta">Night Market · F03, F04, F23, F24</text>
+</g>
+<g id="D06"><rect x="45" y="850" width="350" height="190" rx="18" fill="#fffcf4" stroke="#c6c7b7"/>
+<text x="65" y="883" class="meta">D06</text>
+<text x="65" y="917" class="name">Civic Works</text>
+<text x="65" y="954" class="body">Town hall · safety · fire · clinic</text>
+<text x="65" y="983" class="body">Water, power and recycling</text>
+<text x="65" y="1012" class="meta">F13, F14, F15, F16, F17</text>
+</g>
+<g id="D07"><rect x="445" y="850" width="350" height="190" rx="18" fill="#fffcf4" stroke="#c6c7b7"/>
+<text x="465" y="883" class="meta">D07</text>
+<text x="465" y="917" class="name">Market Street</text>
+<text x="465" y="954" class="body">Shops · repair · cooperative hall</text>
+<text x="465" y="983" class="body">Crafting, trade and public contracts</text>
+<text x="465" y="1012" class="meta">F09</text>
+</g>
+<g id="D09"><rect x="845" y="850" width="350" height="190" rx="18" fill="#fffcf4" stroke="#c6c7b7"/>
+<text x="865" y="883" class="meta">D09</text>
+<text x="865" y="917" class="name">Harbour &amp; Field Station</text>
+<text x="865" y="954" class="body">Transit · expeditions · logistics</text>
+<text x="865" y="983" class="body">Travelling projects and discoveries</text>
+<text x="865" y="1012" class="meta">F18, F21</text>
+</g>
+<path d="M55 1080 Q245 1053 440 1080 T825 1080 T1190 1080" fill="none" stroke="#82b1b0" stroke-width="9"/>
+<text x="45" y="1123" class="body">Spatial forms · Village: shared desks and rooms → Town: distinct institutions → City: connected districts</text>
+<text x="45" y="1156" class="meta">Routes are schematic. Public places also have accessible direct-entry views. No scale or capacity is implied.</text>
+</svg>

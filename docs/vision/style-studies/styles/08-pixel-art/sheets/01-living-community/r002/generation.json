@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "b198eae3bc40cf226c72be3fc5c035af63ccce126f43a39eb367043bb5f0e0c1",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "71de6d3442f79548d4df296849ab7b34c0e23e796eccc2ce889e6495b7b22a68"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/01-living-community-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png",
+    "../../00-city-perspectives/r003/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

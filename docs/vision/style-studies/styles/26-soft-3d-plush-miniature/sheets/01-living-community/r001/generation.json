@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "f334706db52b951038a3a18b689ba91abdf39c9a6c482c8454cd0bc9abcf02d4",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/26-soft-3d-plush-miniature/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

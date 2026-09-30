@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="en" data-style="16-chalk-pastel-mural">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>16 Chalk pastel mural · Agentnagar style study</title>
+<meta name="description" content="A sidewalk mural you can draw on: the Chalk pastel mural style study for Agentnagar.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root {
+  --pave: #d8d1c1;          /* cream stone, sampled */
+  --pave-deep: #c9c1ae;
+  --charcoal: #2f353b;      /* charcoal contour, sampled */
+  --slate: #385571;         /* slate chalkboard, sampled */
+  --slate-deep: #2c3a47;
+  --slate-ink: #304a64;      /* slate, deepened for text contrast */
+  --teal: #437580;          /* river teal, sampled */
+  --terra: #ad6e4c;         /* terracotta roof, sampled */
+  --terra-ink: #6e3b22;
+  --moss: #687349;          /* foliage, sampled */
+  --apricot: #d89771;       /* pastel orange, sampled */
+  --lamp: #fde8d2;          /* lamp glow, sampled */
+  --chalk: #f3ecdc;
+  --hand: 'Patrick Hand', 'Comic Sans MS', system-ui, sans-serif;
+  --letter: 'Kalam', 'Patrick Hand', system-ui, sans-serif;
+  --scrawl: 'Caveat', 'Patrick Hand', cursive;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  color: var(--charcoal);
+  font: 400 1.18rem/1.5 var(--hand);
+  background-color: var(--pave);
+  /* speckled grain + faint slab joints: a weathered pavement */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .18 0 0 0 0 .2 0 0 0 0 .22 0 0 0 -2.2 1.35'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .5 0 0 0 0 .42 0 0 0 1.1 -.45'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23m)'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, rgba(47,53,59,.09) 2px, transparent 2px),
+    linear-gradient(0deg, rgba(47,53,59,.09) 2px, transparent 2px);
+  background-size: 220px 220px, 300px 300px, 360px 100%, 100% 360px;
+  overflow-x: hidden;
+}
+a { color: var(--slate-ink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--terra-ink); }
+:focus-visible { outline: 3px dashed var(--terra-ink); outline-offset: 4px; border-radius: 4px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--slate-deep); color: var(--chalk); padding: 8px 14px; z-index: 20; }
+.skip:focus { top: 12px; }
+
+/* ---------- chalk lettering ---------- */
+.rough { filter: url(#chalk-edge); }
+.slab {
+  display: inline-block;
+  position: relative;
+  padding: .12em .6em .06em;
+  color: var(--chalk);
+  font: 700 clamp(1.6rem, 3.4vw, 2.5rem)/1.15 var(--letter);
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  margin: 0 0 .7rem;
+}
+.slab::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--slate-deep);
+  z-index: -1;
+  filter: url(#torn);
+  clip-path: polygon(0 6%, 4% 0, 97% 3%, 100% 18%, 99% 92%, 96% 100%, 2% 97%, 0 80%);
+}
+.slab span { filter: url(#chalk-edge); display: inline-block; }
+.underline {
+  display: block; height: 12px; width: min(260px, 70%); margin: -.2rem 0 .8rem;
+}
+.scrawl { font-family: var(--scrawl); font-size: 1.45rem; line-height: 1.2; color: var(--slate-ink); }
+
+/* ---------- header ---------- */
+header.wall {
+  max-width: 1240px; margin: 0 auto; padding: 22px 20px 0;
+  display: grid; grid-template-columns: 1fr auto; gap: 8px 24px; align-items: end;
+}
+.kicker { font-family: var(--scrawl); font-size: 1.5rem; color: var(--terra-ink); margin: 0; transform: rotate(-1.5deg); transform-origin: left; }
+.board { position: relative; padding: 18px 30px 22px; margin-top: 8px; display: inline-block; isolation: isolate; }
+.board::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 30% 40%, #34485a, var(--slate-deep) 70%); filter: url(#torn);
+  clip-path: polygon(0 4%, 3% 0, 98% 2%, 100% 12%, 99% 95%, 95% 100%, 3% 98%, 0 88%); box-shadow: 0 3px 0 rgba(0,0,0,.2); }
+.board::after { content: ''; position: absolute; inset: 0; z-index: -1; opacity: .5; pointer-events: none;
+  background: repeating-linear-gradient(-12deg, transparent 0 22px, rgba(243,236,220,.05) 22px 60px); }
+h1.title {
+  margin: 0; font: 700 clamp(3rem, 13vw, 7.4rem)/.95 var(--letter);
+  letter-spacing: -.01em; filter: url(#chalk-edge);
+}
+h1.title .l1 { color: #e59a73; } h1.title .l2 { color: #8fc7cf; } h1.title .l3 { color: #f3ecdc; }
+h1.title .l4 { color: #b9c98c; } h1.title .l5 { color: #fde8d2; }
+.board .sub { color: #efe6d4; margin-top: .6rem; }
+.board .sub strong { color: #fde8d2; }
+.aside { font-family: var(--scrawl); font-size: 1.7rem; line-height: 1.15; color: var(--terra-ink); max-width: 15ch; transform: rotate(3deg); margin: 0 0 16px; text-align: right; }
+.aside svg { display: block; margin: 6px 0 0 auto; }
+.sub { margin: .3rem 0 0; font-size: 1.3rem; max-width: 46ch; }
+.side { display: flex; flex-direction: column; align-items: flex-end; }
+.notes-btn, .tool {
+  font: 400 1.15rem/1 var(--hand); color: var(--chalk); background: var(--slate-deep);
+  border: 0; padding: .6rem 1rem .55rem; cursor: pointer; border-radius: 3px 8px 4px 9px;
+  box-shadow: 0 2px 0 rgba(0,0,0,.25);
+}
+.notes-btn:hover, .tool:hover { background: var(--slate); }
+
+/* hopscotch index */
+.hopscotch { grid-column: 1 / -1; margin-top: 10px; }
+.hopscotch ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0; align-items: center; }
+.hopscotch li { display: flex; flex-direction: column; }
+.hop {
+  display: grid; place-items: center; width: 118px; height: 64px; margin: -1.5px;
+  text-decoration: none; color: var(--charcoal); position: relative; line-height: 1;
+}
+.hop::before { content: ''; position: absolute; inset: 0; border: 3px solid rgba(47,53,59,.8); filter: url(#chalk-edge); border-radius: 2px 5px 3px 4px; }
+.hop b { font: 700 1.5rem/1 var(--letter); color: var(--terra-ink); }
+.hop small { font: 400 1rem/1 var(--hand); }
+.hop:hover::after, .hop:focus-visible::after { content: ''; position: absolute; inset: 8px; background: rgba(216,151,113,.35); border-radius: 50%; filter: url(#torn); }
+.hopscotch li:not(.pair) .hop { height: 64px; }
+
+/* ---------- mural ---------- */
+.mural-wrap { max-width: 1240px; margin: 20px auto 0; padding: 0 20px; }
+.mural {
+  position: relative; display: grid; grid-template-columns: 1fr 190px; gap: 16px;
+}
+.surface { position: relative; min-height: 460px; }
+.frame { position: relative; }
+.frame::before {
+  content: ''; position: absolute; inset: -4px; pointer-events: none;
+  border: 4px solid rgba(47,53,59,.72); filter: url(#chalk-edge); border-radius: 6px 14px 8px 12px;
+}
+canvas#mural { display: block; width: 100%; height: clamp(440px, 60vh, 580px); touch-action: none; cursor: crosshair; border-radius: 6px 14px 8px 12px; }
+canvas#mural:focus-visible { outline-offset: 8px; }
+.nib { position: absolute; width: 22px; height: 22px; margin: -11px 0 0 -11px; border: 2px dashed var(--terra-ink); border-radius: 50%; pointer-events: none; display: none; }
+.surface:focus-within .nib.kb { display: block; }
+.mural-note { margin: .5rem 0 0; font-size: 1rem; color: #4a4f52; }
+.tray {
+  display: flex; flex-direction: column; gap: 10px; padding: 14px 12px;
+  background: #3b3531; color: var(--chalk); border-radius: 10px 6px 12px 8px;
+  box-shadow: inset 0 0 0 3px #5a4f47, 0 3px 0 rgba(0,0,0,.2);
+}
+.tray h2 { margin: 0; font: 700 1.2rem/1 var(--letter); color: var(--lamp); }
+.tray fieldset { border: 0; margin: 0; padding: 0; }
+.tray legend { font-size: 1rem; color: #e9dfcb; padding: 0; margin-bottom: 4px; }
+.sticks { display: flex; flex-direction: column; gap: 6px; }
+.stick {
+  position: relative; height: 24px; border: 0; padding: 0; cursor: pointer; width: 100%;
+  border-radius: 4px 12px 12px 4px; background: var(--c);
+  box-shadow: inset 0 -5px 0 rgba(0,0,0,.18), inset 0 3px 0 rgba(255,255,255,.18);
+  transition: transform .15s;
+}
+.stick::after { content: attr(data-name); position: absolute; left: 8px; top: 3px; font: 400 .92rem/1 var(--hand); color: var(--ink, #fff); }
+.stick[aria-pressed="true"] { transform: translateX(10px); outline: 2px solid var(--lamp); outline-offset: 2px; }
+.sizes { display: flex; gap: 6px; }
+.size { flex: 1; height: 34px; border: 0; background: #57504a; color: var(--chalk); border-radius: 5px; cursor: pointer; font: 400 1rem/1 var(--hand); }
+.size[aria-pressed="true"] { background: var(--apricot); color: #2b2521; }
+.tray .tool { background: #57504a; width: 100%; text-align: left; font-size: 1.05rem; }
+.tray .tool[aria-pressed="true"] { background: var(--lamp); color: #2b2521; }
+.tray .tool.trace { background: var(--teal); }
+.tray .tool:hover { filter: brightness(1.15); }
+.tray .hint { font-size: .9rem; line-height: 1.3; color: #e9dfcb; margin: 0; }
+.tray kbd { font-family: inherit; border: 1px solid #8a7e72; border-radius: 3px; padding: 0 3px; }
+#save { display: block; text-align: center; color: var(--chalk); text-decoration: none; }
+
+/* ---------- sections chalked on the pavement ---------- */
+main { max-width: 1240px; margin: 0 auto; padding: 10px 20px 40px; }
+.block { position: relative; margin: 64px 0 0; }
+.block > .inner { position: relative; padding: 26px 28px 30px; }
+.block > .inner::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  border: 3px solid rgba(47,53,59,.55); filter: url(#chalk-edge);
+  border-radius: 10px 22px 12px 18px;
+}
+.tilt-l { transform: rotate(-.35deg); } .tilt-r { transform: rotate(.35deg); }
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+.cols-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 32px; }
+p { margin: 0 0 .8rem; max-width: 66ch; }
+h3 { font: 700 1.45rem/1.2 var(--letter); margin: 0 0 .4rem; color: var(--terra-ink); }
+
+/* project */
+.proj-top { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px 40px; align-items: center; }
+.doodle { margin: 0; }
+.doodle svg { width: 100%; height: auto; display: block; }
+.doodle figcaption { font-family: var(--scrawl); font-size: 1.2rem; color: #4a4f52; text-align: center; }
+.trim { overflow: hidden; border-radius: 3px; }
+.kit-project .kit-tagline { font: 700 clamp(1.5rem, 2.8vw, 2.1rem)/1.2 var(--letter); color: #2f5d67; max-width: 30ch; filter: url(#chalk-edge); }
+.kit-project dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px 22px; margin: 18px 0; }
+.kit-project dl > div { position: relative; padding: 10px 14px 12px; }
+.kit-project dl > div::before { content: ''; position: absolute; inset: 0; border: 2px dashed rgba(47,53,59,.45); border-radius: 12px 6px 14px 8px; filter: url(#chalk-edge); }
+.kit-project dt { font: 700 1.2rem/1.2 var(--letter); color: var(--slate-ink); }
+.kit-project dd { margin: 0; font-size: 1.08rem; }
+.kit-project .kit-small { font-size: 1rem; color: #4a4f52; }
+
+/* style */
+.principles { list-style: none; margin: 0; padding: 0; counter-reset: p; }
+.principles li { counter-increment: p; position: relative; padding: 0 0 12px 52px; }
+.principles li::before {
+  content: counter(p); position: absolute; left: 0; top: -4px; width: 38px; height: 38px;
+  display: grid; place-items: center; font: 700 1.3rem/1 var(--letter); color: var(--terra-ink);
+  border: 3px solid var(--terra); border-radius: 50%; filter: url(#chalk-edge);
+}
+.palette { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.palette li { display: grid; grid-template-columns: 1fr; gap: 4px; }
+.palette .chunk {
+  height: 46px; background: var(--c); border-radius: 6px 18px 18px 6px;
+  box-shadow: inset 0 -8px 0 rgba(0,0,0,.14), inset 0 4px 0 rgba(255,255,255,.2);
+  -webkit-mask-image: radial-gradient(circle at 96% 50%, transparent 5px, #000 6px);
+  mask-image: radial-gradient(circle at 96% 50%, transparent 5px, #000 6px);
+}
+.palette b { font-weight: 400; font-size: 1.05rem; }
+.palette code { font: 400 1rem/1 var(--hand); color: #3d4347; }
+
+/* views */
+.views-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 34px; }
+.poster { margin: 0; position: relative; }
+.poster:nth-child(odd) { transform: rotate(-.5deg); } .poster:nth-child(even) { transform: rotate(.6deg); }
+.poster a { display: block; position: relative; padding: 8px; }
+.poster a::before { content: ''; position: absolute; inset: 0; border: 3px solid rgba(47,53,59,.7); filter: url(#chalk-edge); border-radius: 6px 12px 7px 10px; }
+.poster img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.poster figcaption { padding: 10px 4px 0; font-size: 1.05rem; }
+.poster figcaption strong { font: 700 1.25rem/1.2 var(--letter); color: var(--slate-ink); display: block; }
+.rev { font-family: var(--scrawl); font-size: 1.3rem; color: var(--terra-ink); }
+.landmarks { list-style: none; padding: 0; margin: 14px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 8px 18px; }
+.landmarks li { padding-left: 30px; position: relative; font-size: 1.05rem; }
+.landmarks li::before { content: '→'; position: absolute; left: 2px; top: -3px; font: 700 1.4rem/1 var(--letter); color: var(--terra); }
+.landmarks b { font-weight: 400; color: var(--slate-ink); font-family: var(--letter); }
+.concept { font-family: var(--scrawl); font-size: 1.35rem; color: var(--terra-ink); max-width: 60ch; }
+
+/* agents + scale crops */
+.crop { position: relative; padding: 7px; margin: 0; }
+.crop::before { content: ''; position: absolute; inset: 0; border: 3px solid rgba(47,53,59,.65); filter: url(#chalk-edge); border-radius: 5px 11px 6px 9px; }
+.crop .kit-panel { border-radius: 3px; }
+.crop figcaption { font-size: 1rem; padding: 8px 2px 0; color: #3d4347; }
+.roll { columns: 2; column-gap: 28px; list-style: none; margin: 0; padding: 0; }
+.roll li { break-inside: avoid; padding: 3px 0 5px 22px; position: relative; font-size: 1.05rem; }
+.roll li::before { content: '✶'; position: absolute; left: 0; color: var(--moss); }
+.roll b { font-family: var(--letter); color: var(--slate-ink); }
+
+/* tradeoffs */
+.tally { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 34px; margin-top: 16px; }
+.tally > div { position: relative; padding: 16px 18px 14px 20px; }
+.tally > div::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 5px; background: var(--c, var(--terra)); filter: url(#chalk-edge); border-radius: 3px; }
+.tally h3 { color: var(--slate-ink); }
+.tally p { font-size: 1.08rem; }
+
+/* status */
+.kit-status .kit-summary { font: 700 1.4rem/1.35 var(--letter); color: var(--slate-deep); max-width: 50ch; }
+.kit-status .kit-concept { font-family: var(--scrawl); font-size: 1.3rem; color: var(--terra-ink); }
+.kit-status { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 4px 48px; align-items: start; }
+.kit-status .kit-summary { grid-column: 1; grid-row: 1; } .kit-status .kit-concept { grid-column: 1; grid-row: 2 / span 2; }
+.kit-status .kit-revisions { grid-column: 2; grid-row: 1; } .kit-status .kit-sources { grid-column: 2; grid-row: 2; } .kit-status .kit-links { grid-column: 2; grid-row: 3; }
+.kit-status ul { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 6px; }
+.kit-status li { font-size: 1.12rem; padding-left: 26px; position: relative; }
+.kit-status li::before { content: '✓'; position: absolute; left: 0; color: var(--moss); font-family: var(--letter); font-weight: 700; }
+
+/* nav: chalk arrows on the kerb */
+footer { max-width: 1240px; margin: 0 auto; padding: 0 20px 60px; }
+.kit-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; margin-top: 40px; }
+.kit-nav a { font: 700 1.35rem/1.2 var(--letter); text-decoration: none; color: var(--slate-deep); padding: 12px 16px; position: relative; }
+.kit-nav a::before { content: ''; position: absolute; inset: 0; border: 3px solid rgba(47,53,59,.55); border-radius: 30px 8px 30px 8px; filter: url(#chalk-edge); }
+.kit-nav .kit-index { color: var(--terra-ink); text-align: center; }
+.kit-nav .kit-next { text-align: right; }
+.kit-nav a:hover { color: var(--terra-ink); }
+.sign { font-size: 1rem; color: #4a4f52; margin-top: 18px; }
+
+/* notes dialog: a slate board */
+.kit-dialog { max-width: min(860px, 94vw); max-height: 90vh; border: 0; padding: 0; background: var(--pave); color: var(--charcoal); border-radius: 12px; box-shadow: 0 0 0 6px var(--slate-deep), 0 20px 60px rgba(0,0,0,.4); }
+.kit-dialog::backdrop { background: rgba(35,40,45,.72); }
+.kit-dialog .kit-close { position: sticky; top: 0; float: right; margin: 12px; font: 400 1.1rem/1 var(--hand); background: var(--slate-deep); color: var(--chalk); border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; z-index: 2; }
+.kit-notes { padding: 20px 28px 30px; }
+.kit-notes h1 { font: 700 2rem/1.1 var(--letter); color: var(--terra-ink); }
+.kit-notes h2 { font: 700 1.5rem/1.2 var(--letter); color: var(--slate-ink); margin-top: 1.6rem; }
+.kit-notes img { max-width: 100%; height: auto; }
+.kit-notes .kit-swatch { display: inline-block; width: 1.1em; height: 1.1em; vertical-align: -3px; border: 1px solid var(--charcoal); }
+.kit-notes .kit-palette { list-style: none; padding: 0; }
+.kit-notes dt { font-weight: 700; color: var(--slate-ink); }
+.kit-notes dd { margin: 0 0 .6rem; }
+.kit-notes .kit-nav { grid-template-columns: 1fr; }
+.kit-notes .kit-nav .kit-next, .kit-notes .kit-nav .kit-index { text-align: left; }
+
+@media (max-width: 900px) {
+  .mural { grid-template-columns: 1fr; }
+  .tray { display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
+  .tray h2, .tray .hint { grid-column: 1 / -1; }
+  .sticks { display: grid; grid-template-columns: 1fr; }
+  .cols, .cols-3, .views-grid, .tally, .proj-top { grid-template-columns: 1fr; }
+  .kit-status { grid-template-columns: 1fr; } .kit-status > * { grid-column: 1 !important; grid-row: auto !important; }
+}
+@media (max-width: 560px) {
+  header.wall { grid-template-columns: 1fr; padding-top: 14px; }
+  .notes-btn { justify-self: start; }
+  .hop { width: calc((100vw - 40px) / 6 + 2px); height: 50px; }
+  .hopscotch li:not(.pair) .hop { height: 50px; }
+  .hop small { font-size: .74rem; }
+  .hop b { font-size: 1.25rem; }
+  .side { align-items: flex-start; }
+  .aside { display: none; }
+  .board { padding: 14px 16px 16px; display: block; }
+  canvas#mural { height: 520px; }
+  .block > .inner { padding: 20px 16px 22px; }
+  .roll { columns: 1; }
+  .kit-nav { grid-template-columns: 1fr; }
+  .kit-nav .kit-next, .kit-nav .kit-index { text-align: left; }
+  .tilt-l, .tilt-r, .poster:nth-child(n) { transform: none; }
+  body { font-size: 1.12rem; }
+}
+#trace { background: #3a6670; }
+.kit-status .kit-concept { color: #74401f; }
+</style>
+</head>
+<body>
+<a class="skip" href="#project">Skip past the mural</a>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <filter id="chalk-edge" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="4" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="2.2" numOctaves="1" seed="9" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.1 1.32" result="holes"/>
+    <feComposite in="d" in2="holes" operator="in"/>
+  </filter>
+  <filter id="torn" x="-3%" y="-8%" width="106%" height="116%">
+    <feTurbulence type="fractalNoise" baseFrequency=".04 .3" numOctaves="3" seed="2" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<header class="wall">
+  <div>
+    <p class="kicker" id="kicker">Style study 16 · chalked on the pavement</p>
+    <div class="board">
+    <h1 class="title" aria-label="Agentnagar"><span class="l1">A</span><span class="l2">g</span><span class="l3">e</span><span class="l4">n</span><span class="l5">t</span><span class="l1">n</span><span class="l2">a</span><span class="l3">g</span><span class="l4">a</span><span class="l5">r</span></h1>
+    <p class="sub">in <strong>chalk pastel</strong>: powdery colour, charcoal contours and slate-board lettering on a weathered wall. Pick up a stick and add to it.</p>
+    </div>
+  </div>
+  <div class="side">
+    <p class="aside">This is a pavement, not a gallery. Draw on it!
+      <svg width="90" height="70" viewBox="0 0 90 70" aria-hidden="true" class="rough"><path d="M70 4 C 80 30, 60 50, 22 58 M22 58 l14 -12 M22 58 l16 6" fill="none" stroke="#8a4f31" stroke-width="4" stroke-linecap="round"/></svg></p>
+    <button class="notes-btn" id="notes" type="button">Read the notes</button>
+  </div>
+  <nav class="hopscotch" aria-label="Sections, chalked as hopscotch">
+    <ol>
+      <li><a class="hop" href="#mural-title"><b>0</b><small>Draw</small></a></li>
+      <li><a class="hop" href="#project"><b>1</b><small>City</small></a></li>
+      <li><a class="hop" href="#style"><b>2</b><small>Style</small></a></li>
+      <li class="pair"><a class="hop" href="#views"><b>3</b><small>Views</small></a><a class="hop" href="#agents"><b>4</b><small>Agents</small></a></li>
+      <li><a class="hop" href="#tradeoffs"><b>5</b><small>Trade-offs</small></a></li>
+      <li class="pair"><a class="hop" href="#status"><b>6</b><small>Status</small></a><a class="hop" href="#more"><b>7</b><small>More</small></a></li>
+    </ol>
+  </nav>
+</header>
+
+<section class="mural-wrap" aria-labelledby="mural-title">
+  <h2 class="sr" id="mural-title">The mural: draw on the district</h2>
+  <div class="mural">
+    <div class="surface">
+      <div class="frame">
+      <canvas id="mural" tabindex="0" role="img" aria-roledescription="drawing surface"
+        aria-label="Chalk mural of the reference district, drawn as a plan: river on the west, North bridge, Workshop, Tree Square, Library and tram boulevard. Illustrative, not a concept sheet. Focus it to draw with the keyboard."
+        aria-describedby="kb-help"></canvas>
+      <div class="nib" id="nib"></div>
+      </div>
+      <p class="mural-note">Illustrative chalk plan drawn by this page, not a concept sheet. Your drawing stays in this browser tab.</p>
+    </div>
+    <div class="tray" role="group" aria-label="Chalk box">
+      <h2>Chalk box</h2>
+      <fieldset>
+        <legend>Colour sticks</legend>
+        <div class="sticks" id="sticks"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Stroke</legend>
+        <div class="sizes" id="sizes">
+          <button class="size" type="button" data-r="3" aria-pressed="false">Fine</button>
+          <button class="size" type="button" data-r="7" aria-pressed="true">Side</button>
+          <button class="size" type="button" data-r="15" aria-pressed="false">Smudge</button>
+        </div>
+      </fieldset>
+      <div style="display:grid;gap:8px">
+        <button class="tool" id="eraser" type="button" aria-pressed="false">Rag (eraser)</button>
+        <button class="tool trace" id="trace" type="button">Trace the district</button>
+        <button class="tool" id="wash" type="button">Wash the pavement</button>
+        <a class="tool" id="save" href="#" download="agentnagar-chalk-mural.png">Photograph it (PNG)</a>
+      </div>
+      <p class="hint" id="kb-help">Keyboard: focus the mural, move with <kbd>arrows</kbd> (<kbd>Shift</kbd> for long moves), <kbd>Space</kbd> lifts or lowers the chalk, <kbd>1</kbd>–<kbd>6</kbd> pick a stick, <kbd>E</kbd> rag.</p>
+      <p class="sr" aria-live="polite" id="live"></p>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+  <section class="block" id="project" aria-labelledby="h-project">
+    <div class="inner tilt-l">
+      <h2 class="slab" id="h-project"><span>Agentnagar</span></h2>
+      <div id="project-slot"></div>
+    </div>
+  </section>
+
+  <section class="block" id="style" data-core="style" aria-labelledby="h-style">
+    <div class="inner tilt-r">
+      <h2 class="slab" id="h-style"><span>The style</span></h2>
+      <p id="intent" style="font-size:1.3rem"></p>
+      <div class="cols">
+        <div>
+          <h3>Principles, chalked large</h3>
+          <ol class="principles" id="principles"></ol>
+        </div>
+        <div>
+          <h3>Materials &amp; texture</h3>
+          <p id="materials"></p>
+          <h3>Lettering</h3>
+          <p id="type"></p>
+        </div>
+      </div>
+      <h3 style="margin-top:14px">Palette: the sticks in the box</h3>
+      <p class="scrawl">Colours sampled from the selected sheets (averaged patches, rounded).</p>
+      <ul class="palette" id="palette"></ul>
+    </div>
+  </section>
+
+  <section class="block" id="views" data-core="views" aria-labelledby="h-views">
+    <div class="inner tilt-l">
+      <h2 class="slab" id="h-views"><span>One district, four views</span></h2>
+      <p class="concept" id="concept-note"></p>
+      <div class="views-grid" id="views-grid"></div>
+      <h3 style="margin-top:26px">Reference-district landmarks</h3>
+      <ul class="landmarks" id="landmarks"></ul>
+    </div>
+  </section>
+
+  <section class="block" id="agents" data-core="agents" aria-labelledby="h-agents">
+    <div class="inner tilt-r">
+      <h2 class="slab" id="h-agents"><span>Agents in chalk</span></h2>
+      <div class="cols">
+        <div id="agent-crops" style="display:grid;gap:18px"></div>
+        <div>
+          <p id="agents-text"></p>
+          <p id="a1-text"></p>
+          <h3>Guild roll call</h3>
+          <p class="scrawl" id="guild-note"></p>
+          <ul class="roll" id="roll"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="tradeoffs" data-core="tradeoffs" aria-labelledby="h-trade">
+    <div class="inner tilt-l">
+      <h2 class="slab" id="h-trade"><span>Strengths &amp; trade-offs</span></h2>
+      <div class="cols" id="scale-crops"></div>
+      <div class="tally" id="tally"></div>
+    </div>
+  </section>
+
+  <section class="block" id="status" aria-labelledby="h-status">
+    <div class="inner tilt-r">
+      <h2 class="slab" id="h-status"><span>Status</span></h2>
+      <div id="status-slot"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="more">
+  <h2 class="sr">More styles</h2>
+  <div id="nav-slot"></div>
+  <p class="sign">Chalk and pavement texture on this page are drawn with CSS, SVG and canvas. Only the four sheets are concept art.</p>
+</footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  const S = Kit.style('16-chalk-pastel-mural');
+  const A = window.AGENTNAGAR;
+  const el = Kit.el;
+
+  const PALETTE = [
+    { name: 'River teal', hex: '#437580', ink: '#fff' },
+    { name: 'Terracotta roof', hex: '#ad6e4c', ink: '#fff' },
+    { name: 'Cream stone', hex: '#d8d1c1', ink: '#2f353b' },
+    { name: 'Slate chalkboard', hex: '#385571', ink: '#fff' },
+    { name: 'Charcoal contour', hex: '#2f353b', ink: '#fff' },
+    { name: 'Moss foliage', hex: '#687349', ink: '#fff' },
+    { name: 'Pastel apricot', hex: '#d89771', ink: '#2f353b' },
+    { name: 'Lamp glow', hex: '#fde8d2', ink: '#2f353b' }
+  ];
+
+  const CONTENT = {
+    intent: 'A city drawn as if onto a weathered wall, with powdery colour, speckled grain and soft charcoal contours. Teal river water, terracotta roofs, cream stone and slate-blue chalkboard panels set the palette; warm lamp light carries the night scenes.',
+    principles: [
+      'Charcoal first: soft dark contours hold every building, bridge and figure together.',
+      'Powder, not paint: colour sits in speckled grain, so the wall shows through the strokes.',
+      'Teal and terracotta at every scale: water and roofs carry the district when detail drops away.',
+      'Slate-board lettering: labels live on dark chalkboard slabs with cream hand lettering.',
+      'Warm lamp light at night: glow is laid on as soft apricot and cream smudges.'
+    ],
+    palette: PALETTE.map((p) => ({ name: p.name, hex: p.hex })),
+    materials: 'Stone and timber buildings with arched bridges, spires, domes and gabled workshop sheds beside dock cranes. Interiors show wooden benches, hanging lamps, plants and quilted textiles. Surfaces carry powdery pastel over a speckled wall ground, with visible strokes on facades and water in close views.',
+    type: 'Hand-lettered chalk capitals on torn slate slabs for scene labels (as on the Living community and Creating sheets); the City perspectives sheet uses serif labels on cream instead. This page uses Kalam for chalk capitals, Patrick Hand for text and Caveat for scrawled asides.',
+    agents: 'City Agent A1 appears in the Living community sheet (Conversation panel) as a white and silver android with orange accents at the ear and shoulder, a rust-red scarf, a tablet, and a round leaf badge marked A1, captioned "City Agent A1". Residents are drawn with realistic proportions and painterly faces. The Interfaces sheet\'s mobile panel instead shows a human-looking "Your Agent" portrait, so the agent\'s identity is not yet consistent across experiences. The sheets do not depict the Guild residents individually; any Guild figure in this style would be new, unreviewed work.',
+    tradeoffs: [
+      { label: 'Map vs street', text: 'Large views read as a painted illustration and the chalk texture almost disappears; street scenes and close-ups show the grain clearly. The sheets lose the chalk identity at map scale.' },
+      { label: 'Device and production cost', text: 'Proposed: keep the charcoal contours, powdery grain and terracotta and teal palette at every tier. Lower tiers flatten the speckle to one overlay and drop background crowds; higher tiers keep visible strokes on facades and water.' },
+      { label: 'UI legibility', text: 'Chalkboard slogans fill most panels and compete with the scene. Label treatment changes between sheets (serif labels on the overview, hand-lettered slabs later), and the interface panels lean on slate boards that need a fixed type scale to stay readable.' },
+      { label: 'Review risks', text: 'The overview is a compact historic district with the river to the west, but the AR panel shows a channel through a different block layout, and the mobile, rooftop and tabletop panels show different bridge forms. Faces drift toward realism; the intended degree of human detail is unspecified. The robot A1 and the human "Your Agent" portrait are not reconciled.' }
+    ]
+  };
+
+  const DOODLE = `<svg viewBox="0 0 440 300" role="img" aria-label="Chalk doodle: a few terracotta-roofed houses, a sawtooth workshop and a big tree, with dashed outlines of taller buildings behind showing room to grow; a person and a small robot with a leaf badge stand together." class="rough">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 262 H430" stroke="#2f353b" stroke-width="4"/>
+    <g stroke="#6b7478" stroke-width="3" stroke-dasharray="9 8">
+      <path d="M232 262 V96 H282 V262"/><path d="M290 262 V58 H334 V262"/><path d="M342 262 V120 H392 V262"/>
+      <path d="M300 86 h8 m10 0 h8 M300 118 h8 m10 0 h8 M300 150 h8 m10 0 h8"/>
+    </g>
+    <text x="300" y="44" font-family="Caveat, cursive" font-size="22" fill="#434b4f" stroke="none">room to grow</text>
+    <path d="M28 262 V206 H86 V262" stroke="#2f353b" stroke-width="3.5"/>
+    <path d="M20 210 L57 176 L94 210" stroke="#ad6e4c" stroke-width="7"/>
+    <path d="M50 262 V236 H64 V262" stroke="#2f353b" stroke-width="3"/>
+    <path d="M104 262 V214 H218 V262" stroke="#2f353b" stroke-width="3.5"/>
+    <path d="M104 214 L104 188 L142 214 L142 188 L180 214 L180 188 L218 214" stroke="#ad6e4c" stroke-width="6"/>
+    <path d="M206 232 H226 M218 226 L226 232 L218 238" stroke="#d89771" stroke-width="3"/>
+    <path d="M150 262 C150 240 146 226 152 200" stroke="#5b4636" stroke-width="6"/>
+    <path d="M152 206 C 108 206 104 160 136 150 C 130 118 176 112 184 138 C 214 134 216 186 184 196 C 180 212 160 212 152 206 Z" stroke="#687349" stroke-width="7" fill="#687349" fill-opacity=".25"/>
+    <path d="M40 150 C 60 120 90 118 110 132" stroke="#437580" stroke-width="3" stroke-dasharray="2 10"/>
+    <g stroke="#2f353b" stroke-width="3"><circle cx="360" cy="208" r="9"/><path d="M360 217 V244 M348 228 H372 M360 244 L352 262 M360 244 L368 262"/></g>
+    <g stroke="#2f353b" stroke-width="3"><rect x="386" y="206" width="20" height="18" rx="6"/><path d="M396 224 V246 M384 232 H408 M396 246 L390 262 M396 246 L402 262"/></g>
+    <path d="M384 228 C 392 224 402 224 410 232" stroke="#ad6e4c" stroke-width="4"/>
+    <path d="M398 236 l5 -6" stroke="#687349" stroke-width="4"/>
+    <path d="M364 236 L386 236" stroke="#d89771" stroke-width="2" stroke-dasharray="3 5"/>
+  </g></svg>`;
+
+  // A panel crop, trimmed further so this sheet's caption slabs and footers stay out.
+  function crop(i, panel, alt, caption, t, b) {
+    const box = Kit.sheetImg(S, i, panel, { alt });
+    const PH = { tl: 450 / 740, tr: 450 / 740, bl: 438 / 740, br: 438 / 740 }[panel];
+    const wrap = el('div', { class: 'trim' });
+    wrap.style.aspectRatio = `${1 / (PH * (1 - t - b))}`;
+    box.style.marginTop = `${-t * PH * 100}%`;
+    wrap.append(box);
+    return el('figure', { class: 'crop' }, [wrap, el('figcaption', { text: caption })]);
+  }
+
+  // ---------- page content ----------
+  const project = Kit.projectBlock();
+  // group facts in pairs for the chalk boxes
+  const dl = project.querySelector('dl');
+  const pairs = [...dl.children];
+  dl.textContent = '';
+  for (let i = 0; i < pairs.length; i += 2) dl.append(el('div', {}, [pairs[i], pairs[i + 1]]));
+  const top = el('div', { class: 'proj-top' });
+  const lead = el('div');
+  [...project.children].filter((n) => n.tagName === 'P' && !n.classList.contains('kit-small')).forEach((n) => lead.append(n));
+  const fig = el('figure', { class: 'doodle' });
+  fig.innerHTML = DOODLE;
+  fig.append(el('figcaption', { text: 'Village to city, people and agents: an illustrative chalk doodle, not a concept sheet.' }));
+  top.append(lead, fig);
+  project.prepend(top);
+  document.getElementById('project-slot').append(project);
+  document.getElementById('project').setAttribute('data-core', 'project');
+  project.removeAttribute('data-core');
+
+  document.getElementById('intent').textContent = CONTENT.intent;
+  document.getElementById('materials').textContent = CONTENT.materials;
+  document.getElementById('type').textContent = CONTENT.type;
+  CONTENT.principles.forEach((p) => document.getElementById('principles').append(el('li', { text: p })));
+  PALETTE.forEach((p) => document.getElementById('palette').append(el('li', {}, [
+    el('span', { class: 'chunk', style: `--c:${p.hex}`, 'aria-hidden': 'true' }),
+    el('b', { text: p.name }), el('code', { text: p.hex })
+  ])));
+
+  // views
+  document.getElementById('concept-note').textContent = A.conceptNote;
+  const SHEET_NOTES = [
+    'Map, top-down, diagonal and street. The river runs down the west edge under a towered North bridge; the Workshop is a long dock hall beside cranes; Tree Square holds one large tree; the domed Library sits east; trams run along the southern boulevard.',
+    'Workshop, home, conversation and gathering. City Agent A1 appears in the conversation panel. The gathering panel places the big tree, a sawtooth-roofed hall, a glass-arched library and a tram together, with modern towers behind.',
+    'Build mode, transit, night and rain, waterfront park. Sawtooth workshop bays and the arched library frame the square; the night panel shows the lamp-light treatment and wet reflections.',
+    'Facility, mobile, rooftop and AR tabletop. Chalkboard signs carry the interface; the phone shows a map and a human-looking "Your Agent" card. Bridge forms and the river layout here differ from the overview.'
+  ];
+  const vg = document.getElementById('views-grid');
+  S.sheets.forEach((sheet, i) => {
+    const img = Kit.sheetImg(S, i, null, { alt: `${S.name} concept study, ${sheet.title} (${sheet.revision}): ${Kit.PANEL_NAMES[i].join(', ')} panels. ${SHEET_NOTES[i]}` });
+    vg.append(el('figure', { class: 'poster' }, [
+      el('a', { href: Kit.href(sheet.image), 'aria-label': `Open full ${sheet.title} sheet, ${sheet.revision}` }, [img]),
+      el('figcaption', {}, [el('strong', { text: sheet.title }), el('span', { class: 'rev', text: `${sheet.revision} · concept study` }), el('br'), SHEET_NOTES[i]])
+    ]));
+  });
+  const WHERE = {
+    R1: 'teal water down the west edge of the map and top-down panels',
+    B1: 'towered crossing at the north of the overview; later sheets change its form',
+    W1: 'long timber dock hall by the cranes; sawtooth bays in the living and creating sheets',
+    T1: 'one large tree in a round square at the centre',
+    L1: 'domed, glass-roofed building to the east',
+    S1: 'tracks and a tram along the south edge'
+  };
+  A.district.forEach((d) => document.getElementById('landmarks').append(el('li', {}, [el('b', { text: d.name }), `: ${d.note} In chalk: ${WHERE[d.id]}.`])));
+
+  // agents
+  const ac = document.getElementById('agent-crops');
+  ac.append(crop(1, 'bl', `${S.name} concept study, Living community (${S.sheets[1].revision}), Conversation panel: a resident talks with City Agent A1, a white and silver android with a rust scarf and a leaf badge marked A1.`, `Living community, Conversation panel (${S.sheets[1].revision}). City Agent A1 as drawn in the sheet.`, 0, .085));
+  ac.append(crop(3, 'tr', `${S.name} concept study, Interfaces perspectives (${S.sheets[3].revision}), Mobile panel: a phone map with a human-looking "Your Agent" portrait.`, `Interfaces, Mobile panel (${S.sheets[3].revision}). The "Your Agent" card shows a human portrait, not A1.`, .05, 0));
+  document.getElementById('agents-text').textContent = CONTENT.agents;
+  document.getElementById('a1-text').textContent = A.agentA1;
+  document.getElementById('guild-note').textContent = `The fourteen Guild residents. ${A.guildNote}`;
+  A.guild.forEach((g) => document.getElementById('roll').append(el('li', {}, [el('b', { text: g.name }), ` · ${g.role}`])));
+
+  // tradeoffs
+  const sc = document.getElementById('scale-crops');
+  sc.append(crop(0, 'tl', `${S.name} concept study, City perspectives (${S.sheets[0].revision}), Map panel: at map scale the chalk grain nearly vanishes into a painted illustration.`, 'Map scale: reads as a painted illustration; the grain almost disappears.', .06, .065));
+  sc.append(crop(0, 'br', `${S.name} concept study, City perspectives (${S.sheets[0].revision}), Street panel: workshop stall, the big tree, a tram and chalkboard slogans; the powdery grain is clearly visible.`, 'Street scale: the grain shows, and the chalkboard slogans compete with the scene.', 0, .085));
+  const colours = ['var(--teal)', 'var(--terra)', 'var(--slate)', 'var(--apricot)'];
+  CONTENT.tradeoffs.forEach((t, i) => document.getElementById('tally').append(el('div', { style: `--c:${colours[i]}` }, [el('h3', { text: t.label }), el('p', { text: t.text })])));
+
+  document.getElementById('status-slot').append(Kit.statusBlock(S));
+  Kit.mountNav(document.getElementById('nav-slot'), S);
+  Kit.notesDialog(S, CONTENT, document.getElementById('notes'));
+
+  // ---------- the mural ----------
+  const canvas = document.getElementById('mural');
+  const ctx = canvas.getContext('2d');
+  const reduce = Kit.reducedMotion();
+  const live = document.getElementById('live');
+  const STICKS = PALETTE.filter((p) => !['Cream stone', 'Lamp glow'].includes(p.name));
+  let color = STICKS[0].hex, radius = 7, erasing = false, dpr = 1, W = 0, H = 0;
+
+  // chalk grain: a fixed pit map so strokes skip where the "wall" is pitted
+  const GN = 160, grain = new Float32Array(GN * GN);
+  let seed = 7;
+  const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  for (let i = 0; i < grain.length; i++) grain[i] = rnd();
+  const pit = (x, y) => grain[((y | 0) % GN) * GN + ((x | 0) % GN)];
+
+  function dab(x, y, r, col, er) {
+    if (er) {
+      ctx.save(); ctx.globalCompositeOperation = 'destination-out';
+      ctx.globalAlpha = .55; ctx.beginPath(); ctx.arc(x, y, r * 1.6, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+      return;
+    }
+    ctx.fillStyle = col;
+    const n = Math.ceil(r * r * 0.8) + 4;
+    for (let i = 0; i < n; i++) {
+      const a = Math.random() * 6.2832, d = r * Math.sqrt(Math.random());
+      const px = x + Math.cos(a) * d, py = y + Math.sin(a) * d;
+      if (pit(px * 1.7, py * 1.7) < 0.22) continue;
+      ctx.globalAlpha = 0.18 + Math.random() * 0.6;
+      const sz = 0.7 + Math.random() * 1.5;
+      ctx.fillRect(px, py, sz, sz);
+    }
+    ctx.globalAlpha = 1;
+  }
+  function segment(x0, y0, x1, y1, r, col, er) {
+    const dist = Math.hypot(x1 - x0, y1 - y0);
+    const steps = Math.max(1, Math.ceil(dist / Math.max(1, r * 0.45)));
+    for (let i = 0; i <= steps; i++) {
+      const t = i / steps;
+      dab(x0 + (x1 - x0) * t + (Math.random() - .5) * .8, y0 + (y1 - y0) * t + (Math.random() - .5) * .8, r, col, er);
+    }
+  }
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    const old = W ? (() => { const c = document.createElement('canvas'); c.width = canvas.width; c.height = canvas.height; c.getContext('2d').drawImage(canvas, 0, 0); return c; })() : null;
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    W = rect.width; H = rect.height;
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (old) ctx.drawImage(old, 0, 0, W, H);
+  }
+
+  // ---------- the traced district (illustrative plan) ----------
+  function layout() {
+    if (W / H >= 1.15) {
+      return { w: 1000, h: 600, river: [40, 150], bridgeY: 110, shop: [250, 200, 170, 130], square: [480, 175, 170, 170], lib: [720, 200, 190, 130], tram: [450, 482], tramX: 520, label: 26 };
+    }
+    return { w: 600, h: 900, river: [18, 110], bridgeY: 120, shop: [150, 290, 130, 120], square: [300, 260, 150, 170], lib: [465, 290, 125, 120], tram: [560, 600], tramX: 300, label: 34 };
+  }
+  function buildOps() {
+    const L = layout();
+    const s = Math.min(W / L.w, H / L.h), ox = (W - L.w * s) / 2, oy = (H - L.h * s) / 2;
+    const P = (x, y) => [ox + x * s, oy + y * s];
+    const ops = [];
+    const line = (pts, col, r) => ops.push({ pts: pts.map((p) => P(p[0], p[1])), col, r: Math.max(1.6, r * s) });
+    const text = (str, x, y, col, size) => ops.push({ text: str, at: P(x, y), col, size: Math.max(13, size * s) });
+    const [rl, rr] = L.river;
+    // river: two wavy banks + current strokes
+    const bank = (x0, amp, ph) => { const pts = []; for (let y = 0; y <= L.h; y += 20) pts.push([x0 + Math.sin(y / 70 + ph) * amp, y]); return pts; };
+    line(bank(rl, 10, 0), PALETTE[4].hex, 2.4);
+    line(bank(rr, 12, 1.4), PALETTE[4].hex, 2.4);
+    for (let y = 8; y < L.h; y += 15) {
+      const off = Math.sin(y / 70) * 10, a = rl + 6 + off + Math.random() * 8, b = rr - 6 + Math.sin(y / 70 + 1.4) * 12 - Math.random() * 10;
+      line([[a, y + Math.random() * 6], [b, y - 8 + Math.random() * 6]], PALETTE[0].hex, 5 + Math.random() * 3);
+    }
+    for (let k = 0; k < 9; k++) { const y = 30 + k * (L.h - 50) / 9 + Math.random() * 20; const x = rl + 12 + Math.random() * (rr - rl - 50); line([[x, y], [x + 12, y - 5], [x + 24, y], [x + 36, y - 5]], '#8fc7cf', 1.8); }
+    text('River', rl + 8, L.h - 40, PALETTE[3].hex, L.label);
+    // north bridge: three low spans
+    const by = L.bridgeY, bx0 = rl - 20, bx1 = rr + 22, span = (bx1 - bx0) / 3;
+    line([[bx0, by], [bx1, by]], PALETTE[4].hex, 3);
+    line([[bx0, by + 14], [bx1, by + 14]], PALETTE[4].hex, 2.2);
+    for (let i = 0; i < 3; i++) { const a = bx0 + i * span, pts = []; for (let t = 0; t <= 10; t++) pts.push([a + span * t / 10, by + 14 + Math.sin(Math.PI * t / 10) * -12 + 12]); line(pts, PALETTE[4].hex, 2); }
+    text('North bridge', bx1 + 10, by + 10, PALETTE[3].hex, L.label * .9);
+    // workshop: low hall, three sawtooth bays, door to the east
+    const [sx, sy, sw, sh] = L.shop;
+    line([[sx, sy], [sx + sw, sy], [sx + sw, sy + sh], [sx, sy + sh], [sx, sy]], PALETTE[4].hex, 3);
+    const bay = sw / 3; const saw = [[sx, sy]];
+    for (let i = 0; i < 3; i++) saw.push([sx + bay * i, sy - 32], [sx + bay * (i + 1), sy]);
+    line(saw, PALETTE[1].hex, 4);
+    for (let i = 0; i < 3; i++) for (let k = 0; k < 4; k++) line([[sx + bay * i + 6 + k * 3, sy - 26 + k * 6], [sx + bay * (i + 1) - 12, sy - 3]], PALETTE[1].hex, 3);
+    line([[sx + sw, sy + sh * .4], [sx + sw + 4, sy + sh * .4], [sx + sw + 4, sy + sh * .72], [sx + sw, sy + sh * .72]], PALETTE[6].hex, 4);
+    line([[sx + sw + 14, sy + sh * .56], [sx + sw + 40, sy + sh * .56]], PALETTE[6].hex, 2.2);
+    line([[sx + sw + 32, sy + sh * .5], [sx + sw + 40, sy + sh * .56], [sx + sw + 32, sy + sh * .62]], PALETTE[6].hex, 2.2);
+    text('Workshop', sx + 6, sy + sh + 32, PALETTE[3].hex, L.label);
+    // tree square: open square, one great tree
+    const [qx, qy, qw, qh] = L.square, cx = qx + qw / 2, cy = qy + qh / 2;
+    line([[qx, qy], [qx + qw, qy], [qx + qw, qy + qh], [qx, qy + qh], [qx, qy]], PALETTE[4].hex, 2.2);
+    const cr = Math.min(qw, qh) * .34;
+    for (let k = 0; k < 6; k++) { const pts = []; for (let t = 0; t <= 36; t++) { const a = t / 36 * 6.3 + k; const rr2 = cr * (0.18 + k * .17) + Math.sin(a * 7 + k) * 5; pts.push([cx + Math.cos(a) * rr2, cy + Math.sin(a) * rr2]); } line(pts, k % 2 ? '#8a9a5e' : PALETTE[5].hex, 8 - k); }
+    line([[cx - 3, cy + 4], [cx + 2, cy - 6]], '#5b4636', 4);
+    text('Tree Square', qx + 4, qy + qh + 32, PALETTE[3].hex, L.label);
+    // library: broad two storeys, rounded reading-room roof
+    const [lx, ly, lw, lh] = L.lib;
+    line([[lx, ly], [lx + lw, ly], [lx + lw, ly + lh], [lx, ly + lh], [lx, ly]], PALETTE[4].hex, 3);
+    line([[lx, ly + lh / 2], [lx + lw, ly + lh / 2]], PALETTE[4].hex, 1.6);
+    const dome = []; for (let t = 0; t <= 20; t++) { const a = Math.PI + Math.PI * t / 20; dome.push([lx + lw / 2 + Math.cos(a) * lw * .32, ly + Math.sin(a) * 38]); }
+    line(dome, PALETTE[3].hex, 4);
+    for (let k = 1; k < 5; k++) line([[lx + lw / 2 - lw * .3 + k * 3, ly - 4], [lx + lw / 2 + lw * .3 - k * 3, ly - 4 - k * 6]], PALETTE[3].hex, 3);
+    for (let r = 0; r < 2; r++) for (let c = 0; c < 5; c++) { const wx = lx + 12 + c * (lw - 24) / 5, wy = ly + 14 + r * lh / 2; line([[wx, wy], [wx + 12, wy], [wx + 12, wy + 20], [wx, wy + 20], [wx, wy]], PALETTE[0].hex, 1.6); }
+    text('Library', lx + 6, ly + lh + 32, PALETTE[3].hex, L.label);
+    // tram boulevard: two tracks, a cream tram with a coral stripe south of the square
+    const [t1, t2] = L.tram;
+    [t1, t2].forEach((ty) => { line([[rr + 20, ty], [L.w - 10, ty]], PALETTE[4].hex, 2); line([[rr + 20, ty + 8], [L.w - 10, ty + 8]], PALETTE[4].hex, 2); });
+    for (let x = rr + 26; x < L.w - 10; x += 22) { line([[x, t1 - 3], [x, t1 + 11]], '#6c6660', 1.4); line([[x, t2 - 3], [x, t2 + 11]], '#6c6660', 1.4); }
+    const tx = cx - 60 * (L.w > 700 ? 1 : .8), tw = 120 * (L.w > 700 ? 1 : .8);
+    line([[tx, t1 - 16], [tx + tw, t1 - 16], [tx + tw + 8, t1 + 4], [tx + tw, t1 + 22], [tx, t1 + 22], [tx - 8, t1 + 4], [tx, t1 - 16]], PALETTE[4].hex, 2.6);
+    line([[tx - 4, t1 + 6], [tx + tw + 4, t1 + 6]], PALETTE[1].hex, 4);
+    text('Tram boulevard', rr + 26, t2 + 50, PALETTE[3].hex, L.label);
+    // compass + A1 (illustrative)
+    const nx = L.w - 50, ny = 60;
+    line([[nx, ny + 30], [nx, ny - 20]], PALETTE[4].hex, 2.6); line([[nx - 10, ny - 8], [nx, ny - 22], [nx + 10, ny - 8]], PALETTE[4].hex, 2.6);
+    text('N', nx - 7, ny - 30, PALETTE[4].hex, L.label * .9);
+    const ax = qx + qw + (L.w > 700 ? 26 : 8), ay = qy + qh - 10;
+    const head = []; for (let t = 0; t <= 16; t++) { const a = t / 16 * 6.3; head.push([ax + Math.cos(a) * 9, ay - 34 + Math.sin(a) * 9]); }
+    line(head, PALETTE[4].hex, 1.8);
+    line([[ax, ay - 25], [ax, ay]], PALETTE[4].hex, 2); line([[ax - 11, ay - 14], [ax + 11, ay - 14]], PALETTE[4].hex, 1.8);
+    line([[ax - 8, ay - 24], [ax + 8, ay - 22], [ax + 12, ay - 12]], PALETTE[1].hex, 3.4);
+    line([[ax, ay], [ax - 7, ay + 16]], PALETTE[4].hex, 1.8); line([[ax, ay], [ax + 7, ay + 16]], PALETTE[4].hex, 1.8);
+    line([[ax + 3, ay - 18], [ax + 7, ay - 22]], PALETTE[5].hex, 3);
+    text('A1', ax + 14, ay - 30, PALETTE[1].hex, L.label * .8);
+    return ops;
+  }
+  function drawText(op) {
+    ctx.save();
+    ctx.font = `700 ${op.size}px Caveat, 'Patrick Hand', cursive`;
+    ctx.fillStyle = op.col; ctx.globalAlpha = .9;
+    ctx.translate(op.at[0], op.at[1]); ctx.rotate(-0.02);
+    ctx.fillText(op.text, 0, 0);
+    // chalk skips: knock specks out of the lettering
+    const w = ctx.measureText(op.text).width;
+    ctx.globalCompositeOperation = 'destination-out';
+    for (let i = 0; i < w * op.size * 0.09; i++) { ctx.globalAlpha = Math.random() * .8; ctx.fillRect(Math.random() * w, -op.size * Math.random(), 1.4, 1.4); }
+    ctx.restore();
+  }
+  function drawOp(op, upto) {
+    if (op.text) return drawText(op);
+    const n = upto == null ? op.pts.length - 1 : upto;
+    for (let i = 0; i < n; i++) segment(op.pts[i][0], op.pts[i][1], op.pts[i + 1][0], op.pts[i + 1][1], op.r, op.col, false);
+  }
+  let tracing = false;
+  function trace() {
+    if (tracing) return;
+    const ops = buildOps();
+    if (reduce) { ops.forEach((op) => drawOp(op)); live.textContent = 'District traced.'; return; }
+    tracing = true;
+    const segs = [];
+    ops.forEach((op, oi) => { if (op.text) segs.push({ op }); else for (let i = 0; i < op.pts.length - 1; i++) segs.push({ op, i }); });
+    let k = 0; const per = Math.max(3, Math.ceil(segs.length / 70));
+    (function step() {
+      for (let j = 0; j < per && k < segs.length; j++, k++) {
+        const s = segs[k];
+        if (s.op.text) drawText(s.op);
+        else segment(s.op.pts[s.i][0], s.op.pts[s.i][1], s.op.pts[s.i + 1][0], s.op.pts[s.i + 1][1], s.op.r, s.op.col, false);
+      }
+      if (k < segs.length) requestAnimationFrame(step); else { tracing = false; live.textContent = 'District traced.'; }
+    })();
+  }
+  function wash() {
+    if (reduce) { ctx.clearRect(0, 0, W, H); live.textContent = 'Pavement washed clean.'; return; }
+    let n = 0;
+    (function step() {
+      ctx.save(); ctx.globalCompositeOperation = 'destination-out'; ctx.globalAlpha = .22;
+      ctx.fillRect(0, 0, W, H); ctx.restore();
+      if (++n < 14) requestAnimationFrame(step); else { ctx.clearRect(0, 0, W, H); live.textContent = 'Pavement washed clean.'; }
+    })();
+  }
+
+  // ---------- tools ----------
+  const sticks = document.getElementById('sticks');
+  STICKS.forEach((p, i) => {
+    const b = el('button', { class: 'stick', type: 'button', 'data-name': `${i + 1} ${p.name}`, 'aria-label': `${p.name} chalk ${p.hex}`, 'aria-pressed': i === 0 ? 'true' : 'false', style: `--c:${p.hex};--ink:${p.ink}` });
+    b.addEventListener('click', () => pick(i));
+    sticks.append(b);
+  });
+  function pick(i) {
+    color = STICKS[i].hex; setErase(false);
+    [...sticks.children].forEach((b, j) => b.setAttribute('aria-pressed', j === i ? 'true' : 'false'));
+    live.textContent = `${STICKS[i].name} chalk.`;
+  }
+  const eraserBtn = document.getElementById('eraser');
+  function setErase(on) { erasing = on; eraserBtn.setAttribute('aria-pressed', on ? 'true' : 'false'); }
+  eraserBtn.addEventListener('click', () => { setErase(!erasing); live.textContent = erasing ? 'Rag in hand: erasing.' : 'Chalk in hand.'; });
+  document.querySelectorAll('.size').forEach((b) => b.addEventListener('click', () => {
+    radius = +b.dataset.r;
+    document.querySelectorAll('.size').forEach((o) => o.setAttribute('aria-pressed', o === b ? 'true' : 'false'));
+  }));
+  document.getElementById('trace').addEventListener('click', trace);
+  document.getElementById('wash').addEventListener('click', wash);
+  document.getElementById('save').addEventListener('click', (e) => {
+    const out = document.createElement('canvas'); out.width = canvas.width; out.height = canvas.height;
+    const o = out.getContext('2d'); o.fillStyle = '#d8d1c1'; o.fillRect(0, 0, out.width, out.height); o.drawImage(canvas, 0, 0);
+    e.currentTarget.href = out.toDataURL('image/png');
+  });
+
+  // pointer drawing
+  let last = null;
+  const pos = (e) => { const r = canvas.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
+  canvas.addEventListener('pointerdown', (e) => { canvas.setPointerCapture(e.pointerId); last = pos(e); dab(last[0], last[1], radius, color, erasing); nib.classList.remove('kb'); });
+  canvas.addEventListener('pointermove', (e) => { if (!last) return; const p = pos(e); segment(last[0], last[1], p[0], p[1], radius, color, erasing); last = p; });
+  const end = () => { last = null; };
+  canvas.addEventListener('pointerup', end); canvas.addEventListener('pointercancel', end);
+
+  // keyboard drawing
+  const nib = document.getElementById('nib');
+  let kx = 0, ky = 0, down = false;
+  function placeNib() { nib.style.left = kx + 'px'; nib.style.top = ky + 'px'; nib.style.borderStyle = down ? 'solid' : 'dashed'; }
+  canvas.addEventListener('focus', () => { if (!kx) { kx = W / 2; ky = H / 2; } placeNib(); nib.classList.add('kb'); });
+  canvas.addEventListener('keydown', (e) => {
+    const step = e.shiftKey ? 28 : 8;
+    const moves = { ArrowLeft: [-step, 0], ArrowRight: [step, 0], ArrowUp: [0, -step], ArrowDown: [0, step] };
+    if (moves[e.key]) {
+      e.preventDefault();
+      const nx = Math.max(4, Math.min(W - 4, kx + moves[e.key][0])), ny = Math.max(4, Math.min(H - 4, ky + moves[e.key][1]));
+      if (down) segment(kx, ky, nx, ny, radius, color, erasing);
+      kx = nx; ky = ny; placeNib(); nib.classList.add('kb');
+    } else if (e.key === ' ') {
+      e.preventDefault(); down = !down; if (down) dab(kx, ky, radius, color, erasing); placeNib();
+      live.textContent = down ? 'Chalk down: arrows draw.' : 'Chalk lifted.';
+    } else if (/^[1-6]$/.test(e.key)) { pick(+e.key - 1); }
+    else if (e.key === 'e' || e.key === 'E') { setErase(!erasing); live.textContent = erasing ? 'Rag in hand: erasing.' : 'Chalk in hand.'; }
+  });
+
+  let rt;
+  window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(resize, 120); });
+  resize();
+  const start = () => trace();
+  (document.fonts && document.fonts.load ? document.fonts.load("700 20px Caveat").then(start, start) : start());
+})();
+</script>
+</body>
+</html>

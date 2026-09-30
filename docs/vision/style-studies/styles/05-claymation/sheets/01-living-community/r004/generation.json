@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "fbfcf2dff9aeffbd331dda5a717d12446913fe3b97afdb136e99b836dddacaf0",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "1724b95c7197f376dcb55011fe531ae29a9b07d5f58e28f9eeb0a45f8a66ce82"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/05-claymation/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/05-claymation/candidates/01-pass3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

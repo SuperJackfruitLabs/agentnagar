@@ -1,0 +1,46 @@
+# Hall expansion r003 — local test output, 2026-09-22
+
+$ node scripts/validate_shared_exports.cjs
+awning.glb: 0 errors, 0 warnings
+bench.glb: 0 errors, 0 warnings
+door.glb: 0 errors, 0 warnings
+floor.glb: 0 errors, 0 warnings
+lawn.glb: 0 errors, 0 warnings
+path.glb: 0 errors, 0 warnings
+path_corner.glb: 0 errors, 0 warnings
+path_t.glb: 0 errors, 0 warnings
+planter.glb: 0 errors, 0 warnings
+railing.glb: 0 errors, 0 warnings
+roof.glb: 0 errors, 0 warnings
+shelf.glb: 0 errors, 0 warnings
+sign.glb: 0 errors, 0 warnings
+tree.glb: 0 errors, 0 warnings
+wall.glb: 0 errors, 0 warnings
+window.glb: 0 errors, 0 warnings
+
+$ python3 scripts/test_shared_assets.py
+----------------------------------------------------------------------
+Ran 14 tests in 0.026s
+
+OK
+
+$ python3 scripts/test_exports.py
+----------------------------------------------------------------------
+Ran 6 tests in 0.013s
+
+OK
+
+$ godot --headless --path godot --script res://tests/fixture_test.gd
+{"failures":0,"test":"fixture"}
+$ godot --headless --path godot --script res://tests/import_test.gd
+{"assets":{"chair":{"meshes":1},"desk":{"meshes":1},"environment":{"meshes":2},"kai":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"lyra":{"bone_names":["Root","Hips","Spine","Head","UpperArm.L","Forearm.L","Hand.L","UpperArm.R","Forearm.R","Hand.R","Thigh.L","Shin.L","Foot.L","Thigh.R","Shin.R","Foot.R"],"bones":16,"clips":["attend","idle","seated_idle","sit_down","stand_up","typing","walk"],"meshes":1},"terminal":{"meshes":1}},"failures":0,"test":"import"}
+$ godot --headless --path godot --script res://tests/scene_test.gd
+{"failures":0,"missing_assets":[],"test":"scene"}
+$ godot --headless --path godot --script res://tests/movement_test.gd
+{"failures":0,"test":"movement"}
+$ godot --headless --path godot --script res://tests/journey_test.gd
+{"failures":0,"test":"journey"}
+$ godot --headless --path godot --script res://tests/shared_workshop_test.gd
+{"failures":0,"test":"shared_workshop"}
+$ godot --headless --path godot --script res://tests/bay_pitch_test.gd
+{"failures":0,"test":"bay_pitch"}

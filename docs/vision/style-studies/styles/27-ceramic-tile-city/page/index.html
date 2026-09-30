@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en" data-style="27-ceramic-tile-city">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ceramic tile city · Agentnagar style study 27</title>
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<style>
+:root{
+  --cobalt:#153C6B; --cobalt-2:#1F4E96; --river:#306FA8; --glaze:#EEEBE6; --glaze-2:#F7F5F1;
+  --terracotta:#A76E4B; --terracotta-l:#D1956A; --lime:#C5BAAE; --tram:#D4A35A; --olive:#6B6449;
+  --ink:#172238; --ink-2:#3A4760; --grout:#B9AE9C;
+  --display:'Fraunces Variable', 'EB Garamond', Georgia, serif;
+  --body:'DM Sans Variable', 'Inter Variable', system-ui, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+  --az: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23EEEBE6'/%3E%3Cg fill='%231F4E96'%3E%3Cpath d='M24 4c5 8 5 32 0 40c-5-8-5-32 0-40z'/%3E%3Cpath d='M4 24c8-5 32-5 40 0c-8 5-32 5-40 0z'/%3E%3Cpath d='M0 0h10a10 10 0 0 1-10 10zM48 0v10a10 10 0 0 1-10-10zM0 48v-10a10 10 0 0 1 10 10zM48 48h-10a10 10 0 0 1 10-10z'/%3E%3C/g%3E%3Ccircle cx='24' cy='24' r='5' fill='%23EEEBE6'/%3E%3Ccircle cx='24' cy='24' r='2.4' fill='%23D4A35A'/%3E%3C/svg%3E");
+  --band: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16' viewBox='0 0 32 16'%3E%3Crect width='32' height='16' fill='%23EEEBE6'/%3E%3Cpath d='M0 8L8 0L16 8L8 16zM16 8L24 0L32 8L24 16z' fill='%23153C6B'/%3E%3Cpath d='M8 4L12 8L8 12L4 8z' fill='%23EEEBE6'/%3E%3Ccircle cx='24' cy='8' r='2' fill='%23D4A35A'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cobalt);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--cobalt-2);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--tram);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--tram);color:var(--ink);padding:8px 14px;z-index:10;font-weight:700}
+.skip:focus{top:12px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+
+/* Street-sign navigation */
+.topbar{background:var(--cobalt);padding:14px 0 0}
+.kit-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+.kit-nav a{font:600 13px/1.2 var(--body);letter-spacing:.04em;color:var(--cobalt);background:var(--glaze-2);text-decoration:none;padding:8px 14px;border:3px solid var(--glaze-2);box-shadow:inset 0 0 0 2px var(--cobalt-2);border-radius:3px}
+.kit-nav a:hover{background:#fff}
+.kit-nav .kit-index{font-family:var(--display);font-size:15px;font-weight:600}
+
+header.hero{color:var(--glaze-2);padding:26px 0 0;position:relative}
+.hero-grid{display:grid;grid-template-columns:auto minmax(0,460px);gap:12px 48px;align-items:end;padding-bottom:22px}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr}}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#C9D6EC}
+h1{font:600 clamp(44px,7vw,92px)/.92 var(--display);font-variation-settings:"SOFT" 100,"WONK" 1;margin:10px 0 0;letter-spacing:-.02em}
+h1 em{font-style:italic;font-weight:400;color:var(--tram)}
+.lede{max-width:640px;font-size:18px;color:#DCE4F2;margin:0}
+.band{height:16px;background:var(--band) repeat-x;background-size:32px 16px}
+
+/* Game */
+.game{background:var(--glaze);position:relative}
+.game::before{content:"";position:absolute;inset:0;background:var(--az);background-size:96px;opacity:.13;pointer-events:none}
+.game-inner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:36px;padding:36px 20px 44px;max-width:1240px;margin:0 auto;align-items:start}
+.board-wrap{position:relative}
+.board-frame{padding:14px;background:var(--cobalt);border-radius:6px;box-shadow:0 18px 40px -18px rgba(10,25,50,.6);max-width:620px;margin:0 auto}
+.board{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:5px;aspect-ratio:1;padding:5px;border-radius:2px;
+  background:var(--grout) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .24 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='80' height='80' filter='url(%23n)'/%3E%3C/svg%3E")}
+.tile{position:relative;padding:0;border:0;background:var(--glaze);border-radius:3px;cursor:grab;touch-action:none;overflow:hidden;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),inset 0 -3px 0 rgba(20,40,80,.18),0 1px 0 rgba(0,0,0,.2);transition:box-shadow .2s, filter .2s}
+.tile svg{display:block;width:100%;height:100%;transition:transform .35s cubic-bezier(.3,1.4,.5,1)}
+.tile::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:3px;
+  background:linear-gradient(125deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 28%,rgba(255,255,255,0) 60%,rgba(255,255,255,.25) 72%,rgba(255,255,255,0) 80%);
+  background-size:220% 220%;background-position:100% 100%;transition:background-position .6s ease}
+.tile:hover::after,.tile:focus-visible::after{background-position:0 0}
+.tile:focus-visible{outline:3px solid var(--tram);outline-offset:2px;z-index:3}
+.tile[aria-pressed="true"]{box-shadow:0 0 0 3px var(--tram),0 10px 18px -6px rgba(0,0,0,.45);z-index:2;filter:brightness(1.04)}
+.tile.drop-target{box-shadow:0 0 0 3px #fff,0 0 0 6px var(--cobalt-2)}
+.tile.dragging{z-index:5;cursor:grabbing;box-shadow:0 22px 30px -10px rgba(0,0,0,.5)}
+.tile.glazed::after{animation:sheen 1.4s ease 1}
+@keyframes sheen{0%{background-position:100% 100%}100%{background-position:0 0}}
+.board.solved .tile{box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.board-caption{font:500 12px/1.5 var(--mono);color:var(--ink-2);text-align:center;margin:12px auto 0;max-width:620px}
+
+.ledger{background:var(--glaze-2);border:3px solid var(--cobalt);border-radius:4px;padding:20px 22px;box-shadow:6px 6px 0 var(--cobalt)}
+.ledger h2{font:600 26px/1.1 var(--display);margin:0 0 6px;color:var(--cobalt)}
+.ledger p{margin:0 0 12px;font-size:15px;color:var(--ink-2)}
+.how{font-size:14px;margin:0 0 14px;padding-left:18px;color:var(--ink-2)}
+.how li{margin:2px 0}
+kbd{font:600 12px var(--mono);background:#fff;border:1px solid var(--lime);border-bottom-width:2px;border-radius:3px;padding:0 5px;color:var(--ink)}
+.ref{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;margin:4px 0 16px}
+.ref svg{width:120px;height:120px;border:4px solid var(--cobalt);border-radius:3px;background:var(--glaze)}
+.ref small{font-size:12.5px;line-height:1.45;color:var(--ink-2)}
+.areas{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:6px}
+.areas li{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;font-size:14.5px}
+.areas .pip{width:18px;height:18px;border-radius:2px;background:var(--lime);box-shadow:inset 0 0 0 2px #fff}
+.areas li.done .pip{background:var(--cobalt-2) var(--az);background-size:18px}
+.areas li.done .nm{font-weight:700;color:var(--cobalt)}
+.areas a{font:500 12px var(--mono);white-space:nowrap}
+.areas li:not(.done) a{color:var(--ink-2)}
+.controls{display:flex;flex-wrap:wrap;gap:8px}
+.btn{font:600 14px/1 var(--body);padding:11px 14px;border-radius:3px;border:2px solid var(--cobalt);background:#fff;color:var(--cobalt);cursor:pointer}
+.btn:hover{background:#E4EAF5}
+.btn.primary{background:var(--cobalt);color:#fff}
+.btn.primary:hover{background:var(--cobalt-2)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.status-line{min-height:1.5em;font:500 13px/1.5 var(--mono);color:var(--cobalt);margin-top:12px}
+
+/* Panels */
+main.panels{background:var(--cobalt);padding:44px 0 20px}
+.panel{background:var(--glaze-2);margin:0 auto 34px;max-width:1200px;position:relative;border-radius:4px;padding:18px}
+.panel::before{content:"";position:absolute;inset:0;border-radius:4px;background:var(--band);background-size:32px 16px;
+  -webkit-mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);padding:10px;pointer-events:none}
+.panel-inner{background:var(--glaze-2);padding:26px clamp(16px,3vw,40px) 30px;position:relative}
+.plaque{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;border-bottom:2px solid var(--cobalt);padding-bottom:12px;margin-bottom:20px}
+.plaque h2{font:600 clamp(28px,4vw,44px)/1.05 var(--display);color:var(--cobalt);margin:0}
+.plaque .area{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#7E5238}
+.panel.locked .panel-inner{background:repeating-linear-gradient(45deg,#E9DED0 0 12px,#E4D8C8 12px 24px)}
+.panel.locked .plaque h2{color:#7E5238}
+.sealed{display:none;gap:14px;align-items:center;flex-wrap:wrap}
+.panel.locked .sealed{display:flex}
+.panel.locked .body{display:none}
+.sealed p{margin:0;color:#5B3D2A;max-width:560px}
+.panel.just-fired .panel-inner{animation:fire 1.2s ease}
+@keyframes fire{0%{filter:sepia(.8) saturate(.6)}100%{filter:none}}
+.body > p{max-width:70ch}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:28px}
+h3{font:600 20px/1.2 var(--display);color:var(--cobalt);margin:18px 0 8px}
+.kit-project .kit-tagline{font:500 italic clamp(22px,2.6vw,30px)/1.25 var(--display);color:var(--cobalt);margin:0 0 14px}
+.kit-project dl,.tradeoffs{display:grid;grid-template-columns:minmax(110px,max-content) 1fr;gap:8px 18px;margin:18px 0}
+.kit-project dt,.tradeoffs dt{font:600 13px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:#8a5535;padding-top:3px}
+.kit-project dd,.tradeoffs dd{margin:0}
+.kit-small{font-size:14px;color:var(--ink-2)}
+.principles{counter-reset:p;list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.principles li{padding:10px 12px 10px 52px;position:relative;background:#fff;border-left:4px solid var(--cobalt-2)}
+.principles li::before{counter-increment:p;content:counter(p);position:absolute;left:12px;top:9px;width:28px;height:28px;display:grid;place-items:center;background:var(--cobalt);color:#fff;font:600 14px var(--display);border-radius:2px}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(122px,1fr));gap:12px;list-style:none;padding:0;margin:0}
+.swatches li{background:#fff;padding:6px;border-radius:3px;box-shadow:0 1px 0 var(--lime)}
+.swatches .chip{height:74px;border-radius:2px;position:relative;overflow:hidden}
+.swatches .chip::after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.55),rgba(255,255,255,0) 35%)}
+.swatches b{display:block;font-size:13.5px;margin-top:6px}
+.swatches code{font:500 12.5px var(--mono);color:var(--ink-2)}
+.type-spec{display:grid;gap:10px}
+.type-spec div{background:#fff;padding:12px 14px}
+.type-spec .d{font:600 34px/1 var(--display);color:var(--cobalt)}
+.type-spec .b{font:400 17px/1.4 var(--body)}
+.type-spec .m{font:500 14px/1.4 var(--mono)}
+.type-spec small{display:block;font:500 11.5px var(--mono);color:var(--ink-2);margin-top:4px}
+
+.sheets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+figure{margin:0}
+.sheet-fig{background:#fff;padding:10px;border:2px solid var(--cobalt)}
+.sheet-fig img.kit-sheet{display:block;width:100%;height:auto}
+.sheet-fig figcaption{font-size:14px;color:var(--ink-2);padding:10px 4px 2px}
+.sheet-fig figcaption b{font-family:var(--display);font-size:18px;color:var(--cobalt);display:block}
+.landmarks{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 18px}
+.landmarks li{background:#fff;border:2px solid var(--cobalt-2);border-radius:3px;padding:6px 10px;font-size:14px}
+.landmarks b{font-family:var(--mono);color:var(--terracotta);margin-right:6px}
+.note{font-size:13.5px;color:var(--ink-2);border-left:3px solid var(--tram);padding:4px 0 4px 12px;margin:14px 0}
+
+.agent-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start}
+.a1-art{background:#fff;padding:12px;border:2px solid var(--cobalt)}
+.a1-art svg{width:100%;max-width:340px;margin:0 auto;height:auto;display:block}
+.kit-panel{border:2px solid var(--cobalt)}
+.guild{list-style:none;padding:0;margin:10px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.guild li{background:#fff;padding:8px 10px 8px 46px;position:relative;font-size:13.5px;line-height:1.35;min-height:52px}
+.guild li b{display:block;font-size:14.5px;color:var(--cobalt)}
+.guild li::before{content:attr(data-i);position:absolute;left:8px;top:9px;width:30px;height:30px;display:grid;place-items:center;background:var(--cobalt-2) var(--az);background-size:30px;color:transparent;border-radius:2px;box-shadow:inset 0 0 0 2px #fff}
+.guild li span{color:var(--ink-2)}
+
+.kit-status .kit-summary{font:500 italic 22px/1.35 var(--display);color:var(--cobalt);margin:0 0 10px}
+.kit-status ul{padding-left:20px}
+.kit-concept{font-size:14px;color:var(--ink-2)}
+footer{background:var(--cobalt);color:#DCE4F2;padding:10px 0 40px;font-size:14px}
+footer p{max-width:900px}
+
+/* Notes dialog */
+.kit-dialog{max-width:880px;width:calc(100% - 24px);max-height:88vh;border:6px solid var(--cobalt);border-radius:4px;padding:0;background:var(--glaze-2);color:var(--ink)}
+.kit-dialog::backdrop{background:rgba(10,26,52,.7)}
+.kit-dialog .kit-close{position:sticky;top:0;float:right;margin:10px;font:600 14px var(--body);background:var(--cobalt);color:#fff;border:0;padding:10px 14px;border-radius:3px;cursor:pointer;z-index:1}
+.kit-notes{padding:10px 26px 30px;font-size:16px}
+.kit-notes h1{font-size:34px;color:var(--cobalt)}
+.kit-notes h2{font:600 24px var(--display);color:var(--cobalt);border-bottom:2px solid var(--cobalt);padding-bottom:4px;margin-top:28px}
+.kit-notes img{max-width:100%;height:auto}
+.kit-notes .kit-swatch{display:inline-block;width:16px;height:16px;vertical-align:-3px;border:1px solid #0003}
+.kit-notes .kit-nav a{box-shadow:inset 0 0 0 2px var(--cobalt-2)}
+
+@media (max-width:980px){
+  .game-inner{grid-template-columns:1fr}
+  .ledger{max-width:620px;margin:0 auto;width:100%}
+  .agent-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .sheets{grid-template-columns:1fr}
+  .board-frame{padding:8px}
+  .board{gap:3px;padding:3px}
+  .panel{padding:10px;margin-bottom:22px}
+  .panel::before{padding:6px}
+  .ledger{box-shadow:4px 4px 0 var(--cobalt);padding:16px}
+  .ref{grid-template-columns:90px 1fr}
+  .ref svg{width:90px;height:90px}
+  .kit-project dl,.tradeoffs{grid-template-columns:1fr;gap:2px}
+  .kit-project dd,.tradeoffs dd{margin-bottom:10px}
+  .kit-nav a{font-size:12px;padding:7px 10px}
+}
+@media (prefers-reduced-motion:reduce){
+  .tile svg{transition:none}
+  .tile::after{transition:none}
+  .tile.glazed::after,.panel.just-fired .panel-inner{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#panels">Skip to the panels</a>
+
+<!-- The district, drawn once and windowed by each tile. Illustrative, from the shared reference district. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="paving" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#E6DAC4"/><path d="M0 0H10V10" fill="none" stroke="#D2C1A2" stroke-width=".8"/></pattern>
+    <pattern id="az" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#F1EEE8"/><path d="M8 1.5C10 5 10 11 8 14.5C6 11 6 5 8 1.5ZM1.5 8C5 6 11 6 14.5 8C11 10 5 10 1.5 8Z" fill="#1F4E96"/><path d="M0 0h3a3 3 0 0 1-3 3zM16 0v3a3 3 0 0 1-3-3zM0 16v-3a3 3 0 0 1 3 3zM16 16h-3a3 3 0 0 1 3-3z" fill="#1F4E96"/><circle cx="8" cy="8" r="1.6" fill="#D4A35A"/></pattern>
+    <pattern id="star" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#EDE7DC"/><path d="M6 1L7.3 4.7L11 6L7.3 7.3L6 11L4.7 7.3L1 6L4.7 4.7Z" fill="#2B5DA6"/></pattern>
+    <pattern id="roof" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#C27E54"/><path d="M0 4.5H5" stroke="#9A5E3C" stroke-width="1"/></pattern>
+    <pattern id="waves" width="24" height="14" patternUnits="userSpaceOnUse"><rect width="24" height="14" fill="#306FA8"/><path d="M0 8q6-5 12 0t12 0" fill="none" stroke="#7FA9D6" stroke-width="1.2" opacity=".75"/></pattern>
+    <radialGradient id="domeG" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#6F93CF"/><stop offset=".55" stop-color="#2553A0"/><stop offset="1" stop-color="#132F63"/></radialGradient>
+    <g id="district">
+      <rect width="400" height="400" fill="url(#paving)"/>
+      <!-- River R1 -->
+      <rect x="0" y="0" width="72" height="400" fill="url(#waves)"/>
+      <rect x="72" y="0" width="8" height="400" fill="url(#az)"/>
+      <line x1="80" y1="0" x2="80" y2="400" stroke="#153C6B" stroke-width="1.5"/>
+      <!-- boats and compass -->
+      <g transform="translate(30 150) rotate(-12)"><path d="M-12 0Q0 9 12 0L10-3H-10Z" fill="#7A4A2C"/><rect x="-7" y="-6" width="14" height="3" fill="#F1EEE8"/></g>
+      <g transform="translate(34 262)"><path d="M-10 6H10L7 10H-7Z" fill="#F1EEE8" stroke="#153C6B" stroke-width="1"/><path d="M0 5V-14L9 4Z" fill="#fff" stroke="#153C6B" stroke-width="1"/><path d="M-1 4V-10L-8 4Z" fill="#D4A35A"/></g>
+      <g transform="translate(34 356)"><circle r="17" fill="#F1EEE8" stroke="#153C6B" stroke-width="1.5"/><path d="M0-15L3.5 0L0 15L-3.5 0Z" fill="#153C6B"/><path d="M-15 0L0-3.5L15 0L0 3.5Z" fill="#6F93CF"/><path d="M0-15L3.5 0H-3.5Z" fill="#C0392B"/><text y="-19" x="-3.4" font-size="8" font-family="Georgia,serif" fill="#fff" font-weight="700">N</text></g>
+      <!-- North bridge B1: low three-span crossing -->
+      <rect x="0" y="33" width="84" height="26" fill="#D8CBB2"/>
+      <rect x="0" y="36" width="84" height="20" fill="#F1EEE8" stroke="#153C6B" stroke-width="1.6"/>
+      <rect x="0" y="43" width="84" height="6" fill="url(#star)"/>
+      <g fill="#153C6B"><rect x="16" y="29" width="7" height="34" rx="2"/><rect x="38" y="29" width="7" height="34" rx="2"/><rect x="60" y="29" width="7" height="34" rx="2"/></g>
+      <!-- North lane -->
+      <rect x="80" y="36" width="320" height="20" fill="#D6C4A2"/>
+      <path d="M86 46H400" stroke="#F1EEE8" stroke-width="1.6" stroke-dasharray="6 6"/>
+      <g stroke="#7A4A2C" stroke-width=".8">
+        <rect x="90" y="4" width="40" height="26" fill="url(#roof)"/><rect x="140" y="7" width="32" height="23" fill="url(#roof)"/>
+        <rect x="186" y="3" width="44" height="27" fill="url(#roof)"/><rect x="244" y="8" width="34" height="22" fill="url(#roof)"/>
+        <rect x="292" y="4" width="48" height="26" fill="url(#roof)"/><rect x="352" y="8" width="40" height="22" fill="url(#roof)"/>
+        <rect x="92" y="64" width="44" height="30" fill="url(#roof)"/><rect x="236" y="63" width="0" height="0"/>
+        <rect x="312" y="62" width="38" height="30" fill="url(#roof)"/><rect x="358" y="66" width="36" height="26" fill="url(#roof)"/>
+      </g>
+      <g fill="#F1EEE8" opacity=".85"><path d="M90 17H130M140 18H172M186 16H230M244 19H278M292 17H340M352 19H392M92 79H136M312 77H350M358 79H394" stroke="#E7B38F" stroke-width="1.2"/></g>
+      <!-- small plaza with orange trees north of square -->
+      <rect x="150" y="62" width="150" height="34" fill="url(#star)" opacity=".9"/>
+      <g><circle cx="168" cy="79" r="10" fill="#4F6E30"/><circle cx="198" cy="79" r="10" fill="#5C7B36"/><circle cx="282" cy="79" r="10" fill="#4F6E30"/>
+      <g fill="#E58A25"><circle cx="165" cy="76" r="2"/><circle cx="171" cy="82" r="2"/><circle cx="200" cy="75" r="2"/><circle cx="195" cy="83" r="2"/><circle cx="284" cy="76" r="2"/><circle cx="279" cy="83" r="2"/></g></g>
+      <rect x="236" y="56" width="28" height="52" fill="#D6C4A2"/>
+      <rect x="341" y="18" width="10" height="8" fill="#1F4E96"/><rect x="342.5" y="19.5" width="7" height="5" fill="#F1EEE8"/>
+      <!-- Workshop W1: three sawtooth bays, kilns, entrance east -->
+      <g transform="translate(0 0)">
+        <circle cx="122" cy="122" r="13" fill="#B26B44" stroke="#7A4A2C" stroke-width="1.5"/><circle cx="122" cy="122" r="6" fill="#3B2A22"/>
+        <circle cx="156" cy="116" r="10" fill="#B26B44" stroke="#7A4A2C" stroke-width="1.5"/><circle cx="156" cy="116" r="4.5" fill="#3B2A22"/>
+        <rect x="104" y="138" width="92" height="146" fill="#E7DCC6" stroke="#153C6B" stroke-width="2"/>
+        <g>
+          <rect x="108" y="142" width="84" height="44" fill="url(#roof)"/><rect x="108" y="142" width="84" height="8" fill="#6F93CF"/><rect x="108" y="150" width="84" height="2" fill="#153C6B"/>
+          <rect x="108" y="190" width="84" height="44" fill="url(#roof)"/><rect x="108" y="190" width="84" height="8" fill="#6F93CF"/><rect x="108" y="198" width="84" height="2" fill="#153C6B"/>
+          <rect x="108" y="238" width="84" height="42" fill="url(#roof)"/><rect x="108" y="238" width="84" height="8" fill="#6F93CF"/><rect x="108" y="246" width="84" height="2" fill="#153C6B"/>
+        </g>
+        <rect x="192" y="226" width="12" height="26" fill="#153C6B"/><path d="M194 252V234a4 4 0 0 1 8 0V252" fill="#D4A35A"/>
+        <rect x="112" y="288" width="80" height="8" fill="url(#az)"/>
+      </g>
+      <!-- Tree Square T1: one large living shade tree -->
+      <rect x="206" y="108" width="88" height="188" fill="url(#az)"/>
+      <rect x="206" y="108" width="88" height="188" fill="none" stroke="#153C6B" stroke-width="2"/>
+      <circle cx="250" cy="200" r="46" fill="#EDE7DC" stroke="#153C6B" stroke-width="2"/>
+      <circle cx="250" cy="200" r="40" fill="url(#star)"/>
+      <g>
+        <circle cx="250" cy="200" r="34" fill="#3F5E28"/>
+        <circle cx="236" cy="188" r="14" fill="#5C7B36"/><circle cx="262" cy="186" r="13" fill="#51712F"/><circle cx="264" cy="212" r="14" fill="#5C7B36"/><circle cx="238" cy="214" r="12" fill="#4A6A2C"/><circle cx="250" cy="200" r="10" fill="#6E8E42"/>
+        <g fill="#A9C271" opacity=".8"><circle cx="232" cy="184" r="3"/><circle cx="258" cy="182" r="3"/><circle cx="268" cy="208" r="3"/></g>
+      </g>
+      <g fill="#153C6B"><rect x="216" y="120" width="14" height="5" rx="1"/><rect x="270" y="275" width="14" height="5" rx="1"/><rect x="216" y="275" width="14" height="5" rx="1"/></g>
+      <!-- Library L1: broad two-storey, rounded reading-room roof -->
+      <rect x="304" y="118" width="90" height="170" rx="4" fill="#EDE3CF" stroke="#153C6B" stroke-width="2"/>
+      <rect x="310" y="124" width="78" height="158" fill="url(#roof)" opacity=".35"/>
+      <ellipse cx="350" cy="203" rx="36" ry="60" fill="url(#domeG)" stroke="#F1EEE8" stroke-width="2"/>
+      <g stroke="#F1EEE8" stroke-width="1.2" opacity=".85" fill="none"><path d="M350 143V263M314 203H386M325 160Q350 203 325 246M375 160Q350 203 375 246"/></g>
+      <circle cx="350" cy="203" r="8" fill="#F1EEE8"/><circle cx="350" cy="203" r="4" fill="#D4A35A"/>
+      <g fill="#153C6B"><rect x="296" y="150" width="8" height="18"/><rect x="296" y="238" width="8" height="18"/></g>
+      <path d="M318 132h8M374 132h8M318 274h8M374 274h8" stroke="#153C6B" stroke-width="3"/>
+      <!-- Tram boulevard S1 -->
+      <rect x="80" y="304" width="320" height="70" fill="#D3C2A1"/>
+      <rect x="200" y="300" width="100" height="10" fill="url(#az)"/>
+      <g stroke="#6E5F4C" stroke-width="1.4"><path d="M80 324H400M80 331H400M80 348H400M80 355H400"/></g>
+      <g stroke="#9C8B70" stroke-width="1" stroke-dasharray="2 5"><path d="M80 327.5H400M80 351.5H400"/></g>
+      <g transform="translate(212 318)">
+        <rect width="82" height="18" rx="7" fill="#D4A35A" stroke="#7A5A1E" stroke-width="1.2"/>
+        <rect x="4" y="3" width="74" height="4" rx="2" fill="#F1EEE8"/>
+        <g fill="#1F4E96"><rect x="8" y="10" width="10" height="4"/><rect x="22" y="10" width="10" height="4"/><rect x="36" y="10" width="10" height="4"/><rect x="50" y="10" width="10" height="4"/><rect x="64" y="10" width="10" height="4"/></g>
+        <path d="M78 9h3" stroke="#7A5A1E" stroke-width="2"/>
+      </g>
+      <rect x="120" y="339" width="30" height="6" fill="#153C6B"/><rect x="340" y="339" width="30" height="6" fill="#153C6B"/>
+      <g><g fill="#4F6E30"><circle cx="100" cy="388" r="9"/><circle cx="140" cy="388" r="9"/><circle cx="180" cy="388" r="9"/><circle cx="222" cy="388" r="9"/><circle cx="262" cy="388" r="9"/><circle cx="304" cy="388" r="9"/><circle cx="346" cy="388" r="9"/><circle cx="386" cy="388" r="9"/></g>
+      <g fill="#E58A25"><circle cx="97" cy="385" r="1.8"/><circle cx="143" cy="391" r="1.8"/><circle cx="177" cy="385" r="1.8"/><circle cx="225" cy="391" r="1.8"/><circle cx="259" cy="385" r="1.8"/><circle cx="307" cy="391" r="1.8"/><circle cx="343" cy="385" r="1.8"/><circle cx="389" cy="391" r="1.8"/></g></g>
+      <!-- Maker's marks: one per tile, top-left when upright -->
+      <g id="marks"></g>
+    </g>
+  </defs>
+</svg>
+
+<div class="topbar"><div class="wrap" id="nav-slot"></div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid"><div><p class="eyebrow" id="eyebrow">Style study</p>
+    <h1>Ceramic tile <em>city</em></h1></div>
+    <p class="lede">An old riverfront city surfaced in glazed tile. Set the sixteen tiles of the reference district in their places. Each finished area fires one panel of notes below.</p></div>
+  </div>
+  <div class="band" aria-hidden="true"></div>
+</header>
+
+<section class="game" aria-labelledby="game-title">
+  <div class="game-inner">
+    <div class="board-wrap">
+      <div class="board-frame">
+        <div class="board" id="board" role="group" aria-label="District tile board, 4 by 4. Use arrow keys to move between tiles."></div>
+      </div>
+      <p class="board-caption">Illustrative tile art drawn for this page from the shared reference district. Not a concept sheet.</p>
+    </div>
+    <aside class="ledger" aria-labelledby="game-title">
+      <h2 id="game-title">Set the district</h2>
+      <p>Match the reference: river on the west, bridge to the north, tram along the south.</p>
+      <ul class="how">
+        <li>Select a tile, then select another to swap them. Or drag one onto another.</li>
+        <li>Select a chosen tile again, or press <kbd>R</kbd>, to turn it. <kbd>Shift</kbd>+<kbd>R</kbd> turns it back.</li>
+        <li>Arrow keys move between tiles; <kbd>Enter</kbd> or <kbd>Space</kbd> selects.</li>
+        <li>A tile is upright when its small blue maker's mark sits top left.</li>
+      </ul>
+      <div class="ref">
+        <svg viewBox="0 0 400 400" role="img" aria-label="Reference district, solved: river west, north bridge, workshop, Tree Square, library, tram boulevard"><use href="#district"/></svg>
+        <small><b>Reference</b>, drawn for this page. It follows the shared district, so the square holds a living tree; the selected overview sheet shows a fountain there.</small>
+      </div>
+      <ul class="areas" id="areas" aria-label="District areas"></ul>
+      <div class="controls">
+        <button class="btn primary" type="button" id="notes-btn">Read the notes</button>
+        <button class="btn" type="button" id="rotate-btn" disabled>Turn selected tile</button>
+        <button class="btn" type="button" id="shuffle-btn">Shuffle</button>
+        <button class="btn" type="button" id="solve-btn">Set every tile</button>
+      </div>
+      <p class="status-line" id="live" role="status" aria-live="polite"></p>
+    </aside>
+  </div>
+</section>
+
+<main class="panels" id="panels" tabindex="-1">
+  <div class="wrap" id="panel-root"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="band" aria-hidden="true" style="margin:0 0 18px"></div>
+    <p id="foot-note"></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const S = Kit.style('27-ceramic-tile-city');
+  const A = window.AGENTNAGAR;
+  const el = Kit.el;
+  const reduced = Kit.reducedMotion();
+
+  const CONTENT = {
+    intent: 'An old riverfront city surfaced in glazed tile. Cobalt and white azulejo panels, terracotta roofs, warm limestone, orange trees and a yellow tram set the palette. Repeating geometric borders run along floors, walls, fountains, bridge piers and benches.',
+    principles: [
+      'Terracotta roofs and blue domes mark the districts from above.',
+      'The tram line and the bridge read as continuous cobalt threads.',
+      'Patterned paving and tiled signage do the wayfinding at street level.',
+      'Up close, glaze carries onto kiosks, tram interiors and the AR tabletop, so tile becomes the UI language.',
+      'Keep cobalt-and-white on key surfaces and terracotta roof silhouettes at every quality tier.'
+    ],
+    palette: [
+      { name: 'Frame cobalt', hex: '#153C6B' },
+      { name: 'River blue', hex: '#306FA8' },
+      { name: 'Dome blue', hex: '#566B95' },
+      { name: 'Glaze white', hex: '#EAE6E5' },
+      { name: 'Terracotta', hex: '#D1956A' },
+      { name: 'Roof shadow', hex: '#A76E4B' },
+      { name: 'Limestone', hex: '#C5BAAE' },
+      { name: 'Tram yellow', hex: '#D4A35A' }
+    ],
+    materials: 'Glazed azulejo tile in cobalt on white, terracotta roof tile, warm limestone, wrought-iron lamps and brass tram fittings. In the sheets the tile pattern also runs onto clothing, furniture, a dog and birds.',
+    type: 'The sheets letter their labels in a classical serif on tile plaques. This page uses Fraunces for display, DM Sans for reading and IBM Plex Mono for catalogue marks.',
+    agents: 'City Agent A1 is a white robot with cobalt tile plating and an amber sash, seen in 01 Conversation holding a tablet by the river. The 03 phone instead shows a human-looking portrait asking "How can I help you explore today?", and nothing in the art ties the two together. Residents wear blue-and-white patterned aprons and dresses. The sheets do not depict individual Guild residents.',
+    tradeoffs: [
+      { label: 'Map scale', text: 'Terracotta roofs against blue domes separate districts, and the bridge and yellow tram read clearly. The selected overview centres the square on a fountain rather than the reference district\'s living tree.' },
+      { label: 'Street scale', text: 'Strongest scale: patterned paving, tiled benches, tile plaques and orange trees make streets easy to tell apart.' },
+      { label: 'Device cost', text: 'The brief proposes flat colour bands in place of tile borders and simpler reflections on lower tiers; glaze specular and hand-painted variation on higher tiers. How far pattern coverage should go is still undecided.' },
+      { label: 'UI legibility', text: 'Tile plaques make a natural button language (Browse, Book, Ask; Create, Learn, Meet, Explore). The review flags pattern covering both subjects and backgrounds, so hierarchy needs testing at target size.' },
+      { label: 'Review risks', text: 'Labels cycle between tile plaques, bottom text and top text. The 02 dog and birds carry ceramic decoration; 03 people are rendered more realistically than some 02 figures. The material treatment of living subjects needs a rule.' }
+    ]
+  };
+
+  // ---------- Board ----------
+  const N = 4;
+  const TILES = [
+    'North bridge over the river', 'Bridge landing and north lane', 'North lane with orange trees', 'North lane, east houses',
+    'River, north reach with boat', 'Workshop kilns and north roof bays', 'Tree Square, north half', 'Library, north wing',
+    'River with sailboat', 'Workshop, east entrance', 'Tree Square, south half', 'Library, south wing',
+    'River bank and compass', 'Tram boulevard, west', 'Tram stop with the tram', 'Tram boulevard, east'
+  ];
+  const AREAS = [
+    { id: 'square', name: 'Tree Square', slots: [6, 10], core: 'project', title: 'Agentnagar' },
+    { id: 'workshop', name: 'Workshop', slots: [5, 9], core: 'style', title: 'The style' },
+    { id: 'bridge', name: 'North bridge and lane', slots: [0, 1, 2, 3], core: 'views', title: 'One district, four views' },
+    { id: 'tram', name: 'Tram boulevard', slots: [13, 14, 15], core: 'agents', title: 'Agents in this style' },
+    { id: 'river', name: 'River', slots: [4, 8, 12], core: 'tradeoffs', title: 'Strengths and trade-offs' },
+    { id: 'library', name: 'Library', slots: [7, 11], core: 'status', title: 'Status and records' }
+  ];
+
+  // Maker's marks drawn into the shared district, one per tile corner.
+  const marks = document.getElementById('marks');
+  for (let i = 0; i < 16; i++) {
+    const x = (i % N) * 100 + 7, y = Math.floor(i / N) * 100 + 7;
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'mark');
+    g.innerHTML = `<rect x="${x - 4}" y="${y - 4}" width="9" height="9" rx="1.5" fill="#F1EEE8" stroke="#153C6B" stroke-width="1.4"/><circle cx="${x + .5}" cy="${y + .5}" r="2" fill="#1F4E96"/>`;
+    marks.append(g);
+  }
+
+  const board = document.getElementById('board');
+  const live = document.getElementById('live');
+  const rotateBtn = document.getElementById('rotate-btn');
+  let slots = [], rot = [], selected = null, focusSlot = 0;
+  const unlocked = new Set();
+  const tileEls = [];
+
+  for (let t = 0; t < 16; t++) {
+    const b = el('button', { class: 'tile', type: 'button', 'aria-pressed': 'false', tabindex: '-1' });
+    const x = (t % N) * 100, y = Math.floor(t / N) * 100;
+    b.innerHTML = `<svg viewBox="${x} ${y} 100 100" aria-hidden="true" focusable="false"><use href="#district"/></svg>`;
+    b.dataset.tile = t;
+    tileEls.push(b);
+    board.append(b);
+  }
+
+  function seeded(seed) { return () => ((seed = (seed * 16807) % 2147483647) / 2147483647); }
+  function shuffle(seed) {
+    const rnd = seeded(seed);
+    slots = [...Array(16).keys()];
+    for (let i = 15; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [slots[i], slots[j]] = [slots[j], slots[i]]; }
+    rot = slots.map(() => Math.floor(rnd() * 4));
+    // keep the board genuinely scrambled: no tile starts already set
+    slots.forEach((t, i) => { if (t === i && rot[t] % 4 === 0) rot[t] = 1 + Math.floor(rnd() * 3); });
+  }
+  const pos = (slot) => `row ${Math.floor(slot / N) + 1}, column ${(slot % N) + 1}`;
+  const turn = (t) => ['upright', 'turned right', 'upside down', 'turned left'][((rot[t] % 4) + 4) % 4];
+  const isSet = (slot) => slots[slot] === slot && ((rot[slot] % 4) + 4) % 4 === 0;
+
+  function render(animate) {
+    const before = animate && !reduced ? tileEls.map((b) => b.getBoundingClientRect()) : null;
+    slots.forEach((t, slot) => {
+      const b = tileEls[t];
+      b.style.gridArea = `${Math.floor(slot / N) + 1} / ${(slot % N) + 1}`;
+      b.querySelector('svg').style.transform = `rotate(${rot[t] * 90}deg)`;
+      b.setAttribute('aria-label', `${TILES[t]}, ${turn(t)}, at ${pos(slot)}${isSet(slot) ? ', set' : ''}`);
+      b.setAttribute('aria-pressed', selected === slot ? 'true' : 'false');
+      b.tabIndex = slot === focusSlot ? 0 : -1;
+      b.classList.toggle('set', isSet(slot));
+    });
+    if (before) {
+      tileEls.forEach((b, i) => {
+        const a = b.getBoundingClientRect();
+        const dx = before[i].left - a.left, dy = before[i].top - a.top;
+        if (dx || dy) b.animate([{ transform: `translate(${dx}px,${dy}px)` }, { transform: 'none' }], { duration: 280, easing: 'cubic-bezier(.3,1.2,.5,1)' });
+      });
+    }
+    rotateBtn.disabled = selected === null;
+    checkAreas();
+  }
+
+  const say = (msg) => { live.textContent = msg; };
+  function focusTile(slot) { focusSlot = slot; render(false); tileEls[slots[slot]].focus(); }
+
+  function activate(slot) {
+    if (selected === null) { selected = slot; say(`Picked up ${TILES[slots[slot]]}. Select another tile to swap, or this one again to turn it.`); }
+    else if (selected === slot) { rotate(slot, 1); return; }
+    else { swap(selected, slot); selected = null; }
+    render(false);
+  }
+  function swap(a, b) {
+    [slots[a], slots[b]] = [slots[b], slots[a]];
+    say(`Swapped. ${TILES[slots[b]]} is now at ${pos(b)}.`);
+    render(true);
+  }
+  function rotate(slot, dir) {
+    const t = slots[slot];
+    rot[t] += dir;
+    say(`${TILES[t]}: ${turn(t)}.`);
+    render(false);
+  }
+
+  // Keyboard
+  board.addEventListener('keydown', (e) => {
+    const slot = focusSlot;
+    const r = Math.floor(slot / N), c = slot % N;
+    let next = null;
+    if (e.key === 'ArrowRight') next = r * N + Math.min(N - 1, c + 1);
+    else if (e.key === 'ArrowLeft') next = r * N + Math.max(0, c - 1);
+    else if (e.key === 'ArrowDown') next = Math.min(N - 1, r + 1) * N + c;
+    else if (e.key === 'ArrowUp') next = Math.max(0, r - 1) * N + c;
+    else if (e.key === 'Home') next = r * N;
+    else if (e.key === 'End') next = r * N + N - 1;
+    else if (e.key === 'r' || e.key === 'R') { e.preventDefault(); rotate(slot, e.shiftKey ? -1 : 1); return; }
+    else if (e.key === 'Escape') { selected = null; say('Selection cleared.'); render(false); return; }
+    if (next !== null) { e.preventDefault(); focusTile(next); }
+  });
+
+  // Pointer: tap to select/swap/turn, or drag onto another tile to swap.
+  let drag = null;
+  board.addEventListener('pointerdown', (e) => {
+    const b = e.target.closest('.tile'); if (!b || e.button > 0) return;
+    const slot = slots.indexOf(+b.dataset.tile);
+    drag = { b, slot, x: e.clientX, y: e.clientY, moved: false, target: null };
+    b.setPointerCapture(e.pointerId);
+  });
+  board.addEventListener('pointermove', (e) => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!drag.moved && Math.hypot(dx, dy) < 8) return;
+    drag.moved = true;
+    drag.b.classList.add('dragging');
+    drag.b.style.transform = `translate(${dx}px,${dy}px) scale(1.04)`;
+    drag.b.style.pointerEvents = 'none';
+    const under = document.elementFromPoint(e.clientX, e.clientY);
+    const t = under && under.closest && under.closest('.tile');
+    if (drag.target && drag.target !== t) drag.target.classList.remove('drop-target');
+    drag.target = t && t !== drag.b ? t : null;
+    if (drag.target) drag.target.classList.add('drop-target');
+  });
+  function endDrag(e, cancelled) {
+    if (!drag) return;
+    const d = drag; drag = null;
+    d.b.classList.remove('dragging'); d.b.style.transform = ''; d.b.style.pointerEvents = '';
+    if (d.target) d.target.classList.remove('drop-target');
+    focusSlot = d.slot;
+    if (cancelled) return;
+    if (!d.moved) { activate(d.slot); d.b.focus(); return; }
+    if (d.target) { selected = null; swap(d.slot, slots.indexOf(+d.target.dataset.tile)); }
+    else render(false);
+  }
+  board.addEventListener('pointerup', (e) => endDrag(e, false));
+  board.addEventListener('pointercancel', (e) => endDrag(e, true));
+  // Keyboard activation (pointer taps are handled above; click fires for Enter/Space with detail 0)
+  board.addEventListener('click', (e) => {
+    const b = e.target.closest('.tile'); if (!b || e.detail !== 0) return;
+    const slot = slots.indexOf(+b.dataset.tile); focusSlot = slot; activate(slot); b.focus();
+  });
+  rotateBtn.addEventListener('click', () => { if (selected !== null) rotate(selected, 1); });
+  document.getElementById('shuffle-btn').addEventListener('click', () => {
+    shuffle(Date.now() % 2147483646 + 1); selected = null; say('Tiles shuffled. Fired panels stay open.'); render(true);
+  });
+  document.getElementById('solve-btn').addEventListener('click', () => {
+    slots = [...Array(16).keys()]; rot = rot.map((r) => r - (((r % 4) + 4) % 4) + (((r % 4) + 4) % 4 ? 4 : 0));
+    selected = null; say('Every tile set. All six panels fired.'); render(true);
+  });
+
+  // ---------- Areas and panels ----------
+  const areaList = document.getElementById('areas');
+  const panelRoot = document.getElementById('panel-root');
+  const panels = {};
+  AREAS.forEach((a) => {
+    const li = el('li', { id: `area-${a.id}` }, [el('span', { class: 'pip', 'aria-hidden': 'true' }), el('span', { class: 'nm', text: a.name }), el('a', { href: `#panel-${a.core}`, text: a.title })]);
+    li.setAttribute('aria-label', `${a.name}: not yet set. Fires ${a.title}.`);
+    areaList.append(li);
+  });
+
+  function panel(a, body) {
+    const fireBtn = el('button', { class: 'btn', type: 'button', text: 'Fire this panel now' });
+    const sec = el('section', { class: 'panel locked', id: `panel-${a.core}`, 'data-core': a.core, 'aria-labelledby': `h-${a.core}` }, [
+      el('div', { class: 'panel-inner' }, [
+        el('div', { class: 'plaque' }, [el('h2', { id: `h-${a.core}`, text: a.title }), el('span', { class: 'area', text: `Fired by: ${a.name}` })]),
+        el('div', { class: 'sealed' }, [el('p', { text: `Still unglazed. Set the ${a.name} tiles above to fire this panel, or open it now.` }), fireBtn]),
+        el('div', { class: 'body' }, body)
+      ])
+    ]);
+    fireBtn.addEventListener('click', () => { fire(a, true); sec.querySelector('h2').setAttribute('tabindex', '-1'); sec.querySelector('h2').focus(); });
+    panels[a.core] = sec;
+    panelRoot.append(sec);
+  }
+  function fire(a, manual) {
+    if (unlocked.has(a.core)) return;
+    unlocked.add(a.core);
+    const sec = panels[a.core];
+    sec.classList.remove('locked');
+    if (!reduced) { sec.classList.add('just-fired'); setTimeout(() => sec.classList.remove('just-fired'), 1300); }
+    const li = document.getElementById(`area-${a.id}`);
+    if (!manual) { li.classList.add('done'); li.setAttribute('aria-label', `${a.name}: set. Fired ${a.title}.`); }
+  }
+  function checkAreas() {
+    let newly = [];
+    AREAS.forEach((a) => {
+      const done = a.slots.every(isSet);
+      const li = document.getElementById(`area-${a.id}`);
+      if (!li) return;
+      li.classList.toggle('done', done);
+      if (done) {
+        li.setAttribute('aria-label', `${a.name}: set. Fired ${a.title}.`);
+        a.slots.forEach((s) => { const b = tileEls[slots[s]]; if (!b.classList.contains('glazed')) { b.classList.add('glazed'); } });
+        if (!unlocked.has(a.core)) { newly.push(a); fire(a, false); }
+      } else a.slots.forEach((s) => tileEls[slots[s]] && tileEls[slots[s]].classList.remove('glazed'));
+    });
+    tileEls.forEach((b) => { if (!b.classList.contains('set')) b.classList.remove('glazed'); });
+    board.classList.toggle('solved', slots.every((_, i) => isSet(i)));
+    if (newly.length) say(`${newly.map((a) => a.name).join(', ')} set. Fired: ${newly.map((a) => a.title).join(', ')}.`);
+  }
+
+  // Panel content
+  const sq = AREAS[0], ws = AREAS[1], br = AREAS[2], tr = AREAS[3], rv = AREAS[4], lb = AREAS[5];
+
+  const proj = Kit.projectBlock();
+  proj.removeAttribute('data-core');
+  panel(sq, [proj]);
+
+  panel(ws, [
+    el('p', { text: CONTENT.intent }),
+    el('div', { class: 'cols' }, [
+      el('div', {}, [el('h3', { text: 'Principles' }), el('ol', { class: 'principles' }, CONTENT.principles.map((p) => el('li', { text: p })))]),
+      el('div', {}, [
+        el('h3', { text: 'Glaze palette, sampled from the sheets' }),
+        el('ul', { class: 'swatches' }, CONTENT.palette.map((p) => el('li', {}, [el('div', { class: 'chip', style: `background:${p.hex}`, 'aria-hidden': 'true' }), el('b', { text: p.name }), el('code', { text: p.hex })])))
+      ])
+    ]),
+    el('div', { class: 'cols' }, [
+      el('div', {}, [el('h3', { text: 'Materials and texture' }), el('p', { text: CONTENT.materials })]),
+      el('div', {}, [el('h3', { text: 'Typography' }), el('p', { text: CONTENT.type }), el('div', { class: 'type-spec' }, [
+        el('div', {}, [el('span', { class: 'd', text: 'Tree Square' }), el('small', { text: 'Display · Fraunces' })]),
+        el('div', {}, [el('span', { class: 'b', text: 'The tram stops south of the square.' }), el('small', { text: 'Body · DM Sans' })]),
+        el('div', {}, [el('span', { class: 'm', text: 'W1 · T1 · L1 · S1' }), el('small', { text: 'Utility · IBM Plex Mono' })])
+      ])])
+    ])
+  ]);
+
+  const LANDMARKS = [
+    ['Map, top-down, diagonal and street. The river runs down the west with a tiled arched bridge to the north; the workshop with bottle kilns sits west; the square, centred on a fountain ringed by trees, is in the middle; a blue octagonal dome marks the library on the east; the yellow tram runs along the south.'],
+    ['Workshop, home, conversation and gathering. A tile-painting workshop, a home with the arched bridge beyond the window, A1 in conversation by the river, and a riverside gathering on tiled steps.'],
+    ['Build mode, transit, night and rain, waterfront park. A glass building placed on a tiled terrace above the river and bridge; a tiled tram interior; rain on patterned paving; a park with tiled planters facing the bridge.'],
+    ['Facility, mobile, rooftop and AR tabletop. A tiled kiosk (Browse, Book, Ask), a phone guide, a rooftop terrace over the river, and a tabletop model labelled Create, Learn, Meet, Explore.']
+  ];
+  panel(br, [
+    el('ul', { class: 'landmarks', 'aria-label': 'Reference district landmarks' }, A.district.map((d) => el('li', {}, [el('b', { text: d.id }), `${d.name}`]))),
+    el('p', { class: 'note', text: A.conceptNote }),
+    el('div', { class: 'sheets' }, S.sheets.map((sh, i) => el('figure', { class: 'sheet-fig' }, [
+      Kit.sheetImg(S, i, null, { alt: `${S.name} concept study, ${sh.title} (${sh.revision}): ${LANDMARKS[i][0]}` }),
+      el('figcaption', {}, [el('b', { text: `${sh.title} · ${sh.revision}` }), LANDMARKS[i][0]])
+    ])))
+  ]);
+
+  const a1Art = el('figure', { class: 'a1-art' });
+  a1Art.innerHTML = `<svg viewBox="0 0 320 300" role="img" aria-label="Illustrative drawing of City Agent A1 in this style: a white robot head with cobalt tile plating, an amber sash and a leaf badge.">
+    <rect width="320" height="300" fill="#EEEBE6"/><rect width="320" height="300" fill="url(#az)" opacity=".25"/>
+    <path d="M70 300 Q80 205 160 198 Q240 205 250 300Z" fill="#F4F2EE" stroke="#153C6B" stroke-width="3"/>
+    <path d="M100 222 L230 300 H190 L92 236Z" fill="#C98A3E" stroke="#8A5A22" stroke-width="2"/>
+    <g transform="translate(118 240)"><rect width="34" height="34" fill="#F1EEE8" stroke="#153C6B" stroke-width="2"/><rect x="3" y="3" width="28" height="28" fill="url(#az)"/></g>
+    <g transform="translate(196 236)"><circle r="15" fill="#F1EEE8" stroke="#153C6B" stroke-width="2"/><path d="M-7 6 Q-6 -8 8 -8 Q8 6 -7 6Z M-7 6 L2 -3" fill="#4F6E30" stroke="#2F4A1C" stroke-width="1.5"/></g>
+    <rect x="146" y="176" width="28" height="26" fill="#1F4E96"/>
+    <ellipse cx="160" cy="112" rx="66" ry="74" fill="#F4F2EE" stroke="#153C6B" stroke-width="3"/>
+    <path d="M110 70 Q160 30 210 70 Q200 60 160 56 Q120 60 110 70Z" fill="#1F4E96"/>
+    <g transform="translate(148 36)"><rect width="24" height="24" fill="#F1EEE8" stroke="#153C6B" stroke-width="1.5"/><rect x="2" y="2" width="20" height="20" fill="url(#az)"/></g>
+    <circle cx="96" cy="118" r="16" fill="#1F4E96" stroke="#153C6B" stroke-width="3"/><circle cx="96" cy="118" r="7" fill="#EEEBE6"/>
+    <circle cx="224" cy="118" r="16" fill="#1F4E96" stroke="#153C6B" stroke-width="3"/><circle cx="224" cy="118" r="7" fill="#EEEBE6"/>
+    <ellipse cx="136" cy="112" rx="9" ry="11" fill="#1F4E96"/><ellipse cx="184" cy="112" rx="9" ry="11" fill="#1F4E96"/>
+    <circle cx="139" cy="108" r="3" fill="#fff"/><circle cx="187" cy="108" r="3" fill="#fff"/>
+    <path d="M142 150 Q160 162 178 150" fill="none" stroke="#153C6B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M118 176 Q160 190 202 176" fill="none" stroke="#153C6B" stroke-width="2" stroke-dasharray="4 4"/>
+  </svg><figcaption class="kit-small">Illustrative, drawn for this page after the 01 Conversation panel. The leaf badge follows the shared A1 description; this sheet's badge placement is not clearly shown.</figcaption>`;
+  const convo = Kit.sheetImg(S, 1, 'bl', { alt: `${S.name} concept study, Living community, Conversation panel (${S.sheets[1].revision}): a resident talks with City Agent A1, a white robot with cobalt tile plating, by the river and arched bridge.` });
+  convo.style.aspectRatio = '740 / 418';
+  panel(tr, [
+    el('div', { class: 'agent-grid' }, [
+      el('div', {}, [
+        el('p', { text: CONTENT.agents }),
+        el('p', { text: A.agentA1 }),
+        el('h3', { text: 'The fourteen Guild residents' }),
+        el('p', { class: 'kit-small', text: `${A.guildNote} In this style they would take the residents' blue-and-white patterned workwear; no sheet shows them yet.` }),
+        el('ul', { class: 'guild' }, A.guild.map((g) => el('li', { 'data-i': g.name[0] }, [el('b', { text: g.name }), el('span', { text: g.role })])))
+      ]),
+      el('div', {}, [a1Art, el('figure', { style: 'margin-top:14px' }, [convo, el('figcaption', { class: 'kit-small', text: `From the concept sheet: 01 Conversation. ${A.conceptNote}` })])])
+    ])
+  ]);
+
+  panel(rv, [el('dl', { class: 'tradeoffs' }, CONTENT.tradeoffs.flatMap((t) => [el('dt', { text: t.label }), el('dd', { text: t.text })]))]);
+
+  const status = Kit.statusBlock(S);
+  status.removeAttribute('data-core');
+  panel(lb, [status]);
+
+  Kit.mountNav(document.getElementById('nav-slot'), S);
+  document.getElementById('eyebrow').textContent = `Agentnagar style study ${S.number} · ${S.sheets.length} concept sheets`;
+  document.getElementById('foot-note').textContent = `${A.status} ${A.conceptNote}`;
+
+  Kit.notesDialog(S, CONTENT, document.getElementById('notes-btn'));
+
+  shuffle(2707);
+  render(false);
+  say('Sixteen tiles, scrambled. Start anywhere.');
+})();
+</script>
+</body>
+</html>

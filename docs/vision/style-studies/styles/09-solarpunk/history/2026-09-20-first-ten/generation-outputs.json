@@ -1,0 +1,183 @@
+[
+  {
+    "style": "09-solarpunk",
+    "sheet": "00-city-perspectives",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-2ca34daf-f53a-4e3a-b5a1-cc64d4f048da.png",
+    "candidate": "candidates/00-city-perspectives-pass1.png",
+    "sha256": "5f5ce59fc3789f08f81afcc6329cda4e94723d97f7cd734e4a78e89afc668a0e",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/09-solarpunk/00-city-perspectives.png",
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/00-city-perspectives-pass2.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/00-city-perspectives.png",
+      "../08-pixel-art/candidates/00-city-perspectives-pass2.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "00-city-perspectives",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-f83fcdd2-8173-4fad-ae22-6b9163a14d2f.png",
+    "candidate": "candidates/00-city-perspectives-pass2.png",
+    "sha256": "20783001e839f0ffb27fe995b31e80668c3fe8140184015a7dbf589d283d9b73",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/00-city-perspectives-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/00-city-perspectives-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "00-city-perspectives",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-90336d5f-78b0-4892-b87d-696787732ffc.png",
+    "candidate": "candidates/00-city-perspectives-pass3.png",
+    "sha256": "e108ae90549d5bd9f6e6c2628691063bee53bb606755626e5c46bb70990a521c",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/00-city-perspectives-pass2.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/00-city-perspectives-pass2.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "00-city-perspectives",
+    "pass": 4,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-3bfc4f8c-8dc7-404d-85e8-80cf2bb10111.png",
+    "candidate": "candidates/00-city-perspectives-pass4.png",
+    "sha256": "3d2041fb03fc1d1300993c1e020f403ee47dfe651bdae74bb10620600accd801",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/00-city-perspectives-pass3.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/00-city-perspectives-pass3.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "01-living-community",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-d20117da-3e08-4a0d-afe3-e6e7fc6daa25.png",
+    "candidate": "candidates/01-living-community-pass1.png",
+    "sha256": "36e51791a8761d6da9f6e68a53220e0a529df7d2ae12eb3ec411c447be13c55f",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/09-solarpunk/01-living-community.png",
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/00-city-perspectives-pass3.png",
+      "docs/vision/style-studies/09-solarpunk/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/01-living-community.png",
+      "candidates/00-city-perspectives-pass3.png",
+      "originals/01-living-community.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "01-living-community",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-6b17c433-511a-49eb-a5fb-7bd1850eb9e5.png",
+    "candidate": "candidates/01-living-community-pass2.png",
+    "sha256": "7238a5395cffcab9c3c91309d98b34a73661bed559ee29f430d85608101abb65",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/01-living-community-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/01-living-community-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "01-living-community",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-c9daa093-e59b-4a12-994c-5e61913dba4f.png",
+    "candidate": "candidates/01-living-community-pass3.png",
+    "sha256": "5e753438b225633397a1dc83def1197015c1ca5a88252269553a0c6768109594",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/01-living-community-pass2.png",
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/01-living-community-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/01-living-community-pass2.png",
+      "candidates/01-living-community-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "02-creating-exploring",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-62b275a8-a704-40de-a1fc-1362be2186ba.png",
+    "candidate": "candidates/02-creating-exploring-pass1.png",
+    "sha256": "0a294f0e375459bb4540283aa33c9539e91e5fd38d67ee764e4e978744d89b22",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/09-solarpunk/02-creating-exploring.png",
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/00-city-perspectives-pass3.png",
+      "docs/vision/style-studies/09-solarpunk/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/02-creating-exploring.png",
+      "candidates/00-city-perspectives-pass3.png",
+      "originals/01-living-community.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "02-creating-exploring",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-d38da276-3978-4225-b97f-b419ec001d27.png",
+    "candidate": "candidates/02-creating-exploring-pass2.png",
+    "sha256": "3ff148ca3698e0cc31690178b84a4189e64c2dda491edd1f9059ffb7c9b7fe87",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/02-creating-exploring-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/02-creating-exploring-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-549ccff7-11e1-4377-9580-98c05abb5791.png",
+    "candidate": "candidates/03-interfaces-perspectives-pass1.png",
+    "sha256": "b46b94f1c0e778d4c5daf6778de9d9d1365c70d117ab7ad4511bdc6381176aa9",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/09-solarpunk/03-interfaces-perspectives.png",
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/00-city-perspectives-pass3.png",
+      "docs/vision/style-studies/09-solarpunk/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/03-interfaces-perspectives.png",
+      "candidates/00-city-perspectives-pass3.png",
+      "originals/01-living-community.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  },
+  {
+    "style": "09-solarpunk",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb28-5464-72d3-b1d9-8676f2af3265/exec-f72d2486-21fd-4f2e-81ac-30cd66f73988.png",
+    "candidate": "candidates/03-interfaces-perspectives-pass2.png",
+    "sha256": "fda7f9bd6c72759faee86cfdd4bfee6defdb4cbe433f082d1ccd6bc373c58550",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/03-interfaces-perspectives-pass1.png"
+    ],
+    "archived_reference_snapshots": [
+      "candidates/03-interfaces-perspectives-pass1.png"
+    ],
+    "source_verified": "Source path returned by built-in image generation; exact file matched to archive by SHA-256."
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "5ac602cedf2cc11ee4c29ee7f82cf66580037cafd966076a38775a82b137a5cc",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "8de92c51fbc82fb358a6086dfdb9d9733cf7f8d5ed7877ebaf146cd1221567d3"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/08-pixel-art/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/02-creating-exploring-pass3.png"
+  ],
+  "reference_images": [
+    "../r003/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

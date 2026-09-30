@@ -1,0 +1,15 @@
+{
+  "character_human": {
+    "size": [0.62, 1.79, 0.55],
+    "tris": 3000,
+    "nodes": ["rig_human", "skin", "top", "bottom", "shoes", "details",
+              "hair_0", "hair_1", "hair_2", "hair_3", "hat_sun", "backpack"],
+    "animations": ["walk", "sit", "idle", "typing"]
+  },
+  "character_robot": {
+    "size": [0.68, 1.64, 0.34],
+    "tris": 2800,
+    "nodes": ["rig_robot", "shell", "panel", "joint", "face", "eyes", "badge"],
+    "animations": ["walk", "sit", "idle", "typing"]
+  }
+}

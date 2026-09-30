@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en" data-style="19-bauhaus-primary-form">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>19 Bauhaus primary-form · Agentnagar style study</title>
+<meta name="description" content="Agentnagar style study 19, Bauhaus primary-form: a composition playground where primary shapes build the reference district.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root{
+  --red:#E22F1A; --red-ink:#C4230F; --blue:#025CA0; --yellow:#F8BC15; --cream:#F7F1DE; --paving:#E1D9CE;
+  --ink:#181C25; --green:#527842; --river:#236E9D; --white:#FFFFFF;
+  --display:'Josefin Sans', 'Futura', 'Avenir Next', system-ui, sans-serif;
+  --text:'DM Sans Variable', 'Helvetica Neue', system-ui, sans-serif;
+  --rule:4px solid var(--ink);
+  --gut:clamp(16px, 3vw, 40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:var(--red-ink)}
+:focus-visible{outline:4px solid var(--blue);outline-offset:3px;box-shadow:0 0 0 7px var(--yellow)}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--gut)}
+.caps{font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.kicker{font-family:var(--display);text-transform:uppercase;letter-spacing:.24em;font-size:13px;font-weight:700}
+.btn{font:700 15px/1 var(--display);text-transform:uppercase;letter-spacing:.14em;border:3px solid var(--ink);background:var(--ink);color:var(--cream);padding:15px 18px 12px;cursor:pointer;display:inline-flex;gap:10px;align-items:center;text-decoration:none;min-height:48px}
+.btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--yellow);border-color:var(--ink);color:var(--ink)}
+.shp{display:inline-block;width:14px;height:14px;flex:none}
+.shp.c{border-radius:50%;background:var(--blue)}
+.shp.s{background:var(--red)}
+.shp.t{background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
+
+/* ---------- Poster hero ---------- */
+.poster{position:relative;border-bottom:var(--rule);overflow:hidden;min-height:min(92vh,860px)}
+.poster-grid{position:relative;display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto;gap:0;max-width:1360px;margin:0 auto;padding:clamp(20px,3vw,40px) var(--gut) 40px;min-height:inherit}
+.p-top{grid-column:1/-1;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid var(--ink);padding-bottom:12px;gap:12px;flex-wrap:wrap}
+.p-top .kicker b{color:var(--red-ink)}
+.p-shapes{position:absolute;inset:0;pointer-events:none}
+.p-circle{position:absolute;right:-6vw;top:12%;width:min(46vw,600px);aspect-ratio:1;border-radius:50%;background:var(--red)}
+.p-square{position:absolute;left:44%;top:46%;width:min(22vw,280px);aspect-ratio:1;background:var(--blue);transform:rotate(-12deg)}
+.p-tri{position:absolute;left:58%;bottom:-2%;width:min(24vw,300px);aspect-ratio:1/0.9;background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.p-bar{position:absolute;left:-4%;top:58%;width:70%;height:18px;background:var(--ink);transform:rotate(-12deg);transform-origin:left}
+.p-bar2{position:absolute;left:63%;top:6%;width:6px;height:56%;background:var(--ink)}
+.p-title{grid-column:1/10;position:relative;z-index:2;margin-top:clamp(24px,4vw,56px)}
+.p-title h1{font-family:var(--display);font-weight:700;text-transform:uppercase;line-height:.84;letter-spacing:-.01em;margin:0;font-size:clamp(54px,9vw,138px)}
+.p-title h1 span{display:block}
+.p-title h1 .l2{padding-left:1.1em;color:var(--blue)}
+.p-title h1 .l3{font-size:.26em;white-space:nowrap;letter-spacing:.24em;line-height:1.2;margin-top:.35em;background:var(--ink);color:var(--cream);display:inline-block;padding:.18em .4em .06em}
+.p-num{position:absolute;z-index:2;right:var(--gut);bottom:28px;font:700 clamp(120px,22vw,340px)/.8 var(--display);color:var(--ink);letter-spacing:-.04em;mix-blend-mode:multiply}
+.p-num::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:10px;background:var(--ink)}
+.p-copy{grid-column:1/7;position:relative;z-index:2;margin-top:28px;background:var(--cream);padding:18px 18px 18px 0;max-width:580px}
+.p-copy p{margin:0 0 18px;font-size:clamp(16px,1.3vw,19px)}
+.p-cta{display:flex;flex-wrap:wrap;gap:12px}
+.p-side{position:absolute;z-index:2;left:calc(var(--gut) - 4px);top:50%;writing-mode:vertical-rl;transform:rotate(180deg) translateX(100%);display:none}
+.enter .p-circle{animation:sweep 1.1s cubic-bezier(.2,.8,.2,1) both}
+.enter .p-square{animation:drop .9s .15s cubic-bezier(.2,.8,.2,1) both}
+.enter .p-tri{animation:rise .9s .3s cubic-bezier(.2,.8,.2,1) both}
+.enter .p-bar{animation:bar .8s .45s cubic-bezier(.2,.8,.2,1) both}
+@keyframes sweep{from{transform:translateX(40%) scale(.6);opacity:0}}
+@keyframes drop{from{transform:translateY(-70vh) rotate(40deg)}}
+@keyframes rise{from{transform:translateY(60%)}}
+@keyframes bar{from{transform:rotate(-12deg) scaleX(0)}}
+
+/* ---------- Section frame ---------- */
+section.sec{border-bottom:var(--rule);padding:clamp(48px,7vw,96px) 0}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:0 24px;align-items:end;margin-bottom:clamp(28px,4vw,48px);border-bottom:3px solid var(--ink);padding-bottom:14px}
+.sec-no{font:700 clamp(64px,9vw,128px)/.8 var(--display);letter-spacing:-.04em}
+.sec-head h2{font:700 clamp(28px,4vw,56px)/.95 var(--display);text-transform:uppercase;margin:0;letter-spacing:.01em}
+.sec-head .kicker{grid-column:2;margin-top:8px;display:flex;gap:10px;align-items:center}
+
+/* ---------- Playground ---------- */
+.play{background:var(--white)}
+.play-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(20px,3vw,40px);align-items:start}
+.board-wrap{border:var(--rule);background:var(--cream);position:relative}
+.board-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:3px solid var(--ink);padding:10px 12px;background:var(--white)}
+.progress{display:flex;gap:6px;align-items:center}
+.progress i{width:18px;height:18px;border:2px solid var(--ink);display:block}
+.progress i.on{background:var(--ink)}
+.progress i:nth-child(3n+1){border-radius:50%}
+.progress i:nth-child(3n+2).on{background:var(--red)}
+.progress i:nth-child(3n+1).on{background:var(--blue)}
+.progress i:nth-child(3n){clip-path:polygon(50% 0,100% 100%,0 100%);border:none;background:var(--ink);opacity:.25}
+.progress i:nth-child(3n).on{background:var(--yellow);opacity:1}
+.board{position:relative;width:100%;aspect-ratio:16/10;touch-action:none;user-select:none;-webkit-user-select:none;
+  background-image:linear-gradient(to right, rgba(24,28,37,.10) 1px, transparent 1px),linear-gradient(to bottom, rgba(24,28,37,.10) 1px, transparent 1px);
+  background-size:calc(100%/16) calc(100%/10)}
+.outl{position:absolute;border:2px dashed rgba(24,28,37,.55);display:flex;align-items:flex-start;justify-content:flex-start;pointer-events:none}
+.outl span{font:700 clamp(9px,1.1vw,13px)/1 var(--display);letter-spacing:.12em;background:var(--cream);padding:3px 4px 1px;margin:-2px 0 0 -2px;border:2px solid rgba(24,28,37,.55)}
+.outl.round{border-radius:50% 50% 0 0/40% 40% 0 0}
+.outl.hit{border-style:solid;border-color:var(--ink)}
+.outl.done{opacity:0}
+.piece{position:absolute;padding:0;margin:0;border:0;background:none;cursor:grab;touch-action:none;transition:transform .35s cubic-bezier(.2,.8,.2,1), filter .2s;transform:rotate(var(--rot,0deg));z-index:2;-webkit-tap-highlight-color:transparent}
+.piece:active{cursor:grabbing}
+.piece.drag{transition:none;z-index:9;filter:drop-shadow(6px 8px 0 rgba(24,28,37,.35))}
+.piece.placed{--rot:0deg;cursor:default;z-index:1}
+.piece .face{position:absolute;inset:0;display:block;mix-blend-mode:multiply}
+.piece.placed .face{mix-blend-mode:normal}
+.piece .tag{position:absolute;font:700 clamp(8px,1vw,12px)/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);white-space:nowrap;pointer-events:none}
+.piece:focus-visible{outline:4px solid var(--ink);outline-offset:4px;box-shadow:0 0 0 8px var(--yellow)}
+/* shapes */
+.p-river .face{background:var(--blue)}
+.p-river .face::after{content:"";position:absolute;inset:8% 30%;background:repeating-linear-gradient(to bottom, transparent 0 22px, rgba(255,255,255,.55) 22px 25px)}
+.p-river .tag{left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg);color:#fff;font-size:clamp(9px,1.2vw,14px);letter-spacing:.3em}
+.p-bridge .face{background:var(--ink)}
+.p-bridge .face::after{content:"";position:absolute;left:4%;right:4%;bottom:0;height:45%;background:radial-gradient(ellipse at 50% 100%, var(--cream) 0 58%, transparent 60%) 0 0/33.33% 100% repeat-x}
+.p-bridge .tag{left:0;top:-1.6em;background:var(--cream);padding:2px 3px 0}
+.p-work .face{background:var(--white);border:3px solid var(--ink);clip-path:polygon(0 18%,11% 0,33% 18%,44% 0,66% 18%,77% 0,100% 18%,100% 100%,0 100%)}
+.p-work .face::before{content:"";position:absolute;left:0;right:0;top:18%;height:5%;background:var(--ink)}
+.p-work .disc{position:absolute;left:18%;top:32%;width:62%;aspect-ratio:1;border-radius:50%;background:var(--red)}
+.p-work .tag{left:4%;bottom:6%}
+.p-tree .face{background:var(--paving);border:3px solid var(--ink)}
+.p-tree .disc{position:absolute;left:14%;top:14%;width:72%;aspect-ratio:1;border-radius:50%;background:var(--green)}
+.p-tree .disc::after{content:"";position:absolute;left:44%;top:44%;width:12%;height:12%;border-radius:50%;background:var(--ink)}
+.p-tree .tag{left:4%;bottom:4%;background:var(--paving);padding:2px 2px 0}
+.p-lib .face{background:transparent}
+.p-lib .body{position:absolute;left:0;right:0;bottom:0;height:52%;background:var(--white);border:3px solid var(--ink)}
+.p-lib .body::after{content:"";position:absolute;left:8%;right:8%;top:40%;height:14%;background:repeating-linear-gradient(to right,var(--ink) 0 3px,transparent 3px 14px)}
+.p-lib .dome{position:absolute;left:18%;right:18%;top:0;height:52%;background:var(--blue);border-radius:999px 999px 0 0;border:3px solid var(--ink);border-bottom:none}
+.p-lib .tag{left:6%;bottom:8%}
+.p-tram .face{background:var(--paving);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.p-tram .face::before,.p-tram .face::after{content:"";position:absolute;left:0;right:0;height:3px;background:var(--ink)}
+.p-tram .face::before{top:32%}.p-tram .face::after{top:62%}
+.p-tram .car{position:absolute;left:34%;top:18%;width:14%;height:40%;background:var(--yellow);border:3px solid var(--ink);z-index:1}
+.p-tram .stop{position:absolute;left:51%;top:10%;height:60%;aspect-ratio:1/0.9;background:var(--red);clip-path:polygon(50% 0,100% 100%,0 100%);z-index:1}
+.p-tram .tag{right:1%;bottom:-1.5em;background:var(--cream);padding:2px 3px 0}
+.board.complete .board-title{opacity:1;transform:none}
+.board-title{position:absolute;right:2%;top:2.5%;background:var(--ink);color:var(--cream);font:700 clamp(10px,1.6vw,20px)/1 var(--display);letter-spacing:.2em;text-transform:uppercase;padding:.6em .7em .45em;opacity:0;transform:translateY(-8px);transition:.4s;pointer-events:none;z-index:3}
+.board-note{margin:0;padding:10px 12px;border-top:3px solid var(--ink);font-size:14px;background:var(--white)}
+.help{font-size:15px}
+.help kbd{font:700 13px var(--display);border:2px solid var(--ink);padding:2px 5px 0;background:var(--cream)}
+.card{border:var(--rule);background:var(--cream);position:sticky;top:16px}
+.card-head{background:var(--ink);color:var(--cream);padding:12px 14px 9px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.card-head .kicker{color:var(--yellow)}
+.card-body{padding:16px}
+.card-body h3{font:700 30px/1 var(--display);text-transform:uppercase;margin:0 0 8px}
+.card-body p{margin:0 0 12px;font-size:15px}
+.card .kit-panel{border:3px solid var(--ink);margin:6px 0 10px}
+.card figcaption{font-size:13px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Project ---------- */
+.proj{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.proj .lead{grid-column:1/6}
+.proj .lead .kit-tagline{font:700 clamp(28px,3.4vw,46px)/1.02 var(--display);text-transform:uppercase;margin:0 0 20px}
+.proj .lead p{font-size:18px}
+.proj .facts{grid-column:7/-1}
+.kit-project dl{display:grid;grid-template-columns:1fr;margin:0;border-top:3px solid var(--ink)}
+.kit-project dt{font:700 14px/1 var(--display);letter-spacing:.18em;text-transform:uppercase;padding:14px 0 6px;display:flex;align-items:center;gap:10px}
+.kit-project dt::before{content:"";width:12px;height:12px;background:var(--red);flex:none}
+.kit-project dt:nth-of-type(3n+2)::before{background:var(--blue);border-radius:50%}
+.kit-project dt:nth-of-type(3n)::before{background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.kit-project dd{margin:0;padding:0 0 14px 22px;border-bottom:2px solid var(--ink)}
+.kit-project .kit-small{font-size:14px;border-left:6px solid var(--yellow);padding-left:12px}
+.district-list{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);border-top:3px solid var(--ink);border-left:3px solid var(--ink)}
+.district-list li{border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:12px;font-size:14px;background:var(--white)}
+.district-list b{font:700 13px/1.25 var(--display);letter-spacing:.16em;display:block;margin-bottom:6px;text-transform:uppercase}
+
+/* ---------- Style ---------- */
+.style-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.intent{grid-column:1/8;font:400 clamp(20px,2vw,26px)/1.35 var(--text);margin:0}
+.intent::first-line{font-weight:700}
+.type-spec{grid-column:9/-1;border:var(--rule);padding:18px;background:var(--white);align-self:start}
+.type-spec .big{font:700 84px/.8 var(--display);display:flex;gap:14px;align-items:flex-end}
+.type-spec .big i{font-style:normal}
+.principles{grid-column:1/-1;list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:repeat(5,1fr);border-top:var(--rule)}
+.principles li{padding:18px 16px 18px 0;border-right:3px solid var(--ink);margin-right:16px;font-size:15px}
+.principles li:last-child{border-right:none}
+.principles b{display:block;font:700 18px/1.05 var(--display);text-transform:uppercase;margin:12px 0 8px;letter-spacing:.02em}
+.principles .shp{width:34px;height:34px}
+.palette{grid-column:1/-1;list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(8,1fr);gap:3px;border:var(--rule);background:var(--ink)}
+.palette li{display:flex;flex-direction:column;background:var(--cream)}
+.palette .chip{aspect-ratio:1;display:grid;place-items:center;background:var(--white)}
+.palette .chip i{display:block;width:70%;aspect-ratio:1}
+.palette li:nth-child(3n+1) .chip i{border-radius:50%}
+.palette li:nth-child(3n) .chip i{clip-path:polygon(50% 0,100% 100%,0 100%)}
+.palette .lab{padding:10px;border-top:3px solid var(--ink);font-size:13px;line-height:1.3;background:var(--cream);flex:1}
+.palette .lab b{display:block;font:700 13px/1.1 var(--display);text-transform:uppercase;letter-spacing:.08em}
+.palette .lab code{font:600 13px var(--text)}
+.mat{grid-column:1/7;margin:0}
+.typ{grid-column:7/-1;margin:0}
+.mat h3,.typ h3{font:700 20px/1 var(--display);text-transform:uppercase;letter-spacing:.1em;margin:0 0 10px;display:flex;gap:10px;align-items:center}
+
+/* ---------- Views ---------- */
+.views{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.plate{margin:0;border:var(--rule);background:var(--white)}
+.plate .plate-no{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:var(--cream);padding:10px 14px 7px;gap:8px}
+.plate .plate-no b{font:700 22px/1 var(--display);letter-spacing:.1em;text-transform:uppercase}
+.plate .plate-no span{font:700 12px/1 var(--display);letter-spacing:.2em;color:var(--yellow)}
+.plate .kit-sheet{width:100%;height:auto;border-bottom:3px solid var(--ink)}
+.plate figcaption{padding:14px;font-size:15px}
+.plate figcaption .panels{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;padding:0;list-style:none}
+.plate figcaption .panels li{font:700 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;border:2px solid var(--ink);padding:5px 7px 3px}
+.concept{margin:24px 0 0;border-left:10px solid var(--red);padding:6px 0 6px 16px;font-size:15px;max-width:800px}
+
+/* ---------- Agents ---------- */
+.agents{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,56px);align-items:start}
+.a1{border:var(--rule);background:var(--white)}
+.a1 svg{display:block;width:100%;height:auto;background:var(--cream);border-bottom:3px solid var(--ink)}
+.a1 figcaption{padding:12px 14px;font-size:14px}
+.agents h3{font:700 22px/1 var(--display);text-transform:uppercase;letter-spacing:.06em;margin:24px 0 12px}
+.guild{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);border-top:3px solid var(--ink);border-left:3px solid var(--ink)}
+.guild li{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;padding:10px 12px;border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);background:var(--white);font-size:14px;line-height:1.3}
+.guild .tok{width:30px;height:30px;display:block}
+.guild b{font:700 15px/1 var(--display);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:2px}
+.small{font-size:14px}
+
+/* ---------- Tradeoffs ---------- */
+.trade{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:var(--rule);border-left:var(--rule)}
+.trade div{border-right:var(--rule);border-bottom:var(--rule);padding:22px;background:var(--white)}
+.trade dt{font:700 22px/1.05 var(--display);text-transform:uppercase;margin-bottom:10px;display:flex;gap:12px;align-items:center}
+.trade dd{margin:0;font-size:16px}
+.trade div:nth-child(1){background:var(--yellow)}
+.trade div:nth-child(4){background:var(--ink);color:var(--cream)}
+.trade div:nth-child(4) a{color:var(--yellow)}
+
+/* ---------- Status / nav ---------- */
+.status-wrap{display:grid;grid-template-columns:7fr 5fr;gap:32px}
+.kit-status .kit-summary{font:700 clamp(22px,2.4vw,32px)/1.15 var(--display);text-transform:uppercase;margin:0 0 16px;border-left:14px solid var(--blue);padding-left:16px}
+.kit-status .kit-concept{font-size:15px}
+.kit-status ul{list-style:none;padding:0;margin:16px 0;border-top:3px solid var(--ink)}
+.kit-status li{padding:10px 0;border-bottom:2px solid var(--ink);font-size:15px}
+.kit-status .kit-links{font:700 14px var(--display);letter-spacing:.14em;text-transform:uppercase}
+.selected-note{border:var(--rule);padding:18px;background:var(--white);font-size:15px;align-self:start}
+footer{background:var(--ink);color:var(--cream);padding:40px 0 56px}
+.kit-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:0;border:3px solid var(--cream)}
+.kit-nav a{color:var(--cream);text-decoration:none;font:700 clamp(14px,1.6vw,20px)/1.1 var(--display);text-transform:uppercase;letter-spacing:.08em;padding:22px 18px 18px;display:flex;align-items:center;min-height:64px}
+.kit-nav a:hover{background:var(--red);color:#fff}
+.kit-nav .kit-index{border-left:3px solid var(--cream);border-right:3px solid var(--cream);justify-content:center;background:var(--yellow);color:var(--ink)}
+.kit-nav .kit-index:hover{background:var(--cream);color:var(--ink)}
+.kit-nav .kit-next{justify-content:flex-end;text-align:right}
+footer :focus-visible{outline-color:var(--yellow);box-shadow:0 0 0 7px var(--red)}
+.foot-line{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:22px;font-size:14px}
+.foot-line .shp{margin-right:4px}
+
+/* ---------- Notes dialog ---------- */
+.kit-dialog{max-width:min(900px,calc(100vw - 24px));width:100%;max-height:calc(100vh - 24px);border:var(--rule);padding:0;background:var(--cream);color:var(--ink)}
+.kit-dialog::backdrop{background:rgba(24,28,37,.72)}
+.kit-dialog .kit-close{position:sticky;top:0;margin-left:auto;display:block;font:700 14px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;background:var(--red-ink);color:#fff;border:0;padding:16px 18px 13px;cursor:pointer;z-index:2}
+.kit-notes{padding:8px clamp(16px,4vw,40px) 40px}
+.kit-notes h1{font:700 clamp(32px,5vw,56px)/.95 var(--display);text-transform:uppercase;margin:0 0 20px}
+.kit-notes h2{font:700 24px/1 var(--display);text-transform:uppercase;letter-spacing:.06em;border-top:var(--rule);padding-top:14px;margin:32px 0 12px}
+.kit-notes figure{margin:0 0 20px}
+.kit-notes .kit-sheet{border:3px solid var(--ink)}
+.kit-notes figcaption{font-size:14px;margin-top:6px}
+.kit-notes .kit-palette{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.kit-notes .kit-palette li{border:2px solid var(--ink);padding:4px 8px 4px 4px;display:flex;align-items:center;gap:6px;font-size:14px;background:var(--white)}
+.kit-notes .kit-swatch{width:22px;height:22px;display:inline-block;border:2px solid var(--ink)}
+.kit-notes dt{font-weight:700;margin-top:10px}
+.kit-notes dd{margin:0}
+.kit-notes .kit-nav{border-color:var(--ink);background:var(--ink)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .play-grid{grid-template-columns:1fr}
+  .card{position:static}
+  .principles{grid-template-columns:repeat(2,1fr)}
+  .principles li{border-right:none;border-bottom:3px solid var(--ink);margin-right:0;padding-right:0}
+  .palette{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:820px){
+  .proj .lead,.proj .facts,.intent,.type-spec,.mat,.typ{grid-column:1/-1}
+  .views,.agents,.status-wrap,.trade{grid-template-columns:1fr}
+  .district-list{grid-template-columns:1fr 1fr}
+  .p-title{grid-column:1/-1}
+  .p-copy{grid-column:1/-1;max-width:none;background:rgba(247,241,222,.94);padding:14px}
+  .p-circle{width:78vw;right:-26vw;top:30%}
+  .p-square{left:auto;right:10vw;top:auto;bottom:24%;width:30vw}
+  .p-tri{left:auto;right:-6vw;width:38vw;bottom:-2%}
+  .p-num{position:relative;grid-column:1/-1;justify-self:end;right:auto;bottom:auto;font-size:34vw;margin-top:18px}
+  .p-top{font-size:11px}
+  .p-bar2{left:auto;right:18%;top:14%;height:40%}
+  .guild{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .principles{grid-template-columns:1fr}
+  .palette{grid-template-columns:repeat(2,1fr)}
+  .district-list{grid-template-columns:1fr}
+  .kit-nav{grid-template-columns:1fr}
+  .kit-nav .kit-index{border:0;border-top:3px solid var(--cream);border-bottom:3px solid var(--cream);justify-content:flex-start}
+  .kit-nav .kit-next{justify-content:flex-start;text-align:left}
+  .sec-head{grid-template-columns:1fr}
+  .sec-head .kicker{grid-column:1}
+  .p-title h1 .l2{padding-left:.5em}
+  .p-title h1 .l3{white-space:normal}
+  .p-bar{display:none}
+  .poster{min-height:auto}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#play">Skip to the composition playground</a>
+
+<header class="poster" id="top">
+  <div class="p-shapes" aria-hidden="true">
+    <div class="p-circle"></div><div class="p-bar2"></div><div class="p-square"></div><div class="p-tri"></div><div class="p-bar"></div>
+  </div>
+  <div class="poster-grid">
+    <div class="p-top">
+      <span class="kicker">Agentnagar <b>·</b> City style studies <b>·</b> Internal comparison</span>
+      <span class="kicker">Exhibition of forms · <span id="rev-line"></span></span>
+    </div>
+    <div class="p-title">
+      <h1><span>Bauhaus</span><span class="l2">Primary</span><span>&#8209;Form</span><span class="l3">Agentnagar · Study</span></h1>
+    </div>
+    <div class="p-copy">
+      <p>A flat, systematic city of white modular blocks with red, blue and yellow panels on a cream ground. Three shapes, three primaries, one red disc on the Workshop roof. Below, the shapes are loose: drag them into the reference district.</p>
+      <div class="p-cta">
+        <a class="btn" href="#play"><span class="shp s" aria-hidden="true"></span> Compose the district</a>
+        <button class="btn ghost" type="button" id="notes-btn"><span class="shp c" aria-hidden="true"></span> Read the notes</button>
+      </div>
+    </div>
+    <div class="p-num" aria-hidden="true">19</div>
+  </div>
+</header>
+
+<main>
+  <section class="sec play" id="play" aria-labelledby="play-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true">00</div>
+        <h2 id="play-h">Composition playground</h2>
+        <p class="kicker"><span class="shp t" aria-hidden="true"></span> Six forms · one district · illustrative</p>
+      </div>
+      <div class="play-grid">
+        <div>
+          <div class="board-wrap">
+            <div class="board-bar">
+              <span class="kicker" id="count">0 of 6 forms placed</span>
+              <span class="progress" id="progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="board" id="board" aria-describedby="help">
+              <div class="board-title" aria-hidden="true">Reference district · composed</div>
+            </div>
+            <p class="board-note">Illustrative composition drawn for this page, not a concept sheet. Outlines follow the shared reference district: river west, bridge north, Workshop west of the square, Library east, tram boulevard south.</p>
+          </div>
+          <p class="help" id="help">Drag each form onto its dashed outline. With a keyboard: <kbd>Tab</kbd> to a form, move it with the <kbd>arrow keys</kbd> (<kbd>Shift</kbd> for bigger steps), or press <kbd>Enter</kbd> to set it on its outline.</p>
+          <div class="tools">
+            <button class="btn" type="button" id="auto"><span class="shp t" aria-hidden="true"></span> Compose all</button>
+            <button class="btn ghost" type="button" id="reset"><span class="shp s" aria-hidden="true"></span> Scatter again</button>
+          </div>
+        </div>
+        <aside class="card" aria-labelledby="card-h">
+          <div class="card-head"><span class="kicker">Landmark card</span><span class="kicker" id="card-id">—</span></div>
+          <div class="card-body" id="card-body" aria-live="polite">
+            <h3 id="card-h">Place a form</h3>
+            <p>Each form you set in place opens its landmark here, with the concept-sheet panel where it appears.</p>
+          </div>
+        </aside>
+      </div>
+      <p class="sr" id="live" aria-live="assertive"></p>
+    </div>
+  </section>
+
+  <section class="sec" data-core="project" aria-labelledby="proj-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true">01</div>
+        <h2 id="proj-h">Agentnagar</h2>
+        <p class="kicker"><span class="shp c" aria-hidden="true"></span> The project · shared facts</p>
+      </div>
+      <div class="proj" id="proj"></div>
+    </div>
+  </section>
+
+  <section class="sec" data-core="style" aria-labelledby="style-h" style="background:var(--white)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true">02</div>
+        <h2 id="style-h">The style</h2>
+        <p class="kicker"><span class="shp s" aria-hidden="true"></span> Intent · principles · palette · material · type</p>
+      </div>
+      <div class="style-grid">
+        <p class="intent" id="intent"></p>
+        <div class="type-spec" aria-label="Typography specimen">
+          <div class="big" aria-hidden="true"><i>Aa</i><span class="shp c" style="width:56px;height:56px"></span><span class="shp s" style="width:52px;height:52px"></span><span class="shp t" style="width:58px;height:52px"></span></div>
+          <p class="small" style="margin:14px 0 0">Browse · Book · Ask. The sheets pair circle, square and triangle with those three actions, a cue that does not rely on colour.</p>
+        </div>
+        <ol class="principles" id="principles"></ol>
+        <h3 class="kicker" style="grid-column:1/-1;margin:28px 0 0">Palette sampled from the sheets</h3>
+        <ul class="palette" id="palette"></ul>
+        <div class="mat"><h3><span class="shp s" aria-hidden="true"></span>Materials &amp; texture</h3><p id="materials"></p></div>
+        <div class="typ"><h3><span class="shp c" aria-hidden="true"></span>Typography</h3><p id="type"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" data-core="views" aria-labelledby="views-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true">03</div>
+        <h2 id="views-h">One district, four views</h2>
+        <p class="kicker"><span class="shp t" aria-hidden="true"></span> The selected concept sheets</p>
+      </div>
+      <div class="views" id="views"></div>
+      <p class="concept" id="concept"></p>
+    </div>
+  </section>
+
+  <section class="sec" data-core="agents" aria-labelledby="agents-h" style="background:var(--white)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true">04</div>
+        <h2 id="agents-h">Agents in this style</h2>
+        <p class="kicker"><span class="shp c" aria-hidden="true"></span> City Agent A1 · Guild residents</p>
+      </div>
+      <div class="agents">
+        <figure class="a1" style="margin:0">
+          <svg viewBox="0 0 400 480" role="img" aria-labelledby="a1-t">
+            <title id="a1-t">Illustrative drawing of City Agent A1 in this style: a white robot with red, blue and yellow panels, a black face and two glowing eyes.</title>
+            <rect x="0" y="330" width="400" height="150" fill="#E1D9CE"/><rect x="0" y="436" width="400" height="44" fill="#181C25"/>
+            <circle cx="330" cy="80" r="46" fill="#F8BC15"/>
+            <rect x="24" y="40" width="70" height="70" fill="#E22F1A"/>
+            <polygon points="40,330 90,240 140,330" fill="#025CA0"/>
+            <line x1="0" y1="330" x2="400" y2="330" stroke="#181C25" stroke-width="4"/>
+            <g stroke="#181C25" stroke-width="4">
+              <rect x="150" y="238" width="100" height="120" fill="#fff"/>
+              <rect x="150" y="238" width="44" height="60" fill="#025CA0"/>
+              <rect x="206" y="298" width="44" height="60" fill="#F8BC15"/>
+              <rect x="168" y="358" width="24" height="60" fill="#fff"/>
+              <rect x="208" y="358" width="24" height="60" fill="#fff"/>
+              <rect x="112" y="244" width="30" height="92" fill="#E22F1A"/>
+              <rect x="258" y="244" width="30" height="92" fill="#fff"/>
+              <rect x="186" y="206" width="28" height="32" fill="#181C25"/>
+              <circle cx="200" cy="150" r="66" fill="#fff"/>
+              <circle cx="270" cy="150" r="16" fill="#F8BC15"/>
+            </g>
+            <rect x="148" y="112" width="104" height="70" rx="35" fill="#181C25"/>
+            <circle cx="180" cy="146" r="9" fill="#9fd6ff"/><circle cx="220" cy="146" r="9" fill="#9fd6ff"/>
+            <path d="M184 166 q16 10 32 0" stroke="#9fd6ff" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle cx="228" cy="266" r="12" fill="#527842" stroke="#181C25" stroke-width="3"/>
+            <path d="M222 270 q6-14 14-6 q-6 8-14 6z" fill="#fff"/>
+            <text x="20" y="466" font-family="Josefin Sans, sans-serif" font-weight="700" font-size="20" letter-spacing="4" fill="#F7F1DE">A1 · ILLUSTRATIVE</text>
+          </svg>
+          <figcaption id="a1-cap"></figcaption>
+        </figure>
+        <div>
+          <p id="agents-text" style="font-size:18px;margin-top:0"></p>
+          <p id="a1-shared"></p>
+          <h3>The Guild, as tokens</h3>
+          <p class="small" id="guild-note"></p>
+          <ul class="guild" id="guild"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" data-core="tradeoffs" aria-labelledby="trade-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true">05</div>
+        <h2 id="trade-h">Strengths &amp; trade-offs</h2>
+        <p class="kicker"><span class="shp s" aria-hidden="true"></span> Candid, for internal comparison</p>
+      </div>
+      <dl class="trade" id="trade" style="margin:0"></dl>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="status-h" style="background:var(--white)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true">06</div>
+        <h2 id="status-h">Status</h2>
+        <p class="kicker"><span class="shp t" aria-hidden="true"></span> Revisions · review · sources</p>
+      </div>
+      <div class="status-wrap">
+        <div id="status"></div>
+        <p class="selected-note">This page is a showcase for comparing styles. It does not select Bauhaus primary-form, rank it, or change any product decision.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="kicker" style="margin:0 0 14px;color:var(--yellow)">07 · More styles</p>
+    <div id="nav"></div>
+    <div class="foot-line"><span><span class="shp c" aria-hidden="true"></span><span class="shp s" aria-hidden="true"></span><span class="shp t" aria-hidden="true"></span> 19 · Bauhaus primary-form · Agentnagar style study</span><a href="#top" style="color:var(--cream)">Back to top</a></div>
+  </div>
+</footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  const S = Kit.style('19-bauhaus-primary-form');
+  const A = window.AGENTNAGAR;
+  const el = Kit.el;
+  const $ = (id) => document.getElementById(id);
+
+  const content = {
+    intent: 'A flat, systematic city of white modular blocks with red, blue and yellow panels on a cream ground. Black line accents and sans-serif labels give every sheet the look of a diagram, and a red disc on the Workshop roof is a landmark from every view. Buildings are rectilinear volumes with a domed Library and yellow trams.',
+    principles: [
+      'Three primaries on one ground: red, blue and yellow panels on white volumes over cream; black is reserved for line and label.',
+      'Few shapes, many readings: circle, square and triangle double as icons (Browse, Book, Ask), so meaning never rests on colour alone.',
+      'The map is a labelled schematic: large views read as a diagram because the palette is strict and the shapes are few.',
+      'One landmark from every view: the red disc on the Workshop roof marks the district from map to street.',
+      'Flat shading all the way down: close-ups, interiors and clothing keep the same colour-blocked treatment.'
+    ],
+    palette: [
+      { name: 'Signal red', hex: '#E22F1A' },
+      { name: 'Primary blue', hex: '#025CA0' },
+      { name: 'Chrome yellow', hex: '#F8BC15' },
+      { name: 'Cream ground', hex: '#F7F1DE' },
+      { name: 'Paving stone', hex: '#E1D9CE' },
+      { name: 'Ink black', hex: '#181C25' },
+      { name: 'Disc-tree green', hex: '#527842' },
+      { name: 'River blue', hex: '#236E9D' }
+    ],
+    materials: 'White rendered modular blocks with flat primary panels; pegboard tool walls, painted modular furniture and colour-blocked clothing indoors. Shading is flat. The brief keeps soft shadows and material grain for higher quality tiers only.',
+    type: 'The sheets set labels in heavy geometric sans capitals (MAP, WORKSHOP) and slogans in spaced uppercase columns. This page uses Josefin Sans for the geometric display voice and DM Sans for reading text.',
+    agents: 'The Living community sheet draws City Agent A1 as a white robot with red, blue and yellow panels and a black face with glowing eyes (Conversation panel). A leaf badge is not clearly visible on it there. On the Interfaces sheet the agent is a "Your agent" list whose options carry the circle, square and triangle; no portrait. Residents wear colour-blocked clothing. The Guild residents are not drawn in the sheets.',
+    tradeoffs: [
+      { label: 'Map scale', text: 'The strongest of this style: a strict palette, few shapes and a labelled schematic. The map panel names River, Workshop, Library and Tram boulevard, and the red roof disc carries into every overview.' },
+      { label: 'Street scale', text: 'Flat shading holds up close, and the tram, banners and slogan walls stay on-palette. But the brief warns that the generated city reads as a generic modern skyline, and the strict kit could make districts interchangeable.' },
+      { label: 'Device & production cost', text: 'Brief proposal: keep the three primaries, the white volumes and the geometric icon set at every tier. Lower tiers reduce trees to discs and remove crowds; higher tiers could add soft shadows and material grain. The brief calls it the most consistent set of its five.' },
+      { label: 'UI legibility & review risks', text: 'Shape icons give non-colour cues, but the 2026-09-19 review (R05) found sheet 03 reusing the same tokens for different wording ("Book" becomes "Suggest something to do") and a yellow build axis. It also notes the overview square centres on a fountain rather than the living tree (R03), and that sheet 03 loses the atlas river layout.' }
+    ]
+  };
+
+  // Hero revision line (from STYLE_DATA)
+  $('rev-line').textContent = 'Sheets ' + S.sheets.map((s) => s.revision).join(' / ');
+
+  // Project
+  const pb = Kit.projectBlock();
+  const lead = el('div', { class: 'lead' });
+  const facts = el('div', { class: 'facts' });
+  [...pb.children].forEach((c) => (c.tagName === 'DL' ? facts : lead).append(c));
+  pb.append(lead, facts);
+  pb.classList.add('proj-inner');
+  pb.style.display = 'contents';
+  $('proj').append(pb);
+  const dl = el('ul', { class: 'district-list', 'aria-label': 'Reference district landmarks' },
+    A.district.map((d) => el('li', {}, [el('b', { text: d.id + ' · ' + d.name }), d.note])));
+  lead.append(el('p', { class: 'kicker', style: 'margin:28px 0 0', text: 'The reference district' }), dl);
+
+  // Style
+  $('intent').textContent = content.intent;
+  const shapes = ['c', 's', 't', 'c', 's'];
+  const heads = ['Three primaries', 'Few shapes', 'Schematic map', 'The red disc', 'Flat shading'];
+  content.principles.forEach((p, i) => $('principles').append(el('li', {}, [el('span', { class: 'shp ' + shapes[i], 'aria-hidden': 'true' }), el('b', { text: heads[i] }), p])));
+  content.palette.forEach((p) => {
+    const chip = el('span', { class: 'chip', 'aria-hidden': 'true' }, el('i', { style: 'background:' + p.hex + (p.hex === '#F7F1DE' || p.hex === '#E1D9CE' ? ';box-shadow:inset 0 0 0 3px #181C25' : '') }));
+    $('palette').append(el('li', {}, [chip, el('span', { class: 'lab' }, [el('b', { text: p.name }), el('code', { text: p.hex })])]));
+  });
+  $('materials').textContent = content.materials;
+  $('type').textContent = content.type;
+
+  // Views
+  const captions = [
+    'The map labels the River (west), Workshop with its red roof disc and blue sawtooth roof, the Library with its white dome, and the Tram boulevard to the south, with a bridge across the river to the north. The square between them centres on a fountain, not the brief’s single tree. The street panel looks down the boulevard past a yellow tram.',
+    'Interiors in the same flat primaries: pegboard tool walls in the Workshop, a colour-blocked home above the river, A1 in conversation on a riverside terrace, and a gathering on stepped seating with the bridge and river behind.',
+    'Build mode places a translucent block with red, yellow and blue axis arrows; the Transit panel rides a tram along the river ("Next stop Riverside Central"); a night street in rain; and a waterfront park facing an arched bridge.',
+    'A facility kiosk offers Browse, Book and Ask beside circle, square and triangle; a phone map with an agent list; a rooftop terrace over the river; and an AR tabletop model of a river-centred city.'
+  ];
+  S.sheets.forEach((sheet, i) => {
+    const fig = el('figure', { class: 'plate' }, [
+      el('div', { class: 'plate-no' }, [el('b', { text: sheet.title }), el('span', { text: 'Plate ' + (i + 1) + ' · ' + sheet.revision })]),
+      Kit.sheetImg(S, i, null, { alt: S.name + ' concept study, ' + sheet.title + ' sheet (' + sheet.revision + '): four panels, ' + Kit.PANEL_NAMES[i].join(', ') + '. ' + captions[i] }),
+      el('figcaption', {}, [el('ul', { class: 'panels', 'aria-label': 'Panels' }, Kit.PANEL_NAMES[i].map((n) => el('li', { text: n }))), captions[i]])
+    ]);
+    $('views').append(fig);
+  });
+  $('concept').textContent = A.conceptNote;
+
+  // Agents
+  $('agents-text').textContent = content.agents;
+  $('a1-shared').textContent = A.agentA1;
+  $('a1-cap').textContent = 'Illustrative drawing for this page, after the Conversation panel. The leaf badge on the chest comes from the shared A1 description; the sheet does not clearly show one.';
+  $('guild-note').textContent = A.guildNote + ' The sheets do not depict the Guild; each resident gets a primary-form token here purely as illustration.';
+  const toks = [['c', '#025CA0'], ['s', '#E22F1A'], ['t', '#F8BC15']];
+  A.guild.forEach((g, i) => {
+    const [k, c] = toks[i % 3];
+    const style = 'background:' + c + (k === 'c' ? ';border-radius:50%' : k === 't' ? ';clip-path:polygon(50% 0,100% 100%,0 100%)' : '');
+    $('guild').append(el('li', {}, [el('span', { class: 'tok', style, 'aria-hidden': 'true' }), el('span', {}, [el('b', { text: g.name }), g.role])]));
+  });
+
+  // Trade-offs
+  const tshape = ['t', 'c', 's', 't'];
+  content.tradeoffs.forEach((t, i) => $('trade').append(el('div', {}, [el('dt', {}, [el('span', { class: 'shp ' + tshape[i], 'aria-hidden': 'true', style: i === 3 ? 'background:var(--yellow)' : i === 0 ? 'background:var(--ink)' : '' }), t.label]), el('dd', { text: t.text })])));
+
+  // Status + nav
+  $('status').append(Kit.statusBlock(S));
+  Kit.mountNav($('nav'), S);
+
+  // Notes dialog
+  Kit.notesDialog(S, content, $('notes-btn'));
+
+  // Hero entrance
+  if (!Kit.reducedMotion()) document.querySelector('.poster').classList.add('enter');
+
+  // ---------------- Composition playground ----------------
+  const COLS = 16, ROWS = 10;
+  const board = $('board');
+  const byId = Object.fromEntries(A.district.map((d) => [d.id, d]));
+  const PIECES = [
+    { id: 'R1', cls: 'p-river', target: [0, 0, 2.2, 10], start: [13.6, 0], rot: 0, inner: '<span class="face"></span><span class="tag">River</span>', sheet: [0, 'tl'], ghostCls: '' },
+    { id: 'B1', cls: 'p-bridge', target: [0, 1.3, 6.4, 0.8], start: [8.8, 0.5], rot: -14, inner: '<span class="face"></span><span class="tag">North bridge</span>', sheet: [2, 'br'], ghostCls: '' },
+    { id: 'W1', cls: 'p-work', target: [3, 2.9, 3.4, 3.4], start: [8.2, 5.9], rot: 16, inner: '<span class="face"></span><span class="disc"></span><span class="tag">Workshop</span>', sheet: [1, 'tl'], ghostCls: '' },
+    { id: 'T1', cls: 'p-tree', target: [7.2, 3.1, 3.1, 3.1], start: [3.4, 6.4], rot: -20, inner: '<span class="face"></span><span class="disc"></span><span class="tag">Tree Square</span>', sheet: [0, 'br'], ghostCls: '' },
+    { id: 'L1', cls: 'p-lib', target: [11, 2.7, 4.4, 3.6], start: [3.2, 0.3], rot: 10, inner: '<span class="face"></span><span class="dome"></span><span class="body"></span><span class="tag">Library</span>', sheet: [0, 'tr'], ghostCls: 'round' },
+    { id: 'S1', cls: 'p-tram', target: [2.2, 7.4, 13.8, 1.3], start: [1.6, 4.7], rot: -6, inner: '<span class="face"></span><span class="car"></span><span class="stop"></span><span class="tag">Tram boulevard</span>', sheet: [2, 'tr'], ghostCls: '' }
+  ];
+  const panelNote = {
+    R1: 'Map panel: the river runs along the west edge, labelled RIVER WEST.',
+    B1: 'Waterfront park panel: an arched crossing over the river. Review notes the bridges in this style do not yet match the low three-span brief.',
+    W1: 'Workshop panel: pegboard tool walls, block models and primary-colour furniture.',
+    T1: 'Street panel: the square seen from the boulevard. In the sheets it centres on a fountain, not the brief’s single shade tree (review R03).',
+    L1: 'Top-down panel: the Library’s white dome east of the square.',
+    S1: 'Transit panel: inside a tram along the river, with a circle-and-arrow next-stop sign.'
+  };
+  const SNAP = 0.7;
+  const state = {};
+  const pct = (v, n) => (v / n * 100) + '%';
+
+  PIECES.forEach((p) => {
+    const [tx, ty, tw, th] = p.target;
+    const g = el('div', { class: 'outl ' + p.ghostCls, 'data-for': p.id, 'aria-hidden': 'true' }, el('span', { text: p.id }));
+    Object.assign(g.style, { left: pct(tx, COLS), top: pct(ty, ROWS), width: pct(tw, COLS), height: pct(th, ROWS) });
+    board.append(g);
+    const b = el('button', { type: 'button', class: 'piece ' + p.cls, 'data-id': p.id });
+    b.innerHTML = p.inner;
+    Object.assign(b.style, { width: pct(tw, COLS), height: pct(th, ROWS) });
+    board.append(b);
+    state[p.id] = { p, b, g, x: p.start[0], y: p.start[1], placed: false };
+  });
+
+  function render(st) {
+    st.b.style.left = pct(st.x, COLS);
+    st.b.style.top = pct(st.y, ROWS);
+    st.b.style.setProperty('--rot', st.placed ? '0deg' : st.p.rot + 'deg');
+    st.b.setAttribute('aria-label', st.placed
+      ? byId[st.p.id].name + ', placed on its outline ' + st.p.id
+      : byId[st.p.id].name + ' form, not placed. Target outline ' + st.p.id + ': ' + hint(st));
+  }
+  function hint(st) {
+    const dx = Math.round((st.p.target[0] - st.x) * 2) / 2, dy = Math.round((st.p.target[1] - st.y) * 2) / 2;
+    const parts = [];
+    if (dx) parts.push(Math.abs(dx) + (dx > 0 ? ' right' : ' left'));
+    if (dy) parts.push(Math.abs(dy) + (dy > 0 ? ' down' : ' up'));
+    return parts.length ? parts.join(', ') : 'here';
+  }
+  function clamp(st) {
+    const [, , w, h] = st.p.target;
+    st.x = Math.min(Math.max(st.x, 0), COLS - w);
+    st.y = Math.min(Math.max(st.y, 0), ROWS - h);
+  }
+  const placedCount = () => Object.values(state).filter((s) => s.placed).length;
+  function updateProgress() {
+    const n = placedCount();
+    $('count').textContent = n + ' of 6 forms placed';
+    [...$('progress').children].forEach((i, k) => i.classList.toggle('on', k < n));
+    board.classList.toggle('complete', n === 6);
+  }
+  function place(st, announce) {
+    st.x = st.p.target[0]; st.y = st.p.target[1]; st.placed = true;
+    st.b.classList.add('placed'); st.g.classList.add('done');
+    render(st); updateProgress();
+    showCard(st.p);
+    if (announce) {
+      const n = placedCount();
+      $('live').textContent = byId[st.p.id].name + ' placed. ' + n + ' of 6.' + (n === 6 ? ' The reference district is composed.' : '');
+    }
+  }
+  function trySnap(st) {
+    const [tx, ty] = st.p.target;
+    const near = Math.abs(st.x - tx) < SNAP && Math.abs(st.y - ty) < SNAP;
+    st.g.classList.toggle('hit', near);
+    return near;
+  }
+  function showCard(p) {
+    const d = byId[p.id];
+    const body = $('card-body');
+    body.replaceChildren(
+      el('h3', { id: 'card-h', text: d.name }),
+      el('p', { text: d.note }),
+      el('figure', { style: 'margin:0' }, [
+        Kit.sheetImg(S, p.sheet[0], p.sheet[1]),
+        el('figcaption', { text: panelNote[p.id] + ' Concept study, ' + S.sheets[p.sheet[0]].title + ' (' + S.sheets[p.sheet[0]].revision + ').' })
+      ])
+    );
+    $('card-id').textContent = p.id;
+  }
+
+  Object.values(state).forEach((st) => {
+    render(st);
+    let drag = null;
+    st.b.addEventListener('pointerdown', (e) => {
+      if (st.placed) return;
+      const r = board.getBoundingClientRect();
+      drag = { ox: (e.clientX - r.left) / r.width * COLS - st.x, oy: (e.clientY - r.top) / r.height * ROWS - st.y, moved: false };
+      st.b.setPointerCapture(e.pointerId);
+      st.b.classList.add('drag');
+      e.preventDefault();
+    });
+    st.b.addEventListener('pointermove', (e) => {
+      if (!drag) return;
+      const r = board.getBoundingClientRect();
+      st.x = (e.clientX - r.left) / r.width * COLS - drag.ox;
+      st.y = (e.clientY - r.top) / r.height * ROWS - drag.oy;
+      drag.moved = true;
+      clamp(st); trySnap(st);
+      st.b.style.left = pct(st.x, COLS); st.b.style.top = pct(st.y, ROWS);
+    });
+    const end = () => {
+      if (!drag) return;
+      drag = null;
+      st.b.classList.remove('drag');
+      if (trySnap(st)) place(st, true);
+      else { st.x = Math.round(st.x * 2) / 2; st.y = Math.round(st.y * 2) / 2; clamp(st); render(st); }
+    };
+    st.b.addEventListener('pointerup', end);
+    st.b.addEventListener('pointercancel', end);
+    st.b.addEventListener('keydown', (e) => {
+      if (st.placed) return;
+      const step = e.shiftKey ? 2 : 0.5;
+      const moves = { ArrowLeft: [-step, 0], ArrowRight: [step, 0], ArrowUp: [0, -step], ArrowDown: [0, step] };
+      if (moves[e.key]) {
+        e.preventDefault();
+        st.x += moves[e.key][0]; st.y += moves[e.key][1];
+        clamp(st);
+        if (trySnap(st)) place(st, true);
+        else { render(st); $('live').textContent = byId[st.p.id].name + ': ' + hint(st) + ' to its outline.'; }
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        place(st, true);
+      }
+    });
+    st.b.addEventListener('focus', () => { if (!st.placed) st.g.classList.add('hit'); });
+    st.b.addEventListener('blur', () => st.g.classList.remove('hit'));
+  });
+
+  $('auto').addEventListener('click', () => {
+    Object.values(state).filter((s) => !s.placed).forEach((s, i) => {
+      if (Kit.reducedMotion()) place(s, false); else setTimeout(() => place(s, false), i * 140);
+    });
+    $('live').textContent = 'All six forms placed. The reference district is composed.';
+  });
+  $('reset').addEventListener('click', () => {
+    Object.values(state).forEach((s) => {
+      s.placed = false; s.x = s.p.start[0]; s.y = s.p.start[1];
+      s.b.classList.remove('placed'); s.g.classList.remove('done', 'hit');
+      render(s);
+    });
+    updateProgress();
+    $('card-body').replaceChildren(el('h3', { id: 'card-h', text: 'Place a form' }), el('p', { text: 'Each form you set in place opens its landmark here, with the concept-sheet panel where it appears.' }));
+    $('card-id').textContent = '—';
+    $('live').textContent = 'Forms scattered again.';
+  });
+})();
+</script>
+</body>
+</html>

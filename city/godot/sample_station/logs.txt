@@ -1,0 +1,55 @@
+2026-09-28T08:59:00.112Z INFO  sample-harness: starting, version 0.0.0-sample
+2026-09-28T08:59:00.140Z INFO  sample-harness: workspace /workspace/tally
+2026-09-28T08:59:00.151Z INFO  sample-harness: this is Sample station's invented log
+2026-09-28T08:59:00.318Z INFO  acp: ready for a console session
+2026-09-28T08:59:05.004Z DEBUG health: pid 4242, cpu 1.2%, rss 84.1 MiB
+2026-09-28T08:59:35.006Z DEBUG health: pid 4242, cpu 0.9%, rss 84.3 MiB
+2026-09-28T09:00:05.003Z DEBUG health: pid 4242, cpu 1.0%, rss 84.3 MiB
+2026-09-28T09:01:58.720Z INFO  acp: session acps_sample opened, mode ask
+2026-09-28T09:02:00.031Z INFO  acp: session acps_sample idle
+2026-09-28T09:02:04.402Z INFO  acp: prompt received, 37 chars
+2026-09-28T09:02:04.418Z INFO  acp: session acps_sample working
+2026-09-28T09:02:06.207Z DEBUG model: plan with 3 entries
+2026-09-28T09:02:08.011Z INFO  tool: call_sample_1 execute "cargo test"
+2026-09-28T09:02:08.019Z DEBUG tool: call_sample_1 spawned pid 4388
+2026-09-28T09:02:09.845Z DEBUG tool: call_sample_1    Compiling tally v0.3.0 (/workspace/tally)
+2026-09-28T09:02:10.902Z DEBUG tool: call_sample_1 running 7 tests
+2026-09-28T09:02:10.931Z WARN  tool: call_sample_1 test counts_words_split_by_tabs ... FAILED
+2026-09-28T09:02:11.006Z INFO  tool: call_sample_1 exited with status 101
+2026-09-28T09:02:11.010Z INFO  tool: call_sample_1 completed
+2026-09-28T09:02:14.330Z DEBUG model: 58 output tokens
+2026-09-28T09:02:17.114Z DEBUG model: plan updated, 1 of 3 done
+2026-09-28T09:02:18.201Z INFO  tool: call_sample_2 edit "src/lib.rs" needs permission (mode ask)
+2026-09-28T09:02:18.206Z INFO  acp: permission request 13 sent to the console
+2026-09-28T09:02:18.209Z INFO  acp: session acps_sample waiting
+2026-09-28T09:02:35.004Z DEBUG health: pid 4242, cpu 0.4%, rss 86.0 MiB
+2026-09-28T09:03:05.002Z DEBUG health: pid 4242, cpu 0.3%, rss 86.0 MiB
+2026-09-28T09:03:35.005Z DEBUG health: pid 4242, cpu 0.3%, rss 86.1 MiB
+2026-09-28T09:04:05.003Z DEBUG health: pid 4242, cpu 0.3%, rss 86.1 MiB
+2026-09-28T09:04:12.550Z INFO  superpipeline: card crd_sample_tabs at review, gate gate_sample pending
+2026-09-28T09:04:35.006Z DEBUG health: pid 4242, cpu 0.2%, rss 86.1 MiB
+2026-09-28T09:05:05.004Z DEBUG health: pid 4242, cpu 0.2%, rss 86.1 MiB
+2026-09-28T09:06:02.118Z INFO  superpipeline: claimed crd_sample_json at build, run run_sample_2
+2026-09-28T09:06:02.140Z INFO  superpipeline: reading the card's spec
+2026-09-28T09:06:35.003Z DEBUG health: pid 4242, cpu 2.8%, rss 88.9 MiB
+2026-09-28T09:11:05.227Z DEBUG model: thinking about the --json flag
+2026-09-28T09:11:40.512Z INFO  tool: read "src/main.rs", 370 bytes
+2026-09-28T09:12:30.004Z INFO  superpipeline: asked a question on crd_sample_json (elc_sample)
+2026-09-28T09:12:30.009Z INFO  superpipeline: waiting for an answer
+2026-09-28T09:13:05.002Z DEBUG health: pid 4242, cpu 0.6%, rss 88.4 MiB
+2026-09-28T09:13:35.005Z DEBUG health: pid 4242, cpu 0.5%, rss 88.4 MiB
+2026-09-28T09:14:05.004Z DEBUG health: pid 4242, cpu 0.5%, rss 88.4 MiB
+2026-09-28T09:14:35.003Z DEBUG health: pid 4242, cpu 0.5%, rss 88.4 MiB
+2026-09-28T09:15:05.006Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:15:35.002Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:16:05.004Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:16:35.003Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:17:05.005Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:17:35.004Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:18:05.006Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:18:35.002Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:19:05.003Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:19:35.004Z DEBUG health: pid 4242, cpu 0.4%, rss 88.4 MiB
+2026-09-28T09:20:05.002Z DEBUG health: pid 4242, cpu 0.4%, rss 88.5 MiB
+2026-09-28T09:20:35.005Z DEBUG health: pid 4242, cpu 0.4%, rss 88.5 MiB
+2026-09-28T09:21:05.003Z DEBUG health: pid 4242, cpu 0.4%, rss 88.5 MiB

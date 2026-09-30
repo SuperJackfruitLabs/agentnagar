@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en" data-style="06-anime">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cel-shaded anime · a visual-novel walk through Agentnagar · style study 06</title>
+<meta name="description" content="Style study 06, Cel-shaded anime, presented as a visual novel in which City Agent A1 guides the reader through the Agentnagar reference district.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<link rel="stylesheet" href="assets/vn.css">
+</head>
+<body class="mood-day at-title">
+
+<!-- ============ STAGE: cel-shaded background (illustrative) ============ -->
+<div class="stage" aria-hidden="true">
+  <svg class="bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+    <defs>
+      <clipPath id="clip-vault"><path d="M1040 520 C1040 380 1470 380 1470 520 Z"/></clipPath>
+    </defs>
+    <!-- sky in flat bands -->
+    <rect class="sky1" width="1600" height="900"/>
+    <rect class="sky2" y="300" width="1600" height="600"/>
+    <rect class="sky3" y="470" width="1600" height="430"/>
+    <circle class="sun" cx="1260" cy="170" r="70"/>
+    <g class="clouds">
+      <path class="cloud" d="M120 250 C110 200 170 180 200 200 C220 150 300 150 320 195 C350 170 410 185 405 230 C440 235 440 275 400 280 L140 280 C100 280 95 255 120 250 Z"/>
+      <path class="cloud-sh" d="M140 280 L400 280 C420 278 432 266 426 256 C380 268 250 270 128 262 C124 272 130 280 140 280 Z"/>
+      <path class="cloud" d="M860 140 C850 100 900 86 930 104 C950 64 1020 66 1036 104 C1066 86 1116 104 1108 140 C1136 146 1134 176 1104 178 L880 178 C846 178 840 150 860 140 Z"/>
+      <path class="cloud-sh" d="M880 178 L1104 178 C1122 176 1132 166 1128 158 C1080 168 980 170 862 162 C860 172 868 178 880 178 Z"/>
+    </g>
+    <!-- towers (planted, stepped) -->
+    <g class="towers">
+      <path class="t-lit" d="M300 520 V260 H340 V220 H500 V260 H540 V520 Z"/>
+      <path class="t-sh" d="M470 520 V260 H540 V520 Z"/>
+      <path class="t-lit" d="M720 520 V210 H760 V170 H920 V210 H960 V520 Z"/>
+      <path class="t-sh" d="M890 520 V210 H960 V520 Z"/>
+      <path class="t-lit" d="M1140 520 V250 H1180 V210 H1340 V250 H1380 V520 Z"/>
+      <path class="t-sh" d="M1310 520 V250 H1380 V520 Z"/>
+      <g class="t-win">
+        <path d="M312 290 H528 M312 330 H528 M312 370 H528 M312 410 H528 M312 450 H528 M732 240 H948 M732 280 H948 M732 320 H948 M732 360 H948 M732 400 H948 M732 440 H948 M1152 280 H1368 M1152 320 H1368 M1152 360 H1368 M1152 400 H1368 M1152 440 H1368"/>
+      </g>
+      <g class="t-green">
+        <path d="M340 222 q20 -30 40 0 q20 -34 44 0 q22 -30 40 0 q18 -24 36 0 Z M300 262 q14 -18 30 0 Z M510 262 q14 -18 30 0 Z M760 172 q20 -30 40 0 q20 -34 44 0 q22 -30 40 0 q18 -24 36 0 Z M1180 212 q20 -30 40 0 q20 -34 44 0 q22 -30 40 0 q18 -24 36 0 Z"/>
+      </g>
+      <path class="ink thin" fill="none" d="M300 520 V260 H340 V220 H500 V260 H540 V520 M720 520 V210 H760 V170 H920 V210 H960 V520 M1140 520 V250 H1180 V210 H1340 V250 H1380 V520"/>
+    </g>
+    <!-- ground -->
+    <rect class="ground" y="600" width="1600" height="300"/>
+    <path class="ground-sh" d="M0 600 H1600 V640 H0 Z"/>
+    <g class="lamps"><path class="lamp-post" d="M660 800 V560 M1000 800 V560"/><circle class="lamp" cx="660" cy="556" r="12"/><circle class="lamp" cx="1000" cy="556" r="12"/></g>
+    <!-- workshop: three sawtooth bays -->
+    <g class="workshop">
+      <path class="b-lit" d="M140 640 V400 L260 300 V400 L380 300 V400 L500 300 V640 Z"/>
+      <path class="b-sh" d="M240 318 L260 300 V400 L240 400 Z M360 318 L380 300 V400 L360 400 Z M480 318 L500 300 V640 L480 640 Z"/>
+      <g class="glass"><rect x="164" y="440" width="80" height="170"/><rect x="284" y="440" width="80" height="170"/><rect x="404" y="440" width="70" height="170"/></g>
+      <path class="glint" d="M170 600 L230 450 L240 450 L180 600 Z M290 600 L350 450 L360 450 L300 600 Z M410 600 L462 460 L470 460 L418 600 Z"/>
+      <path class="mullion" d="M204 440 V610 M324 440 V610 M438 440 V610 M164 520 H244 M284 520 H364 M404 520 H474"/>
+      <path class="ink" fill="none" d="M140 640 V400 L260 300 V400 L380 300 V400 L500 300 V640"/>
+    </g>
+    <!-- library: rounded reading-room roof -->
+    <g class="library">
+      <path class="w-lit" d="M1040 640 V520 H1470 V640 Z"/>
+      <path class="w-sh" d="M1420 520 H1470 V640 H1420 Z"/>
+      <path class="vault" d="M1040 520 C1040 380 1470 380 1470 520 Z"/>
+      <g clip-path="url(#clip-vault)"><path class="vault-hi" d="M1080 520 C1100 420 1180 404 1230 402 L1250 402 C1190 412 1130 440 1110 520 Z"/><path class="vault-sh" d="M1380 520 C1380 460 1350 420 1300 404 L1480 380 L1480 520 Z"/></g>
+      <path class="glass" d="M1150 640 V560 C1150 470 1360 470 1360 560 V640 Z"/>
+      <path class="glint" d="M1170 630 L1250 500 L1262 500 L1182 630 Z"/>
+      <path class="mullion" d="M1220 640 V500 M1290 640 V500 M1150 580 H1360"/>
+      <path class="ink" fill="none" d="M1040 640 V520 C1040 380 1470 380 1470 520 V640 M1040 520 H1470"/>
+    </g>
+    <!-- tree -->
+    <g class="tree">
+      <path class="trunk" d="M800 660 C806 600 790 560 804 500 L836 500 C846 560 834 600 846 660 Z"/>
+      <path class="trunk-sh" d="M826 500 L836 500 C846 560 834 600 846 660 L832 660 C822 600 834 560 826 500 Z"/>
+      <path class="leaf-d" d="M640 470 C600 420 650 360 700 380 C700 320 780 290 820 330 C860 280 960 300 960 360 C1010 360 1030 430 990 470 C1010 520 950 560 900 530 C860 570 780 570 750 530 C690 560 620 530 640 470 Z"/>
+      <path class="leaf-m" d="M660 450 C640 410 680 370 720 390 C724 340 790 320 822 352 C860 310 940 330 940 376 C980 380 990 430 960 452 C900 470 780 480 660 450 Z"/>
+      <path class="leaf-l" d="M700 400 C704 368 740 356 764 372 C786 340 840 340 860 366 C830 360 800 376 790 392 C760 384 720 392 700 400 Z"/>
+      <path class="ink thin" fill="none" d="M640 470 C600 420 650 360 700 380 C700 320 780 290 820 330 C860 280 960 300 960 360 C1010 360 1030 430 990 470 C1010 520 950 560 900 530 C860 570 780 570 750 530 C690 560 620 530 640 470 Z"/>
+    </g>
+    <!-- tram with vermilion stripe -->
+    <g class="tram">
+      <path class="tram-body" d="M-20 820 V716 Q-20 690 8 690 H560 Q610 690 624 726 L636 780 Q640 820 604 820 Z"/>
+      <path class="tram-stripe" d="M-20 770 H634 V790 H-20 Z"/>
+      <g class="tram-win"><rect x="20" y="706" width="110" height="46" rx="6"/><rect x="150" y="706" width="110" height="46" rx="6"/><rect x="300" y="706" width="110" height="46" rx="6"/><rect x="430" y="706" width="120" height="46" rx="6"/></g>
+      <path class="ink" fill="none" d="M-20 820 V716 Q-20 690 8 690 H560 Q610 690 624 726 L636 780 Q640 820 604 820 Z"/>
+    </g>
+    <path class="rail" d="M0 836 H1600 M0 862 H1600"/>
+  </svg>
+  <div class="rain"></div>
+  <div class="vignette"></div>
+</div>
+
+<!-- A1 sprite (illustrative, drawn for this page after the sheets) -->
+<div class="sprite-wrap" aria-hidden="true">
+  <svg class="sprite" id="sprite" viewBox="0 0 400 640" focusable="false">
+    <defs><clipPath id="face-clip"><path d="M122 200 C122 140 160 110 200 110 C240 110 278 140 278 200 C278 262 250 300 200 322 C150 300 122 262 122 200 Z"/></clipPath></defs>
+    <g class="breathe">
+      <!-- bun and back hair -->
+      <circle class="hair" cx="236" cy="62" r="46"/>
+      <path class="hair-sh" d="M236 108 C270 104 286 80 280 54 C290 90 262 112 236 108 Z"/>
+      <path class="tie" d="M204 96 Q226 84 250 100 L246 110 Q226 96 208 106 Z"/>
+      <path class="hair" d="M104 210 C90 120 140 64 205 64 C275 64 318 118 304 214 C312 270 326 330 300 382 L284 340 L276 372 L258 320 L150 320 L132 372 L122 338 L100 380 C80 320 96 270 104 210 Z"/>
+      <!-- body -->
+      <path class="skin" d="M178 290 L222 290 L226 360 L174 360 Z"/>
+      <path class="skin-sh" d="M178 290 L222 290 L223 318 C208 328 192 328 177 318 Z"/>
+      <path class="jacket" d="M56 640 C56 470 108 398 174 368 L226 368 C292 398 344 470 344 640 Z"/>
+      <path class="jacket-sh" d="M270 400 C312 430 344 500 344 640 L290 640 C300 540 292 460 262 410 Z"/>
+      <path class="shirt" d="M174 368 L200 452 L226 368 Z"/>
+      <path class="shirt-sh" d="M200 452 L226 368 L214 368 L200 420 Z"/>
+      <path class="lapel" d="M174 368 L200 452 L160 420 L150 380 Z M226 368 L200 452 L240 420 L250 380 Z"/>
+      <path class="strap" d="M104 440 C118 510 116 580 110 640 L136 640 C142 580 142 506 130 428 Z M296 440 C282 510 284 580 290 640 L264 640 C258 580 258 506 270 428 Z"/>
+      <circle class="patch" cx="96" cy="512" r="24"/>
+      <path class="leaf-w" d="M86 522 C86 504 100 494 110 498 C110 514 100 524 86 522 Z"/>
+      <rect class="badge" x="206" y="470" width="78" height="44" rx="5"/>
+      <circle class="patch" cx="222" cy="492" r="12"/>
+      <path class="leaf-w" d="M216 498 C216 488 224 482 230 484 C230 494 224 499 216 498 Z"/>
+      <text class="badge-t" x="262" y="488" text-anchor="middle">City</text><text class="badge-t" x="262" y="500" text-anchor="middle">Agent A1</text>
+      <path class="ink" fill="none" d="M56 640 C56 470 108 398 174 368 M226 368 C292 398 344 470 344 640 M174 368 L200 452 L226 368"/>
+      <!-- head -->
+      <g class="head">
+        <path class="skin" d="M122 200 C122 140 160 110 200 110 C240 110 278 140 278 200 C278 262 250 300 200 322 C150 300 122 262 122 200 Z"/>
+        <g clip-path="url(#face-clip)">
+          <path class="skin-sh" d="M244 110 C282 160 288 240 236 318 L300 330 L300 100 Z"/>
+          <path class="skin-sh" d="M110 180 C160 200 240 200 290 180 L290 170 L110 170 Z"/>
+        </g>
+        <path class="ink" fill="none" d="M122 200 C122 262 150 300 200 322 C250 300 278 262 278 200"/>
+        <!-- eyes -->
+        <g class="eyes-open">
+          <ellipse class="eye-w" cx="163" cy="232" rx="22" ry="26"/><ellipse class="eye-w" cx="237" cy="232" rx="22" ry="26"/>
+          <ellipse class="iris" cx="165" cy="236" rx="18" ry="23"/><ellipse class="iris" cx="235" cy="236" rx="18" ry="23"/>
+          <path class="iris-d" d="M147 230 C150 212 180 212 183 230 C176 222 154 222 147 230 Z M217 230 C220 212 250 212 253 230 C246 222 224 222 217 230 Z"/>
+          <ellipse class="pupil" cx="165" cy="238" rx="8" ry="11"/><ellipse class="pupil" cx="235" cy="238" rx="8" ry="11"/>
+          <path class="iris-l" d="M152 248 Q165 258 178 248 Q165 254 152 248 Z M222 248 Q235 258 248 248 Q235 254 222 248 Z"/>
+          <circle class="hl" cx="157" cy="226" r="6"/><circle class="hl" cx="227" cy="226" r="6"/><circle class="hl" cx="172" cy="246" r="2.6"/><circle class="hl" cx="242" cy="246" r="2.6"/>
+          <path class="lash" d="M138 216 Q162 198 190 212 M210 212 Q238 198 262 216 M138 216 l-8 -4 M262 216 l8 -4"/>
+        </g>
+        <g class="eyes-happy"><path class="lash" d="M142 236 Q164 216 188 236 M212 236 Q236 216 258 236"/></g>
+        <path class="brow" d="M142 190 Q162 181 184 187 M216 187 Q238 181 258 190"/>
+        <path class="nose" d="M203 258 l-4 8"/>
+        <g class="blush"><ellipse cx="146" cy="268" rx="16" ry="8"/><ellipse cx="254" cy="268" rx="16" ry="8"/></g>
+        <path class="blush-l" d="M138 266 l6 -6 M146 268 l6 -6 M154 268 l6 -6 M246 268 l6 -6 M254 268 l6 -6 M262 266 l6 -6"/>
+        <path class="mouth-s" d="M188 286 Q200 294 212 286"/>
+        <path class="mouth-o" d="M186 284 Q200 304 214 284 Q200 290 186 284 Z"/>
+        <!-- bangs and side locks -->
+        <path class="hair" d="M118 206 C112 140 150 98 204 98 C262 98 292 140 284 210 L266 166 L258 204 L236 156 L222 194 L204 148 L184 192 L170 154 L150 204 L140 164 Z"/>
+        <path class="hair-hi" d="M146 138 Q160 126 176 122 Q164 132 156 144 Z M186 118 Q204 114 222 118 Q204 124 188 128 Z M234 122 Q252 128 264 140 Q250 134 238 132 Z"/>
+        <path class="strand" d="M170 154 Q176 130 196 112 M222 194 Q226 150 214 116 M258 204 Q262 160 246 124 M150 204 Q146 160 162 130"/>
+        <path class="hair" d="M126 196 C116 250 124 300 110 344 C134 314 144 262 142 204 Z M274 196 C284 250 276 300 290 344 C266 314 256 262 258 204 Z"/>
+        <path class="ink thin" fill="none" d="M118 206 C112 140 150 98 204 98 C262 98 292 140 284 210"/>
+      </g>
+    </g>
+  </svg>
+</div>
+
+<!-- ============ TITLE SCREEN ============ -->
+<section class="title-screen" id="title" aria-labelledby="title-h">
+  <div class="title-card">
+    <p class="kicker"><span data-num></span> / 30 · Style study · Cel-shaded anime</p>
+    <h1 id="title-h"><span class="t-main">Agentnagar</span><span class="t-sub">A walk with City Agent A1</span></h1>
+    <p class="title-note"><span id="title-note"></span> The stage and the A1 sprite on this page are illustrative drawings made for it; the real concept sheets are in the gallery.</p>
+    <ul class="menu" role="list">
+      <li><button type="button" class="menu-btn" id="btn-start"><span class="mk" aria-hidden="true">▶</span> Start the walk</button></li>
+      <li><button type="button" class="menu-btn" id="btn-chapters"><span class="mk" aria-hidden="true">◆</span> Chapter select</button></li>
+      <li><button type="button" class="menu-btn" id="btn-gallery"><span class="mk" aria-hidden="true">◆</span> Gallery: four views</button></li>
+      <li><button type="button" class="menu-btn" id="btn-notes"><span class="mk" aria-hidden="true">◆</span> Read the notes</button></li>
+    </ul>
+    <p class="keys">Keys: <kbd>Enter</kbd> or <kbd>Space</kbd> advance · <kbd>1</kbd>–<kbd>7</kbd> choose · <kbd>L</kbd> log · <kbd>A</kbd> auto · <kbd>N</kbd> notes · <kbd>C</kbd> chapters</p>
+  </div>
+  <div class="title-nav" id="title-nav"></div>
+</section>
+
+<!-- ============ HUD ============ -->
+<nav class="hud" aria-label="Story controls">
+  <button type="button" class="hud-btn" id="hud-chapters" aria-keyshortcuts="C">Chapters</button>
+  <button type="button" class="hud-btn" id="hud-log" aria-keyshortcuts="L">Log</button>
+  <button type="button" class="hud-btn" id="hud-auto" aria-pressed="false" aria-keyshortcuts="A">Auto</button>
+  <button type="button" class="hud-btn hud-notes" id="hud-notes" aria-keyshortcuts="N">Read the notes</button>
+</nav>
+<p class="stage-tag">Illustrative cel-shaded background and sprite drawn for this page. Not concept sheets.</p>
+
+<!-- ============ DIALOGUE ============ -->
+<div class="dialogue" id="dialogue" hidden>
+  <button type="button" class="box" id="box" aria-describedby="box-hint">
+    <span class="nameplate">City Agent A1</span>
+    <span class="line" id="line" aria-live="polite"></span>
+    <span class="next" aria-hidden="true">▼</span>
+  </button>
+  <p class="sr" id="box-hint">Press Enter, Space or click to continue.</p>
+</div>
+
+<!-- ============ CHOICES ============ -->
+<div class="choices" id="choices" hidden>
+  <p class="choice-q" id="choice-q">Where shall we go?</p>
+  <ol class="choice-list" id="choice-list"></ol>
+</div>
+
+<!-- ============ CORE SECTIONS (opened from choices) ============ -->
+<dialog class="doc" id="doc-project" aria-labelledby="dh-project">
+  <header class="doc-head"><span class="chap">Chapter 1</span><h2 id="dh-project">Agentnagar</h2><button type="button" class="doc-close">Back to the walk <kbd>Esc</kbd></button></header>
+  <div class="doc-body" data-core="project" id="slot-project"></div>
+</dialog>
+
+<dialog class="doc" id="doc-style" aria-labelledby="dh-style">
+  <header class="doc-head"><span class="chap">Chapter 2</span><h2 id="dh-style">The style</h2><button type="button" class="doc-close">Back to the walk <kbd>Esc</kbd></button></header>
+  <div class="doc-body" data-core="style">
+    <p class="lede" id="style-intent">A cel-shaded city with expressive characters, composed color, and selective outlines. Warm whites, blues, indigo, and vermilion support lively daylight scenes. Limited shadow steps create an illustrated feel while architecture retains convincing spatial depth.</p>
+    <p>Buildings can combine contemporary urban forms with distinctive roofs, balconies, shopfronts, and transit infrastructure. Interiors should communicate character through layout and selected possessions.</p>
+    <h3>Principles</h3>
+    <ol class="principles" id="principles">
+      <li><b>Two or three shadow steps.</b> Flat light, one cel shadow, an occasional highlight; no soft airbrushing.</li>
+      <li><b>Selective outlines.</b> Ink where silhouettes matter (people, roofs, the tram); background detail can drop its lines.</li>
+      <li><b>Composed colour.</b> Warm whites and blues carry the day, indigo anchors, vermilion accents: the tram stripe, a sweater, an umbrella.</li>
+      <li><b>Silhouette first at district scale.</b> Sawtooth Workshop, vaulted Library and planted towers read by shape and colour blocks.</li>
+      <li><b>Same language in every weather.</b> Night and rain keep the cel shading instead of switching to a realistic treatment.</li>
+    </ol>
+    <h3>Palette <span class="aside">hex values sampled from the concept sheets</span></h3>
+    <ul class="palette" id="palette"></ul>
+    <div class="two">
+      <div><h3>Materials and texture</h3><p>Flat-painted brick and zinc with crisp shadow shapes, glass as a single highlight stripe, leaf clusters in three tones, wet paving drawn as streaked reflections at night. The sheets drift into painterly foliage and sky in places.</p></div>
+      <div><h3>Typography</h3><p><span class="t-min">Zen Old Mincho</span> for titles and chapter cards, <span class="t-nun">Nunito</span> for dialogue and UI. The sheets' own UI uses a clean rounded sans on the phone and kiosk.</p></div>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="doc doc-wide" id="doc-views" aria-labelledby="dh-views">
+  <header class="doc-head"><span class="chap">Chapter 3 · Gallery</span><h2 id="dh-views">One district, four views</h2><button type="button" class="doc-close">Back to the walk <kbd>Esc</kbd></button></header>
+  <div class="doc-body" data-core="views">
+    <p class="concept" id="concept-note"></p>
+    <div class="tabs" role="tablist" aria-label="Concept sheets" id="sheet-tabs"></div>
+    <div id="sheet-panels"></div>
+  </div>
+</dialog>
+
+<dialog class="doc" id="doc-agents" aria-labelledby="dh-agents">
+  <header class="doc-head"><span class="chap">Chapter 4</span><h2 id="dh-agents">Agents in this style</h2><button type="button" class="doc-close">Back to the walk <kbd>Esc</kbd></button></header>
+  <div class="doc-body" data-core="agents">
+    <div class="profile">
+      <div class="profile-img" id="a1-crop"></div>
+      <div>
+        <p class="lede" id="a1-shared"></p>
+        <p>In the anime sheets A1 is an <b>original design</b>: indigo hair in a messy bun with a hair tie, blue eyes, a white jacket over a blue shirt, a backpack, a leaf patch on the sleeve and a "City Agent A1" badge on the chest. The phone card repeats her portrait with an explicit leaf A1 marker.</p>
+        <p>She works at the Workshop bench on a small wheeled robot, talks with a bearded resident in a green jacket on Tree Square, points out the Workshop from a rooftop and helps at the Library kiosk.</p>
+      </div>
+    </div>
+    <h3>Guild residents <span class="aside">not depicted in the sheets</span></h3>
+    <p class="small">The sheets show no Guild resident; everyone else is an unnamed resident. These are proposed public roles only. <span id="guild-note"></span></p>
+    <ol class="guild" id="guild"></ol>
+  </div>
+</dialog>
+
+<dialog class="doc" id="doc-tradeoffs" aria-labelledby="dh-trade">
+  <header class="doc-head"><span class="chap">Chapter 5</span><h2 id="dh-trade">Strengths and trade-offs</h2><button type="button" class="doc-close">Back to the walk <kbd>Esc</kbd></button></header>
+  <div class="doc-body" data-core="tradeoffs"><dl class="trade" id="trade"></dl></div>
+</dialog>
+
+<dialog class="doc" id="doc-status" aria-labelledby="dh-status">
+  <header class="doc-head"><span class="chap">Chapter 6</span><h2 id="dh-status">Where the study stands</h2><button type="button" class="doc-close">Back to the walk <kbd>Esc</kbd></button></header>
+  <div class="doc-body" id="slot-status"></div>
+</dialog>
+
+<dialog class="doc" id="doc-nav" aria-labelledby="dh-nav">
+  <header class="doc-head"><span class="chap">Chapter 7</span><h2 id="dh-nav">Other studies</h2><button type="button" class="doc-close">Back to the walk <kbd>Esc</kbd></button></header>
+  <div class="doc-body" id="slot-nav"></div>
+</dialog>
+
+<dialog class="doc" id="doc-log" aria-labelledby="dh-log">
+  <header class="doc-head"><span class="chap">Backlog</span><h2 id="dh-log">What A1 said</h2><button type="button" class="doc-close">Close <kbd>Esc</kbd></button></header>
+  <div class="doc-body"><ol class="log" id="log"></ol></div>
+</dialog>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script src="assets/vn.js"></script>
+</body>
+</html>

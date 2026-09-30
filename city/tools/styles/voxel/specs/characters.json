@@ -1,0 +1,3 @@
+{
+  "human": {"size": [0.7, 1.95, 0.75], "tris": 1000, "nodes": ["rig_human", "skin", "top", "bottom", "shoes", "details", "hair_0", "hair_1", "hair_2", "hair_3", "hat_sun", "backpack"], "animations": ["walk", "sit", "idle", "typing"]}
+}

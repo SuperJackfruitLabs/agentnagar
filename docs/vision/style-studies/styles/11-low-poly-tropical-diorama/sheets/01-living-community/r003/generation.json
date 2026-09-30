@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "49fa7af49784ee05ad427a999b9866a83e0b22d3af83a9e8228c82b6c5cfb13a",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "c2b8351c840f2a24ee14a509c5617b71d0835e992bd296d4c1af120a05c5feed"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/11-low-poly-tropical-diorama/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-19/11-low-poly-tropical-diorama/01-living-community.pass-2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "45c3ec2fc83570774a98314b3c53c6ff0bf51a40d4801ba02a7e0466ab07afc1",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "20f679963458ae852061c9c36eb0900a69a020da54c945f8cecc0f7603b9eaf1"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/04-realistic/00-city-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/candidates/00-pass4.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

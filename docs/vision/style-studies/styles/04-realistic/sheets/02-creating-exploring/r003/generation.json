@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "39452ec55f0393aaadbe287c8d6a636916f2f94d63e9ef2118eb75ebbbb6eb22",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "1a7ed3f021a5a6a1f47b702e4d5e3fd52b51d5eb3a5e17d22ce84de7ee9e020d"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/04-realistic/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/candidates/02-pass2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

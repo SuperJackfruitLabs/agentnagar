@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "de055722042f408cbe2be6af10a243a3b28b349d5a5d81ef1093a185903e1111",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/27-ceramic-tile-city/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

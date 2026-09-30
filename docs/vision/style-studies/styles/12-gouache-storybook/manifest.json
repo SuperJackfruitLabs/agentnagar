@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "12-gouache-storybook",
+  "name": "Gouache storybook",
+  "selected": {
+    "00-city-perspectives": "r001",
+    "01-living-community": "r001",
+    "02-creating-exploring": "r001",
+    "03-interfaces-perspectives": "r001"
+  },
+  "review_summary": "Historical selection retained. Corrections and review coverage vary by sheet; see dated records. Full contract compliance is not claimed.",
+  "review_sources": [
+    "../../reviews/REPAIR-STATUS.md",
+    "../../reviews/REVIEW-2026-09-19.md"
+  ]
+}

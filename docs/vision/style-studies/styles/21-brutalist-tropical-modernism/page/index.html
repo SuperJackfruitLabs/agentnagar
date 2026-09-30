@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en" data-style="21-brutalist-tropical-modernism" data-tier="mid" class="grid-on">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>21 Brutalist tropical modernism · A manifesto for Agentnagar</title>
+<meta name="description" content="Agentnagar style study 21, Brutalist tropical modernism, as a raw web-brutalist manifesto: concrete, shade and planting breaking through the grid.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root{
+  --concrete:#D3C3AF; --weathered:#B9B6AD; --shadow:#6A6561; --banyan:#6E7745; --frond:#565D37; --teal:#4A6262;
+  --terracotta:#B17252; --terra-ink:#8E4F33; --slate:#21272E; --ink:#15171a; --paper:#D9D5CC; --leaf:#3F5A2A; --leaf2:#5E7A3A;
+  --mono:'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  --mono2:'Space Mono', ui-monospace, monospace;
+  --mega:'Archivo Black', 'Arial Black', Impact, sans-serif;
+  --tall:'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --gut:clamp(16px, 2.4vw, 32px);
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08 0 0 0 0 .07 0 0 0 0 .06 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+  --pits:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='140'%3E%3Cg fill='%23000' fill-opacity='.18'%3E%3Ccircle cx='20' cy='30' r='1.6'/%3E%3Ccircle cx='96' cy='12' r='1.1'/%3E%3Ccircle cx='150' cy='70' r='1.8'/%3E%3Ccircle cx='60' cy='110' r='1.2'/%3E%3Ccircle cx='120' cy='124' r='1'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;color:var(--ink);font:400 16px/1.6 var(--mono);overflow-x:hidden;background-color:var(--paper);
+  background-image:var(--noise),var(--pits),repeating-linear-gradient(to bottom,transparent 0 23px,rgba(0,0,0,.05) 23px 24px),repeating-linear-gradient(to bottom,rgba(255,255,255,.07) 0 120px,rgba(0,0,0,.035) 120px 240px)}
+html[data-tier="low"] body{background-image:none;background-color:#D2CEC4}
+html[data-tier="high"] body{background-image:var(--noise),var(--pits),repeating-linear-gradient(90deg,transparent 0 170px,rgba(55,45,35,.07) 170px 176px,transparent 176px 260px,rgba(55,45,35,.05) 260px 263px,transparent 263px 410px),repeating-linear-gradient(to bottom,transparent 0 23px,rgba(0,0,0,.06) 23px 24px),repeating-linear-gradient(to bottom,rgba(255,255,255,.06) 0 120px,rgba(0,0,0,.05) 120px 240px)}
+img{max-width:100%;display:block}
+a{color:var(--ink);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{background:var(--ink);color:var(--paper)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 6px var(--terracotta)}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:10px 14px;z-index:60}
+.skip:focus{left:8px;top:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1400px;margin:0 auto;padding:0 var(--gut);position:relative}
+.grid-on .wrap::before{content:"";position:absolute;inset:0 var(--gut);pointer-events:none;z-index:0;
+  background:linear-gradient(to right,rgba(21,23,26,.16) 1px,transparent 1px) 0 0/calc(100%/12) 100%;border-right:1px solid rgba(21,23,26,.16)}
+.wrap > *{position:relative;z-index:1}
+.g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 0}
+.lbl{font:700 12px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.bracket::before{content:"[ "}.bracket::after{content:" ]"}
+
+/* ---------- control strip ---------- */
+.ctrl{position:sticky;top:0;z-index:40;background:var(--ink);color:var(--paper);border-bottom:3px solid var(--terracotta)}
+.ctrl .wrap{display:flex;align-items:center;gap:10px 18px;flex-wrap:wrap;min-height:52px;padding-top:6px;padding-bottom:6px}
+.ctrl .wrap::before{display:none}
+.ctrl .id{font:700 13px/1 var(--mono);letter-spacing:.06em;margin-right:auto}
+.tbtn{font:700 13px/1 var(--mono);text-transform:uppercase;letter-spacing:.04em;background:transparent;color:var(--paper);border:2px solid var(--paper);padding:9px 10px;cursor:pointer;min-height:40px}
+.tbtn[aria-pressed="true"],.tbtn:hover{background:var(--paper);color:var(--ink)}
+.tbtn:focus-visible,.seg input:focus-visible + span{outline:3px solid var(--terracotta);outline-offset:2px;box-shadow:none}
+.seg{display:flex;align-items:center;border:2px solid var(--paper);margin:0;padding:0}
+.seg legend{float:left;font:700 12px/1 var(--mono);text-transform:uppercase;padding:0 8px;letter-spacing:.04em}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:block;font:700 13px/1 var(--mono);text-transform:uppercase;padding:11px 10px;border-left:2px solid var(--paper);min-height:36px}
+.seg input:checked + span{background:var(--terra-ink);color:#fff}
+.notes-btn{background:var(--terra-ink);border-color:var(--terra-ink);color:#fff}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:3px solid var(--ink)}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:2px solid var(--ink);margin:0 calc(-1 * var(--gut));padding:0 var(--gut)}
+.meta div{padding:12px 10px 10px 0;border-right:2px solid var(--ink);font:700 12px/1.35 var(--mono);text-transform:uppercase}
+.meta div + div{padding-left:10px}
+.meta div:last-child{border-right:0}
+.mega{font:400 clamp(58px,14.6vw,228px)/.8 var(--mega);text-transform:uppercase;letter-spacing:-.035em;margin:clamp(20px,3vw,40px) 0 0;position:relative;z-index:2}
+.mega > span{display:block}
+.mega .o{color:transparent;-webkit-text-stroke:3px var(--ink)}
+.mega .gr{color:var(--frond)}
+.mega .dot{color:var(--terracotta)}
+.hero-low{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;padding:clamp(24px,3vw,40px) 0 clamp(32px,4vw,56px);align-items:end}
+.hero-low .txt{grid-column:1/6;font-size:17px;position:relative;z-index:4}
+.hero-low .txt p{margin:0 0 14px;background:rgba(217,213,204,.9)}
+.hero-low .txt p:first-child::first-letter{font:400 3.4em/.8 var(--mega);float:left;margin:4px 8px 0 0;color:var(--terra-ink)}
+.hero-fig{grid-column:7/-1;margin:0;border:3px solid var(--ink);background:var(--ink);color:var(--paper)}
+.hero-fig figcaption{font:700 12px/1.4 var(--mono);text-transform:uppercase;padding:8px 10px}
+.breeze{height:64px;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);
+  background-color:var(--shadow);
+  background-image:radial-gradient(circle at 50% 50%,var(--paper) 0 9px,transparent 10px),linear-gradient(var(--weathered),var(--weathered));
+  background-size:32px 32px,32px 32px;background-position:0 0;
+  -webkit-mask:linear-gradient(#000,#000);
+  box-shadow:inset 0 0 0 2px var(--ink)}
+.breeze.v2{background-image:radial-gradient(circle,var(--slate) 0 7px,transparent 8px),conic-gradient(from 45deg,var(--weathered) 0 25%,var(--concrete) 0 50%,var(--weathered) 0 75%,var(--concrete) 0);background-size:40px 40px,40px 40px}
+
+/* ---------- plants ---------- */
+.plant{position:absolute;pointer-events:none;z-index:3;overflow:visible}
+.plant .stem{fill:none;stroke:var(--frond);stroke-linecap:round}
+.plant .lf{fill:var(--leaf);transform-box:fill-box}
+.plant .lf.b{fill:var(--leaf2)}
+.plant .lf.c{fill:var(--banyan)}
+.plant .cut{stroke:var(--paper);stroke-width:3;fill:none;stroke-linecap:round}
+.plant .rib{stroke:rgba(0,0,0,.35);stroke-width:1.6;fill:none}
+.anim .plant .stem{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.2s cubic-bezier(.3,.6,.3,1)}
+.anim .plant .lf,.anim .plant .mon{transform:scale(0);transition:transform .9s cubic-bezier(.2,1.3,.4,1);transform-box:fill-box;transform-origin:var(--o,50% 100%)}
+.anim .plant.grown .stem{stroke-dashoffset:0}
+.anim .plant.grown .lf,.anim .plant.grown .mon{transform:none}
+html[data-tier="low"] .plant.t2,html[data-tier="low"] .plant.t3,html[data-tier="mid"] .plant.t3{display:none}
+html[data-tier="low"] .plant .lf.x{display:none}
+
+/* ---------- theses ---------- */
+.thesis{position:relative;border-bottom:3px solid var(--ink);padding:clamp(48px,6vw,88px) 0}
+.th-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:end;margin-bottom:clamp(24px,3vw,44px);border-bottom:3px solid var(--ink);padding-bottom:10px}
+.th-no{grid-column:1/3;font:900 clamp(72px,10vw,150px)/.78 var(--tall);letter-spacing:-.02em}
+.th-no small{display:block;font:700 12px/1 var(--mono);letter-spacing:.1em;margin-bottom:8px}
+.th-head h2{grid-column:3/-1;font:400 clamp(32px,5.4vw,84px)/.88 var(--mega);text-transform:uppercase;letter-spacing:-.03em;margin:0}
+.th-head h2 em{font-style:normal;color:var(--terra-ink)}
+.th-head .lbl{grid-column:3/-1;margin-top:10px}
+.cell{border:2px solid var(--ink);background:rgba(217,213,204,.93);padding:18px}
+html[data-tier="low"] .cell{background:#D2CEC4}
+.cell.dark{background:var(--slate);color:#E8E3DA;border-color:var(--slate)}
+.cell.dark a{color:#E8E3DA}
+.cell.terra{background:var(--terra-ink);color:#fff;border-color:var(--ink)}
+.cell h3{font:400 20px/1.05 var(--mega);text-transform:uppercase;margin:0 0 10px;letter-spacing:-.01em}
+.stack{display:grid;gap:0}
+.stack > * + *{border-top:0}
+
+/* project */
+.proj{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0}
+.proj .a{grid-column:1/7}
+.proj .b{grid-column:7/-1;border-left:0}
+.kit-project .kit-tagline{font:400 clamp(24px,2.6vw,38px)/1.02 var(--mega);text-transform:uppercase;margin:0 0 18px;letter-spacing:-.02em}
+.kit-project p{margin:0 0 12px}
+.kit-project dl{margin:0;display:grid;grid-template-columns:150px 1fr;border-top:2px solid var(--ink)}
+.kit-project dt,.kit-project dd{margin:0;padding:10px 0;border-bottom:2px solid var(--ink);font-size:14px}
+.kit-project dt{font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding-right:10px}
+.kit-project .kit-small{font-size:13px;border:2px dashed var(--ink);padding:10px;margin-top:14px}
+.district{width:100%;border-collapse:collapse;font-size:14px;margin-top:0}
+.district th,.district td{border:2px solid var(--ink);padding:8px 10px;text-align:left;vertical-align:top}
+.district th{font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--ink);color:var(--paper)}
+
+/* style */
+.intent{font:400 clamp(20px,2.1vw,30px)/1.3 var(--mega);text-transform:uppercase;letter-spacing:-.01em;margin:0}
+.st{display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+.st .intent-c{grid-column:1/9}
+.st .spec{grid-column:9/-1;border-left:0}
+.princ{grid-column:1/-1;list-style:none;margin:0;padding:0;counter-reset:p;border-top:0}
+.princ li{counter-increment:p;display:grid;grid-template-columns:90px 1fr;border:2px solid var(--ink);border-top:0;background:rgba(217,213,204,.93)}
+.princ li::before{content:"0" counter(p);font:900 44px/1 var(--tall);padding:12px;border-right:2px solid var(--ink);background:var(--ink);color:var(--paper)}
+.princ li span{padding:14px 18px;font-size:15px}
+.princ b{font-family:var(--mega);font-weight:400;text-transform:uppercase;font-size:17px;display:block;letter-spacing:-.01em}
+.pal{grid-column:1/-1;list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));border:2px solid var(--ink)}
+.pal li{border-right:2px solid var(--ink);font-size:13px}
+.pal li:last-child{border-right:0}
+.pal .blk{height:140px;border-bottom:2px solid var(--ink);position:relative;background-image:var(--noise)}
+html[data-tier="low"] .pal .blk{background-image:none}
+.pal .blk::after{content:attr(data-hex);position:absolute;left:8px;bottom:8px;font:700 13px/1 var(--mono);color:rgba(255,255,255,.92);mix-blend-mode:normal;text-shadow:0 1px 0 rgba(0,0,0,.5)}
+.pal .blk.lt::after{color:var(--ink);text-shadow:none}
+.pal .nm{padding:8px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;background:rgba(217,213,204,.93);min-height:52px}
+.st .m{grid-column:1/7;margin-top:28px}
+.st .t{grid-column:7/-1;margin-top:28px;border-left:0}
+.spec .big{font:400 72px/.8 var(--mega);margin:6px 0 10px}
+.spec .tall{font:900 44px/.9 var(--tall);text-transform:uppercase}
+
+/* views */
+.views{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0}
+.fig{margin:0;border:2px solid var(--ink);background:var(--ink);color:#E8E3DA}
+.fig:nth-child(1){grid-column:1/-1}
+.fig:nth-child(2){grid-column:1/7;border-top:0}
+.fig:nth-child(3){grid-column:7/-1;border-top:0;border-left:0}
+.fig:nth-child(4){grid-column:1/-1;border-top:0}
+.fig .kit-sheet{width:100%;height:auto}
+.fig figcaption{padding:12px 14px;font-size:14px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+.fig figcaption b{font:400 16px/1.2 var(--mega);text-transform:uppercase;color:var(--concrete);white-space:nowrap}
+.fig figcaption .lbl{grid-column:1/-1;color:var(--weathered)}
+.fig:nth-child(1) .kit-sheet,.fig:nth-child(4) .kit-sheet{max-height:none}
+.concept{margin:0;border:2px solid var(--ink);border-top:0;padding:12px 14px;font-weight:700;background:var(--terra-ink);color:#fff}
+
+/* agents */
+.ag{display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+.ag .p1{grid-column:1/5}
+.ag .p2{grid-column:5/9;border-left:0}
+.ag .txt{grid-column:9/-1;border-left:0}
+.ag figure{margin:0}
+.ag figure .kit-panel{border-bottom:2px solid var(--ink)}
+.ag figcaption{font-size:13px;padding-top:10px}
+.guild{grid-column:1/-1;margin-top:28px;width:100%;border-collapse:collapse;font-size:14px;background:rgba(217,213,204,.93)}
+.guild caption{text-align:left;font:400 20px/1 var(--mega);text-transform:uppercase;padding:0 0 10px}
+.guild th,.guild td{border:2px solid var(--ink);padding:7px 10px;text-align:left}
+.guild thead th{background:var(--ink);color:var(--paper);text-transform:uppercase;font-size:12px;letter-spacing:.06em}
+.guild td:first-child{font-weight:700;width:34%}
+.gwrap{grid-column:1/-1;margin-top:28px;overflow-x:auto}
+
+/* tradeoffs */
+.tt{width:100%;border-collapse:collapse;background:rgba(217,213,204,.93)}
+.tt th,.tt td{border:2px solid var(--ink);padding:14px 16px;vertical-align:top;text-align:left}
+.tt thead th{background:var(--ink);color:var(--paper);font:700 12px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.tt tbody th{font:400 clamp(16px,1.6vw,22px)/1.05 var(--mega);text-transform:uppercase;width:24%}
+.tt td.v{font:900 22px/1 var(--tall);text-transform:uppercase;width:11%;white-space:nowrap}
+.tt tr.risk td.v{background:var(--terra-ink);color:#fff}
+.tt tr.ok td.v{background:var(--banyan);color:#fff}
+.tt tr.mixed td.v{background:var(--weathered)}
+.wall-note{margin-top:24px;font:400 clamp(22px,3vw,44px)/1 var(--mega);text-transform:uppercase;letter-spacing:-.02em;max-width:18ch}
+.wall-note span{color:var(--terra-ink)}
+
+/* status */
+.stt{display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stt .s1{grid-column:1/9}
+.stt .s2{grid-column:9/-1;border-left:0}
+.kit-status .kit-summary{font:400 clamp(20px,2.2vw,32px)/1.12 var(--mega);text-transform:uppercase;margin:0 0 16px;letter-spacing:-.01em}
+.kit-status .kit-concept{font-size:14px;border-left:8px solid var(--terracotta);padding-left:12px}
+.kit-status ul{list-style:none;margin:14px 0;padding:0;border-top:2px solid var(--ink)}
+.kit-status li{border-bottom:2px solid var(--ink);padding:8px 0;font-size:14px}
+.kit-status li::before{content:"→ "}
+.kit-status .kit-links{font-weight:700;text-transform:uppercase}
+
+/* nav / footer */
+footer{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+footer .wrap::before{display:none}
+.foot-h{font:400 clamp(40px,8vw,120px)/.85 var(--mega);text-transform:uppercase;letter-spacing:-.04em;margin:0;padding:40px 0 20px;color:transparent;-webkit-text-stroke:2px var(--paper)}
+.kit-nav{display:grid;grid-template-columns:1fr 1fr 1fr;border:2px solid var(--paper)}
+.kit-nav a{color:var(--paper);text-decoration:none;font:400 clamp(16px,1.8vw,26px)/1.05 var(--mega);text-transform:uppercase;padding:26px 18px;border-right:2px solid var(--paper);min-height:110px;display:flex;align-items:flex-end}
+.kit-nav a:last-child{border-right:0;justify-content:flex-end;text-align:right}
+.kit-nav .kit-index{background:var(--terra-ink);color:#fff}
+.kit-nav a:hover{background:var(--paper);color:var(--ink)}
+footer :focus-visible{outline-color:var(--paper);box-shadow:0 0 0 6px var(--terracotta)}
+.colophon{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 0 40px;font-size:13px}
+.colophon a{color:var(--paper)}
+
+/* dialog */
+.kit-dialog{max-width:min(920px,calc(100vw - 20px));width:100%;max-height:calc(100vh - 20px);border:3px solid var(--ink);padding:0;background:#E4E0D8;color:var(--ink);font:400 15px/1.6 var(--mono)}
+.kit-dialog::backdrop{background:rgba(21,23,26,.8)}
+.kit-close{position:sticky;top:0;display:block;width:100%;text-align:left;border:0;border-bottom:3px solid var(--ink);background:var(--ink);color:var(--paper);font:700 14px/1 var(--mono);text-transform:uppercase;padding:14px 16px;cursor:pointer;z-index:2}
+.kit-close::before{content:"[×] "}
+.kit-notes{padding:10px clamp(16px,4vw,36px) 36px}
+.kit-notes h1{font:400 clamp(28px,4vw,48px)/.95 var(--mega);text-transform:uppercase;letter-spacing:-.02em}
+.kit-notes h2{font:400 22px/1 var(--mega);text-transform:uppercase;border-top:3px solid var(--ink);padding-top:12px;margin:34px 0 12px}
+.kit-notes figure{margin:0 0 18px}
+.kit-notes figcaption{font-size:13px}
+.kit-notes .kit-palette{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0;border:2px solid var(--ink)}
+.kit-notes .kit-palette li{padding:6px;border:1px solid var(--ink);display:flex;gap:8px;align-items:center}
+.kit-notes .kit-swatch{width:28px;height:28px;display:inline-block;border:2px solid var(--ink)}
+.kit-notes dt{font-weight:700;margin-top:10px;text-transform:uppercase}
+.kit-notes dd{margin:0}
+.kit-notes .kit-nav{border-color:var(--ink)}
+.kit-notes .kit-nav a{color:var(--ink);border-color:var(--ink);min-height:0}
+.kit-notes .kit-nav .kit-index{color:#fff}
+
+/* responsive */
+@media (max-width:1000px){
+  .hero-low .txt{grid-column:1/-1}
+  .hero-fig{grid-column:1/-1;margin-top:10px}
+  .proj .a,.proj .b,.st .intent-c,.st .spec,.st .m,.st .t,.stt .s1,.stt .s2{grid-column:1/-1;border-left:2px solid var(--ink)}
+  .proj .b,.st .spec,.st .t,.stt .s2{border-top:0}
+  .pal{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .pal li:nth-child(4){border-right:0}
+  .pal li:nth-child(-n+4){border-bottom:2px solid var(--ink)}
+  .ag .p1{grid-column:1/7}.ag .p2{grid-column:7/-1}
+  .ag .txt{grid-column:1/-1;border-left:2px solid var(--ink);border-top:0}
+  .fig:nth-child(2),.fig:nth-child(3){grid-column:1/-1;border-left:2px solid var(--ink)}
+}
+@media (max-width:640px){
+  body{font-size:15px}
+  .meta{grid-template-columns:1fr 1fr}
+  .meta div:nth-child(2){border-right:0}
+  .meta div:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+  .meta div:nth-child(3){padding-left:0}
+  .th-no{grid-column:1/-1}
+  .th-head h2,.th-head .lbl{grid-column:1/-1}
+  .mega .o{-webkit-text-stroke:2px var(--ink)}
+  .kit-project dl{grid-template-columns:1fr}
+  .kit-project dt{border-bottom:0;padding-bottom:0}
+  .pal{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pal li:nth-child(2n){border-right:0}
+  .pal li{border-bottom:2px solid var(--ink)}
+  .pal li:nth-last-child(-n+2){border-bottom:0}
+  .pal .blk{height:90px}
+  .princ li{grid-template-columns:62px 1fr}
+  .princ li::before{font-size:32px;padding:10px 8px}
+  .ag .p1,.ag .p2{grid-column:1/-1;border-left:2px solid var(--ink)}
+  .ag .p2{border-top:0}
+  .tt thead{display:none}
+  .tt, .tt tbody, .tt tr, .tt th, .tt td{display:block;width:auto!important}
+  .tt tr{border:2px solid var(--ink);margin-bottom:12px}
+  .tt th,.tt td{border:0;border-bottom:2px solid var(--ink)}
+  .tt td:last-child{border-bottom:0}
+  .kit-nav{grid-template-columns:1fr}
+  .kit-nav a{border-right:0;border-bottom:2px solid var(--paper);min-height:72px}
+  .kit-nav a:last-child{border-bottom:0;justify-content:flex-start;text-align:left}
+  .ctrl .id{width:100%;margin:0}
+  .seg legend{display:none}
+  .fig figcaption{grid-template-columns:1fr}
+  .plant.vine,.plant.foot{display:none!important}
+  .plant{width:110px!important;height:auto}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#t1">Skip to the manifesto</a>
+
+<div class="ctrl" role="region" aria-label="Page controls">
+  <div class="wrap">
+    <span class="id">AGENTNAGAR/STYLE-STUDIES/21 <span aria-hidden="true">■</span> MANIFESTO</span>
+    <button class="tbtn" type="button" id="grid-btn" aria-pressed="true">Grid: on</button>
+    <fieldset class="seg" id="tier">
+      <legend>Planting tier</legend>
+      <label><input type="radio" name="tier" value="low"><span>Low</span></label>
+      <label><input type="radio" name="tier" value="mid" checked><span>Mid</span></label>
+      <label><input type="radio" name="tier" value="high"><span>High</span></label>
+    </fieldset>
+    <button class="tbtn notes-btn" type="button" id="notes-btn">Read the notes</button>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="meta">
+      <div>Study 21 / 30</div>
+      <div>Brutalist tropical modernism</div>
+      <div id="meta-rev">Sheets</div>
+      <div>Internal comparison. Not a selection.</div>
+    </div>
+    <h1 class="mega" aria-label="Concrete. Shade. Growth. Brutalist tropical modernism, a manifesto for Agentnagar.">
+      <span aria-hidden="true">Concrete<span class="dot">.</span></span>
+      <span class="o" aria-hidden="true">Shade.</span>
+      <span class="gr" aria-hidden="true">Growth<span class="dot">.</span></span>
+    </h1>
+    <div class="hero-low">
+      <div class="txt">
+        <p>A monumental concrete city softened by climate. Board-formed concrete, perforated breeze-block screens, deep overhangs and climbing vines. A banyan anchors the square.</p>
+        <p class="lbl">This page is a manifesto for one study among thirty. It argues, lists and admits. Toggle the grid; change the planting tier.</p>
+      </div>
+      <figure class="hero-fig" id="hero-fig"><figcaption id="hero-cap"></figcaption></figure>
+    </div>
+  </div>
+  <div class="breeze" aria-hidden="true"></div>
+</header>
+
+<main>
+  <section class="thesis" id="t1" data-core="project" aria-labelledby="h1t">
+    <div class="wrap">
+      <div class="th-head"><div class="th-no" aria-hidden="true"><small>§</small>01</div><h2 id="h1t">The city is <em>shared</em></h2><p class="lbl">Agentnagar: the project, in its own words</p></div>
+      <div class="proj">
+        <div class="cell a" id="proj"></div>
+        <div class="cell b">
+          <h3>Reference district</h3>
+          <table class="district" id="district"><thead><tr><th scope="col">ID</th><th scope="col">Landmark</th><th scope="col">Rule</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="thesis" data-core="style" aria-labelledby="h2t">
+    <div class="wrap">
+      <div class="th-head"><div class="th-no" aria-hidden="true"><small>§</small>02</div><h2 id="h2t">Concrete, <em>shade</em>, growth</h2><p class="lbl">Intent · principles · palette · material · type</p></div>
+      <div class="st">
+        <div class="cell intent-c"><p class="intent" id="intent"></p></div>
+        <div class="cell spec dark" aria-label="Typography specimen">
+          <div class="lbl">Type on this page</div>
+          <div class="big" aria-hidden="true">Aa</div>
+          <div class="tall" aria-hidden="true">Big shoulders 900</div>
+          <p style="margin:8px 0 0;font-size:14px">Archivo Black · Big Shoulders Display · IBM Plex Mono</p>
+        </div>
+        <ol class="princ" id="princ"></ol>
+        <ul class="pal" id="pal"></ul>
+        <div class="cell m"><h3>Materials &amp; texture</h3><p id="materials" style="margin:0"></p></div>
+        <div class="cell t"><h3>Typography</h3><p id="type" style="margin:0"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="breeze v2" aria-hidden="true"></div>
+
+  <section class="thesis" data-core="views" aria-labelledby="h3t">
+    <div class="wrap">
+      <div class="th-head"><div class="th-no" aria-hidden="true"><small>§</small>03</div><h2 id="h3t">One district, <em>four</em> views</h2><p class="lbl">Concept sheets, selected revisions</p></div>
+      <div class="views" id="views"></div>
+      <p class="concept" id="concept"></p>
+    </div>
+  </section>
+
+  <section class="thesis" data-core="agents" aria-labelledby="h4t">
+    <div class="wrap">
+      <div class="th-head"><div class="th-no" aria-hidden="true"><small>§</small>04</div><h2 id="h4t">The agent wears <em>no</em> concrete</h2><p class="lbl">City Agent A1 · Guild residents</p></div>
+      <div class="ag" id="ag">
+        <div class="cell p1" id="p1"></div>
+        <div class="cell p2" id="p2"></div>
+        <div class="cell txt dark"><h3>What the sheets show</h3><p id="agents-text" style="margin:0 0 12px"></p><p id="a1-shared" style="margin:0;font-size:14px"></p></div>
+        <div class="gwrap"><table class="guild" id="guild"><caption>The Guild, fourteen residents</caption><thead><tr><th scope="col">Resident</th><th scope="col">Proposed role</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="thesis" data-core="tradeoffs" aria-labelledby="h5t">
+    <div class="wrap">
+      <div class="th-head"><div class="th-no" aria-hidden="true"><small>§</small>05</div><h2 id="h5t">What <em>cracks</em></h2><p class="lbl">Strengths and trade-offs · candid</p></div>
+      <table class="tt" id="tt"><thead><tr><th scope="col">Question</th><th scope="col">Verdict</th><th scope="col">Evidence</th></tr></thead><tbody></tbody></table>
+      <p class="wall-note">This page is all lettering. <span>The city must not be.</span></p>
+    </div>
+  </section>
+
+  <section class="thesis" aria-labelledby="h6t">
+    <div class="wrap">
+      <div class="th-head"><div class="th-no" aria-hidden="true"><small>§</small>06</div><h2 id="h6t">The <em>record</em></h2><p class="lbl">Status · revisions · review sources</p></div>
+      <div class="stt">
+        <div class="cell s1" id="status"></div>
+        <div class="cell s2 terra"><h3>What this page is not</h3><p style="margin:0">Not a selection, a ranking or a product decision. Plants, grid and tier switch are illustrative page devices drawn for this manifesto; they are not concept sheets or renderer tests.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-h" aria-hidden="true">§07 Exits</p>
+    <h2 class="sr">More styles</h2>
+    <div id="nav"></div>
+    <div class="colophon"><span>21 · Brutalist tropical modernism · Agentnagar style study</span><a href="#top">↑ Top</a></div>
+  </div>
+</footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  const S = Kit.style('21-brutalist-tropical-modernism');
+  const A = window.AGENTNAGAR;
+  const el = Kit.el;
+  const $ = (id) => document.getElementById(id);
+
+  const content = {
+    intent: 'A monumental concrete city softened by climate. Board-formed concrete, perforated breeze-block screens, deep overhangs and climbing vines set the identity, with a large banyan anchoring the central square. Concrete grey, foliage green, teal water and terracotta banners carry the palette.',
+    principles: [
+      'Slab and courtyard: buildings are stacked slabs around square courtyards, with open terraces and deep overhangs.',
+      'Shade is structure: breeze-block screens, colonnades, shallow pools and stepped seating make the street.',
+      'Planting breaks through: vines, palms and the banyan soften every surface and mark the square.',
+      'Few warm accents: terracotta banners, teal water, timber benches and woven rugs against raw concrete.',
+      'Lettering is seasoning: wall slogans give close-ups character but must not carry the style alone.'
+    ],
+    palette: [
+      { name: 'Board-formed concrete', hex: '#D3C3AF' },
+      { name: 'Weathered concrete', hex: '#B9B6AD' },
+      { name: 'Shadow concrete', hex: '#6A6561' },
+      { name: 'Banyan green', hex: '#6E7745' },
+      { name: 'Frond green', hex: '#565D37' },
+      { name: 'River teal', hex: '#4A6262' },
+      { name: 'Terracotta banner', hex: '#B17252' },
+      { name: 'Night slate', hex: '#21272E' }
+    ],
+    materials: 'Board-formed and weathered concrete, perforated breeze block, timber benches and shelving, woven rugs, potted plants, shallow pools and wet paving. Every sheet renders these photographically.',
+    type: 'The sheets use condensed sans capitals cast into or stencilled on concrete (MAKE REPAIR GROW BELONG) and serif caption footers. This page uses Archivo Black for monumental headings, Big Shoulders Display for numerals and IBM Plex Mono for raw running text.',
+    agents: 'The sheets draw photographic humans in everyday clothes. City Agent A1 appears only as a human portrait labelled "Your City Agent" on the phone (Interfaces sheet, Mobile panel). The Conversation panel shows two apparently human people with no agent identifier (review R06). No robot and no leaf badge on the agent appear; leaf emblems are on banners. The Guild residents are not drawn.',
+    tradeoffs: [
+      { label: 'Map scale', text: 'Reads as a grid of slab blocks, tram lines and the river bridge. The banyan sits clearly at the centre of the square, and the map labels Workshop (west), Library (east), Tram boulevard (south) and Downtown (north).' },
+      { label: 'Street scale', text: 'Relies on shade, shallow pools and stepped seating; the review notes strong tropical cues (palms, banyan, breeze blocks, deep shade).' },
+      { label: 'Rendering', text: 'Every sheet renders as a photograph rather than a stylised game, so the brief says the level of stylisation must be decided before further testing.' },
+      { label: 'Device & production cost', text: 'Brief proposal: keep slab silhouettes, screen patterns and the main planting masses at every tier. Lower tiers flatten concrete texture and thin vines and crowds; higher tiers could add weathering, wet reflections and dense foliage.' },
+      { label: 'UI legibility', text: 'Close-ups lean on wall lettering for character. The review notes label size and placement vary, and the agent has no stable identity between conversation and phone.' },
+      { label: 'Map continuity', text: 'The AR tabletop (sheet 03) shows a different, river-centred extent rather than the located atlas district (review R02 and style row).' }
+    ]
+  };
+  const verdict = ['ok', 'ok', 'risk', 'mixed', 'risk', 'risk'];
+  const vtext = ['Holds', 'Holds', 'Open', 'Scalable', 'Weak', 'Drifts'];
+
+  $('meta-rev').textContent = 'Sheets ' + S.sheets.map((s) => s.revision).join(' / ');
+
+  // hero figure: real street panel with the banyan
+  $('hero-fig').prepend(Kit.sheetImg(S, 0, 'br', { eager: true, alt: S.name + ' concept study, City perspectives sheet, Street panel (' + S.sheets[0].revision + '): the banyan in the square seen from a shaded concrete colonnade, with pools and terracotta banners.' }));
+  $('hero-cap').textContent = 'Fig. 0 · Street panel, City perspectives (' + S.sheets[0].revision + '). Concept study, not a game capture.';
+
+  // §01
+  $('proj').append(Kit.projectBlock());
+  A.district.forEach((d) => $('district').tBodies[0].append(el('tr', {}, [el('td', { text: d.id }), el('td', { text: d.name }), el('td', { text: d.note })])));
+
+  // §02
+  $('intent').textContent = content.intent;
+  const heads = ['Slab & courtyard', 'Shade is structure', 'Planting breaks through', 'Few warm accents', 'Lettering is seasoning'];
+  content.principles.forEach((p, i) => $('princ').append(el('li', {}, el('span', {}, [el('b', { text: heads[i] }), (function (t) { return t.charAt(0).toUpperCase() + t.slice(1); })(p.split(': ').slice(1).join(': '))]))));
+  const light = ['#D3C3AF', '#B9B6AD'];
+  content.palette.forEach((p) => $('pal').append(el('li', {}, [el('div', { class: 'blk' + (light.includes(p.hex) ? ' lt' : ''), 'data-hex': p.hex, style: 'background-color:' + p.hex, 'aria-hidden': 'true' }), el('div', { class: 'nm' }, [p.name, el('br'), el('span', { style: 'font-weight:400', text: p.hex })])])));
+  $('materials').textContent = content.materials;
+  $('type').textContent = content.type;
+
+  // §03
+  const caps = [
+    'Map, Top-down, Diagonal, Street. The map labels River (west), Workshop (west), Library (east), Tram boulevard (south) and Downtown (north), with a long bridge across the river to the north. A banyan fills the centre of the square; the Workshop reads as a sawtooth hall and the Library as a courtyard block.',
+    'Workshop, Home, Conversation, Gathering. Raw concrete with timber, woven rugs and plants; the river and a bridge appear through openings.',
+    'Build mode, Transit, Night and rain, Waterfront park. A wireframe block on a planted roof; a tram along the river ("Next Riverside Park"); a wet night plaza with wayfinding; an arched bridge over the riverside promenade.',
+    'Facility, Mobile, Rooftop, AR tabletop. A concrete kiosk offering Browse, Book and Ask; a phone with "Your City Agent" as a human portrait; a planted rooftop; an AR model of a river-centred city.'
+  ];
+  S.sheets.forEach((sheet, i) => $('views').append(el('figure', { class: 'fig' }, [
+    Kit.sheetImg(S, i, null, { alt: S.name + ' concept study, ' + sheet.title + ' sheet (' + sheet.revision + '). ' + caps[i] }),
+    el('figcaption', {}, [el('b', { text: 'Fig. ' + (i + 1) }), el('span', { text: caps[i] }), el('span', { class: 'lbl', text: sheet.title + ' · ' + sheet.revision })])
+  ])));
+  $('concept').textContent = A.conceptNote;
+
+  // §04
+  $('p1').append(el('figure', {}, [Kit.sheetImg(S, 3, 'tr', { alt: S.name + ' concept study, Interfaces sheet, Mobile panel (' + S.sheets[3].revision + '): a phone showing a river map and a card labelled Your City Agent with a human portrait.' }), el('figcaption', { text: 'Mobile panel: "Your City Agent" is a human portrait on the phone. The only explicit agent in the set.' })]));
+  $('p2').append(el('figure', {}, [Kit.sheetImg(S, 1, 'bl', { alt: S.name + ' concept study, Living community sheet, Conversation panel (' + S.sheets[1].revision + '): two people talking under a concrete canopy; neither is marked as an agent.' }), el('figcaption', { text: 'Conversation panel: two apparently human people. Nothing marks either as A1 (review R06).' })]));
+  $('agents-text').textContent = content.agents;
+  $('a1-shared').textContent = A.agentA1 + ' In this study the leaf badge is not visible on the agent.';
+  A.guild.forEach((g) => $('guild').tBodies[0].append(el('tr', {}, [el('td', { text: g.name }), el('td', { text: g.role })])));
+  $('guild').append(el('tfoot', {}, el('tr', {}, el('td', { colspan: '2', style: 'font-weight:400;font-size:13px', text: A.guildNote + ' Not depicted in the sheets.' }))));
+
+  // §05
+  content.tradeoffs.forEach((t, i) => $('tt').tBodies[0].append(el('tr', { class: verdict[i] }, [el('th', { scope: 'row', text: t.label }), el('td', { class: 'v', text: vtext[i] }), el('td', { text: t.text })])));
+
+  // §06, §07
+  $('status').append(Kit.statusBlock(S));
+  Kit.mountNav($('nav'), S);
+  Kit.notesDialog(S, content, $('notes-btn'));
+
+  // ---------- controls ----------
+  const root = document.documentElement;
+  $('grid-btn').addEventListener('click', (e) => {
+    const on = root.classList.toggle('grid-on');
+    e.currentTarget.setAttribute('aria-pressed', String(on));
+    e.currentTarget.textContent = 'Grid: ' + (on ? 'on' : 'off');
+  });
+  $('tier').addEventListener('change', (e) => { root.dataset.tier = e.target.value; });
+
+  // ---------- plants (illustrative, drawn here) ----------
+  const NS = 'http://www.w3.org/2000/svg';
+  function svg(w, h, cls, style) {
+    const s = document.createElementNS(NS, 'svg');
+    s.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    s.setAttribute('class', 'plant ' + cls);
+    s.setAttribute('aria-hidden', 'true');
+    s.setAttribute('focusable', 'false');
+    Object.assign(s.style, style);
+    return s;
+  }
+  function add(s, tag, attrs) { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); s.append(n); return n; }
+  // A vine that climbs from (x0,y0) upward with leaves along it
+  function vine(h, w, seed, leaves) {
+    const s = svg(w, h, 'vine', {});
+    let d = 'M' + w / 2 + ' ' + h, y = h, x = w / 2, k = seed;
+    const pts = [];
+    while (y > 20) { const ny = y - 70, nx = w / 2 + (k % 2 ? 1 : -1) * (w * 0.28); d += ' Q' + nx + ' ' + (y - 35) + ' ' + w / 2 + ' ' + ny; pts.push([nx, y - 35, k % 2]); y = ny; k++; }
+    add(s, 'path', { d, class: 'stem', 'stroke-width': 4, pathLength: 1 });
+    pts.forEach(([px, py, side], i) => {
+      if (i % Math.max(1, Math.round(pts.length / leaves)) && i % 2) return;
+      const dir = side ? 1 : -1, cls = ['lf', 'lf b', 'lf c'][i % 3] + (i % 3 === 1 ? ' x' : '');
+      const leaf = add(s, 'path', { d: 'M' + px + ' ' + py + ' q' + 16 * dir + ' -18 ' + 34 * dir + ' -6 q' + (-14 * dir) + ' 16 ' + (-34 * dir) + ' 6z', class: cls });
+      leaf.style.setProperty('--o', side ? '0% 100%' : '100% 100%');
+      leaf.style.transitionDelay = (0.25 + i * 0.12) + 's';
+    });
+    return s;
+  }
+  function monstera(size) {
+    const s = svg(200, 200, '', {});
+    const g = add(s, 'g', { class: 'mon' });
+    g.style.setProperty('--o', '50% 100%');
+    add(g, 'path', { d: 'M100 196 C98 170 96 150 100 132', class: 'stem', 'stroke-width': 6, pathLength: 1 });
+    add(g, 'path', { d: 'M100 138 C30 132 4 78 22 42 C38 12 76 4 100 24 C124 4 162 12 178 42 C196 78 170 132 100 138Z', class: 'lf' });
+    add(g, 'path', { d: 'M100 138 C100 100 100 60 100 26', class: 'rib' });
+    [[40, 60, 80, 80], [30, 96, 78, 104], [160, 60, 120, 82], [170, 96, 122, 106], [60, 30, 88, 60], [140, 30, 112, 62]].forEach(([x1, y1, x2, y2]) => add(g, 'path', { d: 'M' + x1 + ' ' + y1 + ' L' + x2 + ' ' + y2, class: 'cut' }));
+    s.style.width = size + 'px';
+    return s;
+  }
+  function frond(len) {
+    const s = svg(260, 200, '', {});
+    add(s, 'path', { d: 'M250 196 Q150 150 16 40', class: 'stem', 'stroke-width': 5, pathLength: 1 });
+    for (let i = 1; i < 16; i++) {
+      const t = i / 16, x = 250 - 234 * t, y = 196 - 156 * t - 30 * t * (1 - t) * 4 * 0.5;
+      const l = 54 * (1 - t * 0.6);
+      const a = add(s, 'path', { d: 'M' + x + ' ' + y + ' l' + (-l * 0.3) + ' ' + (-l) + ' l6 2z', class: 'lf' + (i % 2 ? ' b' : '') + (i % 3 ? '' : ' x') });
+      const b = add(s, 'path', { d: 'M' + x + ' ' + y + ' l' + (-l * 0.9) + ' ' + (l * 0.5) + ' l2 -6z', class: 'lf c' + (i % 3 ? '' : ' x') });
+      [a, b].forEach((n) => { n.style.setProperty('--o', '100% 100%'); n.style.transitionDelay = (0.2 + t * 1.4) + 's'; });
+    }
+    s.style.width = len + 'px';
+    return s;
+  }
+  function place(host, node, tier, pos) {
+    node.classList.add(...tier.split(' '));
+    Object.assign(node.style, pos);
+    host.append(node);
+    return node;
+  }
+  const hero = document.querySelector('.hero');
+  const secs = [...document.querySelectorAll('.thesis')];
+  const plants = [];
+  plants.push(place(hero, monstera(300), 't1', { right: '-40px', top: '120px', transform: 'rotate(-18deg)' }));
+  plants.push(place(hero, frond(360), 't2', { right: '26%', top: '48px' }));
+  plants.push(place(hero, vine(620, 120, 1, 8), 't1', { left: '-72px', bottom: '40px', width: '120px' }));
+  plants.push(place(hero, monstera(180), 't3', { left: '38%', bottom: '10px', transform: 'rotate(22deg)' }));
+  plants.push(place(secs[0], vine(420, 110, 0, 6), 't1', { right: '0', top: '-40px', width: '110px' }));
+  plants.push(place(secs[1], frond(300), 't2', { left: '-60px', top: '30px', transform: 'scaleX(-1)' }));
+  plants.push(place(secs[1], vine(560, 120, 1, 7), 't3', { right: '2%', bottom: '-30px', width: '120px' }));
+  plants.push(place(secs[2], monstera(200), 't2', { right: '-50px', top: '-90px', transform: 'rotate(160deg)' }));
+  plants.push(place(secs[3], vine(460, 110, 0, 6), 't1', { left: '0', top: '-60px', width: '110px' }));
+  plants.push(place(secs[3], frond(280), 't3', { right: '-40px', bottom: '40px' }));
+  plants.push(place(secs[4], monstera(220), 't1', { right: '-60px', bottom: '-50px', transform: 'rotate(-30deg)' }));
+  plants.push(place(secs[4], vine(380, 100, 1, 5), 't2', { left: '42%', top: '-70px', width: '100px' }));
+  plants.push(place(secs[5], frond(320), 't2', { right: '-40px', top: '20px' }));
+  plants.push(place(document.querySelector('footer'), monstera(260), 't1 foot', { right: '-30px', top: '-30px', transform: 'rotate(200deg)' }));
+  secs.forEach((s) => { s.style.overflow = 'hidden'; });
+
+  if (!Kit.reducedMotion() && 'IntersectionObserver' in window) {
+    root.classList.add('anim');
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('grown'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -10% 0px' });
+    plants.forEach((p) => io.observe(p));
+  }
+})();
+</script>
+</body>
+</html>

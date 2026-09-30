@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "bfdcf12458edce0b5cfbed1293b864154ba4225e3040931ed5f343180f8101f2",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/27-ceramic-tile-city/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

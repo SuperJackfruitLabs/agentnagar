@@ -1,0 +1,130 @@
+[
+  {
+    "style": "01-graphic",
+    "sheet": "00-city-perspectives",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-f4923d1d-c62d-401d-84be-129d0949e5a6.png",
+    "referenced_image_paths": [
+      "docs/vision/style-studies/01-graphic/00-city-perspectives.png"
+    ],
+    "archived_reference_snapshots": [
+      "originals/00-city-perspectives.png"
+    ]
+  },
+  {
+    "style": "01-graphic",
+    "sheet": "00-city-perspectives",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-3c9a1917-5cb5-4c22-bf95-b87704c2a510.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-f4923d1d-c62d-401d-84be-129d0949e5a6.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-1.png"
+    ]
+  },
+  {
+    "style": "01-graphic",
+    "sheet": "00-city-perspectives",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-9e457df8-47a7-44ca-9702-cafe1d2afd17.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-3c9a1917-5cb5-4c22-bf95-b87704c2a510.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-2.png"
+    ]
+  },
+  {
+    "style": "01-graphic",
+    "sheet": "01-living-community",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-5a96be82-c50c-413b-863e-8032600058a1.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-3c9a1917-5cb5-4c22-bf95-b87704c2a510.png",
+      "docs/vision/style-studies/01-graphic/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-2.png",
+      "originals/01-living-community.png"
+    ]
+  },
+  {
+    "style": "01-graphic",
+    "sheet": "01-living-community",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-74d2b2e3-afa2-4b17-a904-769f0c631b7d.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-5a96be82-c50c-413b-863e-8032600058a1.png",
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-9e457df8-47a7-44ca-9702-cafe1d2afd17.png"
+    ],
+    "archived_reference_snapshots": [
+      "01-living-community.pass-1.png",
+      "00-city-perspectives.pass-3.png"
+    ]
+  },
+  {
+    "style": "01-graphic",
+    "sheet": "02-creating-exploring",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-0f05061a-d726-4250-8a9f-dc142a7c40b0.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-3c9a1917-5cb5-4c22-bf95-b87704c2a510.png",
+      "docs/vision/style-studies/01-graphic/01-living-community.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-2.png",
+      "originals/01-living-community.png"
+    ]
+  },
+  {
+    "style": "01-graphic",
+    "sheet": "02-creating-exploring",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-f3c072cb-acab-4d5b-8e93-38096f0abf13.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-0f05061a-d726-4250-8a9f-dc142a7c40b0.png"
+    ],
+    "archived_reference_snapshots": [
+      "02-creating-exploring.pass-1.png"
+    ]
+  },
+  {
+    "style": "01-graphic",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 1,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-f97948d5-025b-4ddd-91e1-35033dbd94d0.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-9e457df8-47a7-44ca-9702-cafe1d2afd17.png",
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-5a96be82-c50c-413b-863e-8032600058a1.png"
+    ],
+    "archived_reference_snapshots": [
+      "00-city-perspectives.pass-3.png",
+      "01-living-community.pass-1.png"
+    ]
+  },
+  {
+    "style": "01-graphic",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 2,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-3f2ed0f2-118a-4240-a716-0052522b3701.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-f97948d5-025b-4ddd-91e1-35033dbd94d0.png"
+    ],
+    "archived_reference_snapshots": [
+      "03-interfaces-perspectives.pass-1.png"
+    ]
+  },
+  {
+    "style": "01-graphic",
+    "sheet": "03-interfaces-perspectives",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-7b204f0f-4d2e-4d02-8ed8-ccd5cb356386.png",
+    "referenced_image_paths": [
+      "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-3f2ed0f2-118a-4240-a716-0052522b3701.png"
+    ],
+    "archived_reference_snapshots": [
+      "03-interfaces-perspectives.pass-2.png"
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "0938e999fd3646642112cf09279f5374131e5915765ebd0a386a3e8d9050e810",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/21-brutalist-tropical-modernism/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

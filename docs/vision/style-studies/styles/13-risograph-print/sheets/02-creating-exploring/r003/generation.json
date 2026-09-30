@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "592f7c955c53e935fe6dc6c8f451b7615d32a58ece3f903215de5f43c83ea660",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "f1287a92da6b0f9b355ca950f1dae3c55c47e7134792e86eecfdaadd23476818"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/13-risograph-print/02-creating-exploring.pass-2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

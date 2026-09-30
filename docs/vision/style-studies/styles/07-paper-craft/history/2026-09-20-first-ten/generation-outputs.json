@@ -1,0 +1,72 @@
+[
+  {
+    "candidate": "candidates/00-pass1.png",
+    "prompt": "prompts/00-pass1.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-d3b71a67-017f-4975-84b7-7a358713d4af.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-d3b71a67-017f-4975-84b7-7a358713d4af.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  {
+    "candidate": "candidates/00-pass2.png",
+    "prompt": "prompts/00-pass2.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-ca2c2a03-08b0-4950-bd41-67ce8b99b1b1.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-ca2c2a03-08b0-4950-bd41-67ce8b99b1b1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  {
+    "candidate": "candidates/00-pass3.png",
+    "prompt": "prompts/00-pass3.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-62e57e0c-5050-48e7-b93d-bf8576a8846e.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-62e57e0c-5050-48e7-b93d-bf8576a8846e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  {
+    "candidate": "candidates/01-pass1.png",
+    "prompt": "prompts/01-pass1.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-ccff4ffb-125b-4ac6-8f93-8972346d0dea.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-ccff4ffb-125b-4ac6-8f93-8972346d0dea.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  {
+    "candidate": "candidates/01-pass2.png",
+    "prompt": "prompts/01-pass2.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-e0f0e16f-80ba-43c7-9595-d41e6bfa8f3a.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-e0f0e16f-80ba-43c7-9595-d41e6bfa8f3a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  {
+    "candidate": "candidates/02-pass1.png",
+    "prompt": "prompts/02-pass1.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-caaec308-467f-4398-a129-8e9028b7b40f.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-caaec308-467f-4398-a129-8e9028b7b40f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  {
+    "candidate": "candidates/02-pass2.png",
+    "prompt": "prompts/02-pass2.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-a45a1d3a-c6c3-4d4e-86fb-91134f8a3ec5.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-a45a1d3a-c6c3-4d4e-86fb-91134f8a3ec5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  {
+    "candidate": "candidates/03-pass1.png",
+    "prompt": "prompts/03-pass1.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-5622b24a-3046-4023-9278-222118390f58.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-5622b24a-3046-4023-9278-222118390f58.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  {
+    "candidate": "candidates/03-pass2.png",
+    "prompt": "prompts/03-pass2.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-b9b2cbfd-8ab0-489a-b6f5-d21c1e19258e.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-b9b2cbfd-8ab0-489a-b6f5-d21c1e19258e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  {
+    "candidate": "candidates/03-pass3.png",
+    "prompt": "prompts/03-pass3.txt",
+    "tool": "image_gen.imagegen",
+    "source": "<codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-7bc29203-ea88-4ddd-a954-c17310366592.png",
+    "output_hint": "Generated images are saved to <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc as <codex-home>/generated_images/01a0bb27-5f3e-7850-8c43-97e1e4d90ecc/exec-7bc29203-ea88-4ddd-a954-c17310366592.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  }
+]

@@ -1,0 +1,332 @@
+{
+  "baseline": "ba5f4242d02aa37686b2a18b9add8813c5490130",
+  "gallery_changed": 40,
+  "gallery_total": 40,
+  "original_files_verified": 90,
+  "tool_outputs_verified": 114,
+  "archive_pngs": 154,
+  "local_links_checked": 654,
+  "errors": [],
+  "images": [
+    {
+      "path": "docs/vision/style-studies/01-graphic/00-city-perspectives.png",
+      "sha256": "4c068317d5189f678cf26c27aa1ea6a39f2be895a0b4a4dc9b9f7b6602cc783b",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/01-graphic/00-city-perspectives.pass-3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/01-graphic/01-living-community.png",
+      "sha256": "1ae773892dab39686be3aed9475089960f53eca2b5e7ffcb74ab5e4f58ea3bcf",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/01-graphic/01-living-community.pass-2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/01-graphic/02-creating-exploring.png",
+      "sha256": "ac27fd691971253b7922507056cf42c21cc8f7295b057e616ef2cb035e60f8ae",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/01-graphic/02-creating-exploring.pass-2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/01-graphic/03-interfaces-perspectives.png",
+      "sha256": "9560a7f878e2c3522df6f65b76d34b8c477e93c7aa29355aae8decc79461a8fc",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/01-graphic/03-interfaces-perspectives.pass-3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/02-voxel/00-city-perspectives.png",
+      "sha256": "5e0ec15a8372c5f7d8e206f80d810b759b3a792c5b6fe4cde686ce4e5ed06daf",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/02-voxel/00-city-perspectives.pass-3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/02-voxel/01-living-community.png",
+      "sha256": "c3419b0429556d4f292bdb8e6dcfbfe89f137cb7e45af18e7f506c537442c1a8",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/02-voxel/01-living-community.pass-1.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/02-voxel/02-creating-exploring.png",
+      "sha256": "1f71fdfdd4ad1f68b8fab287e71f1637ddc343e798b1914182d745d9f2d713d3",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/02-voxel/02-creating-exploring.pass-1.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/02-voxel/03-interfaces-perspectives.png",
+      "sha256": "83775b2bc144cfce784dcd52fdd31ad4176c468d38860247ac4353d037fba44a",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/02-voxel/03-interfaces-perspectives.pass-2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/03-ink/00-city-perspectives.png",
+      "sha256": "de29c728e40015bc7acca40a42c81f59523f42458bdea0fe1bbd3ec280da42b8",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/03-ink/00-city-perspectives.pass-4.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/03-ink/01-living-community.png",
+      "sha256": "820433f1ea8c1ca0a8dc95289ceaa205d5d815689c7b1744ede9917f7121c315",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/03-ink/01-living-community.pass-3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/03-ink/02-creating-exploring.png",
+      "sha256": "088cafa06e855c72e0ae0192efdb6d6a655f1cfded0416de14060acfb74957e1",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/03-ink/02-creating-exploring.pass-4.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/03-ink/03-interfaces-perspectives.png",
+      "sha256": "23d295babd6de3f632171515089ef05b093d2069ff4276af2f058f264a049c50",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/03-ink/03-interfaces-perspectives.pass-2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/04-realistic/00-city-perspectives.png",
+      "sha256": "45c3ec2fc83570774a98314b3c53c6ff0bf51a40d4801ba02a7e0466ab07afc1",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/candidates/00-pass4.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/04-realistic/01-living-community.png",
+      "sha256": "11cc34ebfe0fe6d50b90183f7ee7cec2581a13deb7d2d4037c05b410013c87d9",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/candidates/01-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/04-realistic/02-creating-exploring.png",
+      "sha256": "39452ec55f0393aaadbe287c8d6a636916f2f94d63e9ef2118eb75ebbbb6eb22",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/candidates/02-pass2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/04-realistic/03-interfaces-perspectives.png",
+      "sha256": "f924a0e9826c30ea1a05af9360477d04dc6518170df0dcb44c9fd56c541cbc57",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/candidates/03-pass2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/05-claymation/00-city-perspectives.png",
+      "sha256": "373768b6e8721d6b162097a76f09ff8a2e6b6a35739ae6773658855f3aacf158",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/05-claymation/candidates/00-pass2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/05-claymation/01-living-community.png",
+      "sha256": "fbfcf2dff9aeffbd331dda5a717d12446913fe3b97afdb136e99b836dddacaf0",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/05-claymation/candidates/01-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/05-claymation/02-creating-exploring.png",
+      "sha256": "200a693ed01869e482d69c0e969b5008649b4c0190a171eeac4e19c741b133fc",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/05-claymation/candidates/02-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/05-claymation/03-interfaces-perspectives.png",
+      "sha256": "2edb9c6fcc4ff2e367c44b5079a01524ac00249ab44e33da6cf15d3646bb88c5",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/05-claymation/candidates/03-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/06-anime/00-city-perspectives.png",
+      "sha256": "c91bb1de0cdfc87eeecb58e72166c8030c998b2d0088b578f7e08a59bd9b2328",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/candidates/00-pass7.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/06-anime/01-living-community.png",
+      "sha256": "6cd109ded8d9c2f3b447ab0d043234d3c1f917903a8e23392547a77259ee9fb2",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/candidates/01-pass2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/06-anime/02-creating-exploring.png",
+      "sha256": "44e6489a309d25b634d8d42064fd7169e50da6bb73ed767a55ef9b6182570d47",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/candidates/02-pass1.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/06-anime/03-interfaces-perspectives.png",
+      "sha256": "889b8694969b9c2f02aa3c73900f725670c8459c3a9949d422e3c1022a47e215",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/candidates/03-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/07-paper-craft/00-city-perspectives.png",
+      "sha256": "0ca99b3b155105d8cd407f06a65cf3cb88a3ba18f5a0da77d861b991b6e3c1c9",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/candidates/00-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/07-paper-craft/01-living-community.png",
+      "sha256": "6975f351ae956c645602c8101495c935689b5d5c6587abb718221ef3c6f618c1",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/candidates/01-pass2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/07-paper-craft/02-creating-exploring.png",
+      "sha256": "891ece0ae4117056077ceb855612b88cff52f213d7a2a7c0eaba9a58c5167607",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/candidates/02-pass2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/07-paper-craft/03-interfaces-perspectives.png",
+      "sha256": "3b96919459ca676d1b2838a48e5ff4f987933f1f58640f625b67f0e87e10cb8d",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/07-paper-craft/candidates/03-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/08-pixel-art/00-city-perspectives.png",
+      "sha256": "f1e42e923ee8f276cb31f74723d29734995bcd12df5381fab01a4085d006a7e8",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/00-city-perspectives-pass4.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/08-pixel-art/01-living-community.png",
+      "sha256": "3ef595da12009b210c04233ae0de93c6d1b12a1a47ea8696b67645bfac55f6da",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/01-living-community-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/08-pixel-art/02-creating-exploring.png",
+      "sha256": "5ac602cedf2cc11ee4c29ee7f82cf66580037cafd966076a38775a82b137a5cc",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/02-creating-exploring-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/08-pixel-art/03-interfaces-perspectives.png",
+      "sha256": "69b8d9b571d2dfb67ab9c968fcb2fe847acb87a8648585110846afea032ce7b3",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/candidates/03-interfaces-perspectives-pass7.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/09-solarpunk/00-city-perspectives.png",
+      "sha256": "3d2041fb03fc1d1300993c1e020f403ee47dfe651bdae74bb10620600accd801",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/00-city-perspectives-pass4.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/09-solarpunk/01-living-community.png",
+      "sha256": "5e753438b225633397a1dc83def1197015c1ca5a88252269553a0c6768109594",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/01-living-community-pass3.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/09-solarpunk/02-creating-exploring.png",
+      "sha256": "3ff148ca3698e0cc31690178b84a4189e64c2dda491edd1f9059ffb7c9b7fe87",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/02-creating-exploring-pass2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/09-solarpunk/03-interfaces-perspectives.png",
+      "sha256": "fda7f9bd6c72759faee86cfdd4bfee6defdb4cbe433f082d1ccd6bc373c58550",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/03-interfaces-perspectives-pass2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/10-neon-noir/00-city-perspectives.png",
+      "sha256": "0db36e70c9c1441a62aef5fc468605783e37d3619181d17d0c06b4c777311e86",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/00-city-perspectives-pass5.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/10-neon-noir/01-living-community.png",
+      "sha256": "d2059a73278ed1048244cc896c97073e4a00664ad5051ee1d6a3a30af4d32e75",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/01-living-community-pass1.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/10-neon-noir/02-creating-exploring.png",
+      "sha256": "2c41032dccc09936867aef2b33228f1f590cf45120491cfe66c2783b394ebb81",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/02-creating-exploring-pass2.png"
+      ]
+    },
+    {
+      "path": "docs/vision/style-studies/10-neon-noir/03-interfaces-perspectives.png",
+      "sha256": "c865a700e9dbe2e2c759f05c6c7feeb9f3dd07c23b99bf476944ac16aba8588e",
+      "changed": true,
+      "matching_candidates": [
+        "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/03-interfaces-perspectives-pass3.png"
+      ]
+    }
+  ]
+}

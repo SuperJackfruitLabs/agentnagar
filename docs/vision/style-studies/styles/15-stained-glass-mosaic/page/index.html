@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en" data-style="15-stained-glass-mosaic">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Agentnagar Window · 15 Stained-glass mosaic</title>
+<meta name="description" content="Agentnagar style study 15, Stained-glass mosaic: a leaded window whose panes light up to reveal each section.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root {
+  --lead: #102e48;     /* leading and border navy, sampled */
+  --night: #09121d;
+  --cobalt: #0071d5;
+  --gold: #deae57;
+  --emerald: #2f6b3f;
+  --amber: #cf8244;
+  --pale: #6fa7cd;
+  --ivory: #eddac7;
+  --ink: #13202e;
+  --glow: #deae57;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--night); }
+body {
+  margin: 0; color: var(--ivory); min-height: 100vh;
+  background:
+    radial-gradient(ellipse 60% 70% at 24% 45%, color-mix(in srgb, var(--glow) 16%, transparent), transparent 70%),
+    radial-gradient(ellipse 90% 60% at 50% 110%, #16283b, transparent 70%),
+    var(--night);
+  font: 18px/1.6 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  transition: background .8s;
+}
+a { color: inherit; text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+img { max-width: 100%; display: block; }
+
+.top { max-width: 1360px; margin: 0 auto; padding: 18px 24px 0; display: flex; justify-content: space-between; align-items: center; gap: 12px 20px; flex-wrap: wrap; }
+.top h1 { margin: 0; font: 700 clamp(1.25rem, 2.3vw, 1.9rem)/1.1 'Cinzel Decorative', serif; letter-spacing: .03em; color: var(--gold); }
+.top h1 small { display: block; font: 400 .9rem/1.3 'EB Garamond', serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ivory); margin-top: 4px; }
+.btn {
+  font: 600 1rem/1 'EB Garamond', serif; letter-spacing: .08em; text-transform: uppercase; cursor: pointer;
+  color: var(--ink); background: var(--gold); border: 2px solid var(--lead); padding: 11px 16px;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 22px -4px var(--gold);
+}
+.btn:hover { background: #f0c979; }
+
+.stage { max-width: 1360px; margin: 0 auto; padding: 16px 24px 48px; display: grid; grid-template-columns: minmax(300px, 520px) minmax(0, 1fr); gap: 48px; align-items: start; }
+.window-col { position: sticky; top: 12px; display: flex; flex-direction: column; align-items: center; }
+.window { position: relative; width: 100%; max-width: calc((100vh - 150px) * .6); }
+.window svg { display: block; width: 100%; height: auto; overflow: visible; }
+.window .sweep {
+  position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; overflow: hidden;
+  -webkit-mask: var(--arch) center / 100% 100% no-repeat; mask: var(--arch) center / 100% 100% no-repeat;
+}
+.window .sweep::before {
+  content: ''; position: absolute; top: -10%; bottom: -10%; width: 38%; left: -45%;
+  background: linear-gradient(100deg, transparent 0%, rgba(255,236,190,.05) 30%, rgba(255,240,205,.36) 50%, rgba(255,236,190,.05) 70%, transparent 100%);
+  transform: skewX(-14deg); animation: sweep 9s cubic-bezier(.45,.05,.55,.95) infinite 1.8s;
+}
+@keyframes sweep { 0% { left: -45%; } 55%, 100% { left: 125%; } }
+
+.pane { cursor: pointer; transition: filter .7s ease; filter: brightness(.56) saturate(.8); outline: none; }
+.pane.lit { filter: brightness(1.12) saturate(1.1) drop-shadow(0 0 14px var(--pane-glow)); }
+.pane:hover:not(.lit) { filter: brightness(.7) saturate(.9); }
+.pane:focus-visible .pane-edge { stroke: #fff3cf; stroke-width: 7; stroke-dasharray: 10 6; }
+.intro .pane { filter: brightness(1) saturate(1); }
+.deco { filter: brightness(.5) saturate(.8); }
+
+.legend { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+.legend button {
+  font: 600 .88rem/1 'EB Garamond', serif; letter-spacing: .06em; text-transform: uppercase; cursor: pointer;
+  color: var(--ivory); background: rgba(16,46,72,.6); border: 1.5px solid #34506b; padding: 8px 10px;
+}
+.legend button[aria-pressed="true"] { background: var(--c); color: var(--fg, var(--ink)); border-color: var(--c); box-shadow: 0 0 16px -2px var(--c); }
+.hint { font-size: .9rem; color: #c9b8a3; text-align: center; margin: 10px 0 0; max-width: 42ch; }
+
+/* ---------- the lit placard ---------- */
+.placard {
+  position: relative; color: var(--ink);
+  padding: clamp(22px, 3vw, 40px);
+  border: 14px solid transparent;
+  background:
+    linear-gradient(var(--ivory), var(--ivory)) padding-box,
+    conic-gradient(from 45deg, var(--gold) 0 25%, var(--emerald) 0 50%, var(--amber) 0 75%, var(--cobalt) 0) 0 0 / 28px 28px border-box;
+  box-shadow: 0 0 0 3px var(--lead), 0 0 70px -10px var(--glow), 0 30px 60px -30px #000;
+  transition: box-shadow .8s;
+}
+.placard::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 70% 50% at 0% 0%, color-mix(in srgb, var(--glow) 22%, transparent), transparent 70%);
+}
+.placard > * { position: relative; }
+.placard .kicker { font: 600 .82rem/1.2 'EB Garamond', serif; letter-spacing: .2em; text-transform: uppercase; color: #6b4a1c; margin: 0 0 4px; }
+.placard h2 { font: 700 clamp(1.8rem, 3.2vw, 2.7rem)/1.08 'Cormorant Garamond', serif; margin: 0 0 14px; color: var(--lead); letter-spacing: .01em; }
+.placard h3 { font: 700 1.25rem/1.2 'Cormorant Garamond', serif; color: var(--lead); margin: 1.2rem 0 .4rem; letter-spacing: .02em; }
+.placard p { margin: 0 0 .8rem; max-width: 68ch; }
+.placard .lede { font-size: 1.18rem; }
+.placard section[hidden] { display: none; }
+.placard .kit-nav a, .placard .kit-nav a:visited { color: var(--ivory); }
+.placard section { animation: rise .6s ease; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.facts { display: grid; grid-template-columns: 9rem 1fr; gap: 6px 16px; margin: 0; }
+.facts dt { font-weight: 700; color: var(--lead); }
+.facts dd { margin: 0; }
+.small { font-size: .92rem; color: #3d4652; }
+.principles { padding-left: 1.2rem; margin: 0; }
+.principles li { margin-bottom: .45rem; }
+.principles li::marker { color: #9a6b1f; content: '◆  '; }
+.tiles { list-style: none; padding: 0; margin: 6px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; }
+.tiles li { font-size: .9rem; line-height: 1.25; }
+.tiles i {
+  display: block; height: 62px; margin-bottom: 6px; background: var(--c);
+  border: 4px solid var(--lead); clip-path: polygon(0 12%, 50% 0, 100% 12%, 100% 100%, 0 100%);
+  box-shadow: inset 0 0 18px rgba(255,255,255,.35), inset -6px -8px 14px rgba(0,0,0,.25);
+}
+.tiles code { font: .82rem 'IBM Plex Mono', monospace; }
+.sheets { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.sheets figure { margin: 0; }
+.sheets a { display: block; border: 5px solid var(--lead); box-shadow: 0 0 0 2px var(--gold); }
+.sheets figcaption { font-size: .88rem; line-height: 1.35; margin-top: 8px; }
+.landmarks { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; padding: 0; list-style: none; margin: 0; font-size: .95rem; }
+.landmarks b { display: inline-block; min-width: 2.2rem; text-align: center; background: var(--lead); color: var(--gold); font: 700 .8rem/1.6 'IBM Plex Mono', monospace; margin-right: 6px; }
+.agent-crops { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 6px 0 12px; }
+.agent-crops .kit-panel { border: 5px solid var(--lead); }
+.guild { columns: 2; column-gap: 24px; padding: 0; list-style: none; margin: 0; font-size: .92rem; }
+.guild li { break-inside: avoid; margin-bottom: 3px; }
+.trade { margin: 0; }
+.trade dt { font: 700 1.15rem/1.2 'Cormorant Garamond', serif; color: var(--lead); margin-top: .9rem; }
+.trade dd { margin: .2rem 0 0; }
+.kit-status .kit-summary { font-size: 1.15rem; font-weight: 700; border-left: 6px solid var(--gold); padding-left: 12px; }
+.kit-status ul { padding-left: 1.2rem; }
+.kit-concept { font-style: italic; }
+.placard .kit-nav { display: grid; gap: 10px; }
+.placard .kit-nav a { display: block; text-decoration: none; font: 700 1.3rem/1.2 'Cormorant Garamond', serif; padding: 14px 18px; background: var(--lead); color: var(--ivory); border: 3px solid var(--gold); }
+.placard .kit-nav a:hover { background: #1b4468; }
+.pane-steps { display: flex; justify-content: space-between; gap: 10px; margin-top: 22px; border-top: 1px solid #c7b299; padding-top: 12px; }
+.pane-steps button { font: 600 .95rem/1 'EB Garamond', serif; letter-spacing: .06em; background: none; border: 0; color: var(--lead); cursor: pointer; padding: 6px 0; text-decoration: underline; text-underline-offset: 4px; }
+.foot { max-width: 1360px; margin: 0 auto; padding: 0 24px 40px; font-size: .9rem; color: #c9b8a3; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+.foot .kit-nav { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+
+/* notes dialog */
+.kit-dialog { max-width: min(860px, 94vw); max-height: 90vh; padding: 28px; background: var(--ivory); color: var(--ink); border: 6px solid var(--lead); box-shadow: 0 0 0 3px var(--gold); }
+.kit-dialog::backdrop { background: rgba(5,10,18,.8); }
+.kit-dialog h1, .kit-dialog h2 { font-family: 'Cormorant Garamond', serif; color: var(--lead); }
+.kit-dialog .kit-close { position: sticky; top: 0; float: right; font: 600 .95rem 'EB Garamond', serif; background: var(--lead); color: var(--ivory); border: 0; padding: 8px 12px; cursor: pointer; }
+.kit-dialog .kit-swatch { display: inline-block; width: 1em; height: 1em; vertical-align: -2px; border: 1px solid var(--lead); }
+.kit-dialog .kit-sheet { width: 100%; }
+
+@media (max-width: 900px) {
+  .stage { grid-template-columns: 1fr; gap: 28px; padding: 12px 16px 40px; }
+  .window-col { position: static; }
+  .window { max-width: min(420px, 100%); }
+  .top { padding: 16px 16px 0; }
+  .foot { padding: 0 16px 32px; }
+}
+@media (max-width: 560px) {
+  .sheets, .agent-crops, .landmarks { grid-template-columns: 1fr; }
+  .facts { grid-template-columns: 1fr; }
+  .facts dd { margin-bottom: 6px; }
+  .guild { columns: 1; }
+  .placard { border-width: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .window .sweep { display: none; }
+  .pane, body, .placard { transition: none; }
+  .placard section { animation: none; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1><span id="title-name">The Agentnagar Window</span><small id="title-sub"></small></h1>
+  <button class="btn" id="notes-btn" type="button">Read the notes</button>
+</header>
+
+<main class="stage">
+  <div class="window-col">
+    <div class="window" id="window">
+      <svg id="glass" viewBox="0 0 600 1000" role="group" aria-label="Stained-glass window. Each lit pane opens a section; use Tab or the arrow keys to move between panes and Enter to light one."></svg>
+      <div class="sweep" aria-hidden="true"></div>
+    </div>
+    <ul class="legend" id="legend" aria-label="Window panes"></ul>
+    <p class="hint">An original illustrative window drawn for this page, not a concept sheet. Choose a pane to let the light through.</p>
+  </div>
+
+  <article class="placard" id="placard" aria-live="polite">
+    <section id="sec-project" data-core="project" aria-labelledby="h-project">
+      <p class="kicker">The rose · Agentnagar</p>
+      <h2 id="h-project"></h2>
+      <p class="lede" id="p-sum-0"></p>
+      <p id="p-sum-1"></p>
+      <dl class="facts" id="facts"></dl>
+      <p class="small" id="p-status" style="margin-top:14px"></p>
+    </section>
+    <section id="sec-style" data-core="style" aria-labelledby="h-style" hidden>
+      <p class="kicker">Upper left lancet · The style</p>
+      <h2 id="h-style">Light through leaded colour</h2>
+      <p class="lede" id="intent"></p>
+      <h3>Principles</h3>
+      <ul class="principles" id="principles"></ul>
+      <h3>Palette</h3>
+      <p class="small">Hex values sampled from the selected sheets.</p>
+      <ul class="tiles" id="tiles"></ul>
+      <h3>Materials</h3>
+      <p id="materials"></p>
+      <h3>Type</h3>
+      <p id="type"></p>
+    </section>
+    <section id="sec-views" data-core="views" aria-labelledby="h-views" hidden>
+      <p class="kicker">Centre lancet · The district</p>
+      <h2 id="h-views">One district, four views</h2>
+      <p id="views-intro"></p>
+      <ul class="landmarks" id="landmarks" aria-label="Reference district landmarks"></ul>
+      <p class="small" id="concept" style="margin-top:12px"></p>
+      <div class="sheets" id="sheets"></div>
+    </section>
+    <section id="sec-agents" data-core="agents" aria-labelledby="h-agents" hidden>
+      <p class="kicker">Upper right lancet · Agents</p>
+      <h2 id="h-agents">Everyone wears the glass</h2>
+      <p class="lede" id="a1-common"></p>
+      <div class="agent-crops" id="a1-crops"></div>
+      <p id="a1-desc"></p>
+      <h3>The Guild</h3>
+      <p class="small" id="guild-note"></p>
+      <ul class="guild" id="guild"></ul>
+    </section>
+    <section id="sec-tradeoffs" data-core="tradeoffs" aria-labelledby="h-tradeoffs" hidden>
+      <p class="kicker">Lower left lancet · The balance</p>
+      <h2 id="h-tradeoffs">Where the glow helps, and where the lead gets in the way</h2>
+      <dl class="trade" id="trade"></dl>
+    </section>
+    <section id="sec-status" data-core="status" aria-labelledby="h-status" hidden>
+      <p class="kicker">Lower right lancet · The seal</p>
+      <h2 id="h-status">Status and sources</h2>
+      <div id="status"></div>
+    </section>
+    <section id="sec-nav" data-core="nav" aria-labelledby="h-nav" hidden>
+      <p class="kicker">The sill · Doors</p>
+      <h2 id="h-nav">Leave by another door</h2>
+      <p>Neighbouring studies in the collection, and the index of all thirty.</p>
+      <div id="nav"></div>
+    </section>
+    <div class="pane-steps">
+      <button type="button" id="prev-pane"></button>
+      <button type="button" id="next-pane"></button>
+    </div>
+  </article>
+</main>
+<footer class="foot">
+  <span id="imprint"></span>
+  <div id="foot-nav"></div>
+</footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  const S = Kit.style('15-stained-glass-mosaic');
+  const A = window.AGENTNAGAR;
+  const $ = (id) => document.getElementById(id);
+  const el = Kit.el;
+  const reduced = Kit.reducedMotion();
+
+  const content = {
+    intent: 'Translucent colour cells separated by dark leading cover every surface, from sky to skin. Cobalt, gold, emerald and amber dominate, with warm light glowing through windows and lamps. Decorative tiled borders frame each panel and carry its label.',
+    principles: [
+      'Everything is leaded: sky, water, furniture, textiles, plants and people are all cut into cells.',
+      'A jewel palette of cobalt, gold, emerald and amber, with warm light glowing through windows and lamps.',
+      'Tiled borders frame each panel and carry its label.',
+      'Interfaces use quieter fills so their labels stay readable.'
+    ],
+    palette: [
+      { name: 'Lead navy', hex: '#102E48' },
+      { name: 'Cobalt', hex: '#0071D5' },
+      { name: 'Gold', hex: '#DEAE57' },
+      { name: 'Emerald', hex: '#2F6B3F' },
+      { name: 'Amber', hex: '#CF8244' },
+      { name: 'Pale glass', hex: '#6FA7CD' },
+      { name: 'Label ivory', hex: '#EDDAC7' }
+    ],
+    materials: 'Translucent coloured glass held in dark lead came, with tiled mosaic borders. The sheets show cathedral-like halls with tall arched windows, a glass-domed library and leaded interiors.',
+    type: 'Engraved-looking serif capitals on ivory label plaques (sheets 00 to 02) or black tabs (sheet 03). On this page: Cinzel Decorative, Cormorant Garamond and EB Garamond.',
+    agents: 'The agent is a white and blue humanoid with a leaf emblem. On sheet 01 (Conversation) it has a white mosaic face, a round blue-and-gold ear disc and a leaf emblem on the chest; the sheet does not label it A1. People share the same cell treatment: faces stay readable but every character wears the pattern. The Mobile panel on sheet 03 shows a human "Your City Companion" portrait rather than A1. The Guild residents are not depicted on the sheets.',
+    tradeoffs: [
+      { label: 'Map vs street', text: 'The overview (sheet 00) anchors the river, bridge, workshop, living tree, library, tram and downtown to the reference district. Street, rain and park scenes glow well, but the leading competes with figures.' },
+      { label: 'Device and production cost', text: 'Proposed: keep the leading, the jewel palette and lit-window glow at every tier. Lower tiers would use larger cells and fewer border patterns; higher tiers could add projected light across floors. These adaptations remain untested.' },
+      { label: 'UI legibility', text: 'Interfaces use quieter fills: the kiosk Browse, Book and Ask buttons on sheet 03 read clearly, but the phone map\'s plaque labels are small and busy against the mosaic.' },
+      { label: 'Expression at play distance', text: 'The uniform mosaic on people risks losing expression at play distance. The dated review found glass segmentation crossing clothes, skin and sky, and asked whether glass is a rendering treatment or a literal material.' },
+      { label: 'Continuity', text: 'Sheets 01 to 03 are original r001 images with continuity corrections still pending; they show a spired, many-towered skyline and bridges unlike the reference district, and their exact prompts are missing. Caption placement differs: plaques below panels on 01 and 02, black tabs on 03. The added overview still has roof colour and entrance orientation issues.' }
+    ]
+  };
+
+  // ---------- fill sections ----------
+  $('title-sub').textContent = `Style study ${S.number} · ${S.name}`;
+  $('h-project').textContent = A.name;
+  $('p-sum-0').textContent = A.tagline + ' ' + A.summary[0];
+  $('p-sum-1').textContent = A.summary[1];
+  A.facts.forEach((f) => $('facts').append(el('dt', { text: f.label }), el('dd', { text: f.text })));
+  $('p-status').textContent = `${A.status} ${A.nameNote}`;
+  $('intent').textContent = content.intent;
+  content.principles.forEach((p) => $('principles').append(el('li', { text: p })));
+  content.palette.forEach((p) => { const i = el('i', { 'aria-hidden': 'true' }); i.style.setProperty('--c', p.hex); $('tiles').append(el('li', {}, [i, p.name, el('br'), el('code', { text: p.hex })])); });
+  $('materials').textContent = content.materials;
+  $('type').textContent = content.type;
+
+  $('views-intro').textContent = 'The six reference landmarks appear on every study. The centre lancet of this window is an illustrative plan of them; the four selected sheets are below.';
+  A.district.forEach((d) => $('landmarks').append(el('li', {}, [el('b', { text: d.id }), el('strong', { text: d.name + '. ' }), d.note])));
+  $('concept').textContent = A.conceptNote;
+  const notes = [
+    'Map, Top-down, Diagonal and Street, labelled R1 to S1 with D1 downtown and P1 park. The added overview, inspected after three passes.',
+    'Workshop, Home, Conversation and Gathering. The agent appears in Conversation; the Gathering sits under a glass-leafed tree.',
+    'Build mode, Transit, Night and rain, and Waterfront park. A Makers Workshop and Library recur; a wayfinding post points to Riverfront, Central Square, Library and Tram Boulevard.',
+    'Facility, Mobile, Rooftop and AR tabletop. A kiosk offers Browse, Book and Ask; the phone map labels districts.'
+  ];
+  S.sheets.forEach((sheet, i) => {
+    const img = Kit.sheetImg(S, i, null, { alt: `${S.name} concept study, sheet ${i + 1}: ${sheet.title} (${sheet.revision}). Panels: ${Kit.PANEL_NAMES[i].join(', ')}. ${notes[i]}` });
+    $('sheets').append(el('figure', {}, [
+      el('a', { href: Kit.href(sheet.image), 'aria-label': `Open full-size sheet: ${sheet.title}` }, img),
+      el('figcaption', {}, [el('strong', { text: `${sheet.title} · ${sheet.revision}. ` }), notes[i], ' Concept illustration.'])
+    ]));
+  });
+
+  $('a1-common').textContent = A.agentA1;
+  $('a1-crops').append(
+    Kit.sheetImg(S, 1, 'bl', { alt: `${S.name} concept study, Conversation panel (${S.sheets[1].revision}): a white-and-blue mosaic humanoid with a leaf emblem on its chest talks with a woman beside a potted flower, under a Gothic arch.` }),
+    Kit.sheetImg(S, 3, 'tl', { alt: `${S.name} concept study, Facility panel (${S.sheets[3].revision}): a visitor in a mosaic jacket taps a kiosk reading Maker Services and Library with Browse, Book and Ask buttons.` })
+  );
+  $('a1-desc').textContent = content.agents;
+  $('guild-note').textContent = `${A.guildNote} Not depicted on the sheets.`;
+  A.guild.forEach((g) => $('guild').append(el('li', {}, [el('strong', { text: g.name }), ` · ${g.role}`])));
+
+  content.tradeoffs.forEach((t) => $('trade').append(el('dt', { text: t.label }), el('dd', { text: t.text })));
+  $('status').append(Kit.statusBlock(S));
+  Kit.mountNav($('nav'), S);
+  Kit.mountNav($('foot-nav'), S).removeAttribute('data-core');
+  $('imprint').textContent = `${A.by} · Style study ${S.number} of 30`;
+  Kit.notesDialog(S, content, $('notes-btn'));
+
+  // ---------- the window ----------
+  const NS = 'http://www.w3.org/2000/svg';
+  const svg = $('glass');
+  const add = (parent, tag, attrs) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); parent.append(n); return n; };
+  let seed = 15;
+  const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+  const hex2 = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+  const vary = (h, amt) => { const k = 1 + (rnd() - 0.5) * (amt || 0.28); const [r, g, b] = hex2(h); return `rgb(${Math.min(255, r * k) | 0},${Math.min(255, g * k) | 0},${Math.min(255, b * k) | 0})`; };
+  const LEAD = '#0d1a28';
+  const C = { cobalt: '#1a63c4', deep: '#123f86', pale: '#8fbde0', sky: '#b9d6ea', gold: '#e2b458', amber: '#d07c3c', emerald: '#2f7a46', leaf: '#4f9a4c', ivory: '#f1e2c4', ruby: '#a8323a', white: '#eef2f4' };
+
+  // shapes
+  const OUTER = 'M40 990 V400 A380 380 0 0 1 300 30 A380 380 0 0 1 560 400 V990 Z';
+  const lancet = (x0, x1, top, bottom) => { const w = x1 - x0, xm = (x0 + x1) / 2, apex = top - w * 0.866; return { d: `M${x0} ${bottom} V${top} A${w} ${w} 0 0 1 ${xm} ${apex} A${w} ${w} 0 0 1 ${x1} ${top} V${bottom} Z`, box: [x0, apex, x1, bottom] }; };
+  const ROSE = { cx: 300, cy: 245, r: 112 };
+  const L = lancet(64, 204, 520, 700), R = lancet(396, 536, 520, 700), M = lancet(216, 384, 520, 890);
+  const PANES = [
+    { id: 'project', label: 'Agentnagar', where: 'The rose', d: `M${ROSE.cx - ROSE.r} ${ROSE.cy} a${ROSE.r} ${ROSE.r} 0 1 0 ${ROSE.r * 2} 0 a${ROSE.r} ${ROSE.r} 0 1 0 ${-ROSE.r * 2} 0Z`, box: [188, 133, 412, 357], glow: C.gold, colour: roseColour },
+    { id: 'style', label: 'The style', where: 'Upper left lancet', d: L.d, box: L.box, glow: C.cobalt, colour: styleColour },
+    { id: 'views', label: 'The district', where: 'Centre lancet', d: M.d, box: M.box, glow: C.emerald, colour: districtColour },
+    { id: 'agents', label: 'Agents', where: 'Upper right lancet', d: R.d, box: R.box, glow: C.pale, colour: agentColour },
+    { id: 'tradeoffs', label: 'Trade-offs', where: 'Lower left lancet', d: 'M64 712 H204 V890 H64Z', box: [64, 712, 204, 890], glow: C.amber, colour: balanceColour },
+    { id: 'status', label: 'Status', where: 'Lower right lancet', d: 'M396 712 H536 V890 H396Z', box: [396, 712, 536, 890], glow: C.gold, colour: sealColour },
+    { id: 'nav', label: 'More styles', where: 'The sill', d: 'M64 906 H536 V968 H64Z', box: [64, 906, 536, 968], glow: C.ivory, colour: doorColour }
+  ];
+
+  // ---- colour functions: each pane is a picture made of cells ----
+  function roseColour(x, y) {
+    const dx = x - ROSE.cx, dy = y - ROSE.cy, d = Math.hypot(dx, dy), a = Math.atan2(dy, dx);
+    // central leaf emblem (A1's badge)
+    const lx = (dx * 0.8 + dy * 0.6), ly = (-dx * 0.6 + dy * 0.8);
+    if (d < 44) { return Math.abs(ly) < 26 * Math.sqrt(Math.max(0, 1 - (lx / 40) ** 2)) && Math.abs(ly) > 1.5 ? C.leaf : C.gold; }
+    if (d < 50) return C.ivory;
+    const petal = Math.cos(a * 8);
+    if (d < 88) return petal > 0.15 ? (d < 70 ? C.amber : C.gold) : C.cobalt;
+    return petal > 0.6 ? C.ruby : (Math.cos(a * 16) > 0.7 ? C.gold : C.deep);
+  }
+  function styleColour(x, y) {
+    const k = Math.floor((x + y * 0.8) / 34) % 4;
+    return [C.cobalt, C.gold, C.emerald, C.amber][(k + 4) % 4];
+  }
+  function districtColour(x, y) {
+    const [x0, y0, x1, y1] = M.box; const u = (x - x0) / (x1 - x0), v = (y - y0) / (y1 - y0);
+    if (Math.hypot(u - 0.66, (v - 0.1) * 3) < 0.16) return C.gold;           // sun
+    if (v < 0.17) return v < 0.1 ? C.pale : C.sky;                            // sky
+    if (u < 0.27 + 0.04 * Math.sin(v * 14)) return v > 0.23 && v < 0.27 ? C.ivory : C.cobalt; // river R1 + bridge B1
+    if (v > 0.23 && v < 0.27 && u < 0.4) return C.ivory;                       // bridge landing
+    if (u > 0.33 && u < 0.62 && v > 0.31 && v < 0.45) {                        // workshop W1 with saw-tooth
+      const bay = ((u - 0.33) / 0.29 * 3) % 1; return v < 0.31 + 0.05 * (1 - bay) ? C.gold : C.amber;
+    }
+    if (u > 0.68 && u < 0.97 && v > 0.29 && v < 0.45) return v < 0.35 ? C.pale : C.ivory; // library L1 vault
+    const tx = (u - 0.63) * (x1 - x0), ty = (v - 0.61) * (y1 - y0);
+    if (Math.hypot(tx, ty) < 46) return C.leaf;                                // tree T1 canopy
+    if (Math.hypot(tx, ty) < 60) return C.gold;                                // square
+    if (v > 0.83 && v < 0.89) return (u > 0.42 && u < 0.8) ? (v < 0.86 ? C.ivory : C.ruby) : C.ivory; // tram S1
+    if (v > 0.8 && v < 0.92) return '#7d8a96';                                 // track bed
+    return (Math.sin(u * 40) * Math.cos(v * 50) > 0.55) ? C.emerald : '#caa76b'; // paving + street trees
+  }
+  function agentColour(x, y) {
+    const [x0, y0, x1, y1] = R.box; const cx = (x0 + x1) / 2;
+    const hx = (x - cx) / 44, hy = (y - 540) / 54;
+    if (hx * hx + hy * hy < 1) {
+      if (Math.hypot(x - (cx + 40), y - 540) < 12) return C.gold;              // ear disc
+      if (Math.abs(x - cx) < 30 && y > 520 && y < 560) return Math.hypot(x - cx - 12, y - 535) < 6 || Math.hypot(x - cx + 12, y - 535) < 6 ? C.cobalt : '#dfe7ee';
+      return C.white;
+    }
+    if (Math.hypot(x - (cx + 40), y - 540) < 14) return C.gold;
+    if (y > 596 && Math.abs(x - cx) < 20 + (y - 596) * 0.9) {                  // shoulders
+      if (Math.hypot(x - cx, y - 650) < 16) return C.leaf;                      // leaf emblem
+      if (Math.hypot(x - cx, y - 650) < 22) return C.gold;
+      return (Math.floor((x - cx) / 18) + Math.floor(y / 18)) % 2 ? C.white : C.pale;
+    }
+    return y < 470 ? C.gold : C.deep;
+  }
+  function balanceColour(x, y) {
+    if (Math.abs(x - 134) < 5 && y > 740) return C.gold;                        // post
+    if (y > 752 && y < 762) return C.gold;                                       // beam
+    return x < 134 ? (y > 800 ? C.amber : '#b86a33') : (y > 800 ? C.deep : C.cobalt);
+  }
+  function sealColour(x, y) {
+    const d = Math.hypot(x - 466, y - 792);
+    if (d < 24) return C.ruby; if (d < 40) return C.gold;
+    if (y > 820 && Math.abs(x - 466) < 30 && Math.abs(x - 466) > 8) return C.amber;
+    return (Math.floor(x / 28) + Math.floor(y / 28)) % 2 ? C.emerald : '#276039';
+  }
+  function doorColour(x, y) {
+    for (const cx of [140, 300, 460]) { if (Math.abs(x - cx) < 30 && y > 918 - Math.max(0, 30 - Math.abs(x - cx)) * 0.2) return cx === 300 ? C.gold : C.ivory; }
+    return C.deep;
+  }
+  function decoColour(x, y) {
+    const r = rnd();
+    return r < 0.07 ? C.gold : r < 0.15 ? C.emerald : r < 0.19 ? C.ruby : r < 0.6 ? C.deep : '#16325e';
+  }
+
+  // ---- mosaic: jittered grid cut into quads and triangles, clipped to the pane ----
+  const defs = add(svg, 'defs', {});
+  defs.innerHTML = `<radialGradient id="shine" cx="40%" cy="30%" r="75%"><stop offset="0" stop-color="#fff6dc" stop-opacity=".35"/><stop offset=".6" stop-color="#fff6dc" stop-opacity=".05"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient>
+    <clipPath id="clip-outer"><path d="${OUTER}"/></clipPath>`;
+  function mosaic(parent, box, colourFn, step, clipId) {
+    const [x0, y0, x1, y1] = box;
+    const g = add(parent, 'g', { 'clip-path': `url(#${clipId})` });
+    const cols = Math.ceil((x1 - x0) / step) + 1, rows = Math.ceil((y1 - y0) / step) + 1;
+    const P = [];
+    for (let i = 0; i <= cols; i++) { P[i] = []; for (let j = 0; j <= rows; j++) { const edge = i === 0 || j === 0 || i === cols || j === rows; P[i][j] = [x0 + i * step + (edge ? 0 : (rnd() - 0.5) * step * 0.7), y0 + j * step + (edge ? 0 : (rnd() - 0.5) * step * 0.7)]; } }
+    const polys = [];
+    for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) {
+      const a = P[i][j], b = P[i + 1][j], c = P[i + 1][j + 1], d = P[i][j + 1];
+      const r = rnd();
+      if (r < 0.34) polys.push([a, b, c, d]);
+      else if (r < 0.67) polys.push([a, b, c], [a, c, d]);
+      else polys.push([a, b, d], [b, c, d]);
+    }
+    const frag = document.createDocumentFragment();
+    polys.forEach((p) => {
+      const cx = p.reduce((s, q) => s + q[0], 0) / p.length, cy = p.reduce((s, q) => s + q[1], 0) / p.length;
+      const n = document.createElementNS(NS, 'path');
+      n.setAttribute('d', 'M' + p.map((q) => q[0].toFixed(1) + ' ' + q[1].toFixed(1)).join('L') + 'Z');
+      n.setAttribute('fill', vary(colourFn(cx, cy)));
+      frag.append(n);
+    });
+    g.append(frag);
+    g.setAttribute('stroke', LEAD); g.setAttribute('stroke-width', '2.2'); g.setAttribute('stroke-linejoin', 'round');
+    return g;
+  }
+
+  // backing (lead) and decorative tracery
+  add(svg, 'path', { d: OUTER, fill: LEAD });
+  const deco = add(svg, 'g', { class: 'deco' });
+  mosaic(deco, [40, 30, 560, 990], decoColour, 30, 'clip-outer');
+
+  // panes
+  const paneEls = [];
+  PANES.forEach((p, idx) => {
+    add(defs, 'clipPath', { id: `clip-${p.id}` }).append((() => { const n = document.createElementNS(NS, 'path'); n.setAttribute('d', p.d); return n; })());
+    const g = add(svg, 'g', { class: 'pane', id: `pane-${p.id}`, tabindex: '0', role: 'button', 'aria-label': `${p.where}: ${p.label}`, 'aria-pressed': 'false', 'aria-controls': `sec-${p.id}` });
+    g.style.setProperty('--pane-glow', p.glow);
+    add(g, 'path', { d: p.d, fill: LEAD });
+    mosaic(g, p.box, p.colour, p.id === 'nav' ? 16 : p.id === 'project' ? 14 : 19, `clip-${p.id}`);
+    add(g, 'path', { d: p.d, fill: 'url(#shine)', 'pointer-events': 'none' });
+    add(g, 'path', { d: p.d, fill: 'none', stroke: LEAD, 'stroke-width': 8, class: 'pane-edge' });
+    paneEls.push(g);
+  });
+  // heavy leads that draw the pictures inside panes (the "cames")
+  const cames = add(svg, 'g', { fill: 'none', stroke: LEAD, 'stroke-width': 4, 'stroke-linejoin': 'round', 'pointer-events': 'none' });
+  const [mx0, my0, mx1, my1] = M.box, mw = mx1 - mx0, mh = my1 - my0;
+  const U = (u) => mx0 + u * mw, V = (v) => my0 + v * mh;
+  add(cames, 'path', { d: `M${U(0.27)} ${V(0.17)} ` + Array.from({ length: 21 }, (_, i) => { const v = 0.17 + i * 0.0415; return `L${U(0.27 + 0.04 * Math.sin(v * 14)).toFixed(1)} ${V(v).toFixed(1)}`; }).join(' ') });
+  add(cames, 'path', { d: `M${U(0)} ${V(0.23)} H${U(0.4)} M${U(0)} ${V(0.27)} H${U(0.4)} M${U(0.09)} ${V(0.27)} v10 M${U(0.19)} ${V(0.27)} v10` });
+  add(cames, 'path', { d: `M${U(0.33)} ${V(0.45)} V${V(0.36)} L${U(0.43)} ${V(0.31)} V${V(0.36)} L${U(0.52)} ${V(0.31)} V${V(0.36)} L${U(0.62)} ${V(0.31)} V${V(0.45)} Z` });
+  add(cames, 'path', { d: `M${U(0.68)} ${V(0.45)} V${V(0.35)} Q${U(0.825)} ${V(0.25)} ${U(0.97)} ${V(0.35)} V${V(0.45)} Z M${U(0.68)} ${V(0.35)} H${U(0.97)}` });
+  add(cames, 'circle', { cx: U(0.63), cy: V(0.61), r: 46 });
+  add(cames, 'circle', { cx: U(0.63), cy: V(0.61), r: 60, 'stroke-width': 2.5 });
+  add(cames, 'path', { d: `M${U(0.42)} ${V(0.83)} H${U(0.8)} V${V(0.89)} H${U(0.42)} Z` });
+  add(cames, 'circle', { cx: 300, cy: 245, r: 50 }); add(cames, 'circle', { cx: 300, cy: 245, r: 88, 'stroke-width': 3 });
+  add(cames, 'path', { d: 'M470 540 m-44 0 a44 54 0 1 0 88 0 a44 54 0 1 0 -88 0 M466 596 L420 700 M474 596 L520 700', 'stroke-width': 3.5 });
+  add(cames, 'path', { d: 'M100 760 H168 M134 740 V890 M100 760 L84 800 H116 Z M168 760 L152 800 H184 Z', 'stroke-width': 3 });
+  add(cames, 'circle', { cx: 466, cy: 792, r: 40, 'stroke-width': 3 });
+  [140, 300, 460].forEach((cx) => add(cames, 'path', { d: `M${cx - 30} 968 V930 Q${cx} 900 ${cx + 30} 930 V968`, 'stroke-width': 3 }));
+  // mullions, frame, tiled border
+  add(svg, 'path', { d: OUTER, fill: 'none', stroke: LEAD, 'stroke-width': 16, 'pointer-events': 'none' });
+  add(svg, 'path', { d: OUTER, fill: 'none', stroke: C.gold, 'stroke-width': 7, 'stroke-dasharray': '12 9', 'pointer-events': 'none', opacity: '.85' });
+  add(svg, 'path', { d: OUTER, fill: 'none', stroke: C.emerald, 'stroke-width': 7, 'stroke-dasharray': '9 12', 'stroke-dashoffset': '-12', 'pointer-events': 'none', opacity: '.85' });
+  add(svg, 'path', { d: 'M30 998 H570', stroke: '#1d3550', 'stroke-width': 10 });
+  // mask for the sweeping light
+  $('window').style.setProperty('--arch', `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 1000' preserveAspectRatio='none'><path d='${OUTER}'/></svg>`)}")`);
+
+  // ---------- selection ----------
+  const legend = $('legend');
+  const legendBtns = PANES.map((p, i) => {
+    const b = el('button', { type: 'button', 'aria-pressed': 'false', 'aria-controls': `sec-${p.id}`, text: p.label });
+    b.style.setProperty('--c', p.glow);
+    if (p.glow === C.emerald || p.glow === C.cobalt) b.style.setProperty('--fg', '#fff');
+    b.addEventListener('click', () => select(i, true));
+    legend.append(el('li', {}, b));
+    return b;
+  });
+  let current = 0;
+  function select(i, fromUser) {
+    current = (i + PANES.length) % PANES.length;
+    const p = PANES[current];
+    PANES.forEach((q, k) => {
+      const on = k === current;
+      paneEls[k].classList.toggle('lit', on);
+      paneEls[k].setAttribute('aria-pressed', String(on));
+      legendBtns[k].setAttribute('aria-pressed', String(on));
+      $(`sec-${q.id}`).hidden = !on;
+    });
+    document.documentElement.style.setProperty('--glow', p.glow);
+    $('prev-pane').textContent = `← ${PANES[(current + PANES.length - 1) % PANES.length].label}`;
+    $('next-pane').textContent = `${PANES[(current + 1) % PANES.length].label} →`;
+    if (fromUser) {
+      try { history.replaceState(null, '', `#${p.id}`); } catch (e) {}
+      const top = $('placard').getBoundingClientRect().top;
+      if (top > window.innerHeight * 0.6) $('placard').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    }
+  }
+  paneEls.forEach((g, i) => {
+    g.addEventListener('click', () => select(i, true));
+    g.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(i, true); }
+      else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); paneEls[(i + 1) % paneEls.length].focus(); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); paneEls[(i + paneEls.length - 1) % paneEls.length].focus(); }
+    });
+  });
+  $('prev-pane').addEventListener('click', () => select(current - 1, true));
+  $('next-pane').addEventListener('click', () => select(current + 1, true));
+  const fromHash = PANES.findIndex((p) => `#${p.id}` === location.hash);
+  select(fromHash >= 0 ? fromHash : 0, false);
+
+  // opening moment: the whole window glows once, then settles to the chosen pane
+  if (!reduced) {
+    svg.classList.add('intro');
+    setTimeout(() => svg.classList.remove('intro'), 1100);
+  }
+})();
+</script>
+</body>
+</html>

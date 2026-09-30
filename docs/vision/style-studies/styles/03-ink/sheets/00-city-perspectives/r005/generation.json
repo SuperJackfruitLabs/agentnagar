@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "de29c728e40015bc7acca40a42c81f59523f42458bdea0fe1bbd3ec280da42b8",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "f07a949cd597b9a3add1973f8abcab2728ffc1b0755f5958d93943beff89124f"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/03-ink/00-city-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/03-ink/00-city-perspectives.pass-4.png"
+  ],
+  "reference_images": [
+    "../r004/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

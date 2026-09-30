@@ -1,0 +1,6878 @@
+{
+  "constants": {
+    "BRIDGE_W": 2.0,
+    "DECK": 1.6,
+    "DOME_R": 4.5,
+    "HALL_H": 5.2,
+    "LIB_H": 8.0,
+    "LIB_PARAPET": 8.8,
+    "TOWER": 12,
+    "TOWER_BASE": 4,
+    "TOWER_STOREY": 3,
+    "TRAM_LEN": 21,
+    "WALL": 0.25
+  },
+  "notes": {
+    "anchor": "each sprite's anchors.json entry is the pixel where its origin point (x, z, y below, metres, Godot axes) lands; place the sprite at iso(origin) of where it goes",
+    "characters": "characters/*.png: 11 columns (walk x6, sit, idle x2, typing x2) x 8 rows (facing 0, 45, ... 315 clockwise from north) of 32 x 40 frames; the ground point is at (16, 34) in standing frames and (16, 32) in seated ones; 32 px to the top of the hair",
+    "corners": "corner/corner_low fill the WALL-square where two walls meet and stand on its centre; the same sprite serves every corner",
+    "cutaway": "open: hide the roof pieces (and dome) and swap the near (south and east) facade slices and corners for s_low/e_low/corner_low (a door_m for nothing); far walls stay",
+    "facades": "s_* slices look south: 1 m along x, outer face on the line z = Z, wall WALL m thick toward -z; origin at the slice's +x end on that line. e_* slices look east: 1 m along z, outer face on x = X, thickness toward -x; origin at the slice's +z end. The walls stand in the ring WALL deep outside the rooms: south and east slices on the ring's outer edge (z1 + WALL, x1 + WALL), north and west ones on the rooms' edge (z0, x0), seen from inside. Pairs _0/_1 are a 2 m bay in order of increasing x (s) or z (e); plain and banner are single metres; a doorway is door_l, one door_m a metre of its width (open where people walk) and door_r, its leaves folded in the reveals of door_l and door_r. Sort every slice at its origin.",
+    "night": "every sprite has a *_night.png twin mapped through the palette (windows and lamps light up)",
+    "projection": "2:1 isometric: one metre east (+16, +8) px, south (-16, +8), up (0, -16); rendered orthographically at 30 deg elevation and 45 deg yaw with the model squashed vertically by sqrt(2/3) so a metre up is 16 px, as iso() in the pack",
+    "roofs": "roof pieces have their eave at y = 0: place at iso(origin) lifted by the wall height and sort them all at the wall ring's south-east corner, after the wall slices. Hall: one sawtooth tooth per 4 m of x; for each z cell k use roof_n (k = z0), roof_s (k = z1 - 1) or roof_mid at iso(x0 + 4t + 4, k + 1). Library: roof tiles at every cell centre, the dome on its drum centre.",
+    "seats": "scenery/seats/<kind>_<facing>.png are a seat's whole furniture, its sitter's place on the origin; a workstation's `display` is its monitor's screen (x, z, y before the turn), its width and height, and its `facing` relative to the seat's (180: back at the sitter), which the pack lights over the sprite",
+    "slices": "tram back_NN/front_NN and bridge pieces are 1 m slices along x, each sorted at its own origin: the tram's back (far side, floor, seats, roof) at z - 1.3, its front (near side, windows open) at z + 1.3, riders between; tram/door.png is a door leaf standing on its origin; bridge *_back (deck, north parapet) sort at z - width/2, *_front (south parapet, arches) at z + width/2",
+    "stacks": "tower_base/mid/top share the tower's south-east corner: lift tower_mid by base + k*storey and tower_top by base + mids*storey metres",
+    "things": "the things to use (things.py): a sprite's band_shapes are its shapes 0.25-1.9 m up about its ground point before its turn by `facing` (the collision audit's reading; render.py checks the model against them); a display's `display` is its face's middle (x, z, y) before the turn and its width and height; perch_seat_<facing> is the seat stone a perch's sitter sits on, at the sit anchor; meadow/<clump>_<frame> are a clump at rest (0), pushed (1) and swinging back (2); fountain_back (its far rim) and fountain_front (the rest) are one render cut in two, each placed and sorted at its own origin about the placement's point",
+    "tiles": "ground/* and library/roof.png are 32 x 16 diamonds, origin at the cell centre"
+  },
+  "sprites": {
+    "buildings/blocks/house_a.png": {
+      "band": [
+        -5.05,
+        0.1,
+        -5.05,
+        0.05
+      ],
+      "cells": {},
+      "footprint": [
+        5,
+        5
+      ],
+      "model": "house_a",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        168,
+        199
+      ],
+      "storeys": 2
+    },
+    "buildings/blocks/house_b.png": {
+      "band": [
+        -5.05,
+        0.1,
+        -5.05,
+        0.05
+      ],
+      "cells": {},
+      "footprint": [
+        5,
+        5
+      ],
+      "model": "house_b",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        168,
+        248
+      ],
+      "storeys": 3
+    },
+    "buildings/blocks/house_c.png": {
+      "band": [
+        -5.05,
+        0.1,
+        -5.05,
+        0.05
+      ],
+      "cells": {},
+      "footprint": [
+        5,
+        5
+      ],
+      "model": "house_c",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        168,
+        199
+      ],
+      "storeys": 2
+    },
+    "buildings/blocks/shop_a.png": {
+      "band": [
+        -5.05,
+        0.1,
+        -4.05,
+        0.05
+      ],
+      "cells": {},
+      "footprint": [
+        5,
+        4
+      ],
+      "model": "shop_a",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        166,
+        191
+      ],
+      "storeys": 2
+    },
+    "buildings/blocks/tower_base.png": {
+      "band": [
+        -12.3,
+        0.0,
+        -12.3,
+        0.0
+      ],
+      "base": 4,
+      "cells": {
+        "y": [
+          0,
+          3
+        ]
+      },
+      "footprint": [
+        12,
+        12
+      ],
+      "model": "tower",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        396,
+        165
+      ],
+      "storey": 3
+    },
+    "buildings/blocks/tower_mid.png": {
+      "band": [
+        -12.3,
+        0.0,
+        -12.3,
+        0.0
+      ],
+      "base": 4,
+      "cells": {
+        "y": [
+          7,
+          9
+        ]
+      },
+      "footprint": [
+        12,
+        12
+      ],
+      "model": "tower",
+      "origin": [
+        0,
+        0,
+        7
+      ],
+      "size": [
+        392,
+        146
+      ],
+      "storey": 3
+    },
+    "buildings/blocks/tower_top.png": {
+      "band": [
+        -12.3,
+        0.0,
+        -12.3,
+        0.0
+      ],
+      "base": 4,
+      "cells": {
+        "y": [
+          16,
+          99
+        ]
+      },
+      "footprint": [
+        12,
+        12
+      ],
+      "model": "tower",
+      "origin": [
+        0,
+        0,
+        16
+      ],
+      "size": [
+        392,
+        212
+      ],
+      "storey": 3
+    },
+    "buildings/hall/corner.png": {
+      "cells": {},
+      "model": "hall_corner",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        16,
+        91
+      ]
+    },
+    "buildings/hall/corner_low.png": {
+      "cells": {},
+      "model": "hall_corner_low",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        17
+      ]
+    },
+    "buildings/hall/e_door_l.png": {
+      "cells": {
+        "z": [
+          -6,
+          -6
+        ]
+      },
+      "model": "hall_facade_door_90",
+      "origin": [
+        0,
+        -5,
+        0
+      ],
+      "size": [
+        22,
+        93
+      ]
+    },
+    "buildings/hall/e_door_m.png": {
+      "cells": {
+        "z": [
+          -4,
+          -4
+        ]
+      },
+      "model": "hall_facade_door_90",
+      "origin": [
+        0,
+        -3,
+        0
+      ],
+      "size": [
+        33,
+        101
+      ]
+    },
+    "buildings/hall/e_door_r.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "hall_facade_door_90",
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        32,
+        95
+      ]
+    },
+    "buildings/hall/e_low.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "hall_facade_low_90",
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        19,
+        23
+      ]
+    },
+    "buildings/hall/e_plain.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "hall_facade_plain_90",
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        21,
+        95
+      ]
+    },
+    "buildings/hall/e_wall_0.png": {
+      "cells": {
+        "z": [
+          -4,
+          -4
+        ]
+      },
+      "model": "hall_facade_wall_90",
+      "origin": [
+        0,
+        -3,
+        0
+      ],
+      "size": [
+        21,
+        95
+      ]
+    },
+    "buildings/hall/e_wall_1.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "hall_facade_wall_90",
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        21,
+        95
+      ]
+    },
+    "buildings/hall/roof_mid.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "hall_roof",
+      "origin": [
+        4,
+        -2,
+        0
+      ],
+      "size": [
+        88,
+        52
+      ]
+    },
+    "buildings/hall/roof_n.png": {
+      "cells": {
+        "z": [
+          -7,
+          -6
+        ]
+      },
+      "model": "hall_roof",
+      "origin": [
+        4,
+        -5,
+        0
+      ],
+      "size": [
+        100,
+        58
+      ]
+    },
+    "buildings/hall/roof_s.png": {
+      "cells": {
+        "z": [
+          -1,
+          0
+        ]
+      },
+      "model": "hall_roof",
+      "origin": [
+        4,
+        0,
+        0
+      ],
+      "size": [
+        102,
+        54
+      ]
+    },
+    "buildings/hall/s_door_l.png": {
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "model": "hall_facade_door_0",
+      "origin": [
+        3,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        93
+      ]
+    },
+    "buildings/hall/s_door_m.png": {
+      "cells": {
+        "x": [
+          3,
+          3
+        ]
+      },
+      "model": "hall_facade_door_0",
+      "origin": [
+        4,
+        0,
+        0
+      ],
+      "size": [
+        34,
+        101
+      ]
+    },
+    "buildings/hall/s_door_r.png": {
+      "cells": {
+        "x": [
+          5,
+          5
+        ]
+      },
+      "model": "hall_facade_door_0",
+      "origin": [
+        6,
+        0,
+        0
+      ],
+      "size": [
+        32,
+        95
+      ]
+    },
+    "buildings/hall/s_low.png": {
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "model": "hall_facade_low_0",
+      "origin": [
+        3,
+        0,
+        0
+      ],
+      "size": [
+        19,
+        23
+      ]
+    },
+    "buildings/hall/s_plain.png": {
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "model": "hall_facade_plain_0",
+      "origin": [
+        3,
+        0,
+        0
+      ],
+      "size": [
+        21,
+        95
+      ]
+    },
+    "buildings/hall/s_wall_0.png": {
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "model": "hall_facade_wall_0",
+      "origin": [
+        3,
+        0,
+        0
+      ],
+      "size": [
+        21,
+        95
+      ]
+    },
+    "buildings/hall/s_wall_1.png": {
+      "cells": {
+        "x": [
+          3,
+          3
+        ]
+      },
+      "model": "hall_facade_wall_0",
+      "origin": [
+        4,
+        0,
+        0
+      ],
+      "size": [
+        21,
+        95
+      ]
+    },
+    "buildings/library/corner.png": {
+      "cells": {},
+      "model": "lib_corner",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        26,
+        149
+      ]
+    },
+    "buildings/library/corner_low.png": {
+      "cells": {},
+      "model": "lib_corner_low",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        20
+      ]
+    },
+    "buildings/library/dome.png": {
+      "cells": {},
+      "model": "lib_dome",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        220,
+        181
+      ]
+    },
+    "buildings/library/e_banner.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "lib_facade_banner_90",
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        24,
+        155
+      ]
+    },
+    "buildings/library/e_door_l.png": {
+      "cells": {
+        "z": [
+          -6,
+          -6
+        ]
+      },
+      "model": "lib_facade_door_90",
+      "origin": [
+        0,
+        -5,
+        0
+      ],
+      "size": [
+        26,
+        152
+      ]
+    },
+    "buildings/library/e_door_m.png": {
+      "cells": {
+        "z": [
+          -4,
+          -4
+        ]
+      },
+      "model": "lib_facade_door_90",
+      "origin": [
+        0,
+        -3,
+        0
+      ],
+      "size": [
+        31,
+        159
+      ]
+    },
+    "buildings/library/e_door_r.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "lib_facade_door_90",
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        31,
+        155
+      ]
+    },
+    "buildings/library/e_low.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "lib_facade_low_90",
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        20,
+        26
+      ]
+    },
+    "buildings/library/e_plain.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "lib_facade_plain_90",
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        24,
+        155
+      ]
+    },
+    "buildings/library/e_wall_0.png": {
+      "cells": {
+        "z": [
+          -4,
+          -4
+        ]
+      },
+      "model": "lib_facade_wall_90",
+      "origin": [
+        0,
+        -3,
+        0
+      ],
+      "size": [
+        24,
+        155
+      ]
+    },
+    "buildings/library/e_wall_1.png": {
+      "cells": {
+        "z": [
+          -3,
+          -3
+        ]
+      },
+      "model": "lib_facade_wall_90",
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        24,
+        155
+      ]
+    },
+    "buildings/library/roof.png": {
+      "cells": {},
+      "model": "lib_roof",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "buildings/library/s_banner.png": {
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "model": "lib_facade_banner_0",
+      "origin": [
+        3,
+        0,
+        0
+      ],
+      "size": [
+        24,
+        155
+      ]
+    },
+    "buildings/library/s_door_l.png": {
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "model": "lib_facade_door_0",
+      "origin": [
+        3,
+        0,
+        0
+      ],
+      "size": [
+        26,
+        152
+      ]
+    },
+    "buildings/library/s_door_m.png": {
+      "cells": {
+        "x": [
+          3,
+          3
+        ]
+      },
+      "model": "lib_facade_door_0",
+      "origin": [
+        4,
+        0,
+        0
+      ],
+      "size": [
+        31,
+        159
+      ]
+    },
+    "buildings/library/s_door_r.png": {
+      "cells": {
+        "x": [
+          5,
+          5
+        ]
+      },
+      "model": "lib_facade_door_0",
+      "origin": [
+        6,
+        0,
+        0
+      ],
+      "size": [
+        31,
+        155
+      ]
+    },
+    "buildings/library/s_low.png": {
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "model": "lib_facade_low_0",
+      "origin": [
+        3,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        26
+      ]
+    },
+    "buildings/library/s_plain.png": {
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "model": "lib_facade_plain_0",
+      "origin": [
+        3,
+        0,
+        0
+      ],
+      "size": [
+        24,
+        155
+      ]
+    },
+    "buildings/library/s_wall_0.png": {
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "model": "lib_facade_wall_0",
+      "origin": [
+        3,
+        0,
+        0
+      ],
+      "size": [
+        24,
+        155
+      ]
+    },
+    "buildings/library/s_wall_1.png": {
+      "cells": {
+        "x": [
+          3,
+          3
+        ]
+      },
+      "model": "lib_facade_wall_0",
+      "origin": [
+        4,
+        0,
+        0
+      ],
+      "size": [
+        24,
+        155
+      ]
+    },
+    "characters/human_0_0.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_0_0",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_0_1.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_0_1",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_0_2.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_0_2",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_0_3.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_0_3",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_1_0.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_1_0",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_1_1.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_1_1",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_1_2.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_1_2",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_1_3.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_1_3",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_2_0.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_2_0",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_2_1.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_2_1",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_2_2.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_2_2",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_2_3.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_2_3",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_3_0.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_3_0",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_3_1.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_3_1",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_3_2.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_3_2",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_3_3.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_3_3",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_4_0.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_4_0",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_4_1.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_4_1",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_4_2.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_4_2",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_4_3.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_4_3",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_5_0.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_5_0",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_5_1.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_5_1",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_5_2.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_5_2",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_5_3.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_5_3",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_6_0.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_6_0",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_6_1.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_6_1",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_6_2.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_6_2",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_6_3.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_6_3",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_7_0.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_7_0",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_7_1.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_7_1",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_7_2.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_7_2",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_7_3.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_7_3",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/human_muted.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_human_muted",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/robot_city.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_robot_city",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/robot_guild.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_robot_guild",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "characters/robot_personal.png": {
+      "frame": [
+        32,
+        40
+      ],
+      "grid": [
+        11,
+        8
+      ],
+      "model": "figure_robot_personal",
+      "sheet": {
+        "cell": [
+          32,
+          40
+        ],
+        "columns": {
+          "idle": [
+            7,
+            2
+          ],
+          "sit": [
+            6,
+            1
+          ],
+          "typing": [
+            9,
+            2
+          ],
+          "walk": [
+            0,
+            6
+          ]
+        },
+        "directions": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          225,
+          270,
+          315
+        ],
+        "feet": [
+          16,
+          34
+        ],
+        "seat": [
+          16,
+          32
+        ]
+      },
+      "size": [
+        352,
+        320
+      ]
+    },
+    "ground/crossing_x.png": {
+      "cells": {},
+      "model": "tile_crossing_x",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/crossing_z.png": {
+      "cells": {},
+      "model": "tile_crossing_z",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/floor_carpet.png": {
+      "cells": {},
+      "model": "tile_floor_carpet",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/floor_stone.png": {
+      "cells": {},
+      "model": "tile_floor_stone",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/floor_wood.png": {
+      "cells": {},
+      "model": "tile_floor_wood",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/grass_0.png": {
+      "cells": {},
+      "model": "tile_grass_0",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/grass_1.png": {
+      "cells": {},
+      "model": "tile_grass_1",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/kerb_e.png": {
+      "cells": {},
+      "model": "tile_kerb_e",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/kerb_n.png": {
+      "cells": {},
+      "model": "tile_kerb_n",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/kerb_s.png": {
+      "cells": {},
+      "model": "tile_kerb_s",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/kerb_w.png": {
+      "cells": {},
+      "model": "tile_kerb_w",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/path.png": {
+      "cells": {},
+      "model": "tile_path",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/paving_0.png": {
+      "cells": {},
+      "model": "tile_paving_0",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/paving_1.png": {
+      "cells": {},
+      "model": "tile_paving_1",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/paving_2.png": {
+      "cells": {},
+      "model": "tile_paving_2",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/paving_3.png": {
+      "cells": {},
+      "model": "tile_paving_3",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/quay_e.png": {
+      "cells": {},
+      "model": "tile_quay_e",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/quay_w.png": {
+      "cells": {},
+      "model": "tile_quay_w",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/street.png": {
+      "cells": {},
+      "model": "tile_street",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/street_dash_x.png": {
+      "cells": {},
+      "model": "tile_street_dash_x",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/street_dash_z.png": {
+      "cells": {},
+      "model": "tile_street_dash_z",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/track_x.png": {
+      "cells": {},
+      "model": "tile_track_x",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/track_x_n.png": {
+      "cells": {},
+      "model": "tile_track_x_n",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/track_x_s.png": {
+      "cells": {},
+      "model": "tile_track_x_s",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/track_z.png": {
+      "cells": {},
+      "model": "tile_track_z",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/track_z_e.png": {
+      "cells": {},
+      "model": "tile_track_z_e",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/track_z_w.png": {
+      "cells": {},
+      "model": "tile_track_z_w",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/water_0.png": {
+      "cells": {},
+      "model": "tile_water_0",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "ground/water_1.png": {
+      "cells": {},
+      "model": "tile_water_1",
+      "origin": [
+        0.5,
+        0.5,
+        0
+      ],
+      "size": [
+        32,
+        16
+      ]
+    },
+    "scenery/bench_x.png": {
+      "cells": {},
+      "model": "bench_x",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        38,
+        34
+      ]
+    },
+    "scenery/bench_z.png": {
+      "cells": {},
+      "model": "bench_z",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        38,
+        34
+      ]
+    },
+    "scenery/bollard.png": {
+      "cells": {},
+      "model": "bollard",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        17
+      ]
+    },
+    "scenery/bookshelf_0.png": {
+      "cells": {},
+      "facing": 0,
+      "model": "bookshelf_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        44,
+        58
+      ]
+    },
+    "scenery/bookshelf_180.png": {
+      "cells": {},
+      "facing": 180,
+      "model": "bookshelf_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        44,
+        58
+      ]
+    },
+    "scenery/bookshelf_270.png": {
+      "cells": {},
+      "facing": 270,
+      "model": "bookshelf_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        44,
+        58
+      ]
+    },
+    "scenery/bookshelf_90.png": {
+      "cells": {},
+      "facing": 90,
+      "model": "bookshelf_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        44,
+        58
+      ]
+    },
+    "scenery/bridge/end_e_0_back.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          12,
+          12
+        ],
+        "z": [
+          -9,
+          0
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        13,
+        -2.0,
+        0
+      ],
+      "size": [
+        65,
+        64
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/end_e_0_front.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          12,
+          12
+        ],
+        "z": [
+          1,
+          9
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        13,
+        2.0,
+        0
+      ],
+      "size": [
+        38,
+        50
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/end_e_1_back.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          13,
+          13
+        ],
+        "z": [
+          -9,
+          0
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        14,
+        -2.0,
+        0
+      ],
+      "size": [
+        65,
+        46
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/end_e_1_front.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          13,
+          13
+        ],
+        "z": [
+          1,
+          9
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        14,
+        2.0,
+        0
+      ],
+      "size": [
+        32,
+        30
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/end_w_0_back.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          -2,
+          -2
+        ],
+        "z": [
+          -9,
+          0
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        -1,
+        -2.0,
+        0
+      ],
+      "size": [
+        58,
+        28
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/end_w_0_front.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          -2,
+          -2
+        ],
+        "z": [
+          1,
+          9
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        -1,
+        2.0,
+        0
+      ],
+      "size": [
+        28,
+        21
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/end_w_1_back.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          -1,
+          -1
+        ],
+        "z": [
+          -9,
+          0
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        0,
+        -2.0,
+        0
+      ],
+      "size": [
+        51,
+        24
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/end_w_1_front.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          -1,
+          -1
+        ],
+        "z": [
+          1,
+          9
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        0,
+        2.0,
+        0
+      ],
+      "size": [
+        12,
+        31
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/span_0_back.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          4,
+          4
+        ],
+        "z": [
+          -9,
+          0
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        5,
+        -2.0,
+        0
+      ],
+      "size": [
+        68,
+        52
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/span_0_front.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          4,
+          4
+        ],
+        "z": [
+          1,
+          9
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        5,
+        2.0,
+        0
+      ],
+      "size": [
+        38,
+        55
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/span_1_back.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          5,
+          5
+        ],
+        "z": [
+          -9,
+          0
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        6,
+        -2.0,
+        0
+      ],
+      "size": [
+        68,
+        51
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/span_1_front.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          5,
+          5
+        ],
+        "z": [
+          1,
+          9
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        6,
+        2.0,
+        0
+      ],
+      "size": [
+        22,
+        32
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/span_2_back.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          6,
+          6
+        ],
+        "z": [
+          -9,
+          0
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        7,
+        -2.0,
+        0
+      ],
+      "size": [
+        68,
+        51
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/span_2_front.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          6,
+          6
+        ],
+        "z": [
+          1,
+          9
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        7,
+        2.0,
+        0
+      ],
+      "size": [
+        22,
+        32
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/span_3_back.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          7,
+          7
+        ],
+        "z": [
+          -9,
+          0
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        8,
+        -2.0,
+        0
+      ],
+      "size": [
+        65,
+        51
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/bridge/span_3_front.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          7,
+          7
+        ],
+        "z": [
+          1,
+          9
+        ]
+      },
+      "deck": 1.6,
+      "model": "bridge",
+      "origin": [
+        8,
+        2.0,
+        0
+      ],
+      "size": [
+        22,
+        53
+      ],
+      "span": 4,
+      "width": 4.0
+    },
+    "scenery/cafe_set.png": {
+      "cells": {},
+      "model": "cafe_set",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        38,
+        33
+      ]
+    },
+    "scenery/cafe_table.png": {
+      "cells": {},
+      "model": "cafe_table",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        24,
+        23
+      ]
+    },
+    "scenery/flowerbed_0.png": {
+      "cells": {},
+      "facing": 0,
+      "model": "flowerbed_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        76,
+        43
+      ]
+    },
+    "scenery/flowerbed_90.png": {
+      "cells": {},
+      "facing": 90,
+      "model": "flowerbed_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        76,
+        43
+      ]
+    },
+    "scenery/fountain_back.png": {
+      "band_shapes": [
+        [
+          "disc",
+          1.5,
+          1.5,
+          1.5
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "fountain",
+      "origin": [
+        -1.5,
+        -1.5,
+        0
+      ],
+      "size": [
+        70,
+        18
+      ]
+    },
+    "scenery/fountain_front.png": {
+      "band_shapes": [
+        [
+          "disc",
+          1.5,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "fountain",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        70,
+        49
+      ]
+    },
+    "scenery/garden_gate_x.png": {
+      "cells": {},
+      "model": "garden_gate_x",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        38,
+        42
+      ]
+    },
+    "scenery/garden_gate_z.png": {
+      "cells": {},
+      "model": "garden_gate_z",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        38,
+        42
+      ]
+    },
+    "scenery/garden_wall_x.png": {
+      "cells": {},
+      "model": "garden_wall_x",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        29
+      ]
+    },
+    "scenery/garden_wall_z.png": {
+      "cells": {},
+      "model": "garden_wall_z",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        29
+      ]
+    },
+    "scenery/kiosk_0.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.405,
+          0.4,
+          -0.25,
+          0.25
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.245,
+          1.3
+        ],
+        "size": [
+          0.6,
+          0.8
+        ]
+      },
+      "facing": 0,
+      "model": "kiosk_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        42
+      ]
+    },
+    "scenery/kiosk_180.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.4,
+          0.405,
+          -0.25,
+          0.25
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.245,
+          1.3
+        ],
+        "size": [
+          0.6,
+          0.8
+        ]
+      },
+      "facing": 180,
+      "model": "kiosk_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        42
+      ]
+    },
+    "scenery/kiosk_270.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.4,
+          0.405,
+          -0.25,
+          0.25
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.245,
+          1.3
+        ],
+        "size": [
+          0.6,
+          0.8
+        ]
+      },
+      "facing": 270,
+      "model": "kiosk_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        42
+      ]
+    },
+    "scenery/kiosk_90.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.405,
+          0.4,
+          -0.25,
+          0.25
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.245,
+          1.3
+        ],
+        "size": [
+          0.6,
+          0.8
+        ]
+      },
+      "facing": 90,
+      "model": "kiosk_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        42
+      ]
+    },
+    "scenery/lamp.png": {
+      "cells": {},
+      "model": "lamp",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        14,
+        66
+      ]
+    },
+    "scenery/low_wall_0.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -1.5,
+          1.5,
+          -0.155,
+          0.15
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "low_wall_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        54,
+        35
+      ]
+    },
+    "scenery/low_wall_180.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -1.5,
+          1.5,
+          -0.15,
+          0.155
+        ]
+      ],
+      "cells": {},
+      "facing": 180,
+      "model": "low_wall_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        54,
+        35
+      ]
+    },
+    "scenery/low_wall_270.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -1.5,
+          1.5,
+          -0.155,
+          0.15
+        ]
+      ],
+      "cells": {},
+      "facing": 270,
+      "model": "low_wall_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        54,
+        35
+      ]
+    },
+    "scenery/low_wall_90.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -1.5,
+          1.5,
+          -0.15,
+          0.155
+        ]
+      ],
+      "cells": {},
+      "facing": 90,
+      "model": "low_wall_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        54,
+        35
+      ]
+    },
+    "scenery/meadow/flowers_0.png": {
+      "band_shapes": [
+        [
+          "disc",
+          0.1695,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "meadow_flowers_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rustle": 0,
+      "size": [
+        7,
+        17
+      ]
+    },
+    "scenery/meadow/flowers_1.png": {
+      "band_shapes": [
+        [
+          "disc",
+          0.2432,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "meadow_flowers_1",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rustle": 1,
+      "size": [
+        7,
+        16
+      ]
+    },
+    "scenery/meadow/flowers_2.png": {
+      "band_shapes": [
+        [
+          "disc",
+          0.2084,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "meadow_flowers_2",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rustle": 2,
+      "size": [
+        7,
+        17
+      ]
+    },
+    "scenery/meadow/grass_a_0.png": {
+      "band_shapes": [
+        [
+          "disc",
+          0.1767,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "meadow_grass_a_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rustle": 0,
+      "size": [
+        6,
+        14
+      ]
+    },
+    "scenery/meadow/grass_a_1.png": {
+      "band_shapes": [
+        [
+          "disc",
+          0.2474,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "meadow_grass_a_1",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rustle": 1,
+      "size": [
+        7,
+        15
+      ]
+    },
+    "scenery/meadow/grass_a_2.png": {
+      "band_shapes": [
+        [
+          "disc",
+          0.2118,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "meadow_grass_a_2",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rustle": 2,
+      "size": [
+        7,
+        16
+      ]
+    },
+    "scenery/meadow/grass_b_0.png": {
+      "band_shapes": [
+        [
+          "disc",
+          0.1834,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "meadow_grass_b_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rustle": 0,
+      "size": [
+        9,
+        14
+      ]
+    },
+    "scenery/meadow/grass_b_1.png": {
+      "band_shapes": [
+        [
+          "disc",
+          0.2823,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "meadow_grass_b_1",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rustle": 1,
+      "size": [
+        9,
+        15
+      ]
+    },
+    "scenery/meadow/grass_b_2.png": {
+      "band_shapes": [
+        [
+          "disc",
+          0.212,
+          0.0,
+          0.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "meadow_grass_b_2",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rustle": 2,
+      "size": [
+        7,
+        14
+      ]
+    },
+    "scenery/noticeboard_0.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.655,
+          0.645,
+          -0.155,
+          0.145
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.05,
+          1.3
+        ],
+        "size": [
+          0.94,
+          0.8
+        ]
+      },
+      "facing": 0,
+      "model": "noticeboard_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        34,
+        54
+      ]
+    },
+    "scenery/noticeboard_180.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.645,
+          0.655,
+          -0.145,
+          0.155
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.05,
+          1.3
+        ],
+        "size": [
+          0.94,
+          0.8
+        ]
+      },
+      "facing": 180,
+      "model": "noticeboard_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        34,
+        54
+      ]
+    },
+    "scenery/noticeboard_270.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.645,
+          0.655,
+          -0.155,
+          0.145
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.05,
+          1.3
+        ],
+        "size": [
+          0.94,
+          0.8
+        ]
+      },
+      "facing": 270,
+      "model": "noticeboard_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        34,
+        54
+      ]
+    },
+    "scenery/noticeboard_90.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.655,
+          0.645,
+          -0.145,
+          0.155
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.05,
+          1.3
+        ],
+        "size": [
+          0.94,
+          0.8
+        ]
+      },
+      "facing": 90,
+      "model": "noticeboard_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        34,
+        54
+      ]
+    },
+    "scenery/palm_short.png": {
+      "cells": {},
+      "model": "palm_short",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        116,
+        92
+      ]
+    },
+    "scenery/palm_tall.png": {
+      "cells": {},
+      "model": "palm_tall",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        128,
+        124
+      ]
+    },
+    "scenery/perch_seat_0.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.14,
+          0.14,
+          -0.14,
+          0.4
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "perch_seat_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        15,
+        15
+      ]
+    },
+    "scenery/perch_seat_135.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.14,
+          0.14,
+          -0.14,
+          0.4
+        ]
+      ],
+      "cells": {},
+      "facing": 135,
+      "model": "perch_seat_135",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        15
+      ]
+    },
+    "scenery/perch_seat_180.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.14,
+          0.14,
+          -0.14,
+          0.4
+        ]
+      ],
+      "cells": {},
+      "facing": 180,
+      "model": "perch_seat_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        15,
+        16
+      ]
+    },
+    "scenery/perch_seat_225.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.14,
+          0.14,
+          -0.14,
+          0.4
+        ]
+      ],
+      "cells": {},
+      "facing": 225,
+      "model": "perch_seat_225",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        14,
+        12
+      ]
+    },
+    "scenery/perch_seat_270.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.14,
+          0.14,
+          -0.14,
+          0.4
+        ]
+      ],
+      "cells": {},
+      "facing": 270,
+      "model": "perch_seat_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        15,
+        15
+      ]
+    },
+    "scenery/perch_seat_315.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.14,
+          0.14,
+          -0.14,
+          0.4
+        ]
+      ],
+      "cells": {},
+      "facing": 315,
+      "model": "perch_seat_315",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        16
+      ]
+    },
+    "scenery/perch_seat_45.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.14,
+          0.14,
+          -0.14,
+          0.4
+        ]
+      ],
+      "cells": {},
+      "facing": 45,
+      "model": "perch_seat_45",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        14,
+        12
+      ]
+    },
+    "scenery/perch_seat_90.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.14,
+          0.14,
+          -0.14,
+          0.4
+        ]
+      ],
+      "cells": {},
+      "facing": 90,
+      "model": "perch_seat_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        15,
+        16
+      ]
+    },
+    "scenery/planter.png": {
+      "cells": {},
+      "model": "planter",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        44,
+        35
+      ]
+    },
+    "scenery/planter_pot.png": {
+      "cells": {},
+      "model": "planter_pot",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        42,
+        28
+      ]
+    },
+    "scenery/plaque_0.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.405,
+          0.395,
+          -0.155,
+          0.15
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.12,
+          0.975
+        ],
+        "size": [
+          0.48,
+          0.34
+        ]
+      },
+      "facing": 0,
+      "model": "plaque_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        29
+      ]
+    },
+    "scenery/plaque_180.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.395,
+          0.405,
+          -0.15,
+          0.155
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.12,
+          0.975
+        ],
+        "size": [
+          0.48,
+          0.34
+        ]
+      },
+      "facing": 180,
+      "model": "plaque_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        29
+      ]
+    },
+    "scenery/plaque_270.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.395,
+          0.405,
+          -0.155,
+          0.15
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.12,
+          0.975
+        ],
+        "size": [
+          0.48,
+          0.34
+        ]
+      },
+      "facing": 270,
+      "model": "plaque_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        29
+      ]
+    },
+    "scenery/plaque_90.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -0.405,
+          0.395,
+          -0.15,
+          0.155
+        ]
+      ],
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.12,
+          0.975
+        ],
+        "size": [
+          0.48,
+          0.34
+        ]
+      },
+      "facing": 90,
+      "model": "plaque_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        29
+      ]
+    },
+    "scenery/railing_post.png": {
+      "cells": {},
+      "model": "railing_post",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        21
+      ]
+    },
+    "scenery/railing_x.png": {
+      "cells": {},
+      "model": "railing_x",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        27
+      ]
+    },
+    "scenery/railing_z.png": {
+      "cells": {},
+      "model": "railing_z",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        27
+      ]
+    },
+    "scenery/seats/bench_0.png": {
+      "cells": {},
+      "facing": 0,
+      "model": "seat_bench_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        37,
+        30
+      ]
+    },
+    "scenery/seats/bench_108.png": {
+      "cells": {},
+      "facing": 108,
+      "model": "seat_bench_108",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        41,
+        31
+      ]
+    },
+    "scenery/seats/bench_135.png": {
+      "cells": {},
+      "facing": 135,
+      "model": "seat_bench_135",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        38,
+        24
+      ]
+    },
+    "scenery/seats/bench_144.png": {
+      "cells": {},
+      "facing": 144,
+      "model": "seat_bench_144",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        40,
+        27
+      ]
+    },
+    "scenery/seats/bench_180.png": {
+      "cells": {},
+      "facing": 180,
+      "model": "seat_bench_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        37,
+        34
+      ]
+    },
+    "scenery/seats/bench_216.png": {
+      "cells": {},
+      "facing": 216,
+      "model": "seat_bench_216",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        21,
+        36
+      ]
+    },
+    "scenery/seats/bench_225.png": {
+      "cells": {},
+      "facing": 225,
+      "model": "seat_bench_225",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        16,
+        35
+      ]
+    },
+    "scenery/seats/bench_252.png": {
+      "cells": {},
+      "facing": 252,
+      "model": "seat_bench_252",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        30,
+        34
+      ]
+    },
+    "scenery/seats/bench_270.png": {
+      "cells": {},
+      "facing": 270,
+      "model": "seat_bench_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        37,
+        30
+      ]
+    },
+    "scenery/seats/bench_288.png": {
+      "cells": {},
+      "facing": 288,
+      "model": "seat_bench_288",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        41,
+        26
+      ]
+    },
+    "scenery/seats/bench_315.png": {
+      "cells": {},
+      "facing": 315,
+      "model": "seat_bench_315",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        38,
+        19
+      ]
+    },
+    "scenery/seats/bench_324.png": {
+      "cells": {},
+      "facing": 324,
+      "model": "seat_bench_324",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        40,
+        22
+      ]
+    },
+    "scenery/seats/bench_36.png": {
+      "cells": {},
+      "facing": 36,
+      "model": "seat_bench_36",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        21,
+        36
+      ]
+    },
+    "scenery/seats/bench_45.png": {
+      "cells": {},
+      "facing": 45,
+      "model": "seat_bench_45",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        16,
+        35
+      ]
+    },
+    "scenery/seats/bench_72.png": {
+      "cells": {},
+      "facing": 72,
+      "model": "seat_bench_72",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        30,
+        36
+      ]
+    },
+    "scenery/seats/bench_90.png": {
+      "cells": {},
+      "facing": 90,
+      "model": "seat_bench_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        37,
+        34
+      ]
+    },
+    "scenery/seats/cafe-table_0.png": {
+      "cells": {},
+      "facing": 0,
+      "model": "seat_cafe-table_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        17,
+        20
+      ]
+    },
+    "scenery/seats/cafe-table_135.png": {
+      "cells": {},
+      "facing": 135,
+      "model": "seat_cafe-table_135",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        22
+      ]
+    },
+    "scenery/seats/cafe-table_180.png": {
+      "cells": {},
+      "facing": 180,
+      "model": "seat_cafe-table_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        17,
+        24
+      ]
+    },
+    "scenery/seats/cafe-table_225.png": {
+      "cells": {},
+      "facing": 225,
+      "model": "seat_cafe-table_225",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13,
+        22
+      ]
+    },
+    "scenery/seats/cafe-table_270.png": {
+      "cells": {},
+      "facing": 270,
+      "model": "seat_cafe-table_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        17,
+        20
+      ]
+    },
+    "scenery/seats/cafe-table_315.png": {
+      "cells": {},
+      "facing": 315,
+      "model": "seat_cafe-table_315",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        17
+      ]
+    },
+    "scenery/seats/cafe-table_45.png": {
+      "cells": {},
+      "facing": 45,
+      "model": "seat_cafe-table_45",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13,
+        22
+      ]
+    },
+    "scenery/seats/cafe-table_90.png": {
+      "cells": {},
+      "facing": 90,
+      "model": "seat_cafe-table_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        17,
+        24
+      ]
+    },
+    "scenery/seats/desk_0.png": {
+      "cells": {},
+      "facing": 0,
+      "model": "seat_desk_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35,
+        32
+      ]
+    },
+    "scenery/seats/desk_135.png": {
+      "cells": {},
+      "facing": 135,
+      "model": "seat_desk_135",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        32,
+        30
+      ]
+    },
+    "scenery/seats/desk_180.png": {
+      "cells": {},
+      "facing": 180,
+      "model": "seat_desk_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35,
+        33
+      ]
+    },
+    "scenery/seats/desk_225.png": {
+      "cells": {},
+      "facing": 225,
+      "model": "seat_desk_225",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        28,
+        29
+      ]
+    },
+    "scenery/seats/desk_270.png": {
+      "cells": {},
+      "facing": 270,
+      "model": "seat_desk_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35,
+        32
+      ]
+    },
+    "scenery/seats/desk_315.png": {
+      "cells": {},
+      "facing": 315,
+      "model": "seat_desk_315",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        32,
+        32
+      ]
+    },
+    "scenery/seats/desk_45.png": {
+      "cells": {},
+      "facing": 45,
+      "model": "seat_desk_45",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        28,
+        29
+      ]
+    },
+    "scenery/seats/desk_90.png": {
+      "cells": {},
+      "facing": 90,
+      "model": "seat_desk_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35,
+        33
+      ]
+    },
+    "scenery/seats/reading-chair_0.png": {
+      "cells": {},
+      "facing": 0,
+      "model": "seat_reading-chair_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        31,
+        26
+      ]
+    },
+    "scenery/seats/reading-chair_135.png": {
+      "cells": {},
+      "facing": 135,
+      "model": "seat_reading-chair_135",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        28
+      ]
+    },
+    "scenery/seats/reading-chair_180.png": {
+      "cells": {},
+      "facing": 180,
+      "model": "seat_reading-chair_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        31,
+        30
+      ]
+    },
+    "scenery/seats/reading-chair_225.png": {
+      "cells": {},
+      "facing": 225,
+      "model": "seat_reading-chair_225",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        26
+      ]
+    },
+    "scenery/seats/reading-chair_270.png": {
+      "cells": {},
+      "facing": 270,
+      "model": "seat_reading-chair_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        31,
+        26
+      ]
+    },
+    "scenery/seats/reading-chair_315.png": {
+      "cells": {},
+      "facing": 315,
+      "model": "seat_reading-chair_315",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        21
+      ]
+    },
+    "scenery/seats/reading-chair_45.png": {
+      "cells": {},
+      "facing": 45,
+      "model": "seat_reading-chair_45",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        22,
+        26
+      ]
+    },
+    "scenery/seats/reading-chair_90.png": {
+      "cells": {},
+      "facing": 90,
+      "model": "seat_reading-chair_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        31,
+        30
+      ]
+    },
+    "scenery/seats/workstation_0.png": {
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.895,
+          1.02
+        ],
+        "facing": 180,
+        "size": [
+          0.54,
+          0.3
+        ]
+      },
+      "facing": 0,
+      "model": "seat_workstation_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35,
+        34
+      ]
+    },
+    "scenery/seats/workstation_135.png": {
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.895,
+          1.02
+        ],
+        "facing": 180,
+        "size": [
+          0.54,
+          0.3
+        ]
+      },
+      "facing": 135,
+      "model": "seat_workstation_135",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        32,
+        30
+      ]
+    },
+    "scenery/seats/workstation_180.png": {
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.895,
+          1.02
+        ],
+        "facing": 180,
+        "size": [
+          0.54,
+          0.3
+        ]
+      },
+      "facing": 180,
+      "model": "seat_workstation_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35,
+        33
+      ]
+    },
+    "scenery/seats/workstation_225.png": {
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.895,
+          1.02
+        ],
+        "facing": 180,
+        "size": [
+          0.54,
+          0.3
+        ]
+      },
+      "facing": 225,
+      "model": "seat_workstation_225",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        28,
+        32
+      ]
+    },
+    "scenery/seats/workstation_270.png": {
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.895,
+          1.02
+        ],
+        "facing": 180,
+        "size": [
+          0.54,
+          0.3
+        ]
+      },
+      "facing": 270,
+      "model": "seat_workstation_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35,
+        34
+      ]
+    },
+    "scenery/seats/workstation_315.png": {
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.895,
+          1.02
+        ],
+        "facing": 180,
+        "size": [
+          0.54,
+          0.3
+        ]
+      },
+      "facing": 315,
+      "model": "seat_workstation_315",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        32,
+        34
+      ]
+    },
+    "scenery/seats/workstation_45.png": {
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.895,
+          1.02
+        ],
+        "facing": 180,
+        "size": [
+          0.54,
+          0.3
+        ]
+      },
+      "facing": 45,
+      "model": "seat_workstation_45",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        28,
+        32
+      ]
+    },
+    "scenery/seats/workstation_90.png": {
+      "cells": {},
+      "display": {
+        "at": [
+          0.0,
+          -0.895,
+          1.02
+        ],
+        "facing": 180,
+        "size": [
+          0.54,
+          0.3
+        ]
+      },
+      "facing": 90,
+      "model": "seat_workstation_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35,
+        33
+      ]
+    },
+    "scenery/shrub.png": {
+      "cells": {},
+      "model": "shrub",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        50,
+        37
+      ]
+    },
+    "scenery/steps_0.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -1.5,
+          1.5,
+          0.0,
+          1.0
+        ]
+      ],
+      "cells": {},
+      "facing": 0,
+      "model": "steps_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        66,
+        41
+      ]
+    },
+    "scenery/steps_180.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -1.5,
+          1.5,
+          0.0,
+          1.0
+        ]
+      ],
+      "cells": {},
+      "facing": 180,
+      "model": "steps_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        66,
+        39
+      ]
+    },
+    "scenery/steps_270.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -1.5,
+          1.5,
+          0.0,
+          1.0
+        ]
+      ],
+      "cells": {},
+      "facing": 270,
+      "model": "steps_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        66,
+        41
+      ]
+    },
+    "scenery/steps_90.png": {
+      "band_shapes": [
+        [
+          "rect",
+          -1.5,
+          1.5,
+          0.0,
+          1.0
+        ]
+      ],
+      "cells": {},
+      "facing": 90,
+      "model": "steps_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        66,
+        39
+      ]
+    },
+    "scenery/tram/back_00.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          -1,
+          0
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        0.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        51,
+        75
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_01.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          1,
+          1
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        1.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        54,
+        78
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_02.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        2.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        55,
+        75
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_03.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          3,
+          3
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        3.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        56,
+        75
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_04.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          4,
+          4
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        4.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        54,
+        75
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_05.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          5,
+          5
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        5.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        55,
+        78
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_06.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          6,
+          6
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        6.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        55,
+        77
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_07.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          7,
+          7
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        7.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        54,
+        75
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_08.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          8,
+          8
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        8.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        55,
+        78
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_09.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          9,
+          9
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        9.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        56,
+        86
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_10.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          10,
+          10
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        10.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        54,
+        91
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_11.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          11,
+          11
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        11.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        55,
+        78
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_12.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          12,
+          12
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        12.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        54,
+        78
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_13.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          13,
+          13
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        13.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        55,
+        75
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_14.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          14,
+          14
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        14.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        54,
+        78
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_15.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          15,
+          15
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        15.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        54,
+        76
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_16.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          16,
+          16
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        16.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        56,
+        75
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_17.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          17,
+          17
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        17.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        55,
+        75
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_18.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          18,
+          18
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        18.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        55,
+        78
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_19.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          19,
+          19
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        19.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        55,
+        78
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/back_20.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          20,
+          21
+        ]
+      },
+      "length": 21,
+      "model": "tram_back",
+      "origin": [
+        20.5,
+        -1.3,
+        0
+      ],
+      "size": [
+        53,
+        73
+      ],
+      "z": -1.3
+    },
+    "scenery/tram/door.png": {
+      "cells": {},
+      "model": "tram_door",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        14,
+        44
+      ],
+      "width": 0.65
+    },
+    "scenery/tram/front_00.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          -1,
+          0
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        0.5,
+        1.3,
+        0
+      ],
+      "size": [
+        14,
+        51
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_01.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          1,
+          1
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        1.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_02.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          2,
+          2
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        2.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_03.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          3,
+          3
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        3.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        51
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_04.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          4,
+          4
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        4.5,
+        1.3,
+        0
+      ],
+      "size": [
+        18,
+        15
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_05.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          5,
+          5
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        5.5,
+        1.3,
+        0
+      ],
+      "size": [
+        19,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_06.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          6,
+          6
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        6.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_07.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          7,
+          7
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        7.5,
+        1.3,
+        0
+      ],
+      "size": [
+        19,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_08.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          8,
+          8
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        8.5,
+        1.3,
+        0
+      ],
+      "size": [
+        18,
+        52
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_09.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          9,
+          9
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        9.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        52
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_10.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          10,
+          10
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        10.5,
+        1.3,
+        0
+      ],
+      "size": [
+        18,
+        15
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_11.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          11,
+          11
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        11.5,
+        1.3,
+        0
+      ],
+      "size": [
+        18,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_12.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          12,
+          12
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        12.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_13.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          13,
+          13
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        13.5,
+        1.3,
+        0
+      ],
+      "size": [
+        20,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_14.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          14,
+          14
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        14.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        52
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_15.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          15,
+          15
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        15.5,
+        1.3,
+        0
+      ],
+      "size": [
+        18,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_16.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          16,
+          16
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        16.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        45
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_17.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          17,
+          17
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        17.5,
+        1.3,
+        0
+      ],
+      "size": [
+        18,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_18.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          18,
+          18
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        18.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_19.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          19,
+          19
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        19.5,
+        1.3,
+        0
+      ],
+      "size": [
+        17,
+        53
+      ],
+      "z": 1.3
+    },
+    "scenery/tram/front_20.png": {
+      "axis": "x",
+      "cells": {
+        "x": [
+          20,
+          21
+        ]
+      },
+      "length": 21,
+      "model": "tram_front",
+      "origin": [
+        20.5,
+        1.3,
+        0
+      ],
+      "size": [
+        53,
+        64
+      ],
+      "z": 1.3
+    },
+    "scenery/tram_shelter_0.png": {
+      "cells": {},
+      "facing": 0,
+      "model": "tram_shelter_0",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        99,
+        92
+      ]
+    },
+    "scenery/tram_shelter_180.png": {
+      "cells": {},
+      "facing": 180,
+      "model": "tram_shelter_180",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        99,
+        92
+      ]
+    },
+    "scenery/tram_shelter_270.png": {
+      "cells": {},
+      "facing": 270,
+      "model": "tram_shelter_270",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        99,
+        85
+      ]
+    },
+    "scenery/tram_shelter_90.png": {
+      "cells": {},
+      "facing": 90,
+      "model": "tram_shelter_90",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        99,
+        92
+      ]
+    },
+    "scenery/tree_roots.png": {
+      "cells": {},
+      "model": "tree_roots",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        170,
+        92
+      ]
+    },
+    "scenery/tree_round_a.png": {
+      "cells": {},
+      "model": "tree_round_a",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        114,
+        110
+      ]
+    },
+    "scenery/tree_round_b.png": {
+      "cells": {},
+      "model": "tree_round_b",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        99,
+        95
+      ]
+    },
+    "scenery/tree_square.png": {
+      "cells": {},
+      "model": "tree_square",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        232,
+        204
+      ]
+    },
+    "scenery/umbrella.png": {
+      "cells": {},
+      "model": "umbrella",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        62,
+        53
+      ]
+    },
+    "scenery/workbench.png": {
+      "cells": {},
+      "model": "workbench",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        54,
+        55
+      ]
+    }
+  }
+}

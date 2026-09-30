@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "66170ffbc3fc109e3c72dd2a5100b636f9d6091e8a65d91da792d1f77eaed162",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "a9152783eec705e70160404f12b4020e5362787ab90cb4d6184ce56284249a3d"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/14-linocut-relief/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-19/14-linocut-relief/01-living-community.pass-2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

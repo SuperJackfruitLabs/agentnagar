@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "266c432845c29bcb4a5513a21c962e6ac092269e031e65ffb26a6e8d5132aa30",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/25-biomorphic-eco-fantasy/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

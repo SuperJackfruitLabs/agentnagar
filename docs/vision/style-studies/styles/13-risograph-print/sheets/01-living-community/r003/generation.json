@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sha256": "97a132ff3d964b803ca6cc376df287ae60b6edea2774f3fa13fda254cec97283",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "e23146bf5f343c134aa2687f5da1ce2f6c15b197942a4c89bcc7313281f7d644"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/13-risograph-print/01-living-community.png",
+    "docs/vision/style-studies/revisions/2026-09-19/13-risograph-print/01-living-community.pass-2.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../../../reviews/2026-09-19/resumed-batch-manifest.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

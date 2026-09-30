@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sha256": "d5669ab04d3c999f33fc060681c67e916e671e13132b7329c115a1c9e6db89ce",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "753c9be6bb629578460902a1604f3ecaac4af10eb4b5876a24e06bf07414c96b"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/10-neon-noir/candidates/00-city-perspectives-pass3.png"
+  ],
+  "reference_images": [
+    "../r003/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

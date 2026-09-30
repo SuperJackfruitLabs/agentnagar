@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "sha256": "ca19af83c557ba52671bdc88955c8047b749bc8e863422d8efaac1da671e8145",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "cd237fc55ce4a26a168736e7543ec58ee9a4cddf8a23b5b3b2bb08d08594d62a"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/08-pixel-art/originals/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md",
+    "../../../history/2026-09-20-first-ten/README.md",
+    "../../../history/2026-09-20-first-ten/REPAIR.md",
+    "../../../history/2026-09-20-first-ten/originals/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6",
+  "prompt_source": {
+    "path": "../../../history/initial-prompt-sources/00-city-perspectives.prompt.md.source.txt",
+    "format": "markdown-fenced-text",
+    "sha256": "0357e07aa2fcd6b4b469aed93d49fe909170a768620ef3ffc38ebc97eacce8d5"
+  }
+}

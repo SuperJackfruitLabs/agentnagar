@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "c22ded1b63b4814365e69727548789b60954d631aa6e4acedd376a907b58c5f2",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/24-dieselpunk-civic-works/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "e91898d9905f19dda5864d6280e0b3545edd6d0d0bdc6013982fcfda9a0aa6ca",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/18-art-deco-civic-futurism/02-creating-exploring.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

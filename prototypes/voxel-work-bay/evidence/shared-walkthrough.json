@@ -1,0 +1,24 @@
+{
+  "camera": "overview",
+  "device": "Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)",
+  "draw_calls": 237.0,
+  "final_phases": {
+    "kai": "seated",
+    "lyra": "seated"
+  },
+  "fps": 24,
+  "frames": 480,
+  "godot_version": "4.6.3-stable (flathub)",
+  "measurement_scope": "Offline fixed 24fps, same guarded stepping and blends as live; not a performance test",
+  "missing_assets": [],
+  "node_count": 702.0,
+  "primitives": 12070.0,
+  "render_objects": 271.0,
+  "renderer": "gl_compatibility",
+  "sequence": "Exterior, both journeys in cutaway, courtyard through east doorway, return overview",
+  "static_memory_bytes": 44475166.0,
+  "viewport": [
+    1060,
+    660
+  ]
+}

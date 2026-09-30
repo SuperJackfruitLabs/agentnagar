@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "be270852df3700dc8fe74c3e15cc08494d5fc5a97e5abb8eda396191b247d38c",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "86f2a8227e0542a2f251d1c99ad3eb26dff75bdfb77ad97ddcbc705411375117"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/04-realistic/candidates/00-pass3.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

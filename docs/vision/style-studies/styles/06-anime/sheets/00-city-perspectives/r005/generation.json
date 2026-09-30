@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "0e1f970699746f175b7ad3b38f2d789492039479934e3cdb6e30b69e8d944602",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "8ac63f493251cfecc04a3dabd49cfc629a07165080dd2a100770392346bc6344"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/06-anime/candidates/00-pass4.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

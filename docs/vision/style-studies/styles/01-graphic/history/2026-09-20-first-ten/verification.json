@@ -1,0 +1,135 @@
+{
+  "originals_byte_preserved": true,
+  "original_file_count": 9,
+  "candidates": [
+    {
+      "candidate": "00-city-perspectives.pass-1.png",
+      "sha256": "dbe9621780418f3a1b619330497444555ab9d7da4d072f817dc112ed9a997112",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "00-city-perspectives.pass-1.prompt.txt",
+      "prompt_sha256": "be14c84017a750311dad285143199a90cc7605e93adf3bc877b1e006894b3ff8"
+    },
+    {
+      "candidate": "00-city-perspectives.pass-2.png",
+      "sha256": "2b3b41b96f47aeaf577d347d7057823c10bd63d90dc9d61fd021880fb2a5a1c5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "00-city-perspectives.pass-2.prompt.txt",
+      "prompt_sha256": "e04e3c5240540f06ae578f8f0c1448b3efe8284df5c5cf1de1f6ad4701726b6d"
+    },
+    {
+      "candidate": "00-city-perspectives.pass-3.png",
+      "sha256": "4c068317d5189f678cf26c27aa1ea6a39f2be895a0b4a4dc9b9f7b6602cc783b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "00-city-perspectives.pass-3.prompt.txt",
+      "prompt_sha256": "6ed94b38e02773671710577226796e9db0e728d652f456c2217e52a51f05ff5d"
+    },
+    {
+      "candidate": "01-living-community.pass-1.png",
+      "sha256": "9a073c2598d8f5d571de706b501738a608efa928913b71d5b7c26b43bd243432",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "01-living-community.pass-1.prompt.txt",
+      "prompt_sha256": "4e97d8ed7c38d2b094a4ecd28ffb80cb715e5822a82bffd4e41e6c94f3d2bb66"
+    },
+    {
+      "candidate": "01-living-community.pass-2.png",
+      "sha256": "1ae773892dab39686be3aed9475089960f53eca2b5e7ffcb74ab5e4f58ea3bcf",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "01-living-community.pass-2.prompt.txt",
+      "prompt_sha256": "de444053d72c4e78a029ce084eb2fc528a60d8e526ff22e207767a42ff04befc"
+    },
+    {
+      "candidate": "02-creating-exploring.pass-1.png",
+      "sha256": "29d49a75f1bb4949824e25f6677b50c07890de3ef43d7879498e1d0639b02824",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "02-creating-exploring.pass-1.prompt.txt",
+      "prompt_sha256": "66ae5315da09b056d7f60f62425a165f14c93d25aeb0faee9d2a971d78e326cf"
+    },
+    {
+      "candidate": "02-creating-exploring.pass-2.png",
+      "sha256": "ac27fd691971253b7922507056cf42c21cc8f7295b057e616ef2cb035e60f8ae",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "02-creating-exploring.pass-2.prompt.txt",
+      "prompt_sha256": "bd69a09d776ee9193369cf864fb647ab0aeb9081320538b24c0d0a396738b1b9"
+    },
+    {
+      "candidate": "03-interfaces-perspectives.pass-1.png",
+      "sha256": "7a3a77559f5ee124d5d74d4106547a53ef6f818eb43e8f4fdb62140a6180260c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "03-interfaces-perspectives.pass-1.prompt.txt",
+      "prompt_sha256": "a391dd46990ab78b8f0e639c85152831ad78baa4cc6954a37afe54dcffc2a41b"
+    },
+    {
+      "candidate": "03-interfaces-perspectives.pass-2.png",
+      "sha256": "863602acad1824a494b34b665662d14fa5d209730abc0efc57a66a5090dc1552",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "03-interfaces-perspectives.pass-2.prompt.txt",
+      "prompt_sha256": "84c707a69893f6d98fbf585dbbbc92e07115c4c101673df1815e0dd8ae8a3ca0"
+    },
+    {
+      "candidate": "03-interfaces-perspectives.pass-3.png",
+      "sha256": "9560a7f878e2c3522df6f65b76d34b8c477e93c7aa29355aae8decc79461a8fc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "03-interfaces-perspectives.pass-3.prompt.txt",
+      "prompt_sha256": "0d578fdd0cfe39c0d88be6ce01680af04794ec0671d3c5632f3b1519755478b5"
+    }
+  ],
+  "gallery": [
+    {
+      "file": "00-city-perspectives.png",
+      "candidate": "00-city-perspectives.pass-3.png",
+      "sha256": "4c068317d5189f678cf26c27aa1ea6a39f2be895a0b4a4dc9b9f7b6602cc783b",
+      "equals_selected": true
+    },
+    {
+      "file": "01-living-community.png",
+      "candidate": "01-living-community.pass-2.png",
+      "sha256": "1ae773892dab39686be3aed9475089960f53eca2b5e7ffcb74ab5e4f58ea3bcf",
+      "equals_selected": true
+    },
+    {
+      "file": "02-creating-exploring.png",
+      "candidate": "02-creating-exploring.pass-2.png",
+      "sha256": "ac27fd691971253b7922507056cf42c21cc8f7295b057e616ef2cb035e60f8ae",
+      "equals_selected": true
+    },
+    {
+      "file": "03-interfaces-perspectives.png",
+      "candidate": "03-interfaces-perspectives.pass-3.png",
+      "sha256": "9560a7f878e2c3522df6f65b76d34b8c477e93c7aa29355aae8decc79461a8fc",
+      "equals_selected": true
+    }
+  ],
+  "markdown_links_checked": true,
+  "historical_overview_prompt_body_unchanged": true,
+  "first_pass_prompts_match_submitted_text": true
+}

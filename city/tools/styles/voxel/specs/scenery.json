@@ -1,0 +1,22 @@
+{
+  "bridge_pier": {"size": [1.2, 4.1, 3.8], "tris": 800, "nodes": ["pier"]},
+  "bridge_span": {"size": [4.0, 1.9, 4.0], "tris": 300, "nodes": ["span"]},
+  "crosswalk": {"size": [2.0, 0.1, 2.0], "tris": 100, "nodes": ["street"]},
+  "house_a": {"size": [6.0, 7.0, 6.0], "tris": 3300, "nodes": ["house"]},
+  "house_b": {"size": [6.0, 10.0, 6.0], "tris": 4600, "nodes": ["house"]},
+  "kerb": {"size": [2.0, 0.2, 0.3], "tris": 50, "nodes": ["stone"]},
+  "lawn_tile": {"size": [2.0, 0.1, 2.0], "tris": 50, "nodes": ["lawn"]},
+  "paving_a": {"size": [2.0, 0.1, 2.0], "tris": 100, "nodes": ["paving"]},
+  "paving_b": {"size": [2.0, 0.1, 2.0], "tris": 100, "nodes": ["paving"]},
+  "paving_c": {"size": [2.0, 0.1, 2.0], "tris": 100, "nodes": ["paving"]},
+  "quay": {"size": [2.0, 2.5, 0.7], "tris": 150, "nodes": ["wall"]},
+  "shop_a": {"size": [6.0, 6.6, 6.8], "tris": 3350, "nodes": ["shop"]},
+  "street_dash": {"size": [2.0, 0.1, 2.0], "tris": 50, "nodes": ["street"]},
+  "street_tile": {"size": [2.0, 0.1, 2.0], "tris": 50, "nodes": ["street"]},
+  "tower_a": {"size": [14.0, 26.4, 14.0], "tris": 10500, "nodes": ["tower"]},
+  "tower_b": {"size": [12.8, 29.1, 12.8], "tris": 10500, "nodes": ["tower"]},
+  "tram": {"size": [20.50, 4.50, 2.60], "tris": 4500, "nodes": ["tram", "body", "roof", "interior", "lights", "door_left_0_fore", "door_right_2_aft"]},
+  "tram_shelter": {"size": [4.6, 3.3, 1.6], "tris": 550, "nodes": ["shelter"]},
+  "tram_track": {"size": [2.0, 0.3, 2.8], "tris": 300, "nodes": ["track"]},
+  "water_tile": {"size": [4.0, 0.2, 4.0], "tris": 200, "nodes": ["water"]}
+}

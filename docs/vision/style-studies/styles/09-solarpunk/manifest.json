@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "09-solarpunk",
+  "name": "Solarpunk retro-futurism",
+  "selected": {
+    "00-city-perspectives": "r005",
+    "01-living-community": "r004",
+    "02-creating-exploring": "r003",
+    "03-interfaces-perspectives": "r003"
+  },
+  "review_summary": "Revised and inspected concept sheets; approximate projection, proportions, small details and typography remain.",
+  "review_sources": [
+    "history/2026-09-20-first-ten/REPAIR.md"
+  ]
+}

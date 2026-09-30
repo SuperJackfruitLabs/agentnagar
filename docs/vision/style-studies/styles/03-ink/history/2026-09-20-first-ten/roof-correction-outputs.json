@@ -1,0 +1,26 @@
+[
+  {
+    "style": "03-ink",
+    "sheet": "00-city-perspectives",
+    "pass": 4,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-a60f3d29-d323-482f-ab5e-c59e4776ea83.png"
+  },
+  {
+    "style": "03-ink",
+    "sheet": "01-living-community",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-de5852d9-006f-4744-b55b-35504eaac5b4.png"
+  },
+  {
+    "style": "03-ink",
+    "sheet": "02-creating-exploring",
+    "pass": 3,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-5c32a2ce-7228-4580-a75d-5f0356cb93f6.png"
+  },
+  {
+    "style": "03-ink",
+    "sheet": "02-creating-exploring",
+    "pass": 4,
+    "source": "<codex-home>/generated_images/01a0bb26-26d3-7890-bbd9-2c3353da813d/exec-94f6f4b5-f861-40c6-b05c-9dc53f5ba41a.png"
+  }
+]

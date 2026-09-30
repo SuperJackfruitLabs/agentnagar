@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+	<!-- Transit: a tram from the front, its pole up to the wire. -->
+	<g fill="#FFFFFF">
+		<rect x="15" y="2" width="18" height="3" rx="1.5"/>
+		<rect x="22.5" y="4" width="3" height="6"/>
+		<path fill-rule="evenodd" d="M15 9 H33 A5 5 0 0 1 38 14 V34 A5 5 0 0 1 33 39 H15 A5 5 0 0 1 10 34 V14 A5 5 0 0 1 15 9 Z M14 13 H34 V24 H14 Z M14.5 30.5 A2.5 2.5 0 1 0 19.5 30.5 A2.5 2.5 0 1 0 14.5 30.5 Z M28.5 30.5 A2.5 2.5 0 1 0 33.5 30.5 A2.5 2.5 0 1 0 28.5 30.5 Z"/>
+		<path d="M14 39 L9 46 H14.5 L19 39 Z"/>
+		<path d="M34 39 L39 46 H33.5 L29 39 Z"/>
+	</g>
+</svg>

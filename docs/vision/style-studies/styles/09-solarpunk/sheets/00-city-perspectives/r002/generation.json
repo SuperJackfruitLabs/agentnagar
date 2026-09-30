@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "5f5ce59fc3789f08f81afcc6329cda4e94723d97f7cd734e4a78e89afc668a0e",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "6516b5637afeaa6a60cc5fa49f49b1c5c513885aec02f26e70a1433682420bc3"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/00-city-perspectives-pass1.png"
+  ],
+  "reference_images": [
+    "../r001/image.png",
+    "../../../../08-pixel-art/sheets/00-city-perspectives/r003/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

@@ -1,0 +1,27 @@
+{
+  "camera": "overview",
+  "capture": "prototypes/voxel-work-bay/evidence/godot-standing-up.png",
+  "clips": [
+    "idle",
+    "walk",
+    "seated_idle",
+    "typing",
+    "attend",
+    "sit_down",
+    "stand_up"
+  ],
+  "draw_calls_sample": 90.0,
+  "error": 0,
+  "frames_drawn": 11,
+  "godot_version": "4.6.3-stable (flathub)",
+  "measurement_scope": "One local startup frame; not a target-device benchmark",
+  "missing_assets": [],
+  "motion_phase": "standing up",
+  "motion_time": 1.3,
+  "node_count": 113.0,
+  "primitives_sample": 9212.0,
+  "render_objects_sample": 438.0,
+  "resident": "kai",
+  "static_memory_bytes_sample": 43316865.0,
+  "viewport": "(1060, 660)"
+}

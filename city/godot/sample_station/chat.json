@@ -1,0 +1,412 @@
+{
+  "session": {
+    "id": "acps_sample",
+    "stationId": "stn_sample",
+    "userId": "usr_sample",
+    "mode": "ask",
+    "status": "waiting",
+    "endedReason": null,
+    "createdAt": "2026-09-28T09:01:58.000Z",
+    "lastEventAt": "2026-09-28T09:02:18.000Z",
+    "title": "Run the tests and fix whatever fails.",
+    "lastSeq": 14
+  },
+  "events": [
+    {
+      "sessionId": "acps_sample",
+      "seq": 1,
+      "type": "state",
+      "payload": {
+        "status": "idle"
+      },
+      "createdAt": "2026-09-28T09:02:00.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 2,
+      "type": "user-prompt",
+      "payload": {
+        "text": "Run the tests and fix whatever fails."
+      },
+      "createdAt": "2026-09-28T09:02:04.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 3,
+      "type": "state",
+      "payload": {
+        "status": "working"
+      },
+      "createdAt": "2026-09-28T09:02:04.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 4,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "plan",
+        "entries": [
+          {
+            "content": "Run the test suite",
+            "status": "in_progress",
+            "priority": "high"
+          },
+          {
+            "content": "Fix the failing test",
+            "status": "pending",
+            "priority": "high"
+          },
+          {
+            "content": "Run the tests again",
+            "status": "pending",
+            "priority": "medium"
+          }
+        ]
+      },
+      "createdAt": "2026-09-28T09:02:06.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 5,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "agent_message_chunk",
+        "content": {
+          "type": "text",
+          "text": "I'll run the tests first."
+        }
+      },
+      "createdAt": "2026-09-28T09:02:07.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 6,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "tool_call",
+        "toolCallId": "call_sample_1",
+        "title": "cargo test",
+        "kind": "execute",
+        "status": "pending"
+      },
+      "createdAt": "2026-09-28T09:02:08.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 7,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "tool_call_update",
+        "toolCallId": "call_sample_1",
+        "status": "in_progress"
+      },
+      "createdAt": "2026-09-28T09:02:08.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 8,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "tool_call_update",
+        "toolCallId": "call_sample_1",
+        "status": "completed"
+      },
+      "createdAt": "2026-09-28T09:02:11.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 9,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "agent_message_chunk",
+        "content": {
+          "type": "text",
+          "text": "One of the 7 tests fails: `counts_words_split_by_tabs`. "
+        }
+      },
+      "createdAt": "2026-09-28T09:02:14.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 10,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "agent_message_chunk",
+        "content": {
+          "type": "text",
+          "text": "`count` splits words on spaces only, so a line joined by tabs reads as one word. Splitting on any whitespace fixes it, in one line of `src/lib.rs`."
+        }
+      },
+      "createdAt": "2026-09-28T09:02:15.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 11,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "plan",
+        "entries": [
+          {
+            "content": "Run the test suite",
+            "status": "completed",
+            "priority": "high"
+          },
+          {
+            "content": "Fix the failing test",
+            "status": "in_progress",
+            "priority": "high"
+          },
+          {
+            "content": "Run the tests again",
+            "status": "pending",
+            "priority": "medium"
+          }
+        ]
+      },
+      "createdAt": "2026-09-28T09:02:17.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 12,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "tool_call",
+        "toolCallId": "call_sample_2",
+        "title": "Edit src/lib.rs",
+        "kind": "edit",
+        "status": "pending"
+      },
+      "createdAt": "2026-09-28T09:02:18.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 13,
+      "type": "permission-request",
+      "payload": {
+        "toolCall": {
+          "toolCallId": "call_sample_2",
+          "title": "Edit src/lib.rs",
+          "kind": "edit",
+          "status": "pending"
+        },
+        "options": [
+          {
+            "optionId": "opt_allow_once",
+            "kind": "allow_once",
+            "name": "Allow"
+          },
+          {
+            "optionId": "opt_allow_always",
+            "kind": "allow_always",
+            "name": "Always allow"
+          },
+          {
+            "optionId": "opt_reject_once",
+            "kind": "reject_once",
+            "name": "Reject"
+          }
+        ]
+      },
+      "createdAt": "2026-09-28T09:02:18.000Z"
+    },
+    {
+      "sessionId": "acps_sample",
+      "seq": 14,
+      "type": "state",
+      "payload": {
+        "status": "waiting"
+      },
+      "createdAt": "2026-09-28T09:02:18.000Z"
+    }
+  ],
+  "continuations": {
+    "allow": [
+      {
+        "after": 0.8,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "tool_call_update",
+          "toolCallId": "call_sample_2",
+          "status": "completed"
+        }
+      },
+      {
+        "after": 0.4,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "plan",
+          "entries": [
+            {
+              "content": "Run the test suite",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Fix the failing test",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Run the tests again",
+              "status": "in_progress",
+              "priority": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "after": 0.3,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "tool_call",
+          "toolCallId": "call_sample_3",
+          "title": "cargo test",
+          "kind": "execute",
+          "status": "pending"
+        }
+      },
+      {
+        "after": 0.2,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "tool_call_update",
+          "toolCallId": "call_sample_3",
+          "status": "in_progress"
+        }
+      },
+      {
+        "after": 2.5,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "tool_call_update",
+          "toolCallId": "call_sample_3",
+          "status": "completed"
+        }
+      },
+      {
+        "after": 0.4,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "plan",
+          "entries": [
+            {
+              "content": "Run the test suite",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Fix the failing test",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Run the tests again",
+              "status": "completed",
+              "priority": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "after": 0.6,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "agent_message_chunk",
+          "content": {
+            "type": "text",
+            "text": "All 7 tests pass now. "
+          }
+        }
+      },
+      {
+        "after": 0.5,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "agent_message_chunk",
+          "content": {
+            "type": "text",
+            "text": "The fix is left uncommitted in `src/lib.rs`, for you to review in Changes."
+          }
+        }
+      },
+      {
+        "after": 0.2,
+        "type": "state",
+        "payload": {
+          "status": "idle"
+        }
+      }
+    ],
+    "reject": [
+      {
+        "after": 0.6,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "tool_call_update",
+          "toolCallId": "call_sample_2",
+          "status": "failed"
+        }
+      },
+      {
+        "after": 0.5,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "agent_message_chunk",
+          "content": {
+            "type": "text",
+            "text": "Understood; I've left `src/lib.rs` as it was. "
+          }
+        }
+      },
+      {
+        "after": 0.4,
+        "type": "agent-update",
+        "payload": {
+          "sessionUpdate": "agent_message_chunk",
+          "content": {
+            "type": "text",
+            "text": "`counts_words_split_by_tabs` will keep failing until `count` splits on tabs too."
+          }
+        }
+      },
+      {
+        "after": 0.2,
+        "type": "state",
+        "payload": {
+          "status": "idle"
+        }
+      }
+    ]
+  },
+  "reply": [
+    {
+      "after": 0.8,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "agent_message_chunk",
+        "content": {
+          "type": "text",
+          "text": "This is Sample station, a recording, so I can't act on new requests. "
+        }
+      }
+    },
+    {
+      "after": 0.6,
+      "type": "agent-update",
+      "payload": {
+        "sessionUpdate": "agent_message_chunk",
+        "content": {
+          "type": "text",
+          "text": "Connect your AgentPod to talk to a real agent."
+        }
+      }
+    },
+    {
+      "after": 0.2,
+      "type": "state",
+      "payload": {
+        "status": "idle"
+      }
+    }
+  ]
+}

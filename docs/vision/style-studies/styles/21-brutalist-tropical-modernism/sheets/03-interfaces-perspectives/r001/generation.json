@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "23f179f3b814151a64ef4b119c6ac065bad7a3c6d9c6c8ebb70c55fa1bb2b20a",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "missing",
+    "path": null,
+    "sha256": null
+  },
+  "source_paths": [
+    "docs/vision/style-studies/21-brutalist-tropical-modernism/03-interfaces-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

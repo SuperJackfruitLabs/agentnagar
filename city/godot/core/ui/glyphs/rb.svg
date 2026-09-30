@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+	<rect x="0" y="0" width="64" height="64" rx="16" ry="16" fill="#20242E"/>
+	<rect x="10.00" y="18.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="14.00" y="18.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="18.00" y="18.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="22.00" y="18.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="10.00" y="22.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="26.00" y="22.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="10.00" y="26.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="26.00" y="26.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="10.00" y="30.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="14.00" y="30.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="18.00" y="30.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="22.00" y="30.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="10.00" y="34.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="18.00" y="34.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="10.00" y="38.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="22.00" y="38.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="10.00" y="42.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="26.00" y="42.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="34.00" y="18.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="38.00" y="18.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="42.00" y="18.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="46.00" y="18.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="34.00" y="22.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="50.00" y="22.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="34.00" y="26.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="50.00" y="26.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="34.00" y="30.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="38.00" y="30.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="42.00" y="30.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="46.00" y="30.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="34.00" y="34.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="50.00" y="34.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="34.00" y="38.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="50.00" y="38.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="34.00" y="42.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="38.00" y="42.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="42.00" y="42.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+	<rect x="46.00" y="42.00" width="4.00" height="4.00" fill="#F5F7FB"/>
+</svg>

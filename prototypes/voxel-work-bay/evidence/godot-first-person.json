@@ -1,0 +1,27 @@
+{
+  "camera": "first_person",
+  "capture": "prototypes/voxel-work-bay/evidence/godot-first-person.png",
+  "clips": [
+    "idle",
+    "walk",
+    "seated_idle",
+    "typing",
+    "attend",
+    "sit_down",
+    "stand_up"
+  ],
+  "draw_calls_sample": 90.0,
+  "error": 0,
+  "frames_drawn": 11,
+  "godot_version": "4.6.3-stable (flathub)",
+  "measurement_scope": "One local startup frame; not a target-device benchmark",
+  "missing_assets": [],
+  "motion_phase": "seated",
+  "motion_time": -1.0,
+  "node_count": 113.0,
+  "primitives_sample": 9242.0,
+  "render_objects_sample": 435.0,
+  "resident": "kai",
+  "static_memory_bytes_sample": 43316823.0,
+  "viewport": "(1060, 660)"
+}

@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en" data-style="22-streamline-retro-future">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fly to Agentnagar · 22 Streamline retro future</title>
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<style>
+:root{
+  --cream:#f2e8d3; --paper:#f8f2e4; --chrome:#b1b1ad; --teal:#298fb8; --deep:#0c6c92;
+  --tang:#f0af72; --rust:#8d5431; --navy:#2c3848; --ink:#1d2533; --green:#506e2c;
+  --r:28px;
+  --display:'Righteous','Josefin Sans',system-ui,sans-serif;
+  --script:'Shrikhand',Georgia,serif;
+  --body:'Josefin Sans','Avenir Next',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 1.08rem/1.6 var(--body);overflow-x:hidden}
+img{max-width:100%;display:block}
+main,header.hero{overflow-x:clip}
+a{color:var(--deep);text-underline-offset:3px;text-decoration-thickness:2px}
+a:hover{color:var(--rust)}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* livery stripes: the three-band speed line */
+.livery{height:18px;background:linear-gradient(var(--deep) 0 33%,var(--cream) 33% 40%,var(--tang) 40% 66%,var(--cream) 66% 73%,var(--rust) 73%)}
+.speed{display:block;height:10px;border-radius:10px;background:linear-gradient(90deg,transparent,var(--deep) 30%,var(--deep));margin:.4rem 0}
+.speed.o{background:linear-gradient(90deg,transparent,var(--tang) 40%,var(--tang));width:80%}
+.speed.r{background:linear-gradient(90deg,transparent,var(--rust) 50%,var(--rust));width:60%}
+
+/* top bar */
+.bar{background:var(--navy);color:var(--cream);font:700 .78rem/1 var(--body);letter-spacing:.22em;text-transform:uppercase}
+.bar .wrap{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.75rem 0;flex-wrap:wrap}
+.bar .mark{display:flex;align-items:center;gap:.6rem}
+.wing{width:46px;height:16px}
+.notes-btn{font:700 .78rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;background:var(--tang);color:var(--ink);border:0;border-radius:999px;padding:.7rem 1.1rem .6rem;cursor:pointer;box-shadow:inset 0 -3px 0 rgba(0,0,0,.18)}
+.notes-btn:hover{background:#f6c797}
+
+/* hero poster */
+.hero{background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:2rem;align-items:center;padding:3.2rem 0 2.6rem}
+.kicker{font:700 .82rem/1.2 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--tang)}
+.fly{font:400 clamp(2.6rem,6vw,4.6rem)/1 var(--script);color:var(--tang);margin:.6rem 0 -.2rem;transform:rotate(-4deg);transform-origin:left}
+.dest{font:400 clamp(2.7rem,6.2vw,5.4rem)/.95 var(--display);white-space:nowrap;letter-spacing:.01em;margin:0;
+  background:linear-gradient(180deg,#ffffff 0%,#e9e7df 38%,#9aa3a8 52%,#f6f3ea 62%,#cfd2d0 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 3px 0 #0b3f57) drop-shadow(0 6px 0 rgba(0,0,0,.25))}
+.hero .tag{font-size:1.28rem;line-height:1.45;max-width:34ch;margin:1.2rem 0 1.4rem}
+.hero .hero-speed{max-width:420px}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem;padding:0;list-style:none}
+.chips a{display:inline-block;color:var(--cream);text-decoration:none;border:2px solid rgba(242,232,211,.55);border-radius:999px;padding:.45rem .9rem .35rem;font-weight:700;font-size:.86rem;letter-spacing:.08em}
+.chips a:hover{background:var(--cream);color:var(--navy)}
+.poster{position:relative;border-radius:46% 46% 26px 26px/30% 30% 26px 26px;overflow:hidden;border:10px solid var(--cream);box-shadow:0 0 0 3px var(--chrome),0 24px 50px rgba(0,0,0,.35);background:var(--cream)}
+.poster svg{display:block;width:100%;height:auto}
+.illus{font-size:.8rem;letter-spacing:.04em;color:#d9d2c0;margin:.7rem 0 0;text-align:center}
+.tram{animation:glide 11s linear infinite}
+.ship{animation:drift 26s ease-in-out infinite alternate}
+.rays{transform-origin:430px 210px;animation:spin 90s linear infinite}
+@keyframes glide{from{transform:translateX(-360px)}to{transform:translateX(640px)}}
+@keyframes drift{from{transform:translate(-40px,0)}to{transform:translate(60px,-14px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero .lines{position:absolute;inset:auto 0 0 0;height:60px;pointer-events:none;opacity:.9}
+
+/* sections as brochure panels */
+section.panel{padding:4.2rem 0 1rem}
+.head{display:flex;align-items:flex-end;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.num{font:400 3.8rem/1 var(--display);color:var(--paper);-webkit-text-stroke:2px var(--deep);text-shadow:4px 4px 0 var(--tang)}
+h2{font:400 clamp(2rem,4.6vw,3.3rem)/1 var(--display);margin:0;color:var(--navy);letter-spacing:.01em}
+h2 small{display:block;font:700 .8rem/1.3 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--rust);margin-bottom:.5rem}
+h3{font:400 1.45rem/1.15 var(--display);color:var(--deep);margin:0 0 .6rem}
+.card{background:var(--paper);border-radius:var(--r);padding:1.6rem 1.7rem;box-shadow:0 0 0 2px #e2d6bb,0 10px 0 -2px #e2d6bb}
+.grid2{display:grid;grid-template-columns:1.2fr 1fr;gap:1.6rem}
+.stamp{position:absolute;right:0;top:-14px;width:112px;height:112px;border-radius:50%;border:3px dashed var(--rust);color:var(--rust);display:grid;place-items:center;text-align:center;font:700 .66rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;transform:rotate(-14deg);opacity:.85}
+.stamp b{display:block;font:400 1.6rem/1 var(--display);letter-spacing:0}
+.rel{position:relative}
+.js .stamp{opacity:0;transform:rotate(20deg) scale(1.5);transition:opacity .4s,transform .5s cubic-bezier(.2,1.4,.4,1)}
+.js .inview .stamp{opacity:.85;transform:rotate(-14deg) scale(1)}
+@media (prefers-reduced-motion:reduce){.js .stamp{opacity:.85;transform:rotate(-14deg);transition:none}}
+
+/* project */
+.kit-project .kit-tagline{font:400 1.5rem/1.3 var(--display);color:var(--navy);margin-top:0}
+.kit-project dl{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1rem;margin:1.2rem 0}
+.kit-project dt{font-weight:700;color:var(--deep);text-transform:uppercase;font-size:.8rem;letter-spacing:.16em;padding-top:.28rem;white-space:nowrap}
+.kit-project dt::before{content:"";display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.5em;background:radial-gradient(circle at 35% 30%,#fff,#9aa3a8 60%,#5b6670);vertical-align:-.05em}
+.kit-project dd{margin:0}
+.kit-small{font-size:.92rem;color:#4a4f58}
+.itin{list-style:none;padding:0;margin:0;counter-reset:stop;position:relative}
+.itin::before{content:"";position:absolute;left:19px;top:14px;bottom:14px;width:6px;border-radius:6px;background:repeating-linear-gradient(var(--deep) 0 14px,transparent 14px 22px)}
+.itin li{position:relative;padding:0 0 1rem 3.4rem}
+.itin li::before{counter-increment:stop;content:counter(stop);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--cream);border:4px solid var(--deep);font:400 1.1rem/1 var(--display);color:var(--deep)}
+.itin b{font:400 1.18rem/1.2 var(--display);color:var(--navy);display:block;padding-top:.2rem}
+
+/* style */
+.principles{list-style:none;padding:0;margin:0;display:grid;gap:1rem}
+.principles li{display:grid;grid-template-columns:54px 1fr;gap:1rem;align-items:start}
+.principles li span{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font:400 1.4rem/1 var(--display);color:var(--navy);background:radial-gradient(circle at 35% 30%,#fff 0 12%,#dcdcd6 30%,#8e979c 70%,#e7e5dd 100%);box-shadow:inset 0 0 0 3px #fff8,0 3px 0 #7c858a}
+.principles strong{color:var(--navy)}
+.chips-pal{list-style:none;padding:0;margin:1rem 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
+.chips-pal li{border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 0 0 2px #e2d6bb}
+.chips-pal .sw{height:84px;position:relative}
+.chips-pal .sw::after{content:"";position:absolute;inset:8px auto auto 10px;width:40%;height:12px;border-radius:10px;background:rgba(255,255,255,.35)}
+.chips-pal p{margin:0;padding:.55rem .75rem .6rem;font-size:.86rem;line-height:1.3}
+.chips-pal code{font:700 .9rem/1 var(--body);letter-spacing:.06em;color:var(--navy)}
+.mt{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:1.6rem}
+.typespec{display:flex;gap:1rem;align-items:baseline;flex-wrap:wrap;border-top:2px dashed #d6c8a8;padding-top:.8rem;margin-top:.8rem}
+.typespec .a{font:400 2.2rem/1 var(--display);color:var(--navy)}
+.typespec .b{font:400 1.9rem/1 var(--script);color:var(--rust)}
+.typespec .c{font:400 1.3rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase}
+
+/* views: airliner window */
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.tabs button{font:700 .9rem/1.1 var(--body);letter-spacing:.06em;border:0;border-radius:999px;padding:.75rem 1.15rem .65rem;background:var(--paper);color:var(--navy);box-shadow:0 0 0 2px #d8cbad;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--deep);color:#fff;box-shadow:0 0 0 2px var(--deep),inset 0 -4px 0 var(--tang)}
+.cabin{display:grid;grid-template-columns:1.55fr 1fr;gap:1.6rem;align-items:start}
+.window{padding:18px;border-radius:64px;background:linear-gradient(145deg,#fffaf0,#e6dcc4);box-shadow:inset 0 0 0 3px #fff,0 0 0 3px var(--chrome),0 16px 30px rgba(44,56,72,.25)}
+.window .glass{border-radius:48px;overflow:hidden;background:#dfe9ea;box-shadow:inset 0 0 0 6px #d4ccb7}
+.window .kit-sheet,.window .kit-panel{width:100%}
+.shade{height:0;transition:height .45s ease}
+.cap{font-size:.95rem;margin:.9rem .4rem 0;color:#3b4250}
+.ports{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.port{border:0;padding:0;background:none;cursor:pointer;text-align:center;font:700 .82rem/1.2 var(--body);color:var(--navy);letter-spacing:.08em;text-transform:uppercase}
+.port .ring{display:block;border-radius:50%;aspect-ratio:1;overflow:hidden;border:8px solid #f7f1e2;box-shadow:0 0 0 3px var(--chrome),0 6px 12px rgba(0,0,0,.2);margin-bottom:.45rem;position:relative}
+.port .ring .kit-panel{position:absolute!important;width:172%;left:50%;top:50%;transform:translate(-50%,-50%)}
+.port[aria-pressed="true"] .ring{box-shadow:0 0 0 4px var(--tang),0 6px 12px rgba(0,0,0,.2)}
+.port:hover .ring{transform:translateY(-2px)}
+.landmarks{font-size:.95rem;margin:1rem 0 0;padding:1rem 1.2rem;background:var(--paper);border-radius:20px;box-shadow:0 0 0 2px #e2d6bb}
+.concept{font-size:.88rem;color:#4a4f58;font-style:italic}
+
+/* agents */
+.crew{display:grid;grid-template-columns:260px 1fr 1fr;gap:1.4rem;align-items:start}
+.crew figure{margin:0}
+.crew figcaption{font-size:.86rem;color:#4a4f58;margin-top:.5rem}
+.frame-r{border-radius:26px;overflow:hidden;box-shadow:0 0 0 3px var(--chrome)}
+.manifest{margin-top:1.6rem;border-radius:var(--r);overflow:hidden;box-shadow:0 0 0 2px #d8cbad;background:#fff}
+.manifest h3{background:var(--deep);color:#fff;margin:0;padding:.9rem 1.3rem .75rem;font-size:1.2rem}
+.manifest ol{margin:0;padding:1rem 1.3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.3rem 1.4rem;list-style:none;counter-reset:seat}
+.manifest li{padding:.45rem 0;border-bottom:1px dashed #d6c8a8;display:grid;grid-template-columns:3rem 1fr;gap:.2rem}
+.manifest li::before{counter-increment:seat;content:counter(seat,decimal-leading-zero) "A";font:400 1rem/1.35 var(--display);color:var(--rust)}
+.manifest li b{display:block;color:var(--navy)}
+.manifest li span{grid-column:2;font-size:.9rem;color:#3b4250}
+.manifest .note{margin:0;padding:.2rem 1.3rem 1.1rem;font-size:.9rem;color:#4a4f58}
+
+/* tradeoffs */
+.advisory{border-radius:var(--r);overflow:hidden;background:var(--paper);box-shadow:0 0 0 3px var(--navy)}
+.advisory>header{background:var(--navy);color:var(--cream);padding:1rem 1.4rem;display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.advisory>header p{margin:0;font:700 .8rem/1.3 var(--body);letter-spacing:.2em;text-transform:uppercase}
+.advisory dl{margin:0;display:grid;grid-template-columns:repeat(2,1fr)}
+.advisory dl>div{padding:1.2rem 1.4rem;border-top:2px dashed #d6c8a8}
+.advisory dl>div:nth-child(odd){border-right:2px dashed #d6c8a8}
+.advisory dt{font:400 1.15rem/1.2 var(--display);color:var(--deep);margin-bottom:.35rem}
+.advisory dd{margin:0}
+
+/* status ticket */
+.ticket{display:grid;grid-template-columns:1fr 230px;border-radius:var(--r);background:#fffaf0;box-shadow:0 0 0 2px #d8cbad,0 12px 24px rgba(44,56,72,.12);overflow:hidden}
+.ticket .main{padding:1.5rem 1.7rem}
+.ticket .stub{background:var(--deep);color:#fff;padding:1.5rem 1.2rem;border-left:4px dashed var(--cream);display:flex;flex-direction:column;justify-content:space-between;gap:1rem}
+.stub .big{font:400 4rem/1 var(--display);color:var(--cream)}
+.stub p{margin:0;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
+.kit-status .kit-summary{font:400 1.25rem/1.4 var(--display);color:var(--navy);margin-top:0}
+.kit-status .kit-concept{font-size:.9rem;font-style:italic;color:#4a4f58}
+.kit-status ul{padding:0;list-style:none;margin:.8rem 0}
+.kit-revisions li{padding:.4rem 0;border-bottom:1px dashed #d6c8a8}
+.kit-sources li{display:inline-block;margin-right:1rem}
+.kit-sources li::before{content:"✈ ";color:var(--rust)}
+
+/* nav boarding pass */
+.pass{margin:3.4rem auto 0;background:#fff;border-radius:30px;box-shadow:0 0 0 3px var(--navy),0 18px 36px rgba(44,56,72,.2);overflow:hidden}
+.pass .top{background:var(--navy);color:var(--cream);display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;gap:1rem;flex-wrap:wrap}
+.pass .top b{font:400 1.4rem/1 var(--display)}
+.pass .top span{font:700 .78rem/1 var(--body);letter-spacing:.24em;text-transform:uppercase}
+.pass .body{display:grid;grid-template-columns:repeat(4,auto) 1fr;gap:1.4rem 2.2rem;padding:1.3rem 1.5rem;align-items:end}
+.pass .f small{display:block;font:700 .7rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#5a6070;margin-bottom:.35rem}
+.pass .f b{font:400 1.5rem/1 var(--display);color:var(--navy)}
+.barcode{height:44px;min-width:120px;background:repeating-linear-gradient(90deg,var(--navy) 0 3px,transparent 3px 5px,var(--navy) 5px 6px,transparent 6px 10px,var(--navy) 10px 14px,transparent 14px 16px)}
+.kit-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:0;border-top:4px dashed #d6c8a8}
+.kit-nav a{padding:1.1rem 1.5rem;text-decoration:none;font:400 1.15rem/1.2 var(--display);color:var(--navy)}
+.kit-nav a:hover{background:var(--cream);color:var(--rust)}
+.kit-nav .kit-index{background:var(--tang);color:var(--ink);text-align:center;border-radius:0}
+.kit-nav .kit-next{text-align:right}
+footer.foot{padding:2.2rem 0 2.6rem;font-size:.9rem;color:#4a4f58}
+
+/* dialog */
+.kit-dialog{width:min(860px,calc(100% - 24px));max-height:90vh;border:0;border-radius:28px;padding:0;background:var(--paper);color:var(--ink);box-shadow:0 0 0 4px var(--deep),0 30px 80px rgba(0,0,0,.45)}
+.kit-dialog::backdrop{background:rgba(29,37,51,.7)}
+.kit-dialog .kit-close{position:sticky;top:0;float:right;margin:1rem;font:700 .8rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:.75rem 1.1rem .65rem;cursor:pointer;z-index:2}
+.kit-notes{padding:1.5rem 1.8rem 2rem}
+.kit-notes h1{font:400 2.2rem/1.1 var(--display);color:var(--navy);margin-top:.4rem}
+.kit-notes h2{font-size:1.6rem;margin:1.8rem 0 .7rem;color:var(--deep)}
+.kit-notes figure{margin:0 0 1.2rem}
+.kit-notes figcaption{font-size:.88rem;color:#4a4f58}
+.kit-palette{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 1rem}
+.kit-swatch{display:inline-block;width:1.2em;height:1.2em;border-radius:50%;vertical-align:-.2em;box-shadow:0 0 0 1px #0003}
+.kit-notes dt{font-weight:700;color:var(--deep);margin-top:.6rem}
+.kit-notes dd{margin:0}
+
+@media (max-width:980px){
+  .hero .wrap,.grid2,.cabin,.mt{grid-template-columns:1fr}
+  .crew{grid-template-columns:1fr 1fr}
+  .crew>figure:first-child{grid-column:1/-1;max-width:280px}
+  .chips-pal{grid-template-columns:repeat(2,1fr)}
+  .ports{grid-template-columns:repeat(4,1fr)}
+  .pass .body{grid-template-columns:repeat(2,1fr)}
+  .barcode{grid-column:1/-1}
+}
+@media (max-width:620px){
+  .crew{grid-template-columns:1fr}
+  .crew>figure:first-child{max-width:220px}
+  .advisory dl{grid-template-columns:1fr}
+  .advisory dl>div:nth-child(odd){border-right:0}
+  .ticket{grid-template-columns:1fr}
+  .ticket .stub{border-left:0;border-top:4px dashed var(--cream);flex-direction:row;align-items:center}
+  .kit-nav{grid-template-columns:1fr}
+  .kit-nav a,.kit-nav .kit-next{text-align:center}
+  .ports{grid-template-columns:1fr 1fr}
+  .stamp{width:84px;height:84px;top:-40px;right:8px}
+  .stamp b{font-size:1.2rem}
+  .kit-project dl{grid-template-columns:1fr}
+  .kit-project dt{padding-top:.5rem}
+  .card{padding:1.3rem 1.2rem}
+  .window{padding:10px;border-radius:40px}.window .glass{border-radius:32px}
+  .num{font-size:3rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .tram,.ship,.rays{animation:none}
+  .shade{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="wrap">
+    <span class="mark"><svg class="wing" viewBox="0 0 46 16" aria-hidden="true"><path d="M0 8 Q12 2 23 2 Q34 2 46 8 Q34 5 23 7 Q12 5 0 8Z" fill="#f0af72"/><path d="M4 11 Q14 7 23 7 Q32 7 42 11 Q32 9 23 10 Q14 9 4 11Z" fill="#f2e8d3"/><circle cx="23" cy="7" r="3.2" fill="#298fb8"/></svg>Streamline Skyways · Style study 22</span>
+    <button class="notes-btn" type="button" id="notes-btn">Read the notes</button>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Agentnagar style studies · No. 22 · Streamline retro future</p>
+      <p class="fly" aria-hidden="true">Fly to</p>
+      <h1 class="dest"><span class="sr">Fly to </span>Agentnagar</h1>
+      <span class="speed hero-speed"></span><span class="speed o hero-speed"></span><span class="speed r hero-speed"></span>
+      <p class="tag" id="tagline"></p>
+      <p class="kit-small" style="color:#d9d2c0;max-width:46ch">An illustrative travel brochure for comparing styles. There are no flights, fares, routes or bookings; the city itself is not yet built.</p>
+      <ul class="chips" aria-label="Brochure contents">
+        <li><a href="#destination">Destination</a></li><li><a href="#look">The look</a></li><li><a href="#views">Window views</a></li>
+        <li><a href="#crew">Cabin crew</a></li><li><a href="#advisory">Advisory</a></li><li><a href="#ticket">Ticket</a></li>
+      </ul>
+    </div>
+    <figure style="margin:0">
+      <div class="poster">
+        <svg viewBox="0 0 600 680" role="img" aria-labelledby="pt">
+          <title id="pt">Illustrative travel poster: a streamlined cream tram with a teal stripe glides along an elevated guideway past rounded, banded towers and a finned spire, an airship drifts under a tangerine sun, and a teal river runs below.</title>
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7ecd4"/><stop offset=".6" stop-color="#cfe6e4"/><stop offset="1" stop-color="#a9d4dd"/></linearGradient>
+            <linearGradient id="chr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#c9ccc8"/><stop offset=".55" stop-color="#8e979c"/><stop offset="1" stop-color="#e8e6de"/></linearGradient>
+            <linearGradient id="riv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#298fb8"/><stop offset="1" stop-color="#0c6c92"/></linearGradient>
+            <linearGradient id="bld" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbf5e7"/><stop offset=".7" stop-color="#efe3c8"/><stop offset="1" stop-color="#d9caa8"/></linearGradient>
+          </defs>
+          <rect width="600" height="680" fill="url(#sky)"/>
+          <g class="rays" opacity=".35">
+            <g fill="#f0af72">
+              <path d="M430 210 L700 170 L700 196Z"/><path d="M430 210 L700 250 L700 276Z"/><path d="M430 210 L650 -40 L680 -20Z"/><path d="M430 210 L560 -60 L590 -50Z"/><path d="M430 210 L160 170 L160 196Z"/><path d="M430 210 L200 -30 L230 -44Z"/><path d="M430 210 L330 -70 L360 -70Z"/><path d="M430 210 L700 380 L690 400Z"/>
+            </g>
+          </g>
+          <circle cx="430" cy="210" r="104" fill="#f0af72"/>
+          <circle cx="430" cy="210" r="104" fill="none" stroke="#f7e1c3" stroke-width="6" stroke-dasharray="2 14"/>
+          <!-- far skyline -->
+          <g fill="#a8cdd4">
+            <rect x="40" y="250" width="54" height="260" rx="27"/><rect x="104" y="300" width="40" height="210" rx="20"/>
+            <rect x="470" y="280" width="48" height="230" rx="24"/><rect x="528" y="320" width="40" height="190" rx="20"/>
+          </g>
+          <!-- finned spire -->
+          <g>
+            <path d="M296 90 L306 60 L316 90 L322 430 L290 430Z" fill="url(#chr)"/>
+            <rect x="262" y="160" width="88" height="300" rx="44" fill="url(#bld)" stroke="#b1b1ad" stroke-width="3"/>
+            <path d="M262 250 L226 330 L262 320Z M350 250 L386 330 L350 320Z" fill="#0c6c92"/>
+            <g stroke="#298fb8" stroke-width="5" fill="none"><path d="M268 210 H344"/><path d="M266 226 H346"/><path d="M264 242 H348"/></g>
+            <g fill="#2c3848"><circle cx="306" cy="290" r="9"/><circle cx="306" cy="324" r="9"/><circle cx="306" cy="358" r="9"/></g>
+          </g>
+          <!-- airship -->
+          <g class="ship">
+            <ellipse cx="150" cy="140" rx="92" ry="30" fill="url(#chr)"/>
+            <path d="M60 140 Q150 128 242 140" stroke="#0c6c92" stroke-width="6" fill="none"/>
+            <path d="M62 128 L40 108 L52 140 L40 170 L62 152Z" fill="#8d5431"/>
+            <rect x="128" y="166" width="46" height="14" rx="7" fill="#2c3848"/>
+          </g>
+          <!-- mid buildings rounded with banding -->
+          <g>
+            <path d="M150 520 V380 Q150 340 200 340 H236 V520Z" fill="url(#bld)" stroke="#b1b1ad" stroke-width="3"/>
+            <g stroke="#0c6c92" stroke-width="4"><path d="M154 380 H236"/><path d="M152 400 H236"/><path d="M151 420 H236"/></g>
+            <path d="M372 520 V360 H420 Q470 360 470 410 V520Z" fill="url(#bld)" stroke="#b1b1ad" stroke-width="3"/>
+            <g fill="#2c3848"><circle cx="400" cy="400" r="8"/><circle cx="428" cy="400" r="8"/><circle cx="400" cy="430" r="8"/><circle cx="428" cy="430" r="8"/></g>
+            <path d="M376 460 H466" stroke="#f0af72" stroke-width="6"/>
+            <path d="M30 520 V430 Q30 400 64 400 H120 V520Z" fill="#efe3c8" stroke="#b1b1ad" stroke-width="3"/>
+            <path d="M480 520 V440 Q480 420 506 420 H580 V520Z" fill="#efe3c8" stroke="#b1b1ad" stroke-width="3"/>
+            <!-- glass dome library -->
+            <path d="M470 520 V486 Q530 440 590 486 V520Z" fill="#8fc7d6" stroke="#b1b1ad" stroke-width="3"/>
+          </g>
+          <!-- guideway -->
+          <g>
+            <path d="M-10 504 H610" stroke="#e9e3d2" stroke-width="18"/>
+            <path d="M-10 496 H610" stroke="url(#chr)" stroke-width="6"/>
+            <g fill="#e9e3d2" stroke="#b1b1ad" stroke-width="2"><path d="M90 512 L104 600 H78Z"/><path d="M300 512 L314 600 H288Z"/><path d="M510 512 L524 600 H498Z"/></g>
+          </g>
+          <!-- tram -->
+          <g class="tram">
+            <path d="M40 492 Q40 452 90 450 H250 Q300 452 318 480 Q322 492 310 492Z" fill="#fbf5e7" stroke="#8e979c" stroke-width="3"/>
+            <path d="M44 480 H316" stroke="#0c6c92" stroke-width="7"/>
+            <path d="M60 488 H312" stroke="#f0af72" stroke-width="3"/>
+            <g fill="#2c3848"><rect x="84" y="458" width="30" height="14" rx="7"/><rect x="124" y="458" width="30" height="14" rx="7"/><rect x="164" y="458" width="30" height="14" rx="7"/><rect x="204" y="458" width="30" height="14" rx="7"/><path d="M252 458 H276 Q296 462 304 472 H252Z"/></g>
+            <g stroke="#f0af72" stroke-width="4" stroke-linecap="round" opacity=".9"><path d="M-40 462 H20"/><path d="M-70 474 H14"/><path d="M-30 486 H20"/></g>
+          </g>
+          <!-- river -->
+          <rect y="560" width="600" height="120" fill="url(#riv)"/>
+          <g stroke="#cfe6e4" stroke-width="4" fill="none" stroke-linecap="round" opacity=".8"><path d="M30 590 q20 -8 40 0 t40 0"/><path d="M250 610 q20 -8 40 0 t40 0 t40 0"/><path d="M430 585 q20 -8 40 0 t40 0"/><path d="M80 640 q20 -8 40 0 t40 0 t40 0"/><path d="M400 650 q20 -8 40 0 t40 0"/></g>
+          <!-- trees -->
+          <g fill="#506e2c"><circle cx="30" cy="538" r="18"/><circle cx="250" cy="534" r="20"/><circle cx="352" cy="538" r="17"/><circle cx="578" cy="540" r="18"/></g>
+          <g fill="#6f8f45"><circle cx="24" cy="532" r="9"/><circle cx="244" cy="528" r="10"/><circle cx="346" cy="532" r="8"/></g>
+          <path d="M0 552 H600" stroke="#f2e8d3" stroke-width="10"/>
+        </svg>
+      </div>
+      <figcaption class="illus">Illustrative poster drawn for this page in the style. Not a concept sheet.</figcaption>
+    </figure>
+  </div>
+  <div class="livery" aria-hidden="true"></div>
+</header>
+
+<main>
+  <section class="panel" id="destination" aria-labelledby="h-dest">
+    <div class="wrap rel">
+      <div class="stamp" aria-hidden="true"><span>Arrivals<b>22</b>Agentnagar</span></div>
+      <div class="head"><span class="num" aria-hidden="true">01</span><h2 id="h-dest"><small>Your destination</small>Agentnagar, the maker city</h2></div>
+      <div class="grid2">
+        <div class="card" id="project-slot"></div>
+        <div class="card">
+          <h3>Points of interest in the reference district</h3>
+          <ol class="itin" id="itin"></ol>
+          <p class="kit-small">Every style study draws this same district, so the thirty looks can be compared like for like.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="look" data-core="style" aria-labelledby="h-look">
+    <div class="wrap rel">
+      <div class="stamp" aria-hidden="true"><span>Style<b>SR</b>Cleared</span></div>
+      <div class="head"><span class="num" aria-hidden="true">02</span><h2 id="h-look"><small>The Streamline look</small>Enamel, chrome and a tram</h2></div>
+      <div class="grid2">
+        <div class="card"><h3>Intent</h3><p id="intent"></p><h3 style="margin-top:1.2rem">Features of the line</h3><ol class="principles" id="principles"></ol></div>
+        <div class="card"><h3>Palette, sampled from the sheets</h3><p class="kit-small">Each chip is an average of pixels taken from the selected concept sheets.</p><ul class="chips-pal" id="palette"></ul></div>
+      </div>
+      <div class="mt">
+        <div class="card"><h3>Materials and texture</h3><p id="materials"></p></div>
+        <div class="card"><h3>Typography</h3><p id="type"></p><div class="typespec" aria-hidden="true"><span class="a">Agentnagar</span><span class="b">Fly to</span><span class="c">Tram boulevard</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="views" data-core="views" aria-labelledby="h-views">
+    <div class="wrap rel">
+      <div class="head"><span class="num" aria-hidden="true">03</span><h2 id="h-views"><small>Window-seat views</small>One district, four sheets</h2></div>
+      <div class="tabs" role="tablist" aria-label="Concept sheets" id="tabs"></div>
+      <div class="cabin">
+        <div>
+          <div class="window"><div class="glass" id="glass" role="tabpanel" aria-live="polite"></div></div>
+          <p class="cap" id="glass-cap"></p>
+          <div class="landmarks" id="landmarks"></div>
+          <p class="concept" id="concept-note"></p>
+        </div>
+        <div>
+          <p style="margin-top:0"><b>Choose a porthole</b> to see one scene up close; choose it again for the whole sheet.</p>
+          <div class="ports" id="ports"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="crew" data-core="agents" aria-labelledby="h-crew">
+    <div class="wrap rel">
+      <div class="stamp" aria-hidden="true"><span>Crew<b>A1</b>On board</span></div>
+      <div class="head"><span class="num" aria-hidden="true">04</span><h2 id="h-crew"><small>Your cabin crew</small>City Agent A1 and the Guild</h2></div>
+      <div class="crew">
+        <figure>
+          <svg viewBox="0 0 260 320" role="img" aria-labelledby="a1t" style="width:100%;height:auto;background:#fbf5e7;border-radius:26px;box-shadow:0 0 0 3px #b1b1ad">
+            <title id="a1t">Illustrative drawing of the robot agent as the sheets show it: a white enamel humanoid with a dark visor, blue eye arcs, teal panels and gold-ringed joints.</title>
+            <defs><linearGradient id="enm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d9d6cc"/></linearGradient></defs>
+            <rect x="0" y="250" width="260" height="70" fill="#cfe6e4"/>
+            <path d="M40 320 Q40 220 130 212 Q220 220 220 320Z" fill="url(#enm)" stroke="#8e979c" stroke-width="3"/>
+            <path d="M104 236 Q130 250 156 236 L150 300 Q130 310 110 300Z" fill="#298fb8" opacity=".85"/>
+            <circle cx="62" cy="248" r="20" fill="none" stroke="#c9a14a" stroke-width="6"/><circle cx="198" cy="248" r="20" fill="none" stroke="#c9a14a" stroke-width="6"/>
+            <rect x="116" y="186" width="28" height="30" rx="8" fill="#5b6670"/>
+            <ellipse cx="130" cy="130" rx="66" ry="72" fill="url(#enm)" stroke="#8e979c" stroke-width="3"/>
+            <path d="M74 120 Q76 76 130 72 Q184 76 186 120 Q186 160 130 166 Q74 160 74 120Z" fill="#1d2533"/>
+            <path d="M92 124 q12 -12 24 0" stroke="#7fd3f0" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M144 124 q12 -12 24 0" stroke="#7fd3f0" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <circle cx="196" cy="130" r="16" fill="#0c6c92" stroke="#c9a14a" stroke-width="5"/>
+            <path d="M84 96 Q110 82 140 84" stroke="#ffffff55" stroke-width="5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <figcaption>Illustrative, drawn from the Conversation panel. The sheets show no legible leaf badge.</figcaption>
+        </figure>
+        <figure id="a1-conv"><figcaption></figcaption></figure>
+        <figure id="a1-mobile"><figcaption></figcaption></figure>
+      </div>
+      <div class="card" style="margin-top:1.4rem"><p id="agents-text" style="margin-top:0"></p><p id="a1-text" style="margin-bottom:0"></p></div>
+      <div class="manifest">
+        <h3>Crew manifest: the fourteen Guild residents</h3>
+        <ol id="guild"></ol>
+        <p class="note" id="guild-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="advisory" data-core="tradeoffs" aria-labelledby="h-adv">
+    <div class="wrap rel">
+      <div class="head"><span class="num" aria-hidden="true">05</span><h2 id="h-adv"><small>Passenger advisory</small>Strengths and trade-offs</h2></div>
+      <div class="advisory">
+        <header><p>Please read before boarding</p><p>Internal comparison · candid</p></header>
+        <dl id="tradeoffs"></dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="ticket" aria-labelledby="h-ticket">
+    <div class="wrap rel">
+      <div class="head"><span class="num" aria-hidden="true">06</span><h2 id="h-ticket"><small>Ticket and itinerary</small>Status of this study</h2></div>
+      <div class="ticket">
+        <div class="main" id="status-slot"></div>
+        <div class="stub" aria-hidden="true"><p>Style</p><span class="big">22</span><p>Concept study<br>Four sheets</p></div>
+      </div>
+
+      <div class="pass" id="pass">
+        <div class="top"><b>Boarding pass</b><span>Streamline Skyways · connecting flights</span></div>
+        <div class="body">
+          <div class="f"><small>Passenger</small><b>Reviewer</b></div>
+          <div class="f"><small>Flight</small><b>SS 22</b></div>
+          <div class="f"><small>From</small><b id="from-no"></b></div>
+          <div class="f"><small>To</small><b id="to-no"></b></div>
+          <div class="barcode" aria-hidden="true"></div>
+        </div>
+        <div id="nav-slot"></div>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="livery" aria-hidden="true"></div>
+<footer class="foot"><div class="wrap"><p id="foot"></p></div></footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+  const A = window.AGENTNAGAR;
+  const S = Kit.style('22-streamline-retro-future');
+  const el = Kit.el;
+  const C = {
+    intent: 'A painted, optimistic city of aerodynamic forms. Cream enamel, teal and orange accents, chrome trim, and glass canopies define the look, with finned towers and airships in the skyline. Streamlined trams on elevated guideways are the most recognizable element.',
+    principles: [
+      'Everything is aerodynamic: rounded volumes, horizontal banding, porthole windows and curved glass fronts, even on buildings that never move.',
+      'One enamel palette at every scale: cream bodies with teal and orange accents and chrome trim on furniture, vehicles and interfaces alike. That consistency is what holds the close-ups together.',
+      'The tram is the signature: streamlined trams appear in every sheet and anchor the city from the map to the street.',
+      'Optimism in daylight: clean painted illustration, bright tidy interiors and warm sun; even the night scene keeps gold lamp reflections rather than gloom.'
+    ],
+    palette: [
+      { name: 'Cream enamel', hex: '#f2e8d3' }, { name: 'Chrome', hex: '#b1b1ad' },
+      { name: 'River teal', hex: '#298fb8' }, { name: 'Deep teal', hex: '#0c6c92' },
+      { name: 'Sunset tangerine', hex: '#f0af72' }, { name: 'Rust orange', hex: '#8d5431' },
+      { name: 'Uniform navy', hex: '#2c3848' }, { name: 'Boulevard green', hex: '#506e2c' }
+    ],
+    materials: 'Cream enamel panels, polished chrome trim and handrails, curved glass canopies and domes, pale stone paving, warm wood and orange upholstery inside trams and homes. Surfaces are painted with soft gradients and gentle highlights rather than grain or grit; texture comes from banding, portholes and reflections.',
+    type: 'The sheets letter signage in clean geometric capitals (WORKSHOP, CONVERSATION) and use rounded sans on the kiosk buttons. This page pairs Righteous for streamline display, Shrikhand for the brochure script accent and Josefin Sans for body text, all open-licence and bundled locally.',
+    agents: 'The Conversation panel (sheet 01) draws the city agent as a white-and-teal humanoid robot with a dark visor, blue eye arcs and gold-ringed joints, talking with a resident on a riverside terrace. The Mobile panel (sheet 03) instead shows a human portrait labelled "Your Agent", and the 2026-09-19 review notes that nothing in the art (name, badge or emblem) ties the two together. No leaf badge is legible on the robot. Residents in Build mode and Transit wear navy-and-cream uniforms with orange trim. No Guild resident is depicted in these sheets, so the crew manifest lists names and proposed roles only.',
+    tradeoffs: [
+      { label: 'Map versus street', text: 'Overhead views read as pale rounded blocks on tree-lined boulevards, with the river, bridge and tram stop easy to find. But the selected overview puts a fountain ringed by trees at the centre of the square rather than one living shade tree, although the map labels it "Tree Square", and its North bridge has tall towered pylons rather than a low crossing. Street scale is the strength: cafes, banners and the tram at ground level.' },
+      { label: 'Transit continuity', text: 'Sheet 00 runs trams at ground level on the boulevard; sheets 01 to 03 show them on elevated guideways, with no shared route to reconcile the two (review 2026-09-19).' },
+      { label: 'Device and production cost', text: 'Proposed adaptation: keep rounded silhouettes, the cream and teal palette and the tram at every tier. Lower tiers would drop chrome reflections, airships and crowds; higher tiers could add enamel gloss and glass transparency. Glossy enamel and glass are the costly parts to render well.' },
+      { label: 'UI legibility', text: 'The kiosk\'s Browse, Book and Ask pills, the phone\'s list rows and the AR tabletop tags (Learn, Make, Gather, Explore) are cleanly lettered and share the enamel palette. Banner slogans are decorative filler and would need real copy.' },
+      { label: 'Identity drift', text: 'The skyline drifts toward a generic science-fiction metropolis of spires that overlaps with the Art Deco candidate (18). The robot and the phone portrait do not read as the same agent.' },
+      { label: 'Frame defects and repairs', text: 'The selected overview clips its MAP and TOP-DOWN labels at the top edge, and three sheets crop the footer caption. A later overview draft that restores the living tree was inspected but not promoted: the park sits south of the tram, the overhead view tilts, and bridge and roof shapes still differ (REPAIR-STATUS).' }
+    ]
+  };
+  const LANDMARKS = [
+    'Named on the map: River (west), Workshop (west, arched glass halls), Tree Square (centre), Library (east, glass dome) and Tram boulevard (south); the North bridge crosses at the top. The street view looks past the Workshop hall and café tables toward downtown spires, with the tram at the right.',
+    'Interiors and gatherings: the Workshop bench with a streamlined model, a Home with a river-and-guideway view, the Conversation between a resident and the robot agent, and a riverside Gathering under a curved band shell.',
+    'Build mode places a glass wireframe with axis arrows on a riverside plot; Transit rides inside a tram with orange seats; Night and rain shows a wet plaza with gold reflections; Waterfront park runs along the river with an arched bridge beyond.',
+    'Facility: the Riverfront Maker Library kiosk (Browse, Book, Ask). Mobile: an "Explore the Riverfront" phone with a human "Your Agent" portrait. Rooftop café at sunset. AR tabletop with Learn, Make, Gather and Explore tags.'
+  ];
+
+  document.getElementById('tagline').textContent = A.tagline;
+
+  // project
+  const pb = Kit.projectBlock();
+  document.getElementById('project-slot').append(pb);
+  const itin = document.getElementById('itin');
+  A.district.forEach((d) => itin.append(el('li', {}, [el('b', { text: d.name }), d.note])));
+
+  // style
+  document.getElementById('intent').textContent = C.intent;
+  const pr = document.getElementById('principles');
+  C.principles.forEach((p, i) => pr.append(el('li', {}, [el('span', { 'aria-hidden': 'true', text: String(i + 1) }), el('p', { style: 'margin:0', text: p })])));
+  const pal = document.getElementById('palette');
+  C.palette.forEach((p) => pal.append(el('li', {}, [el('div', { class: 'sw', style: `background:${p.hex}`, 'aria-hidden': 'true' }), el('p', {}, [p.name, el('br'), el('code', { text: p.hex })])])));
+  document.getElementById('materials').textContent = C.materials;
+  document.getElementById('type').textContent = C.type;
+
+  // views
+  const tabs = document.getElementById('tabs');
+  const glass = document.getElementById('glass');
+  const cap = document.getElementById('glass-cap');
+  const ports = document.getElementById('ports');
+  const lm = document.getElementById('landmarks');
+  document.getElementById('concept-note').textContent = A.conceptNote;
+  const ORDER = ['tl', 'tr', 'bl', 'br'];
+  let current = 0;
+  function show(i, panel) {
+    current = i;
+    [...tabs.children].forEach((b, j) => { b.setAttribute('aria-selected', String(j === i)); b.tabIndex = j === i ? 0 : -1; });
+    glass.replaceChildren(panel ? Kit.sheetImg(S, i, panel, { eager: true }) : Kit.sheetImg(S, i, null, { eager: true }));
+    const sheet = S.sheets[i];
+    cap.textContent = panel
+      ? `${sheet.title} (${sheet.revision}), ${Kit.PANEL_NAMES[i][ORDER.indexOf(panel)]} panel. Concept study.`
+      : `${sheet.title} (${sheet.revision}), full sheet. Concept study.`;
+    glass.setAttribute('aria-labelledby', 'tab-' + i);
+    lm.replaceChildren(el('b', { text: 'In this sheet: ' }), LANDMARKS[i]);
+    ports.replaceChildren();
+    ORDER.forEach((p, k) => {
+      const b = el('button', { class: 'port', type: 'button', 'aria-pressed': String(panel === p) }, [el('span', { class: 'ring' }, [Kit.sheetImg(S, i, p)]), Kit.PANEL_NAMES[i][k]]);
+      b.addEventListener('click', () => { const again = panel === p; show(i, again ? null : p); ports.children[k].focus(); });
+      ports.append(b);
+    });
+    wholeBtn.hidden = !panel;
+  }
+  const wholeBtn = el('button', { class: 'notes-btn', type: 'button', style: 'margin:.2rem 0 1rem', text: 'Back to the whole sheet' });
+  wholeBtn.addEventListener('click', () => { show(current, null); tabs.children[current].focus(); });
+  ports.before(wholeBtn);
+  S.sheets.forEach((sheet, i) => {
+    const b = el('button', { role: 'tab', type: 'button', id: 'tab-' + i, text: `${String(i).padStart(2, '0')} ${sheet.title}` });
+    b.addEventListener('click', () => show(i, null));
+    b.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      const n = (current + d + 4) % 4; show(n, null); tabs.children[n].focus();
+    });
+    tabs.append(b);
+  });
+  show(0, null);
+
+  // agents
+  const conv = Kit.sheetImg(S, 1, 'bl');
+  conv.classList.add('frame-r');
+  document.getElementById('a1-conv').prepend(conv);
+  document.querySelector('#a1-conv figcaption').textContent = `Sheet 01, Conversation panel (${S.sheets[1].revision}): the robot agent. Concept study.`;
+  const mob = Kit.sheetImg(S, 3, 'tr');
+  mob.classList.add('frame-r');
+  document.getElementById('a1-mobile').prepend(mob);
+  document.querySelector('#a1-mobile figcaption').textContent = `Sheet 03, Mobile panel (${S.sheets[3].revision}): a human "Your Agent" portrait. Concept study.`;
+  document.getElementById('agents-text').textContent = C.agents;
+  document.getElementById('a1-text').textContent = A.agentA1 + ' In this study the sheets do not establish that recurrence clearly.';
+  const g = document.getElementById('guild');
+  A.guild.forEach((r) => g.append(el('li', {}, [el('b', { text: r.name }), el('span', { text: r.role })])));
+  document.getElementById('guild-note').textContent = A.guildNote + ' Seat numbers are decoration; the sheets depict none of these residents.';
+
+  // tradeoffs
+  const dl = document.getElementById('tradeoffs');
+  C.tradeoffs.forEach((t) => dl.append(el('div', {}, [el('dt', { text: t.label }), el('dd', { text: t.text })])));
+
+  // status and nav
+  document.getElementById('status-slot').append(Kit.statusBlock(S));
+  document.getElementById('from-no').textContent = S.prev.slice(0, 2);
+  document.getElementById('to-no').textContent = S.next.slice(0, 2);
+  Kit.mountNav(document.getElementById('nav-slot'), S);
+  document.getElementById('foot').textContent = `${S.number} ${S.name} · ${A.name} by ${A.by}. ${A.nameNote} ${A.status}`;
+
+  // notes
+  Kit.notesDialog(S, C, document.getElementById('notes-btn'));
+
+  // stamps land when panels scroll into view
+  const panels = document.querySelectorAll('section.panel .wrap');
+  if ('IntersectionObserver' in window && !Kit.reducedMotion()) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('inview'); io.unobserve(e.target); } }), { threshold: .25 });
+    panels.forEach((p) => io.observe(p));
+  } else panels.forEach((p) => p.classList.add('inview'));
+})();
+</script>
+</body>
+</html>

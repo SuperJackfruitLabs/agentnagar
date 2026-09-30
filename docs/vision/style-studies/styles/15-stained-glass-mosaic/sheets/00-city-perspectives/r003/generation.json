@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "69675e6b78a851e2857017690f17d96467f1d14ddaeb1a1b94c655f551041cfb",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ba23d1d5a599ae269b4089068a83451ad4ff0a008de3a00f0ef261e219ca0b68"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/15-stained-glass-mosaic/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

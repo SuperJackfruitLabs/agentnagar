@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "34e5087baad3e0249f8d9a35dd50248b79189e233ddb5cb6f6efe0d3dd6cd396",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "2890ddf0bef48b4803f214c54ce0c6b8f5752daa62a66713867896baafc29e0d"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/11-low-poly-tropical-diorama/01-living-community.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

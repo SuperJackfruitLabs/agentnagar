@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Agentnagar — planning atlas</title>
+  <style>
+    :root { --paper:#f7f4e9; --ink:#203c34; --muted:#53645a; --green:#32634a; --line:#d6d9c9; --yellow:#f4ce62; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    button,a,input { -webkit-tap-highlight-color:transparent; }
+    button { font:inherit; color:inherit; cursor:pointer; }
+    button:focus-visible,a:focus-visible { outline:3px solid #7758bb; outline-offset:4px; }
+    button:disabled { cursor:default; }
+    a { color:var(--green); text-underline-offset:3px; }
+    .wrap { width:min(1380px,100%); margin:auto; padding:28px 36px 52px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line); padding-bottom:18px; }
+    .brand { font-size:14px; letter-spacing:.13em; font-weight:750; text-transform:uppercase; display:flex; align-items:center; gap:12px; }
+    .fruit { display:inline-grid; place-items:center; width:30px; height:38px; border:2px solid var(--green); border-radius:48% 50% 46% 46%; background:var(--yellow); font-size:15px; transform:rotate(14deg); }
+    .stamp,.eyebrow { text-transform:uppercase; font-size:11px; letter-spacing:.13em; font-weight:700; color:var(--muted); }
+    .intro { padding:36px 0 24px; max-width:780px; }
+    h1 { font-family:Georgia,"Times New Roman",serif; font-weight:400; font-size:clamp(35px,4.4vw,64px); line-height:1.08; letter-spacing:-.04em; margin:12px 0 18px; }
+    .intro p { color:var(--muted); font-size:17px; max-width:640px; margin:0; }
+    .toolbar { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:14px; margin-bottom:16px; }
+    .phases,.viewer { display:flex; flex-wrap:wrap; padding:5px; border:1px solid var(--line); border-radius:30px; background:#fffaf0; gap:3px; }
+    .phases button,.viewer button { border:0; background:transparent; border-radius:22px; min-height:44px; padding:9px 22px; font-weight:650; }
+    .phases button[aria-pressed="true"],.viewer button[aria-pressed="true"] { background:var(--ink); color:var(--paper); }
+    .phase-note { font-size:13px; color:var(--muted); }
+    .atlas { display:grid; grid-template-columns:minmax(0,1fr) 300px; border:1px solid var(--line); border-radius:20px; overflow:hidden; background:#fffaf1; box-shadow:0 12px 40px #233d3207; }
+    .map-column { min-width:0; }
+    .map { position:relative; aspect-ratio:1040/690; overflow:hidden; background:#e5ebd6; }
+    .map svg { width:100%; height:100%; display:block; }
+    .map-title { position:absolute; top:18px; left:22px; font:italic 17px Georgia,serif; color:#40583c; pointer-events:none; }
+    .compass { position:absolute; bottom:20px; left:22px; font-size:11px; letter-spacing:.12em; color:#40583c; }
+    .pin { position:absolute; transform:translate(-50%,-50%); min-height:36px; padding:6px 10px; border:1px solid #b3bea8; border-radius:8px; background:#fffaf1ed; font-size:11px; font-weight:700; white-space:nowrap; box-shadow:0 3px 8px #28432c12; }
+    .pin[aria-pressed="true"] { background:var(--ink); color:white; border-color:var(--ink); }
+    .pin::before { content:""; position:absolute; top:-8px; left:calc(50% - 4px); width:7px; height:7px; border-radius:50%; background:var(--green); border:2px solid #fffaf1; }
+    .map-caption { padding:13px 21px; font-size:12px; color:var(--muted); border-top:1px solid var(--line); }
+    aside { padding:24px; border-left:1px solid var(--line); display:flex; flex-direction:column; }
+    aside h2 { font:400 30px/1.14 Georgia,serif; margin:12px 0 15px; letter-spacing:-.02em; }
+    aside p { font-size:14px; color:var(--muted); margin:0 0 19px; }
+    .detail-label { display:block; margin:7px 0 5px; text-transform:uppercase; font-size:10px; letter-spacing:.11em; font-weight:750; }
+    #detail-build { color:var(--ink); }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; padding-top:10px; }
+    .tag { font-size:10px; font-weight:700; border:1px solid var(--line); border-radius:5px; padding:5px 7px; }
+    .destination-list { display:flex; flex-wrap:wrap; gap:8px; padding:18px 0; }
+    .destination-list button { border:1px solid var(--line); background:transparent; border-radius:8px; padding:10px 12px; min-height:44px; font-size:12px; }
+    .destination-list button[aria-pressed="true"] { border-color:var(--green); background:#e5ebd6; }
+    .guild { margin:8px 0 28px; padding:30px; border:1px solid var(--line); border-radius:20px; background:#fffaf1; }
+    .guild h2 { font:400 36px/1.12 Georgia,serif; letter-spacing:-.025em; margin:10px 0 15px; max-width:720px; }
+    .guild-intro { max-width:780px; color:var(--muted); font-size:14px; margin:0 0 18px; }
+    .viewer-row { display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin:0 0 8px; }
+    .viewer-label { font-size:13px; font-weight:650; }
+    .tier-note { font-size:13px; color:var(--muted); margin:6px 0 20px; min-height:22px; }
+    .guild-grid { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(300px,.9fr); gap:22px; align-items:start; }
+    .districts { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .district { border:1px solid #c9d3bd; border-radius:12px; background:#e5ebd6; padding:12px 14px 14px; min-width:0; }
+    .district h3 { font:600 12px/1.3 system-ui,sans-serif; letter-spacing:.06em; text-transform:uppercase; color:#40583c; margin:0 0 10px; }
+    .district h3 small { display:block; font-weight:400; letter-spacing:0; text-transform:none; color:var(--muted); }
+    .markers { display:flex; flex-wrap:wrap; gap:7px; }
+    .marker { display:inline-flex; align-items:center; gap:7px; border:1px solid #b3bea8; border-radius:8px; background:#fffaf1; padding:7px 10px; min-height:40px; font-size:12px; font-weight:650; text-align:left; }
+    .marker[aria-pressed="true"] { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+    .marker .dot { width:9px; height:9px; border-radius:50%; flex:none; border:1px solid #fffaf1; background:#8e9a8c; }
+    .marker[data-state="working"] .dot { background:#3c8a53; }
+    .marker[data-state="waiting-for-review"] .dot { background:#c98a1e; }
+    .marker[data-state="idle"] .dot { background:#8e9a8c; }
+    .marker[data-state="stale"] .dot { background:#b0473a; }
+    .marker .state-text { font-weight:400; opacity:.85; }
+    .work-card { border:1px solid var(--line); border-radius:14px; background:#f3f5ea; padding:22px; min-width:0; }
+    .work-card h3 { font:400 27px/1.12 Georgia,serif; margin:6px 0 4px; letter-spacing:-.02em; }
+    .work-card dl { margin:14px 0; display:grid; grid-template-columns:auto minmax(0,1fr); gap:6px 14px; font-size:13px; }
+    .work-card dt { text-transform:uppercase; font-size:10px; letter-spacing:.1em; font-weight:750; color:var(--muted); padding-top:2px; }
+    .work-card dd { margin:0; }
+    .state-pill { display:inline-block; padding:2px 9px; border-radius:20px; font-size:12px; font-weight:650; border:1px solid #b3bea8; background:#fffaf1; }
+    .state-pill[data-state="stale"] { border-color:#b0473a; color:#7d2e24; }
+    .state-pill[data-state="waiting-for-review"] { border-color:#c98a1e; color:#6e4a09; }
+    .work-extra { font-size:13px; color:var(--muted); margin:10px 0; }
+    .work-extra ul { margin:6px 0 0; padding-left:18px; }
+    .work-actions { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 8px; }
+    .work-actions button { border:1px solid var(--line); border-radius:8px; background:#fffaf1; padding:9px 12px; min-height:44px; font-size:12px; font-weight:650; }
+    .work-actions button[aria-disabled="true"] { opacity:.5; border-style:dashed; }
+    .work-actions button[aria-disabled="false"] { border-color:var(--green); background:#e5ebd6; }
+    .work-explain { font-size:12px; color:var(--muted); margin:0 0 10px; min-height:40px; }
+    .public-note { font-size:11px; color:var(--muted); border-top:1px solid var(--line); padding-top:10px; margin:0; }
+    .guild-foot { font-size:12px; color:var(--muted); margin:18px 0 0; }
+    .strip { display:grid; grid-template-columns:repeat(3,1fr); gap:26px; border-top:1px solid var(--line); padding:25px 0 35px; }
+    .strip h3 { font:400 24px Georgia,serif; margin:0 0 10px; }
+    .strip p { margin:0; font-size:13px; color:var(--muted); }
+    .number { color:#64856c; font-size:11px; letter-spacing:.1em; display:block; margin-bottom:10px; }
+    .residency { margin:0 0 28px; padding:30px; border:1px solid var(--line); border-radius:20px; background:#fffaf1; }
+    .residency h2 { font:400 36px/1.12 Georgia,serif; letter-spacing:-.025em; margin:10px 0 15px; max-width:680px; }
+    .residency-intro { max-width:780px; color:var(--muted); font-size:14px; }
+    .routes { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:20px 0 6px; }
+    .route { border:1px solid var(--line); border-radius:12px; background:#f3f5ea; padding:14px 16px; }
+    .route strong { display:block; font-size:13px; margin-bottom:6px; }
+    .route p { margin:0; font-size:12px; color:var(--muted); }
+    .route .status { display:inline-block; margin-top:8px; font-size:10px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; color:#64856c; }
+    .credits-note { font-size:13px; color:var(--muted); margin:14px 0 0; max-width:780px; }
+    .life-options { display:flex; flex-wrap:wrap; gap:8px; margin:22px 0; }
+    .life-options button { border:1px solid var(--line); border-radius:8px; background:transparent; padding:10px 14px; min-height:44px; font-size:13px; }
+    .life-options button[aria-pressed="true"] { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+    .life-grid { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:28px; align-items:center; }
+    .home-card { border-radius:12px; overflow:hidden; background:#e5ebd6; border:1px solid #d3dcc6; }
+    .home-card svg { display:block; width:100%; aspect-ratio:600/360; }
+    .life-detail h3 { font:400 29px/1.12 Georgia,serif; margin:8px 0 12px; }
+    .life-detail p,.life-detail li { font-size:14px; color:var(--muted); }
+    .life-detail ul { padding-left:18px; }
+    .life-detail li { margin:7px 0; }
+    .life-note { font-size:12px; color:var(--muted); margin:20px 0 0; }
+    .builder { display:grid; grid-template-columns:minmax(230px,.8fr) minmax(0,1.2fr); gap:36px; background:#fffaf1; border:1px solid var(--line); border-radius:20px; padding:30px; }
+    .builder h2 { font:400 34px/1.1 Georgia,serif; letter-spacing:-.025em; margin:10px 0 16px; }
+    .builder p { font-size:14px; color:var(--muted); }
+    .palette { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0; }
+    .palette button,.actions button { border:1px solid var(--line); border-radius:8px; background:transparent; padding:9px 12px; min-height:44px; font-size:12px; }
+    .palette button[aria-pressed="true"] { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+    .actions { display:flex; flex-wrap:wrap; gap:9px; }
+    .actions button:disabled { opacity:.45; }
+    .plot-scroll { overflow:auto; align-self:center; }
+    .plot { width:min(100%,440px); min-width:352px; display:grid; grid-template-columns:repeat(8,1fr); gap:3px; margin:0 auto; padding:12px; border-radius:12px; background:#d6ddc7; border:1px solid #bac8ad; }
+    .cell { aspect-ratio:1; border:0; border-radius:3px; background:#eaf0de; min-height:38px; padding:0; display:grid; place-items:center; font-size:23px; line-height:1; }
+    .cell:hover { box-shadow:inset 0 0 0 2px var(--green); }
+    .cell[data-piece="path"] { background:#d5c2a0; }
+    .cell[data-piece="workshop"] { background:#f6dba0; color:#7d462b; }
+    .cell[data-piece="tree"] { background:#bed5ad; color:#2d633f; }
+    .cell[data-piece="pond"] { background:#acd3d8; color:#246473; }
+    #plot-status { min-height:44px; font-size:12px; margin-top:15px; }
+    footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; padding:28px 0 0; color:var(--muted); font-size:12px; }
+    [hidden] { display:none !important; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media (max-width:1050px) { .atlas { grid-template-columns:minmax(0,1fr) 250px; } aside { padding:20px; } .pin { font-size:10px; padding:5px 7px; } .routes { grid-template-columns:1fr 1fr; } }
+    @media (max-width:900px) { .guild-grid { grid-template-columns:1fr; } }
+    @media (max-width:800px) { .wrap { padding:20px; } .atlas { grid-template-columns:1fr; } aside { border-left:0; border-top:1px solid var(--line); } aside h2 { margin-top:8px; } .tags { margin-top:0; } .builder { grid-template-columns:1fr; gap:18px; padding:22px; } .strip { gap:20px; } .guild { padding:22px; } }
+    @media (max-width:650px) { .residency { padding:22px 18px; } .residency h2,.guild h2 { font-size:30px; } .life-grid { grid-template-columns:1fr; gap:20px; } .districts { grid-template-columns:1fr; } .routes { grid-template-columns:1fr; } }
+    @media (max-width:520px) { .wrap { padding:18px 14px 30px; } header { align-items:flex-start; } .brand { font-size:10px; gap:8px; } .stamp { font-size:9px; max-width:110px; text-align:right; } .intro { padding:28px 0 22px; } .intro p { font-size:15px; } .map .pin { display:none; } .map-title { top:12px; left:14px; font-size:13px; } .compass { left:14px; bottom:12px; font-size:8px; } .map-caption { padding:12px 15px; } .strip { grid-template-columns:1fr; gap:22px; } .number { margin-bottom:6px; } .strip h3 { font-size:22px; } .builder { padding:20px 14px; } .phases button,.viewer button { padding:8px 16px; } .plot { min-width:0; padding:7px; } .cell { min-height:0; font-size:21px; } .guild { padding:20px 14px; } .work-card { padding:16px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><span class="fruit" aria-hidden="true">✳</span> Agentnagar</div>
+      <div class="stamp">Planning atlas<br>revised 18 September 2026</div>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow">An open maker city · planning study</div>
+        <h1 id="page-title">A city to explore.<br>A city to make together.</h1>
+        <p>An open maker city shared by people and AI agents. Superjackfruit Labs is its founding institution and runs its own quarter; independent makers, teams and communities bring their own projects, on their own tools. Explore how the village could grow into that city.</p>
+        <p style="font-size:14px;margin-top:12px">Early interaction study: this map shows a subset of the vision and every place is proposed. See the <a href="../docs/vision/CITY_PLAN.md">ten-district open maker-city plan</a>, the <a href="../docs/planning/VISION_DECISIONS.md">decisions of 18 September 2026</a> and the <a href="../docs/vision/GUILD_RESIDENTS.md">Guild residents</a>.</p>
+        <p style="font-size:14px;margin-top:16px"><a href="city-lab.html">Try the city systems lab →</a> Budgets, service capacity, facility access, and a fire-response drill. <a href="economy-lab.html">Explore the economy lab →</a></p>
+      </section>
+      <section aria-label="Conceptual city map">
+        <div class="toolbar">
+          <div class="phases" role="group" aria-label="Growth horizon">
+            <button type="button" data-phase="1" aria-pressed="true">Village</button>
+            <button type="button" data-phase="2" aria-pressed="false">Town</button>
+            <button type="button" data-phase="3" aria-pressed="false">City</button>
+          </div>
+          <div class="phase-note" id="phase-note" aria-live="polite">One workshop, the first homes and a cooperative courtyard.</div>
+        </div>
+        <div class="atlas">
+          <div class="map-column">
+            <div class="map" id="map">
+              <div class="map-title">Agentnagar · an open maker city (concept)</div>
+              <svg viewBox="0 0 1040 690" aria-hidden="true">
+                <defs>
+                  <pattern id="grass" width="35" height="35" patternUnits="userSpaceOnUse"><circle cx="12" cy="18" r="1.4" fill="#829b66" opacity=".22"/></pattern>
+                  <g id="tree"><ellipse cx="3" cy="16" rx="15" ry="7" fill="#52734c" opacity=".13"/><path d="M0 0V15" stroke="#785d41" stroke-width="5"/><circle cy="-7" r="16" fill="#63894c"/><circle cx="-5" cy="-11" r="11" fill="#85a765"/><circle cx="6" cy="-4" r="5" fill="#efcc5f"/></g>
+                  <g id="house"><path d="M-28 1L6-12 32 2 0 16Z" fill="#000" opacity=".08" transform="translate(5 23)"/><path d="M-27-13L2-3V28L-27 17Z" fill="#ead7ad"/><path d="M2-3L30-16V17L2 28Z" fill="#d0ba8f"/><path d="M-33-15L-5-38 36-16 2 1Z" fill="currentColor"/><path d="M-33-15L-5-38-5-13 2 1Z" fill="#fff" opacity=".13"/><path d="M11 10V22L21 18V6Z" fill="#556a56"/><path d="M-19 2L-9 6V14L-19 10Z" fill="#fff8d8"/></g>
+                  <g id="bench"><rect x="-17" y="-4" width="34" height="9" rx="2" fill="#b1895d"/><path d="M-12 5V11M12 5V11" stroke="#566444" stroke-width="3"/></g>
+                </defs>
+                <rect width="1040" height="690" fill="#e3e9d2"/><rect width="1040" height="690" fill="url(#grass)"/>
+                <path d="M720-50C680 80 810 142 759 248S620 386 726 464 926 478 876 740" fill="none" stroke="#bfdbe0" stroke-width="126"/>
+                <path d="M720-50C680 80 810 142 759 248S620 386 726 464 926 478 876 740" fill="none" stroke="#a9cfd6" stroke-width="91"/>
+                <path d="M702 5Q692 53 722 100M747 211Q745 245 720 276M764 487Q814 493 840 523M868 597Q877 619 875 641" fill="none" stroke="#d9e9e4" stroke-width="3" stroke-linecap="round"/>
+                <path d="M-30 412Q138 440 299 352T540 305Q651 293 794 241L1070 185" stroke="#bac4a3" stroke-width="38" fill="none"/>
+                <path d="M-30 412Q138 440 299 352T540 305Q651 293 794 241L1070 185" stroke="#f3e8cc" stroke-width="28" fill="none"/>
+                <path d="M267 368L235 166M466 313L470 114M382 329L371 540M540 305L575 503M876 225L927 435M610 295V235M105 420V360" stroke="#f3e8cc" stroke-width="20" stroke-linejoin="round" fill="none"/>
+                <path d="M704 273L785 245" stroke="#a38560" stroke-width="40"/><path d="M704 273L785 245" stroke="#dbbc86" stroke-width="31"/>
+                <path d="M711 263L721 283M727 257L737 277M743 251L753 271M759 245L769 265" stroke="#ad895e" stroke-width="2"/>
+                <ellipse cx="440" cy="325" rx="68" ry="49" fill="#d6c7a4"/>
+                <ellipse cx="440" cy="325" rx="54" ry="38" fill="#ece3c7"/>
+                <g id="landmarks"></g>
+                <g opacity=".95"><use href="#tree" x="90" y="152"/><use href="#tree" x="135" y="122"/><use href="#tree" x="173" y="153"/><use href="#tree" x="117" y="195"/><use href="#tree" x="155" y="211"/><use href="#tree" x="63" y="499"/><use href="#tree" x="105" y="526"/><use href="#tree" x="148" y="500"/><use href="#tree" x="112" y="570"/><use href="#tree" x="181" y="578"/><use href="#tree" x="620" y="120"/><use href="#tree" x="588" y="151"/><use href="#tree" x="525" y="594"/><use href="#tree" x="568" y="615"/><use href="#tree" x="616" y="582"/><use href="#tree" x="976" y="93"/><use href="#tree" x="928" y="113"/></g>
+                <g transform="translate(440 301)"><ellipse cy="22" rx="38" ry="19" fill="#648357" opacity=".2"/><rect x="-6" y="-22" width="12" height="48" rx="3" fill="#796245"/><circle cy="-38" r="39" fill="#507c49"/><circle cx="-16" cy="-45" r="25" fill="#719958"/><circle cx="22" cy="-31" r="20" fill="#648e4f"/><ellipse cx="-15" cy="-24" rx="5" ry="8" fill="#efcd59"/><ellipse cx="18" cy="-43" rx="5" ry="8" fill="#efcd59"/><ellipse cx="1" cy="-54" rx="5" ry="8" fill="#e2bb47"/></g>
+                <use href="#bench" x="390" y="322"/><use href="#bench" x="478" y="350"/>
+                <g transform="translate(162 408) rotate(-8)"><rect x="-16" y="-9" width="32" height="19" rx="5" fill="#ecc355"/><rect x="-7" y="-8" width="11" height="17" rx="3" fill="#547266"/><rect x="-11" y="-12" width="8" height="4" rx="1" fill="#49604b"/><rect x="-11" y="9" width="8" height="4" rx="1" fill="#49604b"/></g>
+              </svg>
+              <div class="compass">↑ N &nbsp; / &nbsp; CONCEPTUAL GEOGRAPHY</div>
+              <div id="pins"></div>
+            </div>
+            <div class="map-caption">Every place shown here is proposed. Select a destination below to explore its purpose. Your last selection is remembered in this browser only.</div>
+          </div>
+          <aside aria-labelledby="detail-title">
+            <div class="eyebrow" id="detail-phase">Village · proposed</div>
+            <h2 id="detail-title">Jackfruit Square</h2>
+            <p id="detail-story"></p>
+            <span class="detail-label">What you can do</span>
+            <p id="detail-action"></p>
+            <span class="detail-label">What we would build</span>
+            <p id="detail-build"></p>
+            <div class="tags" id="detail-tags"></div>
+          </aside>
+        </div>
+        <div class="destination-list" id="destination-list" role="group" aria-label="Destinations"></div>
+        <div class="sr-only" id="selection-status" aria-live="polite"></div>
+      </section>
+      <section class="guild" aria-labelledby="guild-title">
+        <div class="eyebrow">First slice · RD01 · fictional illustration</div>
+        <h2 id="guild-title">Walk the city. Watch the Guild at work.</h2>
+        <p class="guild-intro">The first thing to build is a person moving around the city and seeing the fourteen Guild agents doing their actual current work. This board sketches it: each agent is a marker in the district of its main workplace, and each marker opens a work-state card. <strong>Every name is from the Guild brief; every task, state and timestamp is invented.</strong> No adapter, runtime or network is connected.</p>
+        <div class="viewer-row"><span class="viewer-label" id="viewer-label">View as</span>
+          <div class="viewer" role="group" aria-labelledby="viewer-label">
+            <button type="button" data-tier="public" aria-pressed="true">Public visitor</button>
+            <button type="button" data-tier="registered" aria-pressed="false">Registered</button>
+            <button type="button" data-tier="resident" aria-pressed="false">Resident</button>
+          </div>
+        </div>
+        <p class="tier-note" id="tier-note" aria-live="polite"></p>
+        <div class="guild-grid">
+          <div class="districts" id="districts"></div>
+          <div class="work-card" id="work-card" aria-live="polite">
+            <div class="eyebrow" id="work-district"></div>
+            <h3 id="work-name"></h3>
+            <p class="work-extra" id="work-role"></p>
+            <dl>
+              <dt>Current task</dt><dd id="work-task"></dd>
+              <dt>State</dt><dd><span class="state-pill" id="work-state"></span></dd>
+              <dt>Updated</dt><dd id="work-age"></dd>
+              <dt>Where</dt><dd id="work-place"></dd>
+            </dl>
+            <div class="work-extra" id="work-more"></div>
+            <div class="work-actions">
+              <button type="button" id="ask" aria-disabled="true">Ask for a scoped task</button>
+              <button type="button" id="comment" aria-disabled="true">Comment on this work</button>
+            </div>
+            <p class="work-explain" id="work-explain" role="status"></p>
+            <p class="public-note">Public fields only: role, task title, state and freshness. Private repositories, operator data and conversation contents are never shown. Which fields are public, how private work is redacted and how staleness is presented are the open questions RD01 lists.</p>
+          </div>
+        </div>
+        <p class="guild-foot">Districts without a Guild workplace in this fixture: D05 Orchard Neighbourhoods (the agents' homes), D07 Market Street, D08 Festival Fields, D09 Harbour and Field Station, D10 Greenbelt and Watershed. Personal agents that residents add are private to them and never appear on a public board (RD12).</p>
+        <p class="sr-only" id="guild-status" aria-live="polite"></p>
+      </section>
+      <section class="strip" aria-label="Three connected experiences">
+        <article><span class="number">01 / WATCH</span><h3>The Guild at work</h3><p>Walk the districts and see what the fourteen agents are actually doing. Public visitors observe; a registered account is where interaction begins.</p></article>
+        <article><span class="number">02 / EXPERIMENT</span><h3>Little simulations</h3><p>Make a change, see what happens, understand why. Toy activity is clearly labelled and separate from real product data.</p></article>
+        <article><span class="number">03 / MAKE TOGETHER</span><h3>Independent projects</h3><p>Bring your own project and tools. Start with a personal plot, then add small invite rooms with saved edits, undo, and reconnect.</p></article>
+      </section>
+      <section class="residency" aria-labelledby="residency-title">
+        <div class="eyebrow">Visitors, residents and sponsors · decisions of 18 September 2026</div>
+        <h2 id="residency-title">Three routes to a home. One way to watch.</h2>
+        <p class="residency-intro">Public visitors walk the city and watch the Guild at work; they cannot interact with agents (RD03). Residency is a saved home in the Orchard Neighbourhoods, and it is separate from sponsoring the lab (RD10). Select a proposed lifestyle below to preview it.</p>
+        <div class="routes" role="list" aria-label="Routes to residency">
+          <div class="route" role="listitem"><strong>Buy a block</strong><p>A one-time payment buys a block for a house and makes the buyer a resident. What the price includes, and for how long the home is hosted, is open.</p><span class="status">RD09 · decided</span></div>
+          <div class="route" role="listitem"><strong>Sponsor the lab</strong><p>Sponsorship funds the lab and its product development. It may come with residency and other perks, but it is a different thing from buying a home.</p><span class="status">RD10 · decided</span></div>
+          <div class="route" role="listitem"><strong>Earn it by contribution</strong><p>Reviewed, accepted contributions could qualify someone for residency without paying. Review criteria and thresholds are not set.</p><span class="status">Still a proposal</span></div>
+          <div class="route" role="listitem"><strong>Just visit</strong><p>Observe the city and the Guild's public work state. A free registered account is where interaction starts, widening with tier and granted authority.</p><span class="status">RD03 · RD04</span></div>
+        </div>
+        <p class="credits-note">City credits (<strong>JC</strong> — working label, rename pending, RD06) can be earned in the game, bought with real money, or included with a resident tier; a tier can be a subscription or a one-time purchase (RD07). Credits buy real things such as facility access, items, compute and storage (RD08); pricing, earned-versus-purchased balances and no-cash-out rules are open. The <a href="economy-lab.html">economy lab</a> shows the balances.</p>
+        <div class="life-options" role="group" aria-label="Lifestyle preview">
+          <button type="button" data-life="0" aria-pressed="true">Visitor</button>
+          <button type="button" data-life="1" aria-pressed="false">Starter home</button>
+          <button type="button" data-life="2" aria-pressed="false">Cottage</button>
+          <button type="button" data-life="3" aria-pressed="false">Courtyard</button>
+          <button type="button" data-life="4" aria-pressed="false">Garden house</button>
+        </div>
+        <div class="life-grid">
+          <div class="home-card">
+            <svg viewBox="0 0 600 360" aria-hidden="true">
+              <rect width="600" height="360" fill="#e5ebd6"/>
+              <rect width="600" height="360" fill="url(#grass)"/>
+              <ellipse cx="305" cy="244" rx="220" ry="82" fill="#d4ddbf"/>
+              <path d="M50 322Q238 289 357 281L587 289" stroke="#f3e8cc" stroke-width="22" fill="none"/>
+              <use href="#tree" transform="translate(90 132) scale(1.8)"/>
+              <use href="#tree" transform="translate(484 116) scale(1.6)"/>
+              <use href="#tree" transform="translate(531 162) scale(1.9)"/>
+              <g id="life-home"><use href="#bench" transform="translate(300 214) scale(2)"/></g>
+            </svg>
+          </div>
+          <div class="life-detail">
+            <div class="eyebrow" id="life-stage">Visitor · proposed experience</div>
+            <h3 id="life-title">Come for a wander.</h3>
+            <p id="life-story"></p>
+            <ul id="life-benefits"></ul>
+          </div>
+        </div>
+        <p class="life-note">Illustrative benefits; prices and thresholds are open. Buying a block, a sponsorship that includes residency, or (proposed) reviewed contribution all lead to the same starter home. The recommended pause policy preserves earned homes and cosmetics. <a href="../docs/gameplay/RESIDENCY.md">Read the residency design</a>.</p>
+        <div id="life-status" class="sr-only" aria-live="polite"></div>
+      </section>
+      <section class="builder" aria-labelledby="builder-title">
+        <div>
+          <div class="eyebrow">Try the idea · local sketch only</div>
+          <h2 id="builder-title">What would you put<br>in your courtyard?</h2>
+          <p>Choose a piece and select a square. Use arrow keys to move between squares, then Enter or Space to place. This sketch lives in this page until you reload.</p>
+          <div class="palette" role="group" aria-label="Building pieces">
+            <button type="button" data-tool="workshop" aria-pressed="true">⌂ Workshop</button>
+            <button type="button" data-tool="tree" aria-pressed="false">♣ Tree</button>
+            <button type="button" data-tool="path" aria-pressed="false">· Path</button>
+            <button type="button" data-tool="pond" aria-pressed="false">≈ Pond</button>
+            <button type="button" data-tool="empty" aria-pressed="false">Erase</button>
+          </div>
+          <div class="actions"><button type="button" id="undo" disabled>Undo</button><button type="button" id="reset">Clear plot</button><button type="button" id="export">Export sketch</button></div>
+          <p id="plot-status" role="status">0 pieces placed. A shared version would ask the room server to accept each edit.</p>
+        </div>
+        <div class="plot-scroll"><div class="plot" id="plot" role="group" aria-label="Eight by eight courtyard sketch"></div></div>
+      </section>
+      <noscript><p>This atlas needs JavaScript for map selection and building. The <a href="../docs/vision/VISION.md">vision</a>, <a href="../docs/vision/EXPERIENCES.md">feature catalogue</a>, and <a href="../docs/architecture/MULTIPLAYER.md">multiplayer plan</a> contain the full proposal.</p></noscript>
+    </main>
+    <footer><span>Planning illustration. No live product data, agent runtime, multiplayer connection, or server save.</span><span><a href="../docs/README.md">Read the blueprint</a> · <a href="../docs/planning/ROADMAP.md">Delivery roadmap</a></span></footer>
+  </div>
+  <script>
+    "use strict";
+    const places = [
+      { id:"square", name:"Jackfruit Square", district:"D01", phase:1, x:440, y:325, labelY:386, style:"square", tags:["Explore","Public"], story:"The arrival point: a landmark tree, a noticeboard and a directory of everything happening in the city, SJL's products and independent projects alike.", action:"Find a project or place quickly, read a dated notice, or pick a district to walk to.", build:"An HTML directory, stable destination links, a landmark tree, and an accessible map." },
+      { id:"homes", name:"Orchard Neighbourhood", district:"D05", phase:1, x:105, y:318, labelY:380, style:"homes", tags:["Live","Residency"], story:"The first bounded homes and a shared garden. A block bought with a one-time payment, a sponsorship that includes residency, or (proposed) reviewed contribution all lead here.", action:"Preview a starter home, visit a neighbour who has opened their door, or see where the Guild agents live.", build:"Plot records, home styles, invitation limits and the residency ladder; prices and hosting terms are open (RD09, RD10)." },
+      { id:"agentpod", name:"SJL Quarter · Workshop & Observatory", district:"D02", phase:1, x:252, y:198, labelY:262, color:"#487768", tags:["Watch","Learn"], story:"The founding institution's own quarter: a shared workshop with product corners and the observatory where the Guild's current work is projected.", action:"Watch what the fourteen agents are doing right now, read a verified runtime-inspection guide, and understand the work happening beyond your laptop.", build:"A product passport, an honest status projection with freshness and redaction rules, and readable controls (RD01, RD03)." },
+      { id:"commons", name:"Maker Commons", district:"D03", phase:1, x:367, y:490, labelY:567, style:"plot", tags:["Build","Independent projects"], story:"Exhibition stalls, a shared table and small plots where independent makers show and build their own projects, on whatever tools they choose.", action:"Build alone, then invite 2–8 people into a shared courtyard. Present a project; keep or export the result.", build:"A modular kit, placement rules, undo, local saves, then a compatible authoritative room service and durable saves; server and hosting choices remain open." },
+      // Renamed from `kaambaan` on 2026-09-16; PLACE_ALIASES keeps old links and saved selections working.
+      { id:"superpipeline", name:"Superpipeline Yard", district:"D02", phase:2, x:468, y:154, labelY:217, color:"#b77d43", tags:["Learn","Cooperate"], story:"A loading yard where deliveries make queues and review decisions easy to see. City facilities may be powered by Superpipeline and the other SJL products (RD02).", action:"Change worker and reviewer capacity. Notice where the bottleneck moves in a toy scenario.", build:"A seeded queue model, clear simulation labels, DOM charts, and a later cooperative scenario." },
+      { id:"supermd", name:"Learning Grove Library", district:"D04", phase:2, x:570, y:478, labelY:548, color:"#8c759c", tags:["Read","Explore"], story:"A library opening into an orchard of connected ideas, with the school and research campus beside it. Its shelves could run on SuperMD.", action:"Follow links between sample notes and inspect how their relationships change; join a reading circle.", build:"A small fixed example corpus, a readable note view, and an optional spatial graph." },
+      { id:"civic", name:"Civic Works · Town Hall", district:"D06", phase:2, x:610, y:225, labelY:290, color:"#5f6f8a", tags:["Civic","Simulation"], story:"Town hall, treasury, safety station and utility yard. Public budgets are readable; fictional services can run short and recover.", action:"Read the budget, compare service coverage, propose an improvement. Try the city systems lab for the working model.", build:"A visible treasury, service capacity rules, closure behaviour and scoped steward decisions." },
+      { id:"supermessage", name:"Supermessage Post Office", district:"D02", phase:2, x:868, y:168, labelY:234, color:"#b67159", tags:["Explore","Explain"], story:"A warm little post office for communication concepts and current product information; comments, messages and assemblies are a critical part of the city (RD05).", action:"Inspect a labelled miniature and find the product's verified capabilities and limitations.", build:"A product passport and fixture-based exhibit. Actual integrations require their own evidence." },
+      { id:"market", name:"Market Street", district:"D07", phase:2, x:933, y:377, labelY:443, color:"#947346", tags:["Discover","Trade"], story:"Stalls, shops and a civic contract board where independent makers and NPC suppliers trade in city credits.", action:"Explore a sample offer, bid for a funded civic job, and discover what each public stall actually does.", build:"Reviewed catalogue entries, static fixtures, bounded NPC demand, and clear maintenance and ownership labels." },
+      { id:"archive", name:"Archive Garden", district:"D04", phase:2, x:202, y:520, labelY:592, style:"garden", tags:["Read","History"], story:"A quiet garden for experiments that helped the lab and the city become what they are.", action:"Read dated stories, inspect public snapshots, and distinguish history from current support.", build:"An editorial archive with evidence, dates, valid links, and preserved attribution." },
+      { id:"harbour", name:"Harbour & Field Station", district:"D09", phase:3, x:726, y:568, labelY:646, style:"harbour", tags:["Connect","Cooperate"], story:"A waterfront connecting useful neighbourhoods, expeditions and several little systems.", action:"Travel between shared districts and try a connected transport or review scenario.", build:"District streaming, room handoff, interest management, capacity tests, and independent simulation contracts." }
+    ];
+    const PLACE_ALIASES = { kaambaan:"superpipeline" };
+    const STORE_KEY = "agentnagar.atlas";
+    const phaseNames = {1:"Village",2:"Town",3:"City"};
+    const phaseNotes = {1:"One workshop, the first homes and a cooperative courtyard.",2:"Public facilities, civic works and dependable small-group play.",3:"Connected districts, civic systems, and agent neighbours."};
+    const svgNS = "http://www.w3.org/2000/svg";
+    const node = (tag, attrs={}) => { const el=document.createElementNS(svgNS,tag); for(const [key,value] of Object.entries(attrs)) el.setAttribute(key,String(value)); return el; };
+    const landmarks=document.getElementById("landmarks");
+    const pins=document.getElementById("pins");
+    const destinationList=document.getElementById("destination-list");
+
+    /* Remembered selection (this browser only) with id migration ---------- */
+    function resolvePlaceId(id) { const known=PLACE_ALIASES[id]||id; return places.some(place=>place.id===known)?known:null; }
+    function readSaved() { try { const raw=localStorage.getItem(STORE_KEY); const saved=raw?JSON.parse(raw):{}; return saved&&typeof saved==="object"?saved:{}; } catch { return {}; } }
+    function save(patch) { try { localStorage.setItem(STORE_KEY,JSON.stringify({...readSaved(),...patch})); } catch { /* storage unavailable: the page still works */ } }
+    const saved=readSaved();
+    const fromHash=resolvePlaceId(decodeURIComponent(location.hash.slice(1)));
+    let selected=fromHash||resolvePlaceId(saved.selected)||"square";
+    if(saved.selected&&saved.selected!==selected&&resolvePlaceId(saved.selected)===selected) save({selected});
+    let phase=Math.max([1,2,3].includes(saved.phase)?saved.phase:1,places.find(place=>place.id===selected).phase);
+
+    for(const place of places) {
+      const group=node("g",{"data-landmark":place.id,transform:`translate(${place.x} ${place.y})`});
+      if(place.style==="plot") {
+        group.append(node("rect",{x:-64,y:-47,width:128,height:100,rx:9,fill:"#d1dab9",stroke:"#9cab82","stroke-dasharray":"5 4"}));
+        group.append(node("use",{href:"#house",x:-22,y:-1,color:"#587b65"}));
+        group.append(node("use",{href:"#tree",x:35,y:21}));
+        group.append(node("path",{d:"M-46 39H16V-23",stroke:"#f0dfb8","stroke-width":13,fill:"none"}));
+      } else if(place.style==="garden") {
+        group.append(node("ellipse",{rx:50,ry:31,fill:"#c9d5b6"}));
+        for(const [x,y] of [[-25,-14],[22,-5],[0,23]]) group.append(node("use",{href:"#tree",x,y}));
+      } else if(place.style==="harbour") {
+        group.append(node("path",{d:"M-46-36V43H72M-46 3H52",fill:"none",stroke:"#c6a574","stroke-width":16}));
+        group.append(node("use",{href:"#house",x:-48,y:-36,color:"#5d7f91"}));
+        group.append(node("path",{d:"M12 14H50L42 31H20Z",fill:"#f3e9cf",stroke:"#547e81","stroke-width":2}));
+      } else if(place.style==="homes") {
+        group.append(node("ellipse",{rx:58,ry:36,cy:6,fill:"#d1d8be"}));
+        group.append(node("use",{href:"#house",x:-24,y:-8,color:"#9a6b4f"}));
+        group.append(node("use",{href:"#house",x:26,y:12,color:"#6b8a72"}));
+        group.append(node("use",{href:"#tree",x:-50,y:24}));
+      } else if(place.style!=="square") {
+        group.append(node("ellipse",{rx:50,ry:37,cy:8,fill:"#d1d8be"}));
+        group.append(node("use",{href:"#house",color:place.color,transform:"scale(1.4)"}));
+        group.append(node("use",{href:"#tree",x:47,y:15}));
+      }
+      landmarks.append(group);
+      for(const [container,isPin] of [[pins,true],[destinationList,false]]) {
+        const button=document.createElement("button");
+        button.type="button"; button.textContent=place.name; button.dataset.place=place.id;
+        button.setAttribute("aria-pressed",String(place.id===selected));
+        if(isPin) { button.className="pin"; button.style.left=`${place.x/1040*100}%`; button.style.top=`${place.labelY/690*100}%`; }
+        button.addEventListener("click",()=>select(place.id,true)); container.append(button);
+      }
+    }
+
+    function select(id,announce=false) {
+      selected=id;
+      const place=places.find(item=>item.id===id);
+      document.getElementById("detail-phase").textContent=`${phaseNames[place.phase]} · ${place.district} · proposed`;
+      document.getElementById("detail-title").textContent=place.name;
+      document.getElementById("detail-story").textContent=place.story;
+      document.getElementById("detail-action").textContent=place.action;
+      document.getElementById("detail-build").textContent=place.build;
+      const tags=document.getElementById("detail-tags"); tags.replaceChildren();
+      for(const tag of place.tags) { const span=document.createElement("span"); span.className="tag"; span.textContent=tag; tags.append(span); }
+      document.querySelectorAll("[data-place]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.place===id)));
+      if(announce) document.getElementById("selection-status").textContent=`${place.name}. ${place.action} ${place.build}`;
+      save({selected:id});
+    }
+    function setPhase(next) {
+      phase=next;
+      document.querySelectorAll("[data-phase]").forEach(button=>button.setAttribute("aria-pressed",String(Number(button.dataset.phase)===phase)));
+      document.getElementById("phase-note").textContent=phaseNotes[phase];
+      for(const place of places) {
+        const visible=place.phase<=phase;
+        document.querySelectorAll(`[data-place="${place.id}"]`).forEach(button=>button.hidden=!visible);
+        const group=document.querySelector(`[data-landmark="${place.id}"]`);
+        group.style.display=visible?"":"none";
+      }
+      if(places.find(item=>item.id===selected).phase>phase) select("square");
+      save({phase});
+    }
+    document.querySelectorAll("[data-phase]").forEach(button=>button.addEventListener("click",()=>setPhase(Number(button.dataset.phase))));
+    select(selected); setPhase(phase);
+
+    /* Guild at work: fictional work-state board ---------------------------- */
+    const districts = {D01:"Jackfruit Square",D02:"SJL Quarter",D03:"Maker Commons",D04:"Learning Grove",D06:"Civic Works"};
+    const guild = [
+      { id:"onboarding-olivia", name:"Onboarding Olivia", role:"Welcome guide and participation navigator", district:"D01", place:"Visitor centre F01", task:"Routing three newcomers to a garden puzzle, a library trail and a maker introduction", state:"working", age:"2 min ago" },
+      { id:"writer-quill", name:"Writer Quill", role:"Story editor and documentation guide", district:"D01", place:"Press room F22", task:"Editing the weekly city notice; two corrections queued for an editor", state:"waiting-for-review", age:"22 min ago" },
+      { id:"super-chotu", name:"Super Chotu", role:"Founding-lab host and project connector", district:"D02", place:"SJL workshop F02", task:"Preparing the “what is the lab making?” tour for this week's releases", state:"working", age:"6 min ago" },
+      { id:"coder-kai", name:"Coder Kai", role:"Workshop engineer and coding tutor", district:"D02", place:"Workshops F02", task:"Private repository task — title withheld (redaction rule pending)", state:"working", age:"1 min ago" },
+      { id:"analyst-echo", name:"Analyst Echo", role:"Data interpreter", district:"D02", place:"Observatory F19", task:"No task assigned; the next pattern puzzle starts at the evening session", state:"idle", age:"31 min ago" },
+      { id:"optimizer-ollie", name:"Optimizer Ollie", role:"Performance coach", district:"D02", place:"Workshops F02", task:"Last report: tuning a delivery route under a quality budget", state:"stale", age:"3 h ago — no report since; shown as stale, not guessed" },
+      { id:"project-manager-pete", name:"Project Manager Pete", role:"Project coordinator", district:"D03", place:"Studios F04", task:"Rebalancing the festival-queue board: two reviewers, one blocked task", state:"waiting-for-review", age:"14 min ago" },
+      { id:"artistic-lyra", name:"Artistic Lyra", role:"Art director and exhibit designer", district:"D03", place:"Asset forge F23", task:"Low-vision preview of the Festival Fields signage kit", state:"working", age:"9 min ago" },
+      { id:"strategy-sam", name:"Strategy Sam", role:"Strategy facilitator", district:"D03", place:"Studios F04", task:"Drafting the choices-and-consequences salon for the town hall", state:"working", age:"12 min ago" },
+      { id:"cleaner-cody", name:"Cleaner Cody", role:"Workspace and reuse steward", district:"D03", place:"Asset forge F23", task:"Sorted a fictional asset pack: 12 licensed, 3 duplicates, 1 missing source; waiting for the next pack", state:"idle", age:"18 min ago" },
+      { id:"research-ray", name:"Research Ray", role:"Research librarian", district:"D04", place:"Library F05", task:"Source-detective trail: checking three claims against their originals", state:"working", age:"4 min ago" },
+      { id:"predictor-paul", name:"Predictor Paul", role:"Scenario modeller", district:"D04", place:"Research campus F07", task:"Reserving fictional staff against three festival attendance scenarios", state:"working", age:"7 min ago" },
+      { id:"controller-casey", name:"Controller Casey", role:"Resource and cost adviser", district:"D06", place:"Town hall F13", task:"Comparing the JC treasury with the real server bill (two-budget puzzle)", state:"working", age:"3 min ago" },
+      { id:"threat-hunter-theo", name:"Threat Hunter Theo", role:"Digital safety educator", district:"D06", place:"Safety station F14", task:"Authoring clue 4 of “the forged festival pass”", state:"working", age:"5 min ago" }
+    ];
+    const stateLabels = {working:"Working",idle:"Idle","waiting-for-review":"Waiting for review",stale:"Stale"};
+    const tiers = {
+      public:{ label:"Public visitor", note:"Public visitors observe only (RD03): the work-state card shows public fields, and every interaction control is disabled.", ask:false, comment:false,
+        askWhy:"Disabled for public visitors. Asking an agent for work starts at a registered account and needs a tier or granted authority plus a funded allowance (RD04).", commentWhy:"Disabled for public visitors. Comments start at a registered account (RD04, RD05)." },
+      registered:{ label:"Registered", note:"A registered account sees a little more and could comment on public work, subject to moderation (RD04, RD05). Asking for work still needs a tier or granted authority.", ask:false, comment:true,
+        askWhy:"Not available at this tier. A resident tier or explicitly granted authority, with a funded allowance, could request a scoped task (RD04). The tier/authority matrix is open.", commentWhy:"What this tier would allow: leave a comment on this public work item, visible after moderation. This prototype sends nothing." },
+      resident:{ label:"Resident", note:"A resident sees office slots and funding, could comment, and with granted authority could request a scoped task at the observatory (RD04). Nothing here is sent anywhere.", ask:true, comment:true,
+        askWhy:"What this tier would allow: request a scoped task or tutoring at the observatory F19, drawing on a funded allowance, if authority for this agent has been granted. Who funds it and the abuse limits are open. This prototype sends nothing.", commentWhy:"What this tier would allow: comment on this work item or join its assembly thread (RD05). This prototype sends nothing." }
+    };
+    let tier="public";
+    let agent=guild[0].id;
+    const districtsRoot=document.getElementById("districts");
+    for(const [code,name] of Object.entries(districts)) {
+      const box=document.createElement("div"); box.className="district";
+      const heading=document.createElement("h3"); heading.textContent=`${code} · ${name}`;
+      const small=document.createElement("small"); small.textContent=`${guild.filter(item=>item.district===code).length} Guild agent(s) at work`; heading.append(small);
+      const markers=document.createElement("div"); markers.className="markers";
+      for(const item of guild.filter(item=>item.district===code)) {
+        const button=document.createElement("button"); button.type="button"; button.className="marker"; button.dataset.agent=item.id; button.dataset.state=item.state;
+        button.setAttribute("aria-pressed",String(item.id===agent));
+        const dot=document.createElement("span"); dot.className="dot"; dot.setAttribute("aria-hidden","true");
+        const name=document.createElement("span"); name.textContent=item.name;
+        const state=document.createElement("span"); state.className="state-text"; state.textContent=`· ${stateLabels[item.state].toLowerCase()}`;
+        button.append(dot,name,state);
+        button.addEventListener("click",()=>selectAgent(item.id,true));
+        markers.append(button);
+      }
+      box.append(heading,markers); districtsRoot.append(box);
+    }
+    function renderWork(announce=false) {
+      const item=guild.find(entry=>entry.id===agent), view=tiers[tier];
+      document.getElementById("work-district").textContent=`${item.district} · ${districts[item.district]} · fictional work-state card`;
+      document.getElementById("work-name").textContent=item.name;
+      document.getElementById("work-role").textContent=`${item.role} · profile ${item.id}`;
+      document.getElementById("work-task").textContent=item.task;
+      const pill=document.getElementById("work-state"); pill.textContent=stateLabels[item.state]; pill.dataset.state=item.state;
+      document.getElementById("work-age").textContent=`${item.age} (fixture; a real board would show the adapter's last verified report)`;
+      document.getElementById("work-place").textContent=item.place;
+      const more=document.getElementById("work-more"); more.replaceChildren();
+      if(tier!=="public") {
+        const p=document.createElement("p"); p.textContent="Also visible at this tier (fictional): recent public activity";
+        const list=document.createElement("ul");
+        for(const text of ["Accepted a reviewed task from the public queue","Published a status note to the noticeboard","Declined a request outside its granted scope"]) { const li=document.createElement("li"); li.textContent=text; list.append(li); }
+        more.append(p,list);
+      }
+      if(tier==="resident") { const p=document.createElement("p"); p.textContent="Resident view (fictional): next open observatory slot this evening; funded by the lab's allowance; your granted authority for this agent: none yet."; more.append(p); }
+      document.getElementById("ask").setAttribute("aria-disabled",String(!view.ask));
+      document.getElementById("comment").setAttribute("aria-disabled",String(!view.comment));
+      document.getElementById("tier-note").textContent=view.note;
+      document.getElementById("work-explain").textContent="";
+      document.querySelectorAll("[data-agent]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.agent===agent)));
+      document.querySelectorAll("[data-tier]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.tier===tier)));
+      if(announce) document.getElementById("guild-status").textContent=`${item.name}, ${item.role}. ${stateLabels[item.state]}: ${item.task}. Updated ${item.age}. Viewing as ${view.label}.`;
+    }
+    function selectAgent(id,announce=false) { agent=id; renderWork(announce); }
+    document.querySelectorAll("[data-tier]").forEach(button=>button.addEventListener("click",()=>{ tier=button.dataset.tier; renderWork(true); }));
+    document.getElementById("ask").addEventListener("click",()=>{ document.getElementById("work-explain").textContent=tiers[tier].askWhy; });
+    document.getElementById("comment").addEventListener("click",()=>{ document.getElementById("work-explain").textContent=tiers[tier].commentWhy; });
+    renderWork();
+
+    const lifestyles = [
+      {title:"Come for a wander.",stage:"Public visitor",story:"Walk the city and watch the Guild at work. Public visitors observe only and cannot interact with agents (RD03). A free registered account is where comments and interaction begin, widening with tier and granted authority (RD04); account features are not implemented here.",benefits:["Public city, exhibits and the Guild's public work state","Local practice plot and export","Registered account: comments, saved profile, proposed free project participation"]},
+      {title:"Your first little home.",stage:"R1 · Starter home",story:"A one-time block purchase (RD09), a sponsorship that includes residency (RD10) or, as a proposal, reviewed contribution gives you a saved personal plot, a home style, and a place to return to.",benefits:["One home, a mailbox, and an address","Starter furnishings and colour choices","Invite friends within tested room limits"]},
+      {title:"A cottage with character.",stage:"R2 · Cottage life",story:"Earned or included credits, a higher tier or accepted contribution milestones unlock a veranda, a garden, and the details that make a house yours. Thresholds are open.",benefits:["Veranda, garden beds, and a workbench","Pet companion and richer furnishings","Bicycle or scooter appearances"]},
+      {title:"Room to make and gather.",stage:"R3 · Courtyard life",story:"Open a studio around a shared courtyard. Invite neighbours to see something you have made or build together.",benefits:["Courtyard rooms and a studio","Rooftop garden and greenhouse styles","Custom cart appearance and open-house theme"]},
+      {title:"A garden house full of stories.",stage:"R4 · Garden house",story:"A pavilion, workshop wing, and courtyard pond celebrate sustained residency and useful contributions. Money buys no project, civic, review or fleet authority.",benefits:["Garden pavilion and library or workshop wing","Seasonal furnishings and cinematic arrival","Propose a shared amenity; hosting stays within service limits"]}
+    ];
+    function setLifestyle(level,announce=false) {
+      const life=lifestyles[level];
+      document.querySelectorAll("[data-life]").forEach(button=>button.setAttribute("aria-pressed",String(Number(button.dataset.life)===level)));
+      document.getElementById("life-stage").textContent=`${life.stage} · proposed experience`;
+      document.getElementById("life-title").textContent=life.title;
+      document.getElementById("life-story").textContent=life.story;
+      const benefits=document.getElementById("life-benefits"); benefits.replaceChildren();
+      for(const benefit of life.benefits) { const item=document.createElement("li"); item.textContent=benefit; benefits.append(item); }
+      const home=document.getElementById("life-home"); home.replaceChildren();
+      if(level===0) {
+        home.append(node("use",{href:"#bench",transform:"translate(300 214) scale(2)"}));
+        home.append(node("use",{href:"#tree",transform:"translate(215 176) scale(2.3)"}));
+      } else {
+        if(level>=3) home.append(node("use",{href:"#house",transform:"translate(369 171) scale(1.85)",color:"#ab7856"}));
+        home.append(node("use",{href:"#house",transform:`translate(268 191) scale(${level===1?2.1:2.65})`,color:level>=3?"#778364":"#497664"}));
+        home.append(node("path",{d:"M290 269L303 292",stroke:"#f3e8cc","stroke-width":22,fill:"none"}));
+        if(level>=2) {
+          home.append(node("use",{href:"#bench",transform:"translate(363 251) scale(1.6)"}));
+          home.append(node("rect",{x:161,y:237,width:54,height:23,rx:5,fill:"#ab946e"}));
+          for(const x of [172,188,204]) home.append(node("circle",{cx:x,cy:244,r:7,fill:"#77984e"}));
+        }
+        if(level>=3) home.append(node("path",{d:"M366 213L403 234 362 266 323 243Z",fill:"#e9d5ad"}));
+        if(level===4) {
+          home.append(node("ellipse",{cx:448,cy:249,rx:37,ry:19,fill:"#a6cfd5",stroke:"#c5b48b","stroke-width":7}));
+          home.append(node("use",{href:"#house",transform:"translate(139 196) scale(1.35)",color:"#9475a1"}));
+          home.append(node("use",{href:"#tree",transform:"translate(465 209) scale(1.2)"}));
+        }
+      }
+      if(announce) document.getElementById("life-status").textContent=`${life.stage}. ${life.story} ${life.benefits.join(". ")}.`;
+    }
+    document.querySelectorAll("[data-life]").forEach(button=>button.addEventListener("click",()=>setLifestyle(Number(button.dataset.life),true)));
+    setLifestyle(0);
+
+    const pieces = {empty:{label:"Empty",symbol:""},workshop:{label:"Workshop",symbol:"⌂"},tree:{label:"Tree",symbol:"♣"},path:{label:"Path",symbol:"·"},pond:{label:"Pond",symbol:"≈"}};
+    let tool="workshop";
+    let cells=Array(64).fill("empty");
+    const history=[];
+    const plot=document.getElementById("plot");
+    const plotStatus=document.getElementById("plot-status");
+    const undo=document.getElementById("undo");
+    function renderPlot(message) {
+      [...plot.children].forEach((button,index)=>{
+        const piece=pieces[cells[index]];
+        button.textContent=piece.symbol; button.dataset.piece=cells[index];
+        button.setAttribute("aria-label",`Row ${Math.floor(index/8)+1}, column ${index%8+1}: ${piece.label}. Place ${pieces[tool].label.toLowerCase()}.`);
+      });
+      undo.disabled=history.length===0;
+      const count=cells.filter(value=>value!=="empty").length;
+      plotStatus.textContent=`${message ? message+" " : ""}${count} ${count===1?"piece":"pieces"} placed. This is a local planning sketch.`;
+    }
+    for(let index=0;index<64;index++) {
+      const button=document.createElement("button"); button.type="button"; button.className="cell"; button.tabIndex=index===0?0:-1;
+      button.addEventListener("click",()=>{
+        if(cells[index]===tool) return;
+        history.push(cells.slice()); cells[index]=tool;
+        renderPlot(`${pieces[tool].label} at row ${Math.floor(index/8)+1}, column ${index%8+1}.`);
+      });
+      button.addEventListener("focus",()=>{ [...plot.children].forEach(cell=>cell.tabIndex=-1); button.tabIndex=0; });
+      button.addEventListener("keydown",event=>{
+        let target=index;
+        if(event.key==="ArrowRight") target=Math.min(Math.floor(index/8)*8+7,index+1);
+        else if(event.key==="ArrowLeft") target=Math.max(Math.floor(index/8)*8,index-1);
+        else if(event.key==="ArrowDown") target=index<56?index+8:index;
+        else if(event.key==="ArrowUp") target=index>=8?index-8:index;
+        else return;
+        event.preventDefault(); plot.children[target].focus();
+      });
+      plot.append(button);
+    }
+    document.querySelectorAll("[data-tool]").forEach(button=>button.addEventListener("click",()=>{
+      tool=button.dataset.tool;
+      document.querySelectorAll("[data-tool]").forEach(item=>item.setAttribute("aria-pressed",String(item.dataset.tool===tool)));
+      renderPlot(`${pieces[tool].label} selected.`);
+    }));
+    undo.addEventListener("click",()=>{if(history.length) { cells=history.pop(); renderPlot("Last edit undone."); }});
+    document.getElementById("reset").addEventListener("click",()=>{
+      if(cells.some(value=>value!=="empty")) { history.push(cells.slice()); cells=Array(64).fill("empty"); renderPlot("Plot cleared. You can undo this."); }
+    });
+    document.getElementById("export").addEventListener("click",()=>{
+      const sketch={format:"sjl-planning-sketch",version:1,size:[8,8],cells};
+      const url=URL.createObjectURL(new Blob([JSON.stringify(sketch,null,2)],{type:"application/json"}));
+      const link=document.createElement("a"); link.href=url; link.download="jackfruit-courtyard-sketch.json";
+      document.body.append(link); link.click(); link.remove(); setTimeout(()=>URL.revokeObjectURL(url),1000);
+      renderPlot("Sketch exported. This format is a planning aid, not a production village save.");
+    });
+    renderPlot();
+  </script>
+</body>
+</html>

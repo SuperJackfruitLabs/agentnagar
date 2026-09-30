@@ -1,0 +1,24 @@
+{
+  "placement:square-noticeboard": {
+    "items": [
+      {
+        "body": "Trams run the boulevard between the Square and the Avenue. Arrivals ride in, and anyone can board, ride and step off.",
+        "date": "2026-09-27",
+        "headline": "v0.0.3: the boulevard tram"
+      },
+      {
+        "body": "A title screen, menus, settings and rebinding, six interface skins, and a map to find a place and go there.",
+        "date": "2026-09-26",
+        "headline": "v0.0.2: menus and a map"
+      },
+      {
+        "body": "The Makers' square in six styles, with its walkers, seats and daylight, packaged as a client to download.",
+        "date": "2026-09-26",
+        "headline": "v0.0.1: the first packages"
+      }
+    ],
+    "sample": true,
+    "title": "Notices from the city",
+    "type": "Notices"
+  }
+}

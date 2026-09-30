@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "3ff148ca3698e0cc31690178b84a4189e64c2dda491edd1f9059ffb7c9b7fe87",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "df974cdba635a85521e8e8de7bef10321dd8f2d0b020a914cdb493d4df467c39"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/09-solarpunk/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/09-solarpunk/candidates/02-creating-exploring-pass2.png"
+  ],
+  "reference_images": [
+    "../r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

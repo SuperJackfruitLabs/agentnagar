@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sha256": "1f71fdfdd4ad1f68b8fab287e71f1637ddc343e798b1914182d745d9f2d713d3",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "63dc906649c96a7d12b56c31e7b6fb0e594333c3581f30a50dd664513db822bc"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/02-voxel/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/02-voxel/02-creating-exploring.pass-1.png"
+  ],
+  "reference_images": [
+    "../../00-city-perspectives/r004/image.png",
+    "../../01-living-community/r001/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

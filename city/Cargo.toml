@@ -1,0 +1,28 @@
+[workspace]
+resolver = "3"
+members = ["crates/city-contracts", "crates/city-core", "crates/city-cli", "crates/city-mcp", "crates/city-godot"]
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.95"
+publish = false
+license = "AGPL-3.0-only"
+repository = "https://github.com/SuperJackfruitLabs/agentnagar"
+
+[workspace.dependencies]
+city-contracts = { path = "crates/city-contracts" }
+city-core = { path = "crates/city-core" }
+city-cli = { path = "crates/city-cli" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+schemars = "1.2"
+rand_chacha = { version = "0.10", default-features = false }
+rand_core = { version = "0.10", default-features = false }
+clap = { version = "4.6", features = ["derive"] }
+proptest = "1.11"
+rmcp = { version = "3.4", features = ["server", "macros", "transport-io"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "io-std", "io-util"] }
+
+# The rules run tick by tick over whole districts; keep tests quick.
+[profile.dev.package.city-core]
+opt-level = 2

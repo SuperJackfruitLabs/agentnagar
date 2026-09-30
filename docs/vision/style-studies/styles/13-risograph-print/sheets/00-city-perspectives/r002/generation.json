@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sha256": "0c40415ae6c4a0a122d1ff7cc22633f733630f5b394898dcf2a9ea435cbed15e",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "51ee3e324b258d8ee085ef8cdcfca9b95001b5088a39b0d82903e547dddd7b55"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/revisions/2026-09-19/13-risograph-print/00-city-perspectives.png"
+  ],
+  "reference_images": [],
+  "legacy_records": [
+    "../../../history/gallery-before-migration/README.md"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

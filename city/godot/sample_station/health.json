@@ -1,0 +1,8 @@
+[
+  { "running": true, "pid": 4242, "cpuPct": 3.1, "memBytes": 88604672, "diskBytes": 41943040, "uptimeSec": 1260, "lastActivity": "2026-09-28T09:21:00.000Z", "note": null },
+  { "running": true, "pid": 4242, "cpuPct": 18.4, "memBytes": 97517568, "diskBytes": 41943040, "uptimeSec": 1265, "lastActivity": "2026-09-28T09:21:05.000Z", "note": null },
+  { "running": true, "pid": 4242, "cpuPct": 42.7, "memBytes": 131072000, "diskBytes": 42991616, "uptimeSec": 1270, "lastActivity": "2026-09-28T09:21:10.000Z", "note": null },
+  { "running": true, "pid": 4242, "cpuPct": 27.9, "memBytes": 118489088, "diskBytes": 42991616, "uptimeSec": 1275, "lastActivity": "2026-09-28T09:21:15.000Z", "note": null },
+  { "running": true, "pid": 4242, "cpuPct": 6.2, "memBytes": 94371840, "diskBytes": 42991616, "uptimeSec": 1280, "lastActivity": "2026-09-28T09:21:20.000Z", "note": null },
+  { "running": true, "pid": 4242, "cpuPct": 2.4, "memBytes": 89128960, "diskBytes": 42991616, "uptimeSec": 1285, "lastActivity": "2026-09-28T09:21:25.000Z", "note": null }
+]

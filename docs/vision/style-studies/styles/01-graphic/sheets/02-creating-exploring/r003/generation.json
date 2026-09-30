@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "ac27fd691971253b7922507056cf42c21cc8f7295b057e616ef2cb035e60f8ae",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "bd69a09d776ee9193369cf864fb647ab0aeb9081320538b24c0d0a396738b1b9"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/01-graphic/02-creating-exploring.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/01-graphic/02-creating-exploring.pass-2.png"
+  ],
+  "reference_images": [
+    "../r002/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

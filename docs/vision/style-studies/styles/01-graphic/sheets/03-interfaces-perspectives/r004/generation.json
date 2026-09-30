@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sha256": "9560a7f878e2c3522df6f65b76d34b8c477e93c7aa29355aae8decc79461a8fc",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "0d578fdd0cfe39c0d88be6ce01680af04794ec0671d3c5632f3b1519755478b5"
+  },
+  "source_paths": [
+    "docs/vision/style-studies/01-graphic/03-interfaces-perspectives.png",
+    "docs/vision/style-studies/revisions/2026-09-20-first-ten/01-graphic/03-interfaces-perspectives.pass-3.png"
+  ],
+  "reference_images": [
+    "../r003/image.png"
+  ],
+  "legacy_records": [
+    "../../../history/2026-09-20-first-ten/generation-outputs.json"
+  ],
+  "baseline_commit": "4cc96dee340556ebfba4aa09df6f364ee12754a6"
+}

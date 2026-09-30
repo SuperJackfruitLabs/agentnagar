@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-style="30-afrofuturist-maker-metropolis">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 Afrofuturist maker metropolis · Agentnagar style studies</title>
+<meta name="description" content="Agentnagar's Afrofuturist maker metropolis study presented as an imagined maker-festival broadcast: bold geometric pattern, visual rhythm and a programme of sets.">
+<link rel="stylesheet" href="../../../shared/page-kit/fonts/fonts.css">
+<link rel="stylesheet" href="assets/fest.css">
+</head>
+<body>
+<a class="skip" href="#programme">Skip to the programme</a>
+
+<header class="bar">
+  <div class="ident"><span class="ch" aria-hidden="true">CH<b>30</b></span><span class="ident-text">Agentnagar style studies<br><small>Page format: an imagined festival broadcast. No festival is planned or announced.</small></span></div>
+  <div class="controls" role="group" aria-label="Visual rhythm (no sound)">
+    <button class="ctl" type="button" id="beatBtn" aria-pressed="true">Pause rhythm</button>
+    <label class="tempo"><span>Tempo <output id="bpmOut">96</output> bpm</span><input type="range" id="bpm" min="60" max="140" step="4" value="96"></label>
+    <button class="ctl ctl-notes" type="button" id="notesBtn">Read the notes</button>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<main>
+  <section class="stage" aria-labelledby="title">
+    <div class="stage-art" id="stageArt"></div>
+    <div class="stage-copy">
+      <p class="kicker"><span class="dot" aria-hidden="true"></span> Style study 30 · maker festival programme</p>
+      <h1 id="title">Afrofuturist maker metropolis</h1>
+      <p class="lede">Copper lattice towers, patterned facades and a great tree shading the civic square. Seven sets, one reference district. The rhythm is visual only; nothing plays sound.</p>
+      <p class="honest">An Afrofuturist-<em>inspired</em> study: it draws on a visual grammar and makes no claim of cultural authenticity. The brief makes a specific creative partnership and regional reference a precondition for any production use.</p>
+      <p class="illus">Skyline above: illustrative art made for this page, not a concept sheet.</p>
+    </div>
+    <div class="eq" aria-hidden="true" id="eq"></div>
+  </section>
+
+  <nav class="programme" id="programme" aria-label="Festival programme">
+    <h2 class="prog-title">Programme</h2>
+    <ol id="progList"></ol>
+  </nav>
+
+  <section class="set" id="set-project" data-core="project" aria-labelledby="h-project">
+    <div class="lower-third"><span class="set-no">Set 01</span><h2 id="h-project">Agentnagar</h2></div>
+    <div class="set-body" id="projectBody"></div>
+  </section>
+
+  <section class="set" id="set-style" data-core="style" aria-labelledby="h-style">
+    <div class="lower-third lt-teal"><span class="set-no">Set 02</span><h2 id="h-style">The style</h2></div>
+    <div class="set-body" id="styleBody"></div>
+  </section>
+
+  <section class="set" id="set-views" data-core="views" aria-labelledby="h-views">
+    <div class="lower-third lt-ochre"><span class="set-no">Set 03</span><h2 id="h-views">One district, four views</h2></div>
+    <div class="set-body" id="viewsBody"></div>
+  </section>
+
+  <section class="set" id="set-agents" data-core="agents" aria-labelledby="h-agents">
+    <div class="lower-third"><span class="set-no">Set 04</span><h2 id="h-agents">Agents in this style</h2></div>
+    <div class="set-body" id="agentsBody"></div>
+  </section>
+
+  <section class="set" id="set-trade" data-core="tradeoffs" aria-labelledby="h-trade">
+    <div class="lower-third lt-teal"><span class="set-no">Set 05</span><h2 id="h-trade">Strengths and trade-offs</h2></div>
+    <div class="set-body" id="tradeBody"></div>
+  </section>
+
+  <section class="set" id="set-status" aria-labelledby="h-status">
+    <div class="lower-third lt-ochre"><span class="set-no">Set 06</span><h2 id="h-status">Status and credits</h2></div>
+    <div class="set-body" id="statusBody"></div>
+  </section>
+
+  <section class="set set-nav" id="set-nav" aria-labelledby="h-nav">
+    <div class="lower-third"><span class="set-no">Set 07</span><h2 id="h-nav">Change channel</h2></div>
+    <div class="set-body" id="navBody"><p>Previous study, the full collection of thirty, or back around to study 01.</p></div>
+  </section>
+</main>
+
+<footer class="foot"><p id="footNote"></p></footer>
+
+<script src="../../../shared/page-kit/styles-data.js"></script>
+<script src="../../../shared/page-kit/project.js"></script>
+<script src="../../../shared/page-kit/kit.js"></script>
+<script src="assets/skyline.js"></script>
+<script src="assets/fest.js"></script>
+</body>
+</html>
