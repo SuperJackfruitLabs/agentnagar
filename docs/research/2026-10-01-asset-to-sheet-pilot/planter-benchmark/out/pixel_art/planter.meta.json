@@ -1,0 +1,23 @@
+{
+ "anchors": {
+  "scenery/planter.png": [
+   22,
+   25
+  ]
+ },
+ "info": {
+  "scenery/planter.png": {
+   "model": "planter",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    44,
+    36
+   ]
+  }
+ }
+}

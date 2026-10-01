@@ -1,0 +1,69 @@
+{
+  "needle": "planter_square",
+  "placed": 11,
+  "views": [
+    {
+      "at": [
+        -39.0025024414062,
+        0.0,
+        -0.502499997615814
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.0038435459137,
+        1.0,
+        1.00384616851807
+      ],
+      "scene": "res://styles/lowpoly_tropical/assets/planter_square.glb",
+      "size": [
+        1.30500030517578,
+        1.52289319038391,
+        1.30499994754791
+      ],
+      "turn_degrees": 0
+    },
+    {
+      "at": [
+        -36.5025024414062,
+        0.0,
+        0.247500002384186
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.0038435459137,
+        1.0,
+        1.00384616851807
+      ],
+      "scene": "res://styles/lowpoly_tropical/assets/planter_square.glb",
+      "size": [
+        1.30500030517578,
+        1.52289319038391,
+        1.30499994754791
+      ],
+      "turn_degrees": 0
+    },
+    {
+      "at": [
+        -41.7525024414062,
+        0.0,
+        6.24749946594238
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.0038435459137,
+        1.0,
+        1.00384604930878
+      ],
+      "scene": "res://styles/lowpoly_tropical/assets/planter_square.glb",
+      "size": [
+        1.30500030517578,
+        1.52289319038391,
+        1.30500030517578
+      ],
+      "turn_degrees": 0
+    }
+  ]
+}

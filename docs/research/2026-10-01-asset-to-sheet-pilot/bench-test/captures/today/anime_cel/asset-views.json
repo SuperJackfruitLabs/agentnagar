@@ -1,0 +1,51 @@
+{
+  "needle": "seat_bench_v2",
+  "placed": 18,
+  "views": [
+    {
+      "at": [
+        -32.8384742736816,
+        0.0,
+        21.120002746582
+      ],
+      "in_use": false,
+      "scale": [
+        1.00000023841858,
+        1.0,
+        1.09871351718903
+      ],
+      "scene": "res://styles/anime_cel/assets/seat_bench_v2.glb",
+      "turn_degrees": -90
+    },
+    {
+      "at": [
+        -19.9215240478516,
+        0.0,
+        26.6199989318848
+      ],
+      "in_use": false,
+      "scale": [
+        1.00000023841858,
+        1.0,
+        1.09871673583984
+      ],
+      "scene": "res://styles/anime_cel/assets/seat_bench_v2.glb",
+      "turn_degrees": 90
+    },
+    {
+      "at": [
+        -26.879997253418,
+        0.0,
+        26.5784759521484
+      ],
+      "in_use": false,
+      "scale": [
+        1.00000023841858,
+        1.0,
+        1.09871673583984
+      ],
+      "scene": "res://styles/anime_cel/assets/seat_bench_v2.glb",
+      "turn_degrees": 0
+    }
+  ]
+}

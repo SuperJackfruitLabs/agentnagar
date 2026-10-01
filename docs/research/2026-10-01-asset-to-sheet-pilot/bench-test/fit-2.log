@@ -1,0 +1,54 @@
+== anime_cel
+round 0: timber band error 0.049 colour distance 9.1, frame band error 0.036 colour distance 7.8
+  timber sheet               #3F312A 0.20  #564439 0.28  #926B4B 0.44  #CD9668 0.62  #EABE8E 0.77
+  timber game                #5A4438 0.28  #735A4C 0.37  #8B684F 0.43  #C28B59 0.58  #FDC177 0.79
+  frame sheet                #25242B 0.15  #48464F 0.28  #6E696C 0.42
+  frame game                 #252839 0.16  #323241 0.20  #6F6561 0.40
+round 1: timber band error 0.045 colour distance 8.9, frame band error 0.037 colour distance 7.6
+  timber sheet               #3F312A 0.20  #564439 0.28  #926B4B 0.44  #CD9668 0.62  #EABE8E 0.77
+  timber game                #594338 0.28  #735A4C 0.37  #8C694F 0.44  #C38C5A 0.58  #FBBE75 0.78
+  frame sheet                #25242B 0.15  #48464F 0.28  #6E696C 0.42
+  frame game                 #2F2F3F 0.19  #3A3947 0.23  #786D64 0.44
+round 2: timber band error 0.042 colour distance 8.8, frame band error 0.038 colour distance 7.6
+  timber sheet               #3F312A 0.20  #564439 0.28  #926B4B 0.44  #CD9668 0.62  #EABE8E 0.77
+  timber game                #584337 0.28  #735A4C 0.37  #8D6A51 0.44  #C48C5A 0.58  #F8BC73 0.77
+  frame sheet                #25242B 0.15  #48464F 0.28  #6E696C 0.42
+  frame game                 #323342 0.20  #3E3D4A 0.25  #7A6E63 0.44
+seconds a round: build 0.5, import and capture 14.4
+== voxel
+round 0: timber band error 0.061 colour distance 10.9, frame band error 0.086 colour distance 11.0
+  timber sheet               #643511 0.24  #97531E 0.37  #D2792A 0.53  #EE9238 0.63  #F7A544 0.69
+  timber game                #8E4619 0.33  #A3551B 0.39  #B5631D 0.44  #D68836 0.58  #F5BA60 0.75
+  frame sheet                #2E2F35 0.19  #434249 0.26  #988A8B 0.55
+  frame game                 #232531 0.15  #42404C 0.26  #5A545E 0.34
+round 1: timber band error 0.061 colour distance 10.4, frame band error 0.071 colour distance 8.1
+  timber sheet               #643511 0.24  #97531E 0.37  #D2792A 0.53  #EE9238 0.63  #F7A544 0.69
+  timber game                #934C1D 0.35  #A45A1E 0.40  #BA671E 0.45  #D78B38 0.59  #F4B75E 0.74
+  frame sheet                #2E2F35 0.19  #434249 0.26  #988A8B 0.55
+  frame game                 #282933 0.17  #60595F 0.36  #7C7275 0.46
+round 2: timber band error 0.062 colour distance 10.1, frame band error 0.079 colour distance 8.9
+  timber sheet               #643511 0.24  #97531E 0.37  #D2792A 0.53  #EE9238 0.63  #F7A544 0.69
+  timber game                #904F1F 0.35  #A85B1F 0.41  #BC681F 0.46  #D68B39 0.59  #F6B55D 0.74
+  frame sheet                #2E2F35 0.19  #434249 0.26  #988A8B 0.55
+  frame game                 #20222A 0.13  #686265 0.39  #867C7D 0.50
+seconds a round: build 0.5, import and capture 14.4
+== neon_noir
+round 0: timber band error 0.078 colour distance 11.6
+  timber sheet               #050302 0.01  #1B100D 0.07  #291A14 0.11  #363240 0.21  #846058 0.41
+  timber game                #010004 0.00  #05050D 0.02  #100E15 0.06  #221A1D 0.11  #4B352E 0.23
+round 1: timber band error 0.055 colour distance 10.5
+  timber sheet               #050302 0.01  #1B100D 0.07  #291A14 0.11  #363240 0.21  #846058 0.41
+  timber game                #08050A 0.02  #120E18 0.06  #201820 0.10  #2E2329 0.15  #4E312B 0.22
+round 2: timber band error 0.054 colour distance 11.1
+  timber sheet               #050302 0.01  #1B100D 0.07  #291A14 0.11  #363240 0.21  #846058 0.41
+  timber game                #0D070D 0.04  #19131D 0.08  #281E27 0.13  #38292F 0.18  #4A3134 0.22
+seconds a round: build 0.5, import and capture 13.6
+== solarpunk
+round 0: timber band error 0.045 colour distance 5.9
+  timber sheet               #3F220F 0.16  #70482E 0.31  #956241 0.42  #B67F58 0.53  #FACC97 0.83
+  timber game                #5D3826 0.25  #794D34 0.33  #8D5E3F 0.40  #AE7F59 0.53  #DCB887 0.74
+round 1: timber band error 0.042 colour distance 5.5
+  timber sheet               #3F220F 0.16  #70482E 0.31  #956241 0.42  #B67F58 0.53  #FACC97 0.83
+  timber game                #5C3625 0.24  #794D33 0.33  #8E5E3E 0.40  #B07F58 0.53  #DEB987 0.74
+seconds a round: build 0.5, import and capture 16.5
+FIT-DONE

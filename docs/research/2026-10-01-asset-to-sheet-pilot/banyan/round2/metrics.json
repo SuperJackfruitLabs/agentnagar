@@ -1,0 +1,167 @@
+{
+ "lowpoly_tropical": {
+  "concept": {
+   "contrast": 0.175,
+   "detail": 0.0269,
+   "colours": 1884,
+   "deep_shadow": 0.069,
+   "highlight": 0.223
+  },
+  "today": {
+   "contrast": 0.158,
+   "detail": 0.0049,
+   "colours": 294,
+   "deep_shadow": 0.003,
+   "highlight": 0.187,
+   "distance": 1.395
+  },
+  "round 1": {
+   "contrast": 0.16,
+   "detail": 0.0074,
+   "colours": 395,
+   "deep_shadow": 0.008,
+   "highlight": 0.328,
+   "distance": 1.097
+  },
+  "round 2": {
+   "contrast": 0.168,
+   "detail": 0.0236,
+   "colours": 868,
+   "deep_shadow": 0.041,
+   "highlight": 0.21,
+   "distance": 0.305
+  }
+ },
+ "voxel": {
+  "concept": {
+   "contrast": 0.165,
+   "detail": 0.0141,
+   "colours": 1291,
+   "deep_shadow": 0.1,
+   "highlight": 0.153
+  },
+  "today": {
+   "contrast": 0.211,
+   "detail": 0.0046,
+   "colours": 191,
+   "deep_shadow": 0.194,
+   "highlight": 0.004,
+   "distance": 1.517
+  },
+  "round 1": {
+   "contrast": 0.193,
+   "detail": 0.0046,
+   "colours": 253,
+   "deep_shadow": 0.16,
+   "highlight": 0.0,
+   "distance": 1.681
+  },
+  "round 2": {
+   "contrast": 0.168,
+   "detail": 0.0082,
+   "colours": 342,
+   "deep_shadow": 0.176,
+   "highlight": 0.01,
+   "distance": 1.036
+  }
+ },
+ "anime_cel": {
+  "concept": {
+   "contrast": 0.159,
+   "detail": 0.0191,
+   "colours": 1668,
+   "deep_shadow": 0.026,
+   "highlight": 0.109
+  },
+  "today": {
+   "contrast": 0.186,
+   "detail": 0.0329,
+   "colours": 931,
+   "deep_shadow": 0.128,
+   "highlight": 0.133,
+   "distance": 0.615
+  },
+  "round 1": {
+   "contrast": 0.148,
+   "detail": 0.0335,
+   "colours": 446,
+   "deep_shadow": 0.056,
+   "highlight": 0.0,
+   "distance": 1.482
+  },
+  "round 2": {
+   "contrast": 0.169,
+   "detail": 0.0398,
+   "colours": 1192,
+   "deep_shadow": 0.041,
+   "highlight": 0.125,
+   "distance": 0.345
+  }
+ },
+ "solarpunk": {
+  "concept": {
+   "contrast": 0.161,
+   "detail": 0.0357,
+   "colours": 1700,
+   "deep_shadow": 0.061,
+   "highlight": 0.164
+  },
+  "today": {
+   "contrast": 0.187,
+   "detail": 0.0162,
+   "colours": 1046,
+   "deep_shadow": 0.232,
+   "highlight": 0.021,
+   "distance": 0.963
+  },
+  "round 1": {
+   "contrast": 0.165,
+   "detail": 0.0212,
+   "colours": 1119,
+   "deep_shadow": 0.172,
+   "highlight": 0.038,
+   "distance": 0.693
+  },
+  "round 2": {
+   "contrast": 0.188,
+   "detail": 0.0209,
+   "colours": 1391,
+   "deep_shadow": 0.114,
+   "highlight": 0.251,
+   "distance": 0.388
+  }
+ },
+ "neon_noir": {
+  "concept": {
+   "contrast": 0.17,
+   "detail": 0.0264,
+   "colours": 1404,
+   "deep_shadow": 0.087,
+   "highlight": 0.254
+  },
+  "today": {
+   "contrast": 0.126,
+   "detail": 0.0138,
+   "colours": 769,
+   "deep_shadow": 0.065,
+   "highlight": 0.076,
+   "distance": 0.61
+  },
+  "round 1": {
+   "contrast": 0.118,
+   "detail": 0.0108,
+   "colours": 761,
+   "deep_shadow": 0.164,
+   "highlight": 0.187,
+   "distance": 0.562
+  },
+  "round 2": {
+   "contrast": 0.131,
+   "detail": 0.0168,
+   "colours": 855,
+   "deep_shadow": 0.135,
+   "highlight": 0.127,
+   "distance": 0.468
+  }
+ }
+}

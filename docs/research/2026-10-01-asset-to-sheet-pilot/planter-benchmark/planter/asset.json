@@ -1,0 +1,389 @@
+{
+ "asset": "planter",
+ "note": "The square planter (catalogue kind `planter`, 1.3 m square, a piece the packs fill to its footprint). Boxes are fractions of each style's panel, read off grid.py's enlargements: the box's faces (kind `box`: stone, concrete or timber) and the plants' leaves (kind `leaf`; the `green` rule drops the flowers).",
+ "panel": "park",
+ "kinds": [
+  "leaf",
+  "box"
+ ],
+ "stops": {
+  "leaf": 5,
+  "box": 3
+ },
+ "sheet_rule": {
+  "leaf": "green",
+  "box": "pale"
+ },
+ "unmarked": {
+  "leaf": "green"
+ },
+ "footprint": [
+  -0.65,
+  -0.65,
+  0.65,
+  0.65
+ ],
+ "frame": "auto",
+ "fit": {
+  "stops": {
+   "leaf": true,
+   "box": false
+  }
+ },
+ "styles": {
+  "lowpoly_tropical": {
+   "needle": "planter_square",
+   "asset_file": "assets/planter_square.glb",
+   "look": [
+    0.44,
+    0.56,
+    0.62,
+    0.84
+   ],
+   "sheet": {
+    "leaf": [
+     [
+      0.445,
+      0.7,
+      0.5,
+      0.75
+     ],
+     [
+      0.5,
+      0.63,
+      0.545,
+      0.68
+     ],
+     [
+      0.555,
+      0.615,
+      0.6,
+      0.66
+     ]
+    ],
+    "box": [
+     [
+      0.47,
+      0.78,
+      0.515,
+      0.82
+     ],
+     [
+      0.505,
+      0.72,
+      0.54,
+      0.755
+     ],
+     [
+      0.548,
+      0.71,
+      0.565,
+      0.755
+     ]
+    ]
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_planter_lowpoly.py",
+    "--",
+    "{out}",
+    "{params}"
+   ]
+  },
+  "voxel": {
+   "needle": "planter.glb",
+   "asset_file": "assets/v2/planter.glb",
+   "look": [
+    0.27,
+    0.5,
+    0.47,
+    1.0
+   ],
+   "sheet": {
+    "leaf": [
+     [
+      0.325,
+      0.71,
+      0.385,
+      0.77
+     ],
+     [
+      0.3,
+      0.86,
+      0.36,
+      0.94
+     ],
+     [
+      0.39,
+      0.88,
+      0.45,
+      0.95
+     ],
+     [
+      0.295,
+      0.53,
+      0.33,
+      0.59
+     ]
+    ],
+    "box": [
+     [
+      0.3,
+      0.61,
+      0.335,
+      0.655
+     ]
+    ]
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_planter_voxel.py",
+    "--",
+    "{out}",
+    "{params}"
+   ]
+  },
+  "anime_cel": {
+   "needle": "planter_square",
+   "asset_file": "assets/planter_square.glb",
+   "panel": "street",
+   "look": [
+    0.0,
+    0.8,
+    0.3,
+    1.0
+   ],
+   "sheet": {
+    "leaf": [
+     [
+      0.02,
+      0.86,
+      0.1,
+      0.92
+     ],
+     [
+      0.225,
+      0.85,
+      0.27,
+      0.9
+     ],
+     [
+      0.83,
+      0.855,
+      0.9,
+      0.905
+     ]
+    ],
+    "box": [
+     [
+      0.02,
+      0.945,
+      0.12,
+      0.985
+     ],
+     [
+      0.22,
+      0.92,
+      0.28,
+      0.955
+     ],
+     [
+      0.8,
+      0.935,
+      0.87,
+      0.99
+     ]
+    ]
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_planter_kit.py",
+    "--",
+    "anime",
+    "{out}",
+    "{params}"
+   ]
+  },
+  "solarpunk": {
+   "needle": "planter_square",
+   "asset_file": "assets/planter_square.glb",
+   "panel": "gathering",
+   "look": [
+    0.66,
+    0.84,
+    0.84,
+    1.0
+   ],
+   "sheet_rule": {
+    "box": "warm"
+   },
+   "sheet": {
+    "leaf": [
+     [
+      0.71,
+      0.868,
+      0.78,
+      0.9
+     ],
+     [
+      0.925,
+      0.935,
+      0.96,
+      0.99
+     ]
+    ],
+    "box": [
+     [
+      0.705,
+      0.905,
+      0.745,
+      0.965
+     ],
+     [
+      0.765,
+      0.955,
+      0.8,
+      0.99
+     ]
+    ]
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_planter_kit.py",
+    "--",
+    "solarpunk",
+    "{out}",
+    "{params}"
+   ]
+  },
+  "neon_noir": {
+   "needle": "planter_square",
+   "asset_file": "assets/planter_square.glb",
+   "look": [
+    0.74,
+    0.4,
+    1.0,
+    0.78
+   ],
+   "sheet_rule": {
+    "box": "any"
+   },
+   "sheet": {
+    "leaf": [
+     [
+      0.86,
+      0.44,
+      0.98,
+      0.52
+     ],
+     [
+      0.8,
+      0.42,
+      0.86,
+      0.47
+     ]
+    ],
+    "box": [
+     [
+      0.845,
+      0.625,
+      0.93,
+      0.69
+     ]
+    ]
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_planter_kit.py",
+    "--",
+    "neon",
+    "{out}",
+    "{params}"
+   ]
+  },
+  "pixel_art": {
+   "needle": "",
+   "asset_file": "assets/scenery/planter.png",
+   "look": [
+    0.5,
+    0.74,
+    0.72,
+    1.0
+   ],
+   "sheet": {
+    "leaf": [
+     [
+      0.56,
+      0.8,
+      0.6,
+      0.88
+     ],
+     [
+      0.61,
+      0.83,
+      0.655,
+      0.885
+     ]
+    ],
+    "box": [
+     [
+      0.585,
+      0.9,
+      0.655,
+      0.965
+     ],
+     [
+      0.66,
+      0.81,
+      0.7,
+      0.89
+     ]
+    ]
+   },
+   "run": "pixel_planter_run.sh",
+   "sprites": {
+    "files": [
+     "scenery/planter.png"
+    ],
+    "overview": [
+     0
+    ]
+   }
+  }
+ },
+ "ramp_override": {
+  "neon_noir": {
+   "box": [
+    null,
+    null,
+    "#5C4A45"
+   ]
+  }
+ },
+ "note_override": "neon's box: its lightest stop took in the lamp's glow on the concrete; set by hand to a lighter tone of the concrete itself."
+}

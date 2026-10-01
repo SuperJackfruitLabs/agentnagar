@@ -1,0 +1,274 @@
+{
+ "lowpoly_tropical": {
+  "timber": {
+   "today": {
+    "band_error": 0.044,
+    "colour_distance": 8.6
+   },
+   "new": {
+    "band_error": 0.015,
+    "colour_distance": 4.9
+   },
+   "sheet": [
+    "#613E2B",
+    "#895639",
+    "#9A694F",
+    "#C78860",
+    "#E9A16E"
+   ],
+   "today_bands": [
+    "#653F24",
+    "#754D2B",
+    "#845834",
+    "#D5995D",
+    "#E6AF71"
+   ],
+   "new_bands": [
+    "#5E3A30",
+    "#885840",
+    "#9E6949",
+    "#C0845D",
+    "#E5AE7E"
+   ],
+   "pixels": {
+    "today": 2039380,
+    "new": 2719751
+   }
+  },
+  "frame": {
+   "today": {
+    "band_error": 0.102,
+    "colour_distance": 12.6
+   },
+   "new": {
+    "band_error": 0.017,
+    "colour_distance": 2.8
+   },
+   "sheet": [
+    "#2C282B",
+    "#373438",
+    "#4A4548"
+   ],
+   "today_bands": [
+    "#0F1216",
+    "#14171C",
+    "#2F2D2D"
+   ],
+   "new_bands": [
+    "#2B292D",
+    "#312E33",
+    "#544B4B"
+   ],
+   "pixels": {
+    "today": 381945,
+    "new": 231450
+   }
+  }
+ },
+ "voxel": {
+  "timber": {
+   "today": {
+    "band_error": 0.079,
+    "colour_distance": 18.6
+   },
+   "new": {
+    "band_error": 0.05,
+    "colour_distance": 9.7
+   },
+   "sheet": [
+    "#643511",
+    "#97531E",
+    "#D2792A",
+    "#EE9238",
+    "#F7A544"
+   ],
+   "today_bands": [
+    "#7B431D",
+    "#864B20",
+    "#966332",
+    "#BE8647",
+    "#F3C884"
+   ],
+   "new_bands": [
+    "#803E17",
+    "#99521C",
+    "#B1641F",
+    "#D38837",
+    "#F1B860"
+   ],
+   "pixels": {
+    "today": 2490236,
+    "new": 3303460
+   }
+  },
+  "frame": {
+   "today": {
+    "band_error": 0.151,
+    "colour_distance": 18.3
+   },
+   "new": {
+    "band_error": 0.07,
+    "colour_distance": 7.7
+   },
+   "sheet": [
+    "#2E2F35",
+    "#434249",
+    "#988A8B"
+   ],
+   "today_bands": [
+    "#101721",
+    "#141D2B",
+    "#545A65"
+   ],
+   "new_bands": [
+    "#303139",
+    "#585358",
+    "#726A6C"
+   ],
+   "pixels": {
+    "today": 902701,
+    "new": 349832
+   }
+  }
+ },
+ "anime_cel": {
+  "timber": {
+   "today": {
+    "band_error": 0.062,
+    "colour_distance": 12.9
+   },
+   "new": {
+    "band_error": 0.06,
+    "colour_distance": 9.5
+   },
+   "sheet": [
+    "#3F312A",
+    "#564439",
+    "#926B4B",
+    "#CD9668",
+    "#EABE8E"
+   ],
+   "today_bands": [
+    "#795B52",
+    "#7A5C53",
+    "#916956",
+    "#D99864",
+    "#FFB870"
+   ],
+   "new_bands": [
+    "#4F3C32",
+    "#664E3F",
+    "#785C48",
+    "#AB7A4E",
+    "#EFB470"
+   ],
+   "pixels": {
+    "today": 1831382,
+    "new": 2092747
+   }
+  },
+  "frame": {
+   "today": {
+    "band_error": 0.152,
+    "colour_distance": 20.5
+   },
+   "new": {
+    "band_error": 0.036,
+    "colour_distance": 7.8
+   },
+   "sheet": [
+    "#25242B",
+    "#48464F",
+    "#6E696C"
+   ],
+   "today_bands": [
+    "#16172C",
+    "#17172C",
+    "#362F3B"
+   ],
+   "new_bands": [
+    "#2B2C3A",
+    "#383741",
+    "#796E60"
+   ],
+   "pixels": {
+    "today": 396369,
+    "new": 328670
+   }
+  }
+ },
+ "solarpunk": {
+  "timber": {
+   "today": {
+    "band_error": 0.145,
+    "colour_distance": 19.3
+   },
+   "new": {
+    "band_error": 0.066,
+    "colour_distance": 7.4
+   },
+   "sheet": [
+    "#3F220F",
+    "#70482E",
+    "#956241",
+    "#B67F58",
+    "#FACC97"
+   ],
+   "today_bands": [
+    "#886F45",
+    "#8C754C",
+    "#957C52",
+    "#CEAC6E",
+    "#E2C489"
+   ],
+   "new_bands": [
+    "#593627",
+    "#71472F",
+    "#835739",
+    "#A3734F",
+    "#D1A977"
+   ],
+   "pixels": {
+    "today": 2057417,
+    "new": 2748669
+   }
+  }
+ },
+ "neon_noir": {
+  "timber": {
+   "today": {
+    "band_error": 0.122,
+    "colour_distance": 16.7
+   },
+   "new": {
+    "band_error": 0.053,
+    "colour_distance": 10.3
+   },
+   "sheet": [
+    "#050302",
+    "#1B100D",
+    "#291A14",
+    "#363240",
+    "#846058"
+   ],
+   "today_bands": [
+    "#010007",
+    "#020008",
+    "#0F0912",
+    "#130C16",
+    "#1C151E"
+   ],
+   "new_bands": [
+    "#0C060C",
+    "#19121C",
+    "#271C25",
+    "#352730",
+    "#4E302B"
+   ],
+   "pixels": {
+    "today": 1922728,
+    "new": 2044090
+   }
+  }
+ }
+}

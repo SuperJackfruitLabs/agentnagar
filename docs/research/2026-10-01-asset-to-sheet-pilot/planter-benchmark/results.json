@@ -1,0 +1,332 @@
+{
+ "lowpoly_tropical": {
+  "leaf": {
+   "today": {
+    "band_error": 0.05,
+    "colour_distance": 25.0
+   },
+   "new": {
+    "band_error": 0.02,
+    "colour_distance": 6.9
+   },
+   "sheet": [
+    "#343F27",
+    "#43522D",
+    "#617030",
+    "#99A030",
+    "#CCCC3D"
+   ],
+   "today_bands": [
+    "#003A0E",
+    "#025817",
+    "#167020",
+    "#55A338",
+    "#9ECD56"
+   ],
+   "new_bands": [
+    "#23351F",
+    "#3C4E27",
+    "#65732A",
+    "#9EA23E",
+    "#D0CB61"
+   ],
+   "pixels": {
+    "today": 1376302,
+    "new": 1251013
+   }
+  },
+  "box": {
+   "today": {
+    "band_error": 0.166,
+    "colour_distance": 19.0
+   },
+   "new": {
+    "band_error": 0.059,
+    "colour_distance": 6.8
+   },
+   "sheet": [
+    "#817572",
+    "#93827A",
+    "#E7CEB4"
+   ],
+   "today_bands": [
+    "#37241E",
+    "#A29E8F",
+    "#C3BBA7"
+   ],
+   "new_bands": [
+    "#83746D",
+    "#A59589",
+    "#C8B5A4"
+   ],
+   "pixels": {
+    "today": 1988679,
+    "new": 1423011
+   }
+  }
+ },
+ "voxel": {
+  "leaf": {
+   "today": {
+    "band_error": 0.174,
+    "colour_distance": 29.4
+   },
+   "new": {
+    "band_error": 0.018,
+    "colour_distance": 8.9
+   },
+   "sheet": [
+    "#0F3F14",
+    "#1F5717",
+    "#407B11",
+    "#82B314",
+    "#B2D41B"
+   ],
+   "today_bands": [
+    "#097620",
+    "#499A2A",
+    "#60A932",
+    "#B6E177",
+    "#CCEC8C"
+   ],
+   "new_bands": [
+    "#08420C",
+    "#124F0C",
+    "#4E7F0E",
+    "#87AE33",
+    "#C6D450"
+   ],
+   "pixels": {
+    "today": 2066151,
+    "new": 1542284
+   }
+  },
+  "box": {
+   "today": {
+    "band_error": 0.1,
+    "colour_distance": 11.2
+   },
+   "new": {
+    "band_error": 0.064,
+    "colour_distance": 6.7
+   },
+   "sheet": [
+    "#635E64",
+    "#70686C",
+    "#9F979A"
+   ],
+   "today_bands": [
+    "#555659",
+    "#777F81",
+    "#C9CAC7"
+   ],
+   "new_bands": [
+    "#504C54",
+    "#726C72",
+    "#BBB3B2"
+   ],
+   "pixels": {
+    "today": 2261222,
+    "new": 1950170
+   }
+  }
+ },
+ "anime_cel": {
+  "leaf": {
+   "today": {
+    "band_error": 0.159,
+    "colour_distance": 32.3
+   },
+   "new": {
+    "band_error": 0.04,
+    "colour_distance": 10.5
+   },
+   "sheet": [
+    "#313722",
+    "#4C522E",
+    "#656839",
+    "#7F7E3F",
+    "#9C984E"
+   ],
+   "today_bands": [
+    "#265024",
+    "#37642C",
+    "#729F3D",
+    "#9CCD49",
+    "#D4EC5F"
+   ],
+   "new_bands": [
+    "#3B2728",
+    "#404530",
+    "#5E6132",
+    "#89893F",
+    "#96AC54"
+   ],
+   "pixels": {
+    "today": 1268505,
+    "new": 1591278
+   }
+  },
+  "box": {
+   "today": {
+    "band_error": 0.106,
+    "colour_distance": 14.2
+   },
+   "new": {
+    "band_error": 0.019,
+    "colour_distance": 7.3
+   },
+   "sheet": [
+    "#5D5C61",
+    "#747175",
+    "#A29493"
+   ],
+   "today_bands": [
+    "#473638",
+    "#635F78",
+    "#BEB2B4"
+   ],
+   "new_bands": [
+    "#61606D",
+    "#6A6976",
+    "#A79684"
+   ],
+   "pixels": {
+    "today": 2055581,
+    "new": 1437422
+   }
+  }
+ },
+ "solarpunk": {
+  "leaf": {
+   "today": {
+    "band_error": 0.093,
+    "colour_distance": 25.9
+   },
+   "new": {
+    "band_error": 0.02,
+    "colour_distance": 7.5
+   },
+   "sheet": [
+    "#363507",
+    "#4E4D09",
+    "#69660E",
+    "#827F1A",
+    "#B8B375"
+   ],
+   "today_bands": [
+    "#143A16",
+    "#173E17",
+    "#28561B",
+    "#3D6D25",
+    "#659434"
+   ],
+   "new_bands": [
+    "#393A0D",
+    "#4A4B0D",
+    "#676312",
+    "#8A8628",
+    "#B8AC38"
+   ],
+   "pixels": {
+    "today": 1926130,
+    "new": 1921546
+   }
+  },
+  "box": {
+   "today": {
+    "band_error": 0.11,
+    "colour_distance": 16.6
+   },
+   "new": {
+    "band_error": 0.127,
+    "colour_distance": 12.8
+   },
+   "sheet": [
+    "#6A3914",
+    "#855127",
+    "#F4BB85"
+   ],
+   "today_bands": [
+    "#74552D",
+    "#897048",
+    "#BA9E68"
+   ],
+   "new_bands": [
+    "#83502C",
+    "#95602F",
+    "#B77F4A"
+   ],
+   "pixels": {
+    "today": 2012302,
+    "new": 1776605
+   }
+  }
+ },
+ "neon_noir": {
+  "leaf": {
+   "today": {
+    "band_error": 0.064,
+    "colour_distance": 9.6
+   },
+   "new": {
+    "band_error": 0.029,
+    "colour_distance": 5.3
+   },
+   "sheet": [
+    "#070703",
+    "#0A0B04",
+    "#101105",
+    "#1A1A0E",
+    "#545337"
+   ],
+   "today_bands": [
+    "#000002",
+    "#000204",
+    "#000808",
+    "#031512",
+    "#142618"
+   ],
+   "new_bands": [
+    "#000000",
+    "#000000",
+    "#0A0B0F",
+    "#1B2117",
+    "#514924"
+   ],
+   "pixels": {
+    "today": 1263299,
+    "new": 1603370
+   }
+  },
+  "box": {
+   "today": {
+    "band_error": 0.143,
+    "colour_distance": 23.8
+   },
+   "new": {
+    "band_error": 0.102,
+    "colour_distance": 17.1
+   },
+   "sheet": [
+    "#2F2322",
+    "#3E2E2B",
+    "#5C4A45"
+   ],
+   "today_bands": [
+    "#000221",
+    "#070922",
+    "#2B262E"
+   ],
+   "new_bands": [
+    "#0E0A0F",
+    "#181012",
+    "#5A3117"
+   ],
+   "pixels": {
+    "today": 1897179,
+    "new": 1282520
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+1790882758	START planter benchmark (second asset, finished tools)
+1790882758	1 read the kits and the game's placement: start
+1790882788	1 read the kits and the game's placement: end
+1790882788	2 find the planter in the sheets, read the boxes, write the config: start
+1790883032	2 find the planter in the sheets, read the boxes, write the config: end
+1790883032	3 capture today's planters, measure the gap, measure the ramps: start
+1790883297	3 capture today's planters, measure the gap, measure the ramps: end
+1790883297	T toolkit: kit-built solids wound inside out, entries read off baked colours, open leaves: start
+1790883354	T toolkit: kit-built solids wound inside out, entries read off baked colours, open leaves: end
+1790883354	5 write the builders: start
+1790883560	5 write the builders: end
+1790883560	6 first look in the game and fit: start
+1790883615	T toolkit: a replay script driven by the config: start
+1790883615	T toolkit: a replay script driven by the config: end
+1790883897	T toolkit: material marks on pieces that already have a UV layer (leaf cards): start
+1790883907	T toolkit: material marks on pieces that already have a UV layer (leaf cards): end
+1790884257	6 first look in the game and fit: end
+1790884257	7 check the contracts: start
+1790884257	7 check the contracts: end
+1790884282	8 fix the triangle count, last fit round: start
+1790884318	8 fix the triangle count, last fit round: end
+1790884318	10 save the record and replay it from a fresh folder: start
+1790884547	10 save the record and replay it from a fresh folder: end

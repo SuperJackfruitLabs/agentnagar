@@ -1,0 +1,35 @@
+1790876723	START bench test
+1790876723	1 read the kits: start
+1790876806	1 read the kits: end
+1790876806	2 target, cut panels: start
+1790876812	2 target, cut panels: end
+1790876839	2 target, find the bench in the sheets and plan the view: start
+1790877013	2 target, find the bench in the sheets and plan the view: end
+1790877013	3 capture today's benches close up, six packs: start
+1790877122	3 capture today's benches close up, six packs: end
+1790877156	4 cut the sheets' benches and set them beside today's: start
+1790877524	4 cut the sheets' benches and set them beside today's: end
+1790877524	T1 toolkit: shade.py for any kind of face and for pieces placed at several facings: start
+1790877615	T1 toolkit: shade.py for any kind of face and for pieces placed at several facings: end
+1790877690	T2 toolkit: capture that knows which pixels are the asset and of what material: start
+1790877953	T2 toolkit: capture that knows which pixels are the asset and of what material: end
+1790877953	5 measure today's benches against the sheets: start
+1790878239	5 measure today's benches against the sheets: end
+1790878239	T3 toolkit: builds mark each face's material for the capture to read back: start
+1790878273	T3 toolkit: builds mark each face's material for the capture to read back: end
+1790878273	6 write the bench builders (low-poly, anime, solarpunk, neon): start
+1790878581	6 write the bench builders (low-poly, anime, solarpunk, neon): end
+1790878581	7 four benches in the game: first look and fit: start
+1790878871	8 write the voxel bench builder: start
+1790878904	8 write the voxel bench builder: end
+1790878904	9 pixel-art bench: look at today's sprites and the kit's model: start
+1790879076	9 pixel-art bench: look at today's sprites and the kit's model: end (built too)
+1790879117	7 four benches in the game: first look and fit: end
+1790879117	10 second pass: anime frame, voxel in the game, more fit rounds: start
+1790879709	10 second pass: anime frame, voxel in the game, more fit rounds: end
+1790879709	11 contracts and the generator's data point: start
+1790880054	11 contracts and the generator's data point: end
+1790880054	12 save the record; clean replay from a fresh working folder (the machine benchmark): start
+1790880787	12 save the record; clean replay from a fresh working folder (the machine benchmark): end
+1790880787	13 follow-up checks (the game's real band rule, the round-1 anime squeeze, a checked import, marks.py, a second clean replay of the bench, a re-check of the banyan): start
+1790881977	13 follow-up checks (the game's real band rule, the round-1 anime squeeze, a checked import, marks.py, a second clean replay of the bench, a re-check of the banyan): end

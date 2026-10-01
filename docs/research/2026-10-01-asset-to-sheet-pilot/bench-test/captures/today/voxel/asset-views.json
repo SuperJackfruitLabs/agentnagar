@@ -1,0 +1,51 @@
+{
+  "needle": "bench.glb",
+  "placed": 18,
+  "views": [
+    {
+      "at": [
+        -32.7835693359375,
+        0.0,
+        21.120002746582
+      ],
+      "in_use": false,
+      "scale": [
+        0.888889133930206,
+        1.0,
+        0.892857253551483
+      ],
+      "scene": "res://styles/voxel/assets/v2/bench.glb",
+      "turn_degrees": -90
+    },
+    {
+      "at": [
+        -19.9764289855957,
+        0.0,
+        26.6199989318848
+      ],
+      "in_use": false,
+      "scale": [
+        0.888889133930206,
+        1.0,
+        0.892859876155853
+      ],
+      "scene": "res://styles/voxel/assets/v2/bench.glb",
+      "turn_degrees": 90
+    },
+    {
+      "at": [
+        -26.879997253418,
+        0.0,
+        26.5235710144043
+      ],
+      "in_use": false,
+      "scale": [
+        0.888889133930206,
+        1.0,
+        0.892859876155853
+      ],
+      "scene": "res://styles/voxel/assets/v2/bench.glb",
+      "turn_degrees": 0
+    }
+  ]
+}

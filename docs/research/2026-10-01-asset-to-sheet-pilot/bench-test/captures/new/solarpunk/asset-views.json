@@ -1,0 +1,51 @@
+{
+  "needle": "seat_bench_v2",
+  "placed": 18,
+  "views": [
+    {
+      "at": [
+        -32.8667526245117,
+        0.0,
+        21.120002746582
+      ],
+      "in_use": false,
+      "scale": [
+        1.00000023841858,
+        1.0,
+        1.06837606430054
+      ],
+      "scene": "res://styles/solarpunk/assets/seat_bench_v2.glb",
+      "turn_degrees": -90
+    },
+    {
+      "at": [
+        -19.8932476043701,
+        0.0,
+        26.6199989318848
+      ],
+      "in_use": false,
+      "scale": [
+        1.00000023841858,
+        1.0,
+        1.06837928295135
+      ],
+      "scene": "res://styles/solarpunk/assets/seat_bench_v2.glb",
+      "turn_degrees": 90
+    },
+    {
+      "at": [
+        -26.879997253418,
+        0.0,
+        26.6067523956299
+      ],
+      "in_use": false,
+      "scale": [
+        1.00000023841858,
+        1.0,
+        1.06837928295135
+      ],
+      "scene": "res://styles/solarpunk/assets/seat_bench_v2.glb",
+      "turn_degrees": 0
+    }
+  ]
+}

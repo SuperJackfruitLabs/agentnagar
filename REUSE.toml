@@ -94,6 +94,43 @@ path = ["city/godot/evidence/*-vs-sheet.png", "city/godot/evidence/*-vs-sheets.p
 SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
 SPDX-License-Identifier = "CC-BY-SA-4.0 AND CC0-1.0"
 
+# The asset-to-sheet pilot (docs/research/2026-10-01-asset-to-sheet-pilot/).
+# Crops of that concept art, kept as the inputs its measurements read.
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/inputs/*.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/sheets/*.png",
+]
+SPDX-FileCopyrightText = "NONE: crops of AI-generated concept art (OpenAI gpt-image); no rights claimed"
+SPDX-License-Identifier = "CC0-1.0"
+
+# Its comparison sheets and previews set game captures and sprites beside
+# such crops: SJL's composite under CC BY-SA 4.0, the embedded AI crops
+# CC0 1.0.
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/compare/*.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/previews/clumps.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/previews/pixel-sprites.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/bench-test/compare/*.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/bench-test/previews/bench-today.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/bench-test/previews/pixel-bench.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/planter-benchmark/compare/*.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/planter-benchmark/previews/*.png",
+]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0 AND CC0-1.0"
+
+# Its shell scripts and a patch to the client's code are code, like the
+# Python and GDScript beside them.
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/**/*.sh",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/**/*.diff",
+]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "AGPL-3.0-only"
+
 # Fonts keep their own licences; the licence file sits beside each font.
 # (SJL's FontVariation .tres files and Godot's .import files beside them are
 # SJL's, like the rest of the assets.)

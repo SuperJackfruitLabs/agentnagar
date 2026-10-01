@@ -1,0 +1,5 @@
+lowpoly_tropical   1.30 x 1.52 x 1.30 m, 1488 triangles (budget 1500); where people walk x -0.65..0.65, z -0.65..0.65: meets the kit's spec; filled to its footprint it is scaled 1.000 by 1.000; the game placed it scaled 1.004 by 1.004
+voxel              1.20 x 1.10 x 1.20 m, 226 triangles (budget 300); where people walk x -0.60..0.60, z -0.60..0.60: meets the kit's spec; filled to its footprint it is scaled 1.083 by 1.083; the game placed it scaled 1.087 by 1.087
+anime_cel          1.25 x 1.42 x 1.25 m, 956 triangles (budget 1500); where people walk x -0.62..0.63, z -0.61..0.64: meets the kit's spec; filled to its footprint it is scaled 1.039 by 1.039; the game placed it scaled 1.043 by 1.043
+solarpunk          1.20 x 1.40 x 1.20 m, 1462 triangles (budget 1500); where people walk x -0.60..0.60, z -0.60..0.60: meets the kit's spec; filled to its footprint it is scaled 1.082 by 1.083; the game placed it scaled 1.086 by 1.087
+neon_noir          1.25 x 1.42 x 1.25 m, 1104 triangles (budget 1500); where people walk x -0.62..0.63, z -0.61..0.64: meets the kit's spec; filled to its footprint it is scaled 1.039 by 1.039; the game placed it scaled 1.043 by 1.043

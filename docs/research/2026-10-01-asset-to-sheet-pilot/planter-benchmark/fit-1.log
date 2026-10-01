@@ -1,0 +1,86 @@
+== lowpoly_tropical
+round 0: leaf band error 0.042 colour distance 10.2, box band error 0.054 colour distance 6.7
+  leaf sheet                 #343F27 0.23  #43522D 0.30  #617030 0.41  #99A030 0.59  #CCCC3D 0.76
+  leaf game                  #20351B 0.19  #445920 0.32  #738324 0.48  #A5AB37 0.63  #D5D25D 0.79
+  box sheet                  #817572 0.47  #93827A 0.52  #E7CEB4 0.82
+  box game                   #877C74 0.50  #A79B8F 0.62  #D4C4B2 0.78
+round 1: leaf band error 0.032 colour distance 8.5, box band error 0.048 colour distance 6.0
+  leaf sheet                 #343F27 0.23  #43522D 0.30  #617030 0.41  #99A030 0.59  #CCCC3D 0.76
+  leaf game                  #1D321D 0.17  #3E5122 0.29  #6E7D27 0.46  #A1A63A 0.62  #D3CE60 0.78
+  box sheet                  #817572 0.47  #93827A 0.52  #E7CEB4 0.82
+  box game                   #84776F 0.48  #A6988B 0.61  #D3C0AE 0.77
+round 2: leaf band error 0.031 colour distance 8.2, box band error 0.048 colour distance 5.9
+  leaf sheet                 #343F27 0.23  #43522D 0.30  #617030 0.41  #99A030 0.59  #CCCC3D 0.76
+  leaf game                  #1E3120 0.17  #3B4E24 0.28  #6D7A29 0.45  #A0A43C 0.61  #D2CD62 0.78
+  box sheet                  #817572 0.47  #93827A 0.52  #E7CEB4 0.82
+  box game                   #82746E 0.47  #A6968A 0.60  #D2BEAC 0.76
+seconds a round: build 0.5, import and capture 16.0
+== voxel
+round 0: leaf band error 0.022 colour distance 9.2, box band error 0.067 colour distance 8.7
+  leaf sheet                 #0F3F14 0.20  #1F5717 0.28  #407B11 0.40  #82B314 0.62  #B2D41B 0.75
+  leaf game                  #01430E 0.19  #0F540D 0.25  #478510 0.44  #80B338 0.63  #C1D856 0.79
+  box sheet                  #635E64 0.38  #70686C 0.42  #9F979A 0.60
+  box game                   #454553 0.28  #656270 0.39  #B0ABB0 0.68
+round 1: leaf band error 0.021 colour distance 8.8, box band error 0.063 colour distance 7.1
+  leaf sheet                 #0F3F14 0.20  #1F5717 0.28  #407B11 0.40  #82B314 0.62  #B2D41B 0.75
+  leaf game                  #04420D 0.19  #13500D 0.25  #4E820E 0.44  #87B035 0.62  #C7D653 0.79
+  box sheet                  #635E64 0.38  #70686C 0.42  #9F979A 0.60
+  box game                   #4F4B55 0.30  #706B73 0.43  #BAB2B3 0.71
+round 2: leaf band error 0.018 colour distance 8.9, box band error 0.064 colour distance 6.7
+  leaf sheet                 #0F3F14 0.20  #1F5717 0.28  #407B11 0.40  #82B314 0.62  #B2D41B 0.75
+  leaf game                  #08420C 0.20  #124F0C 0.24  #4E7F0E 0.43  #87AE33 0.62  #C6D450 0.78
+  box sheet                  #635E64 0.38  #70686C 0.42  #9F979A 0.60
+  box game                   #504C54 0.30  #726C72 0.43  #BBB3B2 0.71
+seconds a round: build 0.5, import and capture 14.7
+== anime_cel
+round 0: leaf band error 0.038 colour distance 8.2, box band error 0.081 colour distance 11.2
+  leaf sheet                 #313722 0.21  #4C522E 0.31  #656839 0.39  #7F7E3F 0.48  #9C984E 0.58
+  leaf game                  #2A311B 0.18  #3D4323 0.25  #60612C 0.37  #8A8936 0.52  #99A940 0.62
+  box sheet                  #5D5C61 0.37  #747175 0.45  #A29493 0.59
+  box game                   #402E32 0.20  #656074 0.39  #9E908C 0.58
+round 1: leaf band error 0.028 colour distance 7.1, box band error 0.073 colour distance 12.4
+  leaf sheet                 #313722 0.21  #4C522E 0.31  #656839 0.39  #7F7E3F 0.48  #9C984E 0.58
+  leaf game                  #2E3421 0.20  #404629 0.26  #616231 0.37  #8A863B 0.51  #91A842 0.61
+  box sheet                  #5D5C61 0.37  #747175 0.45  #A29493 0.59
+  box game                   #422F31 0.20  #6D7086 0.45  #ABA39B 0.65
+round 2: leaf band error 0.022 colour distance 6.8, box band error 0.097 colour distance 14.4
+  leaf sheet                 #313722 0.21  #4C522E 0.31  #656839 0.39  #7F7E3F 0.48  #9C984E 0.58
+  leaf game                  #303724 0.21  #41482C 0.27  #626333 0.38  #89853D 0.51  #8DA842 0.61
+  box sheet                  #5D5C61 0.37  #747175 0.45  #A29493 0.59
+  box game                   #442F2F 0.21  #727A8F 0.48  #B3B0A4 0.69
+seconds a round: build 0.6, import and capture 15.6
+== solarpunk
+round 0: leaf band error 0.033 colour distance 10.1, box band error 0.145 colour distance 17.4
+  leaf sheet                 #363507 0.20  #4E4D09 0.29  #69660E 0.38  #827F1A 0.47  #B8B375 0.69
+  leaf game                  #33370E 0.20  #414611 0.26  #5C5F1C 0.35  #76773C 0.45  #A49D54 0.60
+  box sheet                  #6A3914 0.26  #855127 0.35  #F4BB85 0.77
+  box game                   #835F40 0.40  #94704A 0.46  #B78F63 0.58
+round 1: leaf band error 0.021 colour distance 7.7, box band error 0.135 colour distance 13.8
+  leaf sheet                 #363507 0.20  #4E4D09 0.29  #69660E 0.38  #827F1A 0.47  #B8B375 0.69
+  leaf game                  #383A0D 0.22  #484A0F 0.28  #656416 0.37  #828030 0.48  #B0A543 0.63
+  box sheet                  #6A3914 0.26  #855127 0.35  #F4BB85 0.77
+  box game                   #845633 0.37  #956639 0.43  #B78653 0.55
+round 2: leaf band error 0.020 colour distance 7.3, box band error 0.130 colour distance 13.0
+  leaf sheet                 #363507 0.20  #4E4D09 0.29  #69660E 0.38  #827F1A 0.47  #B8B375 0.69
+  leaf game                  #393A0C 0.22  #4A4B0E 0.28  #676413 0.37  #878429 0.50  #B5A93A 0.64
+  box sheet                  #6A3914 0.26  #855127 0.35  #F4BB85 0.77
+  box game                   #83522F 0.35  #956232 0.42  #B7814D 0.54
+seconds a round: build 0.5, import and capture 17.0
+== neon_noir
+round 0: leaf band error 0.090 colour distance 11.4, box band error 0.167 colour distance 20.2
+  leaf sheet                 #070703 0.03  #0A0B04 0.04  #101105 0.06  #1A1A0E 0.10  #545337 0.32
+  leaf game                  #000000 0.00  #000000 0.00  #000000 0.00  #040307 0.02  #181710 0.09
+  box sheet                  #2F2322 0.15  #3E2E2B 0.19  #5C4A45 0.30
+  box game                   #000007 0.00  #06030F 0.02  #261D1F 0.12
+round 1: leaf band error 0.083 colour distance 10.0, box band error 0.146 colour distance 17.4
+  leaf sheet                 #070703 0.03  #0A0B04 0.04  #101105 0.06  #1A1A0E 0.10  #545337 0.32
+  leaf game                  #000000 0.00  #000000 0.00  #000001 0.00  #070806 0.03  #1E1D0D 0.11
+  box sheet                  #2F2322 0.15  #3E2E2B 0.19  #5C4A45 0.30
+  box game                   #040207 0.01  #0E090D 0.04  #36241A 0.16
+round 2: leaf band error 0.068 colour distance 7.9, box band error 0.112 colour distance 16.2
+  leaf sheet                 #070703 0.03  #0A0B04 0.04  #101105 0.06  #1A1A0E 0.10  #545337 0.32
+  leaf game                  #000000 0.00  #000000 0.00  #010202 0.01  #0D0F07 0.06  #29290E 0.15
+  box sheet                  #2F2322 0.15  #3E2E2B 0.19  #5C4A45 0.30
+  box game                   #09080F 0.04  #131116 0.07  #4A2F1B 0.20
+seconds a round: build 0.6, import and capture 16.0
+FIT-DONE

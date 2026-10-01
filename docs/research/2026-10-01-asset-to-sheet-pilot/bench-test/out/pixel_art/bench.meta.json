@@ -1,0 +1,294 @@
+{
+ "anchors": {
+  "scenery/seats/bench_0.png": [
+   19,
+   21
+  ],
+  "scenery/seats/bench_36.png": [
+   12,
+   25
+  ],
+  "scenery/seats/bench_45.png": [
+   9,
+   26
+  ],
+  "scenery/seats/bench_72.png": [
+   16,
+   26
+  ],
+  "scenery/seats/bench_90.png": [
+   19,
+   26
+  ],
+  "scenery/seats/bench_108.png": [
+   21,
+   24
+  ],
+  "scenery/seats/bench_135.png": [
+   19,
+   20
+  ],
+  "scenery/seats/bench_144.png": [
+   20,
+   22
+  ],
+  "scenery/seats/bench_180.png": [
+   18,
+   26
+  ],
+  "scenery/seats/bench_216.png": [
+   9,
+   26
+  ],
+  "scenery/seats/bench_225.png": [
+   7,
+   26
+  ],
+  "scenery/seats/bench_252.png": [
+   14,
+   23
+  ],
+  "scenery/seats/bench_270.png": [
+   18,
+   21
+  ],
+  "scenery/seats/bench_288.png": [
+   20,
+   18
+  ],
+  "scenery/seats/bench_315.png": [
+   19,
+   14
+  ],
+  "scenery/seats/bench_324.png": [
+   20,
+   16
+  ]
+ },
+ "info": {
+  "scenery/seats/bench_0.png": {
+   "facing": 0,
+   "model": "seat_bench_0",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    37,
+    31
+   ]
+  },
+  "scenery/seats/bench_36.png": {
+   "facing": 36,
+   "model": "seat_bench_36",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    21,
+    36
+   ]
+  },
+  "scenery/seats/bench_45.png": {
+   "facing": 45,
+   "model": "seat_bench_45",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    16,
+    36
+   ]
+  },
+  "scenery/seats/bench_72.png": {
+   "facing": 72,
+   "model": "seat_bench_72",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    30,
+    36
+   ]
+  },
+  "scenery/seats/bench_90.png": {
+   "facing": 90,
+   "model": "seat_bench_90",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    37,
+    35
+   ]
+  },
+  "scenery/seats/bench_108.png": {
+   "facing": 108,
+   "model": "seat_bench_108",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    41,
+    31
+   ]
+  },
+  "scenery/seats/bench_135.png": {
+   "facing": 135,
+   "model": "seat_bench_135",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    38,
+    24
+   ]
+  },
+  "scenery/seats/bench_144.png": {
+   "facing": 144,
+   "model": "seat_bench_144",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    40,
+    27
+   ]
+  },
+  "scenery/seats/bench_180.png": {
+   "facing": 180,
+   "model": "seat_bench_180",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    37,
+    35
+   ]
+  },
+  "scenery/seats/bench_216.png": {
+   "facing": 216,
+   "model": "seat_bench_216",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    21,
+    36
+   ]
+  },
+  "scenery/seats/bench_225.png": {
+   "facing": 225,
+   "model": "seat_bench_225",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    16,
+    36
+   ]
+  },
+  "scenery/seats/bench_252.png": {
+   "facing": 252,
+   "model": "seat_bench_252",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    30,
+    34
+   ]
+  },
+  "scenery/seats/bench_270.png": {
+   "facing": 270,
+   "model": "seat_bench_270",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    37,
+    31
+   ]
+  },
+  "scenery/seats/bench_288.png": {
+   "facing": 288,
+   "model": "seat_bench_288",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    41,
+    26
+   ]
+  },
+  "scenery/seats/bench_315.png": {
+   "facing": 315,
+   "model": "seat_bench_315",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    38,
+    19
+   ]
+  },
+  "scenery/seats/bench_324.png": {
+   "facing": 324,
+   "model": "seat_bench_324",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    40,
+    22
+   ]
+  }
+ }
+}
