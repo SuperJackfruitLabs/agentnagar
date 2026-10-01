@@ -1,0 +1,23 @@
+{
+ "anchors": {
+  "scenery/tree_square.png": [
+   113,
+   183
+  ]
+ },
+ "info": {
+  "scenery/tree_square.png": {
+   "model": "tree_square",
+   "origin": [
+    0,
+    0,
+    0
+   ],
+   "cells": {},
+   "size": [
+    218,
+    196
+   ]
+  }
+ }
+}

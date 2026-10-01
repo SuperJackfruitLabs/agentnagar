@@ -1,0 +1,48 @@
+{
+  "source": "voxel.glb",
+  "separate_pieces_dropped": 1,
+  "raw_triangles": 130208,
+  "raw_vertices": 64939,
+  "has_texture": true,
+  "faces": {
+    "leaf": 114754,
+    "wood": 15331,
+    "other": 123
+  },
+  "generated_height": 0.3767913728952408,
+  "generated_across": 0.3655664920806885,
+  "scale": 26.009088065624827,
+  "final_height": 9.8,
+  "final_across": 9.508051086368168,
+  "z_stretch": 1.0,
+  "leaf_luminance": [
+    0.0673,
+    0.2296,
+    0.4057
+  ],
+  "wood_luminance": [
+    0.0411,
+    0.17,
+    0.2597
+  ],
+  "wood_full": 15042,
+  "leaf_full": 114186,
+  "lobes": 26,
+  "crown_centre": [
+    -0.281,
+    0.05,
+    6.319
+  ],
+  "crown_half": [
+    4.754,
+    4.181,
+    3.509
+  ],
+  "wood_blocks": 8117,
+  "leaf_blocks": 1020,
+  "drops": 7,
+  "wood_3000": 2999,
+  "leaf_remeshed": 12716,
+  "leaf_2600": 2600,
+  "leaf_core": 898
+}

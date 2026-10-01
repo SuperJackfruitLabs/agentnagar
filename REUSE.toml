@@ -121,6 +121,26 @@ path = [
 SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
 SPDX-License-Identifier = "CC-BY-SA-4.0 AND CC0-1.0"
 
+# The great tree's shape in that pilot came from an image-to-3D model
+# (TRELLIS.2). The model's output reduced to parts, and renders of it, are
+# AI-generated: no rights claimed. The trees that SJL's scripts build on
+# those parts carry both licences.
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/parts/*.json",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/previews/*.png",
+]
+SPDX-FileCopyrightText = "NONE: AI-generated 3D models (TRELLIS.2), reduced to parts or rendered; no rights claimed"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/out/**",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/out/**",
+]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0 AND CC0-1.0"
+
 # Its shell scripts and a patch to the client's code are code, like the
 # Python and GDScript beside them.
 [[annotations]]
