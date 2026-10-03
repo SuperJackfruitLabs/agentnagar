@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: tileable game texture
+Primary request: a seamless tileable texture of the tree square's paving seen straight from above, an area about 4 m across, as the reference images draw it
+Input images: Image 1: style reference (the topdown panel); Image 2: style reference (the street panel). These are panels from the concept sheets of the Low-poly tropical style. Take from them only how this style renders, colours and builds things like this. Do not copy their composition, scenery, people or captions.
+Subject: Warm cream square slabs, each a slightly different tone.
+Style/medium: a seamless tileable game texture, drawn the way the reference images draw surfaces: flat painted colour with soft gradients and a few broad lines; no photographic texture and no noise
+Composition/framing: square canvas, 1024 x 1024, the material filling the whole canvas flat-on with no perspective
+Lighting/mood: flat, even light with no shadows and no highlights
+Color palette: warm cream paving, soft yellow-green lawn, warm grey street
+Constraints: seamless on all four edges, so that copies placed side by side show no join; even density with no single focal element; no objects, cast shadows, borders or vignette; no text, letters, numbers, labels, captions, arrows, dimension lines, logos, signatures or watermark anywhere
+Avoid: perspective, objects, a darker or lighter centre, smooth realistic foliage, photographic textures, ink outlines, glossy plastic

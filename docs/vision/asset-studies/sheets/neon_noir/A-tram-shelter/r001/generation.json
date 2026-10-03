@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.A-tram-shelter",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "fa7e9e2921f0760e97fbeb600aee91e6be5782bd6ee6d5c2ece11309a4420d07",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "b7429c2de3b6e20d6a18fd32d39bbe8a3e76c1b27bda429a11848c9eaf85606c",
+    "is_the_jobs": false,
+    "correction": "Change only the lower-right view and coloured light spill. Replace the lower-right tilted view with a true straight-down orthographic plan of this same shelter, looking vertically down onto its roof with no front faces, matching the parts and colours of the other views. Remove all amber or violet glow and reflections from the back screen, canopy slats, metal, bench and grey backdrop; keep built-in light strips and the blank sign face luminous but lighting nothing else. Preserve the main three-quarter view and front elevation geometry, the same shelter and bench, all five swatches, clear margins and 1536 x 1024 layout. No text or new objects.\n\nSecond correction:\nChange only the lower-right view into a true vertical top-down orthographic roof plan. Show its navy rectangular roof and panel seams viewed directly from above as a flat rectangle. The canopy covers the bench, tall posts and sign underneath: remove their visible front faces and the bench slats presently protruding below the bottom of this lower-right view. Keep all other content, geometry, colours, lighting, margins, swatches, the large three-quarter view and upper-right front elevation exactly unchanged. No text."
+  },
+  "source_paths": [
+    "exec-89c87bee-c18d-40a8-af5b-5cf09f8e7040.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/transit.jpg",
+    "../../../../refs/panels/neon_noir/street.jpg",
+    "../../../../refs/panels/neon_noir/build-mode.jpg"
+  ],
+  "edit_of": null
+}

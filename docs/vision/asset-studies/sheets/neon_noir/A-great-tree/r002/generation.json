@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.A-great-tree",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "204f1c36b9886c4385c1a6a924a662c4a062ea5d48d418f48b64f8a18d15ef6a",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "c6ec1339e412427515dd9e97cc5c8131c509cdd9ad79431d9ba8cc0f480fd524",
+    "is_the_jobs": false,
+    "correction": "Change only the illumination: remove all amber, orange, violet or cyan light spill and halos from every leaf, branch, trunk, planting and concrete surface in all three views. Show the entire tree and bed clearly in neutral soft studio lighting, with their dark olive, dark brown, violet-flower and dark concrete surface colours unaffected by the lamps. Keep the bulbs, lantern panes and bed light strip switched on as small bright amber shapes, but they must illuminate nothing around them. Preserve tree and bed geometry, three-view placement and sizes, flowers, lanterns and strings, five swatches, grey backdrop and 1536 x 1024 layout. No text or added objects."
+  },
+  "source_paths": [
+    "exec-d1d80e4a-798a-4048-a0fc-102edfd04708.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/street.jpg",
+    "../../../../refs/panels/neon_noir/gathering.jpg"
+  ],
+  "edit_of": null
+}

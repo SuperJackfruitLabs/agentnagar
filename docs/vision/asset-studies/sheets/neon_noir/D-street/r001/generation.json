@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.D-street",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "2c534394f14772a4ccff5e96f5e938cb401cad3655a71ad5731d9cd320647e3f",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "7ff2eb6aa2527c6f1bb5a96cf5e4656c1e5e34886989e6749c1155a4682870dd",
+    "is_the_jobs": false
+  },
+  "source_paths": [
+    "exec-cef7f367-5c73-4f80-a855-63ddc2212679.png"
+  ],
+  "reference_images": [
+    "../../../../refs/frames/neon_noir/street.jpg",
+    "../../../../refs/panels/neon_noir/street.jpg",
+    "../../../../refs/panels/neon_noir/gathering.jpg"
+  ],
+  "edit_of": "../../../../refs/frames/neon_noir/street.jpg"
+}

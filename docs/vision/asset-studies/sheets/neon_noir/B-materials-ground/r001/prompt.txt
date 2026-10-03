@@ -1,0 +1,12 @@
+Use case: stylized-concept
+Asset type: material sample board for a game's art direction
+Primary request: six square samples of ground and nature materials, as the reference images draw them
+Input images: Image 1: style reference (the topdown panel); Image 2: style reference (the park panel); Image 3: style reference (the street panel). These are panels from the concept sheets of the Neon noir style. Take from them only how this style renders, colours and builds things like this. Do not copy their composition, scenery, people or captions.
+Scene/backdrop: a flat mid-grey backdrop (#B8B8B8) that shows only as narrow gaps between the samples
+Subject: six flat square tiles, each a straight-on sample of one material that fills its tile from edge to edge, at a scale where the tile is about 2 m across. In reading order: 1. The square's paving: dark stone slabs. 2. A park path: dark gravel. 3. The street: near-black asphalt. 4. Lawn: dark green grass. 5. The river's surface: dark navy water with a few warm glints. 6. Timber, as benches and decks use it: dark timber slats on dark metal.
+Style/medium: flat material samples, drawn the way the reference images draw surfaces: a matte dark surface with faint grain and a slight sheen
+Composition/framing: landscape canvas, 1536 x 1024: three tiles across and two down, all the same size, with equal narrow gaps
+Lighting/mood: flat, even light with no shadows and no highlights
+Color palette: dark stone paving, dark green lawn, near-black street; dark navy water; dark timber, #1B100D to #846058
+Constraints: each tile shows only its material, seen flat-on, with no objects, no perspective and no frame; no text, letters, numbers, labels, captions, arrows, dimension lines, logos, signatures or watermark anywhere
+Avoid: scenes, objects, perspective, vignettes, daylight scenes, dirt and decay, weapons, dystopian signage, heavy fog, lens flare over the object

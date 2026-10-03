@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "voxel.A-street-fixtures",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "ae57af291ce55433d59750337a112424dca715b683aef785cc56ea48245cb820",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "efcce27fae2941768490a327b9d0f4ec0c28c13dd741655f9d9b75796dad796e",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-02ccc606-8c97-478b-83e9-d6eee7fdff10.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/voxel/street.jpg",
+    "../../../../refs/panels/voxel/park.jpg",
+    "../../../../refs/panels/voxel/transit.jpg"
+  ],
+  "edit_of": null
+}

@@ -1,0 +1,640 @@
+{
+  "_about": "Every thing the game draws today, described for an image model: what it is, its real size, what the game needs of it, and how each style's concept sheets draw it. Sizes are from the kits' specs (city/tools/styles/*/specs) and the catalogue (city/catalogue/catalogue.json). A missing style under 'looks' means the sheets do not show the thing closely. The 'story' lines are proposals for the owner to edit. Written 2026-10-02; tools/build_jobs.py reads this file. Revised on 2026-10-02 after the pilot batch and a check of every description against the sheets.",
+  "subjects": {
+    "great-tree": {
+      "name": "the great tree",
+      "what": "The great tree at the centre of the tree square: one large living shade tree, about 12 m across and 9.5 m tall, with a thick buttressed trunk that forks low into heavy spreading limbs. It stands in a raised bed 5.2 m square whose low edge people sit on.",
+      "rules": "Outside the 5.2 m bed nothing hangs lower than 2.2 m, because people walk under the crown. The crown is wide and fairly flat on top. A few small lanterns hang from the limbs. The crown is one closed mass of large, solid, rounded leaf clumps: full all round and on top, with no gaps through which the sky or the branches show, and no single leaves or twigs.",
+      "materials": [
+        "leaves in light",
+        "leaves in shade",
+        "bark",
+        "bed edge",
+        "lantern"
+      ],
+      "story": "It is older than every building round it, and the square was laid out to keep it. The lanterns were hung by the guild's makers.",
+      "looks": {
+        "lowpoly_tropical": "A broad shade tree with a forked warm-brown trunk and a crown of faceted leaf clumps, olive in shade and yellow-green in light, with a few pale blossoms; a stone-edged bed full of broad-leaved plants and flowers; yellow lanterns.",
+        "voxel": "A trunk of brown cubes two to three cubes wide and a large rounded crown of green cubes in three tones, a few set proud; a grey block bed with cube shrubs.",
+        "anime_cel": "A tall broad tree with a grey-brown forked trunk and a lush crown of large solid leaf clumps, closed all round and on top, yellow-green in light and deep green in shade; no aerial roots; the sheets draw the trunk rising straight from the paving, so keep the game's bed a low plain stone kerb.",
+        "solarpunk": "A massive spreading tree with a pale brown trunk, a few aerial roots and an olive and khaki crown; ringed by cream stone seat-planters and timber planter boxes with flowers.",
+        "neon_noir": "A broad dark-leaved tree with a thick trunk and clusters of violet flowers; strings of small warm lights through the crown and a few hanging lanterns; a dark concrete bed edge with a warm light strip under its rim.",
+        "pixel_art": "A large tree with a thick brown trunk and a clustered crown, bright yellow-green leaf highlights over dark teal-green shadow; a stone block bed with flowers."
+      }
+    },
+    "guild-hall": {
+      "name": "the guild hall",
+      "what": "The guild hall, the makers' workshop: a low rectangular hall under three sawtooth roof bays, each about 4.3 m wide, with walls 5.2 m high and roof ridges about 8 m high. Its front is made of panels 4 m wide: solid wall, glazed wall, and one door panel with double doors 2 m wide and 3.2 m high, between square corner piers. Workbenches show through the glazing.",
+      "rules": "Keep three equal sawtooth bays on a low, long hall. Leave a plain band above the door for the game's own sign.",
+      "materials": [
+        "wall",
+        "roof",
+        "frame",
+        "glass",
+        "door"
+      ],
+      "story": "The guild built it for itself. The north-light roof was drawn first, and each bay was put up by a different crew, so the bays match without being identical.",
+      "looks": {
+        "lowpoly_tropical": "Terracotta sawtooth roofs on a bright orange-brown timber frame with dark glazing bars, tall glazed fronts showing a warm interior, jackfruit-yellow awnings at ground level.",
+        "voxel": "A bright yellow cube hall with yellow sawtooth roofs whose upright faces are grey skylights, a grey stone base, one wide glazed opening.",
+        "anime_cel": "A red-brick hall with red-brown sawtooth roofs, each slope carrying one long blue-grey skylight, and tall windows in dark slim steel frames.",
+        "solarpunk": "Blonde timber-slat walls, sawtooth roofs covered in blue solar panels, climbing plants between the bays, warm glazed fronts.",
+        "neon_noir": "A dark steel-framed hall with dark navy sawtooth roofs and tall glazing that glows amber.",
+        "pixel_art": "A red brick hall with dark slate sawtooth roofs and rows of yellow-lit windows."
+      }
+    },
+    "library": {
+      "name": "the library",
+      "what": "The library: a broad two-storey building with a rounded reading-room roof about 9 m across. Its walls are bays 2 m wide and 8 m high with tall openings and slim columns; the entrance is 3.2 m wide with double doors; two hanging banners about 1.2 m by 4.3 m flank it.",
+      "rules": "Broad and calm, lower than the towers behind it. The banners carry one simple book or leaf emblem.",
+      "materials": [
+        "wall",
+        "rounded roof",
+        "columns and trim",
+        "glass",
+        "banner"
+      ],
+      "story": "The reading room came first and the wings were added as the collection grew. The banners are changed with the seasons.",
+      "looks": {
+        "lowpoly_tropical": "Cream limewash walls with tall arched windows, a green copper dome over the reading room, jackfruit-yellow banners.",
+        "voxel": "An orange barrel-vaulted hall of cubes with a white end arch and a cobalt-blue glazed entrance.",
+        "anime_cel": "A silver barrel-vault roof over a tall glazed arched front that glows warm, on a pale stone base with slim mullions.",
+        "solarpunk": "A round cream ceramic drum with a ring of glazing, a blue solar-glass dome, a planted roof ring and brass trim.",
+        "neon_noir": "A pale round drum with a dark blue glass dome, an amber light ring under the dome and a glazed ground floor glowing warm.",
+        "pixel_art": "A cream stone drum under a dark slate-blue dome, blue banners with a white emblem, a lit entrance."
+      }
+    },
+    "cafe": {
+      "name": "the café",
+      "what": "The café: a small single-storey building about 4 m high behind an open terrace, with a wide serving opening or double doors 2 m wide and a deep awning, and room in front for round tables and umbrellas.",
+      "rules": "One storey. Leave a plain band above the opening for the game's own sign.",
+      "materials": [
+        "wall",
+        "roof",
+        "awning",
+        "glass",
+        "door"
+      ],
+      "story": "Two guild members opened it so that there would be somewhere to argue about drawings. The terrace is older than the building.",
+      "looks": {
+        "lowpoly_tropical": "A cream stone arcade with round arches, pink-flowering climbers and black iron wall lanterns, under a terracotta roof, with a jackfruit-yellow awning.",
+        "solarpunk": "Cream ceramic walls, a timber-slat canopy and a planted roof."
+      }
+    },
+    "tram": {
+      "name": "the tram",
+      "what": "The boulevard tram: a low-floor tram 20.5 m long, 2.5 m wide and about 3.5 m high to the roof, with a pantograph above, in three to five jointed sections, with wide doors on both sides, a long band of windows and a driver's cab at each end.",
+      "rules": "A cream or white body with one coral-red stripe along its length, in every style. Windows are dark by day. It runs on rails set flush in the ground.",
+      "materials": [
+        "body",
+        "stripe",
+        "windows",
+        "roof equipment",
+        "doors"
+      ],
+      "story": "It is the line's first tram and still in service. The stripe is repainted by hand every year.",
+      "looks": {
+        "lowpoly_tropical": "A cream body with a coral-red stripe and a dark window band, softly rounded ends.",
+        "voxel": "A white tram of cubes with an orange-red stripe and dark square windows.",
+        "anime_cel": "A modern cream tram with two coral-red bands, at the roofline and below the windows, navy doors, dark windows and thin ink lines.",
+        "solarpunk": "A long white tram with a red stripe, black door frames and a slim roof.",
+        "neon_noir": "A white and silver tram with a red lower band; its windows are shown lit amber.",
+        "pixel_art": "A red and cream tram with rows of windows."
+      }
+    },
+    "tram-shelter": {
+      "name": "the tram shelter",
+      "what": "The tram shelter: a canopy about 4.5 m long, 2 m deep and 2.9 m high on slim posts, with a back screen, a bench inside, and one tall sign panel at one end.",
+      "rules": "Open at the front, towards the track. The sign panel is blank: the game draws its content.",
+      "materials": [
+        "posts and frame",
+        "canopy",
+        "back screen",
+        "bench",
+        "sign panel"
+      ],
+      "story": "Each stop's shelter was made in the guild hall and carried out in pieces. The bench inside is the same as the park benches.",
+      "looks": {
+        "anime_cel": "A long dark steel and glass shelter with a flat roof.",
+        "solarpunk": "A slim canopy with a blue solar roof on dark slim steel posts, with glass screens.",
+        "pixel_art": "A dark steel shelter with a lit strip under its roof."
+      }
+    },
+    "houses": {
+      "name": "the town houses",
+      "what": "Town houses for the city blocks: three variants of one house about 6.6 m wide, 8.2 m high and 9 m deep, two to three storeys, each with a ground-floor door, regular windows and a simple roof.",
+      "rules": "Three separate buildings, alike in size and materials and different in roof, window rhythm and colour accent.",
+      "materials": [
+        "wall",
+        "roof",
+        "window",
+        "door",
+        "trim"
+      ],
+      "story": "Their first occupants built them from one kit of parts, which is why they rhyme without matching.",
+      "looks": {
+        "lowpoly_tropical": "Cream walls, terracotta hip roofs, plain dark-teal window panes.",
+        "voxel": "Cube houses in cream and blue with flat parapet roofs, roof gardens and blue roof panels.",
+        "anime_cel": "Rendered walls from white to pale grey, one of them tan, with grey flat roofs and planting.",
+        "solarpunk": "Cream walls with timber balconies, planted roofs and solar panels.",
+        "neon_noir": "Grey walls with a few lit windows under dark navy flat roofs; no neon (the neon lines are on the towers).",
+        "pixel_art": "Sand and brick walls with flat roofs carrying plants."
+      }
+    },
+    "shop": {
+      "name": "the shop",
+      "what": "A shop building about 5 m wide, 8.5 m high and 9 m deep: a glazed shopfront with a door and a deep awning at street level, and one or two plain storeys above.",
+      "rules": "Leave a plain band above the awning for the game's own sign.",
+      "materials": [
+        "wall",
+        "shopfront",
+        "awning",
+        "window",
+        "roof"
+      ],
+      "story": "It has changed trades three times and kept the same awning frame.",
+      "looks": {}
+    },
+    "towers": {
+      "name": "the downtown towers",
+      "what": "Downtown towers: two variants of a stepped tower about 11 to 14 m square and 25 to 29 m high, eight or nine storeys, stepping back twice towards the top, with planted terraces on the steps and a small roof structure.",
+      "rules": "Two separate towers, alike in materials and different in how they step. Regular window rows.",
+      "materials": [
+        "wall",
+        "windows",
+        "terrace planting",
+        "base",
+        "roof structure"
+      ],
+      "story": "The first tall buildings in the city, built with terraces so that nobody would live without a garden.",
+      "looks": {
+        "lowpoly_tropical": "Cream towers with regular dark windows and flat roofs carrying a small gold finial or a few roof plants.",
+        "voxel": "White and cobalt-glass cube towers with green roof gardens and an orange base course.",
+        "anime_cel": "Pale concrete and blue glass, stepping back with planted terraces.",
+        "solarpunk": "Cream rounded towers with deep planted terraces and solar roofs.",
+        "neon_noir": "Dark towers with warm lit windows, planted terraces and thin magenta lines of light on their edges.",
+        "pixel_art": "Beige and blue-glass towers with plants on the roofs."
+      }
+    },
+    "bridge": {
+      "name": "the north bridge",
+      "what": "The north bridge: one low stone bridge of three equal spans, each about 8 m long on piers about 1.5 m thick, with a deck about 4.3 m wide between railings, and beside it a length of quay wall about 2.5 m high.",
+      "rules": "Low and level. No towers taller than a lamp post and no cables.",
+      "materials": [
+        "stone",
+        "deck",
+        "railing",
+        "quay wall",
+        "water"
+      ],
+      "story": "The oldest structure after the tree. Its middle pier still carries the mark of the highest flood.",
+      "looks": {
+        "lowpoly_tropical": "Cream stone arches with small turrets on the piers.",
+        "voxel": "Grey stone cubes with a flat deck and block piers.",
+        "anime_cel": "Cream stone arches (#EFCFB5) with a dark iron railing and lamp posts on the deck.",
+        "solarpunk": "Cream stone arches with plain parapets.",
+        "neon_noir": "A pale low arch bridge with a line of warm lights along the deck.",
+        "pixel_art": "Grey stone arches with a pale stone parapet between stone posts, and black lamp posts."
+      }
+    },
+    "fountain": {
+      "name": "the fountain",
+      "what": "The square's fountain: a round basin 3 m across with a rim 45 cm high and broad enough to sit on, and a centre piece about 1.9 m high from which water falls into the basin.",
+      "rules": "People sit on the rim facing out, so the rim is flat and plain.",
+      "materials": [
+        "basin stone",
+        "rim",
+        "centre piece",
+        "water"
+      ],
+      "story": "A gift from the first makers to pass their trial. They signed it under the rim, where nobody looks.",
+      "looks": {}
+    },
+    "resident": {
+      "name": "a resident",
+      "what": "A resident of the city: an adult about 1.8 m tall in contemporary everyday clothes for a warm climate.",
+      "rules": "Standing relaxed with the arms slightly away from the body. A shirt or top, trousers or a skirt, shoes. No lettering on clothes.",
+      "materials": [
+        "skin",
+        "hair",
+        "top",
+        "bottom",
+        "shoes"
+      ],
+      "story": "One of the people who live and work here. Nobody in the city is background.",
+      "looks": {
+        "lowpoly_tropical": "Faceted hair and clothes, a smoothly shaded face; green, yellow, white and terracotta clothes; a straw sun hat.",
+        "voxel": "A square head, cube hair, simple dot eyes; blue, orange and green clothes.",
+        "anime_cel": "An anime character in summer clothes with thin ink outlines.",
+        "solarpunk": "Loose linen and cotton in natural colours, a canvas backpack.",
+        "neon_noir": "A dark jacket and a scarf, softly lit.",
+        "pixel_art": "A small pixel character with a clear silhouette."
+      }
+    },
+    "agent-a1": {
+      "name": "City Agent A1",
+      "what": "City Agent A1, the city's recurring agent, between 1.65 and 1.8 m tall.",
+      "rules": "Standing relaxed with the arms slightly away from the body. A leaf badge on the chest and no lettering.",
+      "materials": [
+        "body",
+        "second colour",
+        "face or visor",
+        "badge",
+        "joints or trim"
+      ],
+      "story": "The agent people ask first. It has looked the same since the city opened, so that anyone can find it.",
+      "looks": {}
+    },
+    "bench": {
+      "name": "park bench",
+      "what": "A park bench for two: 1.6 m long, 0.6 m deep, seat 45 cm high, back to 85 cm.",
+      "materials": [
+        "timber",
+        "frame"
+      ],
+      "story": "Made in the guild hall. The seat boards are worn paler where people sit, and there is a small blank maker's plate on the back rail.",
+      "looks": {
+        "lowpoly_tropical": "Chunky warm-brown timber: two broad seat boards, two broad back planks, timber arm blocks, dark posts.",
+        "voxel": "Orange-brown timber cubes between block ends, with a low cube back.",
+        "anime_cel": "Broad timber planks on near-black iron ends, each end one flat bar bent into leg, arm and back post.",
+        "solarpunk": "All timber: slats between solid timber ends under a timber arm, with a thick top rail.",
+        "neon_noir": "Dark timber slats on dark metal with a short warm light bar under the back rail.",
+        "pixel_art": "Three back planks, the top one with a lit edge, and three seat planks on a dark frame."
+      }
+    },
+    "cafe-chair": {
+      "name": "café chair",
+      "what": "A café chair: 46 cm wide, 50 cm deep, seat 45 cm high, back to 90 cm.",
+      "materials": [
+        "seat",
+        "frame"
+      ],
+      "story": "Stackable, and always one short.",
+      "looks": {}
+    },
+    "reading-chair": {
+      "name": "reading chair",
+      "what": "A reading armchair: 85 cm wide and deep, 95 cm high, low and upholstered.",
+      "materials": [
+        "upholstery",
+        "frame"
+      ],
+      "story": "From the library's reading room. The left arm is worn smoother than the right.",
+      "looks": {}
+    },
+    "perch-seat": {
+      "name": "perch seat",
+      "what": "A perch seat: a plain seat stone 30 cm by 55 cm and 46 cm high with a timber board on top. The game draws one at every place someone can sit on a wall, a step or inside a shelter, so it usually stands in or against the thing it belongs to.",
+      "materials": [
+        "seat",
+        "base"
+      ],
+      "story": "Cut from the offcuts of the benches.",
+      "looks": {},
+      "rules": "A plain block with a seat board. Not a stool: no legs, no frame, no back."
+    },
+    "cafe-table": {
+      "name": "café table",
+      "what": "A round café table: 80 cm across and 75 cm high, on one central leg or three legs.",
+      "materials": [
+        "top",
+        "leg"
+      ],
+      "story": "Its top has been planed back twice.",
+      "looks": {}
+    },
+    "umbrella": {
+      "name": "café umbrella",
+      "what": "A café umbrella: canopy 2.3 m across, 2.5 m high, the canopy's edge above head height at 2.2 m, on a pole with a weighted base.",
+      "materials": [
+        "canopy",
+        "pole",
+        "base"
+      ],
+      "story": "Faded on the south side.",
+      "looks": {
+        "lowpoly_tropical": "A jackfruit-yellow canopy in eight flat panels.",
+        "anime_cel": "A plain white canvas canopy.",
+        "solarpunk": "A cream-white canvas canopy on a pale timber pole."
+      }
+    },
+    "planter": {
+      "name": "square planter",
+      "what": "A square planter box: 1.3 m square and 45 cm high, planted full. Its plants stay inside the box's edges.",
+      "materials": [
+        "box",
+        "soil",
+        "leaves",
+        "flowers"
+      ],
+      "story": "Each is looked after by whoever works nearest to it, so no two are planted alike.",
+      "looks": {
+        "lowpoly_tropical": "A pale stone box brimming with broad-leaved plants and yellow and pink blossoms.",
+        "voxel": "A grey cube box under a heap of small green cubes with white blossom cubes.",
+        "anime_cel": "A low grey concrete trough with loose leafy shrubs.",
+        "solarpunk": "A cream stone box planted with a flowering shrub.",
+        "neon_noir": "A dark concrete box with a warm light strip at its foot and dark planting with violet flowers.",
+        "pixel_art": "A brown brick box full of flowering plants."
+      }
+    },
+    "planter-pot": {
+      "name": "planter pot",
+      "what": "A round planter pot: 80 cm across and about 1.1 m high with its plant.",
+      "materials": [
+        "pot",
+        "leaves"
+      ],
+      "story": "Moved about by the café to mark out its terrace.",
+      "looks": {}
+    },
+    "lamp-post": {
+      "name": "street lamp",
+      "what": "A street lamp: 4.2 m high, one lantern at about 3.5 m on a slim post with a small base.",
+      "materials": [
+        "post",
+        "lantern glass",
+        "base"
+      ],
+      "story": "Cast in one batch for the square. The lantern glass has been replaced more than once, so no two are quite the same colour.",
+      "looks": {
+        "lowpoly_tropical": "A black iron post with a square lantern head and a small yellow banner on an arm.",
+        "voxel": "A black cube post with a lantern cube that glows warm.",
+        "anime_cel": "A classic black post with a single lantern.",
+        "solarpunk": "A slim dark post with a brass-capped glass lantern.",
+        "neon_noir": "A slim dark post with a tapered glass lantern that glows warm.",
+        "pixel_art": "A black iron post with an amber lantern."
+      }
+    },
+    "bollard": {
+      "name": "bollard",
+      "what": "A bollard: 90 cm high and 24 cm across.",
+      "materials": [
+        "body",
+        "band"
+      ],
+      "story": "Scuffed at tram-step height.",
+      "looks": {
+        "lowpoly_tropical": "A plain dark iron post with a rounded or chamfered cap.",
+        "voxel": "A dark charcoal cube post (#434754).",
+        "anime_cel": "Slim and near-black."
+      }
+    },
+    "catenary-pole": {
+      "name": "catenary pole",
+      "what": "A catenary pole for the tram's overhead wire: 6 m high, slim, with one side arm near the top.",
+      "materials": [
+        "pole",
+        "arm"
+      ],
+      "story": "Painted the same colour as the lamp posts so that it disappears.",
+      "looks": {}
+    },
+    "railing": {
+      "name": "railing",
+      "what": "A railing panel: 2 m long and 1.1 m high, with an end post.",
+      "materials": [
+        "rails",
+        "post"
+      ],
+      "story": "The top rail is polished by hands along the waterfront.",
+      "looks": {
+        "pixel_art": "Dark iron bars between stone posts."
+      }
+    },
+    "noticeboard": {
+      "name": "noticeboard",
+      "what": "A noticeboard: 1.5 m wide and 2.5 m high, on two posts under a small roof, with a board 1.1 m by 0.8 m.",
+      "rules": "The board is blank: the game draws the notices.",
+      "materials": [
+        "posts",
+        "board",
+        "roof"
+      ],
+      "story": "The city pins its notices here, and so does everybody else.",
+      "looks": {}
+    },
+    "plaque": {
+      "name": "plaque",
+      "what": "A plaque on a low plinth: 60 cm wide and 1.2 m high, with a sloping face.",
+      "rules": "The face is blank: the game draws its lettering.",
+      "materials": [
+        "plinth",
+        "face"
+      ],
+      "story": "One stands wherever something was first tried.",
+      "looks": {}
+    },
+    "kiosk": {
+      "name": "kiosk",
+      "what": "An information kiosk: a standing slab 80 cm wide, 1.9 m high and 50 cm deep, with a screen 60 cm by 80 cm at chest height.",
+      "rules": "The screen is blank: the game draws its content.",
+      "materials": [
+        "body",
+        "screen",
+        "trim"
+      ],
+      "story": "It answers the same three questions all day: what is here, when is it free, and whom to ask.",
+      "looks": {
+        "lowpoly_tropical": "A grey rounded stone-like slab with a pale screen face.",
+        "voxel": "A white and grey cube console with a tilted screen.",
+        "anime_cel": "A slim dark totem with a glass screen.",
+        "solarpunk": "A cream ceramic pod with a brass-framed screen.",
+        "neon_noir": "A dark monolith with a blue glass screen.",
+        "pixel_art": "A dark navy monolith with a blue screen."
+      }
+    },
+    "steps-and-wall": {
+      "name": "steps and low wall",
+      "what": "Broad steps 3 m wide, 1 m deep and 45 cm high in three risers, and beside them a low sitting wall 3 m long, 30 cm thick and 45 cm high.",
+      "materials": [
+        "stone",
+        "top surface"
+      ],
+      "story": "Where people wait for the tram when the benches are full.",
+      "looks": {}
+    },
+    "desk": {
+      "name": "desk with stool",
+      "what": "A workshop desk with a stool: the desk 1.3 m wide, 70 cm deep and 75 cm high.",
+      "materials": [
+        "top",
+        "legs",
+        "stool"
+      ],
+      "story": "Every maker has one. The tops are swapped when they are too scarred to draw on.",
+      "looks": {}
+    },
+    "workstation": {
+      "name": "workstation",
+      "what": "A workstation: the same desk carrying a computer with one screen.",
+      "rules": "The screen is blank: the game draws its content.",
+      "materials": [
+        "top",
+        "screen",
+        "legs"
+      ],
+      "story": "Shared, and booked by the hour.",
+      "looks": {}
+    },
+    "workbench": {
+      "name": "workbench",
+      "what": "A long workbench: 3.2 m long, 1 m deep and 90 cm high, with a heavy top and a lower shelf.",
+      "materials": [
+        "top",
+        "frame",
+        "shelf"
+      ],
+      "story": "The oldest thing in the hall. Its top is a record of every job that slipped.",
+      "looks": {}
+    },
+    "bookshelf": {
+      "name": "bookshelf",
+      "what": "A bookshelf: 2 m wide, 2.6 m high and 45 cm deep, with five shelves of books.",
+      "rules": "Book spines are plain colours with no lettering.",
+      "materials": [
+        "case",
+        "books"
+      ],
+      "story": "Filled by donation, so the spines never match.",
+      "looks": {}
+    },
+    "pegboard": {
+      "name": "pegboard",
+      "what": "A pegboard wall panel 2 m wide and 1.2 m high with hand tools hung in rows.",
+      "materials": [
+        "board",
+        "tools"
+      ],
+      "story": "Every tool has a painted outline behind it, so a missing one shows.",
+      "looks": {}
+    },
+    "pendant-lamp": {
+      "name": "pendant lamp",
+      "what": "A pendant lamp: a metal shade about 45 cm across hanging on a cord.",
+      "materials": [
+        "shade",
+        "light"
+      ],
+      "story": "Hung low over each bench by whoever works there.",
+      "looks": {}
+    },
+    "street-tree-a": {
+      "name": "street tree",
+      "what": "A street tree: crown 4.6 m across, 5.5 m tall, with a clear trunk to 2.2 m.",
+      "materials": [
+        "leaves",
+        "bark"
+      ],
+      "story": "Planted the year the tram line opened.",
+      "looks": {},
+      "rules": "The crown is a closed, rounded mass of solid leaf clumps, full on top and all round."
+    },
+    "street-tree-b": {
+      "name": "small street tree",
+      "what": "A smaller street tree: crown 3.4 m across, 4.4 m tall, with a clear trunk to 2.2 m.",
+      "materials": [
+        "leaves",
+        "bark"
+      ],
+      "story": "A replacement, still catching up with its neighbours.",
+      "looks": {},
+      "rules": "The crown is a closed, rounded mass of solid leaf clumps, full on top and all round."
+    },
+    "palm-tall": {
+      "name": "tall palm",
+      "what": "A tall palm: 8.5 m high, fronds 5.2 m across, on a slender ringed trunk with a slight lean.",
+      "materials": [
+        "fronds",
+        "trunk"
+      ],
+      "story": "They mark the river's edge from anywhere in the city.",
+      "looks": {}
+    },
+    "palm-short": {
+      "name": "short palm",
+      "what": "A short palm: 4.5 m high, fronds 3.4 m across.",
+      "materials": [
+        "fronds",
+        "trunk"
+      ],
+      "story": "Grown from the tall palms' seed.",
+      "looks": {}
+    },
+    "shrub-round": {
+      "name": "round shrub",
+      "what": "A round clipped shrub: 1.1 m across and 0.9 m high.",
+      "materials": [
+        "leaves"
+      ],
+      "story": "Clipped by the same hand for years.",
+      "looks": {}
+    },
+    "shrub-leafy": {
+      "name": "leafy shrub",
+      "what": "A loose leafy shrub: 1.1 m across and 1.2 m high.",
+      "materials": [
+        "leaves",
+        "flowers"
+      ],
+      "story": "Left to grow as it likes.",
+      "looks": {}
+    },
+    "flowerbed": {
+      "name": "flowerbed",
+      "what": "A kerbed flowerbed: 3 m long, 1 m wide and about 60 cm high with its flowers.",
+      "materials": [
+        "kerb",
+        "leaves",
+        "flowers"
+      ],
+      "story": "Replanted each season by the school.",
+      "looks": {}
+    },
+    "meadow": {
+      "name": "meadow clumps",
+      "what": "Two meadow clumps side by side: a tuft of tall grass, and a tuft of grass with flowers, each about 30 cm across and 90 cm high.",
+      "materials": [
+        "grass",
+        "flowers"
+      ],
+      "story": "Sown along the river where nothing else was planned.",
+      "looks": {}
+    },
+    "sailboat": {
+      "name": "sailing boat",
+      "what": "A small sailing boat: hull about 5 m long, mast 6.8 m, with one or two sails.",
+      "materials": [
+        "hull",
+        "sail",
+        "mast"
+      ],
+      "story": "Built in the guild hall one winter and launched from the quay.",
+      "looks": {
+        "lowpoly_tropical": "A white triangular sail with one yellow panel over a red or brown hull.",
+        "solarpunk": "A white sail over a pale hull."
+      }
+    },
+    "cloud-a": {
+      "name": "cloud",
+      "what": "A cloud about 10 m long with a flat base.",
+      "materials": [
+        "cloud light",
+        "cloud shade"
+      ],
+      "looks": {
+        "lowpoly_tropical": "A faceted white cloud.",
+        "voxel": "A cloud of white cubes.",
+        "pixel_art": "A pixel cloud in white and pale pink."
+      }
+    },
+    "cloud-b": {
+      "name": "small cloud",
+      "what": "A smaller cloud about 8 m long with a flat base.",
+      "materials": [
+        "cloud light",
+        "cloud shade"
+      ],
+      "looks": {}
+    }
+  }
+}

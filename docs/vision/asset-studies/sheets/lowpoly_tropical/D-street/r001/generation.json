@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.D-street",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "22302f786bb4bea18167d9ceb86d7994143892405de06104523cd66e7d4ca5fb",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "738206852a8d99aaaf584e1e3643a6e74f20b42c215ac6525d7672c9511476a3",
+    "is_the_jobs": false
+  },
+  "source_paths": [
+    "exec-6daf8841-b7c0-4911-8a3e-687edff81762.png"
+  ],
+  "reference_images": [
+    "../../../../refs/frames/lowpoly_tropical/street.jpg",
+    "../../../../refs/panels/lowpoly_tropical/street.jpg",
+    "../../../../refs/panels/lowpoly_tropical/gathering.jpg"
+  ],
+  "edit_of": "../../../../refs/frames/lowpoly_tropical/street.jpg"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "anime_cel.A-low-planting",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "9ccb4d1a76dd0cb797721637699f86fdd12f5f53df6a01b2d672205c56291ac4",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "1179a0888aedea7cb69bf4167d0d383f44d65c2fec4f8b91b8833fba8f7e785e",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-8eed50dc-ed24-4080-aea7-972a8f188e9e.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/anime_cel/park.jpg",
+    "../../../../refs/panels/anime_cel/gathering.jpg",
+    "../../../../refs/panels/anime_cel/conversation.jpg"
+  ],
+  "edit_of": null
+}

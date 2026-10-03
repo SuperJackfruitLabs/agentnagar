@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.E-bench",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "f72f5c2c27a647eb3cc544e50220d625d56c7ac92eeb8e0eef7ae24b4fb919a0",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "df241e6b652bf6cf09284ed9d022e7d1741e6efde50415b03b9790d919084908",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-57e0a3e3-d39d-4dfa-8871-d15af5caee47.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/park.jpg",
+    "../../../../refs/panels/neon_noir/gathering.jpg"
+  ],
+  "edit_of": null
+}

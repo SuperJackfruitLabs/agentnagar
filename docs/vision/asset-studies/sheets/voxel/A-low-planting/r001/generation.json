@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "voxel.A-low-planting",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "4e61993a4043c0bfc253f9c1a1ce4699e098d414cc6bdd21069de9c1c647e1aa",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ec37853cb30444872f475f689b4974537ec23298eab1f1db07a59457bc93f8cc",
+    "is_the_jobs": false,
+    "correction": "Change only the backdrop dividers: remove the thin white vertical and horizontal cross-shaped cell-divider lines, replacing them with the surrounding plain grey so the canvas has one continuous grey backdrop. Keep every voxel plant and stone block, all four subject groups including the two separate meadow tufts, their geometry, colours, positions, scales, soft contact shadows and all swatch rows exactly unchanged. Preserve the 1536 x 1024 landscape layout. No text or new objects."
+  },
+  "source_paths": [
+    "exec-2bf5a975-4213-461b-97e6-a7959208ace3.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/voxel/park.jpg",
+    "../../../../refs/panels/voxel/gathering.jpg",
+    "../../../../refs/panels/voxel/conversation.jpg"
+  ],
+  "edit_of": null
+}

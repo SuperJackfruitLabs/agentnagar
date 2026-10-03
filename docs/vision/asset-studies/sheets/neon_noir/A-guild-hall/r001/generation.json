@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.A-guild-hall",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "f90637fdd584946d4e136fcbb4fdd92181da2152b4735de5448cc15d34dcd6e4",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "f71dabd060962b368c28edac38bad7407a019fc0420d315b0f4fa1438c5dfac1",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-b4195e15-731b-4a05-ad7b-6a87b0f1855a.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/street.jpg",
+    "../../../../refs/panels/neon_noir/gathering.jpg",
+    "../../../../refs/panels/neon_noir/diagonal.jpg"
+  ],
+  "edit_of": null
+}

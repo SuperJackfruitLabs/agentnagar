@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "solarpunk.A-seating",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "a7d05ddf7617397b80bbebe4960f33763dd0b99c6dae540d85f10f171d8e52ad",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "7f43b6cf775f1ead3e73513049d715454245e9d318a0f67213ddf45b6ca60c82",
+    "is_the_jobs": false,
+    "correction": "Change only the bench materials and the surface rendering. Make the upper-left park bench entirely timber: replace its brass sleeves and dark metal joints with timber in matching blonde/brown colours, preserving its slatted seat, solid timber ends, timber arms and thick top rail. On all four seats replace photographic fabric fibres, dense stone pores and fine wood-grain noise with gentle painted shading and only a few broad grain marks, retaining the existing solarpunk materials and colours. Make each material swatch a uniformly flat square colour. Preserve all four whole objects, their geometry and placements, the caf\u00e9 chair's brass and dark steel, armchair upholstery and cushion, solid stone-block perch with timber cap, soft shadows, grey vignette and 1536 x 1024 layout. No text or added objects."
+  },
+  "source_paths": [
+    "exec-74c390d7-fa62-4e27-bed2-83c26057df81.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/solarpunk/park.jpg",
+    "../../../../refs/panels/solarpunk/gathering.jpg",
+    "../../../../refs/panels/solarpunk/home.jpg"
+  ],
+  "edit_of": null
+}

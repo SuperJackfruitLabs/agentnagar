@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.A-low-planting",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "9d105d56dd3c7865e5bee4cef4c8b7ddba26375edeafa658ce41da89afb3607a",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "aec07558f4e08fde1736cb9618a213ade33f341afccde78f7038a13954b1f3b5",
+    "is_the_jobs": false,
+    "correction": "Change only the upper-left shrub's added container and fine surface detail. Remove the circular concrete pot and its light strip from under the clipped shrub; let the whole round shrub stand directly on the accepted grey backdrop with a small contact shadow. Simplify individual leaf veins, fine grass-blade noise and concrete pores across the four groups into broader softly shaded stylised leaf/grass clumps and matte plain concrete, retaining their dark olive and violet colours. Keep the lower-left rectangular flowerbed and its thin bright amber strip, with no amber spill on planting or concrete. Preserve the four subject groups including the two separate meadow tufts in the fourth cell, shapes and placements otherwise, swatches, landscape layout and 1536 x 1024 canvas. No text or added objects."
+  },
+  "source_paths": [
+    "exec-8434b3ee-00db-485c-b024-a25d257c8fdc.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/park.jpg",
+    "../../../../refs/panels/neon_noir/gathering.jpg",
+    "../../../../refs/panels/neon_noir/conversation.jpg"
+  ],
+  "edit_of": null
+}

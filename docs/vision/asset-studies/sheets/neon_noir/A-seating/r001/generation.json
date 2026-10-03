@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.A-seating",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "b61f2bc528475e072f963692d893b9f32d28dcaef7e8927b0ded24cf28345fd4",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "4db0e17d222a28d0313fff322e59bdec41c0ae0b923312582fe68a1306534830",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-eec8d6d2-c5f7-4bc3-b8cf-8de1b16e7119.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/park.jpg",
+    "../../../../refs/panels/neon_noir/gathering.jpg",
+    "../../../../refs/panels/neon_noir/home.jpg"
+  ],
+  "edit_of": null
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.B-atlas-leaves",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "753dc0c88c7d4419e039e5f5a4543fbc228c0fd81c75ed6acb486593322c2623",
+  "width": 1254,
+  "height": 1254,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "8b2ae55a6b34c4aa9cde9fc7e3742f4bd3f2203d4c42cc2a687a5525251b19bc",
+    "is_the_jobs": false
+  },
+  "source_paths": [
+    "exec-4e4b86ce-69de-4c3a-9188-9ca02ee3ac0a.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/gathering.jpg",
+    "../../../../refs/panels/neon_noir/park.jpg",
+    "../../../../refs/panels/neon_noir/conversation.jpg"
+  ],
+  "edit_of": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "job": "neutral.C-palm-tall",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "1fceeaa0eb76e7f61dc7626f61b82be2109c2f0a96a4e4c1ceaa4fb48cc73c09",
+  "width": 1024,
+  "height": 1536,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ee52de73f5bd316959f9d3d5cdd5d0851b266335a1db348fdb78ec635d209dce",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-dcbd4f52-be7c-4906-a182-3fd58666ad25.png"
+  ],
+  "reference_images": [],
+  "edit_of": null
+}

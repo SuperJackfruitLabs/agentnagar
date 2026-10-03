@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "anime_cel.A-tram-shelter",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "3bba289fa3027a1f7bec3703d9ece5ad6c7834f3fcf8f06d1bbef5410740b016",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "efddd634f54e86379983c0a05a0d90eb6c282c59ccd52aa990f6ce21e6c9ff42",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-67e54782-0c4d-441d-a743-2eadbc57e252.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/anime_cel/transit.jpg",
+    "../../../../refs/panels/anime_cel/street.jpg",
+    "../../../../refs/panels/anime_cel/build-mode.jpg"
+  ],
+  "edit_of": null
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.A-fountain",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "c8b92844432a706d05e2c644ee3f3114417c19a0c9f36baedb59e85485a720d2",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "1e077aaf3e7d0601b399e4390092d4140bf6222cc48136326e9c5688c9f89099",
+    "is_the_jobs": false,
+    "correction": "Change only lighting and surface treatment. Remove all amber glow, halos and reflected lamp streaks from the fountain's metal, concrete, timber and water in all three views; show these surfaces in their own colours under neutral soft studio light. Keep built-in amber strips switched on as thin bright shapes that illuminate nothing around them. Replace photographic concrete pores, fine timber-grain noise and dense water caustics with broad softly shaded matte colours and simple stylised ripples/splashes. Make the four bottom swatches uniformly flat colours for dark concrete, dark timber rim, charcoal centre piece and navy water, in that order. Preserve exactly the fountain geometry, outlets, three views, positions, sizes, flat sitting rim, grey backdrop and 1536 x 1024 landscape layout. No text or added objects.\n\nSecond correction:\nRemove only the remaining lamp spill: delete the orange hotspot on the black funnel above the vertical centre strip, the orange hotspot on the centre pedestal below it, every amber sheen on the curved metal outlet arms, and the narrow amber reflection running across the main basin water. Replace those patches with the surrounding neutral charcoal or navy surface colour. Keep the actual amber light strips bright, their shapes unchanged, but with no glow on adjacent surfaces. Preserve all fountain geometry, materials, water streams/ripples, three views, layout, four swatches, grey backdrop and 1536 x 1024 canvas. No text or added objects."
+  },
+  "source_paths": [
+    "exec-0addf184-49a4-404e-857a-ab51f6400e35.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/street.jpg",
+    "../../../../refs/panels/neon_noir/park.jpg"
+  ],
+  "edit_of": null
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.A-trees",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "8a5d3cbd6c3fa8c6f26fba471fe4355fd441cadcdd78073786ecc27fd816095d",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "50a7b330eb681eecd0aa23b68cbfdec9acaeb602592a9e7c38ba113f76831599",
+    "is_the_jobs": false,
+    "correction": "Change only the tree lighting, foliage detail and spacing. Remove every added lantern or light from all four trees and remove all amber illumination, reflections and halos from leaves, fronds and bark; show their true dark olive, violet blossom and dark brown colours under neutral soft studio light. Simplify the broadleaf crowns into closed rounded masses of broad solid leaf clumps and palms into fewer sturdy solid fronds. Move or reduce crowns just enough that every tree has generous clear grey space to its neighbours and canvas edges. Remove amber light swatches since the trees have no lights. Preserve exactly these four whole trees, their trunk types, lean, general shapes, four-column arrangement, remaining material swatch rows and 1536 x 1024 landscape canvas. No text or new props.\n\nSecond correction:\nChange only the leftover lantern housings and tree spacing. Remove all small grey or beige vertical cylindrical lantern housings and their hangers from inside both broadleaf crowns, filling those small gaps with matching dark olive leaves. These are bare trees with foliage, flowers, branches and trunks only. Reduce and reposition the first two crowns and the palm crowns enough to leave at least a visibly generous grey margin at the left and right canvas edges and a clear gap between all four trees, without altering their trunk types, shapes, colours, neutral lighting or swatch rows. Preserve the landscape layout and all other content. No added props or text."
+  },
+  "source_paths": [
+    "exec-353103f1-b1c2-411b-856c-35d7ddab3282.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/street.jpg",
+    "../../../../refs/panels/neon_noir/park.jpg",
+    "../../../../refs/panels/neon_noir/diagonal.jpg"
+  ],
+  "edit_of": null
+}

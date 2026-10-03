@@ -151,6 +151,17 @@ path = [
 SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
 SPDX-License-Identifier = "AGPL-3.0-only"
 
+# The asset studies (docs/vision/asset-studies/): the design images an image
+# model made from its instructions, and the crops of the concept sheets
+# those instructions point it at.
+[[annotations]]
+path = [
+    "docs/vision/asset-studies/sheets/*/*/*/image.png",
+    "docs/vision/asset-studies/refs/panels/*/*.jpg",
+]
+SPDX-FileCopyrightText = "NONE: AI-generated design images and crops of AI-generated concept art (OpenAI gpt-image); no rights claimed"
+SPDX-License-Identifier = "CC0-1.0"
+
 # Fonts keep their own licences; the licence file sits beside each font.
 # (SJL's FontVariation .tres files and Godot's .import files beside them are
 # SJL's, like the rest of the assets.)

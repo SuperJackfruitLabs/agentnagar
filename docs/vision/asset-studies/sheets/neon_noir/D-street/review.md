@@ -1,0 +1,7 @@
+# Correction submission
+
+AI-generated candidate, not approved. Exact correction prompt is saved in the revision prompt.txt.
+
+```text
+Image 1 is the original layout target; Image 2 is the current repaint. Change only the missing palms in Image 2: restore every palm already present in Image 1, with exactly its original trunk position, height and leaf-crown outline. In particular restore the palm foliage left of the main tree, in front of the left tower, beside the centre path, and in front of the right tower. Include only palms that Image 1 contains; do not add the large outer-edge palms from the earlier candidate. Preserve the current repaint's main tree, buildings, people, benches, lamps, fountain, bollard, paths, camera, canvas, dark materials, amber lighting and wet paving reflections unchanged. No extra people, objects, text, labels or signs.
+```

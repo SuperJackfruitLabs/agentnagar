@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.A-low-planting",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "2fd9293c2d6cd6aed8bd4afd77525a35da87ca388380fb19b7f2507edab70736",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "77f5a286eb43dea3610ad9da24b5e3aaa9b69a3fe812b996b5509b52e9f5d993",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-9b9497e4-4e09-4db0-b168-1c0ce6f0e98e.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/park.jpg",
+    "../../../../refs/panels/lowpoly_tropical/gathering.jpg",
+    "../../../../refs/panels/lowpoly_tropical/conversation.jpg"
+  ],
+  "edit_of": null
+}

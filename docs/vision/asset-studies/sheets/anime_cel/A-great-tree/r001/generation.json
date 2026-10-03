@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "anime_cel.A-great-tree",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "215c77466b75feee5682c6016a3610a29176e7d235d1c801405ce2bf13bd5d68",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "49d560a48eddcab2ee62c617a8282d03074ff9a97e57f04f0ecd1ee0ca6e9882",
+    "is_the_jobs": false,
+    "correction": "Change only the lower-right plan view to a true straight-down view from directly above, with the crown, square bed and tree centred on the same footprint and no visible side elevation of the trunk or bed. Preserve the large three-quarter view and upper-right front elevation exactly, the same tree design, foliage colours, flowers, lanterns, square stone kerb, five swatches, thin ink lines, cel shading, accepted grey backdrop and 1536 x 1024 landscape layout. No text or added objects."
+  },
+  "source_paths": [
+    "exec-8bd22894-ddb4-45f6-abf4-796c06006d69.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/anime_cel/street.jpg",
+    "../../../../refs/panels/anime_cel/gathering.jpg"
+  ],
+  "edit_of": null
+}

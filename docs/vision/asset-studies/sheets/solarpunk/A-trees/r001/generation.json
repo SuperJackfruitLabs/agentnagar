@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "solarpunk.A-trees",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "15e5c1c735b02993010a138557412cac01cc42ba396cf4243521271e5cfe9b52",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "a30f42889026f367706f64700c3f879b632cc4efc39971d7aa49333a3414c114",
+    "is_the_jobs": false,
+    "correction": "Change only crown spacing and foliage complexity. The leftmost tree's crown reaches and clips the left canvas edge: reduce and recenter it enough to leave generous clear grey margins on all sides. Ensure clear grey gaps between every tree crown and its neighbours, and at both outside canvas edges. Simplify the two broadleaf crowns into fewer closed rounded solid leaf clumps with grouped pink, white and purple blossoms; simplify the palms to fewer broad sturdy solid fronds. Preserve exactly these four whole trees, their pale brown trunks, ringed palms with slight lean, colours, soft lighting, four-column layout, material swatch rows and 1536 x 1024 landscape canvas. No new objects or text."
+  },
+  "source_paths": [
+    "exec-3dfcb09d-e16d-4565-aec4-e3d85321661c.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/solarpunk/street.jpg",
+    "../../../../refs/panels/solarpunk/park.jpg",
+    "../../../../refs/panels/solarpunk/diagonal.jpg"
+  ],
+  "edit_of": null
+}

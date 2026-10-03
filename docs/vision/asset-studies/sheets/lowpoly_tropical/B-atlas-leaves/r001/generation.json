@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.B-atlas-leaves",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "1ec9d8b42768a73f33b5c8db2d4c0e12e3b5f96baf43edbf40c62b5ff43c71bc",
+  "width": 1254,
+  "height": 1254,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "96c497dcad18d1e7a8aec925a71396dae22c50dc507311e841a001d093a9606a",
+    "is_the_jobs": false
+  },
+  "source_paths": [
+    "exec-7a8d176d-11be-409f-9753-06cb5c83365d.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/gathering.jpg",
+    "../../../../refs/panels/lowpoly_tropical/park.jpg",
+    "../../../../refs/panels/lowpoly_tropical/conversation.jpg"
+  ],
+  "edit_of": null
+}

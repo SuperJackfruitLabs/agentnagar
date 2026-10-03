@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "solarpunk.A-great-tree",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "067e944812da1fb3d094d7a015495c725401843b6b674fda52b6f3be82952d48",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "c71189d91ff842acc94e0c5143726b2982c3c7ac45ab1fb905e5ac494e3b4d95",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-a8bddc51-7cfc-407c-bd1c-8b85e7ce7bd7.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/solarpunk/street.jpg",
+    "../../../../refs/panels/solarpunk/gathering.jpg"
+  ],
+  "edit_of": null
+}

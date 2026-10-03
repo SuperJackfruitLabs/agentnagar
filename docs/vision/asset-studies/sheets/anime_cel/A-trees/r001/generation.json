@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "anime_cel.A-trees",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "62b0c7f3045c28334a8087a7ad246fbdd138f67f33cdbd9cc6b66a415a4640fc",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "1872300634a04454ecc0d4026d851853c94820f6070233671975fc23150cc8fd",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-6b3df3db-26d8-43d2-a819-a0476b840bb1.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/anime_cel/street.jpg",
+    "../../../../refs/panels/anime_cel/park.jpg",
+    "../../../../refs/panels/anime_cel/diagonal.jpg"
+  ],
+  "edit_of": null
+}

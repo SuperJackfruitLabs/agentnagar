@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.A-terrace",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "0c3e33797ca2b9759d9741c7ed9d62075a0d266c00c573b6d251164b444a6882",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "2c7370c90e7ef4ebbe958ae0bfcc337e6e5f0f3dfc228a39ba6e649ac578f7d6",
+    "is_the_jobs": false,
+    "correction": "Change only the light spill and overly fine planting detail. Keep every built-in amber strip bright as a small luminous part, but remove all amber reflection, glow, halo and pools of light from metal, timber, concrete, umbrella cloth, foliage and grey backdrop. Give those surfaces their own neutral studio-lit colours. Simplify the two planters' foliage and blossoms into fewer broad solid leaf masses and violet clusters, keeping the square planter's plants within its edges. Preserve all four complete objects, their shapes, positions, scale, swatch rows and 1536 x 1024 landscape composition. No text or added objects."
+  },
+  "source_paths": [
+    "exec-43d77087-5867-4f8a-a468-469a82474b9c.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/street.jpg",
+    "../../../../refs/panels/neon_noir/gathering.jpg",
+    "../../../../refs/panels/neon_noir/park.jpg"
+  ],
+  "edit_of": null
+}

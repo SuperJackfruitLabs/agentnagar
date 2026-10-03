@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "solarpunk.A-street-fixtures",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "1ebcb1a58434dfd6a3b3cfb946f05a65cbebaa8553af044760c3a65e509434f4",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "88c58a970c241628f2b8cfbdf87693b09a6e3837dfd98baa1e7fd50bc823ada3",
+    "is_the_jobs": false,
+    "correction": "Change only the catenary pole's side-arm and wire endpoints. The two extensions running to the right currently fade away: shorten them to a complete solid side arm and attached brace/insulator with clear finished endpoints wholly inside the pole's column. Remove the long outgoing wire past the insulator. Preserve the pole, its brass fittings and pale base, and all other three fixtures, their geometry, material colours, plants, positions, scale, soft shadows and swatch rows exactly. Keep the same 1536 x 1024 landscape canvas and plain grey backdrop. No text or added objects."
+  },
+  "source_paths": [
+    "exec-39de33c4-8b07-41c7-8d31-00489497ba69.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/solarpunk/street.jpg",
+    "../../../../refs/panels/solarpunk/park.jpg",
+    "../../../../refs/panels/solarpunk/transit.jpg"
+  ],
+  "edit_of": null
+}

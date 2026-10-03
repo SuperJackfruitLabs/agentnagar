@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.A-tram-shelter",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "421fac754aa9f134e4f03d4630cbd0794a136bd8501fee239ee129f8694cf3cd",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "73973fac7c947e1a04a9bae7a0e85f04a3ffd00c9bf7d91f58dd83361a979fdd",
+    "is_the_jobs": false,
+    "correction": "Change only the lower-right shelter view to a true straight-down orthographic plan from directly above: show the rectangular timber canopy and frame from the top, with no visible front or side elevation, legs or tall sign face. Preserve exactly the large three-quarter view and upper-right front elevation, the shelter design and materials, bench, blank sign, five swatches, view positions and sizes, accepted grey backdrop and 1536 x 1024 landscape layout. No text or added objects."
+  },
+  "source_paths": [
+    "exec-463a6cd5-efd7-43b1-9155-4c6fef84f8b9.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/transit.jpg",
+    "../../../../refs/panels/lowpoly_tropical/street.jpg",
+    "../../../../refs/panels/lowpoly_tropical/build-mode.jpg"
+  ],
+  "edit_of": null
+}

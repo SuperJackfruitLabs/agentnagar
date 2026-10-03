@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "voxel.A-fountain",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "f2f8ee3aee68a78543d1926bab69a384007cecc59d697ca3990dcfc526cadcc7",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "796fd29b3e87f9d6597f490019fb2062a3c428ab291723f2f6ed7b9798125fea",
+    "is_the_jobs": false,
+    "correction": "Change only the smooth or diagonal stone geometry into voxel-grid geometry. Rebuild the outer basin and flat sitting rim in the large three-quarter and front views as clearly stepped rings made entirely of axis-aligned cubes on the same grid, matching the stepped footprint in the top-down view. Replace any wedge, curved or diagonal cube faces in the tiers and rim with square block faces; keep the rim broad, flat and plain. Preserve this single whole fountain, all three view positions and framing, its centrepiece, falling block water, grey and blue colours, material swatches, soft shadows and 1536 x 1024 landscape layout. No text or new objects.\n\nSecond correction:\nChange only the outer basin and sitting-rim block geometry in all three views. Use identical unrotated axis-aligned cubes on a single global square grid, with crisp right-angle corners and square flat top faces. Adjacent cubes around the circular footprint must form square staircase steps, not individually rotated radial bricks, wedge-shaped tops, clipped corners or curved faces. Keep the top of the wide rim flat at one height. Preserve the centrepiece, tiers, block water, grey and blue colours, the three view positions, clear margins, swatches, lighting and landscape layout exactly. No text or added objects."
+  },
+  "source_paths": [
+    "exec-67eb3349-3024-4753-89b2-171b3ea5bcc6.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/voxel/street.jpg",
+    "../../../../refs/panels/voxel/park.jpg"
+  ],
+  "edit_of": null
+}

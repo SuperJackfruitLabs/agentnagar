@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "voxel.A-trees",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "d896b6c8005465497bdc665b3260c73ff49ac1e912b03549fbcdcfc85554656e",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "5ea7becc2fb01069edd5fadec6a569901239a99c3532102f80476737544174af",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-4bc24842-60da-4c9b-a3b5-f5a6f7774f42.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/voxel/street.jpg",
+    "../../../../refs/panels/voxel/park.jpg",
+    "../../../../refs/panels/voxel/diagonal.jpg"
+  ],
+  "edit_of": null
+}
