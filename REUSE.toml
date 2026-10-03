@@ -39,6 +39,7 @@ path = [
     "docs/**/*.godot",
     "docs/**/*.uid",
     "docs/**/*.js",
+    "docs/**/*.cjs",
     "docs/**/*.css",
     "docs/**/*.html",
     "docs/**/.gitignore",
@@ -93,6 +94,106 @@ SPDX-License-Identifier = "CC0-1.0"
 path = ["city/godot/evidence/*-vs-sheet.png", "city/godot/evidence/*-vs-sheets.png"]
 SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
 SPDX-License-Identifier = "CC-BY-SA-4.0 AND CC0-1.0"
+
+# The asset-to-sheet pilot (docs/research/2026-10-01-asset-to-sheet-pilot/).
+# Crops of that concept art, kept as the inputs its measurements read.
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/inputs/*.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/sheets/*.png",
+]
+SPDX-FileCopyrightText = "NONE: crops of AI-generated concept art (OpenAI gpt-image); no rights claimed"
+SPDX-License-Identifier = "CC0-1.0"
+
+# Its comparison sheets and previews set game captures and sprites beside
+# such crops: SJL's composite under CC BY-SA 4.0, the embedded AI crops
+# CC0 1.0.
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/compare/*.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/previews/clumps.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/previews/pixel-sprites.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/bench-test/compare/*.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/bench-test/previews/bench-today.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/bench-test/previews/pixel-bench.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/planter-benchmark/compare/*.png",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/planter-benchmark/previews/*.png",
+]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0 AND CC0-1.0"
+
+# The great tree's shape in that pilot came from an image-to-3D model
+# (TRELLIS.2). The model's output reduced to parts, and renders of it, are
+# AI-generated: no rights claimed. The trees that SJL's scripts build on
+# those parts carry both licences.
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/parts/*.json",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/previews/*.png",
+]
+SPDX-FileCopyrightText = "NONE: AI-generated 3D models (TRELLIS.2), reduced to parts or rendered; no rights claimed"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/out/**",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/banyan/round2/out/**",
+]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0 AND CC0-1.0"
+
+# Its shell scripts and a patch to the client's code are code, like the
+# Python and GDScript beside them.
+[[annotations]]
+path = [
+    "docs/research/2026-10-01-asset-to-sheet-pilot/**/*.sh",
+    "docs/research/2026-10-01-asset-to-sheet-pilot/**/*.diff",
+]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "AGPL-3.0-only"
+
+# The asset studies (docs/vision/asset-studies/): the design images an image
+# model made from its instructions, and the crops of the concept sheets
+# those instructions point it at.
+[[annotations]]
+path = [
+    "docs/vision/asset-studies/sheets/*/*/*/image.png",
+    "docs/vision/asset-studies/refs/panels/*/*.jpg",
+]
+SPDX-FileCopyrightText = "NONE: AI-generated design images and crops of AI-generated concept art (OpenAI gpt-image); no rights claimed"
+SPDX-License-Identifier = "CC0-1.0"
+
+# The design-sheet-to-asset record (docs/research/2026-10-02-design-sheet-to-asset/).
+# Cut-outs of those design images, as given to the image-to-3D model.
+[[annotations]]
+path = ["docs/research/2026-10-02-design-sheet-to-asset/inputs/*/*.png"]
+SPDX-FileCopyrightText = "NONE: cut-outs of AI-generated design images (OpenAI gpt-image); no rights claimed"
+SPDX-License-Identifier = "CC0-1.0"
+
+# Its pieces are an image-to-3D model's output (TRELLIS.2: AI-generated, no
+# rights claimed) fitted, sized and repainted by SJL's scripts: both licences.
+# Its comparison sheets and previews set game captures and renders of those
+# pieces beside the design images: SJL's composite, the embedded AI images
+# CC0 1.0.
+[[annotations]]
+path = [
+    "docs/research/2026-10-02-design-sheet-to-asset/out/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-budget/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-first-sheet/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-kit-green/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-leaves/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-worn/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/compare/*.jpg",
+    "docs/research/2026-10-02-design-sheet-to-asset/previews/**/*.jpg",
+]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0 AND CC0-1.0"
+
+# Its shell scripts are code, like the Python beside them.
+[[annotations]]
+path = ["docs/research/2026-10-02-design-sheet-to-asset/**/*.sh"]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "AGPL-3.0-only"
 
 # Fonts keep their own licences; the licence file sits beside each font.
 # (SJL's FontVariation .tres files and Godot's .import files beside them are

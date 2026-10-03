@@ -1,0 +1,57 @@
+== lowpoly_tropical
+round 0: timber band error 0.024 colour distance 5.1, frame band error 0.063 colour distance 7.9
+  timber sheet               #613E2B 0.27  #895639 0.37  #9A694F 0.45  #C78860 0.58  #E9A16E 0.68
+  timber game                #59372D 0.24  #84533A 0.36  #996342 0.43  #BC7E56 0.54  #E3A977 0.70
+  frame sheet                #2C282B 0.16  #373438 0.21  #4A4548 0.28
+  frame game                 #1B1B20 0.11  #1F2026 0.13  #3A373B 0.22
+round 1: timber band error 0.014 colour distance 4.8, frame band error 0.016 colour distance 2.7
+  timber sheet               #613E2B 0.27  #895639 0.37  #9A694F 0.45  #C78860 0.58  #E9A16E 0.68
+  timber game                #5E3B30 0.26  #88583F 0.38  #9F6A49 0.45  #C0845D 0.56  #E4AC7C 0.71
+  frame sheet                #2C282B 0.16  #373438 0.21  #4A4548 0.28
+  frame game                 #29272C 0.16  #2E2C31 0.18  #4F4748 0.29
+round 2: timber band error 0.015 colour distance 4.7, frame band error 0.015 colour distance 2.5
+  timber sheet               #613E2B 0.27  #895639 0.37  #9A694F 0.45  #C78860 0.58  #E9A16E 0.68
+  timber game                #603B2F 0.26  #895A41 0.39  #A26C4B 0.46  #C1865E 0.56  #E4AD7C 0.71
+  frame sheet                #2C282B 0.16  #373438 0.21  #4A4548 0.28
+  frame game                 #2A292D 0.16  #312F33 0.19  #53494A 0.30
+seconds a round: build 0.7, import and capture 17.5
+== anime_cel
+round 0: timber band error 0.059 colour distance 10.6, frame band error 0.041 colour distance 8.9
+  timber sheet               #3F312A 0.20  #564439 0.28  #926B4B 0.44  #CD9668 0.62  #EABE8E 0.77
+  timber game                #61483C 0.30  #7B5C4A 0.38  #8F6C54 0.45  #CB8F5B 0.60  #FED181 0.84
+  frame sheet                #242428 0.15  #49464F 0.28  #767275 0.45
+  frame game                 #38394C 0.23  #454454 0.27  #837972 0.48
+round 1: timber band error 0.053 colour distance 9.8, frame band error 0.032 colour distance 8.3
+  timber sheet               #3F312A 0.20  #564439 0.28  #926B4B 0.44  #CD9668 0.62  #EABE8E 0.77
+  timber game                #5C4539 0.29  #775A49 0.37  #8A6851 0.43  #C48B59 0.58  #FDC67A 0.80
+  frame sheet                #242428 0.15  #49464F 0.28  #767275 0.45
+  frame game                 #353647 0.22  #42414E 0.26  #7C7267 0.45
+round 2: timber band error 0.049 colour distance 9.1, frame band error 0.033 colour distance 8.4
+  timber sheet               #3F312A 0.20  #564439 0.28  #926B4B 0.44  #CD9668 0.62  #EABE8E 0.77
+  timber game                #5A4438 0.28  #735A4C 0.37  #8B684F 0.43  #C28B59 0.58  #FDC177 0.79
+  frame sheet                #242428 0.15  #49464F 0.28  #767275 0.45
+  frame game                 #343646 0.22  #41414C 0.26  #7A7163 0.45
+seconds a round: build 0.6, import and capture 14.9
+== solarpunk
+round 0: timber band error 0.060 colour distance 8.4
+  timber sheet               #3F220F 0.16  #70482E 0.31  #956241 0.42  #B67F58 0.53  #FACC97 0.83
+  timber game                #58392C 0.25  #714B34 0.32  #825B40 0.38  #A47856 0.50  #D0AE82 0.70
+round 1: timber band error 0.050 colour distance 6.6
+  timber sheet               #3F220F 0.16  #70482E 0.31  #956241 0.42  #B67F58 0.53  #FACC97 0.83
+  timber game                #5D3928 0.25  #774D34 0.33  #8A5E3F 0.40  #AB7D58 0.52  #D8B586 0.73
+round 2: timber band error 0.045 colour distance 5.9
+  timber sheet               #3F220F 0.16  #70482E 0.31  #956241 0.42  #B67F58 0.53  #FACC97 0.83
+  timber game                #5D3826 0.25  #794D34 0.33  #8D5E3F 0.40  #AE7F59 0.53  #DCB887 0.74
+seconds a round: build 0.6, import and capture 17.1
+== neon_noir
+round 0: timber band error 0.130 colour distance 17.9
+  timber sheet               #050302 0.01  #1B100D 0.07  #291A14 0.11  #363240 0.21  #846058 0.41
+  timber game                #000002 0.00  #00000B 0.00  #000115 0.01  #0C0A1D 0.05  #201724 0.10
+round 1: timber band error 0.111 colour distance 14.1
+  timber sheet               #050302 0.01  #1B100D 0.07  #291A14 0.11  #363240 0.21  #846058 0.41
+  timber game                #000001 0.00  #010005 0.00  #09060C 0.03  #191113 0.08  #37221D 0.15
+round 2: timber band error 0.078 colour distance 11.6
+  timber sheet               #050302 0.01  #1B100D 0.07  #291A14 0.11  #363240 0.21  #846058 0.41
+  timber game                #010004 0.00  #05050D 0.02  #100E15 0.06  #221A1D 0.11  #4B352E 0.23
+seconds a round: build 0.6, import and capture 14.8
+FIT-DONE

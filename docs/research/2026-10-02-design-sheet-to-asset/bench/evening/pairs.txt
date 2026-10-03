@@ -1,0 +1,37 @@
+  warm-lowpoly_tropical-1: card 60 C before, 66 C after (thrown away)
+  warm-lowpoly_tropical-2: card 66 C before, 69 C after (thrown away)
+  warm-lowpoly_tropical-3: card 69 C before, 71 C after (thrown away)
+  warm-lowpoly_tropical-4: card 71 C before, 72 C after (thrown away)
+lowpoly_tropical: card steady at 72 C after 4 warming runs
+  kit-lowpoly_tropical-1: card 72 C before, 73 C after
+  new-lowpoly_tropical-1: card 73 C before, 75 C after
+  new-lowpoly_tropical-2: card 75 C before, 75 C after
+  kit-lowpoly_tropical-2: card 75 C before, 75 C after
+  warm-neon_noir-1: card 75 C before, 74 C after (thrown away)
+  warm-neon_noir-2: card 74 C before, 75 C after (thrown away)
+neon_noir: card steady at 75 C after 2 warming runs
+  kit-neon_noir-1: card 75 C before, 75 C after
+  new-neon_noir-1: card 75 C before, 75 C after
+  new-neon_noir-2: card 75 C before, 75 C after
+  kit-neon_noir-2: card 75 C before, 75 C after
+  warm-anime_cel-1: card 75 C before, 75 C after (thrown away)
+  warm-anime_cel-2: card 75 C before, 75 C after (thrown away)
+anime_cel: card steady at 75 C after 2 warming runs
+  kit-anime_cel-1: card 75 C before, 75 C after
+  new-anime_cel-1: card 75 C before, 75 C after
+  new-anime_cel-2: card 75 C before, 75 C after
+  kit-anime_cel-2: card 75 C before, 75 C after
+  warm-solarpunk-1: card 75 C before, 75 C after (thrown away)
+  warm-solarpunk-2: card 75 C before, 76 C after (thrown away)
+solarpunk: card steady at 76 C after 2 warming runs
+  kit-solarpunk-1: card 75 C before, 75 C after
+  new-solarpunk-1: card 75 C before, 76 C after
+  new-solarpunk-2: card 76 C before, 76 C after
+  kit-solarpunk-2: card 76 C before, 75 C after
+  warm-voxel-1: card 75 C before, 75 C after (thrown away)
+  warm-voxel-2: card 75 C before, 75 C after (thrown away)
+voxel: card steady at 75 C after 2 warming runs
+  kit-voxel-1: card 75 C before, 75 C after
+  new-voxel-1: card 75 C before, 75 C after
+  new-voxel-2: card 75 C before, 75 C after
+  kit-voxel-2: card 75 C before, 76 C after

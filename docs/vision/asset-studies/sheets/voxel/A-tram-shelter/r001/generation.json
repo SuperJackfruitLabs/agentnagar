@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "voxel.A-tram-shelter",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "427d49894e5cb383ab5e0af9b7e3fd24f173588a8334b4820a31492051c52e07",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "e7b10f0ebe62ab59fafad20f4cdae1614afd8de33c746a8356cc9ce08928457b",
+    "is_the_jobs": false,
+    "correction": "Change only the lower-right view into a true vertical straight-down orthographic plan of this same shelter. Show the orange rectangular cube-grid roof directly from above as a flat rectangle with its dark end strips and square seams. The canopy covers the bench, tall posts and sign below, so remove all visible bench slats, post front faces and luminous sign front face from beneath that lower-right roof view. Preserve the large three-quarter view, upper-right front elevation, same shelter parts and colours, all five swatches, soft lighting, clear margins and 1536 x 1024 landscape layout exactly. No text or new objects."
+  },
+  "source_paths": [
+    "exec-5e26991b-3339-42a3-8a88-31cec41fd55c.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/voxel/transit.jpg",
+    "../../../../refs/panels/voxel/street.jpg",
+    "../../../../refs/panels/voxel/build-mode.jpg"
+  ],
+  "edit_of": null
+}

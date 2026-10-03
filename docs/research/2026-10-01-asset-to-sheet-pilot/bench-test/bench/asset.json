@@ -1,0 +1,439 @@
+{
+ "asset": "bench",
+ "note": "The park bench, as each style's WATERFRONT PARK panel draws it (sheet 02-creating-exploring, row 1, column 1). Boxes are fractions of that panel, read off grid.py's enlargement: several small ones that lie wholly on the material.",
+ "panel": "park",
+ "kinds": [
+  "timber",
+  "frame"
+ ],
+ "stops": {
+  "timber": 5,
+  "frame": 3
+ },
+ "unmarked": {
+  "timber": "warm"
+ },
+ "sheet_rule": {
+  "timber": "warm",
+  "frame": "any"
+ },
+ "styles": {
+  "lowpoly_tropical": {
+   "needle": "seat_bench_v2",
+   "asset_file": "assets/seat_bench_v2.glb",
+   "sheet": {
+    "timber": [
+     [
+      0.85,
+      0.85,
+      0.895,
+      0.9
+     ],
+     [
+      0.875,
+      0.9,
+      0.925,
+      0.96
+     ],
+     [
+      0.9,
+      0.955,
+      0.95,
+      0.995
+     ],
+     [
+      0.93,
+      0.79,
+      0.97,
+      0.83
+     ],
+     [
+      0.91,
+      0.84,
+      0.94,
+      0.9
+     ],
+     [
+      0.85,
+      0.805,
+      0.87,
+      0.83
+     ],
+     [
+      0.838,
+      0.86,
+      0.852,
+      0.9
+     ]
+    ],
+    "frame": [
+     [
+      0.962,
+      0.88,
+      0.976,
+      0.95
+     ],
+     [
+      0.846,
+      0.95,
+      0.858,
+      0.995
+     ]
+    ]
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_bench.py",
+    "--",
+    "lowpoly",
+    "{out}",
+    "{params}"
+   ],
+   "look": [
+    0.825,
+    0.755,
+    0.985,
+    1.0
+   ]
+  },
+  "voxel": {
+   "needle": "bench.glb",
+   "asset_file": "assets/v2/bench.glb",
+   "sheet": {
+    "timber": [
+     [
+      0.665,
+      0.77,
+      0.74,
+      0.805
+     ],
+     [
+      0.675,
+      0.818,
+      0.7,
+      0.838
+     ],
+     [
+      0.535,
+      0.68,
+      0.6,
+      0.7
+     ],
+     [
+      0.56,
+      0.705,
+      0.61,
+      0.735
+     ],
+     [
+      0.86,
+      0.955,
+      0.98,
+      0.995
+     ]
+    ],
+    "frame": [
+     [
+      0.662,
+      0.83,
+      0.685,
+      0.89
+     ],
+     [
+      0.541,
+      0.725,
+      0.553,
+      0.77
+     ],
+     [
+      0.578,
+      0.75,
+      0.598,
+      0.81
+     ]
+    ]
+   },
+   "sheet_rule": {
+    "timber": "warm",
+    "frame": "grey"
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_bench_voxel.py",
+    "--",
+    "{out}",
+    "{params}"
+   ],
+   "look": [
+    0.53,
+    0.66,
+    0.8,
+    0.96
+   ]
+  },
+  "anime_cel": {
+   "needle": "seat_bench_v2",
+   "asset_file": "assets/seat_bench_v2.glb",
+   "sheet": {
+    "timber": [
+     [
+      0.525,
+      0.855,
+      0.585,
+      0.895
+     ],
+     [
+      0.61,
+      0.895,
+      0.655,
+      0.93
+     ],
+     [
+      0.92,
+      0.815,
+      0.995,
+      0.86
+     ],
+     [
+      0.665,
+      0.765,
+      0.69,
+      0.8
+     ]
+    ],
+    "frame": [
+     [
+      0.588,
+      0.89,
+      0.597,
+      0.99
+     ],
+     [
+      0.648,
+      0.79,
+      0.662,
+      0.83
+     ]
+    ]
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_bench.py",
+    "--",
+    "anime",
+    "{out}",
+    "{params}"
+   ],
+   "look": [
+    0.52,
+    0.72,
+    0.76,
+    1.0
+   ]
+  },
+  "solarpunk": {
+   "needle": "seat_bench_v2",
+   "asset_file": "assets/seat_bench_v2.glb",
+   "sheet": {
+    "timber": [
+     [
+      0.86,
+      0.775,
+      0.93,
+      0.8
+     ],
+     [
+      0.855,
+      0.815,
+      0.92,
+      0.835
+     ],
+     [
+      0.85,
+      0.85,
+      0.9,
+      0.87
+     ],
+     [
+      0.87,
+      0.75,
+      0.95,
+      0.765
+     ],
+     [
+      0.94,
+      0.8,
+      0.97,
+      0.86
+     ],
+     [
+      0.77,
+      0.87,
+      0.83,
+      0.905
+     ]
+    ],
+    "frame": []
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_bench.py",
+    "--",
+    "solarpunk",
+    "{out}",
+    "{params}"
+   ],
+   "look": [
+    0.71,
+    0.74,
+    0.985,
+    1.0
+   ]
+  },
+  "neon_noir": {
+   "needle": "seat_bench_v2",
+   "asset_file": "assets/seat_bench_v2.glb",
+   "sheet": {
+    "timber": [
+     [
+      0.14,
+      0.836,
+      0.38,
+      0.85
+     ],
+     [
+      0.3,
+      0.86,
+      0.46,
+      0.885
+     ],
+     [
+      0.27,
+      0.895,
+      0.385,
+      0.99
+     ],
+     [
+      0.495,
+      0.925,
+      0.545,
+      0.955
+     ]
+    ],
+    "frame": []
+   },
+   "sheet_rule": {
+    "timber": "any"
+   },
+   "build": [
+    "blender",
+    "--background",
+    "--factory-startup",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "{asset}/build_bench.py",
+    "--",
+    "neon",
+    "{out}",
+    "{params}"
+   ],
+   "look": [
+    0.36,
+    0.8,
+    0.56,
+    1.0
+   ]
+  },
+  "pixel_art": {
+   "needle": "",
+   "asset_file": "assets/scenery/seats/bench_0.png",
+   "sheet": {
+    "timber": [
+     [
+      0.37,
+      0.808,
+      0.48,
+      0.828
+     ],
+     [
+      0.42,
+      0.848,
+      0.48,
+      0.868
+     ],
+     [
+      0.31,
+      0.92,
+      0.37,
+      0.945
+     ]
+    ],
+    "frame": [
+     [
+      0.488,
+      0.82,
+      0.498,
+      0.98
+     ]
+    ]
+   },
+   "look": [
+    0.357,
+    0.78,
+    0.53,
+    1.0
+   ]
+  }
+ },
+ "note_rules": "sheet_rule drops stray pixels inside a box: 'warm' keeps wood colours (paving, leaves and iron fall out), 'grey' keeps colourless ones. A style may override it.",
+ "ramp_override": {
+  "lowpoly_tropical": {
+   "frame": [
+    null,
+    null,
+    "#4A4548"
+   ]
+  },
+  "pixel_art": {
+   "frame": [
+    null,
+    null,
+    "#22305A"
+   ]
+  }
+ },
+ "note_override": "ramp_override: the frame's lightest stop in two sheets took in wood or background; set by hand to a lighter tone of the frame's own colour.",
+ "note_frame": "A frame's boxes lie on its body, not on its lit edges: the painting gives every stop of a ramp a share of the faces, so a box on a highlight makes the whole frame light.",
+ "fit": {
+  "stops": false
+ },
+ "note_fit": "A bench is a few large flat faces: its level and hue are fitted, not each ramp stop (see asset_fit.py).",
+ "footprint": [
+  -0.8,
+  -0.25,
+  0.8,
+  0.35
+ ],
+ "note_footprint": "The catalogue's bench footprint (catalogue.json, kind bench), in metres about the sitter: 1.6 m wide, from 0.25 m ahead of the sitter to 0.35 m behind."
+}

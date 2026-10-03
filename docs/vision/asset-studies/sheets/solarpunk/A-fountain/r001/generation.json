@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "solarpunk.A-fountain",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "72799a5f4fb029764c9fdd35beaff8121927802db780550b1a547cda265a76f3",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "c56af2fa742424406bc6ef4de01953efb890b5fe8048d0bff66f328bcbef714f",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-73f55d00-7702-4edf-888a-158c6d35b9c0.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/solarpunk/street.jpg",
+    "../../../../refs/panels/solarpunk/park.jpg"
+  ],
+  "edit_of": null
+}

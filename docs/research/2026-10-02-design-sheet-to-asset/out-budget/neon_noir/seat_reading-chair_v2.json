@@ -1,0 +1,305 @@
+{
+ "kit_tris": 412,
+ "kit_light_parts": [],
+ "raw_tris": 144904,
+ "metal_map_ignored": true,
+ "loose_parts": 6,
+ "dropped_parts": 1,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.6217,
+  "90": 0.599,
+  "180": 0.5646,
+  "270": 0.5969
+ },
+ "scale": [
+  0.8665,
+  1.0321,
+  1.3264
+ ],
+ "stretch": 1.531,
+ "seat_top_m": {
+  "kit": 0.42,
+  "generated": 0.51
+ },
+ "plan": {
+  "front_is": "+y",
+  "notch": {
+   "arms_inner_faces_m": [
+    0.31,
+    0.31
+   ],
+   "cleared_either_side_m": [
+    0.32,
+    0.32
+   ],
+   "seat_front_was_m_behind_the_arms": -0.005,
+   "now_m": 0.133,
+   "asked_m": 0.133,
+   "walls_recoloured": {
+    "faces": 10,
+    "from": "the arms' inner faces",
+    "share_of_texels": 0.0046
+   }
+  },
+  "put_back_on_the_box": [
+   1.0,
+   1.012
+  ]
+ },
+ "yaw": 180,
+ "box_min": [
+  -0.435,
+  -0.464,
+  0.0
+ ],
+ "box_max": [
+  0.435,
+  0.37,
+  0.927
+ ],
+ "tris": 1452,
+ "deviation": {
+  "tris": 1440,
+  "mean_mm": 2.14,
+  "p95_mm": 6.44,
+  "max_mm": 24.9,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0152,
+ "diagonal_m": 1.52,
+ "own_normals": true,
+ "weighted_normals": true,
+ "texels_used": 0.923,
+ "materials": [
+  {
+   "design": [
+    97.2,
+    -3.4,
+    16.6
+   ],
+   "got": [
+    64.1,
+    0.7,
+    3.4
+   ],
+   "share": 0.027,
+   "reached": false,
+   "delta_e": 35.9
+  },
+  {
+   "design": [
+    41.0,
+    5.9,
+    4.7
+   ],
+   "got": [
+    40.9,
+    2.1,
+    2.1
+   ],
+   "share": 0.188,
+   "reached": true,
+   "delta_e": 4.6
+  },
+  {
+   "design": [
+    13.2,
+    3.0,
+    2.0
+   ],
+   "got": [
+    12.6,
+    0.9,
+    -0.0
+   ],
+   "share": 0.382,
+   "reached": true,
+   "delta_e": 3.0
+  },
+  {
+   "design": [
+    22.4,
+    7.3,
+    9.3
+   ],
+   "got": [
+    22.0,
+    6.4,
+    8.3
+   ],
+   "share": 0.36,
+   "reached": true,
+   "delta_e": 1.3
+  },
+  {
+   "design": [
+    37.8,
+    16.4,
+    31.5
+   ],
+   "got": [
+    38.8,
+    9.8,
+    12.1
+   ],
+   "share": 0.044,
+   "reached": false,
+   "delta_e": 20.6
+  }
+ ],
+ "colour_delta_e": 4.4,
+ "materials_reached": 0.929,
+ "colour_delta_e_of_the_fit": 4.2,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 4.4,
+   "reached": 0.943
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 4.2,
+   "reached": 0.924
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 7.5,
+   "reached": 0.794
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   4.6,
+   12.6
+  ],
+  [
+   18.9,
+   22.1
+  ],
+  [
+   25.2,
+   41.1
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.356,
+ "colour_before": [
+  0.194,
+  0.179,
+  0.173
+ ],
+ "colour_after": [
+  0.315,
+  0.286,
+  0.276
+ ],
+ "colour_design": [
+  0.282,
+  0.222,
+  0.19
+ ],
+ "colour_as_matched": {
+  "colour_delta_e": 4.4,
+  "materials_reached": 0.929,
+  "materials": [
+   {
+    "design": [
+     97.2,
+     -3.4,
+     16.6
+    ],
+    "got": [
+     64.1,
+     0.7,
+     3.4
+    ],
+    "share": 0.027,
+    "reached": false,
+    "delta_e": 35.9
+   },
+   {
+    "design": [
+     41.0,
+     5.9,
+     4.7
+    ],
+    "got": [
+     41.0,
+     2.1,
+     2.1
+    ],
+    "share": 0.188,
+    "reached": true,
+    "delta_e": 4.6
+   },
+   {
+    "design": [
+     13.2,
+     3.0,
+     2.0
+    ],
+    "got": [
+     12.6,
+     0.9,
+     -0.0
+    ],
+    "share": 0.382,
+    "reached": true,
+    "delta_e": 3.0
+   },
+   {
+    "design": [
+     22.4,
+     7.3,
+     9.3
+    ],
+    "got": [
+     22.0,
+     6.4,
+     8.3
+    ],
+    "share": 0.36,
+    "reached": true,
+    "delta_e": 1.3
+   },
+   {
+    "design": [
+     37.8,
+     16.4,
+     31.5
+    ],
+    "got": [
+     38.8,
+     9.8,
+     12.1
+    ],
+    "share": 0.044,
+    "reached": false,
+    "delta_e": 20.6
+   }
+  ],
+  "share_of_texels_changed_since": 0.004
+ },
+ "carried_light_parts": [
+  "lights"
+ ],
+ "under_glow": [
+  0.769,
+  0.726,
+  0.012,
+  0.04
+ ],
+ "image_format": "WEBP",
+ "bytes": 345456,
+ "name": "seat_reading-chair_v2"
+}

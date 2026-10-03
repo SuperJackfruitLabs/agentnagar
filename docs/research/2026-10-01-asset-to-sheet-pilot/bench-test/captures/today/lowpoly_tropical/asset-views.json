@@ -1,0 +1,51 @@
+{
+  "needle": "seat_bench_v2",
+  "placed": 18,
+  "views": [
+    {
+      "at": [
+        -32.8638801574707,
+        0.0,
+        21.120002746582
+      ],
+      "in_use": false,
+      "scale": [
+        1.00000023841858,
+        1.0,
+        1.05665981769562
+      ],
+      "scene": "res://styles/lowpoly_tropical/assets/seat_bench_v2.glb",
+      "turn_degrees": -90
+    },
+    {
+      "at": [
+        -19.8961181640625,
+        0.0,
+        26.6199989318848
+      ],
+      "in_use": false,
+      "scale": [
+        1.00000023841858,
+        1.0,
+        1.05666291713715
+      ],
+      "scene": "res://styles/lowpoly_tropical/assets/seat_bench_v2.glb",
+      "turn_degrees": 90
+    },
+    {
+      "at": [
+        -26.879997253418,
+        0.0,
+        26.6038818359375
+      ],
+      "in_use": false,
+      "scale": [
+        1.00000023841858,
+        1.0,
+        1.05666291713715
+      ],
+      "scene": "res://styles/lowpoly_tropical/assets/seat_bench_v2.glb",
+      "turn_degrees": 0
+    }
+  ]
+}

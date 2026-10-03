@@ -1,0 +1,318 @@
+{
+ "raw_tris": 149190,
+ "metal_map_ignored": true,
+ "loose_parts": 6,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "tree_raised": null,
+ "tree": {
+  "bed_top": 0.15,
+  "narrowest": 0.292,
+  "crown_from": 0.372,
+  "bed_scale": [
+   9.073,
+   8.474
+  ],
+  "crown_scale": 8.367,
+  "up_scale": 14.069,
+  "crown_starts_m": 2.93,
+  "crown_started_before_it_was_raised_m": 2.93
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -4.2,
+  -4.334,
+  0.0
+ ],
+ "box_max": [
+  4.2,
+  4.066,
+  9.8
+ ],
+ "wood_cell_m": 0.05,
+ "parts": {
+  "wood": 3000,
+  "lantern": 600,
+  "leaf": 9000
+ },
+ "tris": 2092,
+ "deviation": {
+  "tris": 12600,
+  "mean_mm": 117.5,
+  "p95_mm": 359.39,
+  "max_mm": 757.0
+ },
+ "bake_reach_m": 0.308,
+ "diagonal_m": 15.4,
+ "lifted_to_clear_band": 0,
+ "pulled_into_footprint": 0,
+ "texels_used": 0.761,
+ "materials": [
+  {
+   "design": [
+    65.8,
+    3.6,
+    3.0
+   ],
+   "got": [
+    78.4,
+    1.8,
+    6.6
+   ],
+   "share": 0.086,
+   "reached": true,
+   "delta_e": 13.2
+  },
+  {
+   "design": [
+    28.3,
+    5.0,
+    28.1
+   ],
+   "got": [
+    32.1,
+    5.8,
+    29.0
+   ],
+   "share": 0.315,
+   "reached": true,
+   "delta_e": 4.0
+  },
+  {
+   "design": [
+    46.6,
+    1.2,
+    -1.7
+   ],
+   "got": [
+    32.8,
+    1.2,
+    -0.8
+   ],
+   "share": 0.081,
+   "reached": true,
+   "delta_e": 13.9
+  },
+  {
+   "design": [
+    56.6,
+    -37.6,
+    54.9
+   ],
+   "got": [
+    56.6,
+    -39.2,
+    53.5
+   ],
+   "share": 0.518,
+   "reached": true,
+   "delta_e": 2.1
+  }
+ ],
+ "colour_delta_e": 4.6,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 10.9,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 15.9,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 11.9,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 10.9,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   30.1,
+   32.0
+  ],
+  [
+   43.0,
+   56.6
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.049,
+ "colour_before": [
+  0.21,
+  0.388,
+  0.058
+ ],
+ "colour_after": [
+  0.335,
+  0.463,
+  0.109
+ ],
+ "colour_design": [
+  0.395,
+  0.491,
+  0.162
+ ],
+ "colour_as_matched": {
+  "colour_delta_e": 4.6,
+  "materials_reached": 1.0,
+  "materials": [
+   {
+    "design": [
+     65.8,
+     3.6,
+     3.0
+    ],
+    "got": [
+     78.4,
+     1.8,
+     6.6
+    ],
+    "share": 0.086,
+    "reached": true,
+    "delta_e": 13.2
+   },
+   {
+    "design": [
+     28.3,
+     5.0,
+     28.1
+    ],
+    "got": [
+     32.1,
+     5.8,
+     29.0
+    ],
+    "share": 0.315,
+    "reached": true,
+    "delta_e": 4.0
+   },
+   {
+    "design": [
+     46.6,
+     1.2,
+     -1.7
+    ],
+    "got": [
+     32.8,
+     1.2,
+     -0.8
+    ],
+    "share": 0.081,
+    "reached": true,
+    "delta_e": 13.9
+   },
+   {
+    "design": [
+     56.6,
+     -37.6,
+     54.9
+    ],
+    "got": [
+     56.6,
+     -39.2,
+     53.5
+    ],
+    "share": 0.518,
+    "reached": true,
+    "delta_e": 2.1
+   }
+  ],
+  "share_of_texels_changed_since": 0.001
+ },
+ "crown_fill": {
+  "shares_and_turns": [
+   0.5,
+   40.0
+  ],
+  "triangles": 4767
+ },
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 164440,
+ "name": "tree_large",
+ "fitted_tris": 17367,
+ "cubes": {
+  "grid_m": 0.25,
+  "upper": {
+   "from_m": 3.0,
+   "grid_m": 0.75
+  },
+  "layers": [
+   {
+    "grid_m": 0.25,
+    "from_m": 0.0,
+    "cells": [
+     34,
+     35,
+     18
+    ],
+    "filled": 1230,
+    "filled_as_thin_members": 50,
+    "filled_to_make_the_foot_solid": 188,
+    "crumb_cells_dropped": 65,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's edge"
+    ]
+   },
+   {
+    "grid_m": 0.75,
+    "from_m": 3.0,
+    "cells": [
+     11,
+     12,
+     9
+    ],
+    "filled": 363,
+    "filled_as_thin_members": 2,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 3,
+    "cells_changed_by_jumble": 193,
+    "grid_set_on": [
+     "a cell's middle",
+     "a cell's middle"
+    ]
+   }
+  ],
+  "filled": 1593,
+  "filled_as_thin_members": 52,
+  "crumb_cells_dropped": 68,
+  "cells": [
+   34,
+   35,
+   18
+  ],
+  "grid_set_on": [
+   "a cell's edge",
+   "a cell's edge"
+  ],
+  "rectangles": 1046,
+  "cell_faces": 2180,
+  "texture_px": 512,
+  "glowing_cell_faces": 0,
+  "tris": 2092,
+  "bytes": 164440,
+  "box_min": [
+   -4.125,
+   -4.875,
+   0.0
+  ],
+  "box_max": [
+   4.125,
+   4.125,
+   9.75
+  ]
+ }
+}

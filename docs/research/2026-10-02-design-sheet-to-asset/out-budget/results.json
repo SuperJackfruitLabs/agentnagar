@@ -1,0 +1,358 @@
+[
+ {
+  "style": "lowpoly_tropical",
+  "asset": "reading-chair",
+  "file": "assets/seat_reading-chair_v2.glb",
+  "size_m": [
+   0.86,
+   0.93,
+   0.81
+  ],
+  "spec_size_m": [
+   0.85,
+   0.95,
+   0.85
+  ],
+  "triangles": 1499,
+  "budget": 1500,
+  "over_limit": false,
+  "kit_triangles": 412,
+  "nodes": [
+   "body",
+   "seat_reading-chair_v2"
+  ],
+  "spec_nodes": [
+   "seat_reading-chair_v2",
+   "body"
+  ],
+  "bytes": 312680,
+  "kit_bytes": 27276,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "lowpoly_tropical",
+  "asset": "great-tree",
+  "file": "assets/tree_banyan.glb",
+  "size_m": [
+   12.03,
+   9.52,
+   11.63
+  ],
+  "spec_size_m": [
+   12.0,
+   9.5,
+   12.0
+  ],
+  "triangles": 6492,
+  "budget": 6500,
+  "over_limit": false,
+  "kit_triangles": 6045,
+  "nodes": [
+   "body",
+   "canopy",
+   "lanterns",
+   "tree_banyan"
+  ],
+  "spec_nodes": [
+   "tree_banyan",
+   "body",
+   "canopy",
+   "lanterns"
+  ],
+  "bytes": 1513984,
+  "kit_bytes": 377696,
+  "band_box": [
+   -2.59,
+   -2.54,
+   2.59,
+   2.54
+  ],
+  "outside_footprint_cm": -1.0,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "neon_noir",
+  "asset": "bench",
+  "file": "assets/seat_bench_v2.glb",
+  "size_m": [
+   1.6,
+   0.84,
+   0.6
+  ],
+  "spec_size_m": [
+   1.6,
+   0.85,
+   0.6
+  ],
+  "triangles": 1451,
+  "budget": 1500,
+  "over_limit": false,
+  "kit_triangles": 704,
+  "nodes": [
+   "body",
+   "lights",
+   "seat_bench_v2"
+  ],
+  "spec_nodes": [
+   "seat_bench_v2",
+   "body",
+   "lights"
+  ],
+  "bytes": 328704,
+  "kit_bytes": 38184,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "neon_noir",
+  "asset": "cafe-chair",
+  "file": "assets/seat_cafe-table_v2.glb",
+  "size_m": [
+   0.47,
+   0.91,
+   0.48
+  ],
+  "spec_size_m": [
+   0.46,
+   0.91,
+   0.49
+  ],
+  "triangles": 1497,
+  "budget": 1500,
+  "over_limit": false,
+  "kit_triangles": 252,
+  "nodes": [
+   "body",
+   "seat_cafe-table_v2"
+  ],
+  "spec_nodes": [
+   "seat_cafe-table_v2",
+   "body"
+  ],
+  "bytes": 438912,
+  "kit_bytes": 16528,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "neon_noir",
+  "asset": "reading-chair",
+  "file": "assets/seat_reading-chair_v2.glb",
+  "size_m": [
+   0.87,
+   0.93,
+   0.83
+  ],
+  "spec_size_m": [
+   0.87,
+   0.93,
+   0.83
+  ],
+  "triangles": 1451,
+  "budget": 1500,
+  "over_limit": false,
+  "kit_triangles": 412,
+  "nodes": [
+   "body",
+   "lights",
+   "seat_reading-chair_v2"
+  ],
+  "spec_nodes": [
+   "seat_reading-chair_v2",
+   "body"
+  ],
+  "bytes": 345456,
+  "kit_bytes": 21788,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "neon_noir",
+  "asset": "great-tree",
+  "file": "assets/tree_banyan.glb",
+  "size_m": [
+   12.53,
+   9.86,
+   11.82
+  ],
+  "spec_size_m": [
+   12.52,
+   9.81,
+   12.52
+  ],
+  "triangles": 7039,
+  "budget": 7500,
+  "over_limit": false,
+  "kit_triangles": 5942,
+  "nodes": [
+   "body",
+   "canopy",
+   "light",
+   "lights",
+   "tree_banyan"
+  ],
+  "spec_nodes": [
+   "tree_banyan",
+   "body",
+   "canopy",
+   "lights"
+  ],
+  "bytes": 1390792,
+  "kit_bytes": 513436,
+  "band_box": [
+   -2.6,
+   -2.55,
+   2.6,
+   2.55
+  ],
+  "outside_footprint_cm": -0.2,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "anime_cel",
+  "asset": "cafe-chair",
+  "file": "assets/seat_cafe-table_v2.glb",
+  "size_m": [
+   0.46,
+   0.91,
+   0.49
+  ],
+  "spec_size_m": [
+   0.46,
+   0.91,
+   0.49
+  ],
+  "triangles": 1499,
+  "budget": 1500,
+  "over_limit": false,
+  "kit_triangles": 252,
+  "nodes": [
+   "body",
+   "seat_cafe-table_v2"
+  ],
+  "spec_nodes": [
+   "seat_cafe-table_v2",
+   "body"
+  ],
+  "bytes": 352916,
+  "kit_bytes": 16528,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "anime_cel",
+  "asset": "great-tree",
+  "file": "assets/tree_banyan.glb",
+  "size_m": [
+   11.91,
+   9.43,
+   11.28
+  ],
+  "spec_size_m": [
+   11.9,
+   9.5,
+   11.9
+  ],
+  "triangles": 7021,
+  "budget": 7500,
+  "over_limit": false,
+  "kit_triangles": 7326,
+  "nodes": [
+   "body",
+   "canopy",
+   "tree_banyan"
+  ],
+  "spec_nodes": [
+   "tree_banyan",
+   "body",
+   "canopy"
+  ],
+  "bytes": 1242648,
+  "kit_bytes": 635520,
+  "band_box": [
+   -2.6,
+   -2.55,
+   2.6,
+   2.55
+  ],
+  "outside_footprint_cm": -0.2,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "solarpunk",
+  "asset": "cafe-chair",
+  "file": "assets/seat_cafe-table_v2.glb",
+  "size_m": [
+   0.46,
+   0.91,
+   0.49
+  ],
+  "spec_size_m": [
+   0.46,
+   0.91,
+   0.49
+  ],
+  "triangles": 1497,
+  "budget": 1500,
+  "over_limit": false,
+  "kit_triangles": 252,
+  "nodes": [
+   "body",
+   "seat_cafe-table_v2"
+  ],
+  "spec_nodes": [
+   "seat_cafe-table_v2",
+   "body"
+  ],
+  "bytes": 356980,
+  "kit_bytes": 16528,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "solarpunk",
+  "asset": "great-tree",
+  "file": "assets/tree_banyan.glb",
+  "size_m": [
+   12.06,
+   9.61,
+   11.25
+  ],
+  "spec_size_m": [
+   12.02,
+   9.57,
+   11.98
+  ],
+  "triangles": 7271,
+  "budget": 7500,
+  "over_limit": false,
+  "kit_triangles": 6475,
+  "nodes": [
+   "body",
+   "canopy",
+   "lights",
+   "tree_banyan"
+  ],
+  "spec_nodes": [
+   "tree_banyan",
+   "body",
+   "canopy",
+   "lights"
+  ],
+  "bytes": 1404024,
+  "kit_bytes": 489304,
+  "band_box": [
+   -2.6,
+   -2.55,
+   2.6,
+   2.55
+  ],
+  "outside_footprint_cm": -0.2,
+  "problems": [],
+  "departures": []
+ }
+]

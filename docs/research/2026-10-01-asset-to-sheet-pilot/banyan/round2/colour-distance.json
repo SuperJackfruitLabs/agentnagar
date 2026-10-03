@@ -1,0 +1,87 @@
+{
+ "lowpoly_tropical": {
+  "street": {
+   "today": 24.7,
+   "round1": 25.4,
+   "round2": 4.5
+  },
+  "above": {
+   "today": 30.0,
+   "round1": 23.1,
+   "round2": 5.4
+  },
+  "trunk": {
+   "today": 21.4,
+   "round1": 16.8,
+   "round2": 10.0
+  }
+ },
+ "voxel": {
+  "street": {
+   "today": 17.9,
+   "round1": 23.8,
+   "round2": 5.5
+  },
+  "above": {
+   "today": 35.6,
+   "round1": 30.8,
+   "round2": 6.4
+  },
+  "trunk": {
+   "today": 25.5,
+   "round1": 22.1,
+   "round2": 9.9
+  }
+ },
+ "anime_cel": {
+  "street": {
+   "today": 22.3,
+   "round1": 34.2,
+   "round2": 4.6
+  },
+  "above": {
+   "today": 29.2,
+   "round1": 24.4,
+   "round2": 3.6
+  },
+  "trunk": {
+   "today": 26.3,
+   "round1": 24.0,
+   "round2": 8.0
+  }
+ },
+ "solarpunk": {
+  "street": {
+   "today": 17.7,
+   "round1": 18.8,
+   "round2": 7.1
+  },
+  "above": {
+   "today": 28.3,
+   "round1": 21.8,
+   "round2": 4.5
+  },
+  "trunk": {
+   "today": 16.3,
+   "round1": 14.2,
+   "round2": 4.3
+  }
+ },
+ "neon_noir": {
+  "street": {
+   "today": 19.4,
+   "round1": 23.0,
+   "round2": 8.2
+  },
+  "above": {
+   "today": 27.0,
+   "round1": 24.4,
+   "round2": 7.6
+  },
+  "trunk": {
+   "today": 14.6,
+   "round1": 12.4,
+   "round2": 12.6
+  }
+ }
+}

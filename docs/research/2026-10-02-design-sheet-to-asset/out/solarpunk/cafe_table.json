@@ -1,0 +1,174 @@
+{
+ "kit_tris": 304,
+ "kit_light_parts": [],
+ "raw_tris": 139360,
+ "metal_map_ignored": true,
+ "loose_parts": 14,
+ "dropped_parts": 2,
+ "dropped_area_share": 0.0018,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.6952,
+  "90": 0.6954,
+  "180": 0.6952,
+  "270": 0.6953
+ },
+ "yaw_by_least_stretch": {
+  "0": 1.244,
+  "90": 1.244,
+  "180": 1.244,
+  "270": 1.244
+ },
+ "feet": {
+  "harmonics": {
+   "2": 0.003,
+   "3": 0.004,
+   "4": 0.928,
+   "5": 0.007,
+   "6": 0.007
+  },
+  "feet": 4,
+  "one_points_at_deg": 315.0,
+  "nearest_to_x_deg": 45.0,
+  "turned_deg": 0.0
+ },
+ "scale": [
+  0.7972,
+  0.7972,
+  0.7972
+ ],
+ "stretch": 1.34,
+ "stem": {
+  "foot_m": 0.13,
+  "foot_as_drawn_m": 0.13,
+  "foot_across_m": 0.44,
+  "foot_across_as_drawn_m": 0.44,
+  "stem_m": 0.543,
+  "top_m": 0.076,
+  "stem_across_as_drawn_m": [
+   0.088,
+   0.181
+  ],
+  "thinned": null,
+  "top_off_axis_mm": 0.3,
+  "top_moved_onto_axis": true,
+  "edge_m": null,
+  "height_m": 0.75
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -0.4,
+  -0.4,
+  0.0
+ ],
+ "box_max": [
+  0.4,
+  0.4,
+  0.75
+ ],
+ "rebuilt_because_stalled_m": 0.0075,
+ "rebuilt_surface_m": 0.0075,
+ "tris": 3000,
+ "deviation": {
+  "tris": 3000,
+  "mean_mm": 0.13,
+  "p95_mm": 0.47,
+  "max_mm": 1.4,
+  "measured_from": "the rebuilt surface"
+ },
+ "bake_reach_m": 0.0136,
+ "diagonal_m": 1.357,
+ "weighted_normals": true,
+ "texels_used": 0.615,
+ "materials": [
+  {
+   "design": [
+    78.1,
+    9.5,
+    34.0
+   ],
+   "got": [
+    78.1,
+    9.8,
+    33.9
+   ],
+   "share": 0.845,
+   "reached": true,
+   "delta_e": 0.3
+  },
+  {
+   "design": [
+    24.4,
+    -0.7,
+    0.5
+   ],
+   "got": [
+    24.4,
+    -0.6,
+    0.5
+   ],
+   "share": 0.155,
+   "reached": true,
+   "delta_e": 0.1
+  }
+ ],
+ "colour_delta_e": 0.3,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 2.8,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 10.5,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 3.2,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 2.8,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   5.1,
+   24.4
+  ],
+  [
+   56.0,
+   78.1
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.988,
+ "colour_before": [
+  0.582,
+  0.426,
+  0.264
+ ],
+ "colour_after": [
+  0.798,
+  0.645,
+  0.464
+ ],
+ "colour_design": [
+  0.729,
+  0.583,
+  0.401
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 236784,
+ "name": "cafe_table"
+}

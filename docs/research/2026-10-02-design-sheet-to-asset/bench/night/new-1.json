@@ -1,0 +1,86 @@
+{
+  "baseline": {
+    "fps": 60.0,
+    "hz": 59.9599990844727,
+    "missed_pct": 0.0
+  },
+  "budgets": {
+    "neon_noir": {
+      "heavy_fps": 240.0,
+      "heavy_ms": 4.17,
+      "missed_pct": 1.0,
+      "normal_fps": 360.0,
+      "normal_ms": 2.78
+    }
+  },
+  "results": [
+    {
+      "fps": 60.0,
+      "frames": 1186,
+      "gpu_p99": 4.32800006866455,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 9.606,
+      "missed_pct": 0.0,
+      "p50": 4.076,
+      "p99": 6.663,
+      "scene": "diagonal",
+      "style": "lowpoly_tropical",
+      "t0": 1790906492.19105,
+      "t1": 1790906503.37212,
+      "width": 1920
+    },
+    {
+      "fps": 60.0,
+      "frames": 1470,
+      "gpu_p99": 3.50500011444092,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 9.467,
+      "missed_pct": 0.333333333333333,
+      "p50": 3.266,
+      "p99": 5.461,
+      "scene": "street",
+      "style": "lowpoly_tropical",
+      "t0": 1790906503.37302,
+      "t1": 1790906514.20413,
+      "width": 1920
+    },
+    {
+      "fps": 60.0,
+      "frames": 1508,
+      "gpu_p99": 3.49399995803833,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 8.639,
+      "missed_pct": 0.333333333333333,
+      "p50": 3.206,
+      "p99": 5.099,
+      "scene": "diagonal",
+      "style": "neon_noir",
+      "t0": 1790906515.06847,
+      "t1": 1790906526.05642,
+      "width": 1920
+    },
+    {
+      "fps": 60.2,
+      "frames": 1889,
+      "gpu_p99": 2.83200001716614,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 8.35,
+      "missed_pct": 0.0,
+      "p50": 2.579,
+      "p99": 4.015,
+      "scene": "street",
+      "style": "neon_noir",
+      "t0": 1790906526.05869,
+      "t1": 1790906536.85771,
+      "width": 1920
+    }
+  ]
+}

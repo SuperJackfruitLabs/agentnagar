@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "job": "pixel_art.A-great-tree",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "cfda6e4584143534869638737e7cbb75a085fe9f2a0e41b8e9ee70b62fe218bd",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "79ec84da231199fc7eb38fbdad777b2bb48129fe18d4c2e255e37d00e52b089c",
+    "is_the_jobs": false
+  },
+  "source_paths": [
+    "exec-0bf8e29e-2d72-450a-a71c-9314f7542d88.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/pixel_art/street.jpg",
+    "../../../../refs/panels/pixel_art/gathering.jpg"
+  ],
+  "edit_of": null
+}

@@ -1,0 +1,69 @@
+{
+  "needle": "planter_square",
+  "placed": 11,
+  "views": [
+    {
+      "at": [
+        -39.0031852722168,
+        0.0,
+        -0.502499997615814
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.08635723590851,
+        1.0,
+        1.08749985694885
+      ],
+      "scene": "res://styles/solarpunk/assets/planter_square.glb",
+      "size": [
+        1.30499649047852,
+        1.39999997615814,
+        1.30499982833862
+      ],
+      "turn_degrees": 0
+    },
+    {
+      "at": [
+        -36.5031852722168,
+        0.0,
+        0.247500002384186
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.08635723590851,
+        1.0,
+        1.08749985694885
+      ],
+      "scene": "res://styles/solarpunk/assets/planter_square.glb",
+      "size": [
+        1.30499649047852,
+        1.39999997615814,
+        1.30499982833862
+      ],
+      "turn_degrees": 0
+    },
+    {
+      "at": [
+        -41.7531852722168,
+        0.0,
+        6.24749946594238
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.08635723590851,
+        1.0,
+        1.08749985694885
+      ],
+      "scene": "res://styles/solarpunk/assets/planter_square.glb",
+      "size": [
+        1.30499649047852,
+        1.39999997615814,
+        1.30500030517578
+      ],
+      "turn_degrees": 0
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.B-materials-ground",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "1b0d009c0805c74c0ae6e813b17decf9c8c6eeb656bd72a5eaf6598b397c7951",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "90aa4009513ddc995cfc5609b66a3c920ccd69a62fc2198c42c91c970e6fa457",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-375af3ae-d8b1-465f-9eb6-5780d4ccd16c.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/topdown.jpg",
+    "../../../../refs/panels/lowpoly_tropical/park.jpg",
+    "../../../../refs/panels/lowpoly_tropical/street.jpg"
+  ],
+  "edit_of": null
+}

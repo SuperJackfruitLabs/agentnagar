@@ -1,0 +1,45 @@
+[
+ {
+  "style": "neon_noir",
+  "asset": "great-tree-first-sheet",
+  "file": "assets/tree_banyan.glb",
+  "size_m": [
+   12.58,
+   9.85,
+   12.26
+  ],
+  "spec_size_m": [
+   12.52,
+   9.81,
+   12.52
+  ],
+  "triangles": 31672,
+  "budget": 7500,
+  "over_limit": true,
+  "kit_triangles": 5942,
+  "nodes": [
+   "body",
+   "canopy",
+   "light",
+   "lights",
+   "tree_banyan"
+  ],
+  "spec_nodes": [
+   "tree_banyan",
+   "body",
+   "canopy",
+   "lights"
+  ],
+  "bytes": 3204260,
+  "kit_bytes": 513436,
+  "band_box": [
+   -2.6,
+   -2.55,
+   2.6,
+   2.55
+  ],
+  "outside_footprint_cm": -0.2,
+  "problems": [],
+  "departures": []
+ }
+]

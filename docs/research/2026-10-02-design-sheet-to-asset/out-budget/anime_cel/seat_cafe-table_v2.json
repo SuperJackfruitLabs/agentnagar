@@ -1,0 +1,194 @@
+{
+ "kit_tris": 252,
+ "kit_light_parts": [],
+ "raw_tris": 141890,
+ "metal_map_ignored": true,
+ "loose_parts": 7,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.5348,
+  "90": 0.5145,
+  "180": 0.5348,
+  "270": 0.5453
+ },
+ "scale": [
+  0.7481,
+  0.6861,
+  0.9086
+ ],
+ "stretch": 1.324,
+ "seat_top_m": {
+  "kit": 0.47,
+  "generated": 0.45
+ },
+ "yaw": 90,
+ "box_min": [
+  -0.232,
+  -0.26,
+  -0.002
+ ],
+ "box_max": [
+  0.232,
+  0.23,
+  0.91
+ ],
+ "tris": 1499,
+ "deviation": {
+  "tris": 1499,
+  "mean_mm": 0.7,
+  "p95_mm": 2.2,
+  "max_mm": 6.9,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0113,
+ "diagonal_m": 1.135,
+ "own_normals": true,
+ "weighted_normals": true,
+ "texels_used": 0.712,
+ "materials": [
+  {
+   "design": [
+    19.3,
+    0.8,
+    -6.3
+   ],
+   "got": [
+    20.3,
+    0.8,
+    -3.9
+   ],
+   "share": 0.247,
+   "reached": true,
+   "delta_e": 2.6
+  },
+  {
+   "design": [
+    66.1,
+    16.0,
+    32.3
+   ],
+   "got": [
+    68.4,
+    17.9,
+    29.5
+   ],
+   "share": 0.312,
+   "reached": true,
+   "delta_e": 4.1
+  },
+  {
+   "design": [
+    49.0,
+    15.3,
+    24.8
+   ],
+   "got": [
+    51.1,
+    17.1,
+    24.2
+   ],
+   "share": 0.243,
+   "reached": true,
+   "delta_e": 2.9
+  },
+  {
+   "design": [
+    40.1,
+    1.6,
+    -5.1
+   ],
+   "got": [
+    43.3,
+    1.2,
+    -4.0
+   ],
+   "share": 0.118,
+   "reached": true,
+   "delta_e": 3.4
+  },
+  {
+   "design": [
+    24.5,
+    8.1,
+    10.0
+   ],
+   "got": [
+    23.0,
+    8.7,
+    9.9
+   ],
+   "share": 0.079,
+   "reached": true,
+   "delta_e": 1.6
+  }
+ ],
+ "colour_delta_e": 3.2,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 5.8,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 6.4,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 6.3,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 5.8,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   16.5,
+   20.6
+  ],
+  [
+   31.2,
+   40.1
+  ],
+  [
+   34.9,
+   49.0
+  ],
+  [
+   40.8,
+   66.1
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.941,
+ "colour_before": [
+  0.34,
+  0.25,
+  0.215
+ ],
+ "colour_after": [
+  0.484,
+  0.397,
+  0.36
+ ],
+ "colour_design": [
+  0.512,
+  0.398,
+  0.321
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 352916,
+ "name": "seat_cafe-table_v2"
+}

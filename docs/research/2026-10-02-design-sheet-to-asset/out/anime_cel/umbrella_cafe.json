@@ -1,0 +1,255 @@
+{
+ "kit_tris": 472,
+ "kit_light_parts": [],
+ "raw_tris": 143192,
+ "metal_map_ignored": true,
+ "loose_parts": 9,
+ "dropped_parts": 7,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.4479,
+  "90": 0.4479,
+  "180": 0.4479,
+  "270": 0.4479
+ },
+ "yaw_by_least_stretch": {
+  "0": 1.502,
+  "90": 1.502,
+  "180": 1.502,
+  "270": 1.502
+ },
+ "scale": [
+  2.2906,
+  2.2906,
+  2.2906
+ ],
+ "stretch": 2.029,
+ "stem": {
+  "foot_m": 0.03,
+  "foot_as_drawn_m": 0.105,
+  "foot_across_m": 0.56,
+  "foot_across_as_drawn_m": 0.608,
+  "stem_m": 1.869,
+  "top_m": 0.649,
+  "stem_across_as_drawn_m": [
+   0.078,
+   0.132
+  ],
+  "thinned": {
+   "most_m": 0.06,
+   "upto_m": 0.72,
+   "least_factor": 0.453
+  },
+  "top_off_axis_mm": 1.6,
+  "top_moved_onto_axis": true,
+  "edge_m": 1.9,
+  "height_m": 2.548
+ },
+ "yaw": 180,
+ "box_min": [
+  -1.15,
+  -1.148,
+  0.0
+ ],
+ "box_max": [
+  1.15,
+  1.148,
+  2.548
+ ],
+ "rebuilt_because_stalled_m": 0.0229,
+ "rebuilt_surface_m": 0.0229,
+ "tried": [
+  {
+   "tris": 2242,
+   "mean_mm": 21.8,
+   "p95_mm": 89.43,
+   "max_mm": 343.7,
+   "measured_from": "the rebuilt surface"
+  },
+  {
+   "tris": 2242,
+   "mean_mm": 21.8,
+   "p95_mm": 89.43,
+   "max_mm": 343.7,
+   "measured_from": "the rebuilt surface"
+  },
+  {
+   "tris": 3000,
+   "mean_mm": 3.74,
+   "p95_mm": 11.55,
+   "max_mm": 34.0,
+   "measured_from": "the rebuilt surface"
+  },
+  {
+   "tris": 4086,
+   "mean_mm": 12.0,
+   "p95_mm": 46.17,
+   "max_mm": 226.5,
+   "measured_from": "the generated model"
+  },
+  {
+   "tris": 6000,
+   "mean_mm": 1.2,
+   "p95_mm": 3.83,
+   "max_mm": 11.1,
+   "measured_from": "the generated model"
+  }
+ ],
+ "tris": 6000,
+ "deviation": {
+  "tris": 6000,
+  "mean_mm": 1.2,
+  "p95_mm": 3.83,
+  "max_mm": 11.1,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0413,
+ "diagonal_m": 4.129,
+ "top_edges_kept_sharp": 5856,
+ "texels_used": 0.993,
+ "materials": [
+  {
+   "design": [
+    97.5,
+    0.3,
+    4.5
+   ],
+   "got": [
+    99.1,
+    0.2,
+    2.5
+   ],
+   "share": 0.303,
+   "reached": true,
+   "delta_e": 2.6
+  },
+  {
+   "design": [
+    82.2,
+    3.1,
+    -0.5
+   ],
+   "got": [
+    81.8,
+    5.4,
+    2.1
+   ],
+   "share": 0.166,
+   "reached": true,
+   "delta_e": 3.4
+  },
+  {
+   "design": [
+    66.9,
+    4.9,
+    -0.4
+   ],
+   "got": [
+    64.5,
+    7.7,
+    3.6
+   ],
+   "share": 0.313,
+   "reached": true,
+   "delta_e": 5.4
+  },
+  {
+   "design": [
+    30.6,
+    3.2,
+    -1.4
+   ],
+   "got": [
+    33.7,
+    2.5,
+    -1.4
+   ],
+   "share": 0.13,
+   "reached": true,
+   "delta_e": 3.1
+  },
+  {
+   "design": [
+    31.4,
+    13.9,
+    19.1
+   ],
+   "got": [
+    33.9,
+    15.1,
+    18.1
+   ],
+   "share": 0.087,
+   "reached": true,
+   "delta_e": 3.0
+  }
+ ],
+ "colour_delta_e": 3.7,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 6.1,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 14.8,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 6.1,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 6.5,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   29.4,
+   30.9
+  ],
+  [
+   51.5,
+   66.9
+  ],
+  [
+   68.1,
+   82.2
+  ],
+  [
+   81.4,
+   97.5
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.559,
+ "colour_before": [
+  0.677,
+  0.537,
+  0.514
+ ],
+ "colour_after": [
+  0.766,
+  0.705,
+  0.674
+ ],
+ "colour_design": [
+  0.72,
+  0.674,
+  0.66
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 1041376,
+ "name": "umbrella_cafe"
+}

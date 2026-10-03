@@ -1,0 +1,48 @@
+{
+  "source": "lowpoly_tropical.glb",
+  "separate_pieces_dropped": 0,
+  "raw_triangles": 141747,
+  "raw_vertices": 61806,
+  "has_texture": true,
+  "faces": {
+    "leaf": 134261,
+    "wood": 6183,
+    "other": 1303
+  },
+  "generated_height": 0.6295573115348816,
+  "generated_across": 0.9981316924095154,
+  "scale": 12.022461656368904,
+  "final_height": 9.461035798018507,
+  "final_across": 12.0,
+  "z_stretch": 1.25,
+  "leaf_luminance": [
+    0.2339,
+    0.3111,
+    0.5259
+  ],
+  "wood_luminance": [
+    0.2461,
+    0.285,
+    0.3872
+  ],
+  "wood_full": 5983,
+  "leaf_full": 134127,
+  "lobes": 26,
+  "crown_centre": [
+    -0.314,
+    -0.021,
+    5.818
+  ],
+  "crown_half": [
+    6.0,
+    5.549,
+    3.747
+  ],
+  "wood_blocks": 10149,
+  "leaf_blocks": 1528,
+  "drops": 9,
+  "wood_3000": 3000,
+  "leaf_remeshed": 20488,
+  "leaf_2600": 2600,
+  "leaf_core": 900
+}

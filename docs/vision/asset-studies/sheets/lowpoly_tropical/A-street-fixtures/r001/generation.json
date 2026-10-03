@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.A-street-fixtures",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "f0d0e3677daefa7e76c7736b60553fb5221f1ea6cbf4b39c360430c646b280c8",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "885baf21201f85155b375d4c8f6a815a273c89b1447d4c7bbdbf81ef58ebb68e",
+    "is_the_jobs": false,
+    "correction": "Change only the yellow banner on the street lamp: remove its white leaf emblem and every graphic mark, leaving one plain blank yellow cloth surface. Preserve all four complete fixtures, their shapes, positions, scales, materials, colours, lantern light, catenary arm and wire, railing, swatches, shadows, accepted grey backdrop and 1536 x 1024 landscape layout exactly. No text, logos, symbols or added objects."
+  },
+  "source_paths": [
+    "exec-a129208d-1e87-4ee3-98e6-ad5404754669.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/street.jpg",
+    "../../../../refs/panels/lowpoly_tropical/park.jpg",
+    "../../../../refs/panels/lowpoly_tropical/transit.jpg"
+  ],
+  "edit_of": null
+}

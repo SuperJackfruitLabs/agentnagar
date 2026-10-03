@@ -1,0 +1,303 @@
+{
+ "raw_tris": 145068,
+ "metal_map_ignored": true,
+ "loose_parts": 5,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "planted": {
+  "crown_m": 4.42,
+  "height_m": 6.6,
+  "scale_across": 7.061,
+  "scale_up": 6.578,
+  "trunk_width_generated_m": 0.467,
+  "crown_starts_m": 3.63,
+  "trunk_lean_taken_out_m": 0.361,
+  "fork_m": 3.63,
+  "fork_raised": null,
+  "foot_scaled": 0.73,
+  "stem_slimmed": 0.915,
+  "wood_drawn_in": 0,
+  "trunk_reach_m": 0.25,
+  "reach_wanted_m": 0.25,
+  "width_scale_in_game": 1.0,
+  "materials": [
+   "trunk",
+   "leaf"
+  ],
+  "leaf_triangles": 2000
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -2.089,
+  -1.798,
+  0.0
+ ],
+ "box_max": [
+  2.331,
+  2.516,
+  6.6
+ ],
+ "wood_cell_m": 0.0334,
+ "stem_tube": {
+  "to_m": 5.58,
+  "triangles": 390
+ },
+ "parts": {
+  "wood": 390,
+  "leaf": 2000
+ },
+ "tris": 2390,
+ "deviation": {
+  "tris": 2390,
+  "mean_mm": 25.95,
+  "p95_mm": 61.29,
+  "max_mm": 208.5
+ },
+ "bake_reach_m": 0.0919,
+ "diagonal_m": 9.039,
+ "leaf_edges_smoothed": 3000,
+ "wood_baked_from_m": 0.06,
+ "leaf_specks_filled": 0.0005,
+ "texels_used": 0.976,
+ "materials": [
+  {
+   "design": [
+    26.0,
+    13.3,
+    17.9
+   ],
+   "got": [
+    28.3,
+    11.4,
+    20.2
+   ],
+   "share": 0.09,
+   "reached": true,
+   "delta_e": 3.8
+  },
+  {
+   "design": [
+    7.3,
+    0.3,
+    3.5
+   ],
+   "got": [
+    7.4,
+    1.7,
+    9.0
+   ],
+   "share": 0.212,
+   "reached": true,
+   "delta_e": 5.7
+  },
+  {
+   "design": [
+    39.5,
+    -8.3,
+    25.3
+   ],
+   "got": [
+    40.0,
+    -30.3,
+    20.1
+   ],
+   "share": 0.149,
+   "reached": true,
+   "delta_e": 22.6
+  },
+  {
+   "design": [
+    25.8,
+    -7.1,
+    18.8
+   ],
+   "got": [
+    29.7,
+    -8.6,
+    14.9
+   ],
+   "share": 0.255,
+   "reached": true,
+   "delta_e": 5.8
+  },
+  {
+   "design": [
+    15.5,
+    -6.0,
+    9.7
+   ],
+   "got": [
+    15.3,
+    -6.7,
+    13.9
+   ],
+   "share": 0.294,
+   "reached": true,
+   "delta_e": 4.3
+  }
+ ],
+ "colour_delta_e": 7.7,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 7.9,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 7.9,
+   "reached": 0.91
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 7.0,
+   "reached": 0.725
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 9.1,
+   "reached": 0.713
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   18.1,
+   7.3
+  ],
+  [
+   26.6,
+   15.5
+  ],
+  [
+   32.3,
+   25.8
+  ],
+  [
+   38.7,
+   39.5
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.246,
+ "colour_before": [
+  0.268,
+  0.284,
+  0.206
+ ],
+ "colour_after": [
+  0.203,
+  0.221,
+  0.124
+ ],
+ "colour_design": [
+  0.212,
+  0.207,
+  0.121
+ ],
+ "leaf_ramp": {
+  "swatches": "#18402A,#265E36,#3D7E45",
+  "share_of_texels": 0.571,
+  "kept_as_blossom": 0.0
+ },
+ "wood_ramp": {
+  "swatches": "#38261C,#794D2A",
+  "share_of_texels": 0.068
+ },
+ "colour_as_matched": {
+  "colour_delta_e": 6.5,
+  "materials_reached": 0.91,
+  "materials": [
+   {
+    "design": [
+     26.0,
+     13.3,
+     17.9
+    ],
+    "got": [
+     13.5,
+     2.5,
+     14.8
+    ],
+    "share": 0.09,
+    "reached": false,
+    "delta_e": 16.8
+   },
+   {
+    "design": [
+     7.3,
+     0.3,
+     3.5
+    ],
+    "got": [
+     7.3,
+     1.7,
+     9.0
+    ],
+    "share": 0.212,
+    "reached": true,
+    "delta_e": 5.6
+   },
+   {
+    "design": [
+     39.5,
+     -8.3,
+     25.3
+    ],
+    "got": [
+     39.7,
+     -8.1,
+     15.3
+    ],
+    "share": 0.149,
+    "reached": true,
+    "delta_e": 10.0
+   },
+   {
+    "design": [
+     25.8,
+     -7.1,
+     18.8
+    ],
+    "got": [
+     25.9,
+     -7.9,
+     15.2
+    ],
+    "share": 0.255,
+    "reached": true,
+    "delta_e": 3.8
+   },
+   {
+    "design": [
+     15.5,
+     -6.0,
+     9.7
+    ],
+    "got": [
+     15.6,
+     -6.8,
+     13.9
+    ],
+    "share": 0.294,
+    "reached": true,
+    "delta_e": 4.4
+   }
+  ],
+  "share_of_texels_changed_since": 0.639
+ },
+ "carried_light_parts": [],
+ "leaf_normals_rounded": 0.85,
+ "leaf_normals_lifted": 1.0,
+ "image_format": "WEBP",
+ "bytes": 330516,
+ "name": "palm_b",
+ "far": {
+  "file": "palm_b_far.glb",
+  "tris": 776,
+  "bytes": 70976
+ }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.A-terrace",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "9a2ee849f6c97806b8b5b0a225a8f45bde76ea35fd38a932f78e6e1f2dcdaef9",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "f028711ce3c404421a9d34dcf45bb872d57fbeb92305056e67bc05bbc88fa57b",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-e3a0b65b-bebc-4d7d-bbdd-8ca0f7a03bce.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/street.jpg",
+    "../../../../refs/panels/lowpoly_tropical/gathering.jpg",
+    "../../../../refs/panels/lowpoly_tropical/park.jpg"
+  ],
+  "edit_of": null
+}

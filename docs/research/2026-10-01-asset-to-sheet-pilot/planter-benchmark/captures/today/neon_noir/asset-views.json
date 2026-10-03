@@ -1,0 +1,69 @@
+{
+  "needle": "planter_square",
+  "placed": 11,
+  "views": [
+    {
+      "at": [
+        -39.009464263916,
+        0.0,
+        -0.520761907100677
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.04332959651947,
+        1.0,
+        1.04333233833313
+      ],
+      "scene": "res://styles/neon_noir/assets/planter_square.glb",
+      "size": [
+        1.30499649047852,
+        1.41999995708466,
+        1.30499994754791
+      ],
+      "turn_degrees": 0
+    },
+    {
+      "at": [
+        -36.509464263916,
+        0.0,
+        0.229238092899323
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.04332959651947,
+        1.0,
+        1.04333233833313
+      ],
+      "scene": "res://styles/neon_noir/assets/planter_square.glb",
+      "size": [
+        1.30499649047852,
+        1.41999995708466,
+        1.30499994754791
+      ],
+      "turn_degrees": 0
+    },
+    {
+      "at": [
+        -41.759464263916,
+        0.0,
+        6.22923803329468
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.04332959651947,
+        1.0,
+        1.04333221912384
+      ],
+      "scene": "res://styles/neon_noir/assets/planter_square.glb",
+      "size": [
+        1.30499649047852,
+        1.41999995708466,
+        1.30499935150146
+      ],
+      "turn_degrees": 0
+    }
+  ]
+}

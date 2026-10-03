@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "solarpunk.A-tram-shelter",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "5e6cc24e1296ca073de13dfe83642e8f57463f5cee413183b479c2b5327e1f8a",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ed973e67fff256cb0c30fe2abff8a3da478601cdd4209849d248cf93e9624464",
+    "is_the_jobs": false,
+    "correction": "Change only the lower-right view and unrequested planting. Replace the lower-right tilted view with a true vertical straight-down orthographic plan: the blue solar roof is a flat rounded rectangle with its cell grid, seen directly from above; the canopy covers the bench, tall posts and sign underneath, so show no bench slats or front faces protruding below the roof. Remove the plants and their pale planter behind the glass from every view, leaving the same plain transparent glass back screens. Preserve the shelter's frame, roof design, brass trim, bench, blank sign, colours, main three-quarter view, front elevation, all five swatches and 1536 x 1024 landscape layout. No text or added objects."
+  },
+  "source_paths": [
+    "exec-4c408ebd-9a39-4398-bafe-9b3507026fe4.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/solarpunk/transit.jpg",
+    "../../../../refs/panels/solarpunk/street.jpg",
+    "../../../../refs/panels/solarpunk/build-mode.jpg"
+  ],
+  "edit_of": null
+}

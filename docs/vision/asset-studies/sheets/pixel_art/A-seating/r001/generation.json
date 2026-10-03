@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "pixel_art.A-seating",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "0b1510c4311a158280a88b576de0d1e1d1049ad949a2b02e531eed148035dc00",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "dc77f13365f7122c6de3ededcc35275d3fa06a80b75887e2e7ed3b7bde0c2279",
+    "is_the_jobs": false
+  },
+  "source_paths": [
+    "exec-e235ab2c-9ceb-49e4-8666-e98b1145e3dc.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/pixel_art/park.jpg",
+    "../../../../refs/panels/pixel_art/gathering.jpg",
+    "../../../../refs/panels/pixel_art/home.jpg"
+  ],
+  "edit_of": null
+}

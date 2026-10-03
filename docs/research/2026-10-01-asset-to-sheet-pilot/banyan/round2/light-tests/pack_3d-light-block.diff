@@ -1,0 +1,69 @@
+--- a/city/godot/styles/pack_3d.gd
++++ b/city/godot/styles/pack_3d.gd
+@@ -1038,6 +1038,21 @@
+ 	env.sky = sky
+ 	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+ 	env.reflected_light_source = Environment.REFLECTION_SOURCE_SKY
++	# Pilot: a style's "light" block may ask for ambient light from the sky
++	# (blue from above, the ground's warm bounce from below) in place of one
++	# constant colour, mixed with the constant by "sky_share".
++	var light_look: Dictionary = style.get("light", {})
++	if str(light_look.get("ambient", "")) == "sky":
++		env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
++		env.ambient_light_sky_contribution = float(light_look.get("sky_share", 0.8))
++		sky.radiance_size = Sky.RADIANCE_SIZE_64
++	# Pilot: the style's own grade (tone mapping, exposure, saturation, contrast).
++	if light_look.has("tonemap"):
++		env.tonemap_mode = {"linear": Environment.TONE_MAPPER_LINEAR, "filmic": Environment.TONE_MAPPER_FILMIC,
++			"aces": Environment.TONE_MAPPER_ACES, "agx": Environment.TONE_MAPPER_AGX}.get(str(light_look["tonemap"]), env.tonemap_mode)
++	env.tonemap_exposure = float(light_look.get("exposure", env.tonemap_exposure))
++	env.adjustment_saturation = float(light_look.get("saturation", env.adjustment_saturation))
++	env.adjustment_contrast = float(light_look.get("contrast", env.adjustment_contrast))
+ 	env.tonemap_mode = Environment.TONE_MAPPER_ACES
+ 	env.tonemap_exposure = 0.95
+ 	env.tonemap_white = 6.0
+@@ -1993,6 +2008,12 @@
+ 		var reach := rig.distance if fpv == null else 0.0
+ 		env.fog_depth_begin = reach + 40.0
+ 		env.fog_depth_end = reach + 280.0
++		# Pilot: a style's "light.haze_from" starts the haze inside the frame,
++		# that share of the way to what the camera looks at.
++		var haze_from := float(style.get("light", {}).get("haze_from", -1.0))
++		if haze_from >= 0.0:
++			env.fog_depth_begin = reach * haze_from + 12.0
++			env.fog_depth_end = reach + float(style.get("light", {}).get("haze_reach", 300.0))
+ 	_bob_clock += delta
+ 	var view_cam := get_viewport().get_camera_3d() if is_inside_tree() else null
+ 	if view_cam != null and _planting.size() > 0:
+@@ -2037,8 +2058,22 @@
+ 	sky_material.sky_horizon_color = k["horizon"].lerp(overcast, grey)
+ 	sky_material.ground_horizon_color = k["horizon"].lerp(overcast, grey)
+ 	sky_material.ground_bottom_color = k["ambient"].darkened(0.4)
++	# Pilot: with sky ambient, what lies below the horizon is the light the
++	# ground throws back up: the style's "bounce" colour, as strong as the sun.
++	var light_look: Dictionary = style.get("light", {})
++	if light_look.has("bounce"):
++		var up_light := _colour(str(light_look["bounce"])) * clampf(float(k["sun_energy"]) * float(light_look.get("bounce_gain", 0.55)), 0.05, 1.5)
++		sky_material.ground_bottom_color = up_light
++		sky_material.ground_horizon_color = up_light.lerp(k["horizon"].lerp(overcast, grey), 0.5)
+ 	env.ambient_light_color = k["ambient"]
+ 	env.ambient_light_energy = k["ambient_energy"] * (1.0 - 0.2 * _sky_rain)
++	# Pilot: a softer day, from the style's "light" block: more ambient light
++	# (so what stands in shade is not dark) and a warmer one; night is left alone.
++	var soft: Dictionary = style.get("light", {})
++	var by_day := clampf(day * 3.0, 0.0, 1.0)
++	env.ambient_light_energy *= lerpf(1.0, float(soft.get("ambient_gain", 1.0)), by_day)
++	if soft.has("ambient_tint"):
++		env.ambient_light_color = k["ambient"].lerp(_colour(str(soft["ambient_tint"])), by_day * float(soft.get("ambient_tint_share", 0.5)))
+ 	env.fog_light_color = k["fog"].lerp(overcast, grey)
+ 	var dn: Dictionary = style.get("day_night", {})
+ 	var lit := m >= int(dn.get("lamps_on_from", 1110)) or m < int(dn.get("lamps_off_at", 390))
+@@ -2083,6 +2118,8 @@
+ 	# shallow light from the south-west at night.
+ 	# Cloud under rain dims the sun.
+ 	sun.light_energy *= 1.0 - 0.6 * rain
++	# Pilot: ... and a gentler sun to go with it.
++	sun.light_energy *= lerpf(1.0, float(style.get("light", {}).get("sun_gain", 1.0)), clampf(day * 3.0, 0.0, 1.0))
+ 	# A style may drop the sun's shadows when it is only a dim moon (or a
+ 	# sun behind rain cloud): they are all but invisible, and cost a whole
+ 	# shadow pass.

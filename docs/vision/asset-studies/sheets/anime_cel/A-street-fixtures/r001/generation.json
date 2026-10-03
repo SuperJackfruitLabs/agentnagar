@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "anime_cel.A-street-fixtures",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "51a137f2067b3660f5c37e416e26249c1322cacb9c1a5aaece661c435cc7af69",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "d04994d9d073e78f303ec778e1d67156c3d67bda7bfa016d709e7c56339e9ae4",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-567ec78a-9e48-4a24-94dd-79a8c9c0d883.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/anime_cel/street.jpg",
+    "../../../../refs/panels/anime_cel/park.jpg",
+    "../../../../refs/panels/anime_cel/transit.jpg"
+  ],
+  "edit_of": null
+}

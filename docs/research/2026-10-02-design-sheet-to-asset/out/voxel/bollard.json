@@ -1,0 +1,203 @@
+{
+ "raw_tris": 147444,
+ "metal_map_ignored": true,
+ "loose_parts": 1,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "plate_dropped": {
+  "share_of_height": 0.02,
+  "plate_across": 1.003,
+  "object_across": 0.181
+ },
+ "axis": {
+  "off_the_middle_of_its_box_m": [
+   0.0001,
+   0.0
+  ]
+ },
+ "scale": [
+  1.1058,
+  1.6238,
+  2.1691
+ ],
+ "stretch": 1.962,
+ "yaw": 0.0,
+ "box_min": [
+  -0.1,
+  -0.1,
+  0.0
+ ],
+ "box_max": [
+  0.1,
+  0.1,
+  0.8
+ ],
+ "rebuilt_surface_m": 0.004,
+ "hidden_faces_dropped": {
+  "of": 9000,
+  "dropped": 0
+ },
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 0.07,
+   "p95_mm": 0.17,
+   "max_mm": 0.4,
+   "measured_from": "the rebuilt surface, its hidden faces dropped"
+  }
+ ],
+ "tris": 10,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 0.07,
+  "p95_mm": 0.17,
+  "max_mm": 0.4,
+  "measured_from": "the rebuilt surface, its hidden faces dropped"
+ },
+ "bake_reach_m": 0.012,
+ "diagonal_m": 0.849,
+ "weighted_normals": true,
+ "texels_used": 0.759,
+ "materials": [
+  {
+   "design": [
+    32.3,
+    1.0,
+    -3.8
+   ],
+   "got": [
+    32.3,
+    0.6,
+    -3.5
+   ],
+   "share": 0.619,
+   "reached": true,
+   "delta_e": 0.5
+  },
+  {
+   "design": [
+    16.8,
+    1.2,
+    -2.8
+   ],
+   "got": [
+    21.2,
+    0.9,
+    -2.8
+   ],
+   "share": 0.381,
+   "reached": true,
+   "delta_e": 4.4
+  }
+ ],
+ "colour_delta_e": 2.0,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 3.8,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 6.6,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 3.8,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 3.9,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   28.7,
+   16.8
+  ],
+  [
+   32.2,
+   32.3
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.0,
+ "colour_before": [
+  0.285,
+  0.298,
+  0.31
+ ],
+ "colour_after": [
+  0.283,
+  0.289,
+  0.311
+ ],
+ "colour_design": [
+  0.25,
+  0.252,
+  0.274
+ ],
+ "carried_light_parts": [],
+ "tangents_mended": 0,
+ "image_format": "WEBP",
+ "bytes": 2964,
+ "name": "bollard",
+ "fitted_tris": 1500,
+ "cubes": {
+  "grid_m": 0.1,
+  "layers": [
+   {
+    "grid_m": 0.1,
+    "from_m": 0.0,
+    "cells": [
+     2,
+     2,
+     8
+    ],
+    "filled": 32,
+    "filled_as_thin_members": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's edge"
+    ]
+   }
+  ],
+  "filled": 32,
+  "filled_as_thin_members": 0,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   2,
+   2,
+   8
+  ],
+  "grid_set_on": [
+   "a cell's edge",
+   "a cell's edge"
+  ],
+  "rectangles": 5,
+  "cell_faces": 68,
+  "texture_px": 128,
+  "glowing_cell_faces": 0,
+  "tris": 10,
+  "bytes": 2964,
+  "box_min": [
+   -0.1,
+   -0.1,
+   0.0
+  ],
+  "box_max": [
+   0.1,
+   0.1,
+   0.8
+  ]
+ }
+}

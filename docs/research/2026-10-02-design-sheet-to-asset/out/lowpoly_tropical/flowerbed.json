@@ -1,0 +1,322 @@
+{
+ "kit_tris": 1308,
+ "kit_light_parts": [],
+ "raw_tris": 146890,
+ "metal_map_ignored": true,
+ "loose_parts": 13,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.211,
+  "90": 0.2137,
+  "180": 0.2095,
+  "270": 0.2297
+ },
+ "bed": {
+  "kerb_top_share_of_model": 0.445,
+  "kerb_m": 0.3,
+  "overhang_allowed_m": 0.03,
+  "walls_of_model": [
+   -0.5001,
+   -0.2241,
+   0.5017,
+   0.2042
+  ],
+  "scale_across_up_kerb_up_plants": [
+   2.994,
+   2.334,
+   1.574,
+   1.225
+  ],
+  "plants_reached_outside_m": 0.072,
+  "vertices_pulled_in": 79,
+  "cut_down_vertices_held_in": 2,
+  "band_box": [
+   -1.5,
+   -0.52,
+   1.5,
+   0.53
+  ]
+ },
+ "scale": [
+  2.9945,
+  2.3344,
+  1.3801
+ ],
+ "stretch": 1.283,
+ "yaw": 180,
+ "box_min": [
+  -1.5,
+  -0.524,
+  0.0
+ ],
+ "box_max": [
+  1.501,
+  0.53,
+  0.591
+ ],
+ "parts": {
+  "kerb": 10,
+  "plants_generated": 51028,
+  "plants": 3988
+ },
+ "rebuilt_surface_m": 0.012,
+ "tris": 3998,
+ "deviation": {
+  "tris": 3998,
+  "mean_mm": 40.94,
+  "p95_mm": 174.1,
+  "max_mm": 299.8,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0647,
+ "diagonal_m": 3.235,
+ "texels_used": 0.998,
+ "materials": [
+  {
+   "design": [
+    59.6,
+    -15.8,
+    55.6
+   ],
+   "got": [
+    60.2,
+    -17.8,
+    46.2
+   ],
+   "share": 0.202,
+   "reached": true,
+   "delta_e": 9.6
+  },
+  {
+   "design": [
+    63.9,
+    49.0,
+    24.5
+   ],
+   "got": [
+    63.8,
+    40.6,
+    23.8
+   ],
+   "share": 0.025,
+   "reached": true,
+   "delta_e": 8.4
+  },
+  {
+   "design": [
+    87.4,
+    3.9,
+    17.7
+   ],
+   "got": [
+    81.7,
+    4.4,
+    17.2
+   ],
+   "share": 0.11,
+   "reached": true,
+   "delta_e": 5.7
+  },
+  {
+   "design": [
+    29.9,
+    -14.3,
+    25.6
+   ],
+   "got": [
+    29.9,
+    -15.4,
+    23.7
+   ],
+   "share": 0.207,
+   "reached": true,
+   "delta_e": 2.2
+  },
+  {
+   "design": [
+    60.0,
+    5.0,
+    12.6
+   ],
+   "got": [
+    60.0,
+    4.8,
+    14.5
+   ],
+   "share": 0.456,
+   "reached": true,
+   "delta_e": 2.0
+  }
+ ],
+ "colour_delta_e": 4.1,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 8.6,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 8.6,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 12.5,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 10.0,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   23.3,
+   29.9
+  ],
+  [
+   42.0,
+   60.0
+  ],
+  [
+   46.9,
+   60.0
+  ],
+  [
+   51.9,
+   63.9
+  ],
+  [
+   58.2,
+   87.4
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.771,
+ "colour_before": [
+  0.337,
+  0.388,
+  0.202
+ ],
+ "colour_after": [
+  0.524,
+  0.529,
+  0.362
+ ],
+ "colour_design": [
+  0.579,
+  0.533,
+  0.361
+ ],
+ "bed_colour": {
+  "asked": "#E0C7AB",
+  "was": [
+   87.4,
+   2.8,
+   11.4
+  ],
+  "now": [
+   81.6,
+   4.5,
+   17.2
+  ],
+  "hex": "#E0C7AB",
+  "rim_share_of_top": 0.288
+ },
+ "colour_as_matched": {
+  "colour_delta_e": 4.0,
+  "materials_reached": 1.0,
+  "materials": [
+   {
+    "design": [
+     59.6,
+     -15.8,
+     55.6
+    ],
+    "got": [
+     59.9,
+     -17.8,
+     46.3
+    ],
+    "share": 0.202,
+    "reached": true,
+    "delta_e": 9.5
+   },
+   {
+    "design": [
+     63.9,
+     49.0,
+     24.5
+    ],
+    "got": [
+     63.8,
+     40.6,
+     23.8
+    ],
+    "share": 0.025,
+    "reached": true,
+    "delta_e": 8.4
+   },
+   {
+    "design": [
+     87.4,
+     3.9,
+     17.7
+    ],
+    "got": [
+     87.4,
+     2.7,
+     11.4
+    ],
+    "share": 0.11,
+    "reached": true,
+    "delta_e": 6.4
+   },
+   {
+    "design": [
+     29.9,
+     -14.3,
+     25.6
+    ],
+    "got": [
+     29.9,
+     -15.4,
+     23.7
+    ],
+    "share": 0.207,
+    "reached": true,
+    "delta_e": 2.2
+   },
+   {
+    "design": [
+     60.0,
+     5.0,
+     12.6
+    ],
+    "got": [
+     60.0,
+     4.5,
+     14.1
+    ],
+    "share": 0.456,
+    "reached": true,
+    "delta_e": 1.6
+   }
+  ],
+  "share_of_texels_changed_since": 0.242
+ },
+ "facet_colour": true,
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 614384,
+ "name": "flowerbed"
+}

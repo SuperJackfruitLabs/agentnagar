@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.E-bench",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "6a49e5bea217ee9c51b1fa6416b2b86c99c8df15e9380e1f424eeb8299f160a2",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "e3067acbdfc1abddc6eba5259515ee4643786ae866d7826e1dec0cf75514cdf0",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-95696a84-f455-4cc2-bf29-926ca87a44da.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/park.jpg",
+    "../../../../refs/panels/lowpoly_tropical/gathering.jpg"
+  ],
+  "edit_of": null
+}

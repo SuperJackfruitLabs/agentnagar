@@ -1,0 +1,181 @@
+{
+ "raw_tris": 146506,
+ "metal_map_ignored": true,
+ "objects": {
+  "found": 2,
+  "kept": "shortest",
+  "heights": [
+   1.004,
+   0.3187
+  ],
+  "kept_height": 0.3187
+ },
+ "loose_parts": 2,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "axis": {
+  "off_the_middle_of_its_box_m": [
+   0.0002,
+   0.0002
+  ]
+ },
+ "scale": [
+  2.1758,
+  2.1212,
+  2.8244
+ ],
+ "stretch": 1.332,
+ "yaw": 0.0,
+ "box_min": [
+  -0.12,
+  -0.12,
+  0.0
+ ],
+ "box_max": [
+  0.12,
+  0.12,
+  0.9
+ ],
+ "rebuilt_surface_m": 0.004,
+ "hidden_faces_dropped": {
+  "of": 9000,
+  "dropped": 0
+ },
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 0.38,
+   "p95_mm": 0.93,
+   "max_mm": 1.6,
+   "measured_from": "the rebuilt surface, its hidden faces dropped"
+  }
+ ],
+ "tris": 1500,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 0.38,
+  "p95_mm": 0.93,
+  "max_mm": 1.6,
+  "measured_from": "the rebuilt surface, its hidden faces dropped"
+ },
+ "bake_reach_m": 0.012,
+ "diagonal_m": 0.962,
+ "stood_on_the_ground": {
+  "lowest_was_m": 0.001,
+  "corners_moved": 59
+ },
+ "weighted_normals": true,
+ "texels_used": 0.854,
+ "materials": [
+  {
+   "design": [
+    47.1,
+    5.8,
+    31.3
+   ],
+   "got": [
+    47.1,
+    5.2,
+    31.5
+   ],
+   "share": 0.274,
+   "reached": true,
+   "delta_e": 0.6
+  },
+  {
+   "design": [
+    87.6,
+    1.6,
+    7.5
+   ],
+   "got": [
+    87.6,
+    1.6,
+    7.4
+   ],
+   "share": 0.421,
+   "reached": true,
+   "delta_e": 0.1
+  },
+  {
+   "design": [
+    63.3,
+    1.3,
+    7.6
+   ],
+   "got": [
+    64.6,
+    1.4,
+    7.8
+   ],
+   "share": 0.305,
+   "reached": true,
+   "delta_e": 1.3
+  }
+ ],
+ "colour_delta_e": 0.6,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 2.7,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 9.3,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 2.7,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 7.3,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   67.1,
+   47.1
+  ],
+  [
+   77.4,
+   63.3
+  ],
+  [
+   82.7,
+   87.6
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.734,
+ "colour_before": [
+  0.798,
+  0.72,
+  0.553
+ ],
+ "colour_after": [
+  0.726,
+  0.652,
+  0.54
+ ],
+ "colour_design": [
+  0.728,
+  0.664,
+  0.567
+ ],
+ "carried_light_parts": [],
+ "tangents_mended": 0,
+ "image_format": "WEBP",
+ "bytes": 116932,
+ "name": "bollard"
+}

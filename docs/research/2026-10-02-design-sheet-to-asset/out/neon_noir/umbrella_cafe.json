@@ -1,0 +1,310 @@
+{
+ "kit_tris": 600,
+ "kit_light_parts": [
+  "lights"
+ ],
+ "raw_tris": 144000,
+ "metal_map_ignored": true,
+ "loose_parts": 12,
+ "dropped_parts": 11,
+ "dropped_area_share": 0.0004,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.4538,
+  "90": 0.4538,
+  "180": 0.4537,
+  "270": 0.4538
+ },
+ "yaw_by_least_stretch": {
+  "0": 1.616,
+  "90": 1.616,
+  "180": 1.616,
+  "270": 1.616
+ },
+ "scale": [
+  2.2927,
+  2.2927,
+  2.2927
+ ],
+ "stretch": 2.218,
+ "stem": {
+  "foot_m": 0.025,
+  "foot_as_drawn_m": 0.156,
+  "foot_across_m": 0.493,
+  "foot_across_as_drawn_m": 0.493,
+  "stem_m": 1.984,
+  "top_m": 0.506,
+  "stem_across_as_drawn_m": [
+   0.06,
+   0.154
+  ],
+  "thinned": {
+   "most_m": 0.045,
+   "upto_m": 0.72,
+   "least_factor": 0.292
+  },
+  "top_off_axis_mm": 2.1,
+  "top_moved_onto_axis": true,
+  "edge_m": 2.012,
+  "height_m": 2.515,
+  "vertices_put_back_on_the_ground": 37
+ },
+ "yaw": 180,
+ "box_min": [
+  -1.15,
+  -1.147,
+  0.0
+ ],
+ "box_max": [
+  1.15,
+  1.147,
+  2.515
+ ],
+ "rebuilt_surface_m": 0.009,
+ "tris": 6072,
+ "deviation": {
+  "tris": 6000,
+  "mean_mm": 0.26,
+  "p95_mm": 0.93,
+  "max_mm": 3.7,
+  "measured_from": "the rebuilt surface"
+ },
+ "bake_reach_m": 0.0822,
+ "diagonal_m": 4.109,
+ "top_edges_kept_sharp": 3866,
+ "texels_used": 0.634,
+ "materials": [
+  {
+   "design": [
+    23.3,
+    4.4,
+    -20.8
+   ],
+   "got": [
+    26.8,
+    6.1,
+    -19.2
+   ],
+   "share": 0.087,
+   "reached": true,
+   "delta_e": 4.2
+  },
+  {
+   "design": [
+    36.1,
+    4.9,
+    -22.8
+   ],
+   "got": [
+    32.1,
+    5.4,
+    -20.9
+   ],
+   "share": 0.079,
+   "reached": false,
+   "delta_e": 4.5
+  },
+  {
+   "design": [
+    11.6,
+    3.6,
+    -7.5
+   ],
+   "got": [
+    11.6,
+    1.8,
+    -1.8
+   ],
+   "share": 0.659,
+   "reached": true,
+   "delta_e": 6.0
+  },
+  {
+   "design": [
+    55.1,
+    16.2,
+    42.3
+   ],
+   "got": [
+    63.9,
+    6.7,
+    47.2
+   ],
+   "share": 0.057,
+   "reached": true,
+   "delta_e": 13.9
+  },
+  {
+   "design": [
+    32.1,
+    5.0,
+    -23.1
+   ],
+   "got": [
+    29.9,
+    7.2,
+    -22.4
+   ],
+   "share": 0.117,
+   "reached": true,
+   "delta_e": 3.2
+  }
+ ],
+ "colour_delta_e": 5.8,
+ "materials_reached": 0.921,
+ "colour_delta_e_of_the_fit": 7.8,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 8.6,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 8.3,
+   "reached": 0.805
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 7.8,
+   "reached": 0.921
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   8.7,
+   11.6
+  ],
+  [
+   22.5,
+   28.4
+  ],
+  [
+   40.3,
+   55.1
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.957,
+ "colour_before": [
+  0.189,
+  0.193,
+  0.292
+ ],
+ "colour_after": [
+  0.24,
+  0.248,
+  0.35
+ ],
+ "colour_design": [
+  0.203,
+  0.201,
+  0.245
+ ],
+ "colour_as_matched": {
+  "colour_delta_e": 6.0,
+  "materials_reached": 0.921,
+  "materials": [
+   {
+    "design": [
+     23.3,
+     4.4,
+     -20.8
+    ],
+    "got": [
+     26.8,
+     6.1,
+     -19.2
+    ],
+    "share": 0.087,
+    "reached": true,
+    "delta_e": 4.2
+   },
+   {
+    "design": [
+     36.1,
+     4.9,
+     -22.8
+    ],
+    "got": [
+     32.1,
+     5.4,
+     -20.9
+    ],
+    "share": 0.079,
+    "reached": false,
+    "delta_e": 4.5
+   },
+   {
+    "design": [
+     11.6,
+     3.6,
+     -7.5
+    ],
+    "got": [
+     11.6,
+     1.8,
+     -1.8
+    ],
+    "share": 0.659,
+    "reached": true,
+    "delta_e": 6.0
+   },
+   {
+    "design": [
+     55.1,
+     16.2,
+     42.3
+    ],
+    "got": [
+     56.1,
+     33.1,
+     43.9
+    ],
+    "share": 0.057,
+    "reached": true,
+    "delta_e": 16.9
+   },
+   {
+    "design": [
+     32.1,
+     5.0,
+     -23.1
+    ],
+    "got": [
+     29.9,
+     7.2,
+     -22.4
+    ],
+    "share": 0.117,
+    "reached": true,
+    "delta_e": 3.2
+   }
+  ],
+  "share_of_texels_changed_since": 0.019
+ },
+ "glow_share": 0.0188,
+ "glow_faces": 325,
+ "carried_light_parts": [
+  "lights"
+ ],
+ "band_glow": {
+  "from_m": 0.008,
+  "to_m": 0.018,
+  "proud_m": 0.003,
+  "sides": 36,
+  "part": "lights",
+  "material": "light"
+ },
+ "image_format": "WEBP",
+ "bytes": 645820,
+ "name": "umbrella_cafe"
+}

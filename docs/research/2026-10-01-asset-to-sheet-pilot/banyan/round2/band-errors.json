@@ -1,0 +1,72 @@
+{
+ "lowpoly_tropical": {
+  "street": {
+   "round2": 0.011,
+   "today": 0.094
+  },
+  "above": {
+   "round2": 0.011,
+   "today": 0.169
+  },
+  "trunk": {
+   "round2": 0.017,
+   "today": 0.185
+  }
+ },
+ "voxel": {
+  "street": {
+   "round2": 0.028,
+   "today": 0.088
+  },
+  "above": {
+   "round2": 0.024,
+   "today": 0.217
+  },
+  "trunk": {
+   "round2": 0.031,
+   "today": 0.187
+  }
+ },
+ "anime_cel": {
+  "street": {
+   "round2": 0.018,
+   "today": 0.029
+  },
+  "above": {
+   "round2": 0.011,
+   "today": 0.142
+  },
+  "trunk": {
+   "round2": 0.021,
+   "today": 0.167
+  }
+ },
+ "solarpunk": {
+  "street": {
+   "round2": 0.029,
+   "today": 0.044
+  },
+  "above": {
+   "round2": 0.031,
+   "today": 0.168
+  },
+  "trunk": {
+   "round2": 0.024,
+   "today": 0.139
+  }
+ },
+ "neon_noir": {
+  "street": {
+   "round2": 0.051,
+   "today": 0.105
+  },
+  "above": {
+   "round2": 0.058,
+   "today": 0.165
+  },
+  "trunk": {
+   "round2": 0.06,
+   "today": 0.113
+  }
+ }
+}

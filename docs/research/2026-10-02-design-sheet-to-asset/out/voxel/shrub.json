@@ -1,0 +1,383 @@
+{
+ "kit_tris": 410,
+ "kit_light_parts": [],
+ "raw_tris": 149090,
+ "metal_map_ignored": true,
+ "loose_parts": 12,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.3874,
+  "90": 0.3896,
+  "180": 0.3841,
+  "270": 0.3869
+ },
+ "scale": [
+  2.1078,
+  2.104,
+  0.9784
+ ],
+ "stretch": 2.154,
+ "shrub": {
+  "origin_moved_m": [
+   -0.0093,
+   0.0056
+  ],
+  "widest_at_m": 0.35,
+  "widest_moved_to_m": 0.4,
+  "round": {
+   "by": 1.0,
+   "generated_ring_least_before": 0.848,
+   "generated_ring_least_after": 0.989,
+   "generated_vertices_pulled_back": 146,
+   "ring_at_m": 0.4,
+   "ring_least_before": 0.989,
+   "ring_least": 1.0,
+   "vertices_on_the_circle": 68
+  },
+  "pulled_into_the_circle": 0,
+  "reach_m": 1.05,
+  "reach_after_the_box_m": 1.1361,
+  "scaled_across": 0.9243,
+  "cut_down_scaled_across": 0.991,
+  "reach_of_the_piece_m": 1.05
+ },
+ "yaw": 180,
+ "box_min": [
+  -1.05,
+  -1.05,
+  0.0
+ ],
+ "box_max": [
+  1.05,
+  1.048,
+  0.8
+ ],
+ "skin": {
+  "directions": 775,
+  "ring_directions": 48,
+  "foot_directions": 48,
+  "missed": 1,
+  "from_m": [
+   0.0,
+   0.0,
+   0.4
+  ],
+  "held_out_under_the_ring_by_up_to_m": 0.248,
+  "surface_behind_the_skin_by_up_to_m": 0.51,
+  "colour": {
+   "texels": 779079,
+   "seen_close_behind_the_skin": 0.346,
+   "look_m": 0.06
+  }
+ },
+ "tris": 202,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 211.73,
+  "p95_mm": 450.46,
+  "max_mm": 548.0,
+  "measured_from": "the generated model, whose inner leaves the skin leaves out"
+ },
+ "bake_reach_m": 0.0615,
+ "diagonal_m": 3.074,
+ "texels_used": 0.643,
+ "tones_by_rank": {
+  "design_read_from_its_top": 1.0,
+  "lightness": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    17.6,
+    13.5
+   ],
+   [
+    26.0,
+    22.6
+   ],
+   [
+    33.0,
+    27.7
+   ],
+   [
+    37.6,
+    31.8
+   ],
+   [
+    40.7,
+    36.5
+   ],
+   [
+    44.9,
+    40.9
+   ],
+   [
+    49.5,
+    46.5
+   ],
+   [
+    53.3,
+    52.3
+   ],
+   [
+    58.8,
+    58.8
+   ],
+   [
+    65.6,
+    64.9
+   ],
+   [
+    71.7,
+    73.9
+   ],
+   [
+    92.9,
+    89.2
+   ],
+   [
+    100.0,
+    100.0
+   ]
+  ]
+ },
+ "materials": [
+  {
+   "design": [
+    86.6,
+    0.6,
+    4.1
+   ],
+   "got": [
+    88.3,
+    -1.0,
+    7.0
+   ],
+   "share": 0.072,
+   "reached": true,
+   "delta_e": 3.7
+  },
+  {
+   "design": [
+    44.4,
+    -37.1,
+    43.8
+   ],
+   "got": [
+    44.1,
+    -37.1,
+    43.6
+   ],
+   "share": 0.292,
+   "reached": true,
+   "delta_e": 0.3
+  },
+  {
+   "design": [
+    64.7,
+    -41.6,
+    62.4
+   ],
+   "got": [
+    64.7,
+    -41.5,
+    61.9
+   ],
+   "share": 0.271,
+   "reached": true,
+   "delta_e": 0.5
+  },
+  {
+   "design": [
+    26.9,
+    -27.1,
+    25.3
+   ],
+   "got": [
+    26.1,
+    -27.2,
+    25.8
+   ],
+   "share": 0.365,
+   "reached": true,
+   "delta_e": 0.9
+  }
+ ],
+ "colour_delta_e": 0.8,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 1.8,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 6.8,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 6.7,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 1.8,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   17.6,
+   13.5
+  ],
+  [
+   26.0,
+   22.6
+  ],
+  [
+   33.0,
+   27.7
+  ],
+  [
+   37.6,
+   31.8
+  ],
+  [
+   40.7,
+   36.5
+  ],
+  [
+   44.9,
+   40.9
+  ],
+  [
+   49.5,
+   46.5
+  ],
+  [
+   53.3,
+   52.3
+  ],
+  [
+   58.8,
+   58.8
+  ],
+  [
+   65.6,
+   64.9
+  ],
+  [
+   71.7,
+   73.9
+  ],
+  [
+   92.9,
+   89.2
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.94,
+ "colour_before": [
+  0.275,
+  0.518,
+  0.081
+ ],
+ "colour_after": [
+  0.282,
+  0.487,
+  0.131
+ ],
+ "colour_design": [
+  0.287,
+  0.486,
+  0.134
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 18824,
+ "name": "shrub",
+ "fitted_tris": 1500,
+ "cubes": {
+  "grid_m": 0.2,
+  "layers": [
+   {
+    "grid_m": 0.2,
+    "from_m": 0.0,
+    "cells": [
+     11,
+     11,
+     4
+    ],
+    "filled": 249,
+    "filled_as_thin_members": 0,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's middle",
+     "a cell's middle"
+    ]
+   }
+  ],
+  "tones": {
+   "greens": [
+    "#264822",
+    "#4e8f1c",
+    "#91c816"
+   ],
+   "cubes_of_each": [
+    17,
+    30,
+    20
+   ],
+   "blossom_cubes": 3,
+   "cubes_that_show": 70,
+   "cubes_hidden_in_the_drum": 48,
+   "cubes_of_the_box_in_their_wall_s_colour": 0
+  },
+  "filled": 249,
+  "filled_as_thin_members": 0,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   11,
+   11,
+   4
+  ],
+  "grid_set_on": [
+   "a cell's middle",
+   "a cell's middle"
+  ],
+  "rectangles": 53,
+  "cell_faces": 207,
+  "drum": {
+   "radius_m": 1.05,
+   "height_m": 0.4,
+   "sides": 32,
+   "triangles": 96,
+   "colour": "#4E8F1C"
+  },
+  "texture_px": 256,
+  "glowing_cell_faces": 0,
+  "tris": 202,
+  "bytes": 18824,
+  "box_min": [
+   -1.05,
+   -1.05,
+   0.0
+  ],
+  "box_max": [
+   1.05,
+   1.05,
+   0.8
+  ]
+ }
+}

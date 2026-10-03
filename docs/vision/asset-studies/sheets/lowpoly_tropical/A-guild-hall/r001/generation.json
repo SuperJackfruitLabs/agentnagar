@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.A-guild-hall",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "9eabe12ba541597781ea335888670679a28fe9fdfadc010bc32db2177bf84a35",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "04fc4ce4c34f512265e3105aa8b0af91b8d79252a85901f084704a992ca2246c",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-350dd2fe-8bbc-404c-af62-0e39b2b35739.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/street.jpg",
+    "../../../../refs/panels/lowpoly_tropical/gathering.jpg",
+    "../../../../refs/panels/lowpoly_tropical/diagonal.jpg"
+  ],
+  "edit_of": null
+}

@@ -1,0 +1,238 @@
+{
+ "kit_tris": 112,
+ "kit_light_parts": [],
+ "raw_tris": 130032,
+ "metal_map_ignored": true,
+ "loose_parts": 12,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.6226,
+  "90": 0.6226,
+  "180": 0.6226,
+  "270": 0.6226
+ },
+ "yaw_by_least_stretch": {
+  "0": 1.136,
+  "90": 1.136,
+  "180": 1.136,
+  "270": 1.136
+ },
+ "stem_top_filled_to_the_box": [
+  0.997,
+  1.1325
+ ],
+ "scale": [
+  0.997,
+  0.997,
+  0.997
+ ],
+ "stretch": 1.211,
+ "stem": {
+  "foot_m": 0.1,
+  "foot_as_drawn_m": 0.108,
+  "foot_across_m": 0.706,
+  "foot_across_as_drawn_m": 0.706,
+  "stem_m": 0.5,
+  "top_m": 0.2,
+  "stem_across_as_drawn_m": [
+   0.099,
+   0.099
+  ],
+  "thinned": null,
+  "top_off_axis_mm": 9.9,
+  "top_moved_onto_axis": true,
+  "edge_m": 0.687,
+  "height_m": 0.8
+ },
+ "yaw": 0,
+ "box_min": [
+  -0.5,
+  -0.501,
+  0.0
+ ],
+ "box_max": [
+  0.5,
+  0.499,
+  0.8
+ ],
+ "tris": 106,
+ "deviation": {
+  "tris": 3000,
+  "mean_mm": 0.73,
+  "p95_mm": 1.89,
+  "max_mm": 5.6,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0162,
+ "diagonal_m": 1.625,
+ "own_normals": true,
+ "weighted_normals": true,
+ "texels_used": 0.96,
+ "materials": [
+  {
+   "design": [
+    58.8,
+    35.3,
+    52.0
+   ],
+   "got": [
+    58.8,
+    32.3,
+    50.9
+   ],
+   "share": 0.669,
+   "reached": true,
+   "delta_e": 3.2
+  },
+  {
+   "design": [
+    24.2,
+    2.0,
+    -2.8
+   ],
+   "got": [
+    24.2,
+    1.6,
+    -3.4
+   ],
+   "share": 0.331,
+   "reached": true,
+   "delta_e": 0.7
+  }
+ ],
+ "colour_delta_e": 2.4,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 12.1,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 12.1,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 12.1,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 12.2,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   11.1,
+   24.2
+  ],
+  [
+   22.7,
+   58.8
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.6,
+ "colour_before": [
+  0.213,
+  0.148,
+  0.078
+ ],
+ "colour_after": [
+  0.526,
+  0.333,
+  0.21
+ ],
+ "colour_design": [
+  0.629,
+  0.367,
+  0.202
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 11444,
+ "name": "cafe_table",
+ "fitted_tris": 3000,
+ "cubes": {
+  "grid_m": 0.1,
+  "layers": [
+   {
+    "grid_m": 0.1,
+    "from_m": 0.0,
+    "cells": [
+     12,
+     12,
+     8
+    ],
+    "filled": 124,
+    "filled_as_thin_members": 0,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's edge"
+    ],
+    "made_alike_about_the_axis": true,
+    "column": {
+     "cells_square": 2,
+     "from_m": 0.1,
+     "to_m": 0.7,
+     "x_m": [
+      -0.1,
+      0.1
+     ],
+     "y_m": [
+      -0.1,
+      0.1
+     ]
+    },
+    "rounds": [
+     {
+      "at_m": 0.7,
+      "reach_m": 0.499,
+      "cells": 80
+     }
+    ]
+   }
+  ],
+  "filled": 124,
+  "filled_as_thin_members": 0,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   12,
+   12,
+   8
+  ],
+  "grid_set_on": [
+   "a cell's edge",
+   "a cell's edge"
+  ],
+  "rectangles": 53,
+  "cell_faces": 284,
+  "column_colour": "#3A393E",
+  "texture_px": 256,
+  "glowing_cell_faces": 0,
+  "tris": 106,
+  "bytes": 11444,
+  "box_min": [
+   -0.5,
+   -0.5,
+   0.0
+  ],
+  "box_max": [
+   0.5,
+   0.5,
+   0.8
+  ]
+ }
+}

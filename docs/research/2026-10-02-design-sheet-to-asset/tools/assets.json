@@ -1,0 +1,2804 @@
+{
+ "_about": "The pieces built from design sheets on 2026-10-02: which sheet and which object on it, the kit file each takes the place of, and how it is fitted. build.py reads this. `flags` are fit_generated.py's options (see its top); `style.<style>` holds one style's settings, among them its own `flags` (they come before the piece's, and the first occurrence of an option wins; `flags_replace: true` drops the piece's own), another `file`, `needle`, `name` or `mesh` where the style's kit names things differently (`file: null`: the style's kit has no such piece), `crop`, `raw` (a model kept under a name of its own, generated again from another seed), `tex`, `tris`, and `voxel` (the cube rebuild's settings: `grid`, `upper`, `jumble`, `solid`, `light`, `trunk`, `sheets`, `hollows` and the rest voxelise.py documents). `rev.<style>` names the revision of the sheet a style's piece is built from (the first unless named); `budget.<style>` holds what changes when the piece is held to its kit's triangle limit (built only with --budget, into out-budget/: `tris`, options to `set`, options to `drop`); a `variant` is built only when named, into out-<variant>/; `only` lists the styles an entry is for. `mesh` names a mesh part where the kit's spec names one (the fit's --mesh-name). `leaf_ramp`, `wood_ramp`, `leaf_colour`, `water_colour` and `timber_colour` set to `swatches` hand the fit the sheet's own swatches for that stuff; `blossoms` (a number of texels) keeps a flowering tree's flowers. `rules`, `contract` and `planted` name what the game holds the piece's kind to beyond its spec (check.py with terrace_rules.py, fixture_rules.py, planted_rules.py; a fountain and a tram shelter are held to piece_rules.py by their files' names); `departs.<axis>` and `size_as_drawn` give the reason a piece is kept off its spec's size on an axis, which check.py then reports as a departure and not a miss. `sets` names groups of pieces, written @name.",
+ "_triangles": "The triangle count is the shape's to decide (the owner's decision, 2026-10-02): a seat takes the fewest of 1500, 2000, 3000, 4000 or 6000 that hold its generated shape (fit_generated.py's rule), a tree the counts given part by part, a prop the count its entry gives. The kits' limits are reported against, not held to. Three kinds stay near their limits because the game draws many of each: the perch seat, the railing panel and its post (the writer's choice, not the owner's). For the pieces planted by the hundred (street trees, palms, shrubs) the writer proposes the frame-time bench as the gate; their counts are the owner's open decision.",
+ "sheets": {
+  "A-seating": {
+   "cells": "2x2"
+  },
+  "A-great-tree": {},
+  "A-guild-hall": {},
+  "E-bench": {
+   "cells": "3x1"
+  },
+  "A-terrace": {
+   "cells": "2x2",
+   "clear_outside": true
+  },
+  "A-street-fixtures": {
+   "cells": "4x1",
+   "clear_outside": true
+  },
+  "A-trees": {
+   "cells": "4x1",
+   "clear_outside": true
+  },
+  "A-low-planting": {
+   "cells": "2x2",
+   "clear_outside": true
+  },
+  "A-tram-shelter": {
+   "clear_outside": true
+  },
+  "A-fountain": {
+   "clear_outside": true
+  }
+ },
+ "assets": {
+  "bench": {
+   "sheet": "A-seating",
+   "obj": 0,
+   "file": "assets/seat_bench_v2.glb",
+   "needle": "seat_bench_v2",
+   "max_tris": 6000,
+   "tex": 1024,
+   "flags": [
+    "--seat",
+    "--plan-pull",
+    "all",
+    "--plan-rows",
+    "--own-normals",
+    "--weighted-normals"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--materials",
+      "3"
+     ]
+    },
+    "voxel": {
+     "file": "assets/v2/bench.glb",
+     "needle": "=bench.glb",
+     "mesh": "seat",
+     "crop": "clean"
+    },
+    "solarpunk": {
+     "crop": "clean",
+     "flags": [
+      "--plan-cols"
+     ]
+    }
+   },
+   "budget": {
+    "neon_noir": {
+     "tris": 1440
+    }
+   },
+   "_note": "In low-poly the bench and the café chair are matched to three colours, the number of swatches their design sheet shows under them: with five, the timber's two tones speckled the bench's back board and the chair took one orange for two.",
+   "_plan": "A bench's footprint is a full rectangle: its back has to stand on the box's back edge along its whole length, or the cells the grid blocks behind it have nothing drawn within 10 cm (the game's collision audit, reverse_blocked).",
+   "_normals": "The generated model's shading normals stay on a cut-down piece and point wrong there (flat boards shade wavy): the piece's own normals are used, weighted by face area (--own-normals, --weighted-normals; found by the fixtures agent). Not with --flat, which shades by face."
+  },
+  "cafe-chair": {
+   "sheet": "A-seating",
+   "obj": 1,
+   "file": "assets/seat_cafe-table_v2.glb",
+   "needle": "seat_cafe-table_v2",
+   "max_tris": 6000,
+   "tex": 1024,
+   "flags": [
+    "--seat",
+    "--own-normals",
+    "--weighted-normals"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--materials",
+      "3"
+     ]
+    },
+    "voxel": {
+     "file": "assets/v2/cafe_chair.glb",
+     "needle": "cafe_chair",
+     "mesh": "chair"
+    }
+   },
+   "budget": {
+    "neon_noir": {
+     "tris": 1500
+    },
+    "anime_cel": {
+     "tris": 1500
+    },
+    "solarpunk": {
+     "tris": 1500
+    }
+   },
+   "_note": "Thin steel legs collapse into spikes at the kit's 1,500 triangles in neon; the shape rule takes 2,999 there."
+  },
+  "reading-chair": {
+   "sheet": "A-seating",
+   "obj": 2,
+   "file": "assets/seat_reading-chair_v2.glb",
+   "needle": "seat_reading-chair_v2",
+   "max_tris": 6000,
+   "tex": 1024,
+   "flags": [
+    "--seat",
+    "--plan-notch",
+    "0.278,0.16",
+    "--own-normals",
+    "--weighted-normals"
+   ],
+   "style": {
+    "neon_noir": {
+     "flags": [
+      "--under-glow",
+      "0.012,0.04,0.06"
+     ]
+    },
+    "solarpunk": {
+     "flags": [
+      "--remesh",
+      "0.0085"
+     ]
+    },
+    "voxel": {
+     "file": "assets/v2/reading_chair.glb",
+     "needle": "reading_chair",
+     "mesh": "chair",
+     "flags": [
+      "--plan-notch",
+      "0.278,0.23"
+     ]
+    }
+   },
+   "budget": {
+    "neon_noir": {
+     "tris": 1440
+    },
+    "lowpoly_tropical": {
+     "tris": 1500
+    }
+   },
+   "_note": "The solarpunk armchair is cut from a rebuilt surface: cut straight, its cushions break into planes (the generated mesh has edges three faces share).",
+   "_plan": "The catalogue's reading chair is two arms and a back round a seat square; the strip in front of the seat between the arms is floor. A seat cushion flush with the arms' fronts stands in two walkable cells (the audit's through and within_10cm)."
+  },
+  "perch-seat": {
+   "sheet": "A-seating",
+   "obj": 3,
+   "file": "assets/perch_seat.glb",
+   "tex": 512,
+   "only": [
+    "anime_cel",
+    "solarpunk",
+    "voxel"
+   ],
+   "style": {
+    "anime_cel": {
+     "tris": 196
+    },
+    "solarpunk": {
+     "tris": 96,
+     "crop": "clean"
+    },
+    "voxel": {
+     "file": "assets/v2/perch_seat.glb",
+     "mesh": "seat",
+     "crop": "clean"
+    }
+   },
+   "_note": "Only where the sheet draws it as the game uses it, a plain seat stone with a board (the first batch drew stools). Held near its kit's 100 to 200 triangles: the game stands one at every place to sit on a wall, a step, a fountain's rim or in a shelter, as a child of that piece's holder.",
+   "needle": "perch_seat",
+   "measure_seat": true,
+   "flags": [
+    "--own-normals",
+    "--weighted-normals"
+   ]
+  },
+  "great-tree": {
+   "sheet": "A-great-tree",
+   "obj": 0,
+   "file": "assets/tree_banyan.glb",
+   "needle": "tree_banyan",
+   "name": "tree_banyan",
+   "kit": false,
+   "tex": 2048,
+   "frame": "box=13.1x9.85x13.1",
+   "count": 1,
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--glow-warm",
+    "--min-part",
+    "0.35",
+    "--glow-part-least",
+    "8"
+   ],
+   "rev": {
+    "neon_noir": "r002"
+   },
+   "style": {
+    "lowpoly_tropical": {
+     "flatten": 0.35,
+     "glow": "lamp_glow",
+     "glow_strength": 1.0,
+     "lift": 1.1,
+     "flags": [
+      "--tree",
+      "5.2,5.1,0.5,12.0,9.5",
+      "--materials",
+      "7",
+      "--flatten-hue",
+      "0.8",
+      "--flat",
+      "--core",
+      "0.6",
+      "--core-span",
+      "0.5,0.84",
+      "--glow-part",
+      "lanterns",
+      "--parts",
+      "3000,900,10000",
+      "--parts-leaf-cell",
+      "0.09",
+      "--lantern-reach",
+      "0.45",
+      "--parts-lantern-least",
+      "0.12",
+      "--lantern-colour",
+      "#FEC952",
+      "--core-dark",
+      "1.2",
+      "--crown-fill",
+      "0.5,40"
+     ]
+    },
+    "anime_cel": {
+     "flatten": 0.5,
+     "glow": "lamp_glow",
+     "glow_strength": 1.0,
+     "core_plan": true,
+     "leaf_colour": "swatches",
+     "flags": [
+      "--tree",
+      "5.2,5.1,0.5,11.9,9.5",
+      "--materials",
+      "5",
+      "--flatten-hue",
+      "0.8",
+      "--core",
+      "0.6",
+      "--core-span",
+      "0.5,0.84",
+      "--glow-part",
+      "lanterns",
+      "--parts",
+      "3500,400,10000",
+      "--parts-leaf-cell",
+      "0.09",
+      "--lantern-reach",
+      "0.45",
+      "--parts-lantern-least",
+      "0.12",
+      "--core-dark",
+      "1.0",
+      "--bed-box",
+      "--bed-colour",
+      "auto",
+      "--leaf-smooth",
+      "--core-smooth",
+      "--crown-fill",
+      "0.55,40,0.24,105"
+     ]
+    },
+    "solarpunk": {
+     "flatten": 0.4,
+     "glow": "fairy_glow",
+     "glow_strength": 1.0,
+     "core_plan": true,
+     "flags": [
+      "--tree",
+      "5.2,5.1,0.5,12.02,9.57",
+      "--flatten-hue",
+      "0.8",
+      "--core",
+      "0.6",
+      "--core-span",
+      "0.5,0.84",
+      "--core-smooth",
+      "--glow-part",
+      "lights",
+      "--parts",
+      "3500,700,10000",
+      "--parts-leaf-cell",
+      "0.09",
+      "--lantern-reach",
+      "0.45",
+      "--parts-lantern-least",
+      "0.12",
+      "--core-dark",
+      "1.0",
+      "--leaf-smooth",
+      "--bed-box",
+      "--crown-fill",
+      "0.5,40"
+     ],
+     "_glow": "The solarpunk kit's tree carries its lights as `fairy_glow`, which the game keeps dark by day (lit_pack.gd) and whose presence its own test asks for (tests/test_solarpunk_pack.gd). Named `lamp_glow` the lanterns glowed faintly by day and that test failed."
+    },
+    "neon_noir": {
+     "rough": 0.7,
+     "flatten": 0.3,
+     "glow": "lamp_glow",
+     "glow_strength": 1.0,
+     "glow_colour": "#FFC470",
+     "glow_light": false,
+     "kit_lights": null,
+     "core_plan": true,
+     "flags": [
+      "--tree",
+      "5.2,5.1,0.5,12.52,9.81",
+      "--materials",
+      "5",
+      "--light-at",
+      "1.2,-1.4,2.8",
+      "--fairy",
+      "360,3.0,0.2",
+      "--warm",
+      "30,55,0.5,0.72",
+      "--core",
+      "0.55",
+      "--core-span",
+      "0.5,0.8",
+      "--fairy-halo",
+      "0.3,0.22",
+      "--core-dark",
+      "0.8",
+      "--under-glow",
+      "0.03,0.10,-0.008",
+      "--under-glow-as",
+      "light",
+      "--under-glow-material",
+      "light",
+      "--parts",
+      "4000,400,14000",
+      "--parts-leaf-cell",
+      "0.08",
+      "--parts-leaf-swell",
+      "0.05",
+      "--lantern-reach",
+      "0.45",
+      "--parts-lantern-least",
+      "0.12",
+      "--bed-box",
+      "--core-smooth",
+      "--crown-fill",
+      "0.5,40",
+      "--leaf-colour",
+      "#296238"
+     ],
+     "_note": "Its colours are matched to the neutral-light sheet, except the leaves: the design's dark olive turns brown under the game's amber lamp, so they take the neon kit's leaf green (#296238, read from the kit tree's own colours), as the town's other trees have."
+    },
+    "voxel": {
+     "file": "assets/v2/tree_large.glb",
+     "needle": "tree_large",
+     "name": "tree_large",
+     "mesh": "tree",
+     "voxel": {
+      "grid": 0.25,
+      "upper": 0.75,
+      "jumble": 0.3,
+      "samples": 4,
+      "glow": "lamp_glow",
+      "solid": 0.5
+     },
+     "flatten": 0.15,
+     "flags": [
+      "--tree",
+      "5.0,5.0,0.5,8.4,9.8",
+      "--flatten-hue",
+      "0.8",
+      "--parts",
+      "3000,600,9000",
+      "--parts-leaf-cell",
+      "0.12",
+      "--lantern-reach",
+      "0.5",
+      "--parts-lantern-least",
+      "0.12",
+      "--crown-fill",
+      "0.5,40"
+     ],
+     "_note": "Trunk and bed in cubes of 0.25 m, the crown in cubes of 0.75 m (the kit's crown cube is 0.7): at one small size all over, the crown came out a smooth ball and flat. The bed is sized to 5.0 m, twenty cubes: a bed of cubes that do not divide the 5.2 by 5.1 m footprint reaches outside it one way and the game squeezes the tree."
+    }
+   },
+   "budget": {
+    "lowpoly_tropical": {
+     "set": {
+      "--parts": "1850,640,3790",
+      "--parts-leaf-cell": "0.12"
+     },
+     "drop": [
+      "--crown-fill"
+     ]
+    },
+    "anime_cel": {
+     "set": {
+      "--parts": "2500,400,4300",
+      "--parts-leaf-cell": "0.12"
+     },
+     "drop": [
+      "--crown-fill"
+     ]
+    },
+    "solarpunk": {
+     "set": {
+      "--parts": "2300,500,4300",
+      "--parts-leaf-cell": "0.12"
+     },
+     "drop": [
+      "--crown-fill"
+     ]
+    },
+    "neon_noir": {
+     "set": {
+      "--parts": "2000,300,3400",
+      "--parts-leaf-cell": "0.11",
+      "--parts-leaf-swell": "0.06",
+      "--fairy": "200,3.0,0.2"
+     },
+     "drop": [
+      "--crown-fill"
+     ]
+    }
+   },
+   "_note": "Each tree is cut down part by part (wood and bed, lanterns, leaves told apart by where they are and the colour the generator painted them). The neon tree is built from the sheet made again in neutral light (r002); great-tree-first-sheet is the one built from the first, night-lit sheet.",
+   "_frame": "One camera for every tree put on this point (the kit's, the new one, the one held to the limit): stood back by a box of the kit tree's size as the game draws it. With `auto` each tree set its own camera by its own size, and the kit's tree and the new one were not seen from the same place."
+  },
+  "great-tree-first-sheet": {
+   "sheet": "A-great-tree",
+   "obj": 0,
+   "file": "assets/tree_banyan.glb",
+   "needle": "tree_banyan",
+   "name": "tree_banyan",
+   "kit": false,
+   "tex": 2048,
+   "frame": "auto",
+   "count": 1,
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--glow-warm",
+    "--min-part",
+    "0.35"
+   ],
+   "variant": "first-sheet",
+   "raw": "great-tree",
+   "only": [
+    "neon_noir"
+   ],
+   "style": {
+    "neon_noir": {
+     "tris": 30000,
+     "rough": 0.7,
+     "glow": "lamp_glow",
+     "glow_strength": 1.0,
+     "glow_colour": "#FFC470",
+     "glow_light": false,
+     "kit_lights": null,
+     "lift": null,
+     "flags": [
+      "--tree",
+      "5.2,5.1,0.5,12.52,9.81",
+      "--inflate",
+      "0.06",
+      "--remesh",
+      "0.07",
+      "--no-match",
+      "--lift",
+      "0.62",
+      "--colourfulness",
+      "1.1",
+      "--light-at",
+      "1.2,-1.4,2.8",
+      "--fairy",
+      "360,3.0,0.2",
+      "--warm",
+      "30,55,0.5,0.72",
+      "--core",
+      "0.55",
+      "--core-span",
+      "0.5,0.8",
+      "--fairy-halo",
+      "0.3,0.22",
+      "--core-dark",
+      "0.8",
+      "--under-glow",
+      "0.03,0.10,-0.008",
+      "--under-glow-as",
+      "light",
+      "--under-glow-material",
+      "light",
+      "--leaf-colour",
+      "#296238"
+     ]
+    }
+   },
+   "_note": "The neon tree as first built (2026-10-02 morning) from the night-lit sheet r001: the generator's own colours, its leaves moved to the kit's leaf green, cut as one mesh from a rebuilt surface."
+  },
+  "bench-worn": {
+   "sheet": "E-bench",
+   "obj": 2,
+   "file": "assets/seat_bench_v2.glb",
+   "needle": "seat_bench_v2",
+   "max_tris": 6000,
+   "tex": 1024,
+   "variant": "worn",
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir"
+   ],
+   "flags": [
+    "--seat",
+    "--plan-pull",
+    "all",
+    "--plan-rows",
+    "--own-normals",
+    "--weighted-normals"
+   ],
+   "style": {
+    "neon_noir": {
+     "flags": [
+      "--remesh",
+      "0.01"
+     ]
+    }
+   }
+  },
+  "cafe-table": {
+   "sheet": "A-terrace",
+   "obj": 0,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "file": "assets/cafe_table.glb",
+   "needle": "=cafe_table.glb",
+   "max_tris": 6000,
+   "tex": 1024,
+   "tris": 3000,
+   "flags": [
+    "--stem",
+    "--kit-body-box",
+    "--own-normals",
+    "--weighted-normals"
+   ],
+   "style": {
+    "anime_cel": {
+     "flatten": 0.9,
+     "flags": [
+      "--feet-off-x",
+      "--materials",
+      "2"
+     ]
+    },
+    "voxel": {
+     "file": "assets/v2/cafe_table.glb",
+     "mesh": "table",
+     "flags": [
+      "--stem-grid",
+      "0.1",
+      "--materials",
+      "2"
+     ],
+     "voxel": {
+      "flags": [
+       "--symmetric",
+       "--cover",
+       "0.4",
+       "--column",
+       "2,0.1,0.7",
+       "--round"
+      ]
+     },
+     "_note": "Not filled by the game: the kit's box (1.0 by 0.8 by 1.0 m) is its size, and the fit makes the foot and the top a whole cube high and fills the box both ways (--stem-grid 0.1). Matched to two colours (the top's orange, iron; --materials 2): with the three the sheet's swatches give, the top's darker cubes came out brown. The cube step then builds it by rule where reading the fitted piece cell by cell gave a lopsided top and no column: the foot is made alike in its mirror images (--symmetric; a cell counts at four tenths, --cover 0.4, because an arm one generated cube wide lies half in each of two cells), the column is 2 by 2 cells from 0.1 to 0.7 m and one colour (--column 2,0.1,0.7: the kit's width, and what hides the umbrella's pole), and the top is a round of cubes as wide as the fitted top (--round). The foot's arms stay on the grid's lines: one points at each chair, 0.1 m high."
+    },
+    "lowpoly_tropical": {
+     "flatten": 0.9,
+     "flags": [
+      "--feet-off-x",
+      "--materials",
+      "2"
+     ]
+    },
+    "neon_noir": {
+     "kit_lights": null,
+     "flags": [
+      "--feet-off-x",
+      "--band-glow",
+      "0.712,0.728"
+     ],
+     "_note": "The design's light is a strip round the top's rim, which the generator did not paint: put back as a lit band (the `lights` part, lamp_glow). The kit's candle is not carried: the design has none, and the umbrella's pole comes up where it stands."
+    },
+    "solarpunk": {
+     "flatten": 0.9,
+     "flags": [
+      "--feet-off-x",
+      "--materials",
+      "2"
+     ],
+     "_note": "The generator gave it four legs where the sheet draws three. Matched to two colours (timber, iron) as the anime and low-poly tables are: with the three the sheet's swatches give, the grain it painted on the top came out as dark streaks (seen in the game). The brass of the rim, the collar and the legs' tips takes the timber's colour with it."
+    }
+   },
+   "_note": "A top on a stem on a foot (--stem): scaled evenly to the kit top's width, the column alone lengthened to the kit's height, the column's axis on the origin. In the four styles the game fills, the feet are turned to point between the two chairs on its x sides (--feet-off-x, in each style's own flags: a style built from cubes cannot turn a foot off its grid). 3,000 triangles, not the 1,500 the shape rule passes: at 1,500 the round top's rim shows its sides to a seated eye. Its shading normals are its own, weighted by area (--own-normals --weighted-normals): with the generator's left on it the flat top shaded as dished planks. Matched to two colours (timber, iron) except in neon: with more, the grain the generator painted on the top came out as patches and streaks. The whole name as needle: plain `cafe_table` would also take `cafe_table_set.glb` if that were ever placed.",
+   "rules": "table",
+   "frame": "open"
+  },
+  "umbrella": {
+   "sheet": "A-terrace",
+   "obj": 1,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "file": "assets/umbrella_cafe.glb",
+   "needle": "umbrella_cafe",
+   "max_tris": 6000,
+   "tex": 1024,
+   "flags": [
+    "--stem",
+    "--stem-edge",
+    "1.9",
+    "--stem-across",
+    "0.06,0.72",
+    "--stem-foot",
+    "0.10",
+    "--kit-body-box",
+    "--top-sharp",
+    "12"
+   ],
+   "style": {
+    "anime_cel": {
+     "flags": [
+      "--stem-foot",
+      "0.03,0.56"
+     ]
+    },
+    "lowpoly_tropical": {
+     "file": "assets/umbrella_yellow.glb",
+     "needle": "umbrella_yellow",
+     "flags": [
+      "--stem-foot",
+      "0.015,0.76",
+      "--feet-on-x"
+     ],
+     "_note": "Its base is a square slab and its table stands on a cross of bars 1.7 cm off the ground: the slab is pressed to a 1.5 cm plate and turned a corner along x (--feet-on-x), so that it lies under the bars with its corners between them."
+    },
+    "voxel": {
+     "file": "assets/v2/umbrella.glb",
+     "needle": "=umbrella.glb",
+     "name": "umbrella",
+     "mesh": "canopy",
+     "flags": [
+      "--stem-edge",
+      "2.1",
+      "--stem-grid",
+      "0.1",
+      "--stem-across",
+      "9",
+      "--stem-foot",
+      "0.10,0.40"
+     ],
+     "voxel": {
+      "flags": [
+       "--symmetric",
+       "--column",
+       "2",
+       "--round",
+       "--sectors",
+       "8",
+       "--tuck",
+       "0.75"
+      ]
+     },
+     "_note": "The kit's canopy edge is 2.10 m up (--stem-edge 2.1) and its base 0.4 m square and one cube high (--stem-foot 0.10,0.40); nothing is thinned (--stem-across 9). The fit makes foot and canopy whole cubes high (--stem-grid 0.1), so the piece is 2.8 m, a cube over the kit's 2.7. The cube step: the base made alike in its mirror images (--symmetric), the pole 2 by 2 cells on the axis (--column 2; the kit's is one cell, 5 cm off the axis), the canopy a round of cubes at each level, as wide as the fitted canopy is there (--round), painted in eight sectors in its two colours (--sectors 8: the generator painted the design's sectors as blotches). Below 0.75 m its corners are drawn in by 3% (--tuck 0.75): pole and base stand inside the table's column and foot, and would share their planes."
+    },
+    "neon_noir": {
+     "kit_lights": null,
+     "glow": "lamp_glow",
+     "glow_strength": 1.0,
+     "glow_colour": "#FECF7C",
+     "tris": 6000,
+     "flags": [
+      "--stem-across",
+      "0.045,0.72",
+      "--stem-foot",
+      "0.025,0.56",
+      "--glow-warm",
+      "--warm",
+      "8,62,0.42,0.5",
+      "--lantern-colour",
+      "#FECF7C",
+      "--band-glow",
+      "0.008,0.018",
+      "--band-glow-material",
+      "light",
+      "--inflate",
+      "0.006",
+      "--remesh",
+      "0.009"
+     ],
+     "_note": "Cut from a rebuilt surface after a 6 mm swell: this model's reduction stalls, and the fallback's coarse rebuild took the canopy's cloth away and left the ribs. The strips the generator painted along the ribs glow (orange-red as painted, so the warm rule starts at 8 degrees; they take the sheet's amber #FECF7C); a lit band round the base is the `lights` part. The kit's sixteen bulbs are not carried: the design has strips, not bulbs. Its pole is thinned to 4.5 cm below the table's top, not 6: the swell adds 1.2 cm, and a crank handle stands on the pole there."
+    },
+    "solarpunk": {
+     "flags": [
+      "--stem-foot",
+      "0.03,0.50"
+     ],
+     "_note": "Its base as drawn (0.58 m across; 0.10 m high as first built) had the table's four legs passing through it, up to 6.5 cm deep. Pressed to a 3 cm plate 0.50 m across, the legs pass over it."
+    }
+   },
+   "_note": "Never filled by the game and placed by its origin on the table's point: sized part by part (--stem), the canopy scaled evenly to the kit's width so it keeps its drawn pitch, the pole alone lengthened to the kit's height and further until the canopy's edge is 1.9 m up (the top of the game's walking band), the pole's axis on the origin. Below 0.72 m the pole and its sleeve are thinned to 6 cm so that the table's column hides them. The base is pressed low and drawn in, style by style, so that the table's feet pass over it (pair.py says whether they do); a style with no setting of its own keeps the base as drawn, 0.10 m at most. A style's own flags come first and win.",
+   "rules": "umbrella",
+   "frame": "open"
+  },
+  "planter": {
+   "sheet": "A-terrace",
+   "obj": 2,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "file": "assets/planter_square.glb",
+   "needle": "=planter_square.glb",
+   "tex": 1024,
+   "leaf_colour": "cell",
+   "flags": [
+    "--planter",
+    "1.3,1.3,0.45",
+    "--planter-parts",
+    "9000",
+    "--planter-cell",
+    "0.008",
+    "--planter-swell",
+    "0.004",
+    "--planter-least",
+    "0.05",
+    "--uv",
+    "smart",
+    "--leaf-blend",
+    "0.5"
+   ],
+   "departs": {
+    "y": "the design's proportions are kept (the builder's choice; the owner has not decided between the kits' boxes and the designs' proportions): the box 0.45 m high as the pack and the catalogue give it, the plants as high above it as drawn; the kits' specs want 1.40 m with the plants (neon 1.42 m), within a tenth and 2 cm"
+   },
+   "style": {
+    "anime_cel": {
+     "flatten": 0.3,
+     "flags": [
+      "--leaf-smooth",
+      "--no-normal",
+      "--flatten-hue",
+      "0.6",
+      "--planter-fill",
+      "0.5,40,0.2,100",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "voxel": {
+     "file": "assets/v2/planter.glb",
+     "needle": "=planter.glb",
+     "mesh": "box",
+     "flags": [
+      "--planter",
+      "1.3,1.3,0.5",
+      "--planter-wall",
+      "0.1",
+      "--bed-colour",
+      "auto",
+      "--planter-tones",
+      "0.15"
+     ],
+     "voxel": {
+      "solid": 0.5,
+      "flags": [
+       "--heap",
+       "0.5,1,1"
+      ]
+     },
+     "_note": "Built 1.3 m square (13 cubes; the game draws it 1.305) with its rim 0.5 m up as the kit's (--planter 1.3,1.3,0.5) and walls one cube thick (--planter-wall 0.1). Its stone takes the design's colour and keeps 15% of its own variation (--bed-colour auto, --planter-tones 0.15): the match had sent its lighter blocks to the white of the flowers, and the walls came out in pale patches. The cube step: a solid block to the rim (`solid`: the audit reads from 0.25 m up), and on it the plants as a heap (--heap 0.5,1,1): each column inside the one-cube rim filled as high as the fitted plants stand in it, one cube at least, coloured from the leaves and blossoms that stand in it. Read cell by cell, the generator's loose plant cubes filled a handful of cells."
+    },
+    "neon_noir": {
+     "kit_lights": null,
+     "flags": [
+      "--under-glow",
+      "0.07,0.085,-0.004",
+      "--under-glow-as",
+      "light",
+      "--planter-fill",
+      "0.62,45"
+     ],
+     "_note": "The design's strip round the foot, put back as a thin lit slab standing 5 mm proud of the walls, in a part named `light` (lamp_glow): the game hangs a small lamp at its middle, as it does for the kit's. The kit's uplight on the coping is not carried: the design has none. Soil showed between the plants: one smaller copy of them is set inside (--planter-fill)."
+    },
+    "solarpunk": {
+     "_note": "Its design's box is cream stone with rounded corners on a brass plinth. The plinth's step ended the run of slices that keep the ground slice's outline a centimetre up, so the plain box was built on the plinth alone and the cream box above it was taken for plants. With --planter-tiers the box is found through the step (its rim is where the model's broad level surface near the outline lies) and built plain on the body's own outline, rounded corners kept. Keeping the generated box and cutting it down (--planter-parts 9000,600) was tried first: in the game its walls came out torn.",
+     "flags": [
+      "--planter-tiers",
+      "0.012"
+     ]
+    }
+   },
+   "_note": "Sized part by part (--planter): the box to 1.30 m square (the game draws it 1.305, so it is hardly stretched) and 0.45 m high, the plants scaled evenly and drawn inside the box's outline (a leaf past the rim would shrink the box in the game's fill). Cut part by part (--planter-parts): a plain box painted from the generated one, the plants rebuilt from 8 mm cells and cut to 9,000 triangles. Where the generator left the middle bare (anime) it is planted with two smaller copies of the plants (--planter-fill). The solarpunk box, with a plinth and rounded corners, is found through the step and built on its own outline (--planter-tiers). Leaves take the greens of the sheet's swatches under the planter (leaf_colour: cell).",
+   "rules": "planter",
+   "frame": "open"
+  },
+  "planter-pot": {
+   "sheet": "A-terrace",
+   "obj": 3,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "_note": "Loaded by nothing in the game (no style.json names planter_pot.glb): generated, left unfitted on purpose."
+  },
+  "lamp-post": {
+   "sheet": "A-street-fixtures",
+   "obj": 0,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "_note": "Scaled evenly to the sheet's 4.2 m with its own axis on the origin, not into the kit's box: the kit lamp's box is its ornament (a cross-bar, a banner arm, a canopy) and in low-poly is off-centre. The lantern's glass is the part `light` and the piece's one material is `lamp_glow`, with the glass alone in its emission texture (in neon the strips on the post and foot as well). The glass is found as what the generator painted warm or pale (--glow-warm, --glow-pale) and keeps the generator's colour: matched like the rest, a pale pane was taken for iron in places and came out grey. Triangles by the shape, held to 3 mm (95%) and 9 mm (all): the share-of-diagonal rule passed the anime lamp at 1,500 with its finial crumpled.",
+   "contract": "lamp",
+   "file": "assets/lamp_post.glb",
+   "flags": [
+    "--keep-aspect",
+    "--aspect-by",
+    "height",
+    "--axis",
+    "--arm-at-x",
+    "--hang-above",
+    "0.2,2.2",
+    "--glow",
+    "lamp_glow",
+    "--glow-strength",
+    "1.0",
+    "--glow-warm",
+    "--warm",
+    "25,65,0.25,0.6",
+    "--glow-pale",
+    "0.8,0.25",
+    "--glow-part",
+    "light",
+    "--glow-from",
+    "3.3",
+    "--within",
+    "3,9",
+    "--weighted-normals",
+    "--mend-tangents",
+    "--remesh",
+    "0.004",
+    "--bake-reach",
+    "0.012",
+    "--drop-hidden"
+   ],
+   "frame": "open",
+   "kit": false,
+   "materials": "swatches",
+   "max_tris": 9000,
+   "needle": "=lamp_post.glb",
+   "size": "0.5,4.2,0.5",
+   "size_as_drawn": {
+    "x": "the spec's width is the kit's ornament, a cross-bar, banner arm or canopy; a lamp that is a post and a lantern is narrower"
+   },
+   "style": {
+    "anime_cel": {
+     "flags": [
+      "--no-normal"
+     ]
+    },
+    "neon_noir": {
+     "kit_lights": null,
+     "flags": [
+      "--glow-from",
+      "0",
+      "--glow-part-from",
+      "3.3"
+     ],
+     "size_as_drawn": {
+      "x": "the spec's width is the kit's cross-bar; this lamp is a post and a lantern, 40 cm at its foot",
+      "z": "the foot is 40 cm square as drawn (the kit's foot is 50)"
+     }
+    },
+    "voxel": {
+     "file": "assets/v2/lamp.glb",
+     "needle": "=lamp.glb",
+     "mesh": "post",
+     "size": "0.6,4.5,0.6",
+     "voxel": {
+      "light": "light",
+      "glow": "lamp_glow"
+     },
+     "flags": [
+      "--lantern-colour",
+      "#FEDF93"
+     ],
+     "_note": "The generator painted the glass a strong yellow; it takes the sheet's swatch (--lantern-colour). The cubes that glow become the part `light` in the cube step."
+    },
+    "lowpoly_tropical": {
+     "size_as_drawn": {
+      "x": "the sheet draws a banner on an arm that reaches 73 cm from the post (the kit's reaches 50)",
+      "z": "the foot is 41 cm square as drawn (the kit's is 48)"
+     }
+    },
+    "solarpunk": {
+     "flags": [
+      "--warm",
+      "0,0,2,2",
+      "--glow-pale",
+      "0.85,0.3"
+     ],
+     "size_as_drawn": {
+      "z": "the lantern's brim is 80 cm across as generated, round, so as deep as it is wide (the kit's canopy is 74 by 48 cm)"
+     },
+     "_note": "Its brass would pass for lantern glass by the warm rule, so the glass is found as what is pale alone (--warm set so that nothing passes it)."
+    }
+   },
+   "tex": 1024
+  },
+  "bollard": {
+   "sheet": "A-street-fixtures",
+   "obj": 1,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "contract": "bollard",
+   "file": "assets/bollard.glb",
+   "flags": [
+    "--axis",
+    "--weighted-normals",
+    "--mend-tangents",
+    "--remesh",
+    "0.004",
+    "--bake-reach",
+    "0.012",
+    "--drop-hidden"
+   ],
+   "flatten": {
+    "solarpunk": 0.9
+   },
+   "kit": false,
+   "materials": "swatches",
+   "max_tris": 6000,
+   "needle": "=bollard.glb",
+   "size": "0.24,0.9,0.24",
+   "style": {
+    "anime_cel": {
+     "flags": [
+      "--no-normal"
+     ]
+    },
+    "neon_noir": {
+     "kit_lights": null,
+     "size": "0.27,0.9,0.27",
+     "flags": [
+      "--glow",
+      "lamp_glow",
+      "--glow-strength",
+      "1.0",
+      "--glow-part",
+      "light",
+      "--glow-warm",
+      "--glow-pale",
+      "0.86,0.2",
+      "--lantern-colour",
+      "#FEBE5E"
+     ]
+    },
+    "voxel": {
+     "file": "assets/v2/bollard.glb",
+     "mesh": "post",
+     "size": "0.2,0.8,0.2",
+     "flags": [
+      "--drop-plate"
+     ],
+     "_note": "The generator stood the voxel bollard on a slab a metre square and made it 18 by 12 cm in plan; the slab is cut off (--drop-plate) and the post fills the kit's 0.2 m square.",
+     "needle": "=bollard.glb"
+    },
+    "lowpoly_tropical": {},
+    "solarpunk": {
+     "design_object": "shortest",
+     "flags": [
+      "--object",
+      "shortest"
+     ],
+     "_note": "The cutter took the bollard and the catenary pole for one object on the solarpunk sheet, so the cut-out and the generated model hold both: the shorter of the two is kept in each (--object, design_object). The generator made its lit slots as brass ribs, so nothing on it glows; the kit's has a band in `lamp_glow`."
+    }
+   },
+   "tex": 512,
+   "frame": "open"
+  },
+  "railing": {
+   "sheet": "A-street-fixtures",
+   "obj": 3,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "_note": "A panel 2 m long with its own post at -x, the far post cut off, the rails carried through the post (see --panel). Sized evenly by its length: the post stays square and its ball round, and the panel is then as deep as it was drawn. Held near its kit's triangle limit, because the game draws it 226 times: 930 before the rail stubs (at most 66 more), against the kits' 1,000 (900 in low-poly). `railing_post.glb` is written from the panel's own post.",
+   "contract": "railing",
+   "file": "assets/railing.glb",
+   "flags": [
+    "--panel",
+    "--weighted-normals",
+    "--mend-tangents",
+    "--remesh",
+    "0.005",
+    "--bake-reach",
+    "0.012",
+    "--drop-hidden"
+   ],
+   "kit": false,
+   "materials": "swatches",
+   "post_file": "assets/railing_post.glb",
+   "post_size_as_drawn": {
+    "x": "the panel's own post, 20 cm square as drawn",
+    "z": "the panel's own post, 20 cm square as drawn"
+   },
+   "size": "2.0,1.12,0.14",
+   "size_as_drawn": {
+    "z": "the sheet draws a stout post, 20 cm square where the panel is 2 m long; sized evenly, so the post is square and its ball round"
+   },
+   "style": {
+    "anime_cel": {
+     "flags": [
+      "--keep-aspect",
+      "--no-normal",
+      "--planar",
+      "8"
+     ]
+    },
+    "neon_noir": {
+     "kit_lights": null,
+     "flags": [
+      "--keep-aspect",
+      "--planar",
+      "8"
+     ]
+    },
+    "voxel": {
+     "file": "assets/v2/railing.glb",
+     "post_file": "assets/v2/railing_post.glb",
+     "mesh": "rail",
+     "post_mesh": "post",
+     "size": "2.0,1.1,0.4",
+     "tris": 4000,
+     "size_as_drawn": {
+      "z": "the sheet's cubes are twice the kit's: its post is two of them square, 0.4 m where the panel is 2 m long"
+     },
+     "post_size_as_drawn": {
+      "x": "two of the sheet's cubes, 0.4 m",
+      "z": "two of the sheet's cubes, 0.4 m"
+     },
+     "_note": "Not sized evenly: the box is filled (2 m long, the kit's 1.1 m high, 0.4 m deep), so that the post comes out four cells square on the kit's 0.1 m grid. The fitted piece is cut to 4,000 triangles; the cubes are rebuilt from it.",
+     "needle": "=railing.glb"
+    },
+    "lowpoly_tropical": {
+     "tris": 830,
+     "flags": [
+      "--keep-aspect",
+      "--panel-post-tris",
+      "296",
+      "--planar",
+      "8"
+     ],
+     "size_as_drawn": {
+      "z": "the sheet draws stone piers, 31 cm square where the panel is 2 m long"
+     },
+     "post_size_as_drawn": {
+      "x": "the panel's own pier, 31 cm square as drawn",
+      "z": "the panel's own pier, 31 cm square as drawn"
+     },
+     "size": "2.0,1.1,0.14"
+    },
+    "solarpunk": {
+     "size": "2.0,1.12,0.16",
+     "materials": "five, in the flags",
+     "flags": [
+      "--keep-aspect",
+      "--materials",
+      "5"
+     ],
+     "size_as_drawn": {
+      "z": "the sheet draws planter boxes and a stone post, 39 cm deep where the panel is 2 m long"
+     },
+     "post_size_as_drawn": {
+      "x": "the panel's own stone post as drawn",
+      "z": "the panel's own stone post as drawn"
+     },
+     "_note": "A planter with plants in it, not a railing of bars: no planar step (it tore the handrail), and the colours are matched to the five swatches the sheet shows (the cutter found three)."
+    }
+   },
+   "tex": 1024,
+   "tris": 930,
+   "needle": "=railing.glb"
+  },
+  "street-tree-a": {
+   "sheet": "A-trees",
+   "obj": 0,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "file": "assets/tree_round_a.glb",
+   "name": "tree_round_a",
+   "needle": "=tree_round_a.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk",
+    "voxel"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "4.9,5.46",
+    "--parts",
+    "700,0,2000",
+    "--parts-leaf-cell",
+    "0.07",
+    "--parts-leaf-swell",
+    "0.03",
+    "--crown-fill",
+    "0.5,40",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle",
+    "--planted-clear",
+    "2.4"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat",
+      "--planted-box",
+      "4.59,5.2"
+     ]
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "5.2,5.5",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "voxel": {
+     "file": "assets/v2/tree_medium.glb",
+     "needle": "=tree_medium.glb",
+     "name": "tree_medium",
+     "mesh": "tree",
+     "crop": "clean",
+     "flags": [
+      "--uv",
+      "smart",
+      "--drop-below",
+      "0",
+      "--no-normal",
+      "--materials",
+      "8"
+     ],
+     "voxel": {
+      "grid": 0.1,
+      "upper": 0.5,
+      "samples": 4,
+      "upper_cover": 0.35,
+      "upper_solid": true,
+      "trunk": "4,0.5"
+     },
+     "_note": "Built from its design's own cubes, not as the other styles' planted trees (their route rebuilds a crown as leaf masses and a trunk as a round tube, and a cube tree came out of it ragged, its trunk in pieces): a plain fit to the kit's box with the design's cubes kept (40,000 triangles, an intermediate), then the cube rebuild's tree mode (voxelise.py --planted-trunk): the crown in the kit's large cubes, each one flat green of the sheet's three, the whitest as blossom; the trunk built as the kit's own column and ribs, so the game draws the tree at the kit's width (a trunk as thick as the design's would shrink the tree to a third). Eight design colours are matched, not six, so that the blossoms' white keeps a colour of its own.",
+     "flags_replace": true,
+     "tris": 40000,
+     "kit": true
+    }
+   },
+   "_note": "A street tree, planted about 200 times: one mesh, materials `trunk` and `leaf`, the origin at the trunk's foot, the trunk's reach 0.25 m (notes/contracts/trees.md). Its crown is sized to the mean of the kit box's width and depth, which keeps a round crown inside the kit's size on both.",
+   "leaf_ramp": "swatches",
+   "wood_ramp": "swatches",
+   "blossoms": 2,
+   "_leaf_normals": "Anime, neon and solarpunk lean their leaf normals up (--leaf-round, --leaf-lift), as their kits' own trees do (city/tools/styles/shared/foliage.py): anime's toon step draws a face turned from the sun in shadow, and in solarpunk's daylight a closed leaf mass shows mostly its shaded sides from eye height. Low-poly keeps its facets."
+  },
+  "street-tree-b": {
+   "sheet": "A-trees",
+   "obj": 1,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "file": "assets/tree_round_b.glb",
+   "name": "tree_round_b",
+   "needle": "=tree_round_b.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk",
+    "voxel"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "3.5,4.36",
+    "--parts",
+    "600,0,1800",
+    "--parts-leaf-cell",
+    "0.07",
+    "--parts-leaf-swell",
+    "0.03",
+    "--crown-fill",
+    "0.5,40",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle",
+    "--planted-clear",
+    "2.4"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat",
+      "--planted-box",
+      "3.38,3.6"
+     ]
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "3.7,4.41",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0",
+      "--planted-leaf-from",
+      "0.5"
+     ]
+    },
+    "voxel": {
+     "file": "assets/v2/tree_small.glb",
+     "needle": "=tree_small.glb",
+     "name": "tree_small",
+     "mesh": "tree",
+     "crop": "clean",
+     "flags": [
+      "--uv",
+      "smart",
+      "--drop-below",
+      "0",
+      "--no-normal",
+      "--materials",
+      "8"
+     ],
+     "voxel": {
+      "grid": 0.1,
+      "upper": 0.4,
+      "samples": 4,
+      "upper_cover": 0.25,
+      "upper_solid": true,
+      "trunk": "2,0.4"
+     },
+     "_note": "Built from its design's own cubes, not as the other styles' planted trees (their route rebuilds a crown as leaf masses and a trunk as a round tube, and a cube tree came out of it ragged, its trunk in pieces): a plain fit to the kit's box with the design's cubes kept (40,000 triangles, an intermediate), then the cube rebuild's tree mode (voxelise.py --planted-trunk): the crown in the kit's large cubes, each one flat green of the sheet's three, the whitest as blossom; the trunk built as the kit's own column and ribs, so the game draws the tree at the kit's width (a trunk as thick as the design's would shrink the tree to a third). Eight design colours are matched, not six, so that the blossoms' white keeps a colour of its own.",
+     "flags_replace": true,
+     "tris": 40000,
+     "kit": true
+    }
+   },
+   "leaf_ramp": "swatches",
+   "wood_ramp": "swatches",
+   "blossoms": 2
+  },
+  "palm-tall": {
+   "sheet": "A-trees",
+   "obj": 2,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "file": "assets/palm_a.glb",
+   "name": "palm_a",
+   "needle": "=palm_a.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk",
+    "voxel"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "5.2,8.5",
+    "--parts",
+    "500,0,2000",
+    "--parts-leaf-cell",
+    "0.05",
+    "--parts-leaf-swell",
+    "0.025",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat"
+     ]
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "5.36,8.64",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "voxel": {
+     "file": null,
+     "crop": "clean",
+     "_note": "The voxel kit has no palm: its `palm` kind draws its two trees (style.json). The model is generated and waits for a palm piece and a line in the style's file."
+    }
+   },
+   "leaf_ramp": "swatches",
+   "wood_ramp": "swatches"
+  },
+  "palm-short": {
+   "sheet": "A-trees",
+   "obj": 3,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "file": "assets/palm_c.glb",
+   "name": "palm_c",
+   "needle": "=palm_c.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk",
+    "voxel"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "3.4,4.5",
+    "--parts",
+    "450,0,2000",
+    "--parts-leaf-cell",
+    "0.05",
+    "--parts-leaf-swell",
+    "0.025",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat"
+     ]
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "3.45,4.54",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "voxel": {
+     "file": null,
+     "crop": "clean",
+     "_note": "The voxel kit has no palm: its `palm` kind draws its two trees (style.json). The model is generated and waits for a palm piece and a line in the style's file."
+    }
+   },
+   "leaf_ramp": "swatches",
+   "wood_ramp": "swatches"
+  },
+  "shrub-round": {
+   "sheet": "A-low-planting",
+   "obj": 0,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "_note": "A shrub is drawn 116 times as copies of the FIRST mesh of its file, each scaled across by 1.05 m over the file's reach (so 2.1 m across whatever it is built) and by 0.85 to 1.19 in height. Its origin is at the middle of its outline, its reach the kit's, its widest ring on the circle of that reach at 0.4 m (--round 1: the collision audit wants the whole circle), held out under the ring so that it stands on the lawn (--skin-tuck). In neon and anime it is a skin over the generated ball (--skin: 1,500 triangles, the kit's limit), coloured by what lies close behind the skin, else the nearest leaf (--skin-colour nearest), the tones matched to the design's by rank (--tones-by-rank); in anime its normals are rounded and lean up (--leaf-round 0.85 --leaf-lift 1.0). In low-poly and solarpunk it is leaves on an inside (--leaves, see shrub-leafy): as a skin it read in the game as a mossy rock and an olive lump. In voxel it is cubes on a drum (voxelise.py --drum). The same two styles built as leaves in neon and anime are the variant shrub-round-leaves.",
+   "file": "assets/shrub_round.glb",
+   "flags": [
+    "--shrub",
+    "kit",
+    "--round",
+    "1",
+    "--round-most",
+    "4",
+    "--skin",
+    "1500",
+    "--skin-colour",
+    "nearest",
+    "--all-leaf",
+    "--drop-below",
+    "0",
+    "--materials",
+    "4",
+    "--tones-by-rank",
+    "1",
+    "--skin-tuck",
+    "0.12"
+   ],
+   "needle": "=shrub_round.glb",
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--skin",
+      "400",
+      "--flat",
+      "--no-normal",
+      "--facet-colour",
+      "--leaves",
+      "420,0.15,0.085,0.5,0.07",
+      "--leaves-under",
+      "--flowers",
+      "14,0.06,#F7E4C9",
+      "--flower-centre",
+      "--core-dark",
+      "0.55",
+      "--leaf-swatches",
+      "#485729,#73852C,#BBBA34"
+     ],
+     "_note": "Leaves on an inside (--leaves), as the leafy shrub: as a faceted skin with one colour a facet it read in the game as a mossy rock. 390 leaves in the sheet's three greens (--leaf-swatches), 14 flowers in the sheet's cream with the eye the generator painted, an inside of 400 triangles: 1,436 in all."
+    },
+    "anime_cel": {
+     "lift": null,
+     "flags": [
+      "--leaf-smooth",
+      "--no-normal",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "neon_noir": {
+     "flags": [
+      "--leaf-smooth",
+      "--no-normal"
+     ]
+    },
+    "solarpunk": {
+     "flags": [
+      "--skin",
+      "250",
+      "--leaf-smooth",
+      "--no-normal",
+      "--leaf-round",
+      "0.7",
+      "--leaves",
+      "480,0.11,0.055,0.5,0.05",
+      "--leaves-under",
+      "--flowers",
+      "24,0.04,#E27987,#F4EADE",
+      "--core-dark",
+      "0.6",
+      "--materials",
+      "5"
+     ],
+     "_note": "Leaves on an inside (--leaves): as a textured skin it read in the game as an olive lump with dark patches. 480 leaves, 24 blossoms in the sheet's pink and white, an inside of 250 triangles: 1,479 in all. --materials 5 is the count of its swatches, named here because the entry's own --materials 4 would otherwise stand (build.py passes the swatch count only to a piece that names none)."
+    },
+    "voxel": {
+     "file": "assets/v2/shrub.glb",
+     "needle": "=shrub.glb",
+     "name": "shrub",
+     "mesh": "bush",
+     "voxel": {
+      "grid": 0.2,
+      "flags": [
+       "--drum",
+       "1.05,0.4,32",
+       "--close",
+       "--tones",
+       "#264822,#4E8F1C,#91C816,#F4EDE8",
+       "--tone-cubes"
+      ]
+     },
+     "_note": "The voxel kit has one shrub file for both design objects; it is built from this one. Cubes of 0.2 m (the kit's bush blocks) on a 32-sided drum 1.05 m in radius and 0.4 m high, as the kit builds its own: cubes cannot follow the footprint's disc. `--close`: the fitted skin has no underside, and would fill no cell. Every cube that shows is one of the sheet's three greens by rank, white for the whitest few (--tones with --tone-cubes), and the drum is the middle green: read face by face off the fitted piece, the drum came out #205019 and near black in the game."
+    }
+   },
+   "tex": 1024,
+   "_capture": "A shrub is planted as copies of one mesh: the capture tool finds its copies (asset_views.gd, _planted_piece), as it does a street tree's."
+  },
+  "shrub-leafy": {
+   "sheet": "A-low-planting",
+   "obj": 1,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "_note": "A loose shrub, built as leaves on an inside (--leaves): the skin, which alone made a solid mound of it, stands in the middle of its leaves as their shade, with its ring on the circle the game measures, and the generated model's own leaves stand on it as separate blades (two triangles each, in the colour the generator painted each leaf, their tones matched to the design's by rank), its flowers as flowers in the sheet's swatch colours (--flowers). Its reach is its model's (0.55 m as the kit's). The game draws this file only in low-poly and solarpunk (their skins name two shrub scenes); neon's and anime's skins name shrub_round alone. The voxel kit has one shrub file for both design objects (built from shrub-round), so there is none here.",
+   "file": "assets/shrub_leafy.glb",
+   "flags": [
+    "--shrub",
+    "kit",
+    "--round",
+    "1",
+    "--round-most",
+    "4",
+    "--skin",
+    "1500",
+    "--skin-colour",
+    "nearest",
+    "--all-leaf",
+    "--drop-below",
+    "0",
+    "--materials",
+    "4",
+    "--tones-by-rank",
+    "1",
+    "--skin-tuck",
+    "0.7"
+   ],
+   "needle": "=shrub_leafy.glb",
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--skin",
+      "400",
+      "--flat",
+      "--no-normal",
+      "--facet-colour",
+      "--leaves",
+      "380,0.18,0.09,0.5,0.075",
+      "--flowers",
+      "12,0.11,#F48785",
+      "--flower-centre",
+      "--core-dark",
+      "0.55",
+      "--leaf-swatches",
+      "#4A592A,#70822D,#B9B933"
+     ],
+     "_note": "380 leaves of 18 by 9 cm (the sheet's are large) in the sheet's three greens, 10 flowers in the sheet's coral with the yellow eye the generator painted, an inside of 400 triangles: 1,376 in all."
+    },
+    "anime_cel": {
+     "lift": null,
+     "flags": [
+      "--skin",
+      "280",
+      "--leaf-smooth",
+      "--no-normal",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0",
+      "--leaves",
+      "532,0.13,0.055,0.5,0.05",
+      "--core-dark",
+      "0.6"
+     ],
+     "_note": "532 leaves, no flowers (its sheet draws none): 1,492 triangles. Normals rounded and leaning up, as the round shrub's. Not drawn by the game until the anime skin names the file."
+    },
+    "neon_noir": {
+     "flags": [
+      "--skin",
+      "250",
+      "--leaf-smooth",
+      "--no-normal",
+      "--leaf-round",
+      "0.7",
+      "--leaves",
+      "432,0.12,0.05,0.5,0.05",
+      "--flowers",
+      "36,0.04,#5E3F8C",
+      "--core-dark",
+      "0.6"
+     ],
+     "_note": "432 leaves, 36 small blossoms in the sheet's purple: 1,494 triangles. Not drawn by the game until the neon skin names the file."
+    },
+    "solarpunk": {
+     "flags": [
+      "--skin",
+      "250",
+      "--leaf-smooth",
+      "--no-normal",
+      "--leaf-round",
+      "0.7",
+      "--leaves",
+      "465,0.13,0.055,0.5,0.05",
+      "--flowers",
+      "30,0.04,#856CA3,#F3E9DE",
+      "--core-dark",
+      "0.6",
+      "--materials",
+      "6"
+     ],
+     "_note": "465 leaves of 13 by 5.5 cm, thirty blossoms in the sheet's purple and white, an inside of 250 triangles: 1,497 in all. --materials 6 is the count of its swatches (see shrub-round)."
+    }
+   },
+   "tex": 1024
+  },
+  "flowerbed": {
+   "sheet": "A-low-planting",
+   "obj": 2,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "_note": "The whole scene is drawn under a holder and stretched until what it draws between 0.15 and 2.2 m is 3.30 by 1.30 m (three in the town). Sized by its kerb (--bed): a plain box on the kit's sides, 0.30 m high (the audit reads from 0.25 m), its stone and joints baked on from the generated kerb and its colour read off the design (--bed-colour auto); the plants take the rest of 8,000 triangles (4,000 flat facets in low-poly): the shape decides, and at 6,000 cut as one mesh the flowers melted into the leaves. Plants may hang 3 cm over the kerb. The capture tool finds a bed only once it looks at the children of the placement's node.",
+   "file": "assets/flowerbed.glb",
+   "flags": [
+    "--bed",
+    "0.30,0.03",
+    "--drop-below",
+    "0"
+   ],
+   "needle": "=flowerbed.glb",
+   "style": {
+    "lowpoly_tropical": {
+     "tris": 4000,
+     "flags": [
+      "--flat",
+      "--no-normal",
+      "--facet-colour",
+      "--bed-colour",
+      "#E0C7AB",
+      "--kerb-tones",
+      "8,14"
+     ],
+     "_note": "The kerb takes the sheet's cream stone swatch (#E0C7AB). `auto` read the design's near walls, which the drawing shades, and gave #9A8675: in the game, which shades the walls itself, the kerb came out dark taupe."
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--no-normal",
+      "--bed-colour",
+      "auto",
+      "--kerb-tones",
+      "8,14",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "_note": "The plants' normals are rounded and lean up (--leaf-round 0.85 --leaf-lift 1.0: with --bed the plants are the leaf faces, the kerb keeps its own normals)."
+    },
+    "voxel": {
+     "file": "assets/v2/flowerbed.glb",
+     "needle": "=flowerbed.glb",
+     "name": "flowerbed",
+     "mesh": "bed",
+     "voxel": {
+      "grid": 0.1,
+      "solid": 0.3,
+      "flags": [
+       "--close",
+       "--on-lines",
+       "--cover",
+       "0.3",
+       "--heap",
+       "0.3,1,1",
+       "--tones",
+       "#264A22,#4D8D1B,#92C717,#F4EEE9",
+       "--tone-cubes"
+      ]
+     },
+     "_note": "A 2 m module: the voxel skin fits two to a bed, each squeezed to 0.825 of its length. The kerb box is closed and set on the grid's lines whatever the plants do (`--close`, `--on-lines`), a solid block to its rim at 0.3 m (`solid`) with the plants heaped on it inside a rim of one cube, a cube high at least (`--heap 0.3,1,1`): the generated plants lie low and thin, and read by how much of a cell they fill they came out as one flat layer with holes. The plants' cubes take the sheet's three greens by rank and white for the whitest few, and each kerb cube the middle colour of its outer wall (--tones with --tone-cubes). The kerb is the sheet's lighter stone swatch (#8B8389, which the cutter did not find; `auto` gave #7F787E from the shaded near walls).",
+     "flags": [
+      "--bed-colour",
+      "#8B8389",
+      "--kerb-tones",
+      "8,14"
+     ]
+    },
+    "neon_noir": {
+     "kit_lights": null,
+     "flags": [
+      "--under-glow",
+      "0.243,0.257,-0.002",
+      "--bed-colour",
+      "auto",
+      "--kerb-tones",
+      "8,14"
+     ],
+     "_note": "The neon sheet draws a lit strip round the kerb under its coping, where the kit has four lamp boxes on the corners. The strip is built (a slab 14 mm high, 6 mm proud along the bed and 2 mm across it), as the part `lights` in the emitting material `lamp_glow` that the neon spec names; the kit's lamp boxes are not carried."
+    },
+    "solarpunk": {
+     "flags": [],
+     "_note": "Its sheet draws a planter of white ceramic with a timber panel and brass bands, its ends rounded. The kerb is still the plain box (the audit wants the whole rectangle, corners included), with the planter's materials baked on to it as they are: no one stone colour is set (--bed-colour) and no tones are held (--kerb-tones). The rounded ends are lost."
+    }
+   },
+   "tex": 1024,
+   "tris": 8000,
+   "frame": "open"
+  },
+  "tram-shelter": {
+   "sheet": "A-tram-shelter",
+   "obj": 0,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "_note": "Sized zone by zone (--shelter): what stands under the canopy fills the kind's footprint box with its slice between 0.15 and 2.2 m (the game stretches the piece until it does), the canopy fills the kit piece's box from front to back, the post at the open end is taken out, and the bench is parted, shortened to the footprint's 2.4 m and set against the end screen's side. The triangle count is set by eye: at 6,000 the posts and rails waver, at 12,000 they are straight. The bench is set 2 cm inside its footprint rectangle at each end and the end structures 2 cm thinner than the footprint's end screen, as the kit's are: the collision audit traces on a 2.5 cm raster, and a face exactly on the rectangle measures 10.0 cm from the next walkable cell where 10 is the limit. neon_noir and solarpunk are built from the models made of the pre-matted cut-outs (`crop`: matte), which have their panes; what each needed is in its own note.",
+   "count": 1,
+   "file": "assets/tram_shelter.glb",
+   "flags": [
+    "--shelter",
+    "-2.15,-0.40,2.15,0.75",
+    "--shelter-bench",
+    "-1.73,0.15,0.63,0.55",
+    "--uv",
+    "smart",
+    "--square-normals",
+    "12",
+    "--bake-reach",
+    "0.03",
+    "--shelter-end",
+    "0.13",
+    "--no-normal"
+   ],
+   "frame": "open",
+   "mesh": "shelter",
+   "needle": "=tram_shelter.glb",
+   "only": [
+    "anime_cel",
+    "lowpoly_tropical",
+    "neon_noir",
+    "solarpunk",
+    "voxel"
+   ],
+   "style": {
+    "anime_cel": {
+     "glow": "lamp_glow",
+     "glow_strength": 1.0,
+     "flags": [
+      "--yaw",
+      "0",
+      "--glass",
+      "glass_light,185,235,0.2,1,0.38,1",
+      "--glow-warm",
+      "--warm",
+      "15,62,0.42,0.8",
+      "--lamp-faces",
+      "auto",
+      "--shelter-set",
+      "cut=0.894",
+      "--lantern-colour",
+      "#EDE1D0"
+     ],
+     "_note": "The posts are parted from the canopy at one given height (cut=0.894 of the model's height, just under the roof's underside at 0.90): a rail between the two posts of the open end runs into them a hair under the roof (its top at 0.890), and the rule that cuts each post under what hangs beside it cuts under that rail, which leaves the screen joined to the roof."
+    },
+    "lowpoly_tropical": {
+     "flags": [
+      "--yaw",
+      "180",
+      "--flat"
+     ]
+    },
+    "neon_noir": {
+     "crop": "matte",
+     "tris": 9000,
+     "glow": "lamp_glow",
+     "glow_strength": 1.0,
+     "flags": [
+      "--yaw",
+      "180",
+      "--shelter-set",
+      "floor=auto,roof=0.05",
+      "--under-reach",
+      "2.2,0.5",
+      "--glass",
+      "glass,0,360,0,0.15,0.75,1,front",
+      "--glow-warm",
+      "--glow-pale",
+      "0.8,0.15",
+      "--pale-colour",
+      "#FEE2AF"
+     ],
+     "_note": "Built from the model made of the pre-matted cut-out (its grey panes are there; the generator painted them white). The sheet that lies under it (the cut-out's contact shadow, made solid) is taken out. Cut post by post the walk from the roof reaches the ground (the sign box's top lies between its two posts), so the whole model is cut at one height, just under the roof. The bench is as deep as the shelter and a slatted panel runs from the screen to the post at the open end: everything in front of the screen there goes. The screen stood half-way under the roof, with the sign box running from behind it to the front posts: it is moved back to the footprint's back strip. The roof's soffit is slats: the canopy is rebuilt as a plain slab (roof=0.05) and its underside baked a second time with a longer reach, so the gaps between the slats show dark. The panes are the material `glass` (white, on faces that look to the front or back) and take the design's grey through the match; the sign's face, white too, is lit and takes the sheet's cream (#FEE2AF). 9,000 triangles: the slab roof needs few."
+    },
+    "solarpunk": {
+     "crop": "matte",
+     "materials": 5,
+     "glow": "lamp_glow",
+     "glow_strength": 1.0,
+     "flags": [
+      "--yaw",
+      "0",
+      "--materials",
+      "5",
+      "--shelter-set",
+      "floor=auto,back=front",
+      "--glass",
+      "glass_light,190,240,0.15,0.6,0.35,0.85,front",
+      "--glass-colour",
+      "#A9B1AE",
+      "--glow-warm",
+      "--warm",
+      "0,0,2,2",
+      "--glow-pale",
+      "0.8,0.15",
+      "--pale-colour",
+      "#FEF2D7"
+     ],
+     "_note": "Built from the model made of the pre-matted cut-out. The generator closed the screen's back with a dark slab and painted the panes blue-grey on its front: the back is given the front's picture (back=front), and the panes, which the match takes for the solar panels' blue, are given the design's own pale grey (#A9B1AE, read off the cut-out; the sheet has no swatch for glass). The sheet that lies under the model (the contact shadow) is taken out. The posts of the frame stand before the screen, so the bench is what stands further forward than they do, and it is as deep as the shelter: the post at the open end is taken from where it starts. Its sheet shows three swatches and the design has five colours (frame, timber, cream, glass, panel blue), so the number is given. Only the sign's face is lit (pale; the warm rule would light the timber and the brass rings, so it is given a range nothing is in); the lamp strips the design draws under the roof are not in the model."
+    },
+    "voxel": {
+     "file": "assets/v2/tram_shelter.glb",
+     "voxel": {
+      "sheets": 0.9
+     },
+     "flags": [
+      "--yaw",
+      "0",
+      "--materials",
+      "5",
+      "--shelter",
+      "-2.15,-0.40,2.15,0.80",
+      "--shelter-bench",
+      "-1.75,0.2,0.65,0.6,0.50",
+      "--shelter-end",
+      "0.1",
+      "--shelter-set",
+      "roof=0.05,height=3.0,feet=0.2",
+      "--shelter-screen",
+      "#8E8B8A"
+     ],
+     "_note": "On the kit's grid of 0.1 m cubes: the footprint box is taken 1.20 m deep (z -0.40 to 0.80, as the kit piece's own slice; 1.15 cannot be built from cubes, and the game draws both 0.958 from back to front), the bench's rectangle and the end structure's thickness are whole cells, the seat's top is 0.50. The model has a plank on the ground behind its screen, which is taken out (it would be the back of the slice). The piece is 3.0 m high, not the kit's 3.3: the kit carries a lettered fascia on its roof. Its feet, two cubes wide and three high, are pressed down to two cubes (feet=0.2): higher, they stand in the walking band within 10 cm of the walkable cells beside the sign. The roof is rebuilt as a plain slab so that the cubes find it solid. The screen's tiles, which the generator painted nearly as dark as the frame, are given the design's grey (#8E8B8A, read off the cut-out). In the cubes, the sign's panel is filled as a sheet (`sheets`). The number of design colours is given (5): with the sheet's four swatches one of them is the tiles' grey, and the match then turns the lighter half of the dark frame grey as well (the generator painted frame and tiles nearly alike).",
+     "materials": 5
+    }
+   },
+   "tex": 2048,
+   "tris": 12000
+  },
+  "fountain": {
+   "sheet": "A-fountain",
+   "obj": 0,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "_note": "Sized and taken apart by rule (--fountain): the basin's wall and rim are a ring built on the footprint (outer face at 1.5 m, top at 0.45 m), the water in the basin is one flat disc painted from the generated water (its deep colour moved to the sheet's water swatch, the rings of foam where the streams land kept), and what the generator painted as water above the basin (the still water in the bowls, the falling sheets, the jet) is in the same part `water`, all in the material water_drawn. `--fountain-falls drop` leaves the falling water out; `--fountain-pool flat` makes the basin's water one flat colour in a material `water`, as the kit's is. In neon_noir the piece is built from the model of seed 7, in voxel the basin stays a ring and only the centre piece is cubes: see each style's own note.",
+   "count": 1,
+   "file": "assets/fountain.glb",
+   "flags": [
+    "--fountain",
+    "1.5,0.45,kit",
+    "--yaw",
+    "0",
+    "--uv",
+    "smart",
+    "--bake-reach",
+    "0.03",
+    "--fountain-pool",
+    "painted"
+   ],
+   "frame": "open",
+   "needle": "=fountain.glb",
+   "only": [
+    "anime_cel",
+    "lowpoly_tropical",
+    "solarpunk",
+    "neon_noir",
+    "voxel"
+   ],
+   "style": {
+    "anime_cel": {
+     "timber_colour": "swatches",
+     "flags": [
+      "--no-normal"
+     ]
+    },
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat"
+     ]
+    },
+    "solarpunk": {
+     "tris": 14000,
+     "materials": 6,
+     "flags": [
+      "--materials",
+      "6",
+      "--water",
+      "185,203,0.2,0.75,0.85"
+     ],
+     "_note": "Its sheet's swatches were not all found (two of them), so the number of design colours is given (6: cream, timber, gold, leaf, panel, water). The petals carry solar panels the same blue family as the water, so what counts as water is held to the water's own hue (185 to 203 degrees); a quarter of the panels' faces still fall in it and go into the water's part and material (they keep their own colours). 14,000 triangles: at 9,000 the plants round the trunk are a few large spikes."
+    },
+    "neon_noir": {
+     "raw": "fountain-seed7",
+     "glow": "lamp_glow",
+     "glow_strength": 1.0,
+     "flags": [
+      "--glow-warm",
+      "--warm",
+      "5,25,0.5,0.16",
+      "--lantern-colour",
+      "#ECA538",
+      "--glow-colour",
+      "#ECA538",
+      "--fountain-rim",
+      "#523729"
+     ],
+     "_note": "Built from the model generated from seed 7 (`raw`: fountain-seed7): its falling water is white streaked sheets, kept as still geometry in the part `water`. The amber strip round the wall, which the generator painted a dull orange-red, is lit: the warm rule is set to its colour (--warm 5,25,0.5,0.16) and it takes the design's amber (#ECA538, read off the cut-out). The rim's top takes the sheet's timber swatch (#523729): the generator painted it nearly as dark as the stone. The amber strips the design draws on the centre piece are not in the model."
+    },
+    "voxel": {
+     "file": "assets/v2/fountain.glb",
+     "mesh": "basin",
+     "tex": 512,
+     "voxel": {
+      "hollows": true
+     },
+     "flags": [
+      "--fountain",
+      "1.5,0.50,kit",
+      "--fountain-pool",
+      "flat",
+      "--fountain-level",
+      "0.40",
+      "--fountain-wall",
+      "top",
+      "--no-normal"
+     ],
+     "_note": "The basin stays a round ring on the footprint (cubes cannot follow the circle the game holds it to) with its top at 0.50, where the voxel perch seats meet it; only what stands inside it is rebuilt from cubes, and all of it is the one part `basin`. The model's basin is a saucer three cubes deep where the sheet draws one: the water is put at 0.40 and what stands in it raised with it. The ring's walls take the colour of its top (a basin of cubes has no round wall to bake from) and the water is one flat colour, the sheet's swatch. The centre piece's bowls are shells: what they enclose counts as inside (`hollows`).",
+     "_no_relief": "No relief map: the voxel kit's pieces carry none, and the ring kept from the fitted piece would bring one without tangents (the kits' validator warns of that)."
+    }
+   },
+   "tex": 2048,
+   "tris": 9000,
+   "water_colour": "swatches"
+  },
+  "palm-mid": {
+   "sheet": "A-trees",
+   "obj": 2,
+   "crop": "clean",
+   "file": "assets/palm_b.glb",
+   "name": "palm_b",
+   "needle": "=palm_b.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "4.4,6.5",
+    "--parts",
+    "500,0,2000",
+    "--parts-leaf-cell",
+    "0.05",
+    "--parts-leaf-swell",
+    "0.025",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat"
+     ]
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "4.42,6.6",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ]
+    }
+   },
+   "raw": "palm-tall",
+   "_note": "The kit's middle palm has no design object: it is the tall palm's model sized to the middle palm's box, so that every palm is new and each placement keeps the piece it draws today.",
+   "leaf_ramp": "swatches",
+   "wood_ramp": "swatches"
+  },
+  "street-tree-a-kit-green": {
+   "sheet": "A-trees",
+   "obj": 0,
+   "crop": "clean",
+   "file": "assets/tree_round_a.glb",
+   "name": "tree_round_a",
+   "needle": "=tree_round_a.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "4.9,5.46",
+    "--parts",
+    "700,0,2000",
+    "--parts-leaf-cell",
+    "0.07",
+    "--parts-leaf-swell",
+    "0.03",
+    "--crown-fill",
+    "0.5,40",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle",
+    "--planted-clear",
+    "2.4"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat",
+      "--planted-box",
+      "4.59,5.2"
+     ],
+     "leaf_ramp": "#2F7A34,#3F8F3A,#6DB33F,#A7C94A"
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "5.2,5.5",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#18402A,#265E36,#3D7E45",
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#3B7B3B,#5C9F40,#8DC555,#BCDC6E"
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#3D6E2C,#5A9233,#86BA4A,#BFD66A"
+    }
+   },
+   "_note": "The same piece with its leaves moved to the anime kit's leaf green (the mean of the kit trees' leaf colours), to set beside the design sheet's own greens.",
+   "variant": "kit-green",
+   "raw": "street-tree-a",
+   "wood_ramp": "swatches",
+   "blossoms": 2
+  },
+  "street-tree-b-kit-green": {
+   "sheet": "A-trees",
+   "obj": 1,
+   "crop": "clean",
+   "file": "assets/tree_round_b.glb",
+   "name": "tree_round_b",
+   "needle": "=tree_round_b.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "3.5,4.36",
+    "--parts",
+    "600,0,1800",
+    "--parts-leaf-cell",
+    "0.07",
+    "--parts-leaf-swell",
+    "0.03",
+    "--crown-fill",
+    "0.5,40",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle",
+    "--planted-clear",
+    "2.4"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat",
+      "--planted-box",
+      "3.38,3.6"
+     ],
+     "leaf_ramp": "#2F7A34,#3F8F3A,#6DB33F,#A7C94A"
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "3.7,4.41",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#18402A,#265E36,#3D7E45",
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#3B7B3B,#5C9F40,#8DC555,#BCDC6E"
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0",
+      "--planted-leaf-from",
+      "0.5"
+     ],
+     "leaf_ramp": "#3D6E2C,#5A9233,#86BA4A,#BFD66A"
+    }
+   },
+   "variant": "kit-green",
+   "raw": "street-tree-b",
+   "_note": "The same piece with its leaves moved to the anime kit's leaf green (the mean of the kit trees' leaf colours), to set beside the design sheet's own greens.",
+   "wood_ramp": "swatches",
+   "blossoms": 2
+  },
+  "palm-tall-kit-green": {
+   "sheet": "A-trees",
+   "obj": 2,
+   "crop": "clean",
+   "file": "assets/palm_a.glb",
+   "name": "palm_a",
+   "needle": "=palm_a.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "5.2,8.5",
+    "--parts",
+    "500,0,2000",
+    "--parts-leaf-cell",
+    "0.05",
+    "--parts-leaf-swell",
+    "0.025",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat"
+     ],
+     "leaf_ramp": "#2F7A34,#3F8F3A,#6DB33F,#A7C94A"
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "5.36,8.64",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#18402A,#265E36,#3D7E45",
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#3B7B3B,#5C9F40,#8DC555,#BCDC6E"
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#3D6E2C,#5A9233,#86BA4A,#BFD66A"
+    }
+   },
+   "variant": "kit-green",
+   "raw": "palm-tall",
+   "_note": "The same piece with its leaves moved to the anime kit's leaf green (the mean of the kit trees' leaf colours), to set beside the design sheet's own greens.",
+   "wood_ramp": "swatches"
+  },
+  "palm-short-kit-green": {
+   "sheet": "A-trees",
+   "obj": 3,
+   "crop": "clean",
+   "file": "assets/palm_c.glb",
+   "name": "palm_c",
+   "needle": "=palm_c.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "3.4,4.5",
+    "--parts",
+    "450,0,2000",
+    "--parts-leaf-cell",
+    "0.05",
+    "--parts-leaf-swell",
+    "0.025",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat"
+     ],
+     "leaf_ramp": "#2F7A34,#3F8F3A,#6DB33F,#A7C94A"
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "3.45,4.54",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#18402A,#265E36,#3D7E45",
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#3B7B3B,#5C9F40,#8DC555,#BCDC6E"
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#3D6E2C,#5A9233,#86BA4A,#BFD66A"
+    }
+   },
+   "variant": "kit-green",
+   "raw": "palm-short",
+   "_note": "The same piece with its leaves moved to the anime kit's leaf green (the mean of the kit trees' leaf colours), to set beside the design sheet's own greens.",
+   "wood_ramp": "swatches"
+  },
+  "palm-mid-kit-green": {
+   "sheet": "A-trees",
+   "obj": 2,
+   "crop": "clean",
+   "file": "assets/palm_b.glb",
+   "name": "palm_b",
+   "needle": "=palm_b.glb",
+   "kit": false,
+   "tex": 1024,
+   "planted": true,
+   "only": [
+    "lowpoly_tropical",
+    "neon_noir",
+    "anime_cel",
+    "solarpunk"
+   ],
+   "flags": [
+    "--uv",
+    "smart",
+    "--drop-below",
+    "0",
+    "--no-normal",
+    "--far",
+    "800",
+    "--planted",
+    "4.4,6.5",
+    "--parts",
+    "500,0,2000",
+    "--parts-leaf-cell",
+    "0.05",
+    "--parts-leaf-swell",
+    "0.025",
+    "--bake-reach-most",
+    "0.05",
+    "--bake-wood-reach",
+    "0.06",
+    "--leaf-despeckle"
+   ],
+   "style": {
+    "lowpoly_tropical": {
+     "flags": [
+      "--flat"
+     ],
+     "leaf_ramp": "#2F7A34,#3F8F3A,#6DB33F,#A7C94A"
+    },
+    "neon_noir": {
+     "flags": [
+      "--planted",
+      "4.42,6.6",
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#18402A,#265E36,#3D7E45",
+     "rough": 0.85,
+     "_rough": "The kit's foliage roughness, not the neon style's 0.6: with their leaf normals leaning up, the glossier leaves took the night's light as a pale sheen, like frost on the crown (seen in the game; cured by this alone)."
+    },
+    "anime_cel": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-ramp-from",
+      "0.4",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#3B7B3B,#5C9F40,#8DC555,#BCDC6E"
+    },
+    "solarpunk": {
+     "flags": [
+      "--leaf-smooth",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0"
+     ],
+     "leaf_ramp": "#3D6E2C,#5A9233,#86BA4A,#BFD66A"
+    }
+   },
+   "raw": "palm-tall",
+   "_note": "The same piece with its leaves moved to the anime kit's leaf green (the mean of the kit trees' leaf colours), to set beside the design sheet's own greens.",
+   "variant": "kit-green",
+   "wood_ramp": "swatches"
+  },
+  "shrub-round-leaves": {
+   "sheet": "A-low-planting",
+   "obj": 0,
+   "crop": "clean",
+   "batch": "01a-square-props",
+   "file": "assets/shrub_round.glb",
+   "needle": "=shrub_round.glb",
+   "tex": 1024,
+   "variant": "leaves",
+   "raw": "shrub-round",
+   "only": [
+    "anime_cel",
+    "neon_noir"
+   ],
+   "flags": [
+    "--shrub",
+    "kit",
+    "--round",
+    "1",
+    "--round-most",
+    "4",
+    "--skin",
+    "1500",
+    "--skin-colour",
+    "nearest",
+    "--all-leaf",
+    "--drop-below",
+    "0",
+    "--materials",
+    "4",
+    "--tones-by-rank",
+    "1",
+    "--skin-tuck",
+    "0.12"
+   ],
+   "style": {
+    "anime_cel": {
+     "lift": null,
+     "flags": [
+      "--skin",
+      "280",
+      "--leaf-smooth",
+      "--no-normal",
+      "--leaf-round",
+      "0.85",
+      "--leaf-lift",
+      "1.0",
+      "--leaves",
+      "542,0.11,0.055,0.5,0.05",
+      "--leaves-under",
+      "--core-dark",
+      "0.6"
+     ]
+    },
+    "neon_noir": {
+     "flags": [
+      "--skin",
+      "250",
+      "--leaf-smooth",
+      "--no-normal",
+      "--leaf-round",
+      "0.7",
+      "--leaves",
+      "546,0.10,0.05,0.5,0.045",
+      "--leaves-under",
+      "--core-dark",
+      "0.6"
+     ]
+    }
+   },
+   "_note": "Not placed. The round shrub built as leaves on an inside in the two styles where the accepted skin was kept (anime: with the leaf normals leaning up, as asked; neon: fine at night), to choose from: out-leaves/<style>/shrub_round.glb."
+  }
+ },
+ "styles": {
+  "lowpoly_tropical": {
+   "study": "11-low-poly-tropical-diorama",
+   "rough": 0.85,
+   "flatten": 0.55
+  },
+  "neon_noir": {
+   "study": "10-neon-noir",
+   "rough": 0.6,
+   "flatten": 0.25,
+   "kit_lights": "lights"
+  },
+  "anime_cel": {
+   "study": "06-anime",
+   "rough": 0.85,
+   "flatten": 0.6,
+   "lift": 1.12,
+   "_note": "The anime sheets are drawn with painted shadows, and a piece's colours are matched to the average of light and shadow. They are lifted 12% so that what the game lights comes out as the design's lit tones; the game's toon shading supplies the shadows."
+  },
+  "solarpunk": {
+   "study": "09-solarpunk",
+   "rough": 0.85,
+   "flatten": 0.5,
+   "materials": "swatches"
+  },
+  "voxel": {
+   "study": "02-voxel",
+   "rough": 0.9,
+   "flatten": 0.8,
+   "materials": "swatches",
+   "voxel": {
+    "grid": 0.1
+   },
+   "_note": "The voxel kit keeps its pieces under other names (assets/v2/), on a grid of 0.1 m cubes. Each piece is fitted like any other, then rebuilt from cubes (voxelise.py)."
+  }
+ },
+ "image_format": "WEBP",
+ "image_quality": 90,
+ "_crops": "A piece is generated from the plain crop of its object unless it says `crop: clean` (the swatches and neighbours painted out) or `crop: matte` (a cut-out with its own transparency, for an object with grey glass in it); for one style, `style.<style>.crop`. The solarpunk and voxel benches and perch seats were generated again from the cleaned crop after their first models came with the swatches as slabs; everything in the batch 01a-square-props is generated from the cleaned crop, but the neon and solarpunk tram shelters, which are from the matte.",
+ "_planted": "Street trees and palms are planted by the hundred as copies of the file's first mesh. An entry with `planted` is fitted with --planted (see fit_generated.py), has no kit box (`kit`: false) and writes a far twin, which `place` copies with it where the kit has one. Their triangle counts are per copy: set by frame time, not by the kit's limit alone.",
+ "kit_leaf_green": {
+  "lowpoly_tropical": "#2F7A34,#3F8F3A,#6DB33F,#A7C94A",
+  "neon_noir": "#18402A,#265E36,#3D7E45",
+  "anime_cel": "#3B7B3B,#5C9F40,#8DC555,#BCDC6E",
+  "solarpunk": "#3D6E2C,#5A9233,#86BA4A,#BFD66A",
+  "voxel": "#2E8A2E,#4CAF3C,#86CF45",
+  "_note": "Each kit's own leaf greens, darkest to lightest, read from the colours of its street trees' leaf materials: for the variant that keeps a design sheet's shape and takes the kit's greens."
+ },
+ "sets": {
+  "_about": "Names for groups of pieces, written @name where a piece's name is asked for (build.py, run_all.sh).",
+  "first": [
+   "bench",
+   "cafe-chair",
+   "reading-chair",
+   "great-tree",
+   "perch-seat"
+  ],
+  "first-variants": [
+   "bench-worn",
+   "great-tree-first-sheet"
+  ],
+  "trees": [
+   "street-tree-a",
+   "street-tree-b",
+   "palm-tall",
+   "palm-short",
+   "palm-mid"
+  ],
+  "trees-kit-green": [
+   "street-tree-a-kit-green",
+   "street-tree-b-kit-green",
+   "palm-tall-kit-green",
+   "palm-short-kit-green",
+   "palm-mid-kit-green"
+  ],
+  "terrace": [
+   "cafe-table",
+   "umbrella",
+   "planter"
+  ],
+  "fixtures": [
+   "lamp-post",
+   "bollard",
+   "railing"
+  ],
+  "planting": [
+   "shrub-round",
+   "shrub-leafy",
+   "flowerbed"
+  ],
+  "water-shelter": [
+   "fountain",
+   "tram-shelter"
+  ],
+  "props": [
+   "street-tree-a",
+   "street-tree-b",
+   "palm-tall",
+   "palm-short",
+   "palm-mid",
+   "cafe-table",
+   "umbrella",
+   "planter",
+   "lamp-post",
+   "bollard",
+   "railing",
+   "shrub-round",
+   "shrub-leafy",
+   "flowerbed",
+   "fountain",
+   "tram-shelter"
+  ]
+ },
+ "_fixtures": "A street fixture's entry names its `contract` (lamp, bollard, railing): check.py then holds it to fixture_rules.py. `kit: false` with `size` gives the box it is sized to in place of the kit piece's; `post_file` is a railing's second file; `size_as_drawn` names the axes on which it keeps its design's size and not the kit's spec, and why."
+}

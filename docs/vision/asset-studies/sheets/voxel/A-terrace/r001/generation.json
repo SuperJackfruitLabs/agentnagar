@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "voxel.A-terrace",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "da090cdf139fb16af9928e397d5fff16291632c82513707f50a2c2286f441fd1",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "44dc05f10969096736e9102484613884914a3565dd495dd90f208b14d4208578",
+    "is_the_jobs": false,
+    "correction": "Change only non-voxel curved or diagonal geometry. Rebuild the round planter pot as a stepped round footprint made entirely from identical axis-aligned grey cubes on one grid, with square stair-step corners and no smooth cylinder, bevels, polygon wedges or diagonal faces. Rebuild any sloped canopy blocks and clipped/diagonal table-edge faces as crisp square cubes on their respective single grids, retaining the round stepped table and orange-white stepped umbrella silhouette. Preserve the four whole objects, central table leg with spread foot, umbrella weighted base, square planter and all plants, positions, scales, colours, swatch rows, lighting and 1536 x 1024 landscape composition. No text or new objects."
+  },
+  "source_paths": [
+    "exec-86d61b5c-3e27-40a9-804c-81b6fec4f318.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/voxel/street.jpg",
+    "../../../../refs/panels/voxel/gathering.jpg",
+    "../../../../refs/panels/voxel/park.jpg"
+  ],
+  "edit_of": null
+}

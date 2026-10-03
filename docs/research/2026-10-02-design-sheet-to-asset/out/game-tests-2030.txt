@@ -1,0 +1,496 @@
+started 2026-10-02 20:30:43
+Initialize godot-rust (API v4.6.stable.official, runtime v4.6.3.stable.official, safeguards balanced)
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+chat: a 64 KiB reply over 259 chunks, the worst frame 7.1 ms (budget 16 ms)
+chat: 780 events taken in 1.5 ms, drawn over 9 frames, the worst 8.6 ms (budget 16 ms)
+ERROR: collision audit: a tram runs on line:gone, which the layout does not hold
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] _tram_overlap (res://tools/collision_audit/audit.gd:590)
+       [1] test_a_tram_on_an_unknown_line_still_counts_at_the_default_length (res://tests/test_collision_audit.gd:322)
+       [2] _init (res://tests/run_all.gd:59)
+       [3] test_watching_attaches_and_never_opens_a_session (res://tests/test_chat_app.gd:410)
+       [4] until (res://tests/station_stubs.gd:295)
+WARNING: player: StopUsing refused: { "error": { "code": "refused", "message": "not now" } }
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] _command (res://core/player.gd:800)
+         [1] stop_using (res://core/player.gd:451)
+         [2] _on_computer_left (res://main.gd:1823)
+         [3] leave (res://core/station/computer_screen.gd:815)
+         [4] _input (res://core/station/computer_screen.gd:860)
+         [5] tap (res://tests/test_computer_screen.gd:177)
+         [6] test_a_refused_or_held_back_stop_never_strands_the_player (res://tests/test_computer_screen.gd:364)
+         [7] _init (res://tests/run_all.gd:59)
+         [8] test_a_hot_desk_shows_the_station_chooser (res://tests/test_computer_screen.gd:714)
+         [9] settle (res://tests/test_computer_screen.gd:155)
+door entry, anime_cel (tick 300): entries that ended inside / attempts
+  door                     straight in  sweep        keys 45°     first person
+  door:workshop-plaza      9/9          462/462      —            1/1
+  door:workshop-commons    5/5          231/231      —            1/1
+  door:commons-plaza       9/9          462/462      —            1/1
+  door:commons-workshop    5/5          231/231      —            1/1
+  door:reading-plaza       9/9          462/462      —            1/1
+  (2745 ms)
+door entry, lowpoly_tropical (tick 300): entries that ended inside / attempts
+  door                     straight in  sweep        keys 45°     first person
+  door:workshop-plaza      9/9          462/462      —            1/1
+  door:workshop-commons    5/5          231/231      —            1/1
+  door:commons-plaza       9/9          462/462      —            1/1
+  door:commons-workshop    5/5          231/231      —            1/1
+  door:reading-plaza       9/9          462/462      —            1/1
+  (2996 ms)
+door entry, neon_noir (tick 300): entries that ended inside / attempts
+  door                     straight in  sweep        keys 45°     first person
+  door:workshop-plaza      9/9          462/462      —            1/1
+  door:workshop-commons    5/5          231/231      —            1/1
+  door:commons-plaza       9/9          462/462      —            1/1
+  door:commons-workshop    5/5          231/231      —            1/1
+  door:reading-plaza       9/9          462/462      —            1/1
+  (3084 ms)
+door entry, pixel_art (tick 300): entries that ended inside / attempts
+  door                     straight in  sweep        keys 45°     first person
+  door:workshop-plaza      9/9          462/462      28/28        —
+  door:workshop-commons    5/5          231/231      14/14        —
+  door:commons-plaza       9/9          462/462      28/28        —
+  door:commons-workshop    5/5          231/231      14/14        —
+  door:reading-plaza       9/9          462/462      28/28        —
+  (1840 ms)
+door entry, solarpunk (tick 300): entries that ended inside / attempts
+  door                     straight in  sweep        keys 45°     first person
+  door:workshop-plaza      9/9          462/462      —            1/1
+  door:workshop-commons    5/5          231/231      —            1/1
+  door:commons-plaza       9/9          462/462      —            1/1
+  door:commons-workshop    5/5          231/231      —            1/1
+  door:reading-plaza       9/9          462/462      —            1/1
+  (3186 ms)
+door entry, voxel (tick 300): entries that ended inside / attempts
+  door                     straight in  sweep        keys 45°     first person
+  door:workshop-plaza      9/9          462/462      —            1/1
+  door:workshop-commons    5/5          231/231      —            1/1
+  door:commons-plaza       9/9          462/462      —            1/1
+  door:commons-workshop    5/5          231/231      —            1/1
+  door:reading-plaza       9/9          462/462      —            1/1
+  (1943 ms)
+sway: p90 0.215 ms, median 0.187 ms; machine factor 1.00, budget 0.300 ms
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid status code. Got: '401', expected '101'.
+   at: _verify_server_response (modules/websocket/wsl_peer.cpp:428)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+ERROR: Invalid response headers.
+   at: _do_client_handshake (modules/websocket/wsl_peer.cpp:404)
+   GDScript backtrace (most recent call first):
+       [0] _poll (res://core/station/live/live_socket.gd:263)
+city: The city extension is not built. Run: city/scripts/build-godot.sh then reopen this project.
+WARNING: player: Go refused: { "error": { "code": "not-yours", "message": "a session commands only its own occupant" } }
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] _command (res://core/player.gd:800)
+         [1] _go (res://core/player.gd:792)
+         [2] go_room (res://core/player.gd:355)
+         [3] _on_map_go (res://main.gd:1384)
+         [4] press_go (res://core/map/map_screen.gd:732)
+         [5] test_a_refused_go_is_the_huds_notice (res://tests/test_map_flow.gd:166)
+         [6] _init (res://tests/run_all.gd:59)
+         [7] test_the_world_is_as_it_was_afterwards (res://tests/test_map_base.gd:100)
+ERROR: nav: the grid's runs cover 5 cells of its 4 by 2
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] _load (res://core/nav_query.gd:81)
+       [1] test_a_grid_whose_runs_do_not_cover_its_cells_is_an_error (res://tests/test_nav_query.gd:106)
+       [2] _init (res://tests/run_all.gd:59)
+       [3] test_the_picker_has_two_columns_below_900_pixels (res://tests/test_narrow_layout.gd:117)
+       [4] settle (res://tests/test_narrow_layout.gd:77)
+ERROR: nav: the grid's runs cover 10 cells of its 4 by 2
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] _load (res://core/nav_query.gd:81)
+       [1] test_a_grid_whose_runs_do_not_cover_its_cells_is_an_error (res://tests/test_nav_query.gd:106)
+       [2] _init (res://tests/run_all.gd:59)
+       [3] test_the_picker_has_two_columns_below_900_pixels (res://tests/test_narrow_layout.gd:117)
+       [4] settle (res://tests/test_narrow_layout.gd:77)
+city: The world did not load
+city: boom
+files: 1 MiB placed over 65 frames, the worst 5.1 ms (budget 16 ms)
+changes: 1 MiB placed over 65 frames, the worst 5.1 ms (budget 16 ms)
+files: two 1 MiB lines placed over 1 frames, the worst 3.2 ms (budget 16 ms)
+logs: 20000 lines into a full ring with 10000 matches in 100 ms (budget 1500 ms)
+terminal burst: 200 KB in 11.9 ms over 11 frames (budget 400 ms)
+WARNING: style pack: res://tests/fixtures/broken_pack could not build the world
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] _fail (res://core/style_host.gd:111)
+         [1] activate (res://core/style_host.gd:145)
+         [2] test_failed_build_keeps_previous_pack (res://tests/test_style_host.gd:67)
+         [3] _init (res://tests/run_all.gd:59)
+         [4] test_a_stand_in_map_picture_is_not_kept (res://tests/test_style_host.gd:291)
+WARNING: placement:odd-hall is a guild-hall placement, but a guild-hall's art is the exteriors section (guild-hall), drawn for a facility; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] activate (res://core/style_host.gd:143)
+         [5] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [6] _init (res://tests/run_all.gd:59)
+         [7] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-tram is a tram placement, but a tram's art is the vehicle a line's projection runs; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] activate (res://core/style_host.gd:143)
+         [5] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [6] _init (res://tests/run_all.gd:59)
+         [7] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-hall is a guild-hall placement, but a guild-hall's art is the exteriors section (guild-hall), drawn for a facility; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pixel_art/pack.gd:453)
+         [2] _placements (res://styles/pixel_art/pack.gd:422)
+         [3] build_world (res://styles/pixel_art/pack.gd:311)
+         [4] activate (res://core/style_host.gd:143)
+         [5] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [6] _init (res://tests/run_all.gd:59)
+         [7] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-tram is a tram placement, but a tram's art is the vehicle a line's projection runs; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pixel_art/pack.gd:453)
+         [2] _placements (res://styles/pixel_art/pack.gd:422)
+         [3] build_world (res://styles/pixel_art/pack.gd:311)
+         [4] activate (res://core/style_host.gd:143)
+         [5] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [6] _init (res://tests/run_all.gd:59)
+         [7] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-hall is a guild-hall placement, but a guild-hall's art is the exteriors section (guild-hall), drawn for a facility; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] activate (res://core/style_host.gd:143)
+         [5] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [6] _init (res://tests/run_all.gd:59)
+         [7] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-tram is a tram placement, but a tram's art is the vehicle a line's projection runs; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] activate (res://core/style_host.gd:143)
+         [5] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [6] _init (res://tests/run_all.gd:59)
+         [7] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-hall is a guild-hall placement, but a guild-hall's art is the exteriors section (guild-hall), drawn for a facility; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] build_world (res://styles/anime_cel/pack.gd:31)
+         [5] activate (res://core/style_host.gd:143)
+         [6] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [7] _init (res://tests/run_all.gd:59)
+         [8] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-tram is a tram placement, but a tram's art is the vehicle a line's projection runs; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] build_world (res://styles/anime_cel/pack.gd:31)
+         [5] activate (res://core/style_host.gd:143)
+         [6] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [7] _init (res://tests/run_all.gd:59)
+         [8] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-hall is a guild-hall placement, but a guild-hall's art is the exteriors section (guild-hall), drawn for a facility; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] build_world (res://styles/lit/lit_pack.gd:63)
+         [5] activate (res://core/style_host.gd:143)
+         [6] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [7] _init (res://tests/run_all.gd:59)
+         [8] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-tram is a tram placement, but a tram's art is the vehicle a line's projection runs; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] build_world (res://styles/lit/lit_pack.gd:63)
+         [5] activate (res://core/style_host.gd:143)
+         [6] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [7] _init (res://tests/run_all.gd:59)
+         [8] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-hall is a guild-hall placement, but a guild-hall's art is the exteriors section (guild-hall), drawn for a facility; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] build_world (res://styles/lit/lit_pack.gd:63)
+         [5] activate (res://core/style_host.gd:143)
+         [6] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [7] _init (res://tests/run_all.gd:59)
+         [8] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: placement:odd-tram is a tram placement, but a tram's art is the vehicle a line's projection runs; a placeholder marks it
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] warn_drawn_elsewhere (res://styles/style_pack.gd:222)
+         [1] _placement (res://styles/pack_3d.gd:420)
+         [2] _placements (res://styles/pack_3d.gd:298)
+         [3] build_world (res://styles/pack_3d.gd:216)
+         [4] build_world (res://styles/lit/lit_pack.gd:63)
+         [5] activate (res://core/style_host.gd:143)
+         [6] test_a_building_or_vehicle_placed_as_a_placement_is_warned_of (res://tests/test_style_pack.gd:160)
+         [7] _init (res://tests/run_all.gd:59)
+         [8] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+WARNING: style pack: res://tests/fixtures/broken_pack could not build the world
+     at: push_warning (core/variant/variant_utility.cpp:1034)
+     GDScript backtrace (most recent call first):
+         [0] _fail (res://core/style_host.gd:111)
+         [1] activate (res://core/style_host.gd:145)
+         [2] _activate (res://main.gd:837)
+         [3] boot (res://main.gd:273)
+         [4] test_a_style_that_fails_on_the_title_path_shows_its_error_over_the_title (res://tests/test_title.gd:624)
+         [5] _init (res://tests/run_all.gd:59)
+         [6] test_the_map_picture_is_kept_until_the_size_or_the_style_changes (res://tests/test_style_host.gd:271)
+city: That style could not be shown: res://tests/fixtures/broken_pack could not build the world
+work: 303 cards, the worst board event 2.81 ms (budget 4 ms)
+PASS 920, FAIL 0
+exit 0
+ended 20:45:18

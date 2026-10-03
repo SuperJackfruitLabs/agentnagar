@@ -1,0 +1,15 @@
+  warm-lowpoly_tropical-1: card 67 C before, 74 C after (thrown away)
+  warm-lowpoly_tropical-2: card 74 C before, 76 C after (thrown away)
+  warm-lowpoly_tropical-3: card 76 C before, 76 C after (thrown away)
+lowpoly_tropical: card steady at 76 C after 3 warming runs
+  kit-lowpoly_tropical-1: card 76 C before, 77 C after
+  new-lowpoly_tropical-1: card 77 C before, 78 C after
+  new-lowpoly_tropical-2: card 78 C before, 80 C after
+  kit-lowpoly_tropical-2: card 80 C before, 79 C after
+  warm-neon_noir-1: card 79 C before, 78 C after (thrown away)
+  warm-neon_noir-2: card 78 C before, 78 C after (thrown away)
+neon_noir: card steady at 78 C after 2 warming runs
+  kit-neon_noir-1: card 78 C before, 79 C after
+  new-neon_noir-1: card 79 C before, 79 C after
+  new-neon_noir-2: card 79 C before, 79 C after
+  kit-neon_noir-2: card 79 C before, 79 C after

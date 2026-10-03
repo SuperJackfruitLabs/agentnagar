@@ -1,0 +1,184 @@
+{
+ "raw_tris": 141228,
+ "metal_map_ignored": true,
+ "loose_parts": 2,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": null,
+ "arm": {
+  "reach_each_way": [
+   0.0568,
+   0.0567,
+   0.0568,
+   0.0566
+  ],
+  "turn": 0.0
+ },
+ "axis": {
+  "off_the_middle_of_its_box_m": [
+   0.0,
+   -0.0003
+  ]
+ },
+ "scale": [
+  4.1847,
+  4.1847,
+  4.1847
+ ],
+ "stretch": 1.0,
+ "hang_above": null,
+ "yaw": 0.0,
+ "box_min": [
+  -0.238,
+  -0.242,
+  0.0
+ ],
+ "box_max": [
+  0.238,
+  0.243,
+  4.2
+ ],
+ "rebuilt_surface_m": 0.004,
+ "hidden_faces_dropped": {
+  "of": 9000,
+  "dropped": 0
+ },
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 1.12,
+   "p95_mm": 2.8,
+   "max_mm": 5.4,
+   "measured_from": "the rebuilt surface, its hidden faces dropped"
+  }
+ ],
+ "tris": 1500,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 1.12,
+  "p95_mm": 2.8,
+  "max_mm": 5.4,
+  "measured_from": "the rebuilt surface, its hidden faces dropped"
+ },
+ "bake_reach_m": 0.012,
+ "diagonal_m": 4.255,
+ "weighted_normals": true,
+ "texels_used": 0.916,
+ "materials": [
+  {
+   "design": [
+    96.0,
+    -0.1,
+    9.5
+   ],
+   "got": [
+    98.9,
+    -0.8,
+    5.5
+   ],
+   "share": 0.12,
+   "reached": true,
+   "delta_e": 5.0
+  },
+  {
+   "design": [
+    15.1,
+    1.4,
+    -8.5
+   ],
+   "got": [
+    16.5,
+    0.9,
+    -5.4
+   ],
+   "share": 0.455,
+   "reached": true,
+   "delta_e": 3.4
+  },
+  {
+   "design": [
+    30.2,
+    2.0,
+    -7.0
+   ],
+   "got": [
+    31.3,
+    1.5,
+    -5.0
+   ],
+   "share": 0.424,
+   "reached": true,
+   "delta_e": 2.3
+  }
+ ],
+ "colour_delta_e": 3.1,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 7.1,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 7.2,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 7.2,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 7.1,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   0.8,
+   15.1
+  ],
+  [
+   52.4,
+   30.2
+  ],
+  [
+   98.2,
+   96.0
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.0,
+ "colour_before": [
+  0.083,
+  0.085,
+  0.092
+ ],
+ "colour_after": [
+  0.205,
+  0.214,
+  0.239
+ ],
+ "colour_design": [
+  0.304,
+  0.31,
+  0.34
+ ],
+ "glow_share": 0.0648,
+ "glow_faces": 37,
+ "glow_part": {
+  "name": "light",
+  "faces": 37
+ },
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 144540,
+ "name": "lamp_post"
+}

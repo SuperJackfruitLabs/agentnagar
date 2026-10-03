@@ -1,0 +1,319 @@
+{
+ "raw_tris": 145130,
+ "metal_map_ignored": true,
+ "loose_parts": 122,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "tree_raised": null,
+ "tree": {
+  "bed_top": 0.1,
+  "narrowest": 0.208,
+  "crown_from": 0.288,
+  "bed_scale": [
+   10.798,
+   10.981
+  ],
+  "crown_scale": 12.065,
+  "up_scale": 13.037,
+  "crown_starts_m": 2.38,
+  "crown_started_before_it_was_raised_m": 2.38
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -5.841,
+  -5.746,
+  0.0
+ ],
+ "box_max": [
+  6.059,
+  5.532,
+  9.5
+ ],
+ "wood_cell_m": 0.05,
+ "parts": {
+  "bed": 10,
+  "wood": 2500,
+  "lantern": 0,
+  "leaf": 4300
+ },
+ "tris": 7030,
+ "deviation": {
+  "tris": 6810,
+  "mean_mm": 94.38,
+  "p95_mm": 240.23,
+  "max_mm": 499.9
+ },
+ "bake_reach_m": 0.3603,
+ "diagonal_m": 18.949,
+ "lifted_to_clear_band": 0,
+ "pulled_into_footprint": 8,
+ "leaf_edges_smoothed": 6450,
+ "texels_used": 0.832,
+ "materials": [
+  {
+   "design": [
+    37.9,
+    2.5,
+    3.7
+   ],
+   "got": [
+    41.3,
+    2.7,
+    3.8
+   ],
+   "share": 0.182,
+   "reached": true,
+   "delta_e": 3.3
+  },
+  {
+   "design": [
+    48.2,
+    -13.7,
+    27.6
+   ],
+   "got": [
+    49.4,
+    -13.1,
+    24.2
+   ],
+   "share": 0.24,
+   "reached": true,
+   "delta_e": 3.7
+  },
+  {
+   "design": [
+    32.4,
+    -11.3,
+    5.9
+   ],
+   "got": [
+    32.2,
+    -11.2,
+    5.1
+   ],
+   "share": 0.317,
+   "reached": false,
+   "delta_e": 0.8
+  },
+  {
+   "design": [
+    68.3,
+    4.2,
+    7.2
+   ],
+   "got": [
+    63.6,
+    3.8,
+    7.5
+   ],
+   "share": 0.094,
+   "reached": true,
+   "delta_e": 4.7
+  },
+  {
+   "design": [
+    77.6,
+    -11.6,
+    53.2
+   ],
+   "got": [
+    66.3,
+    -15.9,
+    44.2
+   ],
+   "share": 0.168,
+   "reached": true,
+   "delta_e": 15.0
+  }
+ ],
+ "colour_delta_e": 4.7,
+ "materials_reached": 0.683,
+ "colour_delta_e_of_the_fit": 9.1,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 10.9,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 9.1,
+   "reached": 0.906
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 8.6,
+   "reached": 0.737
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   33.9,
+   37.9
+  ],
+  [
+   37.6,
+   37.9
+  ],
+  [
+   47.7,
+   48.2
+  ],
+  [
+   67.5,
+   77.6
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.582,
+ "colour_before": [
+  0.275,
+  0.42,
+  0.227
+ ],
+ "colour_after": [
+  0.408,
+  0.459,
+  0.344
+ ],
+ "colour_design": [
+  0.444,
+  0.462,
+  0.318
+ ],
+ "bed_colour": {
+  "asked": "auto",
+  "was": [
+   42.0,
+   2.7,
+   3.4
+  ],
+  "now": [
+   64.0,
+   3.9,
+   6.3
+  ],
+  "hex": "#A79890",
+  "rim_share_of_top": 0.51
+ },
+ "leaf_colour": {
+  "asked": "#C8C95F,#6E7B4A",
+  "share_of_texels": 0.815
+ },
+ "colour_as_matched": {
+  "colour_delta_e": 5.7,
+  "materials_reached": 0.906,
+  "materials": [
+   {
+    "design": [
+     37.9,
+     2.5,
+     3.7
+    ],
+    "got": [
+     41.6,
+     2.7,
+     3.8
+    ],
+    "share": 0.182,
+    "reached": true,
+    "delta_e": 3.6
+   },
+   {
+    "design": [
+     48.2,
+     -13.7,
+     27.6
+    ],
+    "got": [
+     52.1,
+     -14.8,
+     26.2
+    ],
+    "share": 0.24,
+    "reached": true,
+    "delta_e": 4.3
+   },
+   {
+    "design": [
+     32.4,
+     -11.3,
+     5.9
+    ],
+    "got": [
+     40.5,
+     -12.1,
+     6.5
+    ],
+    "share": 0.317,
+    "reached": true,
+    "delta_e": 8.1
+   },
+   {
+    "design": [
+     68.3,
+     4.2,
+     7.2
+    ],
+    "got": [
+     65.7,
+     3.0,
+     10.2
+    ],
+    "share": 0.094,
+    "reached": false,
+    "delta_e": 4.1
+   },
+   {
+    "design": [
+     77.6,
+     -11.6,
+     53.2
+    ],
+    "got": [
+     83.2,
+     -12.2,
+     49.6
+    ],
+    "share": 0.168,
+    "reached": true,
+    "delta_e": 6.6
+   }
+  ],
+  "share_of_texels_changed_since": 0.828
+ },
+ "glow_share": 0.0006,
+ "glow_faces": 1,
+ "glow_part": {
+  "name": "lanterns",
+  "faces": 0,
+  "made": false,
+  "stray_faces_left_in_the_body": 1
+ },
+ "carried_light_parts": [],
+ "core": {
+  "tris": 220,
+  "colour": "#6D7A4C",
+  "from_m": 5.91,
+  "to_m": 8.3,
+  "plan": {
+   "box": [
+    1023,
+    498,
+    1471,
+    962
+   ],
+   "not_leaf_share": 0.375
+  }
+ },
+ "image_format": "WEBP",
+ "bytes": 1242648,
+ "name": "tree_banyan"
+}

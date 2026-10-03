@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "solarpunk.A-terrace",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "a94bab5c0e59c9b5cc8c0cea3b38ab8938cc37d77d6ff750399bf7f0ce9c25b6",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "d57459493f9c4842ca3c2e228efd2d8508aa2b5ec2be43f3512e86c9e6a57aed",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-9765d6c5-09b7-4839-b109-9e71168fec82.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/solarpunk/street.jpg",
+    "../../../../refs/panels/solarpunk/gathering.jpg",
+    "../../../../refs/panels/solarpunk/park.jpg"
+  ],
+  "edit_of": null
+}

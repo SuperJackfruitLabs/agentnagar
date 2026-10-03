@@ -1,0 +1,5 @@
+lowpoly_tropical street-tree-a: tree_round_a_far.glb (114896 bytes) placed beside tree_round_a.glb
+lowpoly_tropical street-tree-b: tree_round_b_far.glb (112168 bytes) placed beside tree_round_b.glb
+lowpoly_tropical palm-tall: palm_a_far.glb (109460 bytes) placed beside palm_a.glb
+lowpoly_tropical palm-mid: palm_b_far.glb (110072 bytes) placed beside palm_b.glb
+lowpoly_tropical palm-short: palm_c_far.glb (107380 bytes) placed beside palm_c.glb

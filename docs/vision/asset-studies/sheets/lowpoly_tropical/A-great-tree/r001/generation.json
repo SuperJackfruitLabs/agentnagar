@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.A-great-tree",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "e2b2c7b085997dc3eb053145666b45bb56e294f593a0489207de40dd74508be1",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "6f7fb6c6ced2eae091c3259710b80b06434f48a7ab4ab3db3931ae5840a90390",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-5ac55769-0784-4cfa-be9c-6fb2848327c3.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/street.jpg",
+    "../../../../refs/panels/lowpoly_tropical/gathering.jpg"
+  ],
+  "edit_of": null
+}

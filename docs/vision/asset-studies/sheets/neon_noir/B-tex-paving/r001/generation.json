@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.B-tex-paving",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "5c66bb52400cf8ff2f44a5e24177fca8bb4dde58a348a4c04af414d6ada9f7e3",
+  "width": 1254,
+  "height": 1254,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "fde9f5b9f4933dd00987083f7adce10dd0ef31befb20d8157a0048b5ae34b120",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-99952973-6b00-48e6-9053-bb7e41d52ede.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/topdown.jpg",
+    "../../../../refs/panels/neon_noir/street.jpg"
+  ],
+  "edit_of": null
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "voxel.A-great-tree",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "7a0084170434f672cb9244d3e7b4721c2cba8c8b808f31e057ff53f6e912dbc6",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "24f48af995b5a62caa12afa64c77507063d9de1e2b3710e631fe8edbcb98cd04",
+    "is_the_jobs": false,
+    "correction": "Change only the bottom colour-swatch row and the lower-right plan view. Replace the six swatches with exactly five flat square swatches, in this order: light green leaves, dark green leaves, brown bark, grey bed edge, warm yellow lantern. Draw the lower-right tree and square bed directly from above as a straight-down plan, with no front or side elevation of the trunk or bed. Preserve the large three-quarter view and upper-right front elevation, the same cube-built tree, green/white foliage, brown trunk, grey square bed, cube shrubs, hanging lanterns, flat cube faces, all placements and margins, accepted grey backdrop and 1536 x 1024 layout. No text or added objects."
+  },
+  "source_paths": [
+    "exec-d65a4bd5-d7a5-4552-911e-c1e4415f9bce.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/voxel/street.jpg",
+    "../../../../refs/panels/voxel/gathering.jpg"
+  ],
+  "edit_of": null
+}

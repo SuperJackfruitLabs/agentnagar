@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: single-object render, used as the input of an image-to-3D model
+Primary request: a plain render of one tall palm
+Scene/backdrop: one flat light-grey backdrop (#D9D9D9), with no floor, no horizon and no shadow on it
+Subject: One tall palm: a slender ringed trunk with a slight lean, 8.5 m tall, with a crown of about twelve arching fronds 5.2 m across.
+Style/medium: a plain, clean 3D model render, like an untextured model in a viewer: matte surfaces, each part one flat colour (bark brown, leaves mid green, flowers a pale colour), simple solid forms with clear gaps between them
+Composition/framing: portrait canvas, 1024 x 1536. One object, centred and whole, with a clear margin on every side, in three-quarter view with the camera raised about 25 degrees so that the top of the object shows
+Lighting/mood: soft even studio light from the upper front, with no cast shadows
+Constraints: exactly one object; nothing cut off by the canvas edge; no ground plane, pot, base, people or scenery; no text, letters, numbers, labels, captions, arrows, dimension lines, logos, signatures or watermark anywhere
+Avoid: painterly brushwork, outlines, depth of field, haze, backlight, transparency, fine noise

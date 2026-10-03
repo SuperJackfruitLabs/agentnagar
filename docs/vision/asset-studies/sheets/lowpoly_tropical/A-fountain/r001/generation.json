@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.A-fountain",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "ae3a61f7ade354c50888377141297f96e0afa384d53cd83ee3b02d807c738768",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "c7005eb134b118e8af28ce006b25cbd3ff81f7020a0b233a2d2e1407817f6f59",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-ae476483-5c64-4ac3-aeda-2093e82095ff.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/street.jpg",
+    "../../../../refs/panels/lowpoly_tropical/park.jpg"
+  ],
+  "edit_of": null
+}

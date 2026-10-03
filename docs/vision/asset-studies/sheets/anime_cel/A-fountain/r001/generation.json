@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "anime_cel.A-fountain",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "3b50e8e3444f9666cc331b9c3376d6658de9593016b41b7adafd887377ade673",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "b06ea7cd162dbc518e3b90fbec9869da8eca998ec137da87cb1fbd8d963251bf",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-b22cfef8-39cc-43da-94ca-d956d4d88091.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/anime_cel/street.jpg",
+    "../../../../refs/panels/anime_cel/park.jpg"
+  ],
+  "edit_of": null
+}

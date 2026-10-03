@@ -1,0 +1,1111 @@
+{
+ "_about": "Which images to make, in what order. Five families: A design sheets (one asset or a small set, alone on a plain backdrop), B surfaces (material boards, tiling textures, cut-out atlases), C shapes (plain single-object renders for the image-to-3D model), D frames (a capture of the game repainted in the style, keeping its layout), E states (one asset at three stages of its life; optional). tools/build_jobs.py expands this into one job per style. Written 2026-10-02.",
+ "panels": {
+  "map": [
+   "00-city-perspectives",
+   0,
+   0
+  ],
+  "topdown": [
+   "00-city-perspectives",
+   0,
+   1
+  ],
+  "diagonal": [
+   "00-city-perspectives",
+   1,
+   0
+  ],
+  "street": [
+   "00-city-perspectives",
+   1,
+   1
+  ],
+  "workshop": [
+   "01-living-community",
+   0,
+   0
+  ],
+  "home": [
+   "01-living-community",
+   0,
+   1
+  ],
+  "conversation": [
+   "01-living-community",
+   1,
+   0
+  ],
+  "gathering": [
+   "01-living-community",
+   1,
+   1
+  ],
+  "build-mode": [
+   "02-creating-exploring",
+   0,
+   0
+  ],
+  "transit": [
+   "02-creating-exploring",
+   0,
+   1
+  ],
+  "night-rain": [
+   "02-creating-exploring",
+   1,
+   0
+  ],
+  "park": [
+   "02-creating-exploring",
+   1,
+   1
+  ],
+  "facility": [
+   "03-interfaces-perspectives",
+   0,
+   0
+  ],
+  "mobile": [
+   "03-interfaces-perspectives",
+   0,
+   1
+  ],
+  "rooftop": [
+   "03-interfaces-perspectives",
+   1,
+   0
+  ],
+  "ar-tabletop": [
+   "03-interfaces-perspectives",
+   1,
+   1
+  ]
+ },
+ "batches": {
+  "00-pilot": "The images that tried every kind of job once or twice, in an easy style, a hard style and the sprite style. Run on 2026-10-02; the pack was revised from what came back.",
+  "00b-pilot-rest": "Seven images that gave the three styles the pilot left out the same two design sheets, and made the neon great tree again in neutral light. Run on 2026-10-02.",
+  "01a-square-props": "Thirty design sheets of single things that stand in and round the tree square (terrace furniture, street fixtures, street trees and palms, low planting, the tram shelter, the fountain), in the five styles whose sheets have been turned into game pieces. Run on 2026-10-02.",
+  "01b-redo": "Three design sheets asked for again after pieces were built from their first images: the anime great tree, whose crown the image-to-3D model built as a hollow ring, and the low-poly and neon seating sheets, whose perch seat was drawn as a stool. Run this next and stop.",
+  "01-square": "The tree square: what the street, diagonal and gathering views show most.",
+  "02-city": "The rest of what the game places today.",
+  "03-shapes": "Plain single-object renders for the image-to-3D model.",
+  "04-life": "Optional: seven assets at three stages of their life."
+ },
+ "design_sheets": [
+  {
+   "id": "A-great-tree",
+   "layout": "hero",
+   "subjects": [
+    "great-tree"
+   ],
+   "panels": [
+    "street",
+    "gathering"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "foliage",
+    "trunk",
+    "stone",
+    "light"
+   ]
+  },
+  {
+   "id": "A-guild-hall",
+   "layout": "hero",
+   "subjects": [
+    "guild-hall"
+   ],
+   "panels": [
+    "street",
+    "gathering",
+    "diagonal"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "architecture",
+    "light",
+    "accent"
+   ]
+  },
+  {
+   "id": "A-library",
+   "layout": "hero",
+   "subjects": [
+    "library"
+   ],
+   "panels": [
+    "street",
+    "gathering",
+    "diagonal"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "architecture",
+    "light",
+    "accent"
+   ]
+  },
+  {
+   "id": "A-tram",
+   "layout": "hero-long",
+   "subjects": [
+    "tram"
+   ],
+   "panels": [
+    "street",
+    "transit",
+    "diagonal"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "tram",
+    "metal"
+   ]
+  },
+  {
+   "id": "A-tram-shelter",
+   "layout": "hero",
+   "subjects": [
+    "tram-shelter"
+   ],
+   "panels": [
+    "transit",
+    "street",
+    "build-mode"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "metal",
+    "timber",
+    "light"
+   ]
+  },
+  {
+   "id": "A-resident",
+   "layout": "turnaround",
+   "subjects": [
+    "resident"
+   ],
+   "panels": [
+    "conversation",
+    "gathering",
+    "workshop"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "people"
+   ]
+  },
+  {
+   "id": "A-agent-a1",
+   "layout": "turnaround",
+   "subjects": [
+    "agent-a1"
+   ],
+   "panels": [
+    "conversation",
+    "mobile",
+    "facility"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "people",
+    "accent"
+   ]
+  },
+  {
+   "id": "A-seating",
+   "layout": "grid4",
+   "subjects": [
+    "bench",
+    "cafe-chair",
+    "reading-chair",
+    "perch-seat"
+   ],
+   "panels": [
+    "park",
+    "gathering",
+    "home"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "timber",
+    "metal",
+    "stone"
+   ]
+  },
+  {
+   "id": "A-terrace",
+   "layout": "grid4",
+   "subjects": [
+    "cafe-table",
+    "umbrella",
+    "planter",
+    "planter-pot"
+   ],
+   "panels": [
+    "street",
+    "gathering",
+    "park"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "timber",
+    "metal",
+    "stone",
+    "foliage",
+    "accent"
+   ]
+  },
+  {
+   "id": "A-street-fixtures",
+   "layout": "row4",
+   "subjects": [
+    "lamp-post",
+    "bollard",
+    "catenary-pole",
+    "railing"
+   ],
+   "panels": [
+    "street",
+    "park",
+    "transit"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "metal",
+    "light",
+    "stone"
+   ]
+  },
+  {
+   "id": "A-trees",
+   "layout": "row4",
+   "subjects": [
+    "street-tree-a",
+    "street-tree-b",
+    "palm-tall",
+    "palm-short"
+   ],
+   "panels": [
+    "street",
+    "park",
+    "diagonal"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "foliage",
+    "trunk"
+   ]
+  },
+  {
+   "id": "A-cafe",
+   "layout": "hero",
+   "subjects": [
+    "cafe"
+   ],
+   "panels": [
+    "street",
+    "gathering",
+    "rooftop"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "architecture",
+    "light",
+    "accent"
+   ]
+  },
+  {
+   "id": "A-houses",
+   "layout": "trio",
+   "subjects": [
+    "houses"
+   ],
+   "panels": [
+    "diagonal",
+    "rooftop",
+    "street"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "architecture",
+    "accent"
+   ]
+  },
+  {
+   "id": "A-shop",
+   "layout": "hero",
+   "subjects": [
+    "shop"
+   ],
+   "panels": [
+    "diagonal",
+    "street"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "architecture",
+    "accent"
+   ]
+  },
+  {
+   "id": "A-towers",
+   "layout": "pair",
+   "subjects": [
+    "towers"
+   ],
+   "panels": [
+    "street",
+    "diagonal",
+    "gathering"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "architecture",
+    "foliage"
+   ]
+  },
+  {
+   "id": "A-bridge",
+   "layout": "hero-long",
+   "subjects": [
+    "bridge"
+   ],
+   "panels": [
+    "park",
+    "diagonal",
+    "rooftop"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "stone",
+    "metal",
+    "water"
+   ]
+  },
+  {
+   "id": "A-fountain",
+   "layout": "hero",
+   "subjects": [
+    "fountain"
+   ],
+   "panels": [
+    "street",
+    "park"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "stone",
+    "water"
+   ]
+  },
+  {
+   "id": "A-civic",
+   "layout": "grid4",
+   "subjects": [
+    "noticeboard",
+    "plaque",
+    "kiosk",
+    "steps-and-wall"
+   ],
+   "panels": [
+    "facility",
+    "street",
+    "park"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "stone",
+    "metal",
+    "timber"
+   ]
+  },
+  {
+   "id": "A-work-furniture",
+   "layout": "grid6",
+   "subjects": [
+    "desk",
+    "workstation",
+    "workbench",
+    "bookshelf",
+    "pegboard",
+    "pendant-lamp"
+   ],
+   "panels": [
+    "workshop",
+    "facility",
+    "home"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "timber",
+    "metal",
+    "light"
+   ]
+  },
+  {
+   "id": "A-low-planting",
+   "layout": "grid4",
+   "subjects": [
+    "shrub-round",
+    "shrub-leafy",
+    "flowerbed",
+    "meadow"
+   ],
+   "panels": [
+    "park",
+    "gathering",
+    "conversation"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "foliage",
+    "stone"
+   ]
+  },
+  {
+   "id": "A-water-and-sky",
+   "layout": "trio",
+   "subjects": [
+    "sailboat",
+    "cloud-a",
+    "cloud-b"
+   ],
+   "panels": [
+    "park",
+    "rooftop",
+    "diagonal"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "water",
+    "accent"
+   ]
+  }
+ ],
+ "boards": [
+  {
+   "id": "B-materials-ground",
+   "title": "ground and nature materials",
+   "tiles": [
+    [
+     "paving",
+     "the square's paving"
+    ],
+    [
+     "path",
+     "a park path"
+    ],
+    [
+     "street",
+     "the street"
+    ],
+    [
+     "lawn",
+     "lawn"
+    ],
+    [
+     "water",
+     "the river's surface"
+    ],
+    [
+     "timber",
+     "timber, as benches and decks use it"
+    ]
+   ],
+   "panels": [
+    "topdown",
+    "park",
+    "street"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "ground",
+    "water",
+    "timber"
+   ]
+  },
+  {
+   "id": "B-materials-architecture",
+   "title": "building materials",
+   "tiles": [
+    [
+     "wall_workshop",
+     "the guild hall's wall"
+    ],
+    [
+     "roof",
+     "the guild hall's roof"
+    ],
+    [
+     "wall_library",
+     "the library's wall"
+    ],
+    [
+     "roof_library",
+     "the library's rounded roof"
+    ],
+    [
+     "wall",
+     "the walls of houses and towers"
+    ],
+    [
+     "glass",
+     "glazing"
+    ]
+   ],
+   "panels": [
+    "street",
+    "gathering",
+    "diagonal"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "architecture"
+   ]
+  }
+ ],
+ "textures": [
+  {
+   "id": "B-tex-paving",
+   "vocab": "paving",
+   "what": "the tree square's paving seen straight from above, an area about 4 m across",
+   "panels": [
+    "topdown",
+    "street"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "ground"
+   ]
+  },
+  {
+   "id": "B-tex-path",
+   "vocab": "path",
+   "what": "a park footpath seen straight from above, an area about 3 m across",
+   "panels": [
+    "topdown",
+    "park"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "ground"
+   ]
+  },
+  {
+   "id": "B-tex-street",
+   "vocab": "street",
+   "what": "the street's surface seen straight from above, an area about 4 m across, with no road markings",
+   "panels": [
+    "topdown",
+    "street"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "ground"
+   ]
+  },
+  {
+   "id": "B-tex-lawn",
+   "vocab": "lawn",
+   "what": "lawn seen straight from above, an area about 3 m across",
+   "panels": [
+    "topdown",
+    "park"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "ground"
+   ]
+  },
+  {
+   "id": "B-tex-water",
+   "vocab": "water",
+   "what": "the river's surface seen straight from above, an area about 6 m across",
+   "panels": [
+    "topdown",
+    "park"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "water"
+   ]
+  },
+  {
+   "id": "B-tex-wall-workshop",
+   "vocab": "wall_workshop",
+   "what": "the guild hall's wall seen straight on, an area about 3 m across, with no windows or doors",
+   "panels": [
+    "street",
+    "gathering"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "architecture"
+   ]
+  },
+  {
+   "id": "B-tex-wall-library",
+   "vocab": "wall_library",
+   "what": "the library's wall seen straight on, an area about 3 m across, with no windows or doors",
+   "panels": [
+    "street",
+    "gathering"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "architecture"
+   ]
+  },
+  {
+   "id": "B-tex-roof",
+   "vocab": "roof",
+   "what": "the guild hall's roof surface seen straight on, an area about 3 m across",
+   "panels": [
+    "diagonal",
+    "topdown"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "architecture"
+   ]
+  },
+  {
+   "id": "B-tex-timber",
+   "vocab": "timber",
+   "what": "timber boards seen straight on, an area about 1.5 m across, boards running left to right",
+   "panels": [
+    "park",
+    "workshop"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "timber"
+   ]
+  },
+  {
+   "id": "B-tex-bark",
+   "vocab": "trunk",
+   "what": "tree bark seen straight on, an area about 1 m across, grain running bottom to top",
+   "panels": [
+    "street",
+    "park"
+   ],
+   "batch": "02-city",
+   "palette": [
+    "trunk"
+   ]
+  }
+ ],
+ "atlases": [
+  {
+   "id": "B-atlas-leaves",
+   "key": "magenta",
+   "title": "leaf clusters",
+   "cells": [
+    "a leaf cluster from a large tree's crown, as seen from below and outside",
+    "a second, smaller leaf cluster from a tree's crown",
+    "one palm frond",
+    "a spray of shrub leaves"
+   ],
+   "panels": [
+    "gathering",
+    "park",
+    "conversation"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "foliage"
+   ]
+  },
+  {
+   "id": "B-atlas-flowers",
+   "key": "blue",
+   "title": "small plants",
+   "cells": [
+    "a clump of flowers in bloom",
+    "a second clump of different flowers",
+    "a tuft of tall grass",
+    "a low broad-leaved plant"
+   ],
+   "panels": [
+    "park",
+    "conversation",
+    "gathering"
+   ],
+   "batch": "01-square",
+   "palette": [
+    "foliage"
+   ]
+  }
+ ],
+ "shapes": {
+  "neutral": [
+   {
+    "id": "C-great-tree",
+    "what": "one very large old shade tree: a thick buttressed trunk that forks low into four or five heavy spreading limbs, and a wide, fairly flat crown made of many separate rounded leaf masses with gaps between them, about 12 m across and 9.5 m tall; no leaves below a quarter of its height",
+    "tall": false
+   },
+   {
+    "id": "C-street-tree-a",
+    "what": "one street tree: a straight clear trunk to a third of its height, a rounded crown of several leaf masses, 4.6 m across and 5.5 m tall",
+    "tall": false
+   },
+   {
+    "id": "C-street-tree-b",
+    "what": "one small street tree: a slim clear trunk to half its height and a compact crown, 3.4 m across and 4.4 m tall",
+    "tall": false
+   },
+   {
+    "id": "C-palm-tall",
+    "what": "one tall palm: a slender ringed trunk with a slight lean, 8.5 m tall, with a crown of about twelve arching fronds 5.2 m across",
+    "tall": true
+   },
+   {
+    "id": "C-palm-short",
+    "what": "one short palm: a stout trunk 4.5 m tall with a crown of about ten arching fronds 3.4 m across",
+    "tall": false
+   },
+   {
+    "id": "C-shrub-round",
+    "what": "one round clipped shrub, 1.1 m across and 0.9 m high, a dense ball of small leaf masses",
+    "tall": false
+   },
+   {
+    "id": "C-shrub-leafy",
+    "what": "one loose leafy shrub, 1.1 m across and 1.2 m high, with a few stems showing and irregular leaf masses",
+    "tall": false
+   },
+   {
+    "id": "C-broadleaf-plant",
+    "what": "one tropical broad-leaved plant, 0.9 m across and 0.8 m high: eight to ten large arching leaves from one centre",
+    "tall": false
+   },
+   {
+    "id": "C-flower-clump",
+    "what": "one clump of flowering plants, 0.6 m across and 0.5 m high: a mound of small leaves with about a dozen simple flower heads on top",
+    "tall": false
+   },
+   {
+    "id": "C-grass-tuft",
+    "what": "one tuft of tall grass, 0.3 m across and 0.9 m high, about thirty broad blades fanning out",
+    "tall": true
+   }
+  ],
+  "voxel": [
+   {
+    "id": "C-great-tree",
+    "what": "one very large old shade tree built from cubes: a trunk three cubes wide that forks low into four or five heavy limbs, and a wide, fairly flat crown made of large leaf cubes with gaps between them, about 12 m across and 9.5 m tall, trunk and limb cubes about 20 cm and leaf cubes about 70 cm",
+    "tall": false
+   },
+   {
+    "id": "C-street-tree-a",
+    "what": "one street tree built from cubes: a trunk two cubes wide, clear to a third of its height, and a rounded crown of leaf cubes, 5 m across and 5.5 m tall",
+    "tall": false
+   },
+   {
+    "id": "C-street-tree-b",
+    "what": "one small street tree built from cubes: a trunk one cube wide and a compact crown of leaf cubes, 3.2 m across and 3.6 m tall",
+    "tall": false
+   },
+   {
+    "id": "C-shrub-round",
+    "what": "one low shrub built from cubes, 2 m across and 0.8 m high: a rounded heap of small leaf cubes",
+    "tall": false
+   },
+   {
+    "id": "C-planter-plants",
+    "what": "one heap of planting built from small cubes, 1.2 m square and 0.6 m high, with a few blossom cubes on top",
+    "tall": false
+   }
+  ]
+ },
+ "frames": [
+  {
+   "id": "D-street",
+   "view": "street",
+   "what": "the tree square at eye height from the south, looking north: the guild hall on the left, the great tree in the centre, the library on the right, the towers behind",
+   "panels": [
+    "street",
+    "gathering"
+   ],
+   "batch": "01-square",
+   "what_sprite": "the tree square, seen from the pixel pack's fixed isometric camera"
+  },
+  {
+   "id": "D-diagonal",
+   "view": "diagonal",
+   "what": "the district from above, looking north-west from the south-east",
+   "panels": [
+    "diagonal",
+    "rooftop"
+   ],
+   "batch": "01-square",
+   "what_sprite": "a wider part of the district, seen from the pixel pack's fixed isometric camera"
+  },
+  {
+   "id": "D-gathering",
+   "view": "gathering",
+   "what": "people gathered under the great tree at dusk",
+   "panels": [
+    "gathering",
+    "street"
+   ],
+   "batch": "01-square",
+   "skip": [
+    "pixel_art"
+   ]
+  },
+  {
+   "id": "D-park",
+   "view": "park",
+   "what": "the waterfront park path beside the river",
+   "panels": [
+    "park",
+    "rooftop"
+   ],
+   "batch": "02-city",
+   "skip": [
+    "pixel_art"
+   ]
+  },
+  {
+   "id": "D-night-rain",
+   "view": "night-rain",
+   "what": "the tree square at night in rain",
+   "panels": [
+    "night-rain",
+    "gathering"
+   ],
+   "batch": "02-city",
+   "what_sprite": "the tree square at night in rain, seen from the pixel pack's fixed isometric camera"
+  },
+  {
+   "id": "D-workshop",
+   "view": "workshop",
+   "what": "inside the guild hall at eye height",
+   "panels": [
+    "workshop",
+    "facility"
+   ],
+   "batch": "02-city",
+   "skip": [
+    "pixel_art"
+   ]
+  },
+  {
+   "id": "D-street-dressed",
+   "view": "street",
+   "dressed": true,
+   "what": "the tree square at eye height from the south, looking north",
+   "panels": [
+    "street",
+    "gathering"
+   ],
+   "batch": "02-city",
+   "what_sprite": "the tree square, seen from the pixel pack's fixed isometric camera"
+  },
+  {
+   "id": "D-park-dressed",
+   "view": "park",
+   "dressed": true,
+   "what": "the waterfront park path beside the river",
+   "panels": [
+    "park",
+    "conversation"
+   ],
+   "batch": "02-city",
+   "skip": [
+    "pixel_art"
+   ]
+  }
+ ],
+ "states": [
+  {
+   "id": "E-guild-hall",
+   "subject": "guild-hall",
+   "kind": "building",
+   "panels": [
+    "street",
+    "gathering"
+   ],
+   "palette": [
+    "architecture",
+    "light",
+    "accent"
+   ]
+  },
+  {
+   "id": "E-library",
+   "subject": "library",
+   "kind": "building",
+   "panels": [
+    "street",
+    "gathering"
+   ],
+   "palette": [
+    "architecture",
+    "light",
+    "accent"
+   ]
+  },
+  {
+   "id": "E-house",
+   "subject": "houses",
+   "kind": "building",
+   "one": "a town house",
+   "panels": [
+    "diagonal",
+    "rooftop"
+   ],
+   "palette": [
+    "architecture",
+    "accent"
+   ],
+   "what": "One town house about 6.6 m wide, 8.2 m high and 9 m deep, two to three storeys, with a ground-floor door, regular windows and a simple roof."
+  },
+  {
+   "id": "E-tower",
+   "subject": "towers",
+   "kind": "building",
+   "one": "a downtown tower",
+   "panels": [
+    "street",
+    "diagonal"
+   ],
+   "palette": [
+    "architecture",
+    "foliage"
+   ],
+   "what": "One downtown tower about 11 m square and 25 m high, eight storeys, stepping back twice towards the top, with planted terraces on the steps and a small roof structure."
+  },
+  {
+   "id": "E-great-tree",
+   "subject": "great-tree",
+   "kind": "tree",
+   "panels": [
+    "street",
+    "gathering"
+   ],
+   "palette": [
+    "foliage",
+    "trunk",
+    "stone",
+    "light"
+   ]
+  },
+  {
+   "id": "E-tram-shelter",
+   "subject": "tram-shelter",
+   "kind": "made",
+   "panels": [
+    "transit",
+    "street"
+   ],
+   "palette": [
+    "metal",
+    "timber",
+    "light"
+   ]
+  },
+  {
+   "id": "E-bench",
+   "subject": "bench",
+   "kind": "made",
+   "panels": [
+    "park",
+    "gathering"
+   ],
+   "palette": [
+    "timber",
+    "metal"
+   ],
+   "one": "a park bench"
+  }
+ ],
+ "pilot": [
+  "lowpoly_tropical.A-great-tree",
+  "lowpoly_tropical.A-guild-hall",
+  "lowpoly_tropical.A-seating",
+  "lowpoly_tropical.B-materials-ground",
+  "lowpoly_tropical.B-tex-paving",
+  "lowpoly_tropical.B-atlas-leaves",
+  "lowpoly_tropical.D-street",
+  "lowpoly_tropical.E-bench",
+  "neon_noir.A-great-tree",
+  "neon_noir.A-guild-hall",
+  "neon_noir.A-seating",
+  "neon_noir.B-materials-ground",
+  "neon_noir.B-tex-paving",
+  "neon_noir.B-atlas-leaves",
+  "neon_noir.D-street",
+  "neon_noir.E-bench",
+  "pixel_art.A-great-tree",
+  "pixel_art.A-seating",
+  "neutral.C-great-tree",
+  "neutral.C-palm-tall",
+  "voxel.C-great-tree"
+ ],
+ "_frames_note": "The pixel pack has one camera, so its gathering, park and workshop captures repeat its street capture; those frame jobs are skipped for it.",
+ "pilot_rest": [
+  "voxel.A-great-tree",
+  "voxel.A-seating",
+  "anime_cel.A-great-tree",
+  "anime_cel.A-seating",
+  "solarpunk.A-great-tree",
+  "solarpunk.A-seating"
+ ],
+ "redo": {
+  "neon_noir.A-great-tree": "its first image (r001) is a night scene lit by the tree's own lamps, so its colours could not be used; the job now asks for neutral light and for lamps that throw no light on the tree",
+  "anime_cel.A-great-tree": {
+   "batch": "01b-redo",
+   "why": "its first image (r001) drew the crown as airy layers of small leaves with the branches showing through; the image-to-3D model built it as a hollow ring of thin leaf, three times over. The job now asks for a crown of large solid leaf clumps, closed all round and on top"
+  },
+  "lowpoly_tropical.A-seating": {
+   "batch": "01b-redo",
+   "why": "its first image (r001) drew the perch seat as a stool with legs; the job now describes it as the game uses it, a plain seat stone with a board on top. Only the perch seat of the new image will be used: the other three seats are built from r001"
+  },
+  "neon_noir.A-seating": {
+   "batch": "01b-redo",
+   "why": "its first image (r001) drew the perch seat as a stool with legs; the job now describes it as the game uses it, a plain seat stone with a board on top. Only the perch seat of the new image will be used: the other three seats are built from r001"
+  }
+ },
+ "moved": {
+  "01a-square-props": [
+   "lowpoly_tropical.A-terrace",
+   "lowpoly_tropical.A-street-fixtures",
+   "lowpoly_tropical.A-trees",
+   "lowpoly_tropical.A-low-planting",
+   "lowpoly_tropical.A-tram-shelter",
+   "lowpoly_tropical.A-fountain",
+   "neon_noir.A-terrace",
+   "neon_noir.A-street-fixtures",
+   "neon_noir.A-trees",
+   "neon_noir.A-low-planting",
+   "neon_noir.A-tram-shelter",
+   "neon_noir.A-fountain",
+   "anime_cel.A-terrace",
+   "anime_cel.A-street-fixtures",
+   "anime_cel.A-trees",
+   "anime_cel.A-low-planting",
+   "anime_cel.A-tram-shelter",
+   "anime_cel.A-fountain",
+   "solarpunk.A-terrace",
+   "solarpunk.A-street-fixtures",
+   "solarpunk.A-trees",
+   "solarpunk.A-low-planting",
+   "solarpunk.A-tram-shelter",
+   "solarpunk.A-fountain",
+   "voxel.A-terrace",
+   "voxel.A-street-fixtures",
+   "voxel.A-trees",
+   "voxel.A-low-planting",
+   "voxel.A-tram-shelter",
+   "voxel.A-fountain"
+  ]
+ },
+ "_moved_note": "Jobs taken out of their own batch into a smaller one. The two pilot batches showed which images become game pieces: a single object cut from a design sheet. Buildings the game assembles from modules, pixel art, plain shapes and life-cycle sheets wait."
+}

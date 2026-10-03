@@ -1,0 +1,35 @@
+lowpoly_tropical
+  concept      contrast 0.175  detail 0.0269  colours 1884  deep shadow 0.069  highlight 0.223
+  today        contrast 0.158  detail 0.0049  colours  292  deep shadow 0.003  highlight 0.187  | distance from the sheet 1.396
+  round 1      contrast 0.160  detail 0.0074  colours  395  deep shadow 0.008  highlight 0.328  | distance from the sheet 1.097
+  round 2      contrast 0.168  detail 0.0236  colours  868  deep shadow 0.041  highlight 0.210  | distance from the sheet 0.305
+  at the limit contrast 0.208  detail 0.0116  colours  929  deep shadow 0.038  highlight 0.380  | distance from the sheet 0.570
+  new          contrast 0.197  detail 0.0138  colours  941  deep shadow 0.038  highlight 0.398  | distance from the sheet 0.531
+neon_noir
+  concept      contrast 0.170  detail 0.0264  colours 1404  deep shadow 0.087  highlight 0.254
+  today        contrast 0.126  detail 0.0138  colours  767  deep shadow 0.066  highlight 0.076  | distance from the sheet 0.607
+  round 1      contrast 0.118  detail 0.0108  colours  761  deep shadow 0.164  highlight 0.187  | distance from the sheet 0.562
+  round 2      contrast 0.131  detail 0.0168  colours  855  deep shadow 0.135  highlight 0.127  | distance from the sheet 0.468
+  first sheet  contrast 0.107  detail 0.0121  colours  722  deep shadow 0.080  highlight 0.056  | distance from the sheet 0.701
+  at the limit contrast 0.076  detail 0.0091  colours  931  deep shadow 0.061  highlight 0.061  | distance from the sheet 0.812
+  new          contrast 0.114  detail 0.0119  colours 1114  deep shadow 0.068  highlight 0.088  | distance from the sheet 0.547
+anime_cel
+  concept      contrast 0.159  detail 0.0191  colours 1668  deep shadow 0.026  highlight 0.109
+  today        contrast 0.187  detail 0.0328  colours  930  deep shadow 0.123  highlight 0.136  | distance from the sheet 0.613
+  round 1      contrast 0.148  detail 0.0335  colours  446  deep shadow 0.056  highlight 0.000  | distance from the sheet 1.482
+  round 2      contrast 0.169  detail 0.0398  colours 1192  deep shadow 0.041  highlight 0.125  | distance from the sheet 0.345
+  at the limit contrast 0.227  detail 0.0161  colours  617  deep shadow 0.102  highlight 0.139  | distance from the sheet 0.626
+  new          contrast 0.220  detail 0.0195  colours  674  deep shadow 0.097  highlight 0.132  | distance from the sheet 0.552
+solarpunk
+  concept      contrast 0.161  detail 0.0357  colours 1700  deep shadow 0.061  highlight 0.164
+  today        contrast 0.187  detail 0.0161  colours 1042  deep shadow 0.232  highlight 0.022  | distance from the sheet 0.956
+  round 1      contrast 0.165  detail 0.0212  colours 1119  deep shadow 0.172  highlight 0.038  | distance from the sheet 0.693
+  round 2      contrast 0.188  detail 0.0209  colours 1391  deep shadow 0.114  highlight 0.251  | distance from the sheet 0.388
+  at the limit contrast 0.109  detail 0.0107  colours  429  deep shadow 0.173  highlight 0.195  | distance from the sheet 0.837
+  new          contrast 0.122  detail 0.0122  colours  458  deep shadow 0.095  highlight 0.262  | distance from the sheet 0.715
+voxel
+  concept      contrast 0.165  detail 0.0141  colours 1291  deep shadow 0.100  highlight 0.153
+  today        contrast 0.211  detail 0.0047  colours  186  deep shadow 0.194  highlight 0.004  | distance from the sheet 1.518
+  round 1      contrast 0.193  detail 0.0046  colours  253  deep shadow 0.160  highlight 0.000  | distance from the sheet 1.681
+  round 2      contrast 0.168  detail 0.0082  colours  342  deep shadow 0.176  highlight 0.010  | distance from the sheet 1.036
+  new          contrast 0.171  detail 0.0061  colours  218  deep shadow 0.180  highlight 0.000  | distance from the sheet 1.654

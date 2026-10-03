@@ -1,0 +1,258 @@
+{
+ "made": "2026-10-02",
+ "game_commit": "f393026",
+ "frames": {
+  "lowpoly_tropical/diagonal.jpg": {
+   "capture_size": [
+    1920,
+    1068
+   ],
+   "how": "cropped to 1602 x 1068 about its centre, then scaled"
+  },
+  "lowpoly_tropical/gathering.jpg": {
+   "capture_size": [
+    1920,
+    1068
+   ],
+   "how": "cropped to 1602 x 1068 about its centre, then scaled"
+  },
+  "lowpoly_tropical/night-rain.jpg": {
+   "capture_size": [
+    1920,
+    1068
+   ],
+   "how": "cropped to 1602 x 1068 about its centre, then scaled"
+  },
+  "lowpoly_tropical/park.jpg": {
+   "capture_size": [
+    1920,
+    1068
+   ],
+   "how": "cropped to 1602 x 1068 about its centre, then scaled"
+  },
+  "lowpoly_tropical/street.jpg": {
+   "capture_size": [
+    1920,
+    1068
+   ],
+   "how": "cropped to 1602 x 1068 about its centre, then scaled"
+  },
+  "lowpoly_tropical/workshop.jpg": {
+   "capture_size": [
+    1920,
+    1068
+   ],
+   "how": "cropped to 1602 x 1068 about its centre, then scaled"
+  },
+  "voxel/diagonal.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "voxel/gathering.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "voxel/night-rain.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "voxel/park.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "voxel/street.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "voxel/workshop.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "anime_cel/diagonal.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "anime_cel/gathering.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "anime_cel/night-rain.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "anime_cel/park.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "anime_cel/street.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "anime_cel/workshop.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "solarpunk/diagonal.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "solarpunk/gathering.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "solarpunk/night-rain.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "solarpunk/park.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "solarpunk/street.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "solarpunk/workshop.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "neon_noir/diagonal.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "neon_noir/gathering.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "neon_noir/night-rain.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "neon_noir/park.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "neon_noir/street.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "neon_noir/workshop.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped to 1596 x 1064 about its centre, then scaled"
+  },
+  "pixel_art/diagonal.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped about its centre, not scaled"
+  },
+  "pixel_art/gathering.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped about its centre, not scaled"
+  },
+  "pixel_art/night-rain.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped about its centre, not scaled"
+  },
+  "pixel_art/park.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped about its centre, not scaled"
+  },
+  "pixel_art/street.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped about its centre, not scaled"
+  },
+  "pixel_art/workshop.jpg": {
+   "capture_size": [
+    1904,
+    1064
+   ],
+   "how": "cropped about its centre, not scaled"
+  }
+ }
+}

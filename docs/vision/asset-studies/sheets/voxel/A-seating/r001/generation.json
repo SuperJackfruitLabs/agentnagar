@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "voxel.A-seating",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "f43fff8b6dd84d598364bcf659955c63b6b325cc468b7b2af4305d447c51dcbb",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "fdff4337a87f4bdf2d8f9c4d67be5a479b6b1424c4ea4dc7a6d7897976320cde",
+    "is_the_jobs": false,
+    "correction": "Change only the reading armchair's orange cushion: build it from axis-aligned cubes on the same grid as the green chair, with a stepped outline and upright cube faces. Remove its smooth diagonal lean and rotated cube grid; keep it seated against the chair back as a block cushion. Preserve the four whole seats and their geometry, materials and colours otherwise, bench and caf\u00e9 chair, solid stone-block perch with timber cap, two-by-two arrangement, flat swatches, margins, soft shadows, accepted grey backdrop and 1536 x 1024 landscape layout. No text or added objects."
+  },
+  "source_paths": [
+    "exec-d451217b-f79d-47c0-bb41-2be778e21120.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/voxel/park.jpg",
+    "../../../../refs/panels/voxel/gathering.jpg",
+    "../../../../refs/panels/voxel/home.jpg"
+  ],
+  "edit_of": null
+}

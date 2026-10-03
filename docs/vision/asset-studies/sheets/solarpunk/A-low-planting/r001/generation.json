@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "solarpunk.A-low-planting",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "39a0263cdc4d0bfd04608566bf290f332bad92e21cd5b074f3c8a1c9221aab02",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "b2c22667227e66e92614f10368a180f020de5ae2f788fac6edd7f9c20ef10807",
+    "is_the_jobs": false,
+    "correction": "Change only the unrequested planter under the upper-left clipped shrub and the cell dividers. Remove the entire cream ceramic and brass pot around that shrub; keep its rounded clipped foliage and blossoms as a free-standing bare shrub with its natural short trunk/branch base and contact shadow on grey. Remove the thin white cross-shaped dividing lines, leaving one continuous plain grey backdrop. Preserve the other leafy shrub, kerbed flowerbed and two meadow tufts, their whole shapes, positions, colours, scale, swatch rows and 1536 x 1024 landscape layout. Remove ceramic and brass swatches only from the clipped shrub's row. No added objects or text."
+  },
+  "source_paths": [
+    "exec-16fd75e5-0ca6-4b68-a04c-8933636fbb75.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/solarpunk/park.jpg",
+    "../../../../refs/panels/solarpunk/gathering.jpg",
+    "../../../../refs/panels/solarpunk/conversation.jpg"
+  ],
+  "edit_of": null
+}

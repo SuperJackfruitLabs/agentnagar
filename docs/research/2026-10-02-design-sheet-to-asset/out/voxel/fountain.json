@@ -1,0 +1,409 @@
+{
+ "kit_tris": 456,
+ "kit_light_parts": [],
+ "raw_tris": 142726,
+ "metal_map_ignored": true,
+ "loose_parts": 3,
+ "dropped_parts": 1,
+ "dropped_area_share": 0.0013,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": null,
+ "fountain": {
+  "axis": [
+   0.0004,
+   0.0017
+  ],
+  "outer_radius": 0.498,
+  "rim_top": 0.1581,
+  "rim_inner_radius": 0.3793,
+  "water_level": 0.0393,
+  "painted_as_water": 0.405,
+  "still_water_patches_levelled": 41,
+  "loose_bits": {
+   "parts": 46,
+   "dropped": 44
+  },
+  "skirt_edges": 1217,
+  "scale": 3.012,
+  "ring": {
+   "outer_m": 1.5,
+   "inner_m": 1.142,
+   "top_m": 0.5,
+   "sides": 48
+  },
+  "water_level_m": 0.4,
+  "height_m": 2.0,
+  "falls": "keep"
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -1.44,
+  -1.473,
+  0.0
+ ],
+ "box_max": [
+  1.437,
+  1.465,
+  2.0
+ ],
+ "tris": 1190,
+ "deviation": {
+  "tris": 9000,
+  "mean_mm": 0.87,
+  "p95_mm": 2.11,
+  "max_mm": 5.8,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.03,
+ "diagonal_m": 4.573,
+ "texels_used": 0.925,
+ "materials": [
+  {
+   "design": [
+    77.5,
+    3.8,
+    1.4
+   ],
+   "got": [
+    77.7,
+    3.0,
+    1.0
+   ],
+   "share": 0.582,
+   "reached": true,
+   "delta_e": 0.9
+  },
+  {
+   "design": [
+    42.3,
+    1.4,
+    -5.0
+   ],
+   "got": [
+    42.1,
+    1.1,
+    -4.1
+   ],
+   "share": 0.418,
+   "reached": true,
+   "delta_e": 0.9
+  }
+ ],
+ "colour_delta_e": 0.9,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 4.3,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 4.3,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 4.4,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 4.5,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   20.7,
+   42.3
+  ],
+  [
+   38.2,
+   77.5
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.0,
+ "colour_before": [
+  0.315,
+  0.323,
+  0.334
+ ],
+ "colour_after": [
+  0.682,
+  0.658,
+  0.666
+ ],
+ "colour_design": [
+  0.586,
+  0.566,
+  0.581
+ ],
+ "water_materials": [
+  {
+   "design": [
+    81.6,
+    -8.0,
+    -25.9
+   ],
+   "got": [
+    80.8,
+    -7.2,
+    -26.7
+   ],
+   "share": 0.173,
+   "reached": true,
+   "delta_e": 1.3
+  },
+  {
+   "design": [
+    61.6,
+    2.8,
+    -56.6
+   ],
+   "got": [
+    61.3,
+    2.9,
+    -54.7
+   ],
+   "share": 0.432,
+   "reached": true,
+   "delta_e": 1.9
+  },
+  {
+   "design": [
+    50.7,
+    11.1,
+    -60.0
+   ],
+   "got": [
+    50.9,
+    12.3,
+    -60.2
+   ],
+   "share": 0.394,
+   "reached": true,
+   "delta_e": 1.3
+  }
+ ],
+ "water_colour_delta_e": 1.6,
+ "water_materials_reached": 1.0,
+ "water_colour_delta_e_of_the_fit": 5.6,
+ "water_colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 5.6,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 10.0,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 8.1,
+   "reached": 1.0
+  }
+ ],
+ "water_lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   42.5,
+   50.7
+  ],
+  [
+   48.7,
+   61.6
+  ],
+  [
+   68.8,
+   81.6
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "water_colourfulness_scale": 1.104,
+ "water_colour_before": [
+  0.181,
+  0.453,
+  0.754
+ ],
+ "water_colour_after": [
+  0.203,
+  0.563,
+  0.9
+ ],
+ "water_colour_design": [
+  0.173,
+  0.578,
+  0.91
+ ],
+ "ring_walls_painted_as_top": 19071,
+ "colour_as_matched": {
+  "colour_delta_e": 0.9,
+  "materials_reached": 1.0,
+  "materials": [
+   {
+    "design": [
+     77.5,
+     3.8,
+     1.4
+    ],
+    "got": [
+     77.5,
+     3.0,
+     1.0
+    ],
+    "share": 0.582,
+    "reached": true,
+    "delta_e": 0.9
+   },
+   {
+    "design": [
+     42.3,
+     1.4,
+     -5.0
+    ],
+    "got": [
+     42.3,
+     1.1,
+     -4.2
+    ],
+    "share": 0.418,
+    "reached": true,
+    "delta_e": 0.9
+   }
+  ],
+  "share_of_texels_changed_since": 0.072
+ },
+ "water_colour_as_matched": {
+  "colour_delta_e": 1.6,
+  "materials_reached": 1.0,
+  "materials": [
+   {
+    "design": [
+     81.6,
+     -8.0,
+     -25.9
+    ],
+    "got": [
+     81.2,
+     -7.2,
+     -26.7
+    ],
+    "share": 0.173,
+    "reached": true,
+    "delta_e": 1.3
+   },
+   {
+    "design": [
+     61.6,
+     2.8,
+     -56.6
+    ],
+    "got": [
+     61.3,
+     2.9,
+     -54.7
+    ],
+    "share": 0.432,
+    "reached": true,
+    "delta_e": 1.9
+   },
+   {
+    "design": [
+     50.7,
+     11.1,
+     -60.0
+    ],
+    "got": [
+     50.9,
+     12.3,
+     -60.2
+    ],
+    "share": 0.394,
+    "reached": true,
+    "delta_e": 1.3
+   }
+  ],
+  "share_of_texels_changed_since": 0.072
+ },
+ "water": {
+  "pool": "flat",
+  "roughness": 0.05,
+  "drawn_tris": 3057,
+  "disc_tris": 46,
+  "flat_colour": "#0385ED"
+ },
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 169200,
+ "name": "fountain",
+ "fitted_tris": 9334,
+ "cubes": {
+  "grid_m": 0.1,
+  "kept_as_it_is": {
+   "beyond_m": 1.137,
+   "tris": 334
+  },
+  "layers": [
+   {
+    "grid_m": 0.1,
+    "from_m": 0.0,
+    "cells": [
+     18,
+     19,
+     20
+    ],
+    "filled": 1142,
+    "filled_as_thin_members": 0,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's middle"
+    ]
+   }
+  ],
+  "filled": 1142,
+  "filled_as_thin_members": 0,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   18,
+   19,
+   20
+  ],
+  "grid_set_on": [
+   "a cell's edge",
+   "a cell's middle"
+  ],
+  "rectangles": 428,
+  "cell_faces": 1501,
+  "texture_px": 512,
+  "glowing_cell_faces": 0,
+  "tris": 1190,
+  "bytes": 169200,
+  "box_min": [
+   -1.5,
+   -1.5,
+   0.0
+  ],
+  "box_max": [
+   1.5,
+   1.5,
+   2.0
+  ]
+ }
+}

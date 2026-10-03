@@ -1,0 +1,239 @@
+{
+ "raw_tris": 143156,
+ "metal_map_ignored": true,
+ "loose_parts": 5,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": null,
+ "panel_turn": {
+  "ends_m": [
+   {
+    "x0": -0.502,
+    "x1": -0.368,
+    "top": 0.5591
+   },
+   {
+    "x0": 0.368,
+    "x1": 0.502,
+    "top": 0.5591
+   }
+  ],
+  "turn": 0.0
+ },
+ "panel": {
+  "far_post_cut": {
+   "at_share_of_length": 0.8646,
+   "far_post_m": [
+    0.368,
+    0.502
+   ],
+   "rail_ends_closed_with_faces": 273
+  },
+  "height_brought_down_to_m": 1.229,
+  "ends_before_m": [
+   -0.9973,
+   1.0003
+  ],
+  "moved_across_m": -0.0002,
+  "half_depth_in_band_m": [
+   0.1546,
+   0.1546
+  ],
+  "post_m": {
+   "foot_inner": -0.6964,
+   "level": 0.542,
+   "shaft": [
+    -0.9834,
+    -0.7199
+   ],
+   "last_baluster": 0.863
+  },
+  "post": {
+   "tris": 178,
+   "box_min": [
+    -0.1518,
+    -0.1548,
+    0.0
+   ],
+   "box_max": [
+    0.1518,
+    0.1546,
+    1.2267
+   ],
+   "shaft_off_the_foot_middle_m": -0.0034,
+   "moved_across_and_down_m": [
+    -0.0001,
+    -0.0
+   ],
+   "tangents_mended": 0,
+   "bytes": 176520,
+   "file": "railing_post.glb"
+  },
+  "stubs": {
+   "length_m": 0.0466,
+   "shaft_stands_in_m": 0.0166,
+   "rails": 3,
+   "corners": [
+    4,
+    4,
+    4
+   ],
+   "triangles": 30
+  }
+ },
+ "scale": [
+  2.3042,
+  2.3042,
+  2.1981
+ ],
+ "stretch": 1.048,
+ "yaw": 0.0,
+ "box_min": [
+  -1.0,
+  -0.157,
+  0.0
+ ],
+ "box_max": [
+  1.0,
+  0.157,
+  1.229
+ ],
+ "rebuilt_surface_m": 0.005,
+ "hidden_faces_dropped": {
+  "of": 2490,
+  "dropped": 138
+ },
+ "planar": {
+  "degrees": 8.0,
+  "from": 2352,
+  "to": 1926
+ },
+ "tris": 860,
+ "deviation": {
+  "tris": 830,
+  "mean_mm": 1.44,
+  "p95_mm": 3.69,
+  "max_mm": 6.6,
+  "measured_from": "the rebuilt surface, its hidden faces dropped"
+ },
+ "bake_reach_m": 0.012,
+ "diagonal_m": 2.368,
+ "stood_on_the_ground": {
+  "lowest_was_m": 0.0031,
+  "corners_moved": 5
+ },
+ "weighted_normals": true,
+ "texels_used": 0.833,
+ "materials": [
+  {
+   "design": [
+    60.4,
+    5.6,
+    11.4
+   ],
+   "got": [
+    60.4,
+    6.5,
+    10.7
+   ],
+   "share": 0.606,
+   "reached": true,
+   "delta_e": 1.2
+  },
+  {
+   "design": [
+    37.1,
+    2.8,
+    0.6
+   ],
+   "got": [
+    37.0,
+    2.1,
+    -0.5
+   ],
+   "share": 0.132,
+   "reached": true,
+   "delta_e": 1.3
+  },
+  {
+   "design": [
+    22.2,
+    1.1,
+    0.2
+   ],
+   "got": [
+    22.2,
+    1.3,
+    -0.5
+   ],
+   "share": 0.263,
+   "reached": true,
+   "delta_e": 0.7
+  }
+ ],
+ "colour_delta_e": 1.1,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 2.4,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 3.4,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 3.4,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 2.4,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   16.1,
+   22.2
+  ],
+  [
+   21.3,
+   37.1
+  ],
+  [
+   61.7,
+   60.4
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.302,
+ "colour_before": [
+  0.326,
+  0.298,
+  0.292
+ ],
+ "colour_after": [
+  0.384,
+  0.348,
+  0.334
+ ],
+ "colour_design": [
+  0.525,
+  0.465,
+  0.424
+ ],
+ "carried_light_parts": [],
+ "tangents_mended": 0,
+ "image_format": "WEBP",
+ "bytes": 233528,
+ "name": "railing"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "anime_cel.A-terrace",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "370a0ec3946432cd3734197a8b3c2d4f76ae22d57b2d180190b05198fa075f36",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ba83a1d7f7a119de41c957029568ec5d390e658fb2c757c1c7499371587790b2",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-04bdb709-fe7a-4448-a1cf-5e698515001f.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/anime_cel/street.jpg",
+    "../../../../refs/panels/anime_cel/gathering.jpg",
+    "../../../../refs/panels/anime_cel/park.jpg"
+  ],
+  "edit_of": null
+}

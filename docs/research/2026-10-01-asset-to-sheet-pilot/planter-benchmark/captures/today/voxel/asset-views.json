@@ -1,0 +1,69 @@
+{
+  "needle": "planter.glb",
+  "placed": 11,
+  "views": [
+    {
+      "at": [
+        -39.0025024414062,
+        0.0,
+        -0.502499997615814
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.0874969959259,
+        1.0,
+        1.08749985694885
+      ],
+      "scene": "res://styles/voxel/assets/v2/planter.glb",
+      "size": [
+        1.30499267578125,
+        1.0,
+        1.30499982833862
+      ],
+      "turn_degrees": 0
+    },
+    {
+      "at": [
+        -36.5025024414062,
+        0.0,
+        0.247500002384186
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.0874969959259,
+        1.0,
+        1.08749985694885
+      ],
+      "scene": "res://styles/voxel/assets/v2/planter.glb",
+      "size": [
+        1.30499267578125,
+        1.0,
+        1.30499982833862
+      ],
+      "turn_degrees": 0
+    },
+    {
+      "at": [
+        -41.7525024414062,
+        0.0,
+        6.24749946594238
+      ],
+      "frame": "auto",
+      "in_use": false,
+      "scale": [
+        1.0874969959259,
+        1.0,
+        1.08749985694885
+      ],
+      "scene": "res://styles/voxel/assets/v2/planter.glb",
+      "size": [
+        1.30499267578125,
+        1.0,
+        1.30500030517578
+      ],
+      "turn_degrees": 0
+    }
+  ]
+}

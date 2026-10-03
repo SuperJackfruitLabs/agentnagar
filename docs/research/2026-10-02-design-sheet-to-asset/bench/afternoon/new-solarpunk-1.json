@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "fps": 60.0,
+    "hz": 59.9599990844727,
+    "missed_pct": 0.0
+  },
+  "budgets": {
+    "solarpunk": {
+      "heavy_fps": 240.0,
+      "heavy_ms": 4.17,
+      "missed_pct": 1.0,
+      "normal_fps": 360.0,
+      "normal_ms": 2.78
+    }
+  },
+  "results": [
+    {
+      "fps": 60.0,
+      "frames": 666,
+      "gpu_p99": 4.26300001144409,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 26.457,
+      "missed_pct": 0.666666666666667,
+      "p50": 4.973,
+      "p99": 19.468,
+      "scene": "diagonal",
+      "style": "solarpunk",
+      "t0": 1790939235.98627,
+      "t1": 1790939247.61511,
+      "width": 1920
+    },
+    {
+      "fps": 60.0,
+      "frames": 880,
+      "gpu_p99": 4.03200006484985,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 29.615,
+      "missed_pct": 1.0,
+      "p50": 3.851,
+      "p99": 12.543,
+      "scene": "street",
+      "style": "solarpunk",
+      "t0": 1790939247.61679,
+      "t1": 1790939258.65952,
+      "width": 1920
+    }
+  ]
+}

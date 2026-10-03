@@ -1,0 +1,13 @@
+Use case: stylized-concept
+Asset type: game asset life-cycle sheet: one asset at three stages
+Primary request: a park bench at three stages of its life, side by side, each drawn as a finished game model in the style of the reference images
+Input images: Image 1: style reference (the park panel); Image 2: style reference (the gathering panel). These are panels from the concept sheets of the Low-poly tropical style. Take from them only how this style renders, colours and builds things like this. Do not copy their composition, scenery, people or captions.
+Scene/backdrop: one flat mid-grey backdrop (#B8B8B8) across the whole canvas, with no floor line, horizon, scenery, sky or people; a soft contact shadow under each object and nothing else
+Subject: A park bench for two: 1.6 m long, 0.6 m deep, seat 45 cm high, back to 85 cm. In this style: Chunky warm-brown timber: two broad seat boards, two broad back planks, timber arm blocks, dark posts. Three stages, left to right: 1. Its parts laid out before assembly as a kit, every piece separate and flat on the ground. 2. New, just assembled. 3. After years of use: edges worn, one part replaced in a slightly different tone, one small neat repair.
+Style/medium: stylised low-poly 3D game model, seen as a clean render: flat faceted planes on foliage, rocks, hair and cloth; buildings and furniture as smooth painted volumes with crisp chamfered edges; matte surfaces, no outlines
+Composition/framing: landscape canvas, 1536 x 1024, divided into three equal columns with clear empty backdrop between them; one stage in each, in three-quarter view from the front-right with the camera raised about 30 degrees, the same viewpoint and the same size in all three.
+Lighting/mood: soft even daylight from the upper left, as in a product render: every surface readable, gentle shading, no coloured light, no hard cast shadows
+Color palette: warm mid-brown timber, #613E2B in shade to #C78860 in light; charcoal iron, #2C282B to #4A4548
+Materials/textures: flat painted colour on each face with a soft gradient from light to shade; timber shows a few broad plank lines, stone a few large blocks, foliage is clumps of flat facets in three or four tones; no photographic texture, no noise
+Constraints: the same object in all three stages, with the same footprint, main form and viewpoint; made of a small number of solid, simple parts that a low-polygon game model can reproduce; no text, letters, numbers, labels, captions, arrows, dimension lines, logos, signatures or watermark anywhere
+Avoid: scenery, people, three different designs, perspective distortion, depth of field, bloom, smooth realistic foliage, photographic textures, ink outlines, glossy plastic

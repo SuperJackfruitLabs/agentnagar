@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.A-street-fixtures",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "3744d72e2ab5fcfb731413dbce1fad2c43fd0058eb9613a4d8416ec83bc92ca3",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "1d411eac5c97afbab316a9040881228661a20369159bcb50e7ae12e29d294754",
+    "is_the_jobs": false,
+    "correction": "Change only the cropped overhead wire and light spill. Remove the long wire running from the catenary arm to the right canvas edge; retain the complete pole, side arm, insulator and its attached triangular brace. Remove every amber halo or reflected glow from the grey backdrop and adjacent dark fixture surfaces; keep the lantern glass and built-in strips bright amber as small luminous parts that light nothing else. Preserve all four whole fixtures, their geometry and material colours otherwise, positions, scales, swatch rows, soft shadows and 1536 x 1024 landscape layout. No text or added objects."
+  },
+  "source_paths": [
+    "exec-bdf9de2e-e562-4dfd-b2e0-5d5d456949c2.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/street.jpg",
+    "../../../../refs/panels/neon_noir/park.jpg",
+    "../../../../refs/panels/neon_noir/transit.jpg"
+  ],
+  "edit_of": null
+}

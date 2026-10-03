@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job": "neon_noir.B-materials-ground",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "4aedc4d8972a32e2be549c57520ead07dff0b36475087abb84a430fe35a4f0f8",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "ea538764f5c8ec77e307e8dc91e915dc1d905e32a2b31d18f29009fde683e9d2",
+    "is_the_jobs": true
+  },
+  "source_paths": [
+    "exec-88273134-6ea1-4384-a300-ce84242b2c52.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/neon_noir/topdown.jpg",
+    "../../../../refs/panels/neon_noir/park.jpg",
+    "../../../../refs/panels/neon_noir/street.jpg"
+  ],
+  "edit_of": null
+}

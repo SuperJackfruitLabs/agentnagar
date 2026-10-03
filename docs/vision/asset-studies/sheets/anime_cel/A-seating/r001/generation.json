@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "anime_cel.A-seating",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "4960920694bf384498b8bd60ea6824928e9f0bad960b910abe4052c5ea93c7fa",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "16535a97dff343b20a9bfc3dc5b29d94934269bb345adaf1107047e7b879cc17",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-78bfb868-4d80-47d8-8469-7da4e65f06a1.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/anime_cel/park.jpg",
+    "../../../../refs/panels/anime_cel/gathering.jpg",
+    "../../../../refs/panels/anime_cel/home.jpg"
+  ],
+  "edit_of": null
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job": "lowpoly_tropical.A-trees",
+  "created": "2026-10-02",
+  "generator": "OpenAI image generation through ChatGPT or Codex (built-in image_gen); model not recorded",
+  "sha256": "6a101d6cd8c4a8fda402daf8fd4414f0cfa28d22ae599f69c7ab46aa632d9dc7",
+  "width": 1536,
+  "height": 1024,
+  "prompt": {
+    "status": "saved",
+    "path": "prompt.txt",
+    "sha256": "6b80cd2810e8fe3f91697253c56b0d2b6a1c2cef90a6d42d6d6914de930e7192",
+    "is_the_jobs": true,
+    "correction": null
+  },
+  "source_paths": [
+    "exec-7eb20601-7a57-49df-8aa3-d512cc2cfa95.png"
+  ],
+  "reference_images": [
+    "../../../../refs/panels/lowpoly_tropical/street.jpg",
+    "../../../../refs/panels/lowpoly_tropical/park.jpg",
+    "../../../../refs/panels/lowpoly_tropical/diagonal.jpg"
+  ],
+  "edit_of": null
+}
