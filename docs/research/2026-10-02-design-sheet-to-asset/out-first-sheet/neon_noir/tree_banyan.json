@@ -1,0 +1,77 @@
+{
+ "raw_tris": 142790,
+ "metal_map_ignored": true,
+ "loose_parts": 761,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "tree_raised": null,
+ "tree": {
+  "bed_top": 0.133,
+  "narrowest": 0.208,
+  "crown_from": 0.288,
+  "bed_scale": [
+   10.343,
+   11.261
+  ],
+  "crown_scale": 12.692,
+  "up_scale": 14.853,
+  "crown_starts_m": 2.17,
+  "crown_started_before_it_was_raised_m": 2.17
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -6.12,
+  -6.437,
+  0.0
+ ],
+ "box_max": [
+  6.4,
+  5.735,
+  9.81
+ ],
+ "rebuilt_surface_m": 0.07,
+ "tris": 31672,
+ "deviation": {
+  "tris": 30000,
+  "mean_mm": 13.68,
+  "p95_mm": 35.32,
+  "max_mm": 516.9,
+  "measured_from": "the rebuilt surface"
+ },
+ "bake_reach_m": 0.4006,
+ "diagonal_m": 20.029,
+ "lifted_to_clear_band": 23,
+ "pulled_into_footprint": 25,
+ "texels_used": 0.898,
+ "colour_match": "none",
+ "leaf_colour": {
+  "asked": "#296238",
+  "share_of_texels": 0.797
+ },
+ "glow_share": 0.0022,
+ "fairy_halo": {
+  "sigma_m": 0.3,
+  "strength": 0.22,
+  "share_lit": 0.047
+ },
+ "glow_faces": 29,
+ "carried_light_parts": [
+  "light"
+ ],
+ "core": {
+  "tris": 220,
+  "colour": "#144129",
+  "from_m": 5.98,
+  "to_m": 8.26
+ },
+ "fairy_lights": 360,
+ "under_glow": [
+  5.283,
+  5.182,
+  0.03,
+  0.1
+ ],
+ "image_format": "WEBP",
+ "bytes": 3204260,
+ "name": "tree_banyan"
+}

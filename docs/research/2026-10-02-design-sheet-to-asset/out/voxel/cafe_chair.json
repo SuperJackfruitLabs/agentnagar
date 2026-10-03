@@ -1,0 +1,214 @@
+{
+ "kit_tris": 72,
+ "kit_light_parts": [],
+ "raw_tris": 119714,
+ "metal_map_ignored": true,
+ "loose_parts": 21,
+ "dropped_parts": 1,
+ "dropped_area_share": 0.0003,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.5939,
+  "90": 0.5801,
+  "180": 0.5801,
+  "270": 0.5801
+ },
+ "yaw_by_least_stretch": {
+  "90": 1.797,
+  "180": 1.797,
+  "270": 1.797
+ },
+ "scale": [
+  0.5569,
+  0.5547,
+  0.9969
+ ],
+ "stretch": 1.797,
+ "seat_top_m": {
+  "kit": 0.5,
+  "generated": 0.5
+ },
+ "yaw": 180,
+ "box_min": [
+  -0.2,
+  -0.2,
+  0.0
+ ],
+ "box_max": [
+  0.2,
+  0.2,
+  1.0
+ ],
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 0.95,
+   "p95_mm": 2.71,
+   "max_mm": 11.4,
+   "measured_from": "the generated model"
+  },
+  {
+   "tris": 2000,
+   "mean_mm": 0.52,
+   "p95_mm": 1.45,
+   "max_mm": 4.4,
+   "measured_from": "the generated model"
+  }
+ ],
+ "tris": 62,
+ "deviation": {
+  "tris": 2000,
+  "mean_mm": 0.52,
+  "p95_mm": 1.45,
+  "max_mm": 4.4,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0115,
+ "diagonal_m": 1.149,
+ "own_normals": true,
+ "weighted_normals": true,
+ "texels_used": 0.953,
+ "materials": [
+  {
+   "design": [
+    17.9,
+    2.5,
+    -4.0
+   ],
+   "got": [
+    17.7,
+    1.7,
+    -4.0
+   ],
+   "share": 0.379,
+   "reached": true,
+   "delta_e": 0.8
+  },
+  {
+   "design": [
+    56.0,
+    31.5,
+    53.7
+   ],
+   "got": [
+    56.1,
+    30.2,
+    53.9
+   ],
+   "share": 0.621,
+   "reached": true,
+   "delta_e": 1.3
+  }
+ ],
+ "colour_delta_e": 1.1,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 5.5,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 5.5,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 5.5,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 5.5,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   14.3,
+   17.9
+  ],
+  [
+   32.6,
+   56.0
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.6,
+ "colour_before": [
+  0.304,
+  0.208,
+  0.113
+ ],
+ "colour_after": [
+  0.508,
+  0.311,
+  0.154
+ ],
+ "colour_design": [
+  0.565,
+  0.343,
+  0.175
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 8216,
+ "name": "cafe_chair",
+ "fitted_tris": 2000,
+ "cubes": {
+  "grid_m": 0.1,
+  "layers": [
+   {
+    "grid_m": 0.1,
+    "from_m": 0.0,
+    "cells": [
+     4,
+     4,
+     10
+    ],
+    "filled": 44,
+    "filled_as_thin_members": 5,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's edge"
+    ]
+   }
+  ],
+  "filled": 44,
+  "filled_as_thin_members": 5,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   4,
+   4,
+   10
+  ],
+  "grid_set_on": [
+   "a cell's edge",
+   "a cell's edge"
+  ],
+  "rectangles": 31,
+  "cell_faces": 150,
+  "texture_px": 256,
+  "glowing_cell_faces": 0,
+  "tris": 62,
+  "bytes": 8216,
+  "box_min": [
+   -0.2,
+   -0.2,
+   0.0
+  ],
+  "box_max": [
+   0.2,
+   0.2,
+   1.0
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "info": {
+  "day_ticks": 0,
+  "reverse_outside_rooms": 0,
+  "solids": 855,
+  "tram_drawn_half_width_m": 1.25,
+  "unmeasured_sprites": {
+
+  },
+  "unplaced_multimeshes": {
+
+  },
+  "walkable_cells": 164158
+ },
+ "player_pass": {
+  "by_kind": {
+
+  },
+  "count": 0,
+  "offenders": []
+ },
+ "reverse_blocked": {
+  "by_kind": {
+
+  },
+  "by_placement": {
+
+  },
+  "count": 0,
+  "offenders": []
+ },
+ "style": "neon_noir",
+ "through": {
+  "by_kind": {
+
+  },
+  "count": 0,
+  "offenders": []
+ },
+ "tram_overlap": {
+  "by_kind": {
+
+  },
+  "count": 0,
+  "offenders": []
+ },
+ "walker_pass": {
+  "by_kind": {
+
+  },
+  "count": 0,
+  "offenders": []
+ },
+ "within_10cm": {
+  "by_kind": {
+
+  },
+  "count": 0,
+  "offenders": []
+ }
+}

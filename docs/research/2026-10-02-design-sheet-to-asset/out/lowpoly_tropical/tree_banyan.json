@@ -1,0 +1,355 @@
+{
+ "raw_tris": 145346,
+ "metal_map_ignored": true,
+ "loose_parts": 61,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "tree_raised": null,
+ "tree": {
+  "bed_top": 0.167,
+  "narrowest": 0.258,
+  "crown_from": 0.338,
+  "bed_scale": [
+   10.162,
+   10.103
+  ],
+  "crown_scale": 12.157,
+  "up_scale": 14.231,
+  "crown_starts_m": 2.35,
+  "crown_started_before_it_was_raised_m": 2.35
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -6.171,
+  -5.985,
+  0.0
+ ],
+ "box_max": [
+  5.829,
+  5.66,
+  9.5
+ ],
+ "wood_cell_m": 0.05,
+ "parts": {
+  "wood": 3000,
+  "lantern": 898,
+  "leaf": 9998
+ },
+ "tris": 20478,
+ "deviation": {
+  "tris": 13896,
+  "mean_mm": 80.08,
+  "p95_mm": 225.6,
+  "max_mm": 1046.6
+ },
+ "bake_reach_m": 0.3384,
+ "diagonal_m": 19.231,
+ "lifted_to_clear_band": 0,
+ "pulled_into_footprint": 1,
+ "texels_used": 0.9,
+ "materials": [
+  {
+   "design": [
+    42.5,
+    -17.2,
+    36.2
+   ],
+   "got": [
+    46.0,
+    -18.8,
+    35.8
+   ],
+   "share": 0.179,
+   "reached": true,
+   "delta_e": 3.9
+  },
+  {
+   "design": [
+    27.1,
+    -12.7,
+    20.6
+   ],
+   "got": [
+    30.0,
+    -13.4,
+    21.8
+   ],
+   "share": 0.223,
+   "reached": true,
+   "delta_e": 3.2
+  },
+  {
+   "design": [
+    59.4,
+    -17.7,
+    53.9
+   ],
+   "got": [
+    60.4,
+    -20.0,
+    51.3
+   ],
+   "share": 0.141,
+   "reached": true,
+   "delta_e": 3.7
+  },
+  {
+   "design": [
+    29.3,
+    7.9,
+    19.3
+   ],
+   "got": [
+    31.7,
+    8.1,
+    19.6
+   ],
+   "share": 0.136,
+   "reached": true,
+   "delta_e": 2.5
+  },
+  {
+   "design": [
+    72.9,
+    5.7,
+    13.9
+   ],
+   "got": [
+    71.8,
+    5.3,
+    12.9
+   ],
+   "share": 0.125,
+   "reached": true,
+   "delta_e": 1.5
+  },
+  {
+   "design": [
+    75.6,
+    -15.8,
+    63.3
+   ],
+   "got": [
+    76.8,
+    -16.5,
+    59.3
+   ],
+   "share": 0.136,
+   "reached": true,
+   "delta_e": 4.2
+  },
+  {
+   "design": [
+    49.6,
+    15.2,
+    37.1
+   ],
+   "got": [
+    58.0,
+    12.9,
+    36.4
+   ],
+   "share": 0.06,
+   "reached": true,
+   "delta_e": 8.8
+  }
+ ],
+ "colour_delta_e": 3.6,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 10.3,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 10.3,
+   "reached": 0.865
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 9.8,
+   "reached": 0.842
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 9.6,
+   "reached": 0.822
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   29.5,
+   27.9
+  ],
+  [
+   38.1,
+   42.8
+  ],
+  [
+   51.9,
+   56.5
+  ],
+  [
+   56.0,
+   72.9
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.756,
+ "colour_before": [
+  0.26,
+  0.395,
+  0.044
+ ],
+ "colour_after": [
+  0.415,
+  0.453,
+  0.199
+ ],
+ "colour_design": [
+  0.474,
+  0.46,
+  0.216
+ ],
+ "colour_as_matched": {
+  "colour_delta_e": 4.2,
+  "materials_reached": 1.0,
+  "materials": [
+   {
+    "design": [
+     42.5,
+     -17.2,
+     36.2
+    ],
+    "got": [
+     46.0,
+     -18.8,
+     35.8
+    ],
+    "share": 0.179,
+    "reached": true,
+    "delta_e": 3.9
+   },
+   {
+    "design": [
+     27.1,
+     -12.7,
+     20.6
+    ],
+    "got": [
+     30.0,
+     -13.4,
+     21.8
+    ],
+    "share": 0.223,
+    "reached": true,
+    "delta_e": 3.2
+   },
+   {
+    "design": [
+     59.4,
+     -17.7,
+     53.9
+    ],
+    "got": [
+     60.4,
+     -20.0,
+     51.3
+    ],
+    "share": 0.141,
+    "reached": true,
+    "delta_e": 3.7
+   },
+   {
+    "design": [
+     29.3,
+     7.9,
+     19.3
+    ],
+    "got": [
+     31.7,
+     8.1,
+     19.6
+    ],
+    "share": 0.136,
+    "reached": true,
+    "delta_e": 2.5
+   },
+   {
+    "design": [
+     72.9,
+     5.7,
+     13.9
+    ],
+    "got": [
+     75.4,
+     5.3,
+     13.2
+    ],
+    "share": 0.125,
+    "reached": true,
+    "delta_e": 2.7
+   },
+   {
+    "design": [
+     75.6,
+     -15.8,
+     63.3
+    ],
+    "got": [
+     80.5,
+     -18.2,
+     58.2
+    ],
+    "share": 0.136,
+    "reached": true,
+    "delta_e": 7.4
+   },
+   {
+    "design": [
+     49.6,
+     15.2,
+     37.1
+    ],
+    "got": [
+     58.4,
+     13.0,
+     36.4
+    ],
+    "share": 0.06,
+    "reached": true,
+    "delta_e": 9.1
+   }
+  ],
+  "share_of_texels_changed_since": 0.008
+ },
+ "crown_fill": {
+  "shares_and_turns": [
+   0.5,
+   40.0
+  ],
+  "triangles": 6366
+ },
+ "glow_share": 0.0077,
+ "glow_faces": 476,
+ "glow_part": {
+  "name": "lanterns",
+  "faces": 445,
+  "stray_faces_left_in_the_body": 31
+ },
+ "carried_light_parts": [],
+ "core": {
+  "tris": 216,
+  "colour": "#667D2B",
+  "from_m": 5.93,
+  "to_m": 8.36
+ },
+ "image_format": "WEBP",
+ "bytes": 2980812,
+ "name": "tree_banyan"
+}

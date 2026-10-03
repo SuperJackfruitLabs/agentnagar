@@ -1,0 +1,356 @@
+{
+ "kit_tris": 350,
+ "kit_light_parts": [],
+ "raw_tris": 140372,
+ "metal_map_ignored": true,
+ "loose_parts": 3,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.4924,
+  "90": 0.4746,
+  "180": 0.4754,
+  "270": 0.4826
+ },
+ "yaw_by_least_stretch": {
+  "90": 1.955,
+  "180": 1.71
+ },
+ "scale": [
+  5.4901,
+  6.133,
+  3.586
+ ],
+ "stretch": 1.71,
+ "yaw": 180,
+ "box_min": [
+  -1.6,
+  -1.6,
+  0.0
+ ],
+ "box_max": [
+  1.6,
+  1.2,
+  3.6
+ ],
+ "tris": 328,
+ "deviation": {
+  "tris": 40000,
+  "mean_mm": 0.47,
+  "p95_mm": 1.36,
+  "max_mm": 11.3,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0557,
+ "diagonal_m": 5.571,
+ "texels_used": 0.938,
+ "materials": [
+  {
+   "design": [
+    52.9,
+    -38.5,
+    52.8
+   ],
+   "got": [
+    52.9,
+    -39.9,
+    51.9
+   ],
+   "share": 0.218,
+   "reached": true,
+   "delta_e": 1.7
+  },
+  {
+   "design": [
+    82.3,
+    -2.6,
+    7.8
+   ],
+   "got": [
+    82.1,
+    -2.9,
+    7.3
+   ],
+   "share": 0.048,
+   "reached": true,
+   "delta_e": 0.6
+  },
+  {
+   "design": [
+    26.9,
+    12.4,
+    26.8
+   ],
+   "got": [
+    26.9,
+    11.8,
+    25.6
+   ],
+   "share": 0.106,
+   "reached": true,
+   "delta_e": 1.3
+  },
+  {
+   "design": [
+    68.9,
+    -40.2,
+    67.3
+   ],
+   "got": [
+    68.9,
+    -43.6,
+    66.3
+   ],
+   "share": 0.168,
+   "reached": true,
+   "delta_e": 3.5
+  },
+  {
+   "design": [
+    12.1,
+    3.6,
+    14.5
+   ],
+   "got": [
+    12.8,
+    4.2,
+    15.4
+   ],
+   "share": 0.032,
+   "reached": true,
+   "delta_e": 1.3
+  },
+  {
+   "design": [
+    25.9,
+    -24.8,
+    28.0
+   ],
+   "got": [
+    26.6,
+    -25.9,
+    28.7
+   ],
+   "share": 0.167,
+   "reached": true,
+   "delta_e": 1.5
+  },
+  {
+   "design": [
+    44.2,
+    18.1,
+    40.1
+   ],
+   "got": [
+    36.0,
+    12.5,
+    27.4
+   ],
+   "share": 0.06,
+   "reached": false,
+   "delta_e": 16.1
+  },
+  {
+   "design": [
+    37.2,
+    -31.4,
+    37.8
+   ],
+   "got": [
+    37.5,
+    -32.1,
+    37.4
+   ],
+   "share": 0.201,
+   "reached": true,
+   "delta_e": 0.8
+  }
+ ],
+ "colour_delta_e": 2.5,
+ "materials_reached": 0.94,
+ "colour_delta_e_of_the_fit": 8.3,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 8.3,
+   "reached": 0.942
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 8.3,
+   "reached": 0.94
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 8.7,
+   "reached": 0.937
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   18.9,
+   12.1
+  ],
+  [
+   22.6,
+   26.9
+  ],
+  [
+   28.0,
+   26.9
+  ],
+  [
+   33.7,
+   37.3
+  ],
+  [
+   49.6,
+   53.0
+  ],
+  [
+   68.3,
+   68.9
+  ],
+  [
+   95.2,
+   82.3
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.922,
+ "colour_before": [
+  0.155,
+  0.384,
+  0.058
+ ],
+ "colour_after": [
+  0.235,
+  0.39,
+  0.097
+ ],
+ "colour_design": [
+  0.335,
+  0.459,
+  0.105
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 31236,
+ "name": "tree_small",
+ "fitted_tris": 40000,
+ "cubes": {
+  "grid_m": 0.1,
+  "upper": {
+   "from_m": 1.2,
+   "grid_m": 0.4,
+   "green_from_m": 1.556
+  },
+  "layers": [
+   {
+    "grid_m": 0.1,
+    "from_m": 0.0,
+    "cells": [
+     4,
+     4,
+     24
+    ],
+    "filled": 128,
+    "filled_as_thin_members": 0,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's edge"
+    ]
+   },
+   {
+    "grid_m": 0.4,
+    "from_m": 1.2,
+    "cells": [
+     8,
+     7,
+     6
+    ],
+    "filled": 112,
+    "filled_as_thin_members": 0,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's edge"
+    ]
+   }
+  ],
+  "trunk": {
+   "cubes_square": 2,
+   "ribs_to_m": 0.4,
+   "rises_to_m": 2.4,
+   "crown_cubes_over_it": 4,
+   "wood_coloured_crown_cubes_left_out": 9,
+   "coloured_from_the_design_s_trunk": true
+  },
+  "tones": {
+   "greens": [
+    "#2c5018",
+    "#528c1b",
+    "#9ecb18"
+   ],
+   "cubes_of_each": [
+    23,
+    41,
+    28
+   ],
+   "blossom_cubes": 4,
+   "cubes_that_show": 96
+  },
+  "filled": 240,
+  "filled_as_thin_members": 0,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   4,
+   4,
+   24
+  ],
+  "grid_set_on": [
+   "a cell's edge",
+   "a cell's edge"
+  ],
+  "rectangles": 164,
+  "cell_faces": 478,
+  "texture_px": 512,
+  "glowing_cell_faces": 0,
+  "planted": {
+   "materials": [
+    "leaf",
+    "trunk"
+   ],
+   "trunk_reach_m": 0.224,
+   "width_scale_in_game": 1.118,
+   "trunk_cell_faces": 21,
+   "leaf_cell_faces": 143
+  },
+  "tris": 328,
+  "bytes": 31236,
+  "box_min": [
+   -1.6,
+   -1.6,
+   0.0
+  ],
+  "box_max": [
+   1.6,
+   1.2,
+   3.6
+  ]
+ }
+}

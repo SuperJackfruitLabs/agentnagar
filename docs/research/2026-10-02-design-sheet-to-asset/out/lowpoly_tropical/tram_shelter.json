@@ -1,0 +1,257 @@
+{
+ "kit_bench_top_m": 0.49,
+ "kit_tris": 328,
+ "kit_light_parts": [],
+ "raw_tris": 144478,
+ "metal_map_ignored": true,
+ "loose_parts": 4,
+ "dropped_parts": 2,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": null,
+ "shelter": {
+  "canopy_underside": 0.89,
+  "end_faces_x": [
+   -0.4161,
+   0.4181
+  ],
+  "screen_front_y": -0.1341,
+  "bench_top": 0.34,
+  "seat_top": 0.1756,
+  "feet_steps_to": 0.2,
+  "screen_behind_bench_y": -0.1212,
+  "posts_cut_at": [
+   0.796,
+   0.875,
+   0.875,
+   0.82,
+   0.82,
+   0.82,
+   0.862
+  ],
+  "canopy_found_by": "what is joined to the roof",
+  "post_taken_out_at": [
+   0.41,
+   0.0839
+  ],
+  "parted": {
+   "canopy": {
+    "faces": 56262,
+    "closing_faces": 14,
+    "left_open": 0
+   },
+   "post": {
+    "faces": 4687,
+    "closing_faces": 0,
+    "left_open": 0
+   },
+   "bench": {
+    "faces": 10912,
+    "closing_faces": 2,
+    "left_open": 0
+   },
+   "bench_stubs": {
+    "faces": 2198,
+    "closing_faces": 0,
+    "left_open": 0
+   }
+  },
+  "band_box": [
+   -2.15,
+   -0.4,
+   2.15,
+   0.75
+  ],
+  "footprint": [
+   -2.15,
+   -0.4,
+   2.15,
+   0.75
+  ],
+  "back_held_to_22cm": true,
+  "canopy_lowest_m": 2.342,
+  "canopy_underside_m": 2.622,
+  "bench": {
+   "x": [
+    -1.73,
+    0.63
+   ],
+   "front_edge_z": 0.104,
+   "seat_front_z": 0.15,
+   "seat_top_m": 0.49,
+   "top_m": 0.858,
+   "shortened_to": 1.13
+  }
+ },
+ "yaw": 180.0,
+ "box_min": [
+  -2.203,
+  -1.02,
+  0.0
+ ],
+ "box_max": [
+  2.265,
+  1.17,
+  2.95
+ ],
+ "tris": 12000,
+ "deviation": {
+  "tris": 12000,
+  "mean_mm": 0.61,
+  "p95_mm": 1.75,
+  "max_mm": 22.7,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.03,
+ "diagonal_m": 5.784,
+ "texels_used": 0.963,
+ "materials": [
+  {
+   "design": [
+    57.7,
+    3.8,
+    13.1
+   ],
+   "got": [
+    57.5,
+    4.6,
+    12.2
+   ],
+   "share": 0.102,
+   "reached": true,
+   "delta_e": 1.2
+  },
+  {
+   "design": [
+    21.4,
+    1.1,
+    0.9
+   ],
+   "got": [
+    21.4,
+    1.7,
+    0.7
+   ],
+   "share": 0.157,
+   "reached": true,
+   "delta_e": 0.6
+  },
+  {
+   "design": [
+    84.1,
+    3.3,
+    17.3
+   ],
+   "got": [
+    84.0,
+    4.1,
+    15.0
+   ],
+   "share": 0.18,
+   "reached": true,
+   "delta_e": 2.5
+  },
+  {
+   "design": [
+    36.5,
+    1.4,
+    -1.0
+   ],
+   "got": [
+    36.2,
+    2.3,
+    1.7
+   ],
+   "share": 0.193,
+   "reached": true,
+   "delta_e": 2.9
+  },
+  {
+   "design": [
+    46.6,
+    17.8,
+    32.6
+   ],
+   "got": [
+    46.6,
+    23.8,
+    34.3
+   ],
+   "share": 0.368,
+   "reached": true,
+   "delta_e": 6.2
+  }
+ ],
+ "colour_delta_e": 3.5,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 7.8,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 8.2,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 8.2,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 7.8,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   16.1,
+   21.4
+  ],
+  [
+   29.8,
+   36.5
+  ],
+  [
+   37.9,
+   46.6
+  ],
+  [
+   42.9,
+   57.7
+  ],
+  [
+   66.8,
+   84.1
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.166,
+ "colour_before": [
+  0.447,
+  0.304,
+  0.233
+ ],
+ "colour_after": [
+  0.54,
+  0.395,
+  0.3
+ ],
+ "colour_design": [
+  0.542,
+  0.438,
+  0.35
+ ],
+ "carried_light_parts": [],
+ "faces_with_square_normals": 0.5,
+ "image_format": "WEBP",
+ "bytes": 1212684,
+ "name": "tram_shelter"
+}

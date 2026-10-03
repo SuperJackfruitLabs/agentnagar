@@ -1,0 +1,350 @@
+{
+ "kit_tris": 1104,
+ "kit_light_parts": [
+  "light"
+ ],
+ "raw_tris": 141786,
+ "metal_map_ignored": true,
+ "loose_parts": 45,
+ "dropped_parts": 44,
+ "dropped_area_share": 0.0013,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.1188,
+  "90": 0.1159,
+  "180": 0.1177,
+  "270": 0.1168
+ },
+ "scale": [
+  1.3911,
+  1.4621,
+  1.4261
+ ],
+ "stretch": 1.051,
+ "planter": {
+  "box_as_generated": [
+   0.935,
+   0.889,
+   0.258
+  ],
+  "rim_m": 0.45,
+  "rim_if_kept_m": 0.368,
+  "rim_stretch": 1.222,
+  "plants_drawn_in": [
+   0.992,
+   0.991
+  ],
+  "inset_m": 0.03,
+  "height_m": 0.968,
+  "walls_m": 0.075,
+  "soil_m": 0.406,
+  "box": "plain",
+  "plant_faces_of_the_generated_model": 227656,
+  "fill": {
+   "shares_and_turns": [
+    0.62,
+    45.0
+   ],
+   "faces_copied_in_the_generated_model": 113828
+  },
+  "rim_top_area_by_half_cm_from_the_outline": [
+   0.0007,
+   0.0132,
+   0.027,
+   0.0281,
+   0.0305,
+   0.0264,
+   0.0237,
+   0.0226,
+   0.0301,
+   0.0219,
+   0.0233,
+   0.0331,
+   0.019,
+   0.0114,
+   0.0049,
+   0.0006,
+   0.0014,
+   0.0009,
+   0.0004,
+   0.002,
+   0.0009,
+   0.0021,
+   0.0008,
+   0.002,
+   0.0017,
+   0.0029,
+   0.0019,
+   0.0017,
+   0.0018,
+   0.0022,
+   0.0011,
+   0.0008,
+   0.001,
+   0.0009,
+   0.0017,
+   0.0013,
+   0.0024,
+   0.0026,
+   0.0016,
+   0.003
+  ],
+  "plant_vertices_put_on_the_outline": 1
+ },
+ "yaw": 90,
+ "box_min": [
+  -0.703,
+  -0.653,
+  0.0
+ ],
+ "box_max": [
+  0.65,
+  0.65,
+  0.968
+ ],
+ "parts": {
+  "box": 26,
+  "plants": 9000
+ },
+ "tris": 9040,
+ "deviation": {
+  "tris": 9026,
+  "mean_mm": 14.97,
+  "p95_mm": 47.0,
+  "max_mm": 406.3
+ },
+ "bake_reach_m": 0.0423,
+ "diagonal_m": 2.113,
+ "texels_used": 0.956,
+ "materials": [
+  {
+   "design": [
+    30.3,
+    2.8,
+    1.6
+   ],
+   "got": [
+    30.2,
+    -0.6,
+    1.8
+   ],
+   "share": 0.444,
+   "reached": true,
+   "delta_e": 3.4
+  },
+  {
+   "design": [
+    6.4,
+    -0.6,
+    2.1
+   ],
+   "got": [
+    6.4,
+    1.4,
+    7.9
+   ],
+   "share": 0.212,
+   "reached": true,
+   "delta_e": 6.1
+  },
+  {
+   "design": [
+    88.7,
+    -2.7,
+    48.1
+   ],
+   "got": [
+    36.3,
+    -5.2,
+    17.8
+   ],
+   "share": 0.032,
+   "reached": false,
+   "delta_e": 60.5
+  },
+  {
+   "design": [
+    36.7,
+    42.1,
+    -54.5
+   ],
+   "got": [
+    29.3,
+    34.3,
+    -51.4
+   ],
+   "share": 0.04,
+   "reached": true,
+   "delta_e": 11.2
+  },
+  {
+   "design": [
+    27.3,
+    -9.9,
+    19.7
+   ],
+   "got": [
+    30.9,
+    -5.3,
+    13.1
+   ],
+   "share": 0.272,
+   "reached": true,
+   "delta_e": 8.9
+  }
+ ],
+ "colour_delta_e": 7.6,
+ "materials_reached": 0.968,
+ "colour_delta_e_of_the_fit": 7.8,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 7.9,
+   "reached": 0.971
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 7.9,
+   "reached": 0.969
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 7.8,
+   "reached": 0.968
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   11.4,
+   6.4
+  ],
+  [
+   35.6,
+   29.6
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.754,
+ "colour_before": [
+  0.239,
+  0.334,
+  0.217
+ ],
+ "colour_after": [
+  0.218,
+  0.272,
+  0.185
+ ],
+ "colour_design": [
+  0.269,
+  0.253,
+  0.214
+ ],
+ "leaf_colour": {
+  "asked": "#484A34",
+  "share_of_texels": 0.832
+ },
+ "colour_as_matched": {
+  "colour_delta_e": 6.5,
+  "materials_reached": 0.968,
+  "materials": [
+   {
+    "design": [
+     30.3,
+     2.8,
+     1.6
+    ],
+    "got": [
+     30.2,
+     -0.5,
+     1.7
+    ],
+    "share": 0.444,
+    "reached": true,
+    "delta_e": 3.3
+   },
+   {
+    "design": [
+     6.4,
+     -0.6,
+     2.1
+    ],
+    "got": [
+     6.4,
+     0.9,
+     7.9
+    ],
+    "share": 0.212,
+    "reached": true,
+    "delta_e": 5.9
+   },
+   {
+    "design": [
+     88.7,
+     -2.7,
+     48.1
+    ],
+    "got": [
+     33.7,
+     -13.9,
+     22.2
+    ],
+    "share": 0.032,
+    "reached": false,
+    "delta_e": 61.8
+   },
+   {
+    "design": [
+     36.7,
+     42.1,
+     -54.5
+    ],
+    "got": [
+     29.3,
+     34.3,
+     -51.4
+    ],
+    "share": 0.04,
+    "reached": true,
+    "delta_e": 11.2
+   },
+   {
+    "design": [
+     27.3,
+     -9.9,
+     19.7
+    ],
+    "got": [
+     28.7,
+     -13.9,
+     17.4
+    ],
+    "share": 0.272,
+    "reached": true,
+    "delta_e": 4.9
+   }
+  ],
+  "share_of_texels_changed_since": 0.832
+ },
+ "carried_light_parts": [
+  "light"
+ ],
+ "under_glow": [
+  1.31,
+  1.31,
+  0.07,
+  0.085
+ ],
+ "image_format": "WEBP",
+ "bytes": 1489928,
+ "name": "planter_square",
+ "tangents_mended": 1
+}

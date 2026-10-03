@@ -1,0 +1,273 @@
+{
+ "kit_tris": 1192,
+ "kit_light_parts": [],
+ "raw_tris": 146518,
+ "metal_map_ignored": true,
+ "loose_parts": 16,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.2305,
+  "90": 0.3231,
+  "180": 0.2225,
+  "270": 0.324
+ },
+ "bed": {
+  "kerb_top_share_of_model": 0.337,
+  "kerb_m": 0.3,
+  "overhang_allowed_m": 0.03,
+  "walls_of_model": [
+   -0.4952,
+   -0.1883,
+   0.4956,
+   0.1966
+  ],
+  "scale_across_up_kerb_up_plants": [
+   3.048,
+   2.724,
+   2.055,
+   0.988
+  ],
+  "plants_reached_outside_m": 0.156,
+  "vertices_pulled_in": 3777,
+  "cut_down_vertices_held_in": 33,
+  "band_box": [
+   -1.527,
+   -0.54,
+   1.526,
+   0.569
+  ]
+ },
+ "scale": [
+  3.0483,
+  2.7242,
+  1.3473
+ ],
+ "stretch": 1.119,
+ "yaw": 180,
+ "box_min": [
+  -1.53,
+  -0.54,
+  0.0
+ ],
+ "box_max": [
+  1.529,
+  0.569,
+  0.584
+ ],
+ "parts": {
+  "kerb": 10,
+  "plants_generated": 119441,
+  "plants": 7990
+ },
+ "rebuilt_surface_m": 0.012,
+ "tris": 8000,
+ "deviation": {
+  "tris": 8000,
+  "mean_mm": 19.7,
+  "p95_mm": 44.0,
+  "max_mm": 299.6,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.066,
+ "diagonal_m": 3.305,
+ "texels_used": 0.987,
+ "materials": [
+  {
+   "design": [
+    60.6,
+    14.5,
+    34.4
+   ],
+   "got": [
+    60.2,
+    14.8,
+    34.3
+   ],
+   "share": 0.117,
+   "reached": true,
+   "delta_e": 0.5
+  },
+  {
+   "design": [
+    59.5,
+    -8.1,
+    49.3
+   ],
+   "got": [
+    59.0,
+    -21.2,
+    49.1
+   ],
+   "share": 0.115,
+   "reached": true,
+   "delta_e": 13.1
+  },
+  {
+   "design": [
+    62.6,
+    3.3,
+    7.6
+   ],
+   "got": [
+    62.6,
+    3.3,
+    10.0
+   ],
+   "share": 0.138,
+   "reached": true,
+   "delta_e": 2.3
+  },
+  {
+   "design": [
+    14.3,
+    -4.3,
+    15.4
+   ],
+   "got": [
+    14.3,
+    -1.7,
+    17.3
+   ],
+   "share": 0.154,
+   "reached": true,
+   "delta_e": 3.3
+  },
+  {
+   "design": [
+    40.0,
+    9.1,
+    27.4
+   ],
+   "got": [
+    35.9,
+    10.2,
+    28.1
+   ],
+   "share": 0.081,
+   "reached": true,
+   "delta_e": 4.3
+  },
+  {
+   "design": [
+    57.7,
+    36.0,
+    18.6
+   ],
+   "got": [
+    59.6,
+    38.7,
+    21.7
+   ],
+   "share": 0.025,
+   "reached": true,
+   "delta_e": 4.6
+  },
+  {
+   "design": [
+    81.6,
+    4.0,
+    13.8
+   ],
+   "got": [
+    81.5,
+    3.2,
+    10.7
+   ],
+   "share": 0.208,
+   "reached": true,
+   "delta_e": 3.2
+  },
+  {
+   "design": [
+    32.3,
+    -8.2,
+    31.8
+   ],
+   "got": [
+    34.9,
+    -20.5,
+    36.9
+   ],
+   "share": 0.161,
+   "reached": true,
+   "delta_e": 13.6
+  }
+ ],
+ "colour_delta_e": 5.7,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 11.2,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 11.2,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 12.6,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 14.0,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   15.8,
+   14.3
+  ],
+  [
+   31.8,
+   34.9
+  ],
+  [
+   48.0,
+   60.1
+  ],
+  [
+   59.8,
+   60.1
+  ],
+  [
+   66.0,
+   62.6
+  ],
+  [
+   83.1,
+   81.6
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.302,
+ "colour_before": [
+  0.432,
+  0.469,
+  0.302
+ ],
+ "colour_after": [
+  0.488,
+  0.488,
+  0.282
+ ],
+ "colour_design": [
+  0.558,
+  0.482,
+  0.332
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 1212348,
+ "name": "flowerbed"
+}

@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "fps": 60.0,
+    "hz": 59.9599990844727,
+    "missed_pct": 0.0
+  },
+  "budgets": {
+    "anime_cel": {
+      "heavy_fps": 240.0,
+      "heavy_ms": 4.17,
+      "missed_pct": 1.0,
+      "normal_fps": 360.0,
+      "normal_ms": 2.78
+    }
+  },
+  "results": [
+    {
+      "fps": 60.0,
+      "frames": 1740,
+      "gpu_p99": 3.06900000572205,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 9.391,
+      "missed_pct": 0.0,
+      "p50": 2.806,
+      "p99": 4.084,
+      "scene": "diagonal",
+      "style": "anime_cel",
+      "t0": 1790951317.94512,
+      "t1": 1790951328.97082,
+      "width": 1920
+    },
+    {
+      "fps": 60.0,
+      "frames": 2057,
+      "gpu_p99": 2.79699993133545,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 7.028,
+      "missed_pct": 0.0,
+      "p50": 2.375,
+      "p99": 3.617,
+      "scene": "street",
+      "style": "anime_cel",
+      "t0": 1790951328.97185,
+      "t1": 1790951339.7367,
+      "width": 1920
+    }
+  ]
+}

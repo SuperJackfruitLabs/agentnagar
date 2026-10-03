@@ -1,0 +1,159 @@
+{
+ "kit_tris": 68,
+ "kit_light_parts": [],
+ "raw_tris": 147376,
+ "metal_map_ignored": true,
+ "loose_parts": 11,
+ "dropped_parts": 1,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.9601,
+  "90": 0.9601,
+  "180": 0.9601,
+  "270": 0.9601
+ },
+ "yaw_by_least_stretch": {
+  "0": 3.693,
+  "90": 1.499,
+  "180": 3.693,
+  "270": 1.499
+ },
+ "scale": [
+  0.5966,
+  0.5528,
+  0.8286
+ ],
+ "stretch": 1.499,
+ "yaw": 90,
+ "box_min": [
+  -0.15,
+  -0.4,
+  0.0
+ ],
+ "box_max": [
+  0.15,
+  0.155,
+  0.46
+ ],
+ "rebuilt_because_stalled_m": 0.0043,
+ "rebuilt_surface_m": 0.0043,
+ "tris": 96,
+ "deviation": {
+  "tris": 96,
+  "mean_mm": 0.69,
+  "p95_mm": 2.39,
+  "max_mm": 7.9,
+  "measured_from": "the rebuilt surface"
+ },
+ "bake_reach_m": 0.0078,
+ "diagonal_m": 0.781,
+ "weighted_normals": true,
+ "texels_used": 0.679,
+ "materials": [
+  {
+   "design": [
+    48.2,
+    15.7,
+    32.2
+   ],
+   "got": [
+    46.0,
+    11.4,
+    27.7
+   ],
+   "share": 0.108,
+   "reached": false,
+   "delta_e": 6.5
+  },
+  {
+   "design": [
+    79.4,
+    2.8,
+    11.2
+   ],
+   "got": [
+    79.4,
+    1.7,
+    11.1
+   ],
+   "share": 0.69,
+   "reached": true,
+   "delta_e": 1.1
+  },
+  {
+   "design": [
+    70.5,
+    16.2,
+    37.5
+   ],
+   "got": [
+    70.5,
+    15.5,
+    41.6
+   ],
+   "share": 0.202,
+   "reached": true,
+   "delta_e": 4.2
+  }
+ ],
+ "colour_delta_e": 2.3,
+ "materials_reached": 0.892,
+ "colour_delta_e_of_the_fit": 4.6,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 4.2,
+   "reached": 0.72
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 4.0,
+   "reached": 0.789
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 4.6,
+   "reached": 0.892
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   47.5,
+   70.5
+  ],
+  [
+   77.2,
+   79.4
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.595,
+ "colour_before": [
+  0.717,
+  0.661,
+  0.586
+ ],
+ "colour_after": [
+  0.829,
+  0.73,
+  0.613
+ ],
+ "colour_design": [
+  0.765,
+  0.655,
+  0.548
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 23888,
+ "name": "perch_seat"
+}

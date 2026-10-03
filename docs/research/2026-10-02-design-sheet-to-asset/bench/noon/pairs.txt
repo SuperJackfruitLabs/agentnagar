@@ -1,0 +1,25 @@
+lowpoly_tropical: waited 50 s for the card to cool, now 68 C
+  kit-lowpoly_tropical-1: card 68 C before, 75 C after
+  new-lowpoly_tropical-1: card 75 C before, 79 C after
+  new-lowpoly_tropical-2: card 79 C before, 79 C after
+  kit-lowpoly_tropical-2: card 79 C before, 80 C after
+neon_noir: waited 110 s for the card to cool, now 68 C
+  kit-neon_noir-1: card 68 C before, 74 C after
+  new-neon_noir-1: card 74 C before, 78 C after
+  new-neon_noir-2: card 78 C before, 80 C after
+  kit-neon_noir-2: card 80 C before, 80 C after
+anime_cel: waited 140 s for the card to cool, now 68 C
+  kit-anime_cel-1: card 68 C before, 74 C after
+  new-anime_cel-1: card 74 C before, 78 C after
+  new-anime_cel-2: card 78 C before, 80 C after
+  kit-anime_cel-2: card 80 C before, 80 C after
+solarpunk: waited 110 s for the card to cool, now 68 C
+  kit-solarpunk-1: card 68 C before, 77 C after
+  new-solarpunk-1: card 77 C before, 79 C after
+  new-solarpunk-2: card 79 C before, 80 C after
+  kit-solarpunk-2: card 80 C before, 81 C after
+voxel: waited 110 s for the card to cool, now 68 C
+  kit-voxel-1: card 68 C before, 75 C after
+  new-voxel-1: card 75 C before, 78 C after
+  new-voxel-2: card 78 C before, 80 C after
+  kit-voxel-2: card 80 C before, 81 C after

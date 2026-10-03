@@ -1,0 +1,363 @@
+{
+ "kit_bench_top_m": 0.505,
+ "kit_tris": 984,
+ "kit_light_parts": [],
+ "raw_tris": 149422,
+ "metal_map_ignored": true,
+ "loose_parts": 3,
+ "dropped_parts": 1,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": null,
+ "shelter": {
+  "canopy_underside": 0.89,
+  "end_faces_x": [
+   -0.4538,
+   0.4533
+  ],
+  "screen_front_y": -0.1226,
+  "bench_top": 0.33,
+  "seat_top": 0.1569,
+  "feet_steps_to": 0.025,
+  "screen_behind_bench_y": -0.0856,
+  "posts_cut_at": [
+   0.681,
+   0.834,
+   0.875,
+   0.865,
+   0.875,
+   0.759,
+   0.835,
+   0.76
+  ],
+  "canopy_found_by": "what is joined to the roof",
+  "post_taken_out_at": [
+   0.4458,
+   0.0437
+  ],
+  "parted": {
+   "floor_sheet": {
+    "faces": 6483,
+    "closing_faces": 16,
+    "left_open": 722
+   },
+   "canopy": {
+    "faces": 76408,
+    "closing_faces": 26,
+    "left_open": 0
+   },
+   "post": {
+    "faces": 2362,
+    "closing_faces": 1,
+    "left_open": 0
+   },
+   "bench": {
+    "faces": 10703,
+    "closing_faces": 4,
+    "left_open": 0
+   },
+   "bench_stubs": {
+    "faces": 1640,
+    "closing_faces": 0,
+    "left_open": 0
+   }
+  },
+  "band_box": [
+   -2.15,
+   -0.4,
+   2.15,
+   0.75
+  ],
+  "footprint": [
+   -2.15,
+   -0.4,
+   2.15,
+   0.75
+  ],
+  "back_held_to_22cm": true,
+  "canopy_lowest_m": 2.26,
+  "canopy_underside_m": 2.855,
+  "bench": {
+   "x": [
+    -1.73,
+    0.63
+   ],
+   "front_edge_z": 0.12,
+   "seat_front_z": 0.15,
+   "seat_top_m": 0.505,
+   "top_m": 1.08,
+   "shortened_to": 0.766
+  },
+  "floor_sheet_below": 0.0215,
+  "posts_before_the_screen_reach_y": -0.0876,
+  "post_taken_out": "from where the post starts (the bench is as deep as the shelter)",
+  "hung_pieces_given_to_the_canopy": {
+   "pieces": 3,
+   "faces": 373
+  },
+  "canopy_lifted": {
+   "lowest_outside_was_m": 2.159,
+   "raised_to_m": 2.26,
+   "at": 0.6807
+  },
+  "back_painted_as_front": {
+   "faces_copied": 18086
+  }
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -2.167,
+  -1.041,
+  0.0
+ ],
+ "box_max": [
+  2.166,
+  1.185,
+  3.168
+ ],
+ "tris": 12000,
+ "deviation": {
+  "tris": 12000,
+  "mean_mm": 1.55,
+  "p95_mm": 5.11,
+  "max_mm": 18.3,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.03,
+ "diagonal_m": 5.81,
+ "texels_used": 0.967,
+ "materials": [
+  {
+   "design": [
+    27.1,
+    0.7,
+    4.7
+   ],
+   "got": [
+    27.1,
+    0.8,
+    2.8
+   ],
+   "share": 0.209,
+   "reached": true,
+   "delta_e": 1.9
+  },
+  {
+   "design": [
+    45.7,
+    8.2,
+    -39.7
+   ],
+   "got": [
+    22.3,
+    8.6,
+    -36.1
+   ],
+   "share": 0.103,
+   "reached": true,
+   "delta_e": 23.7
+  },
+  {
+   "design": [
+    72.8,
+    -2.3,
+    1.4
+   ],
+   "got": [
+    72.3,
+    -3.3,
+    0.5
+   ],
+   "share": 0.385,
+   "reached": true,
+   "delta_e": 1.4
+  },
+  {
+   "design": [
+    46.1,
+    12.3,
+    34.7
+   ],
+   "got": [
+    45.3,
+    10.8,
+    31.8
+   ],
+   "share": 0.12,
+   "reached": true,
+   "delta_e": 3.4
+  },
+  {
+   "design": [
+    66.5,
+    17.7,
+    46.4
+   ],
+   "got": [
+    66.5,
+    10.9,
+    37.7
+   ],
+   "share": 0.181,
+   "reached": true,
+   "delta_e": 11.0
+  }
+ ],
+ "colour_delta_e": 5.8,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 8.3,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 8.3,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 18.5,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 9.9,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   34.9,
+   27.1
+  ],
+  [
+   53.8,
+   45.9
+  ],
+  [
+   78.6,
+   66.5
+  ],
+  [
+   98.2,
+   72.8
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.6,
+ "colour_before": [
+  0.443,
+  0.411,
+  0.38
+ ],
+ "colour_after": [
+  0.378,
+  0.33,
+  0.276
+ ],
+ "colour_design": [
+  0.6,
+  0.545,
+  0.478
+ ],
+ "colour_as_matched": {
+  "colour_delta_e": 4.2,
+  "materials_reached": 1.0,
+  "materials": [
+   {
+    "design": [
+     27.1,
+     0.7,
+     4.7
+    ],
+    "got": [
+     27.1,
+     0.8,
+     2.8
+    ],
+    "share": 0.209,
+    "reached": true,
+    "delta_e": 1.9
+   },
+   {
+    "design": [
+     45.7,
+     8.2,
+     -39.7
+    ],
+    "got": [
+     46.8,
+     3.2,
+     -32.5
+    ],
+    "share": 0.103,
+    "reached": true,
+    "delta_e": 8.9
+   },
+   {
+    "design": [
+     72.8,
+     -2.3,
+     1.4
+    ],
+    "got": [
+     73.1,
+     -1.4,
+     0.6
+    ],
+    "share": 0.385,
+    "reached": true,
+    "delta_e": 1.2
+   },
+   {
+    "design": [
+     46.1,
+     12.3,
+     34.7
+    ],
+    "got": [
+     45.2,
+     10.8,
+     31.8
+    ],
+    "share": 0.12,
+    "reached": true,
+    "delta_e": 3.4
+   },
+   {
+    "design": [
+     66.5,
+     17.7,
+     46.4
+    ],
+    "got": [
+     66.5,
+     10.9,
+     37.7
+    ],
+    "share": 0.181,
+    "reached": true,
+    "delta_e": 11.0
+   }
+  ],
+  "share_of_texels_changed_since": 0.092
+ },
+ "glow_share": 0.02,
+ "glow_faces": 76,
+ "glass": {
+  "material": "glass_light",
+  "faces": 152,
+  "share_of_area": 0.129
+ },
+ "carried_light_parts": [],
+ "faces_with_square_normals": 0.34,
+ "image_format": "WEBP",
+ "bytes": 1249240,
+ "name": "tram_shelter"
+}

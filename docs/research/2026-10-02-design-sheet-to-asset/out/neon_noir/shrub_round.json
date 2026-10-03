@@ -1,0 +1,315 @@
+{
+ "kit_tris": 670,
+ "kit_light_parts": [],
+ "raw_tris": 147478,
+ "metal_map_ignored": true,
+ "loose_parts": 29,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.1447,
+  "90": 0.1446,
+  "180": 0.1446,
+  "270": 0.1447
+ },
+ "yaw_by_least_stretch": {
+  "0": 1.006,
+  "90": 1.006,
+  "180": 1.006,
+  "270": 1.006
+ },
+ "scale": [
+  1.1282,
+  1.135,
+  1.1282
+ ],
+ "stretch": 1.006,
+ "shrub": {
+  "origin_moved_m": [
+   -0.0007,
+   -0.0039
+  ],
+  "widest_at_m": 0.31,
+  "widest_moved_to_m": 0.4,
+  "round": {
+   "by": 1.0,
+   "generated_ring_least_before": 0.94,
+   "generated_ring_least_after": 0.997,
+   "generated_vertices_pulled_back": 54,
+   "ring_at_m": 0.4,
+   "ring_least_before": 0.979,
+   "ring_least": 1.0,
+   "vertices_on_the_circle": 68
+  },
+  "pulled_into_the_circle": 0,
+  "reach_m": 0.55,
+  "reach_after_the_box_m": 0.5598,
+  "scaled_across": 0.9825,
+  "cut_down_scaled_across": 0.9822,
+  "reach_of_the_piece_m": 0.55
+ },
+ "yaw": 90,
+ "box_min": [
+  -0.549,
+  -0.55,
+  0.0
+ ],
+ "box_max": [
+  0.549,
+  0.55,
+  0.82
+ ],
+ "skin": {
+  "directions": 775,
+  "ring_directions": 48,
+  "foot_directions": 48,
+  "missed": 0,
+  "from_m": [
+   0.0,
+   0.0,
+   0.4
+  ],
+  "held_out_under_the_ring_by_up_to_m": 0.067,
+  "surface_behind_the_skin_by_up_to_m": 0.592,
+  "colour": {
+   "texels": 695231,
+   "seen_close_behind_the_skin": 0.627,
+   "look_m": 0.06
+  }
+ },
+ "tris": 1500,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 60.41,
+  "p95_mm": 104.88,
+  "max_mm": 153.3,
+  "measured_from": "the generated model, whose inner leaves the skin leaves out"
+ },
+ "bake_reach_m": 0.0351,
+ "diagonal_m": 1.757,
+ "leaf_edges_smoothed": 2274,
+ "texels_used": 0.567,
+ "tones_by_rank": {
+  "design_read_from_its_top": 1.0,
+  "lightness": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    26.4,
+    0.3
+   ],
+   [
+    28.2,
+    2.2
+   ],
+   [
+    29.4,
+    3.7
+   ],
+   [
+    30.5,
+    5.6
+   ],
+   [
+    31.7,
+    7.8
+   ],
+   [
+    32.9,
+    10.6
+   ],
+   [
+    34.5,
+    13.6
+   ],
+   [
+    36.3,
+    17.3
+   ],
+   [
+    38.5,
+    21.9
+   ],
+   [
+    41.1,
+    27.8
+   ],
+   [
+    44.2,
+    35.6
+   ],
+   [
+    48.8,
+    49.8
+   ],
+   [
+    100.0,
+    100.0
+   ]
+  ]
+ },
+ "materials": [
+  {
+   "design": [
+    3.6,
+    -1.8,
+    4.2
+   ],
+   "got": [
+    3.2,
+    -2.5,
+    4.8
+   ],
+   "share": 0.383,
+   "reached": true,
+   "delta_e": 1.0
+  },
+  {
+   "design": [
+    13.1,
+    -4.2,
+    13.4
+   ],
+   "got": [
+    11.9,
+    -4.8,
+    13.7
+   ],
+   "share": 0.288,
+   "reached": true,
+   "delta_e": 1.4
+  },
+  {
+   "design": [
+    41.7,
+    -0.1,
+    39.4
+   ],
+   "got": [
+    44.2,
+    -2.2,
+    36.5
+   ],
+   "share": 0.141,
+   "reached": true,
+   "delta_e": 4.4
+  },
+  {
+   "design": [
+    25.0,
+    -3.5,
+    24.3
+   ],
+   "got": [
+    26.7,
+    -4.4,
+    24.5
+   ],
+   "share": 0.188,
+   "reached": true,
+   "delta_e": 2.0
+  }
+ ],
+ "colour_delta_e": 1.8,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 8.4,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 8.7,
+   "reached": 0.476
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 8.5,
+   "reached": 0.476
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 8.4,
+   "reached": 0.476
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   26.4,
+   0.3
+  ],
+  [
+   28.2,
+   2.2
+  ],
+  [
+   29.4,
+   3.7
+  ],
+  [
+   30.5,
+   5.6
+  ],
+  [
+   31.7,
+   7.8
+  ],
+  [
+   32.9,
+   10.6
+  ],
+  [
+   34.5,
+   13.6
+  ],
+  [
+   36.3,
+   17.3
+  ],
+  [
+   38.5,
+   21.9
+  ],
+  [
+   41.1,
+   27.8
+  ],
+  [
+   44.2,
+   35.6
+  ],
+  [
+   48.8,
+   49.8
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.5,
+ "colour_before": [
+  0.278,
+  0.352,
+  0.075
+ ],
+ "colour_after": [
+  0.168,
+  0.162,
+  0.053
+ ],
+ "colour_design": [
+  0.176,
+  0.161,
+  0.053
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 206688,
+ "name": "shrub_round"
+}

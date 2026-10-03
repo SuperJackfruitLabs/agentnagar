@@ -1,0 +1,148 @@
+{
+ "raw_tris": 144124,
+ "metal_map_ignored": true,
+ "loose_parts": 2,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "axis": {
+  "off_the_middle_of_its_box_m": [
+   0.0,
+   -0.0
+  ]
+ },
+ "scale": [
+  1.1343,
+  1.1311,
+  0.8965
+ ],
+ "stretch": 1.265,
+ "yaw": 0.0,
+ "box_min": [
+  -0.12,
+  -0.12,
+  0.0
+ ],
+ "box_max": [
+  0.12,
+  0.12,
+  0.9
+ ],
+ "rebuilt_surface_m": 0.004,
+ "hidden_faces_dropped": {
+  "of": 9000,
+  "dropped": 0
+ },
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 0.19,
+   "p95_mm": 0.45,
+   "max_mm": 0.9,
+   "measured_from": "the rebuilt surface, its hidden faces dropped"
+  }
+ ],
+ "tris": 1500,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 0.19,
+  "p95_mm": 0.45,
+  "max_mm": 0.9,
+  "measured_from": "the rebuilt surface, its hidden faces dropped"
+ },
+ "bake_reach_m": 0.012,
+ "diagonal_m": 0.962,
+ "weighted_normals": true,
+ "texels_used": 0.814,
+ "materials": [
+  {
+   "design": [
+    38.6,
+    2.5,
+    -6.9
+   ],
+   "got": [
+    41.5,
+    2.1,
+    -7.0
+   ],
+   "share": 0.128,
+   "reached": true,
+   "delta_e": 3.0
+  },
+  {
+   "design": [
+    26.1,
+    2.0,
+    -7.5
+   ],
+   "got": [
+    27.6,
+    2.0,
+    -7.5
+   ],
+   "share": 0.872,
+   "reached": true,
+   "delta_e": 1.5
+  }
+ ],
+ "colour_delta_e": 1.7,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 0.2,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 0.2,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 0.3,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 0.5,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   27.7,
+   26.1
+  ],
+  [
+   49.4,
+   38.6
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.552,
+ "colour_before": [
+  0.314,
+  0.336,
+  0.418
+ ],
+ "colour_after": [
+  0.308,
+  0.316,
+  0.361
+ ],
+ "colour_design": [
+  0.234,
+  0.241,
+  0.286
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 71436,
+ "name": "bollard"
+}

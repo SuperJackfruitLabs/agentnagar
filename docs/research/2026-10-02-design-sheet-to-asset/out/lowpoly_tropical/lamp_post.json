@@ -1,0 +1,199 @@
+{
+ "raw_tris": 149658,
+ "metal_map_ignored": true,
+ "loose_parts": 2,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": null,
+ "arm": {
+  "reach_each_way": [
+   0.0491,
+   0.0498,
+   0.0492,
+   0.173
+  ],
+  "turn": 90.0
+ },
+ "axis": {
+  "off_the_middle_of_its_box_m": [
+   -0.2579,
+   0.0002
+  ]
+ },
+ "scale": [
+  4.1855,
+  4.1855,
+  4.1855
+ ],
+ "stretch": 1.0,
+ "hang_above": [
+  {
+   "was_from_m": 1.975,
+   "to_m": 3.323,
+   "now_from_m": 2.2,
+   "reaches_m": 0.726
+  }
+ ],
+ "yaw": 90.0,
+ "box_min": [
+  -0.208,
+  -0.206,
+  0.0
+ ],
+ "box_max": [
+  0.724,
+  0.205,
+  4.2
+ ],
+ "rebuilt_surface_m": 0.004,
+ "hidden_faces_dropped": {
+  "of": 12000,
+  "dropped": 3478
+ },
+ "tried": [
+  {
+   "tris": 1499,
+   "mean_mm": 0.96,
+   "p95_mm": 2.47,
+   "max_mm": 14.4,
+   "measured_from": "the rebuilt surface, its hidden faces dropped"
+  },
+  {
+   "tris": 1999,
+   "mean_mm": 0.73,
+   "p95_mm": 1.87,
+   "max_mm": 4.0,
+   "measured_from": "the rebuilt surface, its hidden faces dropped"
+  }
+ ],
+ "tris": 1999,
+ "deviation": {
+  "tris": 1999,
+  "mean_mm": 0.73,
+  "p95_mm": 1.87,
+  "max_mm": 4.0,
+  "measured_from": "the rebuilt surface, its hidden faces dropped"
+ },
+ "bake_reach_m": 0.012,
+ "diagonal_m": 4.322,
+ "weighted_normals": true,
+ "texels_used": 0.936,
+ "materials": [
+  {
+   "design": [
+    21.2,
+    0.5,
+    0.2
+   ],
+   "got": [
+    21.3,
+    0.3,
+    -0.1
+   ],
+   "share": 0.383,
+   "reached": true,
+   "delta_e": 0.4
+  },
+  {
+   "design": [
+    76.7,
+    7.0,
+    57.1
+   ],
+   "got": [
+    76.7,
+    7.2,
+    57.1
+   ],
+   "share": 0.386,
+   "reached": true,
+   "delta_e": 0.1
+  },
+  {
+   "design": [
+    32.5,
+    2.7,
+    0.9
+   ],
+   "got": [
+    32.4,
+    1.9,
+    1.0
+   ],
+   "share": 0.231,
+   "reached": true,
+   "delta_e": 0.9
+  }
+ ],
+ "colour_delta_e": 0.4,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 0.9,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 1.0,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 1.0,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 0.9,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   10.9,
+   21.2
+  ],
+  [
+   26.4,
+   32.5
+  ],
+  [
+   68.6,
+   76.7
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.993,
+ "colour_before": [
+  0.313,
+  0.272,
+  0.191
+ ],
+ "colour_after": [
+  0.385,
+  0.34,
+  0.257
+ ],
+ "colour_design": [
+  0.509,
+  0.429,
+  0.282
+ ],
+ "glow_share": 0.043,
+ "glow_faces": 71,
+ "glow_part": {
+  "name": "light",
+  "faces": 71
+ },
+ "carried_light_parts": [],
+ "tangents_mended": 0,
+ "image_format": "WEBP",
+ "bytes": 308748,
+ "name": "lamp_post"
+}

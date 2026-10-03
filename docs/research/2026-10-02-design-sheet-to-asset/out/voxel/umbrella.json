@@ -1,0 +1,317 @@
+{
+ "kit_tris": 498,
+ "kit_light_parts": [],
+ "raw_tris": 144348,
+ "metal_map_ignored": true,
+ "loose_parts": 1,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.4392,
+  "90": 0.4289,
+  "180": 0.4284,
+  "270": 0.4405
+ },
+ "yaw_by_least_stretch": {
+  "90": 1.265,
+  "180": 1.265
+ },
+ "stem_top_filled_to_the_box": [
+  2.3915,
+  2.405
+ ],
+ "scale": [
+  2.3915,
+  2.3915,
+  2.3915
+ ],
+ "stretch": 1.704,
+ "stem": {
+  "foot_m": 0.1,
+  "foot_as_drawn_m": 0.267,
+  "foot_across_m": 0.4,
+  "foot_across_as_drawn_m": 0.601,
+  "stem_m": 2.0,
+  "top_m": 0.7,
+  "stem_across_as_drawn_m": [
+   0.137,
+   0.295
+  ],
+  "thinned": {
+   "most_m": 9.0,
+   "upto_m": null,
+   "least_factor": 1.0
+  },
+  "top_off_axis_mm": 1.4,
+  "top_moved_onto_axis": true,
+  "edge_m": 2.107,
+  "height_m": 2.8
+ },
+ "yaw": 180,
+ "box_min": [
+  -1.2,
+  -1.2,
+  0.0
+ ],
+ "box_max": [
+  1.2,
+  1.2,
+  2.8
+ ],
+ "tried": [
+  {
+   "tris": 1499,
+   "mean_mm": 3.24,
+   "p95_mm": 13.96,
+   "max_mm": 45.8,
+   "measured_from": "the generated model"
+  },
+  {
+   "tris": 1999,
+   "mean_mm": 1.35,
+   "p95_mm": 3.26,
+   "max_mm": 47.3,
+   "measured_from": "the generated model"
+  },
+  {
+   "tris": 2999,
+   "mean_mm": 0.81,
+   "p95_mm": 2.03,
+   "max_mm": 9.1,
+   "measured_from": "the generated model"
+  }
+ ],
+ "tris": 648,
+ "deviation": {
+  "tris": 2999,
+  "mean_mm": 0.81,
+  "p95_mm": 2.03,
+  "max_mm": 9.1,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.044,
+ "diagonal_m": 4.4,
+ "top_edges_kept_sharp": 2342,
+ "texels_used": 0.94,
+ "materials": [
+  {
+   "design": [
+    26.6,
+    2.4,
+    -2.8
+   ],
+   "got": [
+    26.6,
+    1.8,
+    -2.3
+   ],
+   "share": 0.211,
+   "reached": true,
+   "delta_e": 0.8
+  },
+  {
+   "design": [
+    59.7,
+    45.4,
+    64.4
+   ],
+   "got": [
+    59.7,
+    48.2,
+    61.8
+   ],
+   "share": 0.443,
+   "reached": true,
+   "delta_e": 3.8
+  },
+  {
+   "design": [
+    90.1,
+    2.0,
+    4.1
+   ],
+   "got": [
+    90.0,
+    3.7,
+    4.3
+   ],
+   "share": 0.347,
+   "reached": true,
+   "delta_e": 1.6
+  }
+ ],
+ "colour_delta_e": 2.4,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 12.1,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 12.1,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 12.1,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 12.1,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   1.4,
+   26.6
+  ],
+  [
+   37.3,
+   59.7
+  ],
+  [
+   86.2,
+   90.1
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.005,
+ "colour_before": [
+  0.662,
+  0.263,
+  0.227
+ ],
+ "colour_after": [
+  0.829,
+  0.509,
+  0.338
+ ],
+ "colour_design": [
+  0.788,
+  0.552,
+  0.398
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 53076,
+ "name": "umbrella",
+ "fitted_tris": 2999,
+ "cubes": {
+  "grid_m": 0.1,
+  "layers": [
+   {
+    "grid_m": 0.1,
+    "from_m": 0.0,
+    "cells": [
+     26,
+     26,
+     28
+    ],
+    "filled": 1712,
+    "filled_as_thin_members": 0,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's edge"
+    ],
+    "made_alike_about_the_axis": true,
+    "column": {
+     "cells_square": 2,
+     "from_m": 0.1,
+     "to_m": 2.1,
+     "x_m": [
+      -0.1,
+      0.1
+     ],
+     "y_m": [
+      -0.1,
+      0.1
+     ]
+    },
+    "rounds": [
+     {
+      "at_m": 2.1,
+      "reach_m": 1.199,
+      "cells": 448
+     },
+     {
+      "at_m": 2.2,
+      "reach_m": 1.199,
+      "cells": 448
+     },
+     {
+      "at_m": 2.3,
+      "reach_m": 0.95,
+      "cells": 276
+     },
+     {
+      "at_m": 2.4,
+      "reach_m": 0.874,
+      "cells": 240
+     },
+     {
+      "at_m": 2.5,
+      "reach_m": 0.679,
+      "cells": 148
+     },
+     {
+      "at_m": 2.6,
+      "reach_m": 0.411,
+      "cells": 52
+     },
+     {
+      "at_m": 2.7,
+      "reach_m": 0.109,
+      "cells": 4
+     }
+    ]
+   }
+  ],
+  "filled": 1712,
+  "filled_as_thin_members": 0,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   26,
+   26,
+   28
+  ],
+  "grid_set_on": [
+   "a cell's edge",
+   "a cell's edge"
+  ],
+  "rectangles": 324,
+  "cell_faces": 1512,
+  "column_colour": "#3C393D",
+  "sectors": {
+   "count": 8,
+   "cell_faces": 1312,
+   "colours": [
+    "#ED671E",
+    "#EDE1DB"
+   ]
+  },
+  "texture_px": 512,
+  "glowing_cell_faces": 0,
+  "tris": 648,
+  "bytes": 53076,
+  "box_min": [
+   -1.2,
+   -1.2,
+   0.0
+  ],
+  "box_max": [
+   1.2,
+   1.2,
+   2.8
+  ]
+ }
+}

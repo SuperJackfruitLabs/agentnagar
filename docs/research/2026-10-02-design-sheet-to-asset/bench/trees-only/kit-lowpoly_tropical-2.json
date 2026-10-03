@@ -1,0 +1,46 @@
+{
+  "baseline": {
+    "fps": 60.0,
+    "hz": 59.9599990844727,
+    "missed_pct": 0.0
+  },
+  "budgets": {
+
+  },
+  "results": [
+    {
+      "fps": 60.0,
+      "frames": 1165,
+      "gpu_p99": 4.35500001907349,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 11.442,
+      "missed_pct": 0.0,
+      "p50": 4.162,
+      "p99": 6.628,
+      "scene": "diagonal",
+      "style": "lowpoly_tropical",
+      "t0": 1790952026.59873,
+      "t1": 1790952037.83634,
+      "width": 1920
+    },
+    {
+      "fps": 60.2,
+      "frames": 1466,
+      "gpu_p99": 3.66300010681152,
+      "heavy": false,
+      "height": 1080,
+      "hz": 59.9599990844727,
+      "max": 9.123,
+      "missed_pct": 0.0,
+      "p50": 3.328,
+      "p99": 5.398,
+      "scene": "street",
+      "style": "lowpoly_tropical",
+      "t0": 1790952037.83704,
+      "t1": 1790952048.68774,
+      "width": 1920
+    }
+  ]
+}

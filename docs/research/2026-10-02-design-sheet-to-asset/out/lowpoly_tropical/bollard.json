@@ -1,0 +1,187 @@
+{
+ "raw_tris": 141750,
+ "metal_map_ignored": true,
+ "loose_parts": 4,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 1,
+ "stray_area_share": 0.069,
+ "axis": {
+  "off_the_middle_of_its_box_m": [
+   0.0,
+   0.0
+  ]
+ },
+ "scale": [
+  0.9265,
+  0.9233,
+  0.8964
+ ],
+ "stretch": 1.034,
+ "yaw": 0.0,
+ "box_min": [
+  -0.12,
+  -0.12,
+  0.0
+ ],
+ "box_max": [
+  0.12,
+  0.12,
+  0.9
+ ],
+ "rebuilt_surface_m": 0.004,
+ "hidden_faces_dropped": {
+  "of": 9000,
+  "dropped": 0
+ },
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 0.1,
+   "p95_mm": 0.28,
+   "max_mm": 0.7,
+   "measured_from": "the rebuilt surface, its hidden faces dropped"
+  }
+ ],
+ "tris": 1500,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 0.1,
+  "p95_mm": 0.28,
+  "max_mm": 0.7,
+  "measured_from": "the rebuilt surface, its hidden faces dropped"
+ },
+ "bake_reach_m": 0.012,
+ "diagonal_m": 0.962,
+ "weighted_normals": true,
+ "texels_used": 0.835,
+ "materials": [
+  {
+   "design": [
+    20.6,
+    0.4,
+    0.0
+   ],
+   "got": [
+    20.6,
+    1.5,
+    -0.1
+   ],
+   "share": 0.393,
+   "reached": true,
+   "delta_e": 1.1
+  },
+  {
+   "design": [
+    34.7,
+    2.6,
+    1.6
+   ],
+   "got": [
+    34.0,
+    3.4,
+    1.6
+   ],
+   "share": 0.347,
+   "reached": true,
+   "delta_e": 1.0
+  },
+  {
+   "design": [
+    64.0,
+    5.3,
+    6.3
+   ],
+   "got": [
+    64.1,
+    5.8,
+    6.0
+   ],
+   "share": 0.035,
+   "reached": true,
+   "delta_e": 0.5
+  },
+  {
+   "design": [
+    28.5,
+    2.1,
+    0.8
+   ],
+   "got": [
+    28.5,
+    2.8,
+    0.6
+   ],
+   "share": 0.225,
+   "reached": true,
+   "delta_e": 0.7
+  }
+ ],
+ "colour_delta_e": 1.0,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 2.0,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 2.1,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 2.0,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 2.0,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   32.6,
+   20.6
+  ],
+  [
+   38.9,
+   28.5
+  ],
+  [
+   44.9,
+   34.7
+  ],
+  [
+   63.5,
+   64.0
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.554,
+ "colour_before": [
+  0.415,
+  0.352,
+  0.359
+ ],
+ "colour_after": [
+  0.295,
+  0.269,
+  0.269
+ ],
+ "colour_design": [
+  0.286,
+  0.269,
+  0.267
+ ],
+ "carried_light_parts": [],
+ "tangents_mended": 0,
+ "image_format": "WEBP",
+ "bytes": 99164,
+ "name": "bollard"
+}

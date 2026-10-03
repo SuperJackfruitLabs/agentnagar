@@ -1,0 +1,8 @@
+started 2026-10-02 17:10:55
+Initialize godot-rust (API v4.6.stable.official, runtime v4.6.3.stable.official, safeguards balanced)
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+work: 303 cards, the worst board event 2.75 ms (budget 4 ms)
+PASS 15, FAIL 0
+exit 0
+ended 17:10:56

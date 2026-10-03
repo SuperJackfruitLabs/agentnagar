@@ -1,0 +1,160 @@
+{
+ "kit_tris": 252,
+ "kit_light_parts": [],
+ "raw_tris": 129108,
+ "metal_map_ignored": true,
+ "loose_parts": 11,
+ "dropped_parts": 2,
+ "dropped_area_share": 0.0001,
+ "stray_parts": 1,
+ "stray_area_share": 0.033,
+ "yaw_scores": {
+  "0": 0.5524,
+  "90": 0.5492,
+  "180": 0.5181,
+  "270": 0.5367
+ },
+ "scale": [
+  0.7138,
+  0.8433,
+  1.0564
+ ],
+ "stretch": 1.48,
+ "seat_top_m": {
+  "kit": 0.47,
+  "generated": 0.46
+ },
+ "yaw": 180,
+ "box_min": [
+  -0.232,
+  -0.26,
+  -0.002
+ ],
+ "box_max": [
+  0.232,
+  0.23,
+  0.91
+ ],
+ "tris": 1499,
+ "deviation": {
+  "tris": 1499,
+  "mean_mm": 1.5,
+  "p95_mm": 3.85,
+  "max_mm": 9.0,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0113,
+ "diagonal_m": 1.135,
+ "own_normals": true,
+ "weighted_normals": true,
+ "texels_used": 0.926,
+ "materials": [
+  {
+   "design": [
+    39.2,
+    12.0,
+    27.0
+   ],
+   "got": [
+    39.4,
+    9.9,
+    25.6
+   ],
+   "share": 0.182,
+   "reached": true,
+   "delta_e": 2.5
+  },
+  {
+   "design": [
+    25.3,
+    0.0,
+    -0.2
+   ],
+   "got": [
+    25.3,
+    -0.0,
+    -0.1
+   ],
+   "share": 0.206,
+   "reached": true,
+   "delta_e": 0.1
+  },
+  {
+   "design": [
+    71.7,
+    14.0,
+    36.1
+   ],
+   "got": [
+    71.7,
+    20.2,
+    33.5
+   ],
+   "share": 0.612,
+   "reached": true,
+   "delta_e": 6.6
+  }
+ ],
+ "colour_delta_e": 4.5,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 8.6,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 8.6,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 8.7,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 9.5,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   13.7,
+   25.3
+  ],
+  [
+   41.4,
+   39.2
+  ],
+  [
+   48.1,
+   71.7
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.998,
+ "colour_before": [
+  0.579,
+  0.359,
+  0.236
+ ],
+ "colour_after": [
+  0.789,
+  0.572,
+  0.411
+ ],
+ "colour_design": [
+  0.666,
+  0.515,
+  0.359
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 356980,
+ "name": "seat_cafe-table_v2"
+}

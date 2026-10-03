@@ -1,0 +1,306 @@
+{
+ "raw_tris": 146116,
+ "metal_map_ignored": true,
+ "loose_parts": 100,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "tree_raised": null,
+ "tree": {
+  "bed_top": 0.133,
+  "narrowest": 0.258,
+  "crown_from": 0.338,
+  "bed_scale": [
+   8.885,
+   8.646
+  ],
+  "crown_scale": 12.758,
+  "up_scale": 14.427,
+  "crown_starts_m": 2.7,
+  "crown_started_before_it_was_raised_m": 2.7
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -6.314,
+  -5.601,
+  0.0
+ ],
+ "box_max": [
+  6.206,
+  6.206,
+  9.81
+ ],
+ "wood_cell_m": 0.05,
+ "parts": {
+  "bed": 10,
+  "wood": 2606,
+  "leaf": 3400
+ },
+ "tris": 7046,
+ "deviation": {
+  "tris": 6016,
+  "mean_mm": 111.65,
+  "p95_mm": 287.0,
+  "max_mm": 1361.1
+ },
+ "bake_reach_m": 0.3962,
+ "diagonal_m": 19.809,
+ "lifted_to_clear_band": 3,
+ "pulled_into_footprint": 8,
+ "texels_used": 0.709,
+ "materials": [
+  {
+   "design": [
+    25.3,
+    -3.5,
+    14.0
+   ],
+   "got": [
+    36.6,
+    -29.4,
+    18.8
+   ],
+   "share": 0.228,
+   "reached": true,
+   "delta_e": 28.6
+  },
+  {
+   "design": [
+    21.2,
+    5.1,
+    4.1
+   ],
+   "got": [
+    21.4,
+    3.5,
+    5.9
+   ],
+   "share": 0.26,
+   "reached": true,
+   "delta_e": 2.4
+  },
+  {
+   "design": [
+    30.6,
+    29.8,
+    -31.4
+   ],
+   "got": [
+    30.3,
+    22.2,
+    -23.2
+   ],
+   "share": 0.057,
+   "reached": true,
+   "delta_e": 11.2
+  },
+  {
+   "design": [
+    81.2,
+    9.3,
+    55.2
+   ],
+   "got": [
+    54.4,
+    14.3,
+    39.0
+   ],
+   "share": 0.023,
+   "reached": false,
+   "delta_e": 31.8
+  },
+  {
+   "design": [
+    8.5,
+    -0.7,
+    5.3
+   ],
+   "got": [
+    8.4,
+    1.2,
+    5.4
+   ],
+   "share": 0.432,
+   "reached": true,
+   "delta_e": 2.0
+  }
+ ],
+ "colour_delta_e": 9.4,
+ "materials_reached": 0.977,
+ "colour_delta_e_of_the_fit": 4.8,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 5.5,
+   "reached": 0.977
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 4.8,
+   "reached": 0.977
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 5.1,
+   "reached": 0.978
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   12.1,
+   8.5
+  ],
+  [
+   18.4,
+   23.1
+  ],
+  [
+   22.7,
+   30.6
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.617,
+ "colour_before": [
+  0.162,
+  0.182,
+  0.075
+ ],
+ "colour_after": [
+  0.209,
+  0.211,
+  0.147
+ ],
+ "colour_design": [
+  0.213,
+  0.177,
+  0.146
+ ],
+ "leaf_colour": {
+  "asked": "#296238",
+  "share_of_texels": 0.637
+ },
+ "colour_as_matched": {
+  "colour_delta_e": 3.5,
+  "materials_reached": 0.977,
+  "materials": [
+   {
+    "design": [
+     25.3,
+     -3.5,
+     14.0
+    ],
+    "got": [
+     24.5,
+     -7.4,
+     13.9
+    ],
+    "share": 0.228,
+    "reached": true,
+    "delta_e": 4.0
+   },
+   {
+    "design": [
+     21.2,
+     5.1,
+     4.1
+    ],
+    "got": [
+     21.6,
+     3.5,
+     5.9
+    ],
+    "share": 0.26,
+    "reached": true,
+    "delta_e": 2.5
+   },
+   {
+    "design": [
+     30.6,
+     29.8,
+     -31.4
+    ],
+    "got": [
+     30.3,
+     22.2,
+     -23.2
+    ],
+    "share": 0.057,
+    "reached": true,
+    "delta_e": 11.2
+   },
+   {
+    "design": [
+     81.2,
+     9.3,
+     55.2
+    ],
+    "got": [
+     63.6,
+     17.2,
+     44.2
+    ],
+    "share": 0.023,
+    "reached": false,
+    "delta_e": 22.3
+   },
+   {
+    "design": [
+     8.5,
+     -0.7,
+     5.3
+    ],
+    "got": [
+     8.7,
+     1.1,
+     5.4
+    ],
+    "share": 0.432,
+    "reached": true,
+    "delta_e": 1.9
+   }
+  ],
+  "share_of_texels_changed_since": 0.637
+ },
+ "glow_share": 0.0002,
+ "fairy_halo": {
+  "sigma_m": 0.3,
+  "strength": 0.22,
+  "share_lit": 0.125
+ },
+ "glow_faces": 4,
+ "carried_light_parts": [
+  "light"
+ ],
+ "core": {
+  "tris": 218,
+  "colour": "#184526",
+  "from_m": 6.25,
+  "to_m": 8.38,
+  "plan": {
+   "box": [
+    1027,
+    459,
+    1502,
+    947
+   ],
+   "not_leaf_share": 0.634
+  }
+ },
+ "fairy_lights": 200,
+ "under_glow": [
+  5.283,
+  5.182,
+  0.03,
+  0.1
+ ],
+ "image_format": "WEBP",
+ "bytes": 1390792,
+ "name": "tree_banyan"
+}

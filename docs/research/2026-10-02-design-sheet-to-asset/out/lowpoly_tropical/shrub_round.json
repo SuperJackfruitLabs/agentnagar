@@ -1,0 +1,340 @@
+{
+ "kit_tris": 612,
+ "kit_light_parts": [],
+ "raw_tris": 140726,
+ "metal_map_ignored": true,
+ "loose_parts": 16,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.1716,
+  "90": 0.1736,
+  "180": 0.1723,
+  "270": 0.1725
+ },
+ "yaw_by_least_stretch": {
+  "0": 1.299,
+  "180": 1.299
+ },
+ "scale": [
+  1.141,
+  1.1004,
+  1.4292
+ ],
+ "stretch": 1.299,
+ "shrub": {
+  "origin_moved_m": [
+   -0.0011,
+   -0.0009
+  ],
+  "widest_at_m": 0.25,
+  "widest_moved_to_m": 0.4,
+  "round": {
+   "by": 1.0,
+   "generated_ring_least_before": 0.884,
+   "generated_ring_least_after": 0.995,
+   "generated_vertices_pulled_back": 506,
+   "ring_at_m": 0.4,
+   "ring_least_before": 0.986,
+   "ring_least": 1.0,
+   "vertices_on_the_circle": 48
+  },
+  "pulled_into_the_circle": 0,
+  "reach_m": 0.55,
+  "reach_after_the_box_m": 0.5655,
+  "scaled_across": 0.9726,
+  "skin_corners_held_inside_the_circle": 0,
+  "reach_of_the_piece_m": 0.55
+ },
+ "yaw": 0,
+ "box_min": [
+  -0.55,
+  -0.55,
+  0.0
+ ],
+ "box_max": [
+  0.55,
+  0.55,
+  0.897
+ ],
+ "skin": {
+  "directions": 225,
+  "ring_directions": 48,
+  "foot_directions": 48,
+  "missed": 0,
+  "from_m": [
+   0.0,
+   0.0,
+   0.4
+  ],
+  "held_out_under_the_ring_by_up_to_m": 0.124,
+  "surface_behind_the_skin_by_up_to_m": 0.084,
+  "colour": {
+   "texels": 554347,
+   "seen_close_behind_the_skin": 0.899,
+   "look_m": 0.06
+  }
+ },
+ "tris": 1436,
+ "deviation": {
+  "tris": 400,
+  "mean_mm": 28.86,
+  "p95_mm": 73.15,
+  "max_mm": 466.5,
+  "measured_from": "the generated model, whose inner leaves the skin leaves out"
+ },
+ "bake_reach_m": 0.0359,
+ "diagonal_m": 1.795,
+ "leaves": {
+  "asked": 420,
+  "leaves": 390,
+  "leaves_round_the_ring": 37,
+  "leaves_on_the_ring_s_shoulder": 0,
+  "length_m": 0.15,
+  "width_m": 0.085,
+  "no_nearer_than_m": 0.07,
+  "inside_triangles": 400,
+  "corners_held_inside_the_circle": 395,
+  "leaves_brought_out_from_under_the_ring": 171,
+  "flowers": 14,
+  "flower_colours": [
+   "#F7E4C9"
+  ],
+  "flower_faces_of_the_model": 34247,
+  "inside_colour": [
+   "#4C5D1F",
+   "#263515"
+  ],
+  "leaf_swatches": {
+   "#485729": 0.469,
+   "#73852C": 0.276,
+   "#BBBA34": 0.255
+  },
+  "inside_darkened_to": 0.55
+ },
+ "texels_used": 0.543,
+ "tones_by_rank": {
+  "design_read_from_its_top": 1.0,
+  "lightness": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    21.0,
+    13.7
+   ],
+   [
+    22.5,
+    20.6
+   ],
+   [
+    23.7,
+    24.7
+   ],
+   [
+    24.8,
+    28.5
+   ],
+   [
+    26.0,
+    33.7
+   ],
+   [
+    27.3,
+    39.2
+   ],
+   [
+    29.7,
+    45.1
+   ],
+   [
+    33.6,
+    51.3
+   ],
+   [
+    37.5,
+    58.4
+   ],
+   [
+    40.8,
+    65.8
+   ],
+   [
+    46.1,
+    75.6
+   ],
+   [
+    58.5,
+    87.9
+   ],
+   [
+    100.0,
+    100.0
+   ]
+  ]
+ },
+ "materials": [
+  {
+   "design": [
+    42.8,
+    -17.7,
+    39.7
+   ],
+   "got": [
+    44.7,
+    -17.8,
+    38.8
+   ],
+   "share": 0.316,
+   "reached": true,
+   "delta_e": 2.1
+  },
+  {
+   "design": [
+    23.3,
+    -13.3,
+    18.9
+   ],
+   "got": [
+    24.4,
+    -13.9,
+    19.7
+   ],
+   "share": 0.348,
+   "reached": true,
+   "delta_e": 1.4
+  },
+  {
+   "design": [
+    86.3,
+    -0.0,
+    22.8
+   ],
+   "got": [
+    93.0,
+    -2.5,
+    28.4
+   ],
+   "share": 0.074,
+   "reached": true,
+   "delta_e": 9.1
+  },
+  {
+   "design": [
+    66.5,
+    -16.3,
+    61.8
+   ],
+   "got": [
+    69.2,
+    -16.1,
+    56.8
+   ],
+   "share": 0.262,
+   "reached": true,
+   "delta_e": 5.7
+  }
+ ],
+ "colour_delta_e": 3.3,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 11.3,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 26.5,
+   "reached": 0.699
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 11.3,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 11.3,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   21.0,
+   13.7
+  ],
+  [
+   22.5,
+   20.6
+  ],
+  [
+   23.7,
+   24.7
+  ],
+  [
+   24.8,
+   28.5
+  ],
+  [
+   26.0,
+   33.7
+  ],
+  [
+   27.3,
+   39.2
+  ],
+  [
+   29.7,
+   45.1
+  ],
+  [
+   33.6,
+   51.3
+  ],
+  [
+   37.5,
+   58.4
+  ],
+  [
+   40.8,
+   65.8
+  ],
+  [
+   46.1,
+   75.6
+  ],
+  [
+   58.5,
+   87.9
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.752,
+ "colour_before": [
+  0.222,
+  0.35,
+  0.078
+ ],
+ "colour_after": [
+  0.408,
+  0.453,
+  0.183
+ ],
+ "colour_design": [
+  0.413,
+  0.449,
+  0.157
+ ],
+ "facet_colour": true,
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 313124,
+ "name": "shrub_round"
+}

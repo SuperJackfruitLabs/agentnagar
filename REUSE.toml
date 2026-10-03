@@ -39,6 +39,7 @@ path = [
     "docs/**/*.godot",
     "docs/**/*.uid",
     "docs/**/*.js",
+    "docs/**/*.cjs",
     "docs/**/*.css",
     "docs/**/*.html",
     "docs/**/.gitignore",
@@ -161,6 +162,38 @@ path = [
 ]
 SPDX-FileCopyrightText = "NONE: AI-generated design images and crops of AI-generated concept art (OpenAI gpt-image); no rights claimed"
 SPDX-License-Identifier = "CC0-1.0"
+
+# The design-sheet-to-asset record (docs/research/2026-10-02-design-sheet-to-asset/).
+# Cut-outs of those design images, as given to the image-to-3D model.
+[[annotations]]
+path = ["docs/research/2026-10-02-design-sheet-to-asset/inputs/*/*.png"]
+SPDX-FileCopyrightText = "NONE: cut-outs of AI-generated design images (OpenAI gpt-image); no rights claimed"
+SPDX-License-Identifier = "CC0-1.0"
+
+# Its pieces are an image-to-3D model's output (TRELLIS.2: AI-generated, no
+# rights claimed) fitted, sized and repainted by SJL's scripts: both licences.
+# Its comparison sheets and previews set game captures and renders of those
+# pieces beside the design images: SJL's composite, the embedded AI images
+# CC0 1.0.
+[[annotations]]
+path = [
+    "docs/research/2026-10-02-design-sheet-to-asset/out/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-budget/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-first-sheet/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-kit-green/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-leaves/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/out-worn/**/*.glb",
+    "docs/research/2026-10-02-design-sheet-to-asset/compare/*.jpg",
+    "docs/research/2026-10-02-design-sheet-to-asset/previews/**/*.jpg",
+]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0 AND CC0-1.0"
+
+# Its shell scripts are code, like the Python beside them.
+[[annotations]]
+path = ["docs/research/2026-10-02-design-sheet-to-asset/**/*.sh"]
+SPDX-FileCopyrightText = "2026 Super Jackfruit Labs (OPC) Private Limited and contributors"
+SPDX-License-Identifier = "AGPL-3.0-only"
 
 # Fonts keep their own licences; the licence file sits beside each font.
 # (SJL's FontVariation .tres files and Godot's .import files beside them are

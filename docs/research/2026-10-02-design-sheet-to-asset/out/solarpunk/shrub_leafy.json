@@ -1,0 +1,363 @@
+{
+ "kit_tris": 684,
+ "kit_light_parts": [],
+ "raw_tris": 147810,
+ "metal_map_ignored": true,
+ "loose_parts": 39,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.2087,
+  "90": 0.2012,
+  "180": 0.2062,
+  "270": 0.2073
+ },
+ "scale": [
+  1.1773,
+  1.1037,
+  1.7778
+ ],
+ "stretch": 1.611,
+ "shrub": {
+  "origin_moved_m": [
+   0.0097,
+   -0.0117
+  ],
+  "widest_at_m": 0.41,
+  "round": {
+   "by": 1.0,
+   "generated_ring_least_before": 0.493,
+   "generated_ring_least_after": 0.968,
+   "generated_vertices_pulled_back": 3694,
+   "ring_at_m": 0.41,
+   "ring_least_before": 0.929,
+   "ring_least": 1.0,
+   "vertices_on_the_circle": 48
+  },
+  "pulled_into_the_circle": 2,
+  "reach_m": 0.55,
+  "reach_after_the_box_m": 0.5878,
+  "scaled_across": 0.9358,
+  "skin_corners_held_inside_the_circle": 0,
+  "reach_of_the_piece_m": 0.55
+ },
+ "yaw": 90,
+ "box_min": [
+  -0.55,
+  -0.55,
+  0.0
+ ],
+ "box_max": [
+  0.55,
+  0.55,
+  1.241
+ ],
+ "skin": {
+  "directions": 150,
+  "ring_directions": 48,
+  "foot_directions": 48,
+  "missed": 0,
+  "from_m": [
+   0.0,
+   0.0,
+   0.41
+  ],
+  "held_out_under_the_ring_by_up_to_m": 0.29,
+  "surface_behind_the_skin_by_up_to_m": 0.545,
+  "colour": {
+   "texels": 454438,
+   "seen_close_behind_the_skin": 0.487,
+   "look_m": 0.06
+  }
+ },
+ "tris": 1497,
+ "deviation": {
+  "tris": 250,
+  "mean_mm": 110.96,
+  "p95_mm": 304.5,
+  "max_mm": 619.0,
+  "measured_from": "the generated model, whose inner leaves the skin leaves out"
+ },
+ "bake_reach_m": 0.0398,
+ "diagonal_m": 1.99,
+ "leaves": {
+  "asked": 465,
+  "leaves": 465,
+  "leaves_round_the_ring": 57,
+  "leaves_on_the_ring_s_shoulder": 19,
+  "length_m": 0.13,
+  "width_m": 0.055,
+  "no_nearer_than_m": 0.05,
+  "inside_triangles": 250,
+  "corners_held_inside_the_circle": 270,
+  "leaves_brought_out_from_under_the_ring": 0,
+  "flowers": 30,
+  "flower_colours": [
+   "#856CA3",
+   "#F3E9DE"
+  ],
+  "flower_faces_of_the_model": 5461,
+  "inside_colour": [
+   "#42461C",
+   "#1F2109"
+  ],
+  "inside_darkened_to": 0.6
+ },
+ "leaf_edges_smoothed": 3975,
+ "texels_used": 0.466,
+ "tones_by_rank": {
+  "design_read_from_its_top": 1.0,
+  "lightness": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    23.0,
+    6.0
+   ],
+   [
+    27.1,
+    13.0
+   ],
+   [
+    29.6,
+    17.7
+   ],
+   [
+    31.9,
+    22.1
+   ],
+   [
+    33.7,
+    26.4
+   ],
+   [
+    35.7,
+    30.2
+   ],
+   [
+    37.5,
+    34.1
+   ],
+   [
+    39.7,
+    39.2
+   ],
+   [
+    42.1,
+    45.8
+   ],
+   [
+    46.0,
+    54.2
+   ],
+   [
+    51.1,
+    63.8
+   ],
+   [
+    62.3,
+    76.0
+   ],
+   [
+    100.0,
+    100.0
+   ]
+  ]
+ },
+ "materials": [
+  {
+   "design": [
+    46.5,
+    19.3,
+    -15.3
+   ],
+   "got": [
+    34.4,
+    -4.6,
+    21.7
+   ],
+   "share": 0.05,
+   "reached": false,
+   "delta_e": 45.7
+  },
+  {
+   "design": [
+    27.4,
+    -8.0,
+    24.4
+   ],
+   "got": [
+    27.4,
+    -8.4,
+    23.9
+   ],
+   "share": 0.322,
+   "reached": true,
+   "delta_e": 0.6
+  },
+  {
+   "design": [
+    43.0,
+    -8.3,
+    37.1
+   ],
+   "got": [
+    46.1,
+    -8.8,
+    35.4
+   ],
+   "share": 0.199,
+   "reached": true,
+   "delta_e": 3.6
+  },
+  {
+   "design": [
+    82.3,
+    0.2,
+    9.6
+   ],
+   "got": [
+    77.5,
+    -0.2,
+    19.9
+   ],
+   "share": 0.049,
+   "reached": false,
+   "delta_e": 11.3
+  },
+  {
+   "design": [
+    64.3,
+    -7.0,
+    49.5
+   ],
+   "got": [
+    67.3,
+    -7.9,
+    44.9
+   ],
+   "share": 0.165,
+   "reached": true,
+   "delta_e": 5.6
+  },
+  {
+   "design": [
+    13.0,
+    -4.3,
+    13.9
+   ],
+   "got": [
+    12.4,
+    -5.1,
+    14.4
+   ],
+   "share": 0.215,
+   "reached": true,
+   "delta_e": 1.1
+  }
+ ],
+ "colour_delta_e": 4.9,
+ "materials_reached": 0.901,
+ "colour_delta_e_of_the_fit": 10.7,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 11.8,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 10.7,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 10.3,
+   "reached": 0.822
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   23.0,
+   6.0
+  ],
+  [
+   27.1,
+   13.0
+  ],
+  [
+   29.6,
+   17.7
+  ],
+  [
+   31.9,
+   22.1
+  ],
+  [
+   33.7,
+   26.4
+  ],
+  [
+   35.7,
+   30.2
+  ],
+  [
+   37.5,
+   34.1
+  ],
+  [
+   39.7,
+   39.2
+  ],
+  [
+   42.1,
+   45.8
+  ],
+  [
+   46.0,
+   54.2
+  ],
+  [
+   51.1,
+   63.8
+  ],
+  [
+   62.3,
+   76.0
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.645,
+ "colour_before": [
+  0.257,
+  0.362,
+  0.127
+ ],
+ "colour_after": [
+  0.296,
+  0.297,
+  0.122
+ ],
+ "colour_design": [
+  0.38,
+  0.36,
+  0.177
+ ],
+ "carried_light_parts": [],
+ "leaf_normals_rounded": 0.7,
+ "leaf_normals_lifted": 0.0,
+ "image_format": "WEBP",
+ "bytes": 269444,
+ "name": "shrub_leafy"
+}

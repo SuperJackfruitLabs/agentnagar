@@ -1,0 +1,187 @@
+{
+ "kit_tris": 428,
+ "kit_light_parts": [],
+ "raw_tris": 139390,
+ "metal_map_ignored": true,
+ "loose_parts": 8,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.5373,
+  "90": 0.5702,
+  "180": 0.508,
+  "270": 0.5703
+ },
+ "scale": [
+  1.5938,
+  1.2173,
+  1.5999
+ ],
+ "stretch": 1.314,
+ "seat_top_m": {
+  "kit": 0.47,
+  "generated": 0.42
+ },
+ "plan": {
+  "front_is": "+y",
+  "pulled": {
+   "rear": {
+    "stood_out_m": 0.065,
+    "share_of_the_side_at_the_main_edge": 0.99
+   }
+  },
+  "rows": {
+   "rows_widened": 0,
+   "of": 54,
+   "most": 1.002
+  },
+  "put_back_on_the_box": [
+   1.0,
+   1.116
+  ]
+ },
+ "yaw": 180,
+ "box_min": [
+  -0.8,
+  -0.346,
+  -0.004
+ ],
+ "box_max": [
+  0.8,
+  0.25,
+  0.864
+ ],
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 0.56,
+   "p95_mm": 1.5,
+   "max_mm": 7.6,
+   "measured_from": "the generated model"
+  }
+ ],
+ "tris": 1500,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 0.56,
+  "p95_mm": 1.5,
+  "max_mm": 7.6,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0192,
+ "diagonal_m": 1.915,
+ "own_normals": true,
+ "weighted_normals": true,
+ "texels_used": 0.958,
+ "materials": [
+  {
+   "design": [
+    23.1,
+    1.7,
+    2.0
+   ],
+   "got": [
+    23.1,
+    1.6,
+    0.8
+   ],
+   "share": 0.201,
+   "reached": true,
+   "delta_e": 1.2
+  },
+  {
+   "design": [
+    67.7,
+    24.2,
+    41.3
+   ],
+   "got": [
+    67.7,
+    26.3,
+    40.2
+   ],
+   "share": 0.178,
+   "reached": true,
+   "delta_e": 2.3
+  },
+  {
+   "design": [
+    48.2,
+    22.6,
+    32.7
+   ],
+   "got": [
+    48.2,
+    22.1,
+    32.8
+   ],
+   "share": 0.621,
+   "reached": true,
+   "delta_e": 0.5
+  }
+ ],
+ "colour_delta_e": 1.0,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 2.2,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 2.2,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 2.2,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 2.2,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   17.6,
+   23.1
+  ],
+  [
+   26.3,
+   48.2
+  ],
+  [
+   36.0,
+   67.7
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.342,
+ "colour_before": [
+  0.339,
+  0.202,
+  0.121
+ ],
+ "colour_after": [
+  0.571,
+  0.367,
+  0.242
+ ],
+ "colour_design": [
+  0.595,
+  0.381,
+  0.249
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 328372,
+ "name": "seat_bench_v2"
+}

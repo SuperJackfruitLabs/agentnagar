@@ -1,0 +1,36 @@
+SEAT kit+lowpoly_tropical+bench: top of the seat 0.47 m, piece 0.86 m high
+SEAT new+lowpoly_tropical+bench: top of the seat 0.47 m, piece 0.86 m high
+SEAT kit+lowpoly_tropical+cafe-chair: top of the seat 0.48 m, piece 0.90 m high
+SEAT new+lowpoly_tropical+cafe-chair: top of the seat 0.48 m, piece 0.90 m high
+SEAT kit+lowpoly_tropical+reading-chair: top of the seat 0.42 m, piece 0.93 m high
+SEAT new+lowpoly_tropical+reading-chair: top of the seat 0.42 m, piece 0.93 m high
+SEAT kit+neon_noir+bench: top of the seat 0.47 m, piece 0.85 m high
+SEAT new+neon_noir+bench: top of the seat 0.47 m, piece 0.85 m high
+SEAT kit+neon_noir+cafe-chair: top of the seat 0.47 m, piece 0.91 m high
+SEAT new+neon_noir+cafe-chair: top of the seat 0.47 m, piece 0.91 m high
+SEAT kit+neon_noir+reading-chair: top of the seat 0.42 m, piece 0.93 m high
+SEAT new+neon_noir+reading-chair: top of the seat 0.42 m, piece 0.93 m high
+SEAT kit+anime_cel+bench: top of the seat 0.47 m, piece 0.85 m high
+SEAT new+anime_cel+bench: top of the seat 0.47 m, piece 0.85 m high
+SEAT kit+anime_cel+cafe-chair: top of the seat 0.47 m, piece 0.91 m high
+SEAT new+anime_cel+cafe-chair: top of the seat 0.47 m, piece 0.91 m high
+SEAT kit+anime_cel+reading-chair: top of the seat 0.42 m, piece 0.93 m high
+SEAT new+anime_cel+reading-chair: top of the seat 0.42 m, piece 0.93 m high
+SEAT kit+anime_cel+perch-seat: top of the seat 0.49 m, piece 0.49 m high (no back: the seat is the piece's top)
+SEAT new+anime_cel+perch-seat: top of the seat 0.49 m, piece 0.49 m high (no back: the seat is the piece's top)
+SEAT kit+solarpunk+bench: top of the seat 0.47 m, piece 0.87 m high
+SEAT new+solarpunk+bench: top of the seat 0.47 m, piece 0.87 m high
+SEAT kit+solarpunk+cafe-chair: top of the seat 0.47 m, piece 0.91 m high
+SEAT new+solarpunk+cafe-chair: top of the seat 0.47 m, piece 0.91 m high
+SEAT kit+solarpunk+reading-chair: top of the seat 0.42 m, piece 0.93 m high
+SEAT new+solarpunk+reading-chair: top of the seat 0.42 m, piece 0.93 m high
+SEAT kit+solarpunk+perch-seat: top of the seat 0.46 m, piece 0.46 m high (no back: the seat is the piece's top)
+SEAT new+solarpunk+perch-seat: top of the seat 0.46 m, piece 0.46 m high (no back: the seat is the piece's top)
+SEAT kit+voxel+bench: top of the seat 0.50 m, piece 1.00 m high
+SEAT new+voxel+bench: top of the seat 0.50 m, piece 1.00 m high
+SEAT kit+voxel+cafe-chair: top of the seat 0.50 m, piece 1.00 m high
+SEAT new+voxel+cafe-chair: top of the seat 0.50 m, piece 1.00 m high
+SEAT kit+voxel+reading-chair: top of the seat 0.50 m, piece 1.00 m high
+SEAT new+voxel+reading-chair: top of the seat 0.50 m, piece 1.00 m high
+SEAT kit+voxel+perch-seat: top of the seat 0.51 m, piece 0.51 m high (no back: the seat is the piece's top)
+SEAT new+voxel+perch-seat: top of the seat 0.50 m, piece 0.50 m high (no back: the seat is the piece's top)

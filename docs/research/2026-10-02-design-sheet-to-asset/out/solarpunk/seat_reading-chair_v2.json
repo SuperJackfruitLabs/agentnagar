@@ -1,0 +1,246 @@
+{
+ "kit_tris": 412,
+ "kit_light_parts": [],
+ "raw_tris": 143280,
+ "metal_map_ignored": true,
+ "loose_parts": 3,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.631,
+  "90": 0.5976,
+  "180": 0.5637,
+  "270": 0.5943
+ },
+ "scale": [
+  0.8666,
+  0.9319,
+  1.3284
+ ],
+ "stretch": 1.533,
+ "seat_top_m": {
+  "kit": 0.42,
+  "generated": 0.47
+ },
+ "plan": {
+  "front_is": "+y",
+  "notch": {
+   "arms_inner_faces_m": [
+    0.34,
+    0.34
+   ],
+   "cleared_either_side_m": [
+    0.35,
+    0.35
+   ],
+   "seat_front_was_m_behind_the_arms": -0.026,
+   "now_m": 0.129,
+   "asked_m": 0.129,
+   "walls_recoloured": {
+    "faces": 30,
+    "from": "the arms' inner faces",
+    "share_of_texels": 0.0159
+   }
+  },
+  "put_back_on_the_box": [
+   1.0,
+   1.07
+  ]
+ },
+ "yaw": 180,
+ "box_min": [
+  -0.435,
+  -0.464,
+  0.0
+ ],
+ "box_max": [
+  0.435,
+  0.37,
+  0.927
+ ],
+ "rebuilt_surface_m": 0.0085,
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 0.68,
+   "p95_mm": 2.04,
+   "max_mm": 8.4,
+   "measured_from": "the rebuilt surface"
+  }
+ ],
+ "tris": 1500,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 0.68,
+  "p95_mm": 2.04,
+  "max_mm": 8.4,
+  "measured_from": "the rebuilt surface"
+ },
+ "bake_reach_m": 0.0304,
+ "diagonal_m": 1.52,
+ "weighted_normals": true,
+ "texels_used": 0.857,
+ "materials": [
+  {
+   "design": [
+    82.9,
+    2.4,
+    11.9
+   ],
+   "got": [
+    82.9,
+    1.7,
+    10.6
+   ],
+   "share": 0.494,
+   "reached": true,
+   "delta_e": 1.5
+  },
+  {
+   "design": [
+    59.9,
+    14.9,
+    35.1
+   ],
+   "got": [
+    59.9,
+    16.2,
+    41.4
+   ],
+   "share": 0.111,
+   "reached": true,
+   "delta_e": 6.5
+  },
+  {
+   "design": [
+    40.8,
+    12.6,
+    27.4
+   ],
+   "got": [
+    40.9,
+    13.1,
+    34.3
+   ],
+   "share": 0.394,
+   "reached": true,
+   "delta_e": 7.0
+  }
+ ],
+ "colour_delta_e": 4.2,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 8.4,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 8.4,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 15.6,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 5.8,
+   "reached": 0.715
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   40.3,
+   40.8
+  ],
+  [
+   51.1,
+   59.9
+  ],
+  [
+   78.1,
+   82.9
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.321,
+ "colour_before": [
+  0.645,
+  0.53,
+  0.388
+ ],
+ "colour_after": [
+  0.732,
+  0.581,
+  0.41
+ ],
+ "colour_design": [
+  0.693,
+  0.593,
+  0.482
+ ],
+ "colour_as_matched": {
+  "colour_delta_e": 4.2,
+  "materials_reached": 1.0,
+  "materials": [
+   {
+    "design": [
+     82.9,
+     2.4,
+     11.9
+    ],
+    "got": [
+     82.9,
+     1.7,
+     10.6
+    ],
+    "share": 0.494,
+    "reached": true,
+    "delta_e": 1.5
+   },
+   {
+    "design": [
+     59.9,
+     14.9,
+     35.1
+    ],
+    "got": [
+     59.9,
+     16.2,
+     41.4
+    ],
+    "share": 0.111,
+    "reached": true,
+    "delta_e": 6.5
+   },
+   {
+    "design": [
+     40.8,
+     12.6,
+     27.4
+    ],
+    "got": [
+     40.9,
+     13.1,
+     34.3
+    ],
+    "share": 0.394,
+    "reached": true,
+    "delta_e": 7.0
+   }
+  ],
+  "share_of_texels_changed_since": 0.016
+ },
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 316952,
+ "name": "seat_reading-chair_v2"
+}

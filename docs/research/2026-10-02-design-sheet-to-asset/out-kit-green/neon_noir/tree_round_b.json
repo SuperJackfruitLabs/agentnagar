@@ -1,0 +1,323 @@
+{
+ "raw_tris": 144834,
+ "metal_map_ignored": true,
+ "loose_parts": 18,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "planted": {
+  "crown_m": 3.7,
+  "height_m": 4.41,
+  "scale_across": 5.618,
+  "scale_up": 4.42,
+  "trunk_width_generated_m": 0.35,
+  "crown_starts_m": 2.4,
+  "trunk_lean_taken_out_m": 0.045,
+  "fork_m": 2.4,
+  "fork_raised": {
+   "fork_from_m": 1.69,
+   "to_m": 2.4,
+   "crown_pressed_to": 0.739
+  },
+  "foot_scaled": 0.987,
+  "stem_slimmed": 1.0,
+  "wood_drawn_in": 0,
+  "trunk_reach_m": 0.25,
+  "reach_wanted_m": 0.25,
+  "width_scale_in_game": 1.0,
+  "materials": [
+   "trunk",
+   "leaf"
+  ],
+  "leaf_triangles": 2626
+ },
+ "yaw": 0.0,
+ "box_min": [
+  -1.835,
+  -1.857,
+  0.0
+ ],
+ "box_max": [
+  1.846,
+  1.843,
+  4.41
+ ],
+ "wood_cell_m": 0.025,
+ "stem_tube": {
+  "to_m": 2.4,
+  "triangles": 170
+ },
+ "parts": {
+  "wood": 600,
+  "leaf": 1800
+ },
+ "tris": 3226,
+ "deviation": {
+  "tris": 2400,
+  "mean_mm": 91.42,
+  "p95_mm": 185.18,
+  "max_mm": 333.6
+ },
+ "bake_reach_m": 0.2778,
+ "diagonal_m": 6.833,
+ "leaf_edges_smoothed": 2700,
+ "wood_baked_from_m": 0.06,
+ "leaf_specks_filled": 0.062,
+ "texels_used": 0.982,
+ "materials": [
+  {
+   "design": [
+    44.6,
+    -9.2,
+    35.6
+   ],
+   "got": [
+    43.6,
+    -31.6,
+    22.7
+   ],
+   "share": 0.167,
+   "reached": true,
+   "delta_e": 25.9
+  },
+  {
+   "design": [
+    16.7,
+    -6.6,
+    14.5
+   ],
+   "got": [
+    19.5,
+    -10.4,
+    15.2
+   ],
+   "share": 0.261,
+   "reached": true,
+   "delta_e": 4.8
+  },
+  {
+   "design": [
+    5.7,
+    -1.2,
+    4.4
+   ],
+   "got": [
+    5.9,
+    -1.1,
+    4.7
+   ],
+   "share": 0.315,
+   "reached": true,
+   "delta_e": 0.4
+  },
+  {
+   "design": [
+    46.9,
+    26.4,
+    -26.5
+   ],
+   "got": [
+    35.7,
+    38.5,
+    -42.1
+   ],
+   "share": 0.057,
+   "reached": true,
+   "delta_e": 22.7
+  },
+  {
+   "design": [
+    30.0,
+    -7.3,
+    25.3
+   ],
+   "got": [
+    33.8,
+    -25.4,
+    18.0
+   ],
+   "share": 0.2,
+   "reached": true,
+   "delta_e": 19.9
+  }
+ ],
+ "colour_delta_e": 11.0,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 8.6,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 8.6,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 9.1,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 8.3,
+   "reached": 0.675
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   8.3,
+   5.7
+  ],
+  [
+   19.5,
+   16.7
+  ],
+  [
+   24.6,
+   30.0
+  ],
+  [
+   28.0,
+   44.6
+  ],
+  [
+   41.8,
+   46.9
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.732,
+ "colour_before": [
+  0.129,
+  0.209,
+  0.084
+ ],
+ "colour_after": [
+  0.199,
+  0.238,
+  0.142
+ ],
+ "colour_design": [
+  0.235,
+  0.218,
+  0.123
+ ],
+ "leaf_blossoms": {
+  "swatches": "#6F409B",
+  "grown_texels": 2,
+  "share_of_leaf_texels": 0.0841
+ },
+ "leaf_ramp": {
+  "swatches": "#18402A,#265E36,#3D7E45",
+  "share_of_texels": 0.522,
+  "kept_as_blossom": 0.084
+ },
+ "wood_ramp": {
+  "swatches": "#462815,#462815",
+  "share_of_texels": 0.093
+ },
+ "colour_as_matched": {
+  "colour_delta_e": 6.5,
+  "materials_reached": 1.0,
+  "materials": [
+   {
+    "design": [
+     44.6,
+     -9.2,
+     35.6
+    ],
+    "got": [
+     44.7,
+     -17.8,
+     25.6
+    ],
+    "share": 0.167,
+    "reached": true,
+    "delta_e": 13.2
+   },
+   {
+    "design": [
+     16.7,
+     -6.6,
+     14.5
+    ],
+    "got": [
+     18.1,
+     -12.3,
+     14.2
+    ],
+    "share": 0.261,
+    "reached": true,
+    "delta_e": 5.9
+   },
+   {
+    "design": [
+     5.7,
+     -1.2,
+     4.4
+    ],
+    "got": [
+     6.1,
+     -1.1,
+     4.8
+    ],
+    "share": 0.315,
+    "reached": true,
+    "delta_e": 0.6
+   },
+   {
+    "design": [
+     46.9,
+     26.4,
+     -26.5
+    ],
+    "got": [
+     47.5,
+     18.5,
+     -20.1
+    ],
+    "share": 0.057,
+    "reached": true,
+    "delta_e": 10.2
+   },
+   {
+    "design": [
+     30.0,
+     -7.3,
+     25.3
+    ],
+    "got": [
+     32.6,
+     -16.1,
+     21.4
+    ],
+    "share": 0.2,
+    "reached": true,
+    "delta_e": 9.9
+   }
+  ],
+  "share_of_texels_changed_since": 0.615
+ },
+ "crown_fill": {
+  "shares_and_turns": [
+   0.5,
+   40.0
+  ],
+  "triangles": 826
+ },
+ "carried_light_parts": [],
+ "leaf_normals_rounded": 0.85,
+ "leaf_normals_lifted": 1.0,
+ "image_format": "WEBP",
+ "bytes": 416140,
+ "name": "tree_round_b",
+ "far": {
+  "file": "tree_round_b_far.glb",
+  "tris": 775,
+  "bytes": 83364
+ }
+}

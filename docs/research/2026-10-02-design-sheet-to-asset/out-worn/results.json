@@ -1,0 +1,66 @@
+[
+ {
+  "style": "lowpoly_tropical",
+  "asset": "bench-worn",
+  "file": "assets/seat_bench_v2.glb",
+  "size_m": [
+   1.6,
+   0.87,
+   0.59
+  ],
+  "spec_size_m": [
+   1.6,
+   0.85,
+   0.62
+  ],
+  "triangles": 1999,
+  "budget": 1500,
+  "over_limit": true,
+  "kit_triangles": 428,
+  "nodes": [
+   "body",
+   "seat_bench_v2"
+  ],
+  "spec_nodes": [
+   "seat_bench_v2",
+   "body"
+  ],
+  "bytes": 394532,
+  "kit_bytes": 27132,
+  "problems": [],
+  "departures": []
+ },
+ {
+  "style": "neon_noir",
+  "asset": "bench-worn",
+  "file": "assets/seat_bench_v2.glb",
+  "size_m": [
+   1.6,
+   0.85,
+   0.59
+  ],
+  "spec_size_m": [
+   1.6,
+   0.85,
+   0.6
+  ],
+  "triangles": 1512,
+  "budget": 1500,
+  "over_limit": true,
+  "kit_triangles": 704,
+  "nodes": [
+   "body",
+   "lights",
+   "seat_bench_v2"
+  ],
+  "spec_nodes": [
+   "seat_bench_v2",
+   "body",
+   "lights"
+  ],
+  "bytes": 239892,
+  "kit_bytes": 38184,
+  "problems": [],
+  "departures": []
+ }
+]

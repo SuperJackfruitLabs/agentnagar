@@ -1,0 +1,272 @@
+{
+ "kit_tris": 196,
+ "kit_light_parts": [],
+ "raw_tris": 140910,
+ "metal_map_ignored": true,
+ "loose_parts": 4,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.5267,
+  "90": 0.5267,
+  "180": 0.5267,
+  "270": 0.5267
+ },
+ "yaw_by_least_stretch": {
+  "0": 1.405,
+  "90": 1.405,
+  "180": 1.405,
+  "270": 1.405
+ },
+ "feet": {
+  "harmonics": {
+   "2": 0.003,
+   "3": 0.001,
+   "4": 0.076,
+   "5": 0.0,
+   "6": 0.001
+  },
+  "feet": 4,
+  "one_points_at_deg": 315.0,
+  "nearest_to_x_deg": 0.0,
+  "turned_deg": -45.0
+ },
+ "scale": [
+  2.2548,
+  2.2548,
+  2.2548
+ ],
+ "stretch": 2.123,
+ "stem": {
+  "foot_m": 0.015,
+  "foot_as_drawn_m": 0.154,
+  "foot_across_m": 0.753,
+  "foot_across_as_drawn_m": 0.753,
+  "stem_m": 1.864,
+  "top_m": 0.724,
+  "stem_across_as_drawn_m": [
+   0.081,
+   0.142
+  ],
+  "thinned": {
+   "most_m": 0.06,
+   "upto_m": 0.72,
+   "least_factor": 0.483
+  },
+  "top_off_axis_mm": 2.3,
+  "top_moved_onto_axis": true,
+  "edge_m": 1.9,
+  "height_m": 2.604
+ },
+ "yaw": 45.0,
+ "box_min": [
+  -1.154,
+  -1.155,
+  0.0
+ ],
+ "box_max": [
+  1.154,
+  1.155,
+  2.604
+ ],
+ "rebuilt_because_stalled_m": 0.0232,
+ "rebuilt_surface_m": 0.0232,
+ "tried": [
+  {
+   "tris": 3038,
+   "mean_mm": 45.25,
+   "p95_mm": 78.69,
+   "max_mm": 1730.0,
+   "measured_from": "the rebuilt surface"
+  },
+  {
+   "tris": 3038,
+   "mean_mm": 45.25,
+   "p95_mm": 78.69,
+   "max_mm": 1730.0,
+   "measured_from": "the rebuilt surface"
+  },
+  {
+   "tris": 3038,
+   "mean_mm": 45.25,
+   "p95_mm": 78.69,
+   "max_mm": 1730.0,
+   "measured_from": "the rebuilt surface"
+  },
+  {
+   "tris": 4230,
+   "mean_mm": 4.82,
+   "p95_mm": 14.45,
+   "max_mm": 76.8,
+   "measured_from": "the generated model"
+  },
+  {
+   "tris": 6000,
+   "mean_mm": 1.53,
+   "p95_mm": 4.54,
+   "max_mm": 10.9,
+   "measured_from": "the generated model"
+  }
+ ],
+ "tris": 6000,
+ "deviation": {
+  "tris": 6000,
+  "mean_mm": 1.53,
+  "p95_mm": 4.54,
+  "max_mm": 10.9,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0418,
+ "diagonal_m": 4.176,
+ "top_edges_kept_sharp": 5883,
+ "texels_used": 0.998,
+ "materials": [
+  {
+   "design": [
+    84.2,
+    4.7,
+    67.4
+   ],
+   "got": [
+    85.9,
+    3.2,
+    65.4
+   ],
+   "share": 0.216,
+   "reached": true,
+   "delta_e": 3.1
+  },
+  {
+   "design": [
+    88.3,
+    -1.0,
+    57.7
+   ],
+   "got": [
+    87.5,
+    2.3,
+    53.9
+   ],
+   "share": 0.228,
+   "reached": true,
+   "delta_e": 5.1
+  },
+  {
+   "design": [
+    28.1,
+    0.7,
+    3.7
+   ],
+   "got": [
+    27.9,
+    0.8,
+    2.2
+   ],
+   "share": 0.128,
+   "reached": true,
+   "delta_e": 1.5
+  },
+  {
+   "design": [
+    56.5,
+    15.5,
+    58.1
+   ],
+   "got": [
+    56.6,
+    19.2,
+    53.4
+   ],
+   "share": 0.31,
+   "reached": true,
+   "delta_e": 6.0
+  },
+  {
+   "design": [
+    28.3,
+    14.9,
+    26.7
+   ],
+   "got": [
+    28.3,
+    21.9,
+    32.5
+   ],
+   "share": 0.119,
+   "reached": true,
+   "delta_e": 9.1
+  }
+ ],
+ "colour_delta_e": 5.0,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 12.7,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 15.9,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 13.0,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 12.7,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   19.7,
+   28.1
+  ],
+  [
+   38.5,
+   28.3
+  ],
+  [
+   49.9,
+   56.5
+  ],
+  [
+   65.6,
+   88.3
+  ],
+  [
+   69.9,
+   88.3
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.041,
+ "colour_before": [
+  0.679,
+  0.44,
+  0.156
+ ],
+ "colour_after": [
+  0.711,
+  0.532,
+  0.225
+ ],
+ "colour_design": [
+  0.743,
+  0.578,
+  0.234
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 1090448,
+ "name": "umbrella_yellow"
+}

@@ -1,0 +1,5 @@
+The low-poly great tree's distance from its concept sheet (tree_metrics.py's measure), from three captures of one state of the game, taken one after another on 2026-10-02 with every built piece in place:
+  capture a: 0.531
+  capture b: 0.531
+  capture c: 0.531
+Greatest less least: 0.000. The same view with only the seats and the great tree new (the table's figure): 0.531.

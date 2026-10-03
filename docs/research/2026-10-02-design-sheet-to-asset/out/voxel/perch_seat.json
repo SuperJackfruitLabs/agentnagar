@@ -1,0 +1,268 @@
+{
+ "kit_tris": 40,
+ "kit_light_parts": [],
+ "raw_tris": 147322,
+ "metal_map_ignored": true,
+ "loose_parts": 24,
+ "dropped_parts": 1,
+ "dropped_area_share": 0.0001,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.9172,
+  "90": 0.9171,
+  "180": 0.9172,
+  "270": 0.9171
+ },
+ "yaw_by_least_stretch": {
+  "0": 2.452,
+  "90": 1.479,
+  "180": 2.452,
+  "270": 1.479
+ },
+ "scale": [
+  0.3997,
+  0.5478,
+  0.5911
+ ],
+ "stretch": 1.479,
+ "yaw": 90,
+ "box_min": [
+  -0.15,
+  -0.4,
+  0.0
+ ],
+ "box_max": [
+  0.15,
+  0.15,
+  0.51
+ ],
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 0.57,
+   "p95_mm": 1.5,
+   "max_mm": 4.8,
+   "measured_from": "the generated model"
+  },
+  {
+   "tris": 2000,
+   "mean_mm": 0.37,
+   "p95_mm": 1.09,
+   "max_mm": 3.7,
+   "measured_from": "the generated model"
+  }
+ ],
+ "tris": 18,
+ "deviation": {
+  "tris": 2000,
+  "mean_mm": 0.37,
+  "p95_mm": 1.09,
+  "max_mm": 3.7,
+  "measured_from": "the generated model"
+ },
+ "bake_reach_m": 0.0081,
+ "diagonal_m": 0.808,
+ "own_normals": true,
+ "weighted_normals": true,
+ "texels_used": 0.974,
+ "materials": [
+  {
+   "design": [
+    68.9,
+    33.2,
+    61.7
+   ],
+   "got": [
+    68.9,
+    31.8,
+    62.4
+   ],
+   "share": 0.206,
+   "reached": true,
+   "delta_e": 1.5
+  },
+  {
+   "design": [
+    50.8,
+    31.4,
+    50.6
+   ],
+   "got": [
+    50.8,
+    29.9,
+    51.6
+   ],
+   "share": 0.142,
+   "reached": true,
+   "delta_e": 1.7
+  },
+  {
+   "design": [
+    53.9,
+    4.0,
+    -2.1
+   ],
+   "got": [
+    54.1,
+    3.2,
+    -1.8
+   ],
+   "share": 0.355,
+   "reached": true,
+   "delta_e": 0.9
+  },
+  {
+   "design": [
+    29.4,
+    2.9,
+    -3.4
+   ],
+   "got": [
+    29.5,
+    2.3,
+    -2.6
+   ],
+   "share": 0.223,
+   "reached": true,
+   "delta_e": 0.9
+  },
+  {
+   "design": [
+    29.5,
+    22.6,
+    33.6
+   ],
+   "got": [
+    29.5,
+    21.2,
+    34.3
+   ],
+   "share": 0.074,
+   "reached": true,
+   "delta_e": 1.5
+  }
+ ],
+ "colour_delta_e": 1.2,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 6.0,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 6.0,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 6.1,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 6.1,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   26.0,
+   29.5
+  ],
+  [
+   34.0,
+   29.5
+  ],
+  [
+   42.4,
+   50.8
+  ],
+  [
+   47.4,
+   53.9
+  ],
+  [
+   56.0,
+   68.9
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.165,
+ "colour_before": [
+  0.423,
+  0.344,
+  0.25
+ ],
+ "colour_after": [
+  0.493,
+  0.371,
+  0.291
+ ],
+ "colour_design": [
+  0.587,
+  0.424,
+  0.314
+ ],
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 4048,
+ "name": "perch_seat",
+ "fitted_tris": 2000,
+ "cubes": {
+  "grid_m": 0.1,
+  "layers": [
+   {
+    "grid_m": 0.1,
+    "from_m": 0.0,
+    "cells": [
+     3,
+     6,
+     5
+    ],
+    "filled": 78,
+    "filled_as_thin_members": 0,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's middle",
+     "a cell's middle"
+    ]
+   }
+  ],
+  "filled": 78,
+  "filled_as_thin_members": 0,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   3,
+   6,
+   5
+  ],
+  "grid_set_on": [
+   "a cell's middle",
+   "a cell's middle"
+  ],
+  "rectangles": 9,
+  "cell_faces": 103,
+  "texture_px": 128,
+  "glowing_cell_faces": 0,
+  "tris": 18,
+  "bytes": 4048,
+  "box_min": [
+   -0.15,
+   -0.45,
+   0.0
+  ],
+  "box_max": [
+   0.15,
+   0.15,
+   0.5
+  ]
+ }
+}

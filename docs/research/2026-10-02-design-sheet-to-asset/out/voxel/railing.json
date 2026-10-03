@@ -1,0 +1,325 @@
+{
+ "raw_tris": 123906,
+ "metal_map_ignored": true,
+ "loose_parts": 27,
+ "dropped_parts": 0,
+ "dropped_area_share": 0.0,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": null,
+ "panel_turn": {
+  "ends_m": [
+   {
+    "x0": -0.5019,
+    "x1": -0.3381,
+    "top": 0.6005
+   },
+   {
+    "x0": 0.3688,
+    "x1": 0.502,
+    "top": 0.5363
+   }
+  ],
+  "turn": 90.0
+ },
+ "panel": {
+  "far_post_cut": {
+   "at_share_of_length": 0.8653,
+   "far_post_m": [
+    0.3688,
+    0.502
+   ],
+   "rail_ends_closed_with_faces": 214
+  },
+  "ends_before_m": [
+   -0.9999,
+   1.0
+  ],
+  "moved_across_m": 0.0,
+  "half_depth_in_band_m": [
+   0.1998,
+   0.1998
+  ],
+  "post_m": {
+   "foot_inner": -0.623,
+   "level": 0.565,
+   "shaft": [
+    -0.9922,
+    -0.6425
+   ],
+   "last_baluster": 0.8617
+  },
+  "post": {
+   "tris": 1854,
+   "box_min": [
+    -0.1885,
+    -0.1998,
+    0.0005
+   ],
+   "box_max": [
+    0.1885,
+    0.1998,
+    1.0999
+   ],
+   "shaft_off_the_foot_middle_m": -0.0059,
+   "moved_across_and_down_m": [
+    0.0,
+    -0.0005
+   ],
+   "tangents_mended": 0,
+   "bytes": 154984,
+   "file": "railing_post.glb"
+  },
+  "stubs": {
+   "length_m": 0.0378,
+   "shaft_stands_in_m": 0.0078,
+   "rails": 2,
+   "corners": [
+    4,
+    4
+   ],
+   "triangles": 20
+  }
+ },
+ "scale": [
+  2.3023,
+  1.9913,
+  1.8636
+ ],
+ "stretch": 1.235,
+ "yaw": 90.0,
+ "box_min": [
+  -1.0,
+  -0.2,
+  0.0
+ ],
+ "box_max": [
+  1.0,
+  0.2,
+  1.1
+ ],
+ "rebuilt_surface_m": 0.005,
+ "hidden_faces_dropped": {
+  "of": 24000,
+  "dropped": 0
+ },
+ "tris": 128,
+ "deviation": {
+  "tris": 4000,
+  "mean_mm": 0.13,
+  "p95_mm": 0.32,
+  "max_mm": 0.8,
+  "measured_from": "the rebuilt surface, its hidden faces dropped"
+ },
+ "bake_reach_m": 0.012,
+ "diagonal_m": 2.317,
+ "weighted_normals": true,
+ "texels_used": 0.815,
+ "materials": [
+  {
+   "design": [
+    28.1,
+    1.0,
+    -2.4
+   ],
+   "got": [
+    26.9,
+    1.1,
+    -2.6
+   ],
+   "share": 0.564,
+   "reached": true,
+   "delta_e": 1.2
+  },
+  {
+   "design": [
+    51.0,
+    1.8,
+    -0.8
+   ],
+   "got": [
+    51.0,
+    1.5,
+    -0.5
+   ],
+   "share": 0.267,
+   "reached": true,
+   "delta_e": 0.4
+  },
+  {
+   "design": [
+    12.9,
+    0.8,
+    -1.9
+   ],
+   "got": [
+    17.7,
+    0.9,
+    -2.2
+   ],
+   "share": 0.169,
+   "reached": true,
+   "delta_e": 4.8
+  }
+ ],
+ "colour_delta_e": 1.6,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 2.7,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 2.9,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 2.8,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 2.7,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   12.8,
+   24.6
+  ],
+  [
+   23.1,
+   51.0
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 1.0,
+ "colour_before": [
+  0.162,
+  0.158,
+  0.17
+ ],
+ "colour_after": [
+  0.313,
+  0.309,
+  0.323
+ ],
+ "colour_design": [
+  0.304,
+  0.299,
+  0.311
+ ],
+ "carried_light_parts": [],
+ "tangents_mended": 1,
+ "image_format": "WEBP",
+ "bytes": 14568,
+ "name": "railing",
+ "fitted_tris": 4020,
+ "cubes": {
+  "grid_m": 0.1,
+  "layers": [
+   {
+    "grid_m": 0.1,
+    "from_m": 0.0,
+    "cells": [
+     20,
+     4,
+     11
+    ],
+    "filled": 326,
+    "filled_as_thin_members": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's edge"
+    ]
+   }
+  ],
+  "filled": 326,
+  "filled_as_thin_members": 0,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   20,
+   4,
+   11
+  ],
+  "grid_set_on": [
+   "a cell's edge",
+   "a cell's edge"
+  ],
+  "rectangles": 64,
+  "cell_faces": 552,
+  "texture_px": 256,
+  "glowing_cell_faces": 0,
+  "tris": 128,
+  "bytes": 14568,
+  "box_min": [
+   -1.0,
+   -0.2,
+   0.0
+  ],
+  "box_max": [
+   1.0,
+   0.2,
+   1.1
+  ],
+  "post": {
+   "grid_m": 0.1,
+   "layers": [
+    {
+     "grid_m": 0.1,
+     "from_m": 0.0,
+     "cells": [
+      4,
+      4,
+      11
+     ],
+     "filled": 176,
+     "filled_as_thin_members": 0,
+     "crumb_cells_dropped": 0,
+     "cells_changed_by_jumble": 0,
+     "grid_set_on": [
+      "a cell's edge",
+      "a cell's edge"
+     ]
+    }
+   ],
+   "filled": 176,
+   "filled_as_thin_members": 0,
+   "crumb_cells_dropped": 0,
+   "cells": [
+    4,
+    4,
+    11
+   ],
+   "grid_set_on": [
+    "a cell's edge",
+    "a cell's edge"
+   ],
+   "rectangles": 5,
+   "cell_faces": 192,
+   "texture_px": 256,
+   "glowing_cell_faces": 0,
+   "tris": 10,
+   "bytes": 4208,
+   "box_min": [
+    -0.2,
+    -0.2,
+    0.0
+   ],
+   "box_max": [
+    0.2,
+    0.2,
+    1.1
+   ]
+  }
+ }
+}

@@ -1,0 +1,333 @@
+{
+ "kit_tris": 92,
+ "kit_light_parts": [],
+ "raw_tris": 133994,
+ "metal_map_ignored": true,
+ "loose_parts": 27,
+ "dropped_parts": 18,
+ "dropped_area_share": 0.0058,
+ "stray_parts": 0,
+ "stray_area_share": 0.0,
+ "yaw_scores": {
+  "0": 0.6635,
+  "90": 0.6502,
+  "180": 0.6642,
+  "270": 0.6712
+ },
+ "scale": [
+  0.7969,
+  1.2072,
+  1.2624
+ ],
+ "stretch": 1.584,
+ "seat_top_m": {
+  "kit": 0.5,
+  "generated": 0.44
+ },
+ "plan": {
+  "front_is": "+y",
+  "notch": {
+   "arms_inner_faces_m": [
+    0.25,
+    0.25
+   ],
+   "cleared_either_side_m": [
+    0.26,
+    0.26
+   ],
+   "seat_front_was_m_behind_the_arms": -0.009,
+   "now_m": 0.205,
+   "asked_m": 0.205,
+   "walls_recoloured": {
+    "faces": 72,
+    "from": "the arms' inner faces",
+    "share_of_texels": 0.0497
+   }
+  },
+  "put_back_on_the_box": [
+   1.0,
+   1.011
+  ]
+ },
+ "yaw": 90,
+ "box_min": [
+  -0.4,
+  -0.5,
+  0.0
+ ],
+ "box_max": [
+  0.4,
+  0.4,
+  1.0
+ ],
+ "rebuilt_because_stalled_m": 0.0087,
+ "rebuilt_surface_m": 0.0087,
+ "tried": [
+  {
+   "tris": 1500,
+   "mean_mm": 0.16,
+   "p95_mm": 0.58,
+   "max_mm": 2.1,
+   "measured_from": "the rebuilt surface"
+  }
+ ],
+ "tris": 142,
+ "deviation": {
+  "tris": 1500,
+  "mean_mm": 0.16,
+  "p95_mm": 0.58,
+  "max_mm": 2.1,
+  "measured_from": "the rebuilt surface"
+ },
+ "bake_reach_m": 0.0157,
+ "diagonal_m": 1.565,
+ "weighted_normals": true,
+ "texels_used": 0.868,
+ "materials": [
+  {
+   "design": [
+    27.3,
+    -25.5,
+    7.2
+   ],
+   "got": [
+    28.0,
+    -25.8,
+    8.2
+   ],
+   "share": 0.488,
+   "reached": true,
+   "delta_e": 1.3
+  },
+  {
+   "design": [
+    50.9,
+    -41.5,
+    16.9
+   ],
+   "got": [
+    51.0,
+    -39.9,
+    17.4
+   ],
+   "share": 0.317,
+   "reached": true,
+   "delta_e": 1.6
+  },
+  {
+   "design": [
+    57.3,
+    37.0,
+    58.7
+   ],
+   "got": [
+    57.3,
+    38.4,
+    57.7
+   ],
+   "share": 0.108,
+   "reached": true,
+   "delta_e": 1.7
+  },
+  {
+   "design": [
+    13.1,
+    -0.7,
+    1.2
+   ],
+   "got": [
+    13.0,
+    -0.8,
+    0.9
+   ],
+   "share": 0.087,
+   "reached": true,
+   "delta_e": 0.4
+  }
+ ],
+ "colour_delta_e": 1.4,
+ "materials_reached": 1.0,
+ "colour_delta_e_of_the_fit": 6.4,
+ "colour_tries": [
+  {
+   "l_weight": 1.0,
+   "delta_e": 6.4,
+   "reached": 1.0
+  },
+  {
+   "l_weight": 0.7,
+   "delta_e": 6.8,
+   "reached": 0.982
+  },
+  {
+   "l_weight": 0.45,
+   "delta_e": 12.6,
+   "reached": 1.0
+  }
+ ],
+ "lightness_curve": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   20.0,
+   13.1
+  ],
+  [
+   29.7,
+   27.3
+  ],
+  [
+   37.0,
+   50.9
+  ],
+  [
+   50.5,
+   57.3
+  ],
+  [
+   100.0,
+   100.0
+  ]
+ ],
+ "colourfulness_scale": 0.878,
+ "colour_before": [
+  0.071,
+  0.328,
+  0.177
+ ],
+ "colour_after": [
+  0.131,
+  0.352,
+  0.232
+ ],
+ "colour_design": [
+  0.151,
+  0.394,
+  0.255
+ ],
+ "colour_as_matched": {
+  "colour_delta_e": 1.3,
+  "materials_reached": 1.0,
+  "materials": [
+   {
+    "design": [
+     27.3,
+     -25.5,
+     7.2
+    ],
+    "got": [
+     27.3,
+     -25.9,
+     8.2
+    ],
+    "share": 0.488,
+    "reached": true,
+    "delta_e": 1.1
+   },
+   {
+    "design": [
+     50.9,
+     -41.5,
+     16.9
+    ],
+    "got": [
+     50.9,
+     -39.9,
+     17.4
+    ],
+    "share": 0.317,
+    "reached": true,
+    "delta_e": 1.7
+   },
+   {
+    "design": [
+     57.3,
+     37.0,
+     58.7
+    ],
+    "got": [
+     57.3,
+     38.4,
+     57.7
+    ],
+    "share": 0.108,
+    "reached": true,
+    "delta_e": 1.7
+   },
+   {
+    "design": [
+     13.1,
+     -0.7,
+     1.2
+    ],
+    "got": [
+     13.0,
+     -0.8,
+     0.9
+    ],
+    "share": 0.087,
+    "reached": true,
+    "delta_e": 0.4
+   }
+  ],
+  "share_of_texels_changed_since": 0.05
+ },
+ "carried_light_parts": [],
+ "image_format": "WEBP",
+ "bytes": 15744,
+ "name": "reading_chair",
+ "fitted_tris": 1500,
+ "cubes": {
+  "grid_m": 0.1,
+  "layers": [
+   {
+    "grid_m": 0.1,
+    "from_m": 0.0,
+    "cells": [
+     8,
+     9,
+     10
+    ],
+    "filled": 423,
+    "filled_as_thin_members": 0,
+    "filled_to_make_the_foot_solid": 0,
+    "crumb_cells_dropped": 0,
+    "cells_changed_by_jumble": 0,
+    "grid_set_on": [
+     "a cell's edge",
+     "a cell's edge"
+    ]
+   }
+  ],
+  "filled": 423,
+  "filled_as_thin_members": 0,
+  "crumb_cells_dropped": 0,
+  "cells": [
+   8,
+   9,
+   10
+  ],
+  "grid_set_on": [
+   "a cell's edge",
+   "a cell's edge"
+  ],
+  "rectangles": 71,
+  "cell_faces": 466,
+  "texture_px": 256,
+  "glowing_cell_faces": 0,
+  "tris": 142,
+  "bytes": 15744,
+  "box_min": [
+   -0.4,
+   -0.5,
+   0.0
+  ],
+  "box_max": [
+   0.4,
+   0.4,
+   1.0
+  ]
+ }
+}
