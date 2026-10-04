@@ -1,0 +1,21 @@
+{
+  "name": "palm_b",
+  "triangles": 2610,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 45,
+  "bounds_min": [
+    -2.48849,
+    -2.02596,
+    0.0
+  ],
+  "bounds_max": [
+    1.84506,
+    2.09217,
+    6.49342
+  ],
+  "notes": [
+    "Original curved trunk, folded broad split-edge palm blades, raised midribs; deliberately reduced far geometry."
+  ]
+}

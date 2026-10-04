@@ -1,0 +1,21 @@
+{
+  "name": "hall_corner",
+  "triangles": 44,
+  "parts": [
+    "pier"
+  ],
+  "editable_meshes": 1,
+  "bounds_min": [
+    -0.15,
+    -0.15,
+    0.0
+  ],
+  "bounds_max": [
+    0.15,
+    0.15,
+    5.2
+  ],
+  "notes": [
+    "Hall module authored for 4m bay and 5.2m wall; entrance has clear 2m by 3.2m opening."
+  ]
+}

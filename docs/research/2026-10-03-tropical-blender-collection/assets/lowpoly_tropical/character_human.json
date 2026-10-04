@@ -1,0 +1,56 @@
+{
+  "bounds_min": [
+    -0.382909,
+    -0.2925,
+    0.001
+  ],
+  "bounds_max": [
+    0.382909,
+    0.177,
+    1.788
+  ],
+  "name": "character_human",
+  "triangles": 3526,
+  "mesh_parts": [
+    "top",
+    "details",
+    "bottom",
+    "skin",
+    "shoes",
+    "hair_0",
+    "hair_1",
+    "hair_2",
+    "hair_3",
+    "hat_sun",
+    "backpack"
+  ],
+  "bones": [
+    "hips",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "upper_arm_r",
+    "forearm_r",
+    "hand_r",
+    "upper_arm_l",
+    "forearm_l",
+    "hand_l",
+    "thigh_r",
+    "shin_r",
+    "foot_r",
+    "thigh_l",
+    "shin_l",
+    "foot_l"
+  ],
+  "animations": [
+    "idle",
+    "walk",
+    "sit",
+    "typing"
+  ],
+  "editable_meshes": 83,
+  "weight_min": 0.9999999701976776,
+  "weight_max": 1.0000000298023224,
+  "unweighted_vertices": 0
+}

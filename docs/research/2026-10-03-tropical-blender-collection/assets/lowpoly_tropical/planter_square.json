@@ -1,0 +1,22 @@
+{
+  "name": "planter_square",
+  "triangles": 3184,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 314,
+  "bounds_min": [
+    -0.65,
+    -0.65,
+    0.0
+  ],
+  "bounds_max": [
+    0.65,
+    0.65,
+    1.4208
+  ],
+  "notes": [
+    "Original limestone block container, dense flowering border and upright folded tropical leaves.",
+    "1.30 m square full masonry footprint, foliage contained above it."
+  ]
+}

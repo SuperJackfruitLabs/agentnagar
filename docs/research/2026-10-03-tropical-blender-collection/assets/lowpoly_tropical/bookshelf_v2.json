@@ -1,0 +1,22 @@
+{
+  "name": "bookshelf_v2",
+  "triangles": 5676,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 129,
+  "bounds_min": [
+    -1.0,
+    -0.225,
+    0.0
+  ],
+  "bounds_max": [
+    1.0,
+    0.225,
+    2.6
+  ],
+  "notes": [
+    "2 x 2.6 x .45 m; five filled shelves, open negative-space bays.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

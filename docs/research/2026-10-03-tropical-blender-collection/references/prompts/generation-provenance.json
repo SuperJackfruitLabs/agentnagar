@@ -1,0 +1,67 @@
+{
+  "generator": "OpenAI built-in image generation via Codex",
+  "date": "2026-10-03",
+  "notes": "Generated concept images, not Blender renders. Prompts retained alongside this record. Local session paths and tool boilerplate omitted.",
+  "images": {
+    "A-library": {
+      "reference": "../A-library.png",
+      "generation_id": "exec-1e71d229-84c9-4692-96f4-9e047e388165.png"
+    },
+    "A-tram": {
+      "reference": "../A-tram.png",
+      "generation_id": "exec-99514aba-2b65-47a0-88ae-06c8792ba3ff.png"
+    },
+    "A-resident": {
+      "reference": "../A-resident.png",
+      "generation_id": "exec-2a184a8c-896b-4bf7-ab15-306e2be71e7c.png"
+    },
+    "A-agent-a1": {
+      "reference": "../A-agent-a1.png",
+      "generation_id": "exec-c4947ba7-828d-42f7-a0d0-f89bf6fb38f0.png"
+    },
+    "A-cafe": {
+      "reference": "../A-cafe.png",
+      "generation_id": "exec-215d9d30-fd03-45f5-942f-9b0107217d8b.png"
+    },
+    "A-houses": {
+      "reference": "../A-houses.png",
+      "generation_id": "exec-4a276ce3-511a-43c1-9a20-0226b32127a9.png"
+    },
+    "A-shop": {
+      "reference": "../A-shop.png",
+      "generation_id": "exec-4d1ef32a-5a99-47e9-adb8-7f83beb884af.png"
+    },
+    "A-towers": {
+      "reference": "../A-towers.png",
+      "generation_id": "exec-25a12669-428c-423d-b2a3-bc7ea0de92ff.png"
+    },
+    "A-bridge": {
+      "reference": "../A-bridge.png",
+      "generation_id": "exec-97ed33fa-7001-4c3f-ba2c-2524ede64d9e.png"
+    },
+    "A-civic": {
+      "reference": "../A-civic.png",
+      "generation_id": "exec-450bd482-b470-4694-8709-0a53af67ca8e.png"
+    },
+    "A-work-furniture": {
+      "reference": "../A-work-furniture.png",
+      "generation_id": "exec-d8b55efe-27f0-474a-b071-0a04df291698.png"
+    },
+    "A-water-and-sky": {
+      "reference": "../A-water-and-sky.png",
+      "generation_id": "exec-2f0c63fc-113b-47bd-bdd8-b758d2f75b05.png"
+    },
+    "A-perch-seat": {
+      "reference": "../A-perch-seat.png",
+      "generation_id": "exec-573f8114-e5ce-4630-a646-de896aa1b3d1.png"
+    },
+    "A-ground-and-track": {
+      "reference": "../A-ground-and-track.png",
+      "generation_id": "exec-4fbd2e13-2943-491c-be3e-7e9666b72786.png"
+    },
+    "A-civic-v2": {
+      "reference": "../A-civic.png",
+      "generation_id": "exec-880acefa-e33e-422d-8c83-f84b0bb3d630.png"
+    }
+  }
+}

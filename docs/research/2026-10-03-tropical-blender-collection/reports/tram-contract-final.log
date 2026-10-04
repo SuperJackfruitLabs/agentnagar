@@ -1,0 +1,11 @@
+test_a_door_of_two_leaves_on_both_sides_at_each_of_the_layouts_doors (tram_checks.tram_case.<locals>.Tram.test_a_door_of_two_leaves_on_both_sides_at_each_of_the_layouts_doors) ... ok
+test_a_seat_under_every_seated_slot (tram_checks.tram_case.<locals>.Tram.test_a_seat_under_every_seated_slot) ... ok
+test_a_seated_rider_looks_out_of_the_side_windows (tram_checks.tram_case.<locals>.Tram.test_a_seated_rider_looks_out_of_the_side_windows) ... ok
+test_it_has_a_body_a_roof_an_interior_and_lights (tram_checks.tram_case.<locals>.Tram.test_it_has_a_body_a_roof_an_interior_and_lights) ... ok
+test_nothing_stands_in_the_doorways (tram_checks.tram_case.<locals>.Tram.test_nothing_stands_in_the_doorways) ... ok
+test_the_tram_is_the_lines_length_at_its_own_width (tram_checks.tram_case.<locals>.Tram.test_the_tram_is_the_lines_length_at_its_own_width) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.219s
+
+OK

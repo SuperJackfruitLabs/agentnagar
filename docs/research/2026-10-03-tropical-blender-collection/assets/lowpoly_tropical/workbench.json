@@ -1,0 +1,23 @@
+{
+  "name": "workbench",
+  "triangles": 2784,
+  "parts": [
+    "body",
+    "screen"
+  ],
+  "editable_meshes": 77,
+  "bounds_min": [
+    -1.6,
+    -0.499,
+    0.0
+  ],
+  "bounds_max": [
+    1.6,
+    0.499,
+    1.3
+  ],
+  "notes": [
+    "50 mm steel maximum, .90 m work surface. Detachable monitor retains required screen node.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

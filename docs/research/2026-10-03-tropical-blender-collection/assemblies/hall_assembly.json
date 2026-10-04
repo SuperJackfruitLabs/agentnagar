@@ -1,0 +1,567 @@
+{
+  "assembly": "hall_assembly",
+  "source": "Original candidate components; illustrative composition, not runtime adoption",
+  "mesh_count": 261,
+  "component_bounds_verified": [
+    {
+      "asset": "hall_window_wall",
+      "position": [
+        -4,
+        -4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.0,
+        -5.285000324249268,
+        0.0
+      ],
+      "placed_max": [
+        -1.9999998807907104,
+        -3.8399999141693115,
+        5.199999809265137
+      ],
+      "editable_meshes": 16
+    },
+    {
+      "asset": "hall_window_wall",
+      "position": [
+        -4,
+        4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.0,
+        3.8399996757507324,
+        0.0
+      ],
+      "placed_max": [
+        -1.9999998807907104,
+        5.285000324249268,
+        5.199999809265137
+      ],
+      "editable_meshes": 16
+    },
+    {
+      "asset": "hall_window_wall",
+      "position": [
+        4,
+        -4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        1.9999998807907104,
+        -5.285000324249268,
+        0.0
+      ],
+      "placed_max": [
+        6.0,
+        -3.8399999141693115,
+        5.199999809265137
+      ],
+      "editable_meshes": 16
+    },
+    {
+      "asset": "hall_window_wall",
+      "position": [
+        4,
+        4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        1.9999998807907104,
+        3.8399996757507324,
+        0.0
+      ],
+      "placed_max": [
+        6.0,
+        5.285000324249268,
+        5.199999809265137
+      ],
+      "editable_meshes": 16
+    },
+    {
+      "asset": "hall_door_wall",
+      "position": [
+        0,
+        -4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -1.2999999523162842,
+        -4.270000457763672,
+        0.0
+      ],
+      "placed_max": [
+        1.2999999523162842,
+        -3.8299999237060547,
+        5.199999809265137
+      ],
+      "editable_meshes": 5
+    },
+    {
+      "asset": "hall_wall",
+      "position": [
+        0,
+        4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -2.0,
+        3.8454999923706055,
+        0.0
+      ],
+      "placed_max": [
+        2.0,
+        4.139999866485596,
+        5.199999809265137
+      ],
+      "editable_meshes": 10
+    },
+    {
+      "asset": "hall_door_leaves",
+      "position": [
+        -1.15,
+        -4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -1.274999976158142,
+        -4.138000011444092,
+        0.0
+      ],
+      "placed_max": [
+        -1.024999976158142,
+        -3.9000000953674316,
+        3.200000047683716
+      ],
+      "editable_meshes": 3
+    },
+    {
+      "asset": "hall_door_leaves",
+      "position": [
+        1.15,
+        -4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        1.024999976158142,
+        -4.138000011444092,
+        0.0
+      ],
+      "placed_max": [
+        1.274999976158142,
+        -3.9000000953674316,
+        3.200000047683716
+      ],
+      "editable_meshes": 3
+    },
+    {
+      "asset": "hall_wall",
+      "position": [
+        -6,
+        -2,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.140000343322754,
+        -4.0,
+        0.0
+      ],
+      "placed_max": [
+        -5.8454999923706055,
+        2.53119321058648e-08,
+        5.199999809265137
+      ],
+      "editable_meshes": 10
+    },
+    {
+      "asset": "hall_wall",
+      "position": [
+        -6,
+        2,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.140000343322754,
+        -2.53119321058648e-08,
+        0.0
+      ],
+      "placed_max": [
+        -5.8454999923706055,
+        4.0,
+        5.199999809265137
+      ],
+      "editable_meshes": 10
+    },
+    {
+      "asset": "hall_wall",
+      "position": [
+        6,
+        -2,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        5.859999656677246,
+        -4.0,
+        0.0
+      ],
+      "placed_max": [
+        6.1545000076293945,
+        2.53119321058648e-08,
+        5.199999809265137
+      ],
+      "editable_meshes": 10
+    },
+    {
+      "asset": "hall_wall",
+      "position": [
+        6,
+        2,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        5.859999656677246,
+        -2.53119321058648e-08,
+        0.0
+      ],
+      "placed_max": [
+        6.1545000076293945,
+        4.0,
+        5.199999809265137
+      ],
+      "editable_meshes": 10
+    },
+    {
+      "asset": "hall_corner",
+      "position": [
+        -6,
+        -4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.150000095367432,
+        -4.150000095367432,
+        0.0
+      ],
+      "placed_max": [
+        -5.849999904632568,
+        -3.8499999046325684,
+        5.199999809265137
+      ],
+      "editable_meshes": 1
+    },
+    {
+      "asset": "hall_corner",
+      "position": [
+        -6,
+        4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.150000095367432,
+        3.8499999046325684,
+        0.0
+      ],
+      "placed_max": [
+        -5.849999904632568,
+        4.150000095367432,
+        5.199999809265137
+      ],
+      "editable_meshes": 1
+    },
+    {
+      "asset": "hall_corner",
+      "position": [
+        6,
+        -4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        5.849999904632568,
+        -4.150000095367432,
+        0.0
+      ],
+      "placed_max": [
+        6.150000095367432,
+        -3.8499999046325684,
+        5.199999809265137
+      ],
+      "editable_meshes": 1
+    },
+    {
+      "asset": "hall_corner",
+      "position": [
+        6,
+        4,
+        0
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        5.849999904632568,
+        3.8499999046325684,
+        0.0
+      ],
+      "placed_max": [
+        6.150000095367432,
+        4.150000095367432,
+        5.199999809265137
+      ],
+      "editable_meshes": 1
+    },
+    {
+      "asset": "hall_sawtooth_bay",
+      "position": [
+        -4,
+        -2,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.031867027282715,
+        -4.065000057220459,
+        5.243348121643066
+      ],
+      "placed_max": [
+        -1.940000057220459,
+        0.0650000050663948,
+        7.606651306152344
+      ],
+      "editable_meshes": 15
+    },
+    {
+      "asset": "hall_sawtooth_bay",
+      "position": [
+        -4,
+        2,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.031867027282715,
+        -0.0650000050663948,
+        5.243348121643066
+      ],
+      "placed_max": [
+        -1.940000057220459,
+        4.065000057220459,
+        7.606651306152344
+      ],
+      "editable_meshes": 15
+    },
+    {
+      "asset": "hall_sawtooth_gable",
+      "position": [
+        -4,
+        -4,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.022061824798584,
+        -4.077500343322754,
+        5.25499963760376
+      ],
+      "placed_max": [
+        -1.9550000429153442,
+        -3.9549999237060547,
+        7.58922004699707
+      ],
+      "editable_meshes": 7
+    },
+    {
+      "asset": "hall_sawtooth_gable",
+      "position": [
+        -4,
+        4,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -6.022061824798584,
+        3.9225001335144043,
+        5.25499963760376
+      ],
+      "placed_max": [
+        -1.9550000429153442,
+        4.045000076293945,
+        7.58922004699707
+      ],
+      "editable_meshes": 7
+    },
+    {
+      "asset": "hall_sawtooth_bay",
+      "position": [
+        0,
+        -2,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -2.031867265701294,
+        -4.065000057220459,
+        5.243348121643066
+      ],
+      "placed_max": [
+        2.059999942779541,
+        0.0650000050663948,
+        7.606651306152344
+      ],
+      "editable_meshes": 15
+    },
+    {
+      "asset": "hall_sawtooth_bay",
+      "position": [
+        0,
+        2,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -2.031867265701294,
+        -0.0650000050663948,
+        5.243348121643066
+      ],
+      "placed_max": [
+        2.059999942779541,
+        4.065000057220459,
+        7.606651306152344
+      ],
+      "editable_meshes": 15
+    },
+    {
+      "asset": "hall_sawtooth_gable",
+      "position": [
+        0,
+        -4,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -2.022062063217163,
+        -4.077500343322754,
+        5.25499963760376
+      ],
+      "placed_max": [
+        2.0450000762939453,
+        -3.9549999237060547,
+        7.58922004699707
+      ],
+      "editable_meshes": 7
+    },
+    {
+      "asset": "hall_sawtooth_gable",
+      "position": [
+        0,
+        4,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        -2.022062063217163,
+        3.9225001335144043,
+        5.25499963760376
+      ],
+      "placed_max": [
+        2.0450000762939453,
+        4.045000076293945,
+        7.58922004699707
+      ],
+      "editable_meshes": 7
+    },
+    {
+      "asset": "hall_sawtooth_bay",
+      "position": [
+        4,
+        -2,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        1.9681328535079956,
+        -4.065000057220459,
+        5.243348121643066
+      ],
+      "placed_max": [
+        6.059999942779541,
+        0.0650000050663948,
+        7.606651306152344
+      ],
+      "editable_meshes": 15
+    },
+    {
+      "asset": "hall_sawtooth_bay",
+      "position": [
+        4,
+        2,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        1.9681328535079956,
+        -0.0650000050663948,
+        5.243348121643066
+      ],
+      "placed_max": [
+        6.059999942779541,
+        4.065000057220459,
+        7.606651306152344
+      ],
+      "editable_meshes": 15
+    },
+    {
+      "asset": "hall_sawtooth_gable",
+      "position": [
+        4,
+        -4,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        1.9779380559921265,
+        -4.077500343322754,
+        5.25499963760376
+      ],
+      "placed_max": [
+        6.045000076293945,
+        -3.9549999237060547,
+        7.58922004699707
+      ],
+      "editable_meshes": 7
+    },
+    {
+      "asset": "hall_sawtooth_gable",
+      "position": [
+        4,
+        4,
+        5.2
+      ],
+      "source_bounds_match_glb_metadata": true,
+      "placed_min": [
+        1.9779380559921265,
+        3.9225001335144043,
+        5.25499963760376
+      ],
+      "placed_max": [
+        6.045000076293945,
+        4.045000076293945,
+        7.58922004699707
+      ],
+      "editable_meshes": 7
+    }
+  ]
+}

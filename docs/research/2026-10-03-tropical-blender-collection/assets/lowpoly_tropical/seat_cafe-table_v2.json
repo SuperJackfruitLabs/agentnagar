@@ -1,0 +1,23 @@
+{
+  "name": "seat_cafe-table_v2",
+  "triangles": 972,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 25,
+  "bounds_min": [
+    -0.22,
+    -0.24058,
+    0.00199
+  ],
+  "bounds_max": [
+    0.22,
+    0.2135,
+    0.89674
+  ],
+  "notes": [
+    "Single caf\u00e9 chair despite the legacy filename.",
+    "Three thick seat boards, two broad back boards, splayed rear legs and a continuous charcoal frame.",
+    "Flat seat top 0.450 m; slim 35 mm legs with 35 x 34 mm back uprights; back boards mounted directly against frame."
+  ]
+}

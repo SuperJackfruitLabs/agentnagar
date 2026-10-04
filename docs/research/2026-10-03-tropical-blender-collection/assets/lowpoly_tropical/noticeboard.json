@@ -1,0 +1,36 @@
+{
+  "name": "noticeboard",
+  "triangles": 584,
+  "parts": [
+    "body",
+    "display"
+  ],
+  "editable_meshes": 14,
+  "bounds_min": [
+    -0.73,
+    -0.31865,
+    0.0
+  ],
+  "bounds_max": [
+    0.73,
+    0.31865,
+    2.48
+  ],
+  "notes": [
+    "Blank 1.19 x .92 m face, runtime display anchor centred, roof .63 m depth.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ],
+  "display_authoring": {
+    "position": [
+      0.0,
+      0.04100000113248825,
+      1.6699999570846558
+    ],
+    "scale": [
+      1.190000057220459,
+      0.9200000166893005,
+      1.0
+    ],
+    "rotation_x": 1.5707963705062866
+  }
+}

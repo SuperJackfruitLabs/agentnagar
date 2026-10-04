@@ -1,0 +1,23 @@
+{
+  "name": "pendant_lamp",
+  "triangles": 376,
+  "parts": [
+    "body",
+    "light"
+  ],
+  "editable_meshes": 4,
+  "bounds_min": [
+    -0.225,
+    -0.225,
+    0.0
+  ],
+  "bounds_max": [
+    0.225,
+    0.225,
+    1.2
+  ],
+  "notes": [
+    ".45 m diameter hollow shade; 1 m cord.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

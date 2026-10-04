@@ -1,0 +1,21 @@
+{
+  "name": "railing",
+  "triangles": 760,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 18,
+  "bounds_min": [
+    -1.0,
+    -0.14,
+    0.0
+  ],
+  "bounds_max": [
+    1.0,
+    0.14,
+    1.14
+  ],
+  "notes": [
+    "2m repeating panel, one -x pier only. 0.28m masonry depth matches sheet proportions; wider than original 0.14m kit spec. All mesh transforms baked for game MultiMesh."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "desk_v2",
+  "triangles": 3000,
+  "parts": [
+    "body",
+    "screen"
+  ],
+  "editable_meshes": 79,
+  "bounds_min": [
+    -0.65,
+    -0.249,
+    0.0
+  ],
+  "bounds_max": [
+    0.65,
+    0.949,
+    1.2
+  ],
+  "notes": [
+    "30 mm table steel; 25 mm stool steel. Ref desktop .75 m; complete seat+monitor assembly.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

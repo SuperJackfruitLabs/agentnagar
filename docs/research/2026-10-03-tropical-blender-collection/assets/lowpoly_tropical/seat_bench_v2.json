@@ -1,0 +1,23 @@
+{
+  "name": "seat_bench_v2",
+  "triangles": 1060,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 27,
+  "bounds_min": [
+    -0.8,
+    -0.33,
+    0.0
+  ],
+  "bounds_max": [
+    0.8,
+    0.2495,
+    0.85856
+  ],
+  "notes": [
+    "Original r001 bench silhouette: two broad seat boards, two back boards, timber arm blocks, continuous iron supports.",
+    "Seat surface 0.450 m; reference width 1.600 m; rearward back rake 7 degrees.",
+    "Slim 55 mm legs and 50 x 46 mm uprights; back boards meet uprights; rear structural crossrail retained."
+  ]
+}

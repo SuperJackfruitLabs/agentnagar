@@ -1,0 +1,21 @@
+{
+  "name": "hall_wall",
+  "triangles": 152,
+  "parts": [
+    "wall"
+  ],
+  "editable_meshes": 10,
+  "bounds_min": [
+    -2.0,
+    -0.1545,
+    0.0
+  ],
+  "bounds_max": [
+    2.0,
+    0.14,
+    5.2
+  ],
+  "notes": [
+    "Hall module authored for 4m bay and 5.2m wall; entrance has clear 2m by 3.2m opening."
+  ]
+}

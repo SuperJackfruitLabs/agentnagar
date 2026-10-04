@@ -1,0 +1,19 @@
+{
+  "name": "quay_wall",
+  "triangles": 388,
+  "parts": [
+    "wall"
+  ],
+  "editable_meshes": 27,
+  "bounds_min": [
+    -2.0,
+    -0.43,
+    -2.4
+  ],
+  "bounds_max": [
+    2.0075,
+    0.43,
+    0.13
+  ],
+  "notes": []
+}

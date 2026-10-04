@@ -1,0 +1,37 @@
+{
+  "name": "kiosk",
+  "triangles": 176,
+  "parts": [
+    "body",
+    "screen",
+    "display"
+  ],
+  "editable_meshes": 4,
+  "bounds_min": [
+    -0.4,
+    -0.25,
+    0.0
+  ],
+  "bounds_max": [
+    0.4,
+    0.25,
+    1.88
+  ],
+  "notes": [
+    "Blank .57 x 1.02 m screen, separately named screen and display nodes.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ],
+  "display_authoring": {
+    "position": [
+      0.0,
+      0.25,
+      1.1200000047683716
+    ],
+    "scale": [
+      0.5699999928474426,
+      1.0199999809265137,
+      1.0
+    ],
+    "rotation_x": 1.5707963705062866
+  }
+}

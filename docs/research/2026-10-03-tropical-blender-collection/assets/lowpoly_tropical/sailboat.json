@@ -1,0 +1,21 @@
+{
+  "name": "sailboat",
+  "triangles": 819,
+  "parts": [
+    "boat"
+  ],
+  "editable_meshes": 28,
+  "bounds_min": [
+    -0.95029,
+    -2.48143,
+    0.06
+  ],
+  "bounds_max": [
+    0.95029,
+    2.48031,
+    6.8
+  ],
+  "notes": [
+    "Original open hull, thwarts, mast, two faceted sails and rigging. Sail surfaces intentionally two-sided."
+  ]
+}

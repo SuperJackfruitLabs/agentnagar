@@ -1,0 +1,22 @@
+{
+  "name": "street_tile",
+  "triangles": 188,
+  "parts": [
+    "street"
+  ],
+  "editable_meshes": 5,
+  "bounds_min": [
+    -1.0,
+    -1.0,
+    -0.08
+  ],
+  "bounds_max": [
+    1.0,
+    1.0,
+    0.0
+  ],
+  "notes": [
+    "2x2m .08m thick; four limestone-grey slabs.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

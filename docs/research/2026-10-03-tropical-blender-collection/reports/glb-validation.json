@@ -1,0 +1,1686 @@
+[
+  {
+    "name": "bench_park.glb",
+    "bytes": 87148,
+    "triangles": 1060,
+    "nodes": [
+      "body",
+      "bench_park"
+    ],
+    "materials": [
+      "bench_park / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "861996cd72cf0a43f714aa4ca366547cf8b38ecb244c9f5f0bd1dcbea851da5f",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "bollard.glb",
+    "bytes": 10764,
+    "triangles": 140,
+    "nodes": [
+      "body",
+      "bollard"
+    ],
+    "materials": [
+      "bollard / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "58980e850ce5d87e7c551a6f10302b8df094dce946906d980c6dd5b5b109b4e2",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "bookshelf_v2.glb",
+    "bytes": 481164,
+    "triangles": 5676,
+    "nodes": [
+      "body",
+      "bookshelf_v2"
+    ],
+    "materials": [
+      "bookshelf_v2 / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "099761d0040f7a74b055201cd5e7d5015095aaa3921dbda3eddc580747776e16",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "bridge_pier.glb",
+    "bytes": 29896,
+    "triangles": 348,
+    "nodes": [
+      "pier",
+      "bridge_pier"
+    ],
+    "materials": [
+      "bridge_pier / pier vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "0fd728e0757a7c3b5306f5a05f71daff9f031b2f2099a48698f7ad4c89406172",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "bridge_span.glb",
+    "bytes": 232192,
+    "triangles": 3060,
+    "nodes": [
+      "span",
+      "bridge_span"
+    ],
+    "materials": [
+      "bridge_span / span vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "a86283f93bfa2493038e0de2dde97a0db1b2406881929f14864103992e77ed73",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "cafe.glb",
+    "bytes": 292464,
+    "triangles": 3492,
+    "nodes": [
+      "cafe.001",
+      "cafe"
+    ],
+    "materials": [
+      "cafe / cafe vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "6b8c4119e3b50bc329a16371ae940e6925fb059b80cc9a072970dfccfdeda4ef",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "cafe_table.glb",
+    "bytes": 163948,
+    "triangles": 2264,
+    "nodes": [
+      "body",
+      "cafe_table"
+    ],
+    "materials": [
+      "cafe_table / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "e86201b7b7c66ccec71c4d4222c532b415cd492b321262884e4ca0a3205dccbd",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "cafe_table_set.glb",
+    "bytes": 320780,
+    "triangles": 4208,
+    "nodes": [
+      "body",
+      "cafe_table_set"
+    ],
+    "materials": [
+      "cafe_table_set / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "297332aa8033e72a07ebf98a9d10d0c584fd49454779a5cdc56a17f21ffeef5c",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "character_human.glb",
+    "bytes": 432976,
+    "triangles": 3526,
+    "nodes": [
+      "head",
+      "neck",
+      "hand_l",
+      "forearm_l",
+      "upper_arm_l",
+      "hand_r",
+      "forearm_r",
+      "upper_arm_r",
+      "chest",
+      "spine",
+      "foot_l",
+      "shin_l",
+      "thigh_l",
+      "foot_r",
+      "shin_r",
+      "thigh_r",
+      "hips",
+      "backpack",
+      "bottom",
+      "details",
+      "hair_0",
+      "hair_1",
+      "hair_2",
+      "hair_3",
+      "hat_sun",
+      "rig_human",
+      "shoes",
+      "skin",
+      "top"
+    ],
+    "materials": [
+      "Terracotta canvas",
+      "Bag flap edge",
+      "Buckle brass",
+      "Olive twill",
+      "Pupil and smile",
+      "Warm eye whites",
+      "Brown iris",
+      "Dark warm hair",
+      "Honey straw",
+      "Hat band",
+      "Leather shoes",
+      "Shoe sole",
+      "Warm brown skin",
+      "Nose and ear warmth",
+      "Ivory linen",
+      "Linen shaded seam"
+    ],
+    "textures": 0,
+    "sha256": "ee023b2300790b6cfa4b41309bfe2499fd4362a7502f5260f717726b239b27c4",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "character_robot.glb",
+    "bytes": 346840,
+    "triangles": 2742,
+    "nodes": [
+      "head",
+      "neck",
+      "hand_l",
+      "forearm_l",
+      "upper_arm_l",
+      "hand_r",
+      "forearm_r",
+      "upper_arm_r",
+      "chest",
+      "spine",
+      "foot_l",
+      "shin_l",
+      "thigh_l",
+      "foot_r",
+      "shin_r",
+      "thigh_r",
+      "hips",
+      "badge",
+      "eyes",
+      "face",
+      "joint",
+      "panel",
+      "rig_robot",
+      "shell"
+    ],
+    "materials": [
+      "Golden leaf badge",
+      "Cream shell edge",
+      "Soft lime eye lamps",
+      "Dark face glass",
+      "Graphite joints",
+      "Civic olive panels",
+      "Warm ivory enamel"
+    ],
+    "textures": 0,
+    "sha256": "f3ff4ee8dff1b05800e41e012dcb731642ece3b3088b5a7c4056b42a666d2946",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "cloud_a.glb",
+    "bytes": 43308,
+    "triangles": 426,
+    "nodes": [
+      "cloud",
+      "cloud_a"
+    ],
+    "materials": [
+      "cloud_a / cloud vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "482ff3f20a0f13abbeb3deba0e023a017e352462cf105e1914db15f21353ce4b",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "cloud_b.glb",
+    "bytes": 30392,
+    "triangles": 290,
+    "nodes": [
+      "cloud",
+      "cloud_b"
+    ],
+    "materials": [
+      "cloud_b / cloud vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "fdcf614defeab54e971b9630de41e58d2650563d987977fd6b881a4ec326fea8",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "desk_v2.glb",
+    "bytes": 257016,
+    "triangles": 3000,
+    "nodes": [
+      "body",
+      "screen",
+      "desk_v2"
+    ],
+    "materials": [
+      "desk_v2 / body vertex palette",
+      "desk_v2 / screen vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "6d6a94223547b6bd97147e8d0f62d2aae054fa81c06f3fd8c1fb04616edb2673",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "flowerbed.glb",
+    "bytes": 278608,
+    "triangles": 2692,
+    "nodes": [
+      "body",
+      "flowerbed"
+    ],
+    "materials": [
+      "flowerbed / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "359087cf44ffbdf901b1cd0256e40b6a17f678440c92dc0dba208055b53fe270",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "fountain.glb",
+    "bytes": 376012,
+    "triangles": 4132,
+    "nodes": [
+      "body",
+      "water",
+      "fountain"
+    ],
+    "materials": [
+      "fountain / body vertex palette",
+      "Turquoise drawn water 0",
+      "Turquoise drawn water 1",
+      "Turquoise drawn water 2",
+      "Turquoise drawn water 3",
+      "Pale moving water"
+    ],
+    "textures": 0,
+    "sha256": "910ddfda6774e1ed5c248b3fe0aa82d61f267b1ef181cb5e56aa8a121c4f2528",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "hall_corner.glb",
+    "bytes": 5008,
+    "triangles": 44,
+    "nodes": [
+      "pier",
+      "hall_corner"
+    ],
+    "materials": [
+      "hall_corner / pier vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "068943186abdb5ed0ad9bc8adee4295d9192ad54ba7ece900f4beeab5d0f866f",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "hall_door_leaves.glb",
+    "bytes": 10612,
+    "triangles": 116,
+    "nodes": [
+      "leaves",
+      "hall_door_leaves"
+    ],
+    "materials": [
+      "hall_door_leaves / leaves vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "30cc2b72a7144c365bc46bc24ed2714d484dc75e44a3d502fda2b597d5d1b148",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "hall_door_wall.glb",
+    "bytes": 19324,
+    "triangles": 220,
+    "nodes": [
+      "wall",
+      "hall_door_wall"
+    ],
+    "materials": [
+      "hall_door_wall / wall vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "4650f00d68f8fb42a034eb85907bb3f717742902c8f51545315c14074dc2a0f2",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "hall_sawtooth_bay.glb",
+    "bytes": 24480,
+    "triangles": 306,
+    "nodes": [
+      "roof",
+      "hall_sawtooth_bay"
+    ],
+    "materials": [
+      "hall_sawtooth_bay / roof vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "42d2c5e7250ae8c6aa08e353135dba91f9a641c866eafa0e649c9e0d15ba64eb",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "hall_sawtooth_gable.glb",
+    "bytes": 10532,
+    "triangles": 128,
+    "nodes": [
+      "gable",
+      "hall_sawtooth_gable"
+    ],
+    "materials": [
+      "hall_sawtooth_gable / gable vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "b8ee82a9e75f664dbc2d9fb9fbcd6ecdc31bb8ad020c4bb8727d519a1e0bcadf",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "hall_wall.glb",
+    "bytes": 13400,
+    "triangles": 152,
+    "nodes": [
+      "wall",
+      "hall_wall"
+    ],
+    "materials": [
+      "hall_wall / wall vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "5bae90c454ab4f45c13b1359ec439a12cae91f135b8bf68a046aa90b4a1aab01",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "hall_window_wall.glb",
+    "bytes": 34024,
+    "triangles": 416,
+    "nodes": [
+      "wall",
+      "hall_window_wall"
+    ],
+    "materials": [
+      "hall_window_wall / wall vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "edcb7d9d1cb38ee83b5408bddf1cb0bb7869723f2ad8969b3ba2db58d8223b9b",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "house_a.glb",
+    "bytes": 525656,
+    "triangles": 6356,
+    "nodes": [
+      "house",
+      "house_a"
+    ],
+    "materials": [
+      "house_a / house vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "5a885497f4a6ac257435c84d8695694df79a16069eca444aa483cc3d80a51de6",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "house_b.glb",
+    "bytes": 547136,
+    "triangles": 6624,
+    "nodes": [
+      "house",
+      "house_b"
+    ],
+    "materials": [
+      "house_b / house vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "3e2e7beccdf628f5f0e63488f61ecf9612749b61ac8ec4027b2e36501f278da4",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "house_c.glb",
+    "bytes": 530456,
+    "triangles": 6424,
+    "nodes": [
+      "house",
+      "house_c"
+    ],
+    "materials": [
+      "house_c / house vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "93bf7d65a9f693db7c6f1d9d64116cff627c33e4129a67de2ae00545e56e68aa",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "kiosk.glb",
+    "bytes": 16140,
+    "triangles": 176,
+    "nodes": [
+      "body",
+      "display",
+      "screen",
+      "kiosk"
+    ],
+    "materials": [
+      "kiosk / body vertex palette",
+      "kiosk / screen vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "820d72ce5ceaefa7368a10a14c04f1873b6f97ff475cbad0935d5895d7931a33",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 1,
+    "messages": [
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/1"
+      }
+    ]
+  },
+  {
+    "name": "lamp_post.glb",
+    "bytes": 60556,
+    "triangles": 696,
+    "nodes": [
+      "body",
+      "light",
+      "lamp_post"
+    ],
+    "materials": [
+      "lamp_post / body vertex palette",
+      "lamp_glow"
+    ],
+    "textures": 0,
+    "sha256": "0bb653696117bd54eb299572652cafc823cdeb2b16348c9b934147d8bf857679",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "lib_banner.glb",
+    "bytes": 8128,
+    "triangles": 92,
+    "nodes": [
+      "banner",
+      "lib_banner"
+    ],
+    "materials": [
+      "lib_banner / banner vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "855addb1239f6e96f74bee1d224a9206b01f09714a6ff47aa0554cbb889c2050",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "lib_column.glb",
+    "bytes": 19268,
+    "triangles": 264,
+    "nodes": [
+      "column",
+      "lib_column"
+    ],
+    "materials": [
+      "lib_column / column vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "dd48595021ca1b2b0cc185a6e3dad3564e9f4b9753004c8c39f74ab5c49e1566",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "lib_dome.glb",
+    "bytes": 424356,
+    "triangles": 5802,
+    "nodes": [
+      "dome",
+      "lib_dome"
+    ],
+    "materials": [
+      "lib_dome / dome vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "aaf65b5c578a4350cf02dc763b162e66870c298075f5a7806cd6d5aa68a57ad8",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "lib_door_leaves.glb",
+    "bytes": 10612,
+    "triangles": 116,
+    "nodes": [
+      "leaves",
+      "lib_door_leaves"
+    ],
+    "materials": [
+      "lib_door_leaves / leaves vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "392d6ca7a140df13044a27dd129edc069281372f97fd7f9bdbff40528f692b84",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "lib_entrance.glb",
+    "bytes": 51600,
+    "triangles": 644,
+    "nodes": [
+      "entrance",
+      "lib_entrance"
+    ],
+    "materials": [
+      "lib_entrance / entrance vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "e5712b673a3c804d0b315b7afe4a126d0a58e8beba4c144a62a71ac9bbf749e4",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "lib_wall_arch.glb",
+    "bytes": 60008,
+    "triangles": 756,
+    "nodes": [
+      "wall",
+      "lib_wall_arch"
+    ],
+    "materials": [
+      "lib_wall_arch / wall vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "64220a2441c459922fa9c5b6b313eb81278d944ac5503ae616ccfaba640d50fb",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "low_wall.glb",
+    "bytes": 16140,
+    "triangles": 176,
+    "nodes": [
+      "body",
+      "low_wall"
+    ],
+    "materials": [
+      "low_wall / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "d2e1d23f9840eed11632827ff29f92c01398d464cd45984523bb49dc34d19ec5",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "meadow_flowers.glb",
+    "bytes": 70564,
+    "triangles": 640,
+    "nodes": [
+      "body",
+      "meadow_flowers"
+    ],
+    "materials": [
+      "meadow_flowers / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "fc25d9fc88e2638535b8a234e60a716e47ae24e42fa706374754915c683f2640",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "meadow_grass.glb",
+    "bytes": 8352,
+    "triangles": 64,
+    "nodes": [
+      "body",
+      "meadow_grass"
+    ],
+    "materials": [
+      "meadow_grass / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "66f59e18b3aa7e315ca5b052f9924d75236722e7dbd9665e7cfcbb782974e56e",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "noticeboard.glb",
+    "bytes": 50780,
+    "triangles": 584,
+    "nodes": [
+      "body",
+      "display",
+      "noticeboard"
+    ],
+    "materials": [
+      "noticeboard / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "eba9fe3174da86ecc633c17a244dda2cea6035c9d408558ef8b32c72c60d6321",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 1,
+    "messages": [
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/1"
+      }
+    ]
+  },
+  {
+    "name": "palm_a.glb",
+    "bytes": 235672,
+    "triangles": 2610,
+    "nodes": [
+      "body",
+      "palm_a"
+    ],
+    "materials": [
+      "palm_a / body vertex palette",
+      "Foliage forest.004",
+      "Foliage middle.004",
+      "Foliage sun.004"
+    ],
+    "textures": 0,
+    "sha256": "93af10e7c3dce01d8279f8f0456e77b87f14bee365baaf7d388c9395f6e41006",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "palm_a_far.glb",
+    "bytes": 78172,
+    "triangles": 748,
+    "nodes": [
+      "body",
+      "palm_a_far"
+    ],
+    "materials": [
+      "palm_a_far / body vertex palette",
+      "Foliage forest.005",
+      "Foliage middle.005",
+      "Foliage sun.005"
+    ],
+    "textures": 0,
+    "sha256": "cfee46f429b2f91dd0046396dd2fd904ae7fe6351414c4613d779624e51ec2ea",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "palm_b.glb",
+    "bytes": 235676,
+    "triangles": 2610,
+    "nodes": [
+      "body",
+      "palm_b"
+    ],
+    "materials": [
+      "palm_b / body vertex palette",
+      "Foliage forest.006",
+      "Foliage middle.006",
+      "Foliage sun.006"
+    ],
+    "textures": 0,
+    "sha256": "f6ad8c6bfdfb736f99a98330ed5762ea9d65cc2b2d40fcda4fa741a940ad1a99",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "palm_b_far.glb",
+    "bytes": 78176,
+    "triangles": 748,
+    "nodes": [
+      "body",
+      "palm_b_far"
+    ],
+    "materials": [
+      "palm_b_far / body vertex palette",
+      "Foliage forest.007",
+      "Foliage middle.007",
+      "Foliage sun.007"
+    ],
+    "textures": 0,
+    "sha256": "c7a00e6fffc3d2c08343afe970f56e094ac4bc1f316b45969e1f91fdbd4e6f49",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "palm_c.glb",
+    "bytes": 235688,
+    "triangles": 2610,
+    "nodes": [
+      "body",
+      "palm_c"
+    ],
+    "materials": [
+      "palm_c / body vertex palette",
+      "Foliage forest.008",
+      "Foliage middle.008",
+      "Foliage sun.008"
+    ],
+    "textures": 0,
+    "sha256": "d06095925512c0a60adf8939e6e0724f132a7fe93a49561533b476f257b31140",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "palm_c_far.glb",
+    "bytes": 78172,
+    "triangles": 748,
+    "nodes": [
+      "body",
+      "palm_c_far"
+    ],
+    "materials": [
+      "palm_c_far / body vertex palette",
+      "Foliage forest.009",
+      "Foliage middle.009",
+      "Foliage sun.009"
+    ],
+    "textures": 0,
+    "sha256": "575c35739e1c57b4ad4e8a71d7af758e9bba1ce374c6b35763707dd612d314bf",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "path.glb",
+    "bytes": 8156,
+    "triangles": 72,
+    "nodes": [
+      "path.001",
+      "path"
+    ],
+    "materials": [
+      "path / path vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "d2d8467ba0d2697c639fb55d0e0909fd09151b3d836640cd0e4a28e5869c593f",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "paving_tile_a.glb",
+    "bytes": 17076,
+    "triangles": 188,
+    "nodes": [
+      "paving_tile_a.001",
+      "paving_tile_a"
+    ],
+    "materials": [
+      "paving_tile_a / paving_tile_a vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "58b6bbc8ae4bca9de47d60dcbea947b8a2d439de0571284b87ae038e1c71ebff",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "paving_tile_b.glb",
+    "bytes": 24520,
+    "triangles": 276,
+    "nodes": [
+      "paving_tile_b.001",
+      "paving_tile_b"
+    ],
+    "materials": [
+      "paving_tile_b / paving_tile_b vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "be0ab3fef189eba0b196ddf191d6e63c97d994f6aa5e9ca77eedca42f9833a3c",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "paving_tile_c.glb",
+    "bytes": 17076,
+    "triangles": 188,
+    "nodes": [
+      "paving_tile_c.001",
+      "paving_tile_c"
+    ],
+    "materials": [
+      "paving_tile_c / paving_tile_c vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "0042033cc507dd730c4cfff873dc1f53d1dd1104037a450b12432cf2b9b0b607",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "pegboard.glb",
+    "bytes": 536140,
+    "triangles": 7640,
+    "nodes": [
+      "body",
+      "pegboard"
+    ],
+    "materials": [
+      "pegboard / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "7f35db51efb62142c350162441847ce5dd40215bfac3206f0c239e38ef5495cd",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "pendant_lamp.glb",
+    "bytes": 32808,
+    "triangles": 376,
+    "nodes": [
+      "body",
+      "light",
+      "pendant_lamp"
+    ],
+    "materials": [
+      "pendant_lamp / body vertex palette",
+      "Warm pendant bulb"
+    ],
+    "textures": 0,
+    "sha256": "d38afbb7ab09f064611e6d28f06045a0ddb6d8f96c28a4b8d26e839fdcb84285",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "perch_seat.glb",
+    "bytes": 11540,
+    "triangles": 124,
+    "nodes": [
+      "body",
+      "perch_seat"
+    ],
+    "materials": [
+      "perch_seat / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "475391bbd28b5e75609cacc3c2d816676c97c7222c1a3014dbfcb3aaa1d4254c",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "planter_pot.glb",
+    "bytes": 75664,
+    "triangles": 756,
+    "nodes": [
+      "body",
+      "planter_pot"
+    ],
+    "materials": [
+      "planter_pot / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "7283cb407cfcb098ed4dcc10e3c8af8ad79b6c2f10e515508eebafe7b90d820a",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "planter_square.glb",
+    "bytes": 347012,
+    "triangles": 3184,
+    "nodes": [
+      "body",
+      "planter_square"
+    ],
+    "materials": [
+      "planter_square / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "34f835e1826574db323079163ed8d56659f9aa7bb9a130316417e63fa3847b61",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "plaque.glb",
+    "bytes": 16336,
+    "triangles": 176,
+    "nodes": [
+      "body",
+      "display",
+      "plaque"
+    ],
+    "materials": [
+      "plaque / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "6392dcab614926565b755284166eba3276ee138cae43a509a0b9cdae3138f615",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 1,
+    "messages": [
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/1"
+      }
+    ]
+  },
+  {
+    "name": "quay_wall.glb",
+    "bytes": 32132,
+    "triangles": 388,
+    "nodes": [
+      "wall",
+      "quay_wall"
+    ],
+    "materials": [
+      "quay_wall / wall vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "bd9e55bb4a5c2aa6880d85b84d3931d5dfe77e3c5239b807f8ca06119cec36ab",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "railing.glb",
+    "bytes": 65436,
+    "triangles": 760,
+    "nodes": [
+      "body",
+      "railing"
+    ],
+    "materials": [
+      "railing / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "07c7597786bc1c87ef8ac4202e4558c7262c23cfdda3e372c123370ff8ee3803",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "railing_post.glb",
+    "bytes": 20836,
+    "triangles": 232,
+    "nodes": [
+      "body",
+      "railing_post"
+    ],
+    "materials": [
+      "railing_post / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "84a67dec057023dcf8d37fc2d98ca277f9acc82a0d41af217aed013f373f7c36",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "reading_chair_v2.glb",
+    "bytes": 105620,
+    "triangles": 1100,
+    "nodes": [
+      "body",
+      "reading_chair_v2"
+    ],
+    "materials": [
+      "reading_chair_v2 / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "a4079cd271c6db74f31bfe0da862d2a1fd6bb76ffda8a1a819c88b970941eecf",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "sailboat.glb",
+    "bytes": 64676,
+    "triangles": 819,
+    "nodes": [
+      "boat",
+      "sailboat"
+    ],
+    "materials": [
+      "sailboat / boat vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "5668c29ba102ee151e04c92f64b7056f5265174ddf92a694de014da019199665",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "seat_bench_v2.glb",
+    "bytes": 87156,
+    "triangles": 1060,
+    "nodes": [
+      "body",
+      "seat_bench_v2"
+    ],
+    "materials": [
+      "seat_bench_v2 / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "374b6b61ced620e2db3a6d99ef575f0c6593cf54896ad2eaa0fd52e6f3e22a31",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "seat_cafe-table_v2.glb",
+    "bytes": 79744,
+    "triangles": 972,
+    "nodes": [
+      "body",
+      "seat_cafe-table_v2"
+    ],
+    "materials": [
+      "seat_cafe-table_v2 / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "b46281f38a49ee03bff2cb0c8b6bb981db3e4a719723213a1cbedc47bbf2cd2f",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "seat_desk_v2.glb",
+    "bytes": 257032,
+    "triangles": 3000,
+    "nodes": [
+      "body",
+      "screen",
+      "seat_desk_v2"
+    ],
+    "materials": [
+      "seat_desk_v2 / body vertex palette",
+      "seat_desk_v2 / screen vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "ca4a7feb4a2fd96f43f6202d9c0800f59e6c5f49ead98af1a26052a12c7f11c2",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "seat_reading-chair_v2.glb",
+    "bytes": 127488,
+    "triangles": 1100,
+    "nodes": [
+      "body",
+      "seat_reading-chair_v2"
+    ],
+    "materials": [
+      "Timber, linen and leaf / vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "99b1a55981303b935f821f1c427cb63fcd1e77e1db6eb99469ac032f46e7c68d",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 1,
+    "messages": [
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+      }
+    ]
+  },
+  {
+    "name": "shop_a.glb",
+    "bytes": 266800,
+    "triangles": 3248,
+    "nodes": [
+      "shop",
+      "shop_a"
+    ],
+    "materials": [
+      "shop_a / shop vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "9c48ad21e1140680b45ee7073849e35e471f29df501ddf1e34f2a2667a9df6c3",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "shrub_leafy.glb",
+    "bytes": 220644,
+    "triangles": 2040,
+    "nodes": [
+      "body",
+      "shrub_leafy"
+    ],
+    "materials": [
+      "shrub_leafy / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "1f3db3c7f29e870b3d7717edabbbcb5f31a67d9f17d14c1bc139d815cc1fca9c",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "shrub_round.glb",
+    "bytes": 202188,
+    "triangles": 1880,
+    "nodes": [
+      "body",
+      "shrub_round"
+    ],
+    "materials": [
+      "shrub_round / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "837da992ccbe0afb9c76fe35ddaa6c8e171db26a9e05c2b768c7da25147e2649",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "steps.glb",
+    "bytes": 12380,
+    "triangles": 132,
+    "nodes": [
+      "body",
+      "steps"
+    ],
+    "materials": [
+      "steps / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "c620e455f7585e7ce946fdccd654c5ab84ca8f4192bba33c0d9dff250e739b18",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "street_kerb.glb",
+    "bytes": 4996,
+    "triangles": 44,
+    "nodes": [
+      "kerb",
+      "street_kerb"
+    ],
+    "materials": [
+      "street_kerb / kerb vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "9b81663647ae8dd120e7940f94f4dca5eda9d5b089176451b3f8216808ac8821",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "street_tile.glb",
+    "bytes": 17048,
+    "triangles": 188,
+    "nodes": [
+      "street",
+      "street_tile"
+    ],
+    "materials": [
+      "street_tile / street vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "5c1adf7c0cdc29947f6193841e7bcb3cdda73d41ace5cec1d4f683c586bdb744",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tower_a.glb",
+    "bytes": 1894344,
+    "triangles": 22274,
+    "nodes": [
+      "tower",
+      "tower_a"
+    ],
+    "materials": [
+      "tower_a / tower vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "fae7ea19931bbddf2200b8ed7c646dbc63119b1d0aa8c0be142bc083a49447fc",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tower_b.glb",
+    "bytes": 1893108,
+    "triangles": 22260,
+    "nodes": [
+      "tower",
+      "tower_b"
+    ],
+    "materials": [
+      "tower_b / tower vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "58138405d6d30931a859ce38e2791edb257af8e950dcd40209047089b1a1eb8e",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tram.glb",
+    "bytes": 1503020,
+    "triangles": 18300,
+    "nodes": [
+      "body",
+      "door_left_0_aft",
+      "door_left_0_fore",
+      "door_left_1_aft",
+      "door_left_1_fore",
+      "door_left_2_aft",
+      "door_left_2_fore",
+      "door_right_0_aft",
+      "door_right_0_fore",
+      "door_right_1_aft",
+      "door_right_1_fore",
+      "door_right_2_aft",
+      "door_right_2_fore",
+      "interior",
+      "lights",
+      "roof",
+      "tram"
+    ],
+    "materials": [
+      "tram / body vertex palette",
+      "glass_tram",
+      "lamp_glow",
+      "tram / door_left_0_aft vertex palette",
+      "tram / door_left_0_fore vertex palette",
+      "tram / door_left_1_aft vertex palette",
+      "tram / door_left_1_fore vertex palette",
+      "tram / door_left_2_aft vertex palette",
+      "tram / door_left_2_fore vertex palette",
+      "tram / door_right_0_aft vertex palette",
+      "tram / door_right_0_fore vertex palette",
+      "tram / door_right_1_aft vertex palette",
+      "tram / door_right_1_fore vertex palette",
+      "tram / door_right_2_aft vertex palette",
+      "tram / door_right_2_fore vertex palette",
+      "tram / interior vertex palette",
+      "tram / roof vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "322d2491845231306c93225049741eab05db2b5e687ac54a3e6a01b0ed39da65",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tram_shelter.glb",
+    "bytes": 266452,
+    "triangles": 3128,
+    "nodes": [
+      "shelter",
+      "tram_shelter"
+    ],
+    "materials": [
+      "tram_shelter / shelter vertex palette",
+      "glass_light"
+    ],
+    "textures": 0,
+    "sha256": "df6d79e5440e6414b5b38d32b43214af42426f81a55f6e0be2dc84382590a45f",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tram_track.glb",
+    "bytes": 29196,
+    "triangles": 336,
+    "nodes": [
+      "track",
+      "tram_track"
+    ],
+    "materials": [
+      "tram_track / track vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "b0ec7bae8660cc6d8e58179606d4edb4cabb54a93c5bae06a884414ddcdef026",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tree_banyan.glb",
+    "bytes": 651472,
+    "triangles": 6476,
+    "nodes": [
+      "body",
+      "canopy",
+      "lanterns",
+      "tree_banyan"
+    ],
+    "materials": [
+      "tree_banyan / body vertex palette",
+      "Foliage middle.010",
+      "Foliage sun.010",
+      "tree_banyan / canopy vertex palette",
+      "Foliage deep olive.010",
+      "Foliage forest.010",
+      "Foliage lime tips.010",
+      "tree_banyan / lanterns vertex palette",
+      "Lantern warm emissive"
+    ],
+    "textures": 0,
+    "sha256": "5f23d53ac011a9adf3f9f673b9b5422ab3ced47e92cd3da4822a8e676773ecac",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tree_round_a.glb",
+    "bytes": 312868,
+    "triangles": 2910,
+    "nodes": [
+      "body",
+      "tree_round_a"
+    ],
+    "materials": [
+      "tree_round_a / body vertex palette",
+      "Foliage deep olive",
+      "Foliage forest",
+      "Foliage middle",
+      "Foliage sun"
+    ],
+    "textures": 0,
+    "sha256": "1a399b95c4705f2214ba3cef88a621661cd3836247e9331562406b763e1d6114",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tree_round_a_far.glb",
+    "bytes": 47628,
+    "triangles": 470,
+    "nodes": [
+      "body",
+      "tree_round_a_far"
+    ],
+    "materials": [
+      "tree_round_a_far / body vertex palette",
+      "Foliage deep olive.001",
+      "Foliage forest.001",
+      "Foliage middle.001",
+      "Foliage sun.001"
+    ],
+    "textures": 0,
+    "sha256": "0579bcd587ab06fc6ac58d1ab004e04baa31546a82bd71c16fabb7fed8018e3a",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tree_round_b.glb",
+    "bytes": 312884,
+    "triangles": 2910,
+    "nodes": [
+      "body",
+      "tree_round_b"
+    ],
+    "materials": [
+      "tree_round_b / body vertex palette",
+      "Foliage deep olive.002",
+      "Foliage forest.002",
+      "Foliage middle.002",
+      "Foliage sun.002"
+    ],
+    "textures": 0,
+    "sha256": "d0992f25c841ca6b226462d178263c827c48967ef906324ed06baff9545cd01f",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "tree_round_b_far.glb",
+    "bytes": 47632,
+    "triangles": 470,
+    "nodes": [
+      "body",
+      "tree_round_b_far"
+    ],
+    "materials": [
+      "tree_round_b_far / body vertex palette",
+      "Foliage deep olive.003",
+      "Foliage forest.003",
+      "Foliage middle.003",
+      "Foliage sun.003"
+    ],
+    "textures": 0,
+    "sha256": "650e7cf2b50174cce9ff60f903d50957d931cdde376cd09e1c82755828e44c49",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "umbrella_yellow.glb",
+    "bytes": 182992,
+    "triangles": 2368,
+    "nodes": [
+      "body",
+      "umbrella_yellow"
+    ],
+    "materials": [
+      "umbrella_yellow / body vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "ee67716f3ddf14e7d17e96553df93f1de548573839175798e6e32ca57e60cfdc",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "water_tile.glb",
+    "bytes": 28512,
+    "triangles": 212,
+    "nodes": [
+      "water",
+      "water_tile"
+    ],
+    "materials": [
+      "Lagoon turquoise",
+      "Lagoon pale",
+      "Lagoon teal",
+      "Lagoon highlight"
+    ],
+    "textures": 0,
+    "sha256": "915655c9da2335f68cfb37fc0635a822eee06dfbfc6ee5ef59846f7f5d835943",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "workbench.glb",
+    "bytes": 238448,
+    "triangles": 2784,
+    "nodes": [
+      "body",
+      "screen",
+      "workbench"
+    ],
+    "materials": [
+      "workbench / body vertex palette",
+      "workbench / screen vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "cde49163a6cadd1bd1d7f268f6ab43e08353f3aa8269d4c4001923b13d092ab3",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  {
+    "name": "workstation.glb",
+    "bytes": 257232,
+    "triangles": 3000,
+    "nodes": [
+      "body",
+      "display",
+      "screen",
+      "workstation"
+    ],
+    "materials": [
+      "workstation / body vertex palette",
+      "workstation / screen vertex palette"
+    ],
+    "textures": 0,
+    "sha256": "2b57f74f4772d0850c3c177317b1669435875ce35314e3d73b63c0fe577a0a43",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 1,
+    "messages": [
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/1"
+      }
+    ]
+  }
+]

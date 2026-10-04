@@ -1,0 +1,592 @@
+[
+  {
+    "name": "desk_v2",
+    "triangles": 3000,
+    "parts": [
+      "body",
+      "screen"
+    ],
+    "editable_meshes": 79,
+    "bounds_min": [
+      -0.65,
+      -0.249,
+      0.0
+    ],
+    "bounds_max": [
+      0.65,
+      0.949,
+      1.2
+    ],
+    "notes": [
+      "30 mm table steel; 25 mm stool steel. Ref desktop .75 m; complete seat+monitor assembly.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "seat_desk_v2",
+    "triangles": 3000,
+    "parts": [
+      "body",
+      "screen"
+    ],
+    "editable_meshes": 79,
+    "bounds_min": [
+      -0.65,
+      -0.249,
+      0.0
+    ],
+    "bounds_max": [
+      0.65,
+      0.949,
+      1.2
+    ],
+    "notes": [
+      "30 mm table steel; 25 mm stool steel. Ref desktop .75 m; complete seat+monitor assembly.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "workstation",
+    "triangles": 3000,
+    "parts": [
+      "body",
+      "screen",
+      "display"
+    ],
+    "editable_meshes": 79,
+    "bounds_min": [
+      -0.65,
+      -0.249,
+      0.0
+    ],
+    "bounds_max": [
+      0.65,
+      0.949,
+      1.2
+    ],
+    "notes": [
+      "30 mm table steel; 25 mm stool steel. Ref desktop .75 m; complete seat+monitor assembly.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ],
+    "display_authoring": {
+      "position": [
+        0.0,
+        0.8259999752044678,
+        1.037500023841858
+      ],
+      "scale": [
+        0.4699999988079071,
+        0.2849999964237213,
+        1.0
+      ],
+      "rotation_x": 1.5707963705062866
+    }
+  },
+  {
+    "name": "workbench",
+    "triangles": 2784,
+    "parts": [
+      "body",
+      "screen"
+    ],
+    "editable_meshes": 77,
+    "bounds_min": [
+      -1.6,
+      -0.499,
+      0.0
+    ],
+    "bounds_max": [
+      1.6,
+      0.499,
+      1.3
+    ],
+    "notes": [
+      "50 mm steel maximum, .90 m work surface. Detachable monitor retains required screen node.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "bookshelf_v2",
+    "triangles": 5676,
+    "parts": [
+      "body"
+    ],
+    "editable_meshes": 129,
+    "bounds_min": [
+      -1.0,
+      -0.225,
+      0.0
+    ],
+    "bounds_max": [
+      1.0,
+      0.225,
+      2.6
+    ],
+    "notes": [
+      "2 x 2.6 x .45 m; five filled shelves, open negative-space bays.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "pegboard",
+    "triangles": 7640,
+    "parts": [
+      "body"
+    ],
+    "editable_meshes": 262,
+    "bounds_min": [
+      -1.0,
+      -0.0175,
+      0.0
+    ],
+    "bounds_max": [
+      1.0,
+      0.155,
+      1.2
+    ],
+    "notes": [
+      "2 x 1.2 m; original screwdriver, hammer, spanners, level, trays; face holes are shallow dark geometry.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "pendant_lamp",
+    "triangles": 376,
+    "parts": [
+      "body",
+      "light"
+    ],
+    "editable_meshes": 4,
+    "bounds_min": [
+      -0.225,
+      -0.225,
+      0.0
+    ],
+    "bounds_max": [
+      0.225,
+      0.225,
+      1.2
+    ],
+    "notes": [
+      ".45 m diameter hollow shade; 1 m cord.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "noticeboard",
+    "triangles": 584,
+    "parts": [
+      "body",
+      "display"
+    ],
+    "editable_meshes": 14,
+    "bounds_min": [
+      -0.73,
+      -0.31865,
+      0.0
+    ],
+    "bounds_max": [
+      0.73,
+      0.31865,
+      2.48
+    ],
+    "notes": [
+      "Blank 1.19 x .92 m face, runtime display anchor centred, roof .63 m depth.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ],
+    "display_authoring": {
+      "position": [
+        0.0,
+        0.04100000113248825,
+        1.6699999570846558
+      ],
+      "scale": [
+        1.190000057220459,
+        0.9200000166893005,
+        1.0
+      ],
+      "rotation_x": 1.5707963705062866
+    }
+  },
+  {
+    "name": "plaque",
+    "triangles": 176,
+    "parts": [
+      "body",
+      "display"
+    ],
+    "editable_meshes": 4,
+    "bounds_min": [
+      -0.3,
+      -0.15,
+      0.0
+    ],
+    "bounds_max": [
+      0.3,
+      0.15,
+      1.23988
+    ],
+    "notes": [
+      "Blank brass-rimmed sloping face; anchor normal and scale follow tilt.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ],
+    "display_authoring": {
+      "position": [
+        0.0,
+        0.04100000113248825,
+        1.1019999980926514
+      ],
+      "scale": [
+        0.5,
+        0.25999999046325684,
+        1.0
+      ],
+      "rotation_x": 1.920796275138855
+    }
+  },
+  {
+    "name": "kiosk",
+    "triangles": 176,
+    "parts": [
+      "body",
+      "screen",
+      "display"
+    ],
+    "editable_meshes": 4,
+    "bounds_min": [
+      -0.4,
+      -0.25,
+      0.0
+    ],
+    "bounds_max": [
+      0.4,
+      0.25,
+      1.88
+    ],
+    "notes": [
+      "Blank .57 x 1.02 m screen, separately named screen and display nodes.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ],
+    "display_authoring": {
+      "position": [
+        0.0,
+        0.25,
+        1.1200000047683716
+      ],
+      "scale": [
+        0.5699999928474426,
+        1.0199999809265137,
+        1.0
+      ],
+      "rotation_x": 1.5707963705062866
+    }
+  },
+  {
+    "name": "steps",
+    "triangles": 132,
+    "parts": [
+      "body"
+    ],
+    "editable_meshes": 3,
+    "bounds_min": [
+      -1.5,
+      -0.5,
+      0.0
+    ],
+    "bounds_max": [
+      1.5,
+      0.5,
+      0.45
+    ],
+    "notes": [
+      "Three visible treads .26/.355/.45 m: lowest above .25 m walking band, width3 depth1 height.45. Runtime footprint retained; no hidden solids.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "low_wall",
+    "triangles": 176,
+    "parts": [
+      "body"
+    ],
+    "editable_meshes": 4,
+    "bounds_min": [
+      -1.5,
+      -0.15,
+      0.0
+    ],
+    "bounds_max": [
+      1.5,
+      0.15,
+      0.45
+    ],
+    "notes": [
+      "3 x .3 x .45 m; three restrained limestone coping joints.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "perch_seat",
+    "triangles": 124,
+    "parts": [
+      "body"
+    ],
+    "editable_meshes": 5,
+    "bounds_min": [
+      -0.15,
+      -0.4,
+      0.0
+    ],
+    "bounds_max": [
+      0.15,
+      0.15,
+      0.46
+    ],
+    "notes": [
+      "Exactly .30 x .55 x .46 m. Solid block from ground; no legs or underside gap.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "meadow_grass",
+    "triangles": 64,
+    "parts": [
+      "body"
+    ],
+    "editable_meshes": 16,
+    "bounds_min": [
+      -0.11013,
+      -0.13602,
+      0.0
+    ],
+    "bounds_max": [
+      0.14081,
+      0.11214,
+      0.88
+    ],
+    "notes": [
+      "Original folded triangular tapered blades, rooted at zero; .88 m tallest target.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "meadow_flowers",
+    "triangles": 640,
+    "parts": [
+      "body"
+    ],
+    "editable_meshes": 48,
+    "bounds_min": [
+      -0.145,
+      -0.11182,
+      0.0
+    ],
+    "bounds_max": [
+      0.125,
+      0.07726,
+      0.905
+    ],
+    "notes": [
+      "Ivory five-petal blossoms on individual stems amid folded grass.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "planter_pot",
+    "triangles": 756,
+    "parts": [
+      "body"
+    ],
+    "editable_meshes": 52,
+    "bounds_min": [
+      -0.4,
+      -0.4,
+      0.0
+    ],
+    "bounds_max": [
+      0.4,
+      0.4,
+      1.1
+    ],
+    "notes": [
+      "Hollow limestone pot .8 m wide; foliage reaches1.1 m; recessed soil and cream blossoms.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "paving_tile_a",
+    "triangles": 188,
+    "parts": [
+      "paving_tile_a.001"
+    ],
+    "editable_meshes": 5,
+    "bounds_min": [
+      -0.5,
+      -0.5,
+      -0.06
+    ],
+    "bounds_max": [
+      0.5,
+      0.5,
+      0.0
+    ],
+    "notes": [
+      "1m module; top zero; .06m thickness; visible 2mm joints.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "paving_tile_b",
+    "triangles": 276,
+    "parts": [
+      "paving_tile_b.001"
+    ],
+    "editable_meshes": 7,
+    "bounds_min": [
+      -0.5,
+      -0.5,
+      -0.06
+    ],
+    "bounds_max": [
+      0.5,
+      0.5,
+      0.0
+    ],
+    "notes": [
+      "1m module; top zero; .06m thickness; visible 2mm joints.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "paving_tile_c",
+    "triangles": 188,
+    "parts": [
+      "paving_tile_c.001"
+    ],
+    "editable_meshes": 5,
+    "bounds_min": [
+      -0.5,
+      -0.5,
+      -0.06
+    ],
+    "bounds_max": [
+      0.5,
+      0.5,
+      0.0
+    ],
+    "notes": [
+      "1m module; top zero; .06m thickness; visible 2mm joints.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "path",
+    "triangles": 72,
+    "parts": [
+      "path.001"
+    ],
+    "editable_meshes": 29,
+    "bounds_min": [
+      -0.5,
+      -0.5,
+      -0.06
+    ],
+    "bounds_max": [
+      0.5,
+      0.5,
+      0.0002
+    ],
+    "notes": [
+      "1m ochre module; fine flat aggregate, no protruding scatter.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "street_tile",
+    "triangles": 188,
+    "parts": [
+      "street"
+    ],
+    "editable_meshes": 5,
+    "bounds_min": [
+      -1.0,
+      -1.0,
+      -0.08
+    ],
+    "bounds_max": [
+      1.0,
+      1.0,
+      0.0
+    ],
+    "notes": [
+      "2x2m .08m thick; four limestone-grey slabs.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "street_kerb",
+    "triangles": 44,
+    "parts": [
+      "kerb"
+    ],
+    "editable_meshes": 1,
+    "bounds_min": [
+      -1.0,
+      -0.33,
+      -0.04
+    ],
+    "bounds_max": [
+      1.0,
+      0.33,
+      0.13
+    ],
+    "notes": [
+      "2m module, .66m cross-width and .17m height; underside -.04 aligns street base.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "tram_track",
+    "triangles": 336,
+    "parts": [
+      "track"
+    ],
+    "editable_meshes": 12,
+    "bounds_min": [
+      -1.0,
+      -1.4,
+      -0.12
+    ],
+    "bounds_max": [
+      1.0,
+      1.4,
+      0.0
+    ],
+    "notes": [
+      "Track length2 width2.8; X travel, rails y\u00b1.72m; gauge1.44m matches new tram wheel tread centres coordinated with parent.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  },
+  {
+    "name": "water_tile",
+    "triangles": 212,
+    "parts": [
+      "water"
+    ],
+    "editable_meshes": 2,
+    "bounds_min": [
+      -2.0,
+      -2.0,
+      -0.15
+    ],
+    "bounds_max": [
+      2.0,
+      2.0,
+      0.0
+    ],
+    "notes": [
+      "4x4m .15m deep; flat stitched perimeter, irregular triangular lagoon surface.",
+      "Original Blender construction from inspected references; source repository read-only."
+    ]
+  }
+]

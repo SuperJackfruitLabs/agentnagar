@@ -1,0 +1,22 @@
+{
+  "triangles": 1100,
+  "mesh_objects": 23,
+  "bounds_min": [
+    -0.425,
+    -0.44369,
+    0.0
+  ],
+  "bounds_max": [
+    0.425,
+    0.36,
+    0.93139
+  ],
+  "textures": 0,
+  "name": "seat_reading-chair_v2",
+  "parts": [
+    "body"
+  ],
+  "notes": [
+    "Approved chair carried forward byte-for-byte."
+  ]
+}

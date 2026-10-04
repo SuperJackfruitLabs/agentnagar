@@ -1,0 +1,21 @@
+{
+  "name": "reading_chair_v2",
+  "triangles": 1100,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 23,
+  "bounds_min": [
+    -0.425,
+    -0.44369,
+    0.0
+  ],
+  "bounds_max": [
+    0.425,
+    0.36,
+    0.93139
+  ],
+  "notes": [
+    "Alias of approved original seat_reading-chair_v2 geometry; source design preserved."
+  ]
+}

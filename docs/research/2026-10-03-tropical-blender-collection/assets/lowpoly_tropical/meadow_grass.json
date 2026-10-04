@@ -1,0 +1,22 @@
+{
+  "name": "meadow_grass",
+  "triangles": 64,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 16,
+  "bounds_min": [
+    -0.11013,
+    -0.13602,
+    0.0
+  ],
+  "bounds_max": [
+    0.14081,
+    0.11214,
+    0.88
+  ],
+  "notes": [
+    "Original folded triangular tapered blades, rooted at zero; .88 m tallest target.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "bridge_span",
+  "triangles": 3060,
+  "parts": [
+    "span"
+  ],
+  "editable_meshes": 159,
+  "bounds_min": [
+    -4.0,
+    -2.12,
+    -1.8
+  ],
+  "bounds_max": [
+    4.0,
+    2.12,
+    2.09
+  ],
+  "notes": [
+    "Deck top at local +0.90m matches runtime origin -0.90m. Parapet clear inner half width 1.8m."
+  ]
+}

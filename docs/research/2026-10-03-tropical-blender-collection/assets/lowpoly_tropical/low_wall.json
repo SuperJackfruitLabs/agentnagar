@@ -1,0 +1,22 @@
+{
+  "name": "low_wall",
+  "triangles": 176,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 4,
+  "bounds_min": [
+    -1.5,
+    -0.15,
+    0.0
+  ],
+  "bounds_max": [
+    1.5,
+    0.15,
+    0.45
+  ],
+  "notes": [
+    "3 x .3 x .45 m; three restrained limestone coping joints.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

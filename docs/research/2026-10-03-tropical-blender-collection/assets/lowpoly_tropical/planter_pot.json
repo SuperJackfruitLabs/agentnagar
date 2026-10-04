@@ -1,0 +1,22 @@
+{
+  "name": "planter_pot",
+  "triangles": 756,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 52,
+  "bounds_min": [
+    -0.4,
+    -0.4,
+    0.0
+  ],
+  "bounds_max": [
+    0.4,
+    0.4,
+    1.1
+  ],
+  "notes": [
+    "Hollow limestone pot .8 m wide; foliage reaches1.1 m; recessed soil and cream blossoms.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

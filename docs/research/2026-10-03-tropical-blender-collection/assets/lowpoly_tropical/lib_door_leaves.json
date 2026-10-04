@@ -1,0 +1,22 @@
+{
+  "name": "lib_door_leaves",
+  "triangles": 116,
+  "parts": [
+    "leaves"
+  ],
+  "editable_meshes": 3,
+  "bounds_min": [
+    -0.125,
+    -0.173,
+    0.0
+  ],
+  "bounds_max": [
+    0.125,
+    0.1375,
+    2.8
+  ],
+  "notes": [
+    "Library dome begins at local roof datum and contains a 1.9m clerestory drum; runtime places at 7.8m.",
+    "Door modules retain true clear 2m wide walking opening below 2.8m."
+  ]
+}

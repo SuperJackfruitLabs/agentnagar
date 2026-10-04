@@ -1,0 +1,21 @@
+{
+  "name": "cloud_b",
+  "triangles": 290,
+  "parts": [
+    "cloud"
+  ],
+  "editable_meshes": 1,
+  "bounds_min": [
+    -4.25911,
+    -1.87414,
+    0.0
+  ],
+  "bounds_max": [
+    3.96089,
+    1.87586,
+    3.43
+  ],
+  "notes": [
+    "Original merged and decimated cloud lobes; flattened underside; intentionally broad facets."
+  ]
+}

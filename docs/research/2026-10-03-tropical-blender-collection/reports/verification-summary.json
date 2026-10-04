@@ -1,0 +1,49 @@
+{
+  "complete": true,
+  "asset_triplets": 82,
+  "current_kit_coverage": 71,
+  "distant_tree_variants": 5,
+  "additional_planned_designs": 6,
+  "approved_exports_preserved": 26,
+  "new_exports": 56,
+  "assembly_scenes": 3,
+  "khronos": {
+    "files": 82,
+    "errors": 0,
+    "warnings": 0,
+    "triangles": 195767,
+    "bytes": 17158488
+  },
+  "focused_test_pass": 105,
+  "focused_test_fail": 0,
+  "final_tram_change_followup": {
+    "vehicle_ride_pass": 38,
+    "fail": 0,
+    "python_contract_pass": 6
+  },
+  "collision_gates": {
+    "through": 0,
+    "within_10cm": 0,
+    "walker_pass": 0,
+    "player_pass": 0,
+    "tram_overlap": 0,
+    "reverse_blocked": 0
+  },
+  "characters": {
+    "rigs": 2,
+    "bones_per_rig": 17,
+    "clips": [
+      "idle",
+      "walk",
+      "sit",
+      "typing"
+    ]
+  },
+  "integrity_report": "delivery-integrity.json",
+  "source_repository": "agentnagar",
+  "source_head": "0795960",
+  "source_checkout_clean": true,
+  "remote_ci_run": false,
+  "performance_benchmarked": false,
+  "production_adopted": false
+}

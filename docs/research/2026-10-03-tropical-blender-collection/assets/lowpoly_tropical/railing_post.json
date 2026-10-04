@@ -1,0 +1,21 @@
+{
+  "name": "railing_post",
+  "triangles": 232,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 6,
+  "bounds_min": [
+    -0.14,
+    -0.14,
+    0.0
+  ],
+  "bounds_max": [
+    0.14,
+    0.14,
+    1.14
+  ],
+  "notes": [
+    "Terminal pier matches panel depth; 0.28m masonry width/depth rather than 0.14m kit spec."
+  ]
+}

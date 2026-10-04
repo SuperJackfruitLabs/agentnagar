@@ -1,0 +1,21 @@
+{
+  "name": "cafe_table_set",
+  "triangles": 4208,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 75,
+  "bounds_min": [
+    -0.92058,
+    -0.3975,
+    0.0
+  ],
+  "bounds_max": [
+    0.92058,
+    0.3975,
+    0.89674
+  ],
+  "notes": [
+    "Assembly of approved thin table and two approved cafe chairs, no remodel."
+  ]
+}
