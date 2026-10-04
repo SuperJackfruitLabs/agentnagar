@@ -1,0 +1,22 @@
+{
+  "name": "water_tile",
+  "triangles": 212,
+  "parts": [
+    "water"
+  ],
+  "editable_meshes": 2,
+  "bounds_min": [
+    -2.0,
+    -2.0,
+    -0.15
+  ],
+  "bounds_max": [
+    2.0,
+    2.0,
+    0.0
+  ],
+  "notes": [
+    "4x4m .15m deep; flat stitched perimeter, irregular triangular lagoon surface.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "bounds_min": [
+    -0.383843,
+    -0.1225,
+    0.0015
+  ],
+  "bounds_max": [
+    0.383843,
+    0.174,
+    1.64
+  ],
+  "name": "character_robot",
+  "triangles": 2742,
+  "mesh_parts": [
+    "shell",
+    "joint",
+    "panel",
+    "face",
+    "eyes",
+    "badge"
+  ],
+  "bones": [
+    "hips",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "upper_arm_r",
+    "forearm_r",
+    "hand_r",
+    "upper_arm_l",
+    "forearm_l",
+    "hand_l",
+    "thigh_r",
+    "shin_r",
+    "foot_r",
+    "thigh_l",
+    "shin_l",
+    "foot_l"
+  ],
+  "animations": [
+    "idle",
+    "walk",
+    "sit",
+    "typing"
+  ],
+  "editable_meshes": 58,
+  "weight_min": 1.0,
+  "weight_max": 1.0,
+  "unweighted_vertices": 0
+}

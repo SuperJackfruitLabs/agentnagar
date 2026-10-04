@@ -1,0 +1,22 @@
+{
+  "name": "shrub_leafy",
+  "triangles": 2040,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 191,
+  "bounds_min": [
+    -0.55,
+    -0.55,
+    0.0
+  ],
+  "bounds_max": [
+    0.55,
+    0.55,
+    1.2
+  ],
+  "notes": [
+    "Closed foliage envelope preserves circular collision footprint; raised midrib leaves and five-petal tropical blossoms.",
+    "All geometry baked to origin for direct MultiMesh use."
+  ]
+}

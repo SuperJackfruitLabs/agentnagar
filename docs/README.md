@@ -209,3 +209,9 @@ editable city requires the later publishing and moderation workflow.
 The website does not need to become a whole city before SJL can tell its
 lab stories. Product claims still need fresh public evidence. Playing a
 simulation is not trying the product.
+
+## Tropical Blender collection
+
+The [October 3–4 tropical Blender collection](research/2026-10-03-tropical-blender-collection/README.md)
+preserves 82 editable asset candidates, concept references, a gallery and local
+validation evidence. It is an authoring collection, not an active game asset replacement.

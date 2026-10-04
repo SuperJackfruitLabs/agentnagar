@@ -1,0 +1,22 @@
+{
+  "name": "lamp_post",
+  "triangles": 696,
+  "parts": [
+    "body",
+    "light"
+  ],
+  "editable_meshes": 23,
+  "bounds_min": [
+    -0.215,
+    -0.215,
+    0.0
+  ],
+  "bounds_max": [
+    0.55,
+    0.215,
+    4.2
+  ],
+  "notes": [
+    "Exact light mesh and lamp_glow emission material retained; banner lower edge 2.12m clears walking slice."
+  ]
+}

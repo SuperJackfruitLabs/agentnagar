@@ -1,0 +1,21 @@
+{
+  "name": "hall_sawtooth_gable",
+  "triangles": 128,
+  "parts": [
+    "gable"
+  ],
+  "editable_meshes": 7,
+  "bounds_min": [
+    -2.02206,
+    -0.0775,
+    0.055
+  ],
+  "bounds_max": [
+    2.045,
+    0.045,
+    2.38922
+  ],
+  "notes": [
+    "Hall module authored for 4m bay and 5.2m wall; entrance has clear 2m by 3.2m opening."
+  ]
+}

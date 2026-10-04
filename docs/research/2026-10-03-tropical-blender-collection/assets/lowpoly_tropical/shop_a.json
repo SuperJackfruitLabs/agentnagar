@@ -1,0 +1,19 @@
+{
+  "name": "shop_a",
+  "triangles": 3248,
+  "parts": [
+    "shop"
+  ],
+  "editable_meshes": 123,
+  "bounds_min": [
+    -2.76054,
+    -5.725,
+    0.0
+  ],
+  "bounds_max": [
+    2.76054,
+    4.6855,
+    8.3478
+  ],
+  "notes": []
+}

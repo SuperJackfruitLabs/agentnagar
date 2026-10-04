@@ -1,0 +1,22 @@
+{
+  "name": "tram_track",
+  "triangles": 336,
+  "parts": [
+    "track"
+  ],
+  "editable_meshes": 12,
+  "bounds_min": [
+    -1.0,
+    -1.4,
+    -0.12
+  ],
+  "bounds_max": [
+    1.0,
+    1.4,
+    0.0
+  ],
+  "notes": [
+    "Track length2 width2.8; X travel, rails y\u00b1.72m; gauge1.44m matches new tram wheel tread centres coordinated with parent.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "paving_tile_b",
+  "triangles": 276,
+  "parts": [
+    "paving_tile_b.001"
+  ],
+  "editable_meshes": 7,
+  "bounds_min": [
+    -0.5,
+    -0.5,
+    -0.06
+  ],
+  "bounds_max": [
+    0.5,
+    0.5,
+    0.0
+  ],
+  "notes": [
+    "1m module; top zero; .06m thickness; visible 2mm joints.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

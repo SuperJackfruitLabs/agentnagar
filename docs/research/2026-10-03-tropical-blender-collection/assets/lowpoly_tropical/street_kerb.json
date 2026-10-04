@@ -1,0 +1,22 @@
+{
+  "name": "street_kerb",
+  "triangles": 44,
+  "parts": [
+    "kerb"
+  ],
+  "editable_meshes": 1,
+  "bounds_min": [
+    -1.0,
+    -0.33,
+    -0.04
+  ],
+  "bounds_max": [
+    1.0,
+    0.33,
+    0.13
+  ],
+  "notes": [
+    "2m module, .66m cross-width and .17m height; underside -.04 aligns street base.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

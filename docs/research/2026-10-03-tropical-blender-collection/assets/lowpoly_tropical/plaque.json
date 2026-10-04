@@ -1,0 +1,36 @@
+{
+  "name": "plaque",
+  "triangles": 176,
+  "parts": [
+    "body",
+    "display"
+  ],
+  "editable_meshes": 4,
+  "bounds_min": [
+    -0.3,
+    -0.15,
+    0.0
+  ],
+  "bounds_max": [
+    0.3,
+    0.15,
+    1.23988
+  ],
+  "notes": [
+    "Blank brass-rimmed sloping face; anchor normal and scale follow tilt.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ],
+  "display_authoring": {
+    "position": [
+      0.0,
+      0.04100000113248825,
+      1.1019999980926514
+    ],
+    "scale": [
+      0.5,
+      0.25999999046325684,
+      1.0
+    ],
+    "rotation_x": 1.920796275138855
+  }
+}

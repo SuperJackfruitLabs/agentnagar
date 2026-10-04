@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-05",
+  "base_commit": "0795960e47db1f1db912e24fc36640d1417db5eb",
+  "scope": "Versioned authoring collection; active game files unchanged",
+  "glb_validation": {
+    "assets": 82,
+    "assemblies": 3,
+    "errors": 0,
+    "warnings": 0
+  },
+  "original_model_byte_identity": {
+    "blend_glb_pairs": 85,
+    "matched": 85
+  },
+  "documentation_unittests_passed": 50,
+  "style_study_validation": "Passed on tracked/staged-file snapshot; normal checkout also visits unrelated ignored .claude worktree and reports its pre-existing broken links",
+  "gallery_links": "All local src/href targets resolve",
+  "python_syntax": "All collection Python files parse",
+  "licence_mapping": "REUSE.toml parsed and last matching licence checked against every collection file and available licence text; reuse CLI not installed",
+  "storage": "Regular Git; no LFS or billing change",
+  "runtime_evidence": "Original 2026-10-03/04 study reports retained; no new runtime adoption or performance benchmark"
+}

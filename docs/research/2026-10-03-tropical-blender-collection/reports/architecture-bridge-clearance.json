@@ -1,0 +1,14 @@
+{
+  "walking_band_local_y": [
+    0.92,
+    2.8
+  ],
+  "above_deck_half_span_max": 4.0,
+  "nominal_half_span": 4.0,
+  "nearest_parapet_face_half_span": 3.8600001335144043,
+  "nearest_parapet_approach_inset_local_m": 0.1399998664855957,
+  "approach_inset_local_m": 0.0,
+  "raw_inner_half_width": 1.6799999475479126,
+  "runtime_fit_clear_half_width_for_4m_deck": 2.01,
+  "assertions": "all above-deck geometry stays inside longitudinal span; cross fitting preserves 4.02m clear width"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "cafe_table",
+  "triangles": 2264,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 25,
+  "bounds_min": [
+    -0.39977,
+    -0.3975,
+    0.0
+  ],
+  "bounds_max": [
+    0.39977,
+    0.3975,
+    0.75
+  ],
+  "notes": [
+    "0.80 m diameter clipped plank top; 0.750 m tabletop.",
+    "Slim 50 mm round pedestal with 44 mm bore; 36 mm clear top grommet fits the coordinated 32 mm umbrella mast.",
+    "Flat 22 x 16 mm foot arms attach to the round pedestal and ground pads; 8 mm clearance above the coordinated 28 mm ballast plate."
+  ]
+}

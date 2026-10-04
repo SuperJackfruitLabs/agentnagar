@@ -1,0 +1,37 @@
+{
+  "name": "tram",
+  "triangles": 18300,
+  "parts": [
+    "interior",
+    "body",
+    "door_right_0_fore",
+    "door_right_0_aft",
+    "door_right_1_fore",
+    "door_right_1_aft",
+    "door_right_2_fore",
+    "door_right_2_aft",
+    "door_left_0_fore",
+    "door_left_0_aft",
+    "door_left_1_fore",
+    "door_left_1_aft",
+    "door_left_2_fore",
+    "door_left_2_aft",
+    "roof",
+    "lights"
+  ],
+  "editable_meshes": 451,
+  "bounds_min": [
+    -10.25,
+    -1.293,
+    0.0
+  ],
+  "bounds_max": [
+    10.25,
+    1.293,
+    4.475
+  ],
+  "notes": [
+    "Original cream/coral three-section tram; preserves all 12 independently sliding leaves at runtime boarding positions.",
+    "Rail tread centres +/-0.72m; floor0.4m; seats0.85m; 40-slot layout."
+  ]
+}

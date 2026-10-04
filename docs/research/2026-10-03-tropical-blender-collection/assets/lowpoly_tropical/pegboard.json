@@ -1,0 +1,22 @@
+{
+  "name": "pegboard",
+  "triangles": 7640,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 262,
+  "bounds_min": [
+    -1.0,
+    -0.0175,
+    0.0
+  ],
+  "bounds_max": [
+    1.0,
+    0.155,
+    1.2
+  ],
+  "notes": [
+    "2 x 1.2 m; original screwdriver, hammer, spanners, level, trays; face holes are shallow dark geometry.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

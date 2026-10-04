@@ -1,0 +1,24 @@
+{
+  "name": "umbrella_yellow",
+  "triangles": 2368,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 72,
+  "bounds_min": [
+    -1.13503,
+    -1.13503,
+    0.0
+  ],
+  "bounds_max": [
+    1.13503,
+    1.13503,
+    2.622
+  ],
+  "notes": [
+    "Original eight-gore yellow canvas with closed thickness, exposed timber ribs and stretchers.",
+    "Broad canopy underside and ribs clear 2.20 m; no low valance obstructs the walking band.",
+    "Central 32 mm pole, hollow 40 mm socket, and 28 mm ballast plate coordinate with the slim round caf\u00e9-table pedestal and feet.",
+    "Reference canopy is flattened slightly to preserve a useful walking clearance at this asset height."
+  ]
+}

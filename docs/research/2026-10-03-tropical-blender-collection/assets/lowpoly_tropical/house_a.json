@@ -1,0 +1,19 @@
+{
+  "name": "house_a",
+  "triangles": 6356,
+  "parts": [
+    "house"
+  ],
+  "editable_meshes": 198,
+  "bounds_min": [
+    -3.68054,
+    -4.792,
+    0.0
+  ],
+  "bounds_max": [
+    3.68054,
+    4.76761,
+    8.34793
+  ],
+  "notes": []
+}

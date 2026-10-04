@@ -1,0 +1,635 @@
+{
+  "references": {
+    "A-library": {
+      "path": "references/A-library.png",
+      "sha256": "619101a54d9008ac65cb791d63e665e0807c3292130082568e3823b16c24a56a",
+      "kind": "new AI concept sheet"
+    },
+    "A-tram": {
+      "path": "references/A-tram.png",
+      "sha256": "7d7b14d86429bb6ec6ce49631916c25580eb6870ae1ad2cd31b124ca833beafb",
+      "kind": "new AI concept sheet"
+    },
+    "A-resident": {
+      "path": "references/A-resident.png",
+      "sha256": "f1653510f99d573e9579fad8c216a0c0ecfea6c7c99017a35a96435db4fc7e2b",
+      "kind": "new AI concept sheet"
+    },
+    "A-agent-a1": {
+      "path": "references/A-agent-a1.png",
+      "sha256": "f011660bac858df10769a951e83a8e1576a9231eb56168d870e06bf0e86495bc",
+      "kind": "new AI concept sheet"
+    },
+    "A-cafe": {
+      "path": "references/A-cafe.png",
+      "sha256": "fad95f79dc3796f5a0dcc742f28246f8f7a27f64c24370f21a59816cb6bb932d",
+      "kind": "new AI concept sheet"
+    },
+    "A-houses": {
+      "path": "references/A-houses.png",
+      "sha256": "3f495d0233b9b930e01e0eb6781e36d5b760b554d06f9b26744cb3f446e91a81",
+      "kind": "new AI concept sheet"
+    },
+    "A-shop": {
+      "path": "references/A-shop.png",
+      "sha256": "bc2c1d9314bfdadc224b42f12cec02b6081b4b060288565e2a04c01d17b5aac5",
+      "kind": "new AI concept sheet"
+    },
+    "A-towers": {
+      "path": "references/A-towers.png",
+      "sha256": "f414400e703ba9012157cc085e1c03ca4e51aba2dfa0977d065394e1f93ba650",
+      "kind": "new AI concept sheet"
+    },
+    "A-bridge": {
+      "path": "references/A-bridge.png",
+      "sha256": "52911f6a7e3942fe91a9450d91fed763ece73a405eb945f6157ebbd6bec6073e",
+      "kind": "new AI concept sheet"
+    },
+    "A-civic": {
+      "path": "references/A-civic.png",
+      "sha256": "d372f2bcfdb08332a2f48be80540ab44adc6f7c5223ccf8a17e4d675f427652e",
+      "kind": "new AI concept sheet"
+    },
+    "A-work-furniture": {
+      "path": "references/A-work-furniture.png",
+      "sha256": "89a031fb638cbc2c2dac5639eeccf49dcc0e367e077f7042ae39afc24ad9617e",
+      "kind": "new AI concept sheet"
+    },
+    "A-water-and-sky": {
+      "path": "references/A-water-and-sky.png",
+      "sha256": "7e5fd35a33d4e3010eb4ceb8ccd347a0cf87397374af71c5c205b22c491a806c",
+      "kind": "new AI concept sheet"
+    },
+    "A-perch-seat": {
+      "path": "references/A-perch-seat.png",
+      "sha256": "db4bc53793df9c84020f24b57c77854f691897aa0ceafe2a04564bae85dc1efa",
+      "kind": "new AI concept sheet"
+    },
+    "A-ground-and-track": {
+      "path": "references/A-ground-and-track.png",
+      "sha256": "d9ecb1df180ae35b6051a7548d847a6ea90333cd1da72ddbe6e2a1dd4ccd69dd",
+      "kind": "new AI concept sheet"
+    },
+    "A-fountain": {
+      "path": "references/A-fountain.png",
+      "sha256": "ae3a61f7ade354c50888377141297f96e0afa384d53cd83ee3b02d807c738768",
+      "kind": "existing AI concept sheet",
+      "repository_source": "docs/vision/asset-studies/sheets/lowpoly_tropical/A-fountain/r001/image.png"
+    },
+    "A-great-tree": {
+      "path": "references/A-great-tree.png",
+      "sha256": "e2b2c7b085997dc3eb053145666b45bb56e294f593a0489207de40dd74508be1",
+      "kind": "existing AI concept sheet",
+      "repository_source": "docs/vision/asset-studies/sheets/lowpoly_tropical/A-great-tree/r001/image.png"
+    },
+    "A-guild-hall": {
+      "path": "references/A-guild-hall.png",
+      "sha256": "9eabe12ba541597781ea335888670679a28fe9fdfadc010bc32db2177bf84a35",
+      "kind": "existing AI concept sheet",
+      "repository_source": "docs/vision/asset-studies/sheets/lowpoly_tropical/A-guild-hall/r001/image.png"
+    },
+    "A-low-planting": {
+      "path": "references/A-low-planting.png",
+      "sha256": "2fd9293c2d6cd6aed8bd4afd77525a35da87ca388380fb19b7f2507edab70736",
+      "kind": "existing AI concept sheet",
+      "repository_source": "docs/vision/asset-studies/sheets/lowpoly_tropical/A-low-planting/r001/image.png"
+    },
+    "A-seating": {
+      "path": "references/A-seating.png",
+      "sha256": "b3efdf05182b4756cd929dc3a14c8a342303d0fa5d2627dd6f5ddada9b5d9fa2",
+      "kind": "existing AI concept sheet",
+      "repository_source": "docs/vision/asset-studies/sheets/lowpoly_tropical/A-seating/r001/image.png"
+    },
+    "A-street-fixtures": {
+      "path": "references/A-street-fixtures.png",
+      "sha256": "f0d0e3677daefa7e76c7736b60553fb5221f1ea6cbf4b39c360430c646b280c8",
+      "kind": "existing AI concept sheet",
+      "repository_source": "docs/vision/asset-studies/sheets/lowpoly_tropical/A-street-fixtures/r001/image.png"
+    },
+    "A-terrace": {
+      "path": "references/A-terrace.png",
+      "sha256": "9a2ee849f6c97806b8b5b0a225a8f45bde76ea35fd38a932f78e6e1f2dcdaef9",
+      "kind": "existing AI concept sheet",
+      "repository_source": "docs/vision/asset-studies/sheets/lowpoly_tropical/A-terrace/r001/image.png"
+    },
+    "A-tram-shelter": {
+      "path": "references/A-tram-shelter.png",
+      "sha256": "421fac754aa9f134e4f03d4630cbd0794a136bd8501fee239ee129f8694cf3cd",
+      "kind": "existing AI concept sheet",
+      "repository_source": "docs/vision/asset-studies/sheets/lowpoly_tropical/A-tram-shelter/r001/image.png"
+    },
+    "A-trees": {
+      "path": "references/A-trees.png",
+      "sha256": "6a101d6cd8c4a8fda402daf8fd4414f0cfa28d22ae599f69c7ab46aa632d9dc7",
+      "kind": "existing AI concept sheet",
+      "repository_source": "docs/vision/asset-studies/sheets/lowpoly_tropical/A-trees/r001/image.png"
+    }
+  },
+  "asset_coverage": [
+    {
+      "asset": "bench_park.glb",
+      "sheet": "A-seating",
+      "reference": "references/A-seating.png",
+      "model_status": "remaining model or alias",
+      "note": "Use approved furniture geometry for this alias/assembly after runtime audit."
+    },
+    {
+      "asset": "bollard.glb",
+      "sheet": "A-street-fixtures",
+      "reference": "references/A-street-fixtures.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "bookshelf_v2.glb",
+      "sheet": "A-work-furniture",
+      "reference": "references/A-work-furniture.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "bridge_pier.glb",
+      "sheet": "A-bridge",
+      "reference": "references/A-bridge.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "bridge_span.glb",
+      "sheet": "A-bridge",
+      "reference": "references/A-bridge.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "cafe_table.glb",
+      "sheet": "A-terrace",
+      "reference": "references/A-terrace.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "cafe_table_set.glb",
+      "sheet": "A-terrace",
+      "reference": "references/A-terrace.png",
+      "model_status": "remaining model or alias",
+      "note": "Use approved furniture geometry for this alias/assembly after runtime audit."
+    },
+    {
+      "asset": "character_human.glb",
+      "sheet": "A-resident",
+      "reference": "references/A-resident.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "character_robot.glb",
+      "sheet": "A-agent-a1",
+      "reference": "references/A-agent-a1.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "cloud_a.glb",
+      "sheet": "A-water-and-sky",
+      "reference": "references/A-water-and-sky.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "cloud_b.glb",
+      "sheet": "A-water-and-sky",
+      "reference": "references/A-water-and-sky.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "desk_v2.glb",
+      "sheet": "A-work-furniture",
+      "reference": "references/A-work-furniture.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "flowerbed.glb",
+      "sheet": "A-low-planting",
+      "reference": "references/A-low-planting.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "fountain.glb",
+      "sheet": "A-fountain",
+      "reference": "references/A-fountain.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "hall_corner.glb",
+      "sheet": "A-guild-hall",
+      "reference": "references/A-guild-hall.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "hall_door_leaves.glb",
+      "sheet": "A-guild-hall",
+      "reference": "references/A-guild-hall.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "hall_door_wall.glb",
+      "sheet": "A-guild-hall",
+      "reference": "references/A-guild-hall.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "hall_sawtooth_bay.glb",
+      "sheet": "A-guild-hall",
+      "reference": "references/A-guild-hall.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "hall_sawtooth_gable.glb",
+      "sheet": "A-guild-hall",
+      "reference": "references/A-guild-hall.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "hall_wall.glb",
+      "sheet": "A-guild-hall",
+      "reference": "references/A-guild-hall.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "hall_window_wall.glb",
+      "sheet": "A-guild-hall",
+      "reference": "references/A-guild-hall.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "house_a.glb",
+      "sheet": "A-houses",
+      "reference": "references/A-houses.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "house_b.glb",
+      "sheet": "A-houses",
+      "reference": "references/A-houses.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "kiosk.glb",
+      "sheet": "A-civic",
+      "reference": "references/A-civic.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "lamp_post.glb",
+      "sheet": "A-street-fixtures",
+      "reference": "references/A-street-fixtures.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "lib_banner.glb",
+      "sheet": "A-library",
+      "reference": "references/A-library.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "lib_column.glb",
+      "sheet": "A-library",
+      "reference": "references/A-library.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "lib_dome.glb",
+      "sheet": "A-library",
+      "reference": "references/A-library.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "lib_door_leaves.glb",
+      "sheet": "A-library",
+      "reference": "references/A-library.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "lib_entrance.glb",
+      "sheet": "A-library",
+      "reference": "references/A-library.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "lib_wall_arch.glb",
+      "sheet": "A-library",
+      "reference": "references/A-library.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "low_wall.glb",
+      "sheet": "A-civic",
+      "reference": "references/A-civic.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "meadow_flowers.glb",
+      "sheet": "A-low-planting",
+      "reference": "references/A-low-planting.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "meadow_grass.glb",
+      "sheet": "A-low-planting",
+      "reference": "references/A-low-planting.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "noticeboard.glb",
+      "sheet": "A-civic",
+      "reference": "references/A-civic.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "palm_a.glb",
+      "sheet": "A-trees",
+      "reference": "references/A-trees.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "palm_b.glb",
+      "sheet": "A-trees",
+      "reference": "references/A-trees.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "palm_c.glb",
+      "sheet": "A-trees",
+      "reference": "references/A-trees.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "path.glb",
+      "sheet": "A-ground-and-track",
+      "reference": "references/A-ground-and-track.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "paving_tile_a.glb",
+      "sheet": "A-ground-and-track",
+      "reference": "references/A-ground-and-track.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "paving_tile_b.glb",
+      "sheet": "A-ground-and-track",
+      "reference": "references/A-ground-and-track.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "paving_tile_c.glb",
+      "sheet": "A-ground-and-track",
+      "reference": "references/A-ground-and-track.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "perch_seat.glb",
+      "sheet": "A-perch-seat",
+      "reference": "references/A-perch-seat.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "planter_pot.glb",
+      "sheet": "A-terrace",
+      "reference": "references/A-terrace.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "planter_square.glb",
+      "sheet": "A-terrace",
+      "reference": "references/A-terrace.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "plaque.glb",
+      "sheet": "A-civic",
+      "reference": "references/A-civic.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "railing.glb",
+      "sheet": "A-street-fixtures",
+      "reference": "references/A-street-fixtures.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "railing_post.glb",
+      "sheet": "A-street-fixtures",
+      "reference": "references/A-street-fixtures.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "reading_chair_v2.glb",
+      "sheet": "A-seating",
+      "reference": "references/A-seating.png",
+      "model_status": "remaining model or alias",
+      "note": "Use approved furniture geometry for this alias/assembly after runtime audit."
+    },
+    {
+      "asset": "sailboat.glb",
+      "sheet": "A-water-and-sky",
+      "reference": "references/A-water-and-sky.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "seat_bench_v2.glb",
+      "sheet": "A-seating",
+      "reference": "references/A-seating.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "seat_cafe-table_v2.glb",
+      "sheet": "A-seating",
+      "reference": "references/A-seating.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "seat_desk_v2.glb",
+      "sheet": "A-work-furniture",
+      "reference": "references/A-work-furniture.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "seat_reading-chair_v2.glb",
+      "sheet": "A-seating",
+      "reference": "references/A-seating.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "shop_a.glb",
+      "sheet": "A-shop",
+      "reference": "references/A-shop.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "shrub_leafy.glb",
+      "sheet": "A-low-planting",
+      "reference": "references/A-low-planting.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "shrub_round.glb",
+      "sheet": "A-low-planting",
+      "reference": "references/A-low-planting.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "steps.glb",
+      "sheet": "A-civic",
+      "reference": "references/A-civic.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "street_kerb.glb",
+      "sheet": "A-ground-and-track",
+      "reference": "references/A-ground-and-track.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "street_tile.glb",
+      "sheet": "A-ground-and-track",
+      "reference": "references/A-ground-and-track.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "tower_a.glb",
+      "sheet": "A-towers",
+      "reference": "references/A-towers.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "tram.glb",
+      "sheet": "A-tram",
+      "reference": "references/A-tram.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "tram_shelter.glb",
+      "sheet": "A-tram-shelter",
+      "reference": "references/A-tram-shelter.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "tram_track.glb",
+      "sheet": "A-ground-and-track",
+      "reference": "references/A-ground-and-track.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "tree_banyan.glb",
+      "sheet": "A-great-tree",
+      "reference": "references/A-great-tree.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "tree_round_a.glb",
+      "sheet": "A-trees",
+      "reference": "references/A-trees.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "tree_round_b.glb",
+      "sheet": "A-trees",
+      "reference": "references/A-trees.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "umbrella_yellow.glb",
+      "sheet": "A-terrace",
+      "reference": "references/A-terrace.png",
+      "model_status": "approved pilot model exists",
+      "note": ""
+    },
+    {
+      "asset": "water_tile.glb",
+      "sheet": "A-ground-and-track",
+      "reference": "references/A-ground-and-track.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "workbench.glb",
+      "sheet": "A-work-furniture",
+      "reference": "references/A-work-furniture.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    },
+    {
+      "asset": "workstation.glb",
+      "sheet": "A-work-furniture",
+      "reference": "references/A-work-furniture.png",
+      "model_status": "remaining model or alias",
+      "note": ""
+    }
+  ],
+  "additional_planned_designs": {
+    "cafe": "A-cafe",
+    "house_c": "A-houses",
+    "tower_b": "A-towers",
+    "pegboard": "A-work-furniture",
+    "pendant_lamp": "A-work-furniture",
+    "quay_wall": "A-bridge"
+  }
+}

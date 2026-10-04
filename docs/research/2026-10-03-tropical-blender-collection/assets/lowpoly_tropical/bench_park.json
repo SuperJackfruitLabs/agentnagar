@@ -1,0 +1,21 @@
+{
+  "name": "bench_park",
+  "triangles": 1060,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 27,
+  "bounds_min": [
+    -0.8,
+    -0.33,
+    0.0
+  ],
+  "bounds_max": [
+    0.8,
+    0.2495,
+    0.85856
+  ],
+  "notes": [
+    "Alias of approved original seat_bench_v2 geometry; source design preserved."
+  ]
+}

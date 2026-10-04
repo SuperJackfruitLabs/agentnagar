@@ -1,0 +1,21 @@
+{
+  "name": "bridge_pier",
+  "triangles": 348,
+  "parts": [
+    "pier"
+  ],
+  "editable_meshes": 10,
+  "bounds_min": [
+    -0.72,
+    -2.84,
+    -1.7
+  ],
+  "bounds_max": [
+    0.72,
+    2.84,
+    2.095
+  ],
+  "notes": [
+    "Deck top at local +0.90m matches runtime origin -0.90m. Parapet clear inner half width 1.8m."
+  ]
+}

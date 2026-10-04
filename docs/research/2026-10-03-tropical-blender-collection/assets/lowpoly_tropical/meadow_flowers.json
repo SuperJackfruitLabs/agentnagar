@@ -1,0 +1,22 @@
+{
+  "name": "meadow_flowers",
+  "triangles": 640,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 48,
+  "bounds_min": [
+    -0.145,
+    -0.11182,
+    0.0
+  ],
+  "bounds_max": [
+    0.125,
+    0.07726,
+    0.905
+  ],
+  "notes": [
+    "Ivory five-petal blossoms on individual stems amid folded grass.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "tree_round_a_far",
+  "triangles": 470,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 19,
+  "bounds_min": [
+    -2.41226,
+    -2.44468,
+    0.0
+  ],
+  "bounds_max": [
+    2.56751,
+    2.46598,
+    5.3099
+  ],
+  "notes": [
+    "Original branching and closed layered foliage; far is purpose-built at lower ring/lobe resolution."
+  ]
+}

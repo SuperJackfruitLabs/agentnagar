@@ -1,0 +1,22 @@
+{
+  "name": "fountain",
+  "triangles": 4132,
+  "parts": [
+    "body",
+    "water"
+  ],
+  "editable_meshes": 212,
+  "bounds_min": [
+    -1.5,
+    -1.5,
+    0.0
+  ],
+  "bounds_max": [
+    1.5,
+    1.5,
+    1.885
+  ],
+  "notes": [
+    "3m diameter envelope, flat 0.45m sitting rim overlaps game perch seats. Original closed timber tiers, stone pier, faceted still-water surfaces and static falls. Water retains named BSDF materials; no animation claimed."
+  ]
+}

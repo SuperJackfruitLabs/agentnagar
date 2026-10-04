@@ -1,0 +1,30 @@
+{
+  "character_human": {
+    "triangles": 3526,
+    "zero_area_triangles": 0,
+    "skinned_mesh_nodes_at_scene_root": 11,
+    "skin_joints": 17,
+    "animations": [
+      "idle",
+      "walk",
+      "sit",
+      "typing"
+    ],
+    "min_weight_sum": 0.9999999701976776,
+    "max_weight_sum": 1.0000000298023224
+  },
+  "character_robot": {
+    "triangles": 2742,
+    "zero_area_triangles": 0,
+    "skinned_mesh_nodes_at_scene_root": 6,
+    "skin_joints": 17,
+    "animations": [
+      "idle",
+      "walk",
+      "sit",
+      "typing"
+    ],
+    "min_weight_sum": 1.0,
+    "max_weight_sum": 1.0
+  }
+}

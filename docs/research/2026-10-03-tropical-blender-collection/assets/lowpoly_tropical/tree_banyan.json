@@ -1,0 +1,24 @@
+{
+  "name": "tree_banyan",
+  "triangles": 6476,
+  "parts": [
+    "body",
+    "canopy",
+    "lanterns"
+  ],
+  "editable_meshes": 360,
+  "bounds_min": [
+    -5.52305,
+    -5.9749,
+    0.0
+  ],
+  "bounds_max": [
+    5.92496,
+    5.6309,
+    8.73459
+  ],
+  "notes": [
+    "Original ancient branching, broad layered closed crown, planted limestone bed, seven emissive pendant lanterns.",
+    "Bed 4.54m square, root radius <1.85m; canopy intentionally spreads overhead."
+  ]
+}

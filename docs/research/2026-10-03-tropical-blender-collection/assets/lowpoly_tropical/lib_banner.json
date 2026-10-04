@@ -1,0 +1,22 @@
+{
+  "name": "lib_banner",
+  "triangles": 92,
+  "parts": [
+    "banner"
+  ],
+  "editable_meshes": 6,
+  "bounds_min": [
+    -0.65,
+    -0.138,
+    -3.75
+  ],
+  "bounds_max": [
+    0.65,
+    0.03,
+    0.03
+  ],
+  "notes": [
+    "Library dome begins at local roof datum and contains a 1.9m clerestory drum; runtime places at 7.8m.",
+    "Door modules retain true clear 2m wide walking opening below 2.8m."
+  ]
+}

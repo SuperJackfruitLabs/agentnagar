@@ -1,0 +1,21 @@
+{
+  "name": "hall_sawtooth_bay",
+  "triangles": 306,
+  "parts": [
+    "roof"
+  ],
+  "editable_meshes": 15,
+  "bounds_min": [
+    -2.03187,
+    -2.065,
+    0.04335
+  ],
+  "bounds_max": [
+    2.06,
+    2.065,
+    2.40665
+  ],
+  "notes": [
+    "Hall module authored for 4m bay and 5.2m wall; entrance has clear 2m by 3.2m opening."
+  ]
+}

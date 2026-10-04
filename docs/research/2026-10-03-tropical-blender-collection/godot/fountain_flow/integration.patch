@@ -1,0 +1,16 @@
+--- a/city/godot/styles/pack_3d.gd
++++ b/city/godot/styles/pack_3d.gd
+@@ -153,7 +153,12 @@
+ 		if not path in missing_scenes:
+ 			missing_scenes.append(path)
+ 		return _placeholder()
+-	return packed.instantiate()
++	var model: Node3D = packed.instantiate()
++	if path.ends_with("fountain.glb"):
++		var flow = load("res://addons/fountain_flow/fountain_flow.gd")
++		if flow.supports(model):
++			flow.attach(model)
++	return model
+ 
+ 
+ func _placeholder() -> Node3D:

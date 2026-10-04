@@ -1,0 +1,21 @@
+{
+  "name": "tower_a",
+  "triangles": 22274,
+  "parts": [
+    "tower"
+  ],
+  "editable_meshes": 836,
+  "bounds_min": [
+    -5.775,
+    -6.475,
+    0.0
+  ],
+  "bounds_max": [
+    5.775,
+    5.775,
+    25.3
+  ],
+  "notes": [
+    "Eight storeys, designed stepped setbacks. 24m roof; facade iron kept slender."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cafe",
+  "triangles": 3492,
+  "parts": [
+    "cafe.001"
+  ],
+  "editable_meshes": 170,
+  "bounds_min": [
+    -3.24514,
+    -3.715,
+    0.0
+  ],
+  "bounds_max": [
+    3.24514,
+    2.7535,
+    4.39866
+  ],
+  "notes": []
+}

@@ -1,0 +1,22 @@
+{
+  "name": "steps",
+  "triangles": 132,
+  "parts": [
+    "body"
+  ],
+  "editable_meshes": 3,
+  "bounds_min": [
+    -1.5,
+    -0.5,
+    0.0
+  ],
+  "bounds_max": [
+    1.5,
+    0.5,
+    0.45
+  ],
+  "notes": [
+    "Three visible treads .26/.355/.45 m: lowest above .25 m walking band, width3 depth1 height.45. Runtime footprint retained; no hidden solids.",
+    "Original Blender construction from inspected references; source repository read-only."
+  ]
+}

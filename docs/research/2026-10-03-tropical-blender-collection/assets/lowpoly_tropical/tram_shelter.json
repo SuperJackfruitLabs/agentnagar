@@ -1,0 +1,21 @@
+{
+  "name": "tram_shelter",
+  "triangles": 3128,
+  "parts": [
+    "shelter"
+  ],
+  "editable_meshes": 74,
+  "bounds_min": [
+    -2.275,
+    -1.025,
+    0.0
+  ],
+  "bounds_max": [
+    2.275,
+    1.17,
+    2.95
+  ],
+  "notes": [
+    "Contract band x +/-2.15, Blender y -.75..+.40; cantilevered front replaces sheet front-corner posts to keep walk clear. Bench rectangle x -1.75..+.65 y -.55..-.15, seat top .48m. Cream laminated glass panels preserved, shelter root part contract."
+  ]
+}
